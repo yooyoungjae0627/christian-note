@@ -1,0 +1,126 @@
+"""Save review coverage and page-based references; never invent video timestamps."""
+import json,re,hashlib,subprocess
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2]
+D=ROOT/'Genesis/자료검토'
+corpus=json.loads((D/'전체_PDF_본문색인.json').read_text(encoding='utf-8'))
+packets=json.loads((D/'권별_검토자료.json').read_text(encoding='utf-8'))
+checks=json.loads((D/'PDF_원고대조.json').read_text(encoding='utf-8'))
+theme_notes={
+1:'영·혼·몸, 교제와 생명나무, 이브가 말씀을 바꾼 과정, 몸의 저주를 다룬다. 창세기 2–3장 해설 근거.',
+2:'하나님의 시간 단위와 반복, 경건의 훈련, 감각과 죄의 문을 다룬다. 창조의 날·시간 및 카인 관련 대목을 확인할 자료.',
+3:'사랑의 정의와 새 계명, 성령이 부어 주는 사랑을 다룬다. 아담이 속지 않고 이브와 함께 먹었다는 설명을 포함한다.',
+4:'요셉의 용기와 세상에 대한 집착을 다룬다. 아브라함과 이삭을 마음의 선택을 확인하는 사례로 설명한다.',
+5:'막달라 마리아의 첫사랑과 신실함, 교제 안에서의 지속을 다룬다. 창세기 해설에는 관련 교리의 간접 자료로 분류한다.',
+6:'죽음을 영·혼·몸의 분리로 설명하고 장례와 부활을 구분한다. 흙으로 돌아가는 몸과 창세기 2–3장 관련 교리의 근거.',
+7:'성경의 반복되는 원리와 논리적인 질문을 다룬다. 개별 창세기 사건의 직접 풀이와 해석 방법을 구분할 자료.',
+8:'사탄의 성격·반란·활동을 다룬다. 창세기 1:1과 1:2 사이의 반란, 혼돈과 6일간의 회복 설명이 있다.',
+9:'율법과 새 계명, 자유와 군인의 규율을 다룬다. 아브라함의 십일조와 계명의 시대 구분에 참고할 자료.',
+10:'라헬이 숨긴 것을 내놓았다고 추론하고 아칸과 대비한다. 창세기 35장 집필 전에 Theme13의 설명과 차이를 확인해야 한다.',
+11:'결혼의 목적과 남편·아내의 관계를 다룬다. 아담·이브를 예수님과 교회의 그림자로 설명하고 출산과 전도를 연결한다.',
+12:'믿기 어려운 약속을 선택하는 믿음을 다룬다. 아브라함과 사라가 웃었던 사건과 믿음을 함께 설명한다.',
+13:'동쪽과 서쪽, 옛 생활과의 단절을 다룬다. 카인·롯·라헬 및 물고기와 부활 설명이 있다. 라헬 대목은 Theme10과 차이가 있다.',
+14:'창조 목적, 사랑의 짝과 새 세상의 상속을 다룬다. 하나님의 형상과 사람을 만드신 목적의 해설 근거.',
+15:'교회를 건물이 아니라 성도들의 몸과 성전으로 설명한다. 창세기 직접 풀이와 교회에 관한 간접 적용을 구분한다.',
+16:'음행과 이혼, 세상을 사랑하는 영적 음행을 다룬다. 롯의 아내 및 원래 좋았던 창조 세계에 대한 설명이 있다.',
+17:'잘못 전하는 복음과 시대에 따른 구원의 조건을 다룬다. 6천 년의 일과 천 년의 쉼을 안식일의 실체로 설명한다.',
+18:'영생을 얻는 기준과 교회 선택을 다룬다. 남편의 자격으로 이루는 대속 및 두 복음의 구분에 관한 간접 근거.',
+19:'두려움과 기쁨, 고난과 징계, 성령의 도움을 다룬다. 창세기 직접 풀이가 있는지와 관련 교리 적용을 구분한다.',
+20:'믿음의 종류, 선택하는 믿음과 선물로 받는 믿음을 구분한다. 아브라함 관련 집필 시 믿음의 의미를 대조할 자료.',
+21:'베드로의 회복과 양심을 다룬다. 아담·이브와 카인에게 하신 질문을 돌아올 기회와 연결한다.',
+22:'하나님의 공정한 평가와 각자에게 주어진 조건을 다룬다. 선택·평가에 관한 간접 교리 자료.',
+23:'두려움과 하나님 의존을 다룬다. 아담, 니므롯·이스마엘·에서, 아브라함·야곱의 대비를 포함한다.',
+24:'낮게 오신 예수님과 부끄러운 족보를 다룬다. 유다와 타마르 및 예수님의 몸에 관한 근거.',
+25:'절망과 하나님께서 마련하시는 소망을 다룬다. 아담의 가림과 가죽옷, 사라와 요셉 관련 사례가 있다.',
+26:'창세기 6장의 하나님의 아들들을 저주 전 아담의 자손으로 설명한다. 천사·인간, 피와 종, 미리 마련된 부활의 몸을 구분한다.',
+27:'소생과 부활을 구분하고 몸의 변화로 설명한다. 몸의 저주 및 회복에 관한 창세기 3장 관련 교리 근거.',
+28:'반복되는 패턴과 논리적인 일관성을 해석의 원칙으로 설명한다. 창세기 6장의 하나님의 아들들을 실전 사례로 다룬다.',
+29:'말과 교제, 의식인 혼과 무의식인 영의 도움을 다룬다. 영·혼의 역할에 관한 간접 교리 자료.',
+30:'교제 안의 용서, 사과하도록 돕는 마음을 다룬다. 요셉이 형들을 용서하는 과정에 관한 해설 근거.',
+31:'귀한 것과 시련, 적은 구원의 비율을 다룬다. 몸의 저주와 노아 때의 사례를 포함한다.',
+32:'창조 목적, 선택권과 어둠, 몸·땅의 저주와 비극을 다룬다. 창세기 1–3장 및 요셉 관련 근거.',
+33:'믿음의 선물, 시대별 구원 유지 여부와 교회의 교리적 계보를 다룬다. 창세기 인물의 믿음과 대속을 설명할 때 밀크 근간과 함께 대조한다.'
+}
+milk_notes={
+'1':'영생, 선물로 받는 믿음, 남편 자격의 대속과 저주받은 몸을 다룬다.',
+'2':'창조 목적과 선택권, 영·혼·몸, 참 생명, 아담·이브와 교제, 몸의 저주를 다룬다.',
+'3':'아버지와 아들, 태초의 출생과 영존, 형상과 말씀, 피와 대속을 다룬다.',
+'4':'성령을 아버지의 영으로 설명하고 말씀과 성령의 함께 일함, 아담과 새 아담의 패턴을 다룬다.',
+'5':'시대와 두 복음, 시간을 초월한 관점과 인간 눈높이의 관점, 미리 아심을 다룬다.',
+'6':'죄를 넘기는 원리와 함께 죽는 원리를 구분한다. 창세기에서 대속을 설명할 때 해당 시대의 약속을 구분할 자료.',
+'7':'제사장 교회와 신부 교회, 에덴의 회복과 천년왕국, 6천 년의 일과 천 년의 쉼을 다룬다.',
+'8':'7년 환란과 성전 멸망·회복의 패턴을 다룬다. 창세기 직접 풀이와 미래의 관련 소망을 구분한다.',
+'9-1':'죽음 뒤 영·혼·몸과 대기소, 주 예수의 날과 몸의 부활을 다룬다.',
+'9-2':'두 주의 날과 에덴 회복, 노아·펠렉 때 수명 변화와 대륙·환경의 회복을 다룬다.',
+'10':'첫열매들 교회, 아담·이브의 회개와 가죽옷, 그리스도와 상속자, 씨에 관한 약속을 다룬다.'
+}
+references=[];records=[]
+for b,p in zip(corpus['books'],packets):
+    if b['file'].startswith('Theme/'):
+        note=theme_notes[int(Path(b['file']).name[:2])]
+    else:
+        key=re.search(r'밀크([\d-]+)강',b['file']).group(1);note=milk_notes[key]
+    rows=[]
+    for page in b['content']:
+        # An explicit chapter reference is a search hit, not proof of an interpretation.
+        for m in re.finditer(r'창세기\s*(\d{1,2})(?=\s*(?::|장))',page['text']):
+            ch=int(m.group(1))
+            if not 1<=ch<=50:continue
+            entry={'chapter':ch,'file':b['file'],'page':page['page'],
+              'context':page['text'][max(0,m.start()-180):min(len(page['text']),m.end()+600)],
+              'page_video_links':sorted(set(l['url'] for l in page['links'])),
+              'status':'search_hit_requires_paragraph_review'}
+            rows.append(entry);references.append(entry)
+    records.append({'file':b['file'],'pages':b['pages'],'sha256':b['sha256'],'video_annotations':b['video_annotations'],
+      'review_status':'all_pages_indexed_book_summary_reviewed', 'review_note':note,
+      'explicit_genesis_reference_pages':sorted(set(r['page'] for r in rows)),
+      'source_without_video_is_usable':True})
+refdoc={'date':'2026-10-10',
+ 'method':'PDF 각 쪽에 명시된 창세기 장 번호를 검색했다. 검색 후보이며 해설 근거로 채택 완료한 기록이 아니다.',
+ 'link_rule':'같은 PDF 쪽에 실린 원래 링크만 저장했다. 해당 문장과의 대응 및 영상 내용 확인은 별도로 필요하다.',
+ 'references':references}
+(D/'창세기_장별_출처후보.json').write_text(json.dumps(refdoc,ensure_ascii=False,indent=2),encoding='utf-8')
+(D/'권별_검토기록.json').write_text(json.dumps(records,ensure_ascii=False,indent=2),encoding='utf-8')
+lines=['# 창세기 해설서 자료 검토 기록','',
+'검토일: 2026-10-10. 범위: GitHub 저장소의 Theme 33권과 Milk 11권, 합계 44권·3,166쪽.',
+'','## 출처 표기', '',
+'구간 점프가 없는 PDF도 유용한 해설의 근거라면 사용한다. 해설마다 강의명·PDF 파일명·PDF 쪽수를 적는다. 원문 역본과 강의의 해석을 구분하고, 존재하지 않는 영상 주소나 시각을 만들지 않는다.',
+'','표기 예: 「사탄 정확히 알기」, Theme/08_사탄_정확히_알기.pdf, PDF 26쪽. 구간 링크 없음.',
+'','## 검토한 범위와 남은 확인', '',
+'- 44권의 전페이지 본문과 유튜브 링크 주석을 추출하고 원본 해시를 기록했다.',
+'- 33권의 Theme 원고 본문 2,706문단을 PDF 본문과 대조했다. 쪽수 줄과 공백을 제외하면 2,705문단이 일치한다.',
+'- 나머지 1문단은 Theme08 원고 50번 문단, PDF 26쪽이다. 히브리어 추출 순서가 달라 자동 대조에서 제외되었다. 페이지 그림을 보고 한글 설명이 이어짐과 히브리어 표기를 확인했다. 히브리어 원문까지 문자 단위 일치했다고 판정하지 않았다.',
+'- 전권의 요약을 읽고 주제와 창세기 관련성을 권별로 기록했다. 모든 3,166쪽을 그림으로 검사하거나 문장마다 정독했다는 뜻은 아니다.',
+'- Theme18의 추출 글자가 적은 5쪽은 차례의 끝, 51쪽은 앞 문단 마지막 한 줄이었다. 두 페이지 그림을 확인했으며 글자 추출 누락은 발견하지 않았다.',
+'- 장별 출처 후보는 검색 결과이다. 본문·문제·답안·차례가 섞여 있으므로 집필할 때 강의 본문과 앞뒤 맥락을 다시 읽고 근거를 확정한다.',
+'- 밀크 11권과 Theme 01·02·33에 유튜브 주석이 있다. 나머지 Theme 30권도 출처로 포함한다. 유튜브 영상을 재생해 발언 시점이나 내용을 확인하지 않았다.',
+'- 로컬 PDF와 fetch한 origin/main PDF의 Git 객체가 같음을 확인했다. 저장소 최신 문서/도구 차이를 PDF 내용 차이로 혼동하지 않는다.',
+'','## 강의별 설명 차이', '',
+'라헬의 우상에 관한 설명은 두 교재 사이에 차이가 있다. 「버리지 못하는 한 가지」 8–10쪽은 창세기 35:2–5 이후 가족이 보호받은 것 등을 들어 라헬이 내놓았다고 보아야 한다고 한다. 「헤어질 결심」 30–32쪽은 버리지 못한 우상과 가는 길의 죽음을 연결한다. 외부 신학으로 정리하거나 둘을 하나의 단정으로 합치지 않는다. 창세기 31·35장 집필 전에 강의 각각의 설명과 맥락을 따로 제시하고 확인할 항목으로 남긴다.',
+'','## 권별 기록','', '| PDF | 쪽수 | 영상 주석 | 검토 요지 |','|---|---:|---:|---|']
+for r in records:lines.append(f"| {r['file']} | {r['pages']} | {r['video_annotations']} | {r['review_note']} |")
+lines+=['','## 기록 파일','','- 전체_PDF_본문색인.json: 전페이지 글자·쪽수·원래 링크·해시.','- 권별_검토자료.json: 교재의 요약과 강조된 설명.','- PDF_원고대조.json: Theme 원고 문단 대조 결과.','- 권별_검토기록.json: 권별 검토 범위와 요지.','- 창세기_장별_출처후보.json: 창세기 각 장의 PDF 쪽수와 원문 맥락.','- 전체검토_검증.json: 실제 검증 결과.','']
+(D/'검토보고.md').write_text('\n'.join(lines),encoding='utf-8')
+errors=[]
+actual=set(str(f.relative_to(ROOT)).replace('\\','/') for folder in ('Milk','Theme') for f in (ROOT/folder).glob('*.pdf'))
+if actual!={b['file'] for b in corpus['books']}:errors.append('PDF inventory differs from indexed inventory')
+for b in corpus['books']:
+    if hashlib.sha256((ROOT/b['file']).read_bytes()).hexdigest()!=b['sha256']:errors.append('Hash changed: '+b['file'])
+    if [p['page'] for p in b['content']]!=list(range(1,b['pages']+1)):errors.append('Page coverage: '+b['file'])
+    local=subprocess.run(['git','rev-parse','HEAD:'+b['file']],cwd=ROOT,capture_output=True,text=True)
+    remote=subprocess.run(['git','rev-parse','origin/main:'+b['file']],cwd=ROOT,capture_output=True,text=True)
+    if local.returncode or remote.returncode or local.stdout!=remote.stdout:errors.append('Remote PDF differs: '+b['file'])
+for r in references:
+    b=next(b for b in corpus['books'] if b['file']==r['file']);page=b['content'][r['page']-1]
+    if r['context'] not in page['text']:errors.append('Candidate context not in source')
+    if not set(r['page_video_links']).issubset({l['url'] for l in page['links']}):errors.append('Candidate link not in source page')
+if sum(c['source_paragraphs'] for c in checks)!=2706:errors.append('Unexpected paragraph count')
+if [(c['file'],c['mismatch_indices']) for c in checks if c['mismatch_indices']]!=[('Theme/08_사탄_정확히_알기.pdf',[50])]:errors.append('Unexpected manuscript mismatch')
+result={'books':len(records),'pages':sum(b['pages'] for b in corpus['books']),
+'with_video':sum(b['video_annotations']>0 for b in corpus['books']),
+'without_video':sum(b['video_annotations']==0 for b in corpus['books']),
+'reference_candidates':len(references),'chapters_with_explicit_references':sorted(set(r['chapter'] for r in references)),
+'theme_source_paragraphs':2706,'normalized_matches':2705,'reviewed_extraction_exceptions':1,'low_text_pages_visually_reviewed':2,
+'videos_played':0,'errors':errors}
+(D/'전체검토_검증.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+print(json.dumps(result,ensure_ascii=False));raise SystemExit(1 if errors else 0)

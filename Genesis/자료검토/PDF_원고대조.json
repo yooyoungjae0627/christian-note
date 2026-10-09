@@ -1,0 +1,202 @@
+[
+  {
+    "file": "Theme/01_이브는_어떻게_선악과를.pdf",
+    "source_paragraphs": 55,
+    "verbatim_found": 55,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/02_성공을_위한_루틴.pdf",
+    "source_paragraphs": 57,
+    "verbatim_found": 57,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/03_사랑.pdf",
+    "source_paragraphs": 115,
+    "verbatim_found": 115,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/04_아리마대_요셉.pdf",
+    "source_paragraphs": 89,
+    "verbatim_found": 89,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/05_막달라_마리아.pdf",
+    "source_paragraphs": 78,
+    "verbatim_found": 78,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/06_크리스천의_장례.pdf",
+    "source_paragraphs": 115,
+    "verbatim_found": 115,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/07_올바른_질문.pdf",
+    "source_paragraphs": 75,
+    "verbatim_found": 75,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/08_사탄_정확히_알기.pdf",
+    "source_paragraphs": 108,
+    "verbatim_found": 107,
+    "mismatch_indices": [
+      50
+    ]
+  },
+  {
+    "file": "Theme/09_자유로운_신앙생활.pdf",
+    "source_paragraphs": 104,
+    "verbatim_found": 104,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/10_버리지_못하는_한_가지.pdf",
+    "source_paragraphs": 20,
+    "verbatim_found": 20,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/11_결혼_누구와_어떻게.pdf",
+    "source_paragraphs": 91,
+    "verbatim_found": 91,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/12_믿기_힘든걸_믿기.pdf",
+    "source_paragraphs": 81,
+    "verbatim_found": 81,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/13_헤어질_결심.pdf",
+    "source_paragraphs": 101,
+    "verbatim_found": 101,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/14_살아야_하는_이유.pdf",
+    "source_paragraphs": 98,
+    "verbatim_found": 98,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/15_교회는_건물이_아닙니다.pdf",
+    "source_paragraphs": 81,
+    "verbatim_found": 81,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/16_음행_이혼의_사유.pdf",
+    "source_paragraphs": 51,
+    "verbatim_found": 51,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/17_잘못된_교회.pdf",
+    "source_paragraphs": 87,
+    "verbatim_found": 87,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/18_교회는_어떻게_고르죠.pdf",
+    "source_paragraphs": 95,
+    "verbatim_found": 95,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/19_두려움과_기쁨.pdf",
+    "source_paragraphs": 81,
+    "verbatim_found": 81,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/20_용어의_정의_믿음.pdf",
+    "source_paragraphs": 136,
+    "verbatim_found": 136,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/21_베드로.pdf",
+    "source_paragraphs": 88,
+    "verbatim_found": 88,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/22_초라해질_때_하나님은_공정하신가.pdf",
+    "source_paragraphs": 68,
+    "verbatim_found": 68,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/23_겁쟁이들의_하나님.pdf",
+    "source_paragraphs": 80,
+    "verbatim_found": 80,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/24_낮게_오신_예수님.pdf",
+    "source_paragraphs": 77,
+    "verbatim_found": 77,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/25_절망.pdf",
+    "source_paragraphs": 79,
+    "verbatim_found": 79,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/26_천사와_인간이_거인을.pdf",
+    "source_paragraphs": 67,
+    "verbatim_found": 67,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/27_부활.pdf",
+    "source_paragraphs": 31,
+    "verbatim_found": 31,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/28_성경_해석의_원칙.pdf",
+    "source_paragraphs": 102,
+    "verbatim_found": 102,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/29_말을_잘하는_방법.pdf",
+    "source_paragraphs": 79,
+    "verbatim_found": 79,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/30_용서.pdf",
+    "source_paragraphs": 73,
+    "verbatim_found": 73,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/31_천국에_가는_사람이_적은_이유.pdf",
+    "source_paragraphs": 76,
+    "verbatim_found": 76,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/32_하나님은_왜_비극적인_일들을.pdf",
+    "source_paragraphs": 52,
+    "verbatim_found": 52,
+    "mismatch_indices": []
+  },
+  {
+    "file": "Theme/33_족보_있는_교회.pdf",
+    "source_paragraphs": 116,
+    "verbatim_found": 116,
+    "mismatch_indices": []
+  }
+]
