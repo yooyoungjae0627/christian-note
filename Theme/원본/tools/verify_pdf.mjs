@@ -100,7 +100,7 @@ for (const S of book.stories) {
   const W = pm.getWidth(), px = pm.getPixels(), n = pm.getNumberOfComponents();
   const st0 = pg.toStructuredText(), j = JSON.parse(st0.asJSON(1));
   st0.destroy();
-  const line = j.blocks.flatMap((b) => b.lines || []).find((ln) => ln.text.startsWith(`${ordinal(S.n)} 이야기`));
+  const line = j.blocks.flatMap((b) => b.lines || []).find((ln) => ln.text.startsWith(S.title.slice(0, 6)));
   if (!line) { problems.push(`${S.n}번째 이야기: 이동한 쪽(${d.page + 1})에 차례 항목이 없음`); continue; }
   let top = Math.floor(line.bbox.y);
   while (top > 0) { const s = ((top - 1) * W + Math.floor(line.bbox.x) - 4) * n; if (px[s] < 60 && px[s + 2] < 100) top--; else break; }

@@ -4,7 +4,7 @@ import { esc } from "./parse.mjs";
 // 표지 도형(2026-10-09 다시 그림, 첫열매들 교리에 맞춤):
 // - 곡식 한 단(한 묶음): 초실절에 흔드는 것은 열매 하나가 아니라 '한 단' — 머리이신 그리스도와 몸인 성도가 한 사람(첫열매들 그리스도). 교회 이름의 뜻.
 // - 위의 빛: 말씀(빛). 아래의 펼친 성경: 말씀이 바탕.
-// - 십자가는 쓰지 않는다(교회에 십자가를 두지 않는다 — 14번째 이야기 「교회는 건물이 아닙니다」).
+// - 십자가는 쓰지 않는다(교회에 십자가를 두지 않는다 — 「교회는 건물이 아닙니다」 강의).
 const ear = (x, y, ang, s) => {
   // 이삭 하나: 줄기 끝에서 위로 낟알 7쌍
   let k = "";
@@ -52,7 +52,7 @@ export function coverHtml(book) {
   // 강의별 한 권: 제목 = 강의 제목(길이에 따라 글자 크기), 그 위에 시리즈 이름과 권 번호
   const len = [...book.title].length, fs = len <= 8 ? 30 : len <= 13 ? 25 : len <= 18 ? 21 : 18;
   const head = book.only
-    ? `<div class="head"><div class="ser">${esc(book.series)} · 제 ${Number(book.only)}권</div><h1 style="font-size:${fs}pt">${esc(book.title)}</h1><div class="sub">${esc(book.subtitle)}</div></div>`
+    ? `<div class="head"><div class="ser">${esc(book.series)}</div><h1 style="font-size:${fs}pt">${esc(book.title)}</h1><div class="sub">${esc(book.subtitle)}</div></div>`
     : `<h1>${esc(book.title)}</h1><div class="sub">${esc(book.subtitle)}</div>`;
   return `<div class="cover"><div class="frame"></div><div class="en">${esc(book.titleEn)}</div>
   ${head}<div class="art">${book.coverArt || COVER_ART}</div>

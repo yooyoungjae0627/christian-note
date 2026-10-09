@@ -34,7 +34,7 @@ for (const S of book.stories) for (const [, id] of tocItems(S)) where[id] = sfil
 function frontXhtml() {
   const S0 = book.stories[0];
   return xhtml("이 책을 읽는 법", `<section id="howto"><h1>이 책을 읽는 법</h1><div class="gold"></div>
-  <p>이 책은 「${book.series}」 시리즈의 <b>제 ${Number(book.only)}권</b>으로, 첫열매들(FIRSTFRUITS) 예배 강의 <b>하나를 한 권</b>으로 엮은 교재입니다. 강의를 녹취하여 내용과 예화와 순서는 하나도 빼지 않고 문장만 읽기 좋게 다듬었습니다. 장 제목과 소제목, 그림 캡션, 용어 상자, 뒷부분(한눈에 보는 이야기, 개념 문제, 예상 질문과 답변, 용어·인물 풀이)은 정리한 사람이 덧붙였습니다.</p>
+  <p>이 책은 「${book.series}」 시리즈의 한 권으로, 첫열매들(FIRSTFRUITS) 예배 강의 <b>하나를 한 권</b>으로 엮은 교재입니다. 강의를 녹취하여 내용과 예화와 순서는 하나도 빼지 않고 문장만 읽기 좋게 다듬었습니다. 장 제목과 소제목, 그림 캡션, 용어 상자, 뒷부분(한눈에 보는 이야기, 개념 문제, 예상 질문과 답변, 용어·인물 풀이)은 정리한 사람이 덧붙였습니다.</p>
   <div class="lab">세 단계 강조</div>
   <table class="legend"><tr><td><span class="h1">노란 바탕</span></td><td>중요한 문장</td></tr>
   <tr><td><span class="h2">노란 바탕 + 굵게</span></td><td>더 중요한 문장</td></tr>
@@ -69,7 +69,7 @@ async function storyXhtml(S) {
   let h = await storyTitleHtml(book, S);
   for (let i = 0; i < S.chapters.length; i++) h += await chapterHtml(S, S.chapters[i], i);
   h += summaryHtml(S) + quizHtml(S) + (await answersHtml(S)) + (await faqHtml(book, S)) + glossHtml(S);
-  return xhtml(`${ordinal(S.n)} 이야기 · ${S.title}`, h);
+  return xhtml(S.title, h);
 }
 
 function navXhtml() {

@@ -89,18 +89,18 @@ export async function storyTitleHtml(book, S, marker = () => "") {
   const vm = await videoMark(S.vid, "0:00");
   const video = S.vid ? `<div class="sq0">${MODE === "epub" ? `<p>${vm} 강의 영상 처음부터 보기</p>` : vm}</div>` : "";
   const notes = S.storynotes.length ? `<div class="snote">${S.storynotes.map((n) => `<p>${inline(n)}</p>`).join("")}</div>` : "";
-  return `<section class="story" id="${sid(S)}">${marker(sid(S))}<div class="sn">${ordinal(S.n)} 이야기</div><h1>${esc(S.title)}</h1><div class="ss">${esc(S.sub)}</div><div class="gold"></div>
+  return `<section class="story" id="${sid(S)}">${marker(sid(S))}<div class="sn">첫열매들 예배 강의</div><h1>${esc(S.title)}</h1><div class="ss">${esc(S.sub)}</div><div class="gold"></div>
   <table class="meta">${rows.map(([k, v]) => `<tr><td>${k}</td><td>${esc(v)}</td></tr>`).join("")}</table>
   ${video}${notes}${legend}
   ${back(sid(S))}</section>`;
 }
 
 export function summaryHtml(S, marker = () => "") {
-  return `<section class="front" id="${sid(S, "sum")}">${marker(sid(S, "sum"))}<div class="sk">${ordinal(S.n)} 이야기</div><h1>한눈에 보는 이야기</h1><div class="gold"></div>${back(sid(S, "sum"), " sm")}<div class="added">정리한 사람이 덧붙인 글</div><ol class="sum">${S.summary.map((s) => `<li>${inline(s)}</li>`).join("")}</ol></section>`;
+  return `<section class="front" id="${sid(S, "sum")}">${marker(sid(S, "sum"))}<div class="sk">${esc(S.title)}</div><h1>한눈에 보는 이야기</h1><div class="gold"></div>${back(sid(S, "sum"), " sm")}<div class="added">정리한 사람이 덧붙인 글</div><ol class="sum">${S.summary.map((s) => `<li>${inline(s)}</li>`).join("")}</ol></section>`;
 }
 
 export function quizHtml(S, marker = () => "") {
-  return `<section class="front" id="${sid(S, "quiz")}">${marker(sid(S, "quiz"))}<div class="sk">${ordinal(S.n)} 이야기</div><h1>개념 문제</h1><div class="gold"></div>${back(sid(S, "quiz"), " sm")}<div class="added">강의 내용으로만 냈습니다. 답은 다음 쪽부터 있습니다.</div>
+  return `<section class="front" id="${sid(S, "quiz")}">${marker(sid(S, "quiz"))}<div class="sk">${esc(S.title)}</div><h1>개념 문제</h1><div class="gold"></div>${back(sid(S, "quiz"), " sm")}<div class="added">강의 내용으로만 냈습니다. 답은 다음 쪽부터 있습니다.</div>
   ${S.quiz.map((q, i) => `<div class="qz"><span class="num">${i + 1}</span><p>${esc(q.q)}</p></div>`).join("")}</section>`;
 }
 
@@ -108,7 +108,7 @@ const qaNote = (S) => !S.vid ? "" : `<div class="added">${MODE === "epub" ? "▶
 const qaRight = async (S, ts) => (S.vid ? `<div class="anr">${await videoMark(S.vid, ts)}</div>` : "");
 
 export async function answersHtml(S, marker = () => "") {
-  let h = `<section class="front" id="${sid(S, "ans")}">${marker(sid(S, "ans"))}<div class="sk">${ordinal(S.n)} 이야기</div><h1>개념 문제 답안</h1><div class="gold"></div>${back(sid(S, "ans"), " sm")}${qaNote(S)}`;
+  let h = `<section class="front" id="${sid(S, "ans")}">${marker(sid(S, "ans"))}<div class="sk">${esc(S.title)}</div><h1>개념 문제 답안</h1><div class="gold"></div>${back(sid(S, "ans"), " sm")}${qaNote(S)}`;
   for (const [i, q] of S.quiz.entries()) {
     h += `<div class="an${S.vid ? "" : " novid"}"><div class="anb"><div class="anq"><span class="num gold">${i + 1}</span>${esc(q.q)}</div><div class="ana">${esc(q.a)}</div><div class="anw"><b>근거:</b> ${esc(q.why)}</div></div>${await qaRight(S, q.ts)}</div>`;
   }
@@ -116,7 +116,7 @@ export async function answersHtml(S, marker = () => "") {
 }
 
 export async function faqHtml(book, S, marker = () => "") {
-  let h = `<section class="front" id="${sid(S, "faq")}">${marker(sid(S, "faq"))}<div class="sk">${ordinal(S.n)} 이야기</div><h1>예상 질문과 답변</h1><div class="gold"></div>${back(sid(S, "faq"), " sm")}
+  let h = `<section class="front" id="${sid(S, "faq")}">${marker(sid(S, "faq"))}<div class="sk">${esc(S.title)}</div><h1>예상 질문과 답변</h1><div class="gold"></div>${back(sid(S, "faq"), " sm")}
   <div class="banner"><div class="bt">처음 듣는 분들이 물을 법한 질문에 강의 내용으로 답합니다</div><p>${inline(book.faqBanner)}</p><div class="bs">${esc(book.faqBannerSrc)}</div></div>`;
   for (const [i, q] of S.faq.entries()) {
     h += `<div class="fq${S.vid ? "" : " novid"}"><div class="fqb"><div class="fqq"><span class="qn">Q${i + 1}</span>${esc(q.q)}</div><div class="fqa">${esc(q.a)}</div><div class="anw"><b>근거:</b> ${esc(q.why)}</div></div>${await qaRight(S, q.ts)}</div>`;
@@ -126,12 +126,12 @@ export async function faqHtml(book, S, marker = () => "") {
 
 export function glossHtml(S, marker = () => "") {
   const items = [...S.notes, ...S.gloss].filter((g, i, a) => a.findIndex((x) => x.term === g.term) === i).sort((a, b) => a.term.localeCompare(b.term, "ko"));
-  return `<section class="front" id="${sid(S, "gl")}">${marker(sid(S, "gl"))}<div class="sk">${ordinal(S.n)} 이야기</div><h1>용어·인물 풀이</h1><div class="gold"></div>${back(sid(S, "gl"), " sm")}${items.map((g) => `<div class="gl"><div class="gt">${esc(g.term)}</div><p>${inline(g.text)}</p></div>`).join("")}</section>`;
+  return `<section class="front" id="${sid(S, "gl")}">${marker(sid(S, "gl"))}<div class="sk">${esc(S.title)}</div><h1>용어·인물 풀이</h1><div class="gold"></div>${back(sid(S, "gl"), " sm")}${items.map((g) => `<div class="gl"><div class="gt">${esc(g.term)}</div><p>${inline(g.text)}</p></div>`).join("")}</section>`;
 }
 
 // 이야기 하나의 차례 항목: [제목, id, 깊이(0=이야기 1=장 2=소제목), 부제]
 export function tocItems(S) {
-  const it = [[`${ordinal(S.n)} 이야기 · ${S.title}`, sid(S), 0, S.sub]];
+  const it = [[S.title, sid(S), 0, S.sub]];
   S.chapters.forEach((c, i) => {
     it.push([`${chLabel(c) ? chLabel(c) + " " : ""}${c.title}`, chId(S, i), 1, c.sub]);
     c.secs.forEach((s, j) => it.push([s.title, secId(S, i, j), 2]));
