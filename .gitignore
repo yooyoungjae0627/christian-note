@@ -1,0 +1,15 @@
+# 빌드 산출물·임시 파일 — 커밋하지 않는다 (완성본 PDF·EPUB은 커밋한다)
+node_modules/
+out/
+out*/
+_pass*.pdf
+toc_pages*.json
+_cover*.png
+_cover*.html
+kjvcache/
+*.log
+*.tmp
+.vs/
+.idea/
+Thumbs.db
+desktop.ini

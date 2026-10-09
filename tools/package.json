@@ -1,0 +1,16 @@
+{
+  "name": "christian-note-tools",
+  "private": true,
+  "description": "교재 빌드 도구 의존성. 저장소·OneDrive 안에 설치하지 말고, 임시 폴더에 이 파일과 도구를 복사해 npm i 후 실행한다.",
+  "type": "module",
+  "dependencies": {
+    "fast-xml-parser": "^5.11.2",
+    "jpeg-js": "^0.4.4",
+    "jsqr": "^1.4.0",
+    "jszip": "^3.10.2",
+    "mupdf": "^1.28.1",
+    "pngjs": "^7.0.0",
+    "qrcode": "^1.5.4",
+    "sharp": "^0.35.5"
+  }
+}
