@@ -1,0 +1,101 @@
+/* 전자책: 글자 크기는 고정하지 않고(em), 배경색은 상자 안에만 둔다(어두운 화면 허용) */
+body { margin: 0 4%; line-height: 1.8; word-break: keep-all; overflow-wrap: break-word; }
+h1 { font-size: 1.5em; color: #18233f; margin: 1em 0 .3em; line-height: 1.35; }
+h2 { font-size: 1.3em; color: #18233f; margin: .2em 0 .2em; line-height: 1.35; }
+h3 { font-size: 1.08em; color: #18233f; border-left: .25em solid #c9973b; padding-left: .5em; margin: 1.4em 0 .5em; line-height: 1.45; }
+p { margin: 0 0 .8em; }
+a { color: inherit; text-decoration: none; }
+a.yt { color: #c0392b; font-weight: bold; white-space: nowrap; font-size: .9em; }
+.gold { width: 3em; height: .22em; background: #c9973b; margin: .5em 0 1.2em; }
+.lab { border-left: .25em solid #c9973b; padding-left: .5em; font-weight: bold; color: #18233f; margin: 1.2em 0 .4em; }
+.cover { text-align: center; margin: 0; } .cover img { max-width: 100%; max-height: 100%; }
+body.cover { margin: 0; }
+.cor { border-left: .25em solid #c9973b; background: #fbf6ea; color: #1d1d1f; padding: .7em 1em; margin: 1.2em 0; font-size: .95em; }
+.cor .vs, .verse .vs { text-align: right; font-size: .8em; color: #6b5d3d; }
+table.legend { width: 100%; border-collapse: collapse; font-size: .88em; }
+table.legend td { border-bottom: 1px solid #e3dccb; padding: .25em .3em; vertical-align: top; }
+.red { color: #c0392b; }
+
+/* 차례 */
+.tocnote { background: #fff7d6; color: #1d1d1f; border: 1px solid #e6c766; border-radius: .5em; padding: .6em .9em; font-size: .9em; margin-bottom: 1em; }
+.toc a { display: block; }
+.tstory { margin-bottom: 1.2em; }
+.toc .tl { background: #18233f; color: #fff; border-radius: .3em; padding: .4em .6em; font-weight: bold; }
+.toc .tsub0 { font-size: .8em; color: #8a7a52; margin: .2em 0 .4em .6em; }
+.toc .tc { font-weight: bold; color: #18233f; margin-top: .6em; }
+.toc .tsub { font-size: .8em; color: #888; }
+.toc .ts { padding-left: 1.4em; font-size: .92em; }
+
+/* 이야기 표제 */
+.story { text-align: center; margin-top: 2em; }
+.story .sn { color: #c9973b; font-weight: bold; letter-spacing: .3em; font-size: .9em; }
+.story .ss { color: #666; font-size: .92em; }
+.story .gold { margin: 1em auto; }
+table.meta { margin: 0 auto 1em; font-size: .85em; border-collapse: collapse; text-align: left; }
+table.meta td { padding: .2em .5em; border-bottom: 1px solid #e8e2d4; }
+table.meta td:first-child { color: #8a7a52; font-weight: bold; white-space: nowrap; }
+.lgd { text-align: left; font-size: .85em; margin: 1em auto; border-top: 1px solid #e3dccb; padding-top: .5em; }
+.lgh { font-weight: bold; color: #18233f; }
+.sw { display: inline-block; width: 1.1em; height: .7em; border-radius: .1em; margin-right: .4em; }
+a.totoc { display: inline-block; background: #18233f; color: #fff; border-radius: .4em; padding: .4em .9em; font-weight: bold; margin: .6em 0 1em; }
+a.totoc .arr { color: #f1d28e; font-size: .8em; }
+.story { page-break-after: always; }
+
+/* 장·소제목 */
+.chh { margin-top: 2.2em; }
+.chn { color: #c9973b; font-weight: bold; font-size: .9em; }
+.chs { color: #777; font-size: .85em; }
+.chq, .sq { font-size: .95em; }
+.sech h3 { margin-bottom: .2em; }
+.sech .sq { margin: 0 0 .6em; }
+
+/* 슬라이드 · 구절 · 용어 */
+figure.slide { margin: 1em 0 1.4em; }
+figure.slide img { width: 100%; border-radius: .4em; }
+figure.slide figcaption { font-size: .8em; color: #777; margin-top: .2em; }
+.verse { background: #f7f1e3; color: #1d1d1f; border-left: .25em solid #8a7a52; border-radius: .3em; padding: .6em .9em; margin-top: .5em; font-size: .95em; }
+.verse .vl { font-size: .72em; color: #8a7a52; }
+.verse .vb p { margin: 0 0 .3em; }
+.note { background: #eef3f8; color: #1d1d1f; border-left: .25em solid #6b8bb5; border-radius: .3em; padding: .5em .8em; margin: .4em 0 1em; font-size: .9em; }
+.note .nt { font-weight: bold; color: #18233f; }
+.note p { margin: .2em 0 0; }
+
+/* 강조 */
+.h1, .h2, .h3 { background: #ffec8b; color: #1d1d1f; }
+.h2 { font-weight: bold; }
+.h3 { font-weight: bold; text-decoration: underline; text-decoration-color: #c0392b; }
+
+/* 뒷부분 */
+.front { margin-top: 2em; }
+.sk { color: #c9973b; font-weight: bold; font-size: .8em; letter-spacing: .12em; }
+.added { font-size: .8em; color: #8a7a52; margin: -.6em 0 1em; }
+ol.sum li { margin-bottom: .5em; }
+.qz { margin-bottom: .6em; }
+.qz p { display: inline; }
+.num { display: inline-block; min-width: 1.6em; height: 1.6em; line-height: 1.6em; border-radius: .8em; background: #18233f; color: #fff; text-align: center; font-size: .8em; font-weight: bold; margin-right: .4em; }
+.num.gold { background: #c9973b; width: 1.6em; height: 1.6em; margin: 0 .4em 0 0; }
+.an, .fq { margin-bottom: 1.2em; }
+.anq { font-weight: bold; }
+.ana { background: #fff6d9; color: #1d1d1f; border-left: .25em solid #c9973b; border-radius: .3em; padding: .3em .7em; margin: .3em 0; }
+.anw { font-size: .82em; color: #777; }
+.anr { font-size: .9em; }
+.banner { background: #18233f; color: #fff; border-radius: .4em; padding: .7em 1em; margin-bottom: 1.2em; }
+.banner .bt { font-size: .8em; color: #e8c983; }
+.banner b { color: #f1d28e; }
+.banner .bs { text-align: right; font-size: .8em; color: #c9cfe0; }
+.fqq { font-weight: bold; color: #18233f; }
+.qn { background: #c9973b; color: #fff; border-radius: .2em; padding: 0 .3em; margin-right: .4em; font-size: .85em; }
+.fqa { margin: .3em 0; }
+.gl { margin-bottom: .8em; }
+.gl .gt { font-weight: bold; color: #18233f; }
+.gl p { margin: .1em 0 0; }
+
+/* 각 장·뒷부분 제목 아래의 작은 「목차로 이동」 */
+a.totoc.sm { font-size: .78em; padding: .25em .7em; margin: 0 0 1em; }
+
+/* 정리한 사람이 만든 그림 · 그림 없는 말씀 상자 · 영상 링크 없는 이야기 */
+figcaption .made { background: #eef3f8; color: #2b3a67; border-radius: .2em; padding: 0 .3em; font-size: .85em; font-weight: bold; }
+.verse.vbox { margin: .8em 0 1.2em; }
+.verse .vh { font-weight: bold; color: #18233f; }
+.verse.vref { border-left-style: dashed; }
+.snote { text-align: left; font-size: .85em; color: #555; background: #f6f3ea; border-radius: .3em; padding: .5em .8em; margin: 1em 0; }

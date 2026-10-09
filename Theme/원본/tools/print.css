@@ -1,0 +1,177 @@
+@page { size: 148mm 210mm; margin: 16mm 14mm 19mm 16mm;
+  @bottom-center { content: counter(page); font: 8.5pt "Noto Sans KR", sans-serif; color: #666; } }
+@page :left { margin-left: 14mm; margin-right: 16mm; }
+@page :right { margin-left: 16mm; margin-right: 14mm; }
+@page cover { margin: 0; @bottom-center { content: none; } }
+
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font: 10.3pt/1.86 "Noto Serif KR", serif; color: #1d1d1f; word-break: keep-all; overflow-wrap: break-word; text-align: left; }
+h1, h2, h3, .chn, .chs, .vl, .vs, .nt, .toc, .qr, .lab, table, figcaption, .sn, .ss, .sk { font-family: "Noto Sans KR", sans-serif; }
+a { color: inherit; text-decoration: none; }
+.mk { position: absolute; font-size: 1px; color: #fff; }
+.red { color: #c0392b; }
+
+/* 표지 */
+.cover { page: cover; width: 148mm; height: 210mm; position: relative; overflow: hidden; color: #fff; text-align: center;
+  background: radial-gradient(ellipse 90mm 70mm at 50% 58%, rgba(232, 201, 131, .16), rgba(232, 201, 131, 0) 70%),
+    linear-gradient(176deg, #0f1730 0%, #1b2650 40%, #2a3560 62%, #6d5a3a 86%, #b58a3c 100%); font-family: "Noto Sans KR", sans-serif; }
+/* 안쪽 금색 테두리(모서리 장식) */
+.cover .frame { position: absolute; inset: 7mm; border: .35mm solid rgba(232, 201, 131, .55); border-radius: 2mm; }
+.cover .frame::before, .cover .frame::after { content: ""; position: absolute; left: 50%; width: 3mm; height: 3mm; margin-left: -1.5mm; background: #e8c983; transform: rotate(45deg); }
+.cover .frame::before { top: -1.7mm; } .cover .frame::after { bottom: -1.7mm; }
+.cover .en { position: absolute; top: 19mm; left: 0; right: 0; font-size: 7.4pt; letter-spacing: .32em; color: #e8c983; }
+.cover h1 { position: absolute; top: 33mm; left: 0; right: 0; margin: 0; font-size: 32pt; font-weight: 800; color: #fff; letter-spacing: .06em; }
+.cover .sub { position: absolute; top: 54mm; left: 16mm; right: 16mm; font-size: 9.6pt; line-height: 1.7; color: #e9ecf5; }
+.cover .art { position: absolute; top: 74mm; left: 0; right: 0; }
+/* 강의별 한 권 표지: 시리즈·권 번호 + 강의 제목(두 줄까지) + 부제를 한 덩어리로 */
+.cover .head { position: absolute; top: 26mm; left: 13mm; right: 13mm; height: 50mm; display: flex; flex-direction: column; justify-content: center; }
+.cover .head .ser { font-size: 8.4pt; letter-spacing: .14em; color: #f1d28e; margin-bottom: 2.6mm; }
+.cover .head h1 { position: static; line-height: 1.3; letter-spacing: .02em; word-break: keep-all; }
+.cover .head .sub { position: static; margin-top: 3mm; font-size: 8.8pt; line-height: 1.6; word-break: keep-all; }
+.cover .head ~ .art { top: 80mm; }
+.cover .head ~ .motto { top: 161mm; }
+.cover .motto { position: absolute; top: 156mm; left: 0; right: 0; font-size: 7.4pt; line-height: 1.85; color: #f3e3bb; letter-spacing: .04em; }
+.cover .bar { position: absolute; bottom: 30mm; left: 64mm; width: 20mm; height: 1mm; background: #f1d28e; border-radius: 1mm; }
+.cover .bot { position: absolute; bottom: 15mm; left: 0; right: 0; font-size: 7.8pt; line-height: 1.9; color: #fff; }
+.cover .bot br + * , .cover .bot { font-weight: 500; }
+
+/* 앞·뒷부분 공통 */
+.front { break-before: page; }
+.front h1 { font-size: 21pt; color: #18233f; margin: 1mm 0 3mm; }
+.sk { font: 700 8pt "Noto Sans KR", sans-serif; color: #c9973b; letter-spacing: .12em; }
+.gold { width: 17mm; height: 1.1mm; background: #c9973b; border-radius: .6mm; margin: 2.5mm 0 6mm; }
+.lab { border-left: 1.2mm solid #c9973b; padding-left: 2.5mm; font-weight: 700; color: #18233f; font-size: 10.5pt; margin: 3.6mm 0 1.4mm; }
+#howto p.bp { font-size: 9pt; line-height: 1.62; margin-bottom: 1mm; }
+#howto .lab { margin: 2.8mm 0 1.1mm; font-size: 10pt; }
+#howto .gold { margin-bottom: 3.5mm; }
+#howto h1 { margin-top: 0; }
+.cor { border-left: 1mm solid #c9973b; background: #fbf6ea; padding: 3mm 4mm; margin-top: 6mm; font-size: 9.6pt; line-height: 1.8; }
+.cor p { margin: 0 0 1.6mm; }
+.cor .vs { text-align: right; font-size: 7.8pt; color: #6b5d3d; font-family: "Noto Sans KR", sans-serif; }
+table.legend { width: 100%; border-collapse: collapse; font-size: 8.6pt; }
+table.legend td { border-bottom: .2mm solid #e3dccb; padding: .7mm 1mm; line-height: 1.45; vertical-align: middle; }
+table.legend td:first-child { width: 40%; }
+.lgbox { padding: 0 2mm; } .lgbox.v { background: #f7f1e3; border-left: 1mm solid #8a7a52; } .lgbox.n { background: #eef3f8; border-left: 1mm solid #6b8bb5; }
+.howqr { display: flex; gap: 4mm; align-items: center; }
+.howqr p { margin: 0; font-size: 9.2pt; line-height: 1.7; }
+
+/* 차례 */
+.tocnote { background: #fff7d6; border: .3mm solid #e6c766; border-radius: 2.5mm; padding: 3mm 4mm; font: 9pt/1.75 "Noto Sans KR", sans-serif; margin-bottom: 4mm; }
+.tocnote b { color: #18233f; } .tocnote .red { font-weight: 700; }
+.toc { font-size: 9.2pt; }
+.toc a { display: flex; align-items: baseline; gap: 2mm; }
+.toc .dots { flex: 1; border-bottom: .25mm dotted #aaa; transform: translateY(-1mm); }
+.toc .pg { color: #2b3a67; min-width: 7mm; text-align: right; }
+.tstory { padding-top: 1mm; }
+.toc .tl { margin: 0 0 .8mm; padding: 1.8mm 2.5mm; background: #18233f; color: #fff; border-radius: 1.5mm; font-weight: 700; font-size: 9.8pt; line-height: 1.45; }
+.toc .tl .pg { color: #f1d28e; } .toc .tl .dots { border-color: transparent; }
+.toc .tsub0 { font-size: 7.8pt; color: #8a7a52; margin: 0 0 1mm 2.5mm; }
+.toc .tc { font-weight: 700; color: #18233f; margin-top: 2mm; }
+.toc .tsub { font-size: 7.8pt; color: #888; margin: -.4mm 0 .4mm; }
+.toc .ts { padding-left: 6mm; color: #333; font-size: 8.8pt; line-height: 1.7; }
+
+/* 이야기 표제 쪽(한 쪽 꽉): 왼쪽 아래 「목차로 이동」 */
+.story { break-before: page; break-after: page; height: 174mm; position: relative; text-align: center; padding-top: 14mm; font-family: "Noto Sans KR", sans-serif; }
+.story .sn { display: inline-block; font-size: 10pt; letter-spacing: .3em; color: #c9973b; font-weight: 700; }
+.story h1 { font-size: 21pt; line-height: 1.35; color: #18233f; margin: 4mm 4mm 2.5mm; }
+.story .ss { color: #555; font-size: 9.6pt; line-height: 1.6; }
+.story .gold { margin: 5mm auto; }
+table.meta { margin: 0 auto 5mm; font-size: 8.2pt; color: #333; border-collapse: collapse; text-align: left; }
+table.meta td { padding: .9mm 2.5mm; border-bottom: .2mm solid #e8e2d4; line-height: 1.45; }
+table.meta td:first-child { color: #8a7a52; font-weight: 700; white-space: nowrap; }
+.sq0 { display: flex; justify-content: center; }
+.lgd { margin: 5mm auto 0; width: 92mm; text-align: left; font-size: 7.8pt; line-height: 1.6; color: #333; border-top: .2mm solid #e3dccb; padding-top: 2mm; }
+.lgh { font-weight: 700; color: #18233f; font-size: 8.2pt; margin-bottom: .8mm; }
+.lgr b { display: inline-block; min-width: 7mm; color: #18233f; }
+.sw { display: inline-block; width: 4.2mm; height: 2.6mm; border-radius: .5mm; margin-right: 1.4mm; vertical-align: -.2mm; }
+a.totoc { position: absolute; left: 0; bottom: 0; display: inline-flex; align-items: center; gap: 1.6mm; background: #18233f; color: #fff; border-radius: 2mm; padding: 1.8mm 3.4mm; font: 700 8.6pt "Noto Sans KR", sans-serif; }
+a.totoc .arr { color: #f1d28e; font-size: 7pt; }
+span.totoc.demo { display: inline-flex; align-items: center; gap: 1mm; background: #18233f; color: #fff; border-radius: 1.4mm; padding: 0 2mm; font: 700 7.8pt/1.6 "Noto Sans KR", sans-serif; }
+span.totoc.demo .arr { color: #f1d28e; font-size: 6pt; }
+
+/* 장·소제목 */
+.chh { display: flex; justify-content: space-between; align-items: flex-start; gap: 3mm; margin-top: 8mm; }
+.chl { flex: 1; }
+.chn { color: #c9973b; font-weight: 700; font-size: 10pt; letter-spacing: .05em; }
+.chh h2 { font-family: "Noto Sans KR", sans-serif; font-size: 19pt; line-height: 1.3; color: #18233f; margin: .5mm 0 1mm; }
+.chs { color: #777; font-size: 9pt; }
+.chh .gold { margin: 3mm 0 4mm; }
+.sech { display: flex; justify-content: space-between; align-items: center; gap: 3mm; margin: 5mm 0 2.5mm; }
+.sech h3 { flex: 1; margin: 0; font-size: 11.6pt; color: #18233f; border-left: 1.2mm solid #c9973b; padding-left: 2.6mm; line-height: 1.45; }
+.hk, .note, figure.slide { break-inside: avoid; }
+.hk { break-after: avoid; }
+p.bp { orphans: 3; widows: 2; margin: 0 0 2.6mm; }
+
+/* QR */
+.qr { display: flex; flex-direction: column; align-items: center; width: 19mm; flex: none; text-align: center; }
+.qrimg { width: 13.6mm; height: 13.6mm; display: block; }
+.qt { display: flex; align-items: center; gap: .8mm; font-size: 7.6pt; color: #111; margin-top: .3mm; line-height: 1.2; }
+.ytm { width: 3.6mm; height: 2.6mm; }
+.qc { white-space: nowrap; font-size: 5.6pt; line-height: 1.3; color: #555; margin-top: .3mm; }
+.qc b { color: #c0392b; }
+
+/* 슬라이드: 본문 폭 100% → 캡션 → 구절 상자 */
+figure.slide { margin: 2mm 0 4.5mm; }
+figure.slide img { width: 100%; display: block; border-radius: 2mm; }
+figure.slide figcaption { font-size: 7.8pt; color: #666; margin: 1.2mm 0 0; line-height: 1.5; }
+.verse { background: #f7f1e3; border-left: 1.1mm solid #8a7a52; border-radius: 1.4mm; padding: 2.2mm 3.4mm 2mm; margin: 1.8mm 0 0; font-size: 9.4pt; line-height: 1.78; }
+.verse .vl { font-size: 6.8pt; color: #8a7a52; letter-spacing: .04em; }
+.verse .vb p { margin: 0 0 1mm; }
+.verse .vs { text-align: right; font-size: 7.6pt; color: #6b5d3d; }
+
+/* 용어 상자 */
+.note { background: #eef3f8; border-left: 1.1mm solid #6b8bb5; border-radius: 1.4mm; padding: 2.2mm 3.4mm; margin: 1mm 0 4mm; font-size: 8.8pt; line-height: 1.7; }
+.note .nt { font-weight: 700; color: #18233f; font-size: 9pt; }
+.note p { margin: .4mm 0 0; }
+
+/* 강조 */
+.h1, .h2, .h3 { background: #ffec8b; -webkit-box-decoration-break: clone; box-decoration-break: clone; padding: 0 .3mm; }
+.h2 { font-weight: 700; }
+.h3 { font-weight: 700; text-decoration: underline; text-decoration-color: #c0392b; text-decoration-thickness: .45mm; text-underline-offset: .9mm; }
+
+/* 한눈에 보는 이야기 */
+.added { font: 7.8pt "Noto Sans KR", sans-serif; color: #8a7a52; margin: -3mm 0 4mm; }
+ol.sum { padding-left: 5mm; margin: 0; } ol.sum li { margin-bottom: 1.5mm; font-size: 9.6pt; line-height: 1.72; }
+
+/* 개념 문제 */
+.num { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 6.5mm; height: 6.5mm; border-radius: 50%; background: #18233f; color: #fff; font: 700 7.6pt "Noto Sans KR", sans-serif; margin-right: 2.2mm; }
+.num.gold { background: #c9973b; margin-top: 0; margin-bottom: 0; }
+.qz { display: flex; align-items: flex-start; break-inside: avoid; margin-bottom: 2.6mm; }
+.qz p { margin: 0; font-size: 9.8pt; line-height: 1.7; padding-top: .2mm; }
+
+/* 답안 · 예상 질문: 오른쪽 QR 칸(19mm)을 따로 두어 QR끼리 붙지 않게 */
+.an, .fq { display: flex; gap: 3mm; align-items: flex-start; break-inside: avoid; margin-bottom: 3.4mm; min-height: 23mm; }
+.fq { min-height: 24mm; }
+.anb, .fqb { flex: 1; }
+.anr { flex: none; width: 19mm; }
+.anq { display: flex; align-items: flex-start; font: 700 9.4pt/1.6 "Noto Sans KR", sans-serif; color: #111; }
+.ana { background: #fff6d9; border-left: 1.1mm solid #c9973b; border-radius: 1.2mm; padding: 1.4mm 2.8mm; margin: 1.2mm 0 1mm; font-size: 9.4pt; line-height: 1.65; }
+.anw { font: 7.8pt/1.55 "Noto Sans KR", sans-serif; color: #666; }
+.anw b { color: #8a7a52; }
+.banner { background: #18233f; color: #fff; border-radius: 2mm; padding: 3mm 4mm; margin: -1mm 0 5mm; font-family: "Noto Sans KR", sans-serif; }
+.banner .bt { font-size: 8pt; color: #e8c983; }
+.banner p { margin: 1mm 0; font: 9.4pt/1.7 "Noto Serif KR", serif; }
+.banner b { color: #f1d28e; }
+.banner .bs { text-align: right; font-size: 7.6pt; color: #c9cfe0; }
+.fqq { font: 700 9.8pt/1.6 "Noto Sans KR", sans-serif; color: #18233f; }
+.qn { display: inline-block; background: #c9973b; color: #fff; border-radius: 1mm; padding: 0 1.4mm; margin-right: 1.6mm; font-size: 8pt; }
+.fqa { font-size: 9.6pt; line-height: 1.72; margin: 1mm 0 1mm; }
+
+/* 용어·인물 풀이 */
+.gl { break-inside: avoid; margin-bottom: 3mm; font-size: 9.2pt; line-height: 1.7; }
+.gl .gt { font: 700 9.6pt "Noto Sans KR", sans-serif; color: #18233f; }
+.gl p { margin: .3mm 0 0; }
+
+/* 각 장·뒷부분 제목 아래의 작은 「목차로 이동」 → 차례의 그 장 항목 */
+a.totoc.sm { position: static; display: inline-flex; margin: -2.4mm 0 3.6mm; padding: .9mm 2.6mm; font-size: 7.2pt; border-radius: 1.4mm; gap: 1.2mm; }
+a.totoc.sm .arr { font-size: 5.8pt; }
+
+/* 정리한 사람이 만든 그림 · 그림 없는 말씀 상자 · 영상 링크 없는 이야기 */
+figcaption .made { display: inline-block; background: #eef3f8; color: #2b3a67; border-radius: .8mm; padding: 0 1.4mm; font-size: 6.8pt; font-weight: 700; margin-right: 1mm; }
+.verse.vbox { margin: 2.5mm 0 4mm; break-inside: avoid; }
+.verse .vh { font-weight: 700; color: #18233f; font-size: 9.4pt; margin: .3mm 0 .6mm; font-family: "Noto Sans KR", sans-serif; }
+.verse.vref { border-left: 1.1mm dashed #b39a5f; background: #faf6ec; }
+.an.novid, .fq.novid { min-height: 0; }
+.snote { margin: 3mm auto 0; width: 100mm; font-size: 8pt; line-height: 1.6; color: #555; text-align: left; background: #f6f3ea; border-radius: 1.6mm; padding: 2mm 3mm; }
+.snote p { margin: 0 0 .8mm; }
