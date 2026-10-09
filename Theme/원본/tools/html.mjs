@@ -30,7 +30,7 @@ export async function videoMark(vid, ts) {
 
 export function slideHtml(S, b) {
   // 머리글은 출처로 정한다: 정리한 사람이 그린 그림이라도 슬라이드 글자를 옮긴 것(33권)은 「강의 슬라이드에서」, 설교 인용은 「인용」
-  const label = /한글KJV/.test(b.src || "") ? "성경 구절 — 한글KJV 본문" : /^설교/.test(b.src || "") ? "인용 — 강의 슬라이드에서" : "성경 구절 — 강의 슬라이드에서";
+  const label = /표준킹제임스/.test(b.src || "") ? "성경 구절 — 표준킹제임스성경 본문" : /한글KJV/.test(b.src || "") ? "성경 구절 — 한글KJV 본문" : /^설교/.test(b.src || "") ? "인용 — 강의 슬라이드에서" : "성경 구절 — 강의 슬라이드에서";
   const verse = b.verse
     ? `<div class="verse"><div class="vl">${label}</div><div class="vb">${b.verse.split("//").map((s) => `<p>${inline(s.trim())}</p>`).join("")}</div><div class="vs">${esc(b.src)}</div></div>`
     : "";
@@ -38,7 +38,7 @@ export function slideHtml(S, b) {
   return `<figure class="slide${b.made ? " madefig" : ""}"><img src="${IMG(S, b)}" alt="${esc(b.cap)}"/><figcaption>${cap}</figcaption>${verse}</figure>`;
 }
 
-// 그림 없는 말씀 상자: 강의에서 읽은 구절(실선) / 말로 언급한 구절(점선). 본문은 한글KJV
+// 그림 없는 말씀 상자: 강의에서 읽은 구절(실선) / 말로 언급한 구절(점선). 본문은 표준킹제임스성경(2026-10-10 전 책은 한글KJV)
 export function verseBoxHtml(b) {
   const ref = b.kind === "언급";
   return `<div class="verse vbox${ref ? " vref" : ""}"><div class="vl">${ref ? "말씀 — 강의에서 언급한 구절" : "말씀 — 강의에서 읽은 구절"}</div>${b.head ? `<div class="vh">${esc(b.head)}</div>` : ""}<div class="vb">${b.text.split("//").map((s) => `<p>${inline(s.trim())}</p>`).join("")}</div><div class="vs">${esc(b.src)}</div></div>`;

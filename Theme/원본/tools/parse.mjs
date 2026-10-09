@@ -111,7 +111,7 @@ export function parseStory(dir) {
         S.images.push(f[0]); push({ t: "img", file: f[0], path: file, cap: f[1], verse: f[2] || "", src: f[3] || "", made: f[4] === "made" });
         break;
       }
-      // @verse|머리|구절(//)|출처|읽음 또는 언급 — 그림 없는 말씀 상자(한글KJV 본문)
+      // @verse|머리|구절(//)|출처|읽음 또는 언급 — 그림 없는 말씀 상자(표준킹제임스성경 본문, 옛 책은 한글KJV)
       case "@verse": f[1].split("//").forEach(inline); push({ t: "verse", head: f[0], text: f[1], src: f[2], kind: f[3] || "읽음" }); break;
       case "@note": inline(f[1]); push({ t: "note", term: f[0], text: f[1] }); S.notes.push({ term: f[0], text: f[1] }); break;
       case "@summary": inline(f.join("|")); S.summary.push(f.join("|")); break;
