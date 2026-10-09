@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="spark17" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="1"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="36" r="24" fill="url(#spark17)" opacity="0.8"/>
+  <g stroke="#f3d999" stroke-width="1.6" stroke-linecap="round">
+    <line x1="100" y1="22" x2="100" y2="14"/>
+    <line x1="88" y1="28" x2="82" y2="22"/>
+    <line x1="112" y1="28" x2="118" y2="22"/>
+  </g>
+  <g transform="translate(97 40) rotate(33)">
+    <polygon points="0,0 5,12 5,86 -5,86 -5,12" fill="#e9ecf5" stroke="#f3d999" stroke-width="1.6" stroke-linejoin="round"/>
+    <line x1="0" y1="14" x2="0" y2="82" stroke="#c9973b" stroke-width="1.2" stroke-linecap="round"/>
+    <rect x="-3" y="86" width="6" height="20" rx="2" fill="#e8c983"/>
+    <circle cx="0" cy="110" r="4.5" fill="#e8c983"/>
+  </g>
+  <g transform="translate(103 40) rotate(-33)">
+    <polygon points="0,0 5,12 5,86 -5,86 -5,12" fill="#1b2650" fill-opacity="0.8" stroke="#c9973b" stroke-width="1.6" stroke-linejoin="round"/>
+    <line x1="0" y1="14" x2="0" y2="82" stroke="#d9776b" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+    <rect x="-3" y="86" width="6" height="20" rx="2" fill="#c9973b"/>
+    <circle cx="0" cy="110" r="4.5" fill="#c9973b"/>
+  </g>
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M100,158 Q72,148 40,154 L40,180 Q72,174 100,184 Z" fill="#1b2650" fill-opacity="0.6" stroke="#e8c983" stroke-width="2.2"/>
+    <path d="M100,158 Q128,148 160,154 L160,180 Q128,174 100,184 Z" fill="#1b2650" fill-opacity="0.6" stroke="#e8c983" stroke-width="2.2"/>
+    <g stroke="#e9ecf5" stroke-width="1.2" opacity="0.6" fill="none">
+      <path d="M50,160 Q72,156 92,162"/><path d="M50,167 Q72,163 92,169"/>
+      <path d="M108,162 Q128,156 150,160"/><path d="M108,169 Q128,163 150,167"/>
+    </g>
+  </g>
+</svg>

@@ -45,6 +45,12 @@ export function loadBook(root) {
   book.only = nn;
   book.title = S.title;
   book.subtitle = S.sub;
+  // 표지 그림·문구는 그 강의 주제로(사용자 지시 2026-10-09): 이야기 폴더의 cover.svg와 @cover. 없으면 빌드를 멈춘다
+  const art = path.join(S.dir, "cover.svg");
+  if (!fs.existsSync(art)) throw new Error(`[${d}] 표지 그림 cover.svg 없음 — 표지는 그 강의 주제로 그린다`);
+  if (!S.coverText || !S.coverText.length) throw new Error(`[${d}] @cover(표지 핵심 문장) 없음`);
+  book.coverArt = fs.readFileSync(art, "utf8").replace(/<\?xml[^>]*>\s*/, "").replace(/<svg\b/, '<svg width="78mm" height="78mm"');
+  book.coverMotto = S.coverText;
   book.pdfName = `${d}.pdf`;
   book.epubName = `${d}.epub`;
   book.uid = book.uid.replace(/.{3}$/, "b" + nn); // 책마다 다른 uid(같은 책은 다시 빌드해도 같은 uid)
@@ -82,6 +88,8 @@ export function parseStory(dir) {
       // @lecture|원 강의 제목 — 통합 이야기의 강의들(순서 = transcript_raw.txt, _2, _3 …)
       case "@lecture": S.lectures.push(f[0]); break;
       case "@storynote": inline(f[0]); S.storynotes.push(f[0]); break;
+      // @cover|줄1|줄2 — 표지에 넣는 그 강의의 핵심 문장(강의 문장 그대로, 2026-10-09 표지는 강의 주제로)
+      case "@cover": S.coverText = f.filter(Boolean); break;
       case "@legend": S.legend.push({ name: f[0], color: f[1], meaning: f[2] }); break;
       case "@ch": ch = { num: f[0], title: f[1], sub: f[2] || "", blocks: [], secs: [] }; sec = null; S.chapters.push(ch); break;
       case "@sec": sec = { title: f[0], ts: f[1] || "", blocks: [] }; ch.secs.push(sec); if (f[1]) checkTs(f[1]); break;

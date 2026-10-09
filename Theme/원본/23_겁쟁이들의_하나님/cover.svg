@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="g23" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f6dfa4" stop-opacity=".45"/><stop offset=".5" stop-color="#e8c983" stop-opacity=".14"/><stop offset="1" stop-color="#e8c983" stop-opacity="0"/></radialGradient>
+  </defs>
+  <circle cx="100" cy="64" r="60" fill="url(#g23)"/>
+  <!-- 높았던 산(점선) → 낮아진다 -->
+  <path d="M14 140 L58 34 L102 140" fill="none" stroke="#e9ecf5" stroke-opacity=".55" stroke-width="1.6" stroke-linejoin="round" stroke-dasharray="4 4"/>
+  <line x1="58" y1="54" x2="58" y2="100" stroke="#f3d999" stroke-width="2" stroke-linecap="round"/>
+  <path d="M51 93 L58 102 L65 93" fill="none" stroke="#f3d999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 140 Q58 106 102 140" fill="#1b2650" fill-opacity=".55" stroke="#e8c983" stroke-width="2.4" stroke-linejoin="round"/>
+  <!-- 깊었던 골짜기(점선) → 솟아오른다 -->
+  <path d="M98 140 Q142 196 186 140" fill="none" stroke="#e9ecf5" stroke-opacity=".55" stroke-width="1.6" stroke-dasharray="4 4"/>
+  <path d="M98 140 Q142 120 186 140" fill="#1b2650" fill-opacity=".45" stroke="#f3d999" stroke-width="2.4" stroke-linejoin="round"/>
+  <line x1="142" y1="164" x2="142" y2="136" stroke="#f3d999" stroke-width="2" stroke-linecap="round"/>
+  <path d="M135 143 L142 134 L149 143" fill="none" stroke="#f3d999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 평탄해진 땅 -->
+  <line x1="14" y1="140" x2="186" y2="140" stroke="#c9973b" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

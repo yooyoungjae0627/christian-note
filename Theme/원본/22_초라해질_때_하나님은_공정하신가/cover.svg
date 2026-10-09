@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="g22" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f6dfa4" stop-opacity=".45"/><stop offset=".5" stop-color="#e8c983" stop-opacity=".14"/><stop offset="1" stop-color="#e8c983" stop-opacity="0"/></radialGradient>
+  </defs>
+  <circle cx="100" cy="70" r="70" fill="url(#g22)"/>
+  <!-- 기둥과 받침 -->
+  <line x1="100" y1="40" x2="100" y2="170" stroke="#e8c983" stroke-width="3" stroke-linecap="round"/>
+  <path d="M72 182 L80 170 L120 170 L128 182 Z" fill="#1b2650" fill-opacity=".6" stroke="#e8c983" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="100" cy="34" r="6" fill="#1b2650" fill-opacity=".6" stroke="#f3d999" stroke-width="2"/>
+  <!-- 저울대: 수평 -->
+  <line x1="36" y1="58" x2="164" y2="58" stroke="#f3d999" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M94 58 L100 48 L106 58" fill="none" stroke="#f3d999" stroke-width="2" stroke-linejoin="round"/>
+  <!-- 줄 -->
+  <g stroke="#e9ecf5" stroke-width="1.2" stroke-linecap="round" opacity=".85">
+    <line x1="42" y1="60" x2="22" y2="120"/><line x1="42" y1="60" x2="62" y2="120"/>
+    <line x1="158" y1="60" x2="138" y2="120"/><line x1="158" y1="60" x2="178" y2="120"/>
+  </g>
+  <circle cx="42" cy="58" r="2.6" fill="#f3d999"/><circle cx="158" cy="58" r="2.6" fill="#f3d999"/>
+  <!-- 접시 -->
+  <path d="M16 120 L68 120 Q60 138 42 138 Q24 138 16 120 Z" fill="#1b2650" fill-opacity=".6" stroke="#f3d999" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M132 120 L184 120 Q176 138 158 138 Q140 138 132 120 Z" fill="#1b2650" fill-opacity=".6" stroke="#f3d999" stroke-width="2" stroke-linejoin="round"/>
+  <!-- 공정한 추: 하나씩(1 대 1) -->
+  <path d="M34 120 L36 106 L48 106 L50 120 Z" fill="#c9973b" stroke="#f3d999" stroke-width="1.4" stroke-linejoin="round"/>
+  <path d="M39 106 Q42 99 45 106" fill="none" stroke="#f3d999" stroke-width="1.4"/>
+  <path d="M150 120 L152 106 L164 106 L166 120 Z" fill="#c9973b" stroke="#f3d999" stroke-width="1.4" stroke-linejoin="round"/>
+  <path d="M155 106 Q158 99 161 106" fill="none" stroke="#f3d999" stroke-width="1.4"/>
+</svg>

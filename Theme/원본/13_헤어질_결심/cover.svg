@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="sun13" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.95"/>
+      <stop offset="0.6" stop-color="#e8c983" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#e8c983" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="50" cy="132" r="46" fill="url(#sun13)" opacity="0.55"/>
+  <g stroke="#f3d999" stroke-width="1.6" stroke-linecap="round" opacity="0.85">
+    <line x1="50" y1="98" x2="50" y2="86"/>
+    <line x1="29" y1="106" x2="22" y2="97"/>
+    <line x1="71" y1="106" x2="78" y2="97"/>
+    <line x1="19" y1="122" x2="13" y2="118"/>
+    <line x1="81" y1="122" x2="87" y2="118"/>
+  </g>
+  <path d="M24,132 A26,26 0 0 1 76,132 Z" fill="#f3d999" stroke="#e8c983" stroke-width="2"/>
+  <path d="M128,132 L128,104 L134,104 L134,98 L140,98 L140,104 L148,104 L148,98 L154,98 L154,104 L162,104 L162,98 L168,98 L168,104 L180,104 L180,132 Z"
+        fill="#1b2650" fill-opacity="0.75" stroke="#c9973b" stroke-width="1.6" stroke-linejoin="round" opacity="0.6"/>
+  <line x1="16" y1="132" x2="184" y2="132" stroke="#e8c983" stroke-width="2" stroke-linecap="round"/>
+  <g stroke="#e9ecf5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <circle cx="95" cy="87" r="6.5" fill="#e9ecf5" stroke="none"/>
+    <path d="M97,95 L104,113"/>
+    <path d="M104,113 L96,121 L89,131"/>
+    <path d="M104,113 L108,122 L114,131"/>
+    <path d="M99,100 L91,106 L87,113"/>
+    <path d="M99,100 L107,105 L112,111"/>
+  </g>
+  <g stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M92,158 L26,158" stroke="#f3d999" stroke-width="3"/>
+    <path d="M36,150 L26,158 L36,166" stroke="#f3d999" stroke-width="3"/>
+    <path d="M108,158 L174,158" stroke="#c9973b" stroke-width="2.4" opacity="0.55"/>
+    <path d="M164,150 L174,158 L164,166" stroke="#c9973b" stroke-width="2.4" opacity="0.55"/>
+  </g>
+</svg>

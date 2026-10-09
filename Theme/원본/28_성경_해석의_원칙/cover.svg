@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="glow28" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#e8c983" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- 펼친 성경 -->
+  <path d="M100 160 C 84 152, 60 152, 36 156 L 36 182 C 60 178, 84 178, 100 186 C 116 178, 140 178, 164 182 L 164 156 C 140 152, 116 152, 100 160 Z" fill="#1b2650" fill-opacity="0.7" stroke="#e9ecf5" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="100" y1="160" x2="100" y2="186" stroke="#e9ecf5" stroke-width="1.6"/>
+  <g fill="none" stroke="#e9ecf5" stroke-opacity="0.5" stroke-width="1.2" stroke-linecap="round">
+    <path d="M46 163 C 62 160, 78 160, 92 165 M46 170 C 62 167, 78 167, 92 172 M108 165 C 122 160, 138 160, 154 163 M108 172 C 122 167, 138 167, 154 170"/>
+  </g>
+  <!-- 결론은 둘 중 하나로 -->
+  <path d="M100 152 L100 112 M100 112 C 100 98, 64 98, 62 84 M100 112 C 100 98, 136 98, 138 84" fill="none" stroke="#e8c983" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="100" cy="112" r="3.5" fill="#e8c983"/>
+  <!-- 고른 쪽: 같은 종류의 피 -->
+  <circle cx="58" cy="54" r="40" fill="url(#glow28)"/>
+  <circle cx="58" cy="54" r="27" fill="#1b2650" fill-opacity="0.6" stroke="#f3d999" stroke-width="2.6"/>
+  <path d="M48 38 C 43 46, 41 50, 41 54 A 7 7 0 0 0 55 54 C 55 50, 53 46, 48 38 Z" fill="#d9776b" stroke="#f3d999" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M68 38 C 63 46, 61 50, 61 54 A 7 7 0 0 0 75 54 C 75 50, 73 46, 68 38 Z" fill="#d9776b" stroke="#f3d999" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M50 70 L56 75 L67 64" fill="none" stroke="#f3d999" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 버린 쪽: 다른 종류의 피 -->
+  <circle cx="142" cy="54" r="27" fill="#1b2650" fill-opacity="0.35" stroke="#c9973b" stroke-opacity="0.7" stroke-width="1.8" stroke-dasharray="3 4"/>
+  <path d="M132 38 C 127 46, 125 50, 125 54 A 7 7 0 0 0 139 54 C 139 50, 137 46, 132 38 Z" fill="#d9776b" fill-opacity="0.45" stroke="#c9973b" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M152 38 C 147 46, 145 50, 145 54 A 7 7 0 0 0 159 54 C 159 50, 157 46, 152 38 Z" fill="#8fb3e6" fill-opacity="0.45" stroke="#c9973b" stroke-width="1.2" stroke-linejoin="round"/>
+</svg>

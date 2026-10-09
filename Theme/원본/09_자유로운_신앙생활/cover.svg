@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="wood09" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3d999"/>
+      <stop offset="1" stop-color="#c9973b"/>
+    </linearGradient>
+  </defs>
+  <!-- 멍에 위로 퍼지는 빛 -->
+  <g stroke="#f3d999" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.55">
+    <line x1="100" y1="16" x2="100" y2="40"/>
+    <line x1="70" y1="22" x2="78" y2="44"/>
+    <line x1="130" y1="22" x2="122" y2="44"/>
+    <line x1="42" y1="36" x2="56" y2="54"/>
+    <line x1="158" y1="36" x2="144" y2="54"/>
+  </g>
+  <!-- 멍에(가로대) -->
+  <path d="M18 74 C40 62 70 66 100 66 C130 66 160 62 182 74 L180 86 C158 78 130 80 100 80 C70 80 42 78 20 86 Z" fill="url(#wood09)" stroke="#c9973b" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- 두 개의 목 고리 -->
+  <g fill="none" stroke="#e8c983" stroke-width="5" stroke-linecap="round">
+    <path d="M44 82 L44 104 C44 140 84 140 84 104 L84 82"/>
+    <path d="M116 82 L116 104 C116 140 156 140 156 104 L156 82"/>
+  </g>
+  <g fill="#1b2650" stroke="#c9973b" stroke-width="1.4">
+    <circle cx="44" cy="73" r="3.4"/><circle cx="84" cy="73" r="3.4"/>
+    <circle cx="116" cy="73" r="3.4"/><circle cx="156" cy="73" r="3.4"/>
+  </g>
+</svg>

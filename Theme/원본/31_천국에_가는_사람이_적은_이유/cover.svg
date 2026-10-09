@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="g31" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="d31" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9ecf5" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#8fb3e6" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="88" r="70" fill="url(#g31)"/>
+  <!-- 빛살 -->
+  <g stroke="#f3d999" stroke-width="1.6" stroke-linecap="round">
+    <line x1="100" y1="16" x2="100" y2="34"/>
+    <line x1="52" y1="28" x2="62" y2="40"/>
+    <line x1="148" y1="28" x2="138" y2="40"/>
+    <line x1="22" y1="64" x2="38" y2="68"/>
+    <line x1="178" y1="64" x2="162" y2="68"/>
+  </g>
+  <!-- 다이아몬드 하나 -->
+  <polygon points="72,46 128,46 152,72 100,138 48,72" fill="url(#d31)" stroke="#f3d999" stroke-width="2.6" stroke-linejoin="round"/>
+  <g fill="none" stroke="#e9ecf5" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round">
+    <line x1="48" y1="72" x2="152" y2="72"/>
+    <polyline points="72,46 84,72 100,46 116,72 128,46"/>
+    <line x1="84" y1="72" x2="100" y2="138"/>
+    <line x1="116" y1="72" x2="100" y2="138"/>
+  </g>
+  <!-- 반짝임 -->
+  <polygon points="158,44 161,50 158,56 155,50" fill="#f3d999"/>
+  <polygon points="40,96 42.5,100 40,104 37.5,100" fill="#f3d999"/>
+  <!-- 부서진 돌들 -->
+  <g fill="#1b2650" fill-opacity="0.55" stroke="#c9973b" stroke-width="1.4" stroke-linejoin="round">
+    <polygon points="20,184 26,168 40,164 46,176 40,186"/>
+    <polygon points="50,186 56,172 68,170 72,184"/>
+    <polygon points="78,186 82,176 92,174 96,186"/>
+    <polygon points="104,186 108,172 120,170 124,182 118,188"/>
+    <polygon points="130,186 134,174 146,172 150,186"/>
+    <polygon points="156,186 160,166 174,164 180,178 174,188"/>
+    <polygon points="60,160 66,154 72,158 68,164"/>
+    <polygon points="130,160 136,154 142,160 136,164"/>
+  </g>
+  <g stroke="#c9973b" stroke-width="1.2" stroke-linecap="round" fill="none">
+    <polyline points="30,170 34,176 32,182"/>
+    <polyline points="166,168 166,176 172,182"/>
+    <polyline points="112,174 114,180 110,186"/>
+  </g>
+</svg>

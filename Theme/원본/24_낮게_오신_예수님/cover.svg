@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="g24a" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f6dfa4" stop-opacity=".55"/><stop offset=".5" stop-color="#e8c983" stop-opacity=".16"/><stop offset="1" stop-color="#e8c983" stop-opacity="0"/></radialGradient>
+    <linearGradient id="g24b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d999" stop-opacity=".05"/><stop offset="1" stop-color="#f3d999" stop-opacity=".35"/></linearGradient>
+  </defs>
+  <!-- 높은 곳의 영광 -->
+  <circle cx="100" cy="32" r="26" fill="url(#g24a)"/>
+  <circle cx="100" cy="32" r="8" fill="none" stroke="#f3d999" stroke-width="2"/>
+  <g stroke="#f1d28e" stroke-width="1.5" stroke-linecap="round" opacity=".8">
+    <line x1="100" y1="14" x2="100" y2="19"/><line x1="82" y1="32" x2="87" y2="32"/><line x1="113" y1="32" x2="118" y2="32"/>
+    <line x1="87" y1="19" x2="91" y2="23"/><line x1="113" y1="19" x2="109" y2="23"/>
+  </g>
+  <!-- 낮게 내려오신다 -->
+  <path d="M96 44 L104 44 L136 150 L64 150 Z" fill="url(#g24b)"/>
+  <line x1="100" y1="46" x2="100" y2="124" stroke="#f3d999" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="2 5"/>
+  <path d="M94 116 L100 125 L106 116" fill="none" stroke="#f3d999" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 말구유 -->
+  <circle cx="100" cy="142" r="22" fill="url(#g24a)"/>
+  <g stroke="#f1d28e" stroke-width="1.3" stroke-linecap="round">
+    <line x1="72" y1="140" x2="66" y2="132"/><line x1="80" y1="140" x2="78" y2="130"/><line x1="90" y1="140" x2="92" y2="133"/>
+    <line x1="110" y1="140" x2="108" y2="133"/><line x1="120" y1="140" x2="122" y2="130"/><line x1="128" y1="140" x2="134" y2="132"/>
+  </g>
+  <ellipse cx="100" cy="138" rx="12" ry="5" fill="#e9ecf5" fill-opacity=".9" stroke="#f3d999" stroke-width="1.2"/>
+  <path d="M58 140 L142 140 L130 164 L70 164 Z" fill="#1b2650" fill-opacity=".7" stroke="#e8c983" stroke-width="2.2" stroke-linejoin="round"/>
+  <g stroke="#e8c983" stroke-width="2.2" stroke-linecap="round">
+    <line x1="66" y1="152" x2="82" y2="182"/><line x1="82" y1="152" x2="66" y2="182"/>
+    <line x1="118" y1="152" x2="134" y2="182"/><line x1="134" y1="152" x2="118" y2="182"/>
+  </g>
+  <!-- 바닥 -->
+  <line x1="28" y1="184" x2="172" y2="184" stroke="#c9973b" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

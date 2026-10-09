@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="c01life" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- 동산 한가운데 두 그루 나무: 왼쪽 생명나무, 오른쪽 선악의 지식의 나무와 뱀 -->
+  <circle cx="58" cy="86" r="50" fill="url(#c01life)"/>
+  <path d="M16 178 Q100 168 184 178" fill="none" stroke="#c9973b" stroke-width="2" stroke-linecap="round"/>
+  <!-- 생명나무 -->
+  <path d="M52 176 Q56 142 54 112 L62 112 Q60 142 66 176 Z" fill="#1b2650" stroke="#e8c983" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M22 112 A18 18 0 0 1 30 80 A24 24 0 0 1 58 52 A24 24 0 0 1 86 80 A18 18 0 0 1 94 112 Z" fill="#1b2650" fill-opacity="0.85" stroke="#e8c983" stroke-width="2.4" stroke-linejoin="round"/>
+  <g fill="#f3d999">
+    <circle cx="40" cy="96" r="4.2"/><circle cx="58" cy="76" r="4.2"/><circle cx="76" cy="96" r="4.2"/>
+    <circle cx="48" cy="64" r="3.4"/><circle cx="70" cy="64" r="3.4"/><circle cx="58" cy="100" r="3.4"/>
+  </g>
+  <!-- 선악의 지식의 나무 -->
+  <path d="M136 176 Q140 142 138 112 L146 112 Q144 142 150 176 Z" fill="#1b2650" stroke="#e8c983" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M106 112 A18 18 0 0 1 114 80 A24 24 0 0 1 142 52 A24 24 0 0 1 170 80 A18 18 0 0 1 178 112 Z" fill="#1b2650" fill-opacity="0.85" stroke="#e8c983" stroke-width="2.4" stroke-linejoin="round"/>
+  <g fill="#d9776b" stroke="#f3d999" stroke-width="0.8">
+    <circle cx="122" cy="94" r="5"/><circle cx="160" cy="96" r="5"/><circle cx="142" cy="72" r="5"/>
+    <circle cx="128" cy="68" r="4"/><circle cx="158" cy="70" r="4"/>
+  </g>
+  <!-- 뱀 -->
+  <path d="M158 174 C130 172 128 162 144 158 C160 154 158 146 140 142 C124 138 126 130 144 126 C156 123 160 116 154 110" fill="none" stroke="#8e3fe0" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M158 174 C130 172 128 162 144 158 C160 154 158 146 140 142 C124 138 126 130 144 126 C156 123 160 116 154 110" fill="none" stroke="#e9ecf5" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="2 5"/>
+  <ellipse cx="151" cy="106" rx="6" ry="4.2" transform="rotate(-25 151 106)" fill="#8e3fe0" stroke="#e9ecf5" stroke-width="1"/>
+  <path d="M146 104 L139 101 M139 101 L136 99 M139 101 L136 103" fill="none" stroke="#d9776b" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

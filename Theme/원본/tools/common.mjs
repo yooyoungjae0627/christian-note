@@ -55,7 +55,7 @@ export function coverHtml(book) {
     ? `<div class="head"><div class="ser">${esc(book.series)} · 제 ${Number(book.only)}권</div><h1 style="font-size:${fs}pt">${esc(book.title)}</h1><div class="sub">${esc(book.subtitle)}</div></div>`
     : `<h1>${esc(book.title)}</h1><div class="sub">${esc(book.subtitle)}</div>`;
   return `<div class="cover"><div class="frame"></div><div class="en">${esc(book.titleEn)}</div>
-  ${head}<div class="art">${COVER_ART}</div>
+  ${head}<div class="art">${book.coverArt || COVER_ART}</div>
   ${motto ? `<div class="motto">${motto}</div>` : ""}
   <div class="bar"></div><div class="bot">${book.coverBottom.map(esc).join("<br>")}</div></div>`;
 }

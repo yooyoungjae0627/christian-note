@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="g33" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="s33" cx="40%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#f3d999"/>
+      <stop offset="1" stop-color="#c9973b"/>
+    </radialGradient>
+  </defs>
+  <!-- 두 갈래 -->
+  <g fill="#1b2650" fill-opacity="0.55" stroke="#e9ecf5" stroke-width="1.8">
+    <rect x="14" y="20" width="64" height="30" rx="8"/>
+    <rect x="122" y="20" width="64" height="30" rx="8"/>
+  </g>
+  <g font-family="Malgun Gothic, Noto Sans KR, sans-serif" font-size="14" font-weight="bold" fill="#e9ecf5" text-anchor="middle">
+    <text x="46" y="40">감리교</text>
+    <text x="154" y="40">침례교</text>
+  </g>
+  <!-- 이어진 것 -->
+  <g fill="none" stroke="#e8c983" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M52 50 Q58 82 80 104"/>
+    <polyline points="70,101 80,104 79,94"/>
+    <path d="M148 50 Q142 82 120 104"/>
+    <polyline points="130,101 120,104 121,94"/>
+  </g>
+  <!-- 이어지지 않은 것 -->
+  <g fill="none" stroke="#d9776b" stroke-width="1.8" stroke-linecap="round">
+    <path d="M34 50 L26 70" stroke-dasharray="3 4"/>
+    <path d="M166 50 L174 70" stroke-dasharray="3 4"/>
+    <line x1="20" y1="76" x2="30" y2="86"/><line x1="30" y1="76" x2="20" y2="86"/>
+    <line x1="170" y1="76" x2="180" y2="86"/><line x1="180" y1="76" x2="170" y2="86"/>
+  </g>
+  <!-- 첫열매들: 해와 달처럼 보이는 두 원과 별 -->
+  <circle cx="100" cy="144" r="52" fill="url(#g33)"/>
+  <circle cx="96" cy="150" r="28" fill="url(#s33)" stroke="#f3d999" stroke-width="1.6"/>
+  <circle cx="124" cy="126" r="15" fill="#1b2650" fill-opacity="0.85" stroke="#e9ecf5" stroke-width="2"/>
+  <polygon points="72,114 74.6,120.4 81.5,120.9 76.2,125.3 77.9,132.1 72,128.4 66.1,132.1 67.8,125.3 62.5,120.9 69.4,120.4" fill="#f3d999"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="g19a" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#8fb3e6" stop-opacity=".28"/><stop offset="1" stop-color="#8fb3e6" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g19b" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#f6dfa4" stop-opacity=".5"/><stop offset="1" stop-color="#e8c983" stop-opacity="0"/></radialGradient>
+  </defs>
+  <circle cx="62" cy="100" r="58" fill="url(#g19a)"/>
+  <circle cx="138" cy="100" r="58" fill="url(#g19b)"/>
+  <!-- 떨림(두려움): 왼손 둘레의 떨리는 선 -->
+  <g fill="none" stroke="#8fb3e6" stroke-width="1.6" stroke-linecap="round">
+    <path d="M24 62 q-4 5 0 10 q4 5 0 10 q-4 5 0 10"/>
+    <path d="M15 70 q-3 4 0 8 q3 4 0 8"/>
+    <path d="M42 30 q5 -3 10 0 q5 3 10 0"/>
+    <path d="M28 128 q-4 5 0 10"/>
+  </g>
+  <!-- 기쁨: 오른손 둘레의 빛 -->
+  <g stroke="#f3d999" stroke-width="1.8" stroke-linecap="round">
+    <line x1="170" y1="70" x2="182" y2="64"/>
+    <line x1="172" y1="88" x2="186" y2="88"/>
+    <line x1="170" y1="106" x2="182" y2="112"/>
+    <line x1="160" y1="48" x2="168" y2="38"/>
+    <line x1="138" y1="40" x2="138" y2="27"/>
+    <line x1="118" y1="46" x2="112" y2="35"/>
+  </g>
+  <!-- 왼손: 두려움 -->
+  <path transform="translate(62 102) scale(-1.12 1.12)" d="M-14 42 L-16 14 C-20 8 -28 0 -30 -6 C-32 -11 -26 -14 -23 -10 C-19 -5 -15 -1 -13 0 L-13 -26 C-13 -31 -5 -31 -5 -26 L-5 -3 Q-4.5 -1.5 -4 -3 L-4 -32 C-4 -37 4 -37 4 -32 L4 -3 Q4.5 -1.5 5 -3 L5 -28 C5 -33 13 -33 13 -28 L13 -1 Q13.5 0.5 14 -1 L14 -18 C14 -23 21 -23 21 -18 L21 14 C21 26 16 34 14 42 Z" fill="#1b2650" fill-opacity=".6" stroke="#8fb3e6" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- 오른손: 기쁨 -->
+  <path transform="translate(138 102) scale(1.12 1.12)" d="M-14 42 L-16 14 C-20 8 -28 0 -30 -6 C-32 -11 -26 -14 -23 -10 C-19 -5 -15 -1 -13 0 L-13 -26 C-13 -31 -5 -31 -5 -26 L-5 -3 Q-4.5 -1.5 -4 -3 L-4 -32 C-4 -37 4 -37 4 -32 L4 -3 Q4.5 -1.5 5 -3 L5 -28 C5 -33 13 -33 13 -28 L13 -1 Q13.5 0.5 14 -1 L14 -18 C14 -23 21 -23 21 -18 L21 14 C21 26 16 34 14 42 Z" fill="#1b2650" fill-opacity=".45" stroke="#f3d999" stroke-width="1.7" stroke-linejoin="round"/>
+  <!-- 오른손 왼손처럼 같이: 아래의 한 줄 -->
+  <path d="M40 172 Q100 160 160 172" fill="none" stroke="#e8c983" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="100" cy="166" r="3" fill="#e8c983"/>
+</svg>

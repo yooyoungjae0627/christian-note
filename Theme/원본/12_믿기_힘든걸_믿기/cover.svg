@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="water12" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fb3e6" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#1b2650" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- 일곱 번 -->
+  <g fill="#e8c983">
+    <circle cx="52" cy="24" r="4.2"/><circle cx="68" cy="24" r="4.2"/><circle cx="84" cy="24" r="4.2"/>
+    <circle cx="100" cy="24" r="4.2"/><circle cx="116" cy="24" r="4.2"/><circle cx="132" cy="24" r="4.2"/>
+  </g>
+  <circle cx="148" cy="24" r="5.2" fill="#f3d999" stroke="#e9ecf5" stroke-width="1.4"/>
+  <!-- 들어갔다 나오는 사람 -->
+  <g fill="none" stroke="#e8c983" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="64" r="10" fill="#e8c983"/>
+    <path d="M100 75 L100 112"/>
+    <path d="M100 84 L84 70 M100 84 L116 70"/>
+  </g>
+  <!-- 요단 강 물결과 동심원 -->
+  <g fill="none" stroke-linecap="round">
+    <ellipse cx="100" cy="114" rx="26" ry="6" stroke="#e9ecf5" stroke-width="2.2"/>
+    <ellipse cx="100" cy="116" rx="46" ry="10" stroke="#8fb3e6" stroke-width="2" stroke-opacity="0.85"/>
+    <ellipse cx="100" cy="119" rx="68" ry="15" stroke="#8fb3e6" stroke-width="1.6" stroke-opacity="0.55"/>
+  </g>
+  <path d="M14 120 C40 112 70 112 100 120 C130 128 160 128 186 120 L186 184 L14 184 Z" fill="url(#water12)"/>
+  <g fill="none" stroke="#8fb3e6" stroke-width="2.2" stroke-linecap="round">
+    <path d="M18 146 C30 138 42 138 54 146 C66 154 78 154 90 146 C102 138 114 138 126 146 C138 154 150 154 162 146 C170 141 176 140 182 142"/>
+    <path d="M18 166 C30 158 42 158 54 166 C66 174 78 174 90 166 C102 158 114 158 126 166 C138 174 150 174 162 166 C170 161 176 160 182 162" stroke-opacity="0.6"/>
+  </g>
+</svg>

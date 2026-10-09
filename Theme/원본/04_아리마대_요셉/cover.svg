@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="c04sp" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- 저울: 성령의 힘이 육신의 힘(이 세상 것, 돈)보다 조금 더 세다 -->
+  <path d="M76 182 L124 182 L114 172 L86 172 Z" fill="#1b2650" stroke="#e8c983" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="100" y1="172" x2="100" y2="54" stroke="#e8c983" stroke-width="3" stroke-linecap="round"/>
+  <line x1="34" y1="70" x2="166" y2="40" stroke="#e8c983" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="100" cy="55" r="4.5" fill="#f3d999"/>
+  <!-- 왼쪽(무거운) 접시: 빛 -->
+  <g stroke="#c9973b" stroke-width="1.4"><line x1="34" y1="70" x2="16" y2="124"/><line x1="34" y1="70" x2="52" y2="124"/></g>
+  <circle cx="34" cy="108" r="20" fill="url(#c04sp)"/>
+  <path d="M34 92 C40 100 42 106 34 116 C26 106 28 100 34 92 Z" fill="#f3d999"/>
+  <path d="M12 124 Q34 142 56 124 Z" fill="#1b2650" stroke="#e8c983" stroke-width="2.4" stroke-linejoin="round"/>
+  <!-- 오른쪽(가벼운) 접시: 돈 -->
+  <g stroke="#c9973b" stroke-width="1.4"><line x1="166" y1="40" x2="148" y2="94"/><line x1="166" y1="40" x2="184" y2="94"/></g>
+  <g fill="#1b2650" stroke="#c9973b" stroke-width="1.6">
+    <ellipse cx="166" cy="90" rx="11" ry="3.6"/><ellipse cx="166" cy="85" rx="11" ry="3.6"/><ellipse cx="166" cy="80" rx="11" ry="3.6"/>
+  </g>
+  <path d="M144 94 Q166 112 188 94 Z" fill="#1b2650" stroke="#e8c983" stroke-width="2.4" stroke-linejoin="round"/>
+</svg>

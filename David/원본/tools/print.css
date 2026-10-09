@@ -19,6 +19,8 @@ a { color: inherit; text-decoration: none; }
 .cover h1 { position: absolute; top: 44mm; left: 0; right: 0; margin: 0; font-size: 34pt; font-weight: 800; color: #fff; letter-spacing: .06em; }
 .cover .sub { position: absolute; top: 68mm; left: 14mm; right: 14mm; font-size: 10pt; line-height: 1.7; color: #e9ecf5; }
 .cover .art { position: absolute; top: 92mm; left: 0; right: 0; }
+.cover .art.lec { top: 88mm; }
+.cover .motto { position: absolute; top: 154mm; left: 14mm; right: 14mm; font-size: 9pt; line-height: 1.7; color: #f6e7c1; word-break: keep-all; }
 .cover .bar { position: absolute; bottom: 31mm; left: 62mm; width: 24mm; height: 1.2mm; background: #c9973b; border-radius: 1mm; }
 .cover .bot { position: absolute; bottom: 16mm; left: 0; right: 0; font-size: 7.6pt; line-height: 1.9; color: #fff; }
 

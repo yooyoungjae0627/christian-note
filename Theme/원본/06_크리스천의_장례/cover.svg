@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="c06glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- 몸은 사람이 사는 집: 장막 집(작은 집)에서 큰 집으로 -->
+  <circle cx="142" cy="110" r="62" fill="url(#c06glow)"/>
+  <line x1="12" y1="178" x2="188" y2="178" stroke="#c9973b" stroke-width="2" stroke-linecap="round"/>
+  <!-- 장막 집 -->
+  <path d="M16 178 L42 126 L68 178" fill="#1b2650" fill-opacity="0.6" stroke="#e9ecf5" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="5 3"/>
+  <path d="M42 126 L42 120 M42 140 L36 178 M42 140 L48 178" fill="none" stroke="#e9ecf5" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- 화살표 -->
+  <path d="M72 150 L90 150" stroke="#e8c983" stroke-width="2.4" stroke-linecap="round"/>
+  <polygon points="96,150 88,145 88,155" fill="#e8c983"/>
+  <!-- 큰 집 -->
+  <path d="M98 108 L142 66 L186 108" fill="none" stroke="#f3d999" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="106" y="104" width="72" height="74" fill="#1b2650" fill-opacity="0.9" stroke="#e8c983" stroke-width="2.6" stroke-linejoin="round"/>
+  <path d="M132 178 L132 148 A10 10 0 0 1 152 148 L152 178" fill="#f3d999" fill-opacity="0.85" stroke="#e8c983" stroke-width="2"/>
+  <rect x="114" y="116" width="14" height="14" fill="#f3d999" fill-opacity="0.75" stroke="#e8c983" stroke-width="1.6"/>
+  <rect x="156" y="116" width="14" height="14" fill="#f3d999" fill-opacity="0.75" stroke="#e8c983" stroke-width="1.6"/>
+  <circle cx="142" cy="88" r="5" fill="#f3d999"/>
+  <!-- 셋째 하늘 -->
+  <g fill="#e9ecf5">
+    <circle cx="30" cy="40" r="1.8"/><circle cx="54" cy="26" r="1.4"/><circle cx="74" cy="48" r="1.8"/><circle cx="40" cy="74" r="1.3"/><circle cx="96" cy="30" r="1.4"/>
+  </g>
+</svg>

@@ -27,7 +27,7 @@ export function loadBook(root) {
   const only = /^\d+$/.test(arg || "") ? Number(arg) : process.env.ONLY ? Number(process.env.ONLY) : 0;
   book.lessons = dirs.filter((d) => !only || parseInt(d) === only).map((d) => parseLesson(path.join(root, d)));
   if (only && !book.lessons.length) throw new Error(`${only}강 폴더 없음`);
-  if (only) { const L = book.lessons[0], nn = String(L.n).padStart(2, "0"); book.only = nn; book.subtitle = `${L.n}강 · ${L.title}`; book.pdfName = `다윗의_삶_${nn}강_말씀판.pdf`; book.epubName = `다윗의_삶_${nn}강_말씀판.epub`; }
+  if (only) { const L = book.lessons[0], nn = String(L.n).padStart(2, "0"); book.only = nn; { const ld = path.join(root, dirs.find((x) => parseInt(x) === only)), art = path.join(ld, "cover.svg"); if (!fs.existsSync(art)) throw new Error(`${nn}강 표지 그림 cover.svg 없음 — 표지는 그 강의 주제로 그린다`); if (!L.coverText) throw new Error(`${nn}강 @cover(표지 핵심 문장) 없음`); book.coverArt = fs.readFileSync(art, "utf8").replace(/<\?xml[^>]*>\s*/, "").replace(/<svg\b/, '<svg width="62mm" height="62mm"'); book.coverMotto = L.coverText; } book.subtitle = `${L.n}강 · ${L.title}`; book.pdfName = `다윗의_삶_${nn}강_말씀판.pdf`; book.epubName = `다윗의_삶_${nn}강_말씀판.epub`; }
   if (!only) book.lessons.forEach((L, i) => { if (L.n !== i + 1) throw new Error(`강 번호가 이어지지 않음: ${L.n}강 (기대 ${i + 1}강)`); });
   return book;
 }
@@ -63,6 +63,7 @@ export function parseLesson(dir) {
       case "@yearnote": (sec ? sec.blocks : ch.blocks).at(-1).note = f[0]; break;
       case "@note": push({ t: "note", term: f[0], text: f[1] }); L.notes.push({ term: f[0], text: f[1], lesson: L.n }); break;
       case "@summary": L.summary.push(f.join("|")); break;
+      case "@cover": L.coverText = f.filter(Boolean); break; // 표지 핵심 문장(강의 문장 그대로, 2026-10-09)
       case "@gloss": L.gloss.push({ term: f[0], text: f[1], lesson: L.n }); break;
       default: throw new Error("모르는 태그: " + line);
     }

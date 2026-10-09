@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="sun11" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f3d999"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shadow11" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2650" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#1b2650" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <!-- 비추는 빛 -->
+  <circle cx="100" cy="30" r="20" fill="url(#sun11)"/>
+  <circle cx="100" cy="30" r="8" fill="#f3d999"/>
+  <!-- 남편과 아내 -->
+  <g fill="none" stroke="#e8c983" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="78" cy="76" r="8" fill="#e8c983"/>
+    <path d="M78 85 L78 116 M78 116 L70 138 M78 116 L86 138 M78 93 L66 108"/>
+  </g>
+  <g fill="none" stroke="#e9ecf5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="122" cy="78" r="7.5" fill="#e9ecf5"/>
+    <path d="M122 86 L122 96 M122 96 L112 124 L132 124 Z M116 124 L114 138 M128 124 L130 138 M122 94 L134 108"/>
+  </g>
+  <!-- 맞잡은 손 -->
+  <path d="M78 93 C90 104 108 104 122 94" fill="none" stroke="#f3d999" stroke-width="2.6" stroke-linecap="round"/>
+  <!-- 땅과 하나로 겹친 그림자 -->
+  <line x1="24" y1="140" x2="176" y2="140" stroke="#c9973b" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M60 141 C70 160 84 176 100 186 C116 176 130 160 140 141 Z" fill="url(#shadow11)" stroke="#c9973b" stroke-width="1.2" stroke-opacity="0.6"/>
+  <g fill="none" stroke="#e8c983" stroke-width="1.8" stroke-opacity="0.85">
+    <circle cx="94" cy="160" r="7"/><circle cx="106" cy="160" r="7"/>
+  </g>
+</svg>

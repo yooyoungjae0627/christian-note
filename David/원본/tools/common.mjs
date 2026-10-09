@@ -11,7 +11,7 @@ export const COVER_ART = `<svg width="60mm" height="46mm" viewBox="0 0 120 92">
 
 export function coverHtml(book, theme = "") {
   return `<div class="cover${theme ? " cover-" + theme : ""}"><div class="ed">${esc(book.edition)}</div><div class="en">${esc(book.titleEn)}</div>
-  <h1>${esc(book.title)}</h1><div class="sub">${esc(book.subtitle)}</div><div class="art">${COVER_ART}</div>
+  <h1>${esc(book.title)}</h1><div class="sub">${esc(book.subtitle)}</div><div class="art${book.coverArt ? " lec" : ""}">${book.coverArt || COVER_ART}</div>${book.coverMotto ? `<div class="motto">${book.coverMotto.map(esc).join("<br>")}</div>` : ""}
   ${book.coverBottom ? `<div class="bar"></div><div class="bot">${book.coverBottom.map(esc).join("<br>")}</div>` : ""}</div>`;
 }
 

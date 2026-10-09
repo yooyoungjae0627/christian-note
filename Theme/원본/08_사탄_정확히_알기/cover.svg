@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="light08" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e9ecf5"/>
+      <stop offset="0.55" stop-color="#8fc6ff"/>
+      <stop offset="1" stop-color="#5aa8ff" stop-opacity="0.2"/>
+    </radialGradient>
+    <radialGradient id="dark08" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0b0f22"/>
+      <stop offset="0.75" stop-color="#1b2650"/>
+      <stop offset="1" stop-color="#1b2650" stop-opacity="0.6"/>
+    </radialGradient>
+  </defs>
+  <!-- 기호 1번 빛 -->
+  <g stroke="#5aa8ff" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85">
+    <line x1="56" y1="14" x2="56" y2="26"/><line x1="56" y1="94" x2="56" y2="106"/>
+    <line x1="10" y1="60" x2="22" y2="60"/><line x1="90" y1="60" x2="102" y2="60"/>
+    <line x1="24" y1="28" x2="32" y2="36"/><line x1="80" y1="84" x2="88" y2="92"/>
+    <line x1="88" y1="28" x2="80" y2="36"/><line x1="24" y1="92" x2="32" y2="84"/>
+  </g>
+  <circle cx="56" cy="60" r="28" fill="url(#light08)"/>
+  <!-- 기호 2번 어둠 -->
+  <circle cx="144" cy="60" r="30" fill="url(#dark08)" stroke="#ff5a5a" stroke-width="2.2"/>
+  <circle cx="144" cy="60" r="38" fill="none" stroke="#ff5a5a" stroke-width="1.2" stroke-opacity="0.35"/>
+  <!-- 두 길 -->
+  <path d="M100 150 C92 128 74 112 60 98" fill="none" stroke="#5aa8ff" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 6"/>
+  <path d="M100 150 C108 128 126 112 140 98" fill="none" stroke="#ff5a5a" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 6"/>
+  <!-- 고르는 사람 -->
+  <g fill="none" stroke="#e8c983" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="146" r="7" fill="#e8c983"/>
+    <line x1="100" y1="154" x2="100" y2="176"/>
+    <line x1="100" y1="160" x2="88" y2="170"/>
+    <line x1="100" y1="160" x2="112" y2="170"/>
+    <line x1="100" y1="176" x2="92" y2="190"/>
+    <line x1="100" y1="176" x2="108" y2="190"/>
+  </g>
+</svg>

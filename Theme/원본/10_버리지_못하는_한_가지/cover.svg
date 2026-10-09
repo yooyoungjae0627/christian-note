@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="crown10" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#c9973b" stop-opacity="0.15"/>
+    </radialGradient>
+  </defs>
+  <!-- 세겜 근처 상수리나무 -->
+  <path d="M100 18 C124 18 140 30 142 46 C160 48 172 62 166 78 C178 90 168 110 150 110 C142 122 120 124 108 116 C100 122 86 122 78 114 C62 122 40 114 38 98 C22 92 24 70 40 64 C38 44 58 32 76 36 C82 24 92 18 100 18 Z" fill="url(#crown10)" stroke="#e8c983" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M94 150 L96 112 M106 150 L104 112 M96 124 C88 118 80 112 72 106 M104 122 C114 116 122 110 130 104 M100 112 L100 92" fill="none" stroke="#e8c983" stroke-width="3" stroke-linecap="round"/>
+  <!-- 땅 -->
+  <line x1="14" y1="150" x2="186" y2="150" stroke="#e8c983" stroke-width="2.2" stroke-linecap="round"/>
+  <g fill="none" stroke="#c9973b" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.8">
+    <path d="M94 150 C86 156 80 160 72 162"/>
+    <path d="M106 150 C114 156 122 160 132 162"/>
+  </g>
+  <!-- 내놓아 묻은 그 한 가지 -->
+  <path d="M70 168 C84 160 116 160 130 168 C122 186 78 186 70 168 Z" fill="#1b2650" fill-opacity="0.6" stroke="#c9973b" stroke-width="1.4" stroke-dasharray="3 3"/>
+  <g fill="#d9776b" stroke="#f3d999" stroke-width="1.2">
+    <circle cx="100" cy="166" r="3.6"/>
+    <path d="M94 180 L95 171 C95 168 105 168 105 171 L106 180 Z"/>
+  </g>
+  <g fill="none" stroke="#e9ecf5" stroke-width="1.4" stroke-opacity="0.75" stroke-linecap="round">
+    <circle cx="84" cy="174" r="3"/><circle cx="116" cy="174" r="3"/>
+  </g>
+  <!-- 내려놓는 방향 -->
+  <path d="M152 124 L152 144 M146 138 L152 145 L158 138" fill="none" stroke="#e9ecf5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.8"/>
+</svg>

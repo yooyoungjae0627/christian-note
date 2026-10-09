@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="beam25" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#e8c983" stop-opacity="0.12"/>
+    </linearGradient>
+    <radialGradient id="src25" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="1"/>
+      <stop offset="1" stop-color="#e8c983" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pit25" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2650" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1b2650" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+  <!-- 어둠 속 깊은 구덩이(절망) -->
+  <path d="M14 40 C 30 90, 52 150, 70 176 L 130 176 C 148 150, 170 90, 186 40" fill="url(#pit25)" stroke="#c9973b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 60 C 42 100, 56 140, 70 166 M170 60 C 158 100, 144 140, 130 166" fill="none" stroke="#c9973b" stroke-opacity="0.45" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- 위에서 내려오는 한 줄기 빛(오직 하나님만) -->
+  <circle cx="100" cy="24" r="16" fill="url(#src25)"/>
+  <circle cx="100" cy="24" r="5.5" fill="#f3d999"/>
+  <g stroke="#f3d999" stroke-width="1.4" stroke-linecap="round">
+    <line x1="100" y1="10" x2="100" y2="14"/>
+    <line x1="88" y1="15" x2="91" y2="18"/>
+    <line x1="112" y1="15" x2="109" y2="18"/>
+    <line x1="84" y1="26" x2="88" y2="26"/>
+    <line x1="116" y1="26" x2="112" y2="26"/>
+  </g>
+  <polygon points="94,30 106,30 128,174 72,174" fill="url(#beam25)"/>
+  <!-- 바닥 -->
+  <line x1="62" y1="176" x2="138" y2="176" stroke="#e8c983" stroke-width="2" stroke-linecap="round"/>
+  <!-- 무릎 꿇고 위를 바라보는 사람 -->
+  <g fill="none" stroke="#e9ecf5" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="98" cy="134" r="5.5" fill="#e9ecf5"/>
+    <path d="M97 141 L93 159"/>
+    <path d="M93 159 L104 175 M93 159 L82 175 L76 175"/>
+    <path d="M96 145 L88 128 M96 145 L106 127"/>
+  </g>
+  <!-- 절망 속에서 피어나는 소망 -->
+  <g fill="none" stroke="#9fd18b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M118 176 L118 160"/>
+    <path d="M118 166 C 112 166, 110 161, 110 158 C 115 158, 118 161, 118 166 Z" fill="#9fd18b" fill-opacity="0.5"/>
+    <path d="M118 162 C 124 162, 126 157, 126 154 C 121 154, 118 157, 118 162 Z" fill="#9fd18b" fill-opacity="0.5"/>
+  </g>
+</svg>
