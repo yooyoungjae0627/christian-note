@@ -1,3 +1,7 @@
+if __name__ == '__main__':
+ from build_reference_chapters import main
+ main()
+ raise SystemExit(0)
 import json,re,html,zipfile,os,uuid,subprocess
 from pathlib import Path
 from reportlab.pdfbase import pdfmetrics

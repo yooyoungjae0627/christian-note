@@ -9,7 +9,7 @@ for(const ch of [1,2,3]){
  for(let i=0;i<doc.countPages();i++){
   const page=doc.loadPage(i),links=page.getLinks();
   for(const l of links.filter(l=>!l.isExternal())){internal++;try{const d=doc.resolveLinkDestination(l.getURI());if(d.page<0||d.page>=doc.countPages())errors.push(`bad internal destination page ${i+1}`);}catch(e){errors.push(e.message);}}
-  const qrs=links.filter(l=>l.isExternal()&&l.getURI().includes('youtu')&&Math.abs(l.getBounds()[2]-l.getBounds()[0]-13.6*72/25.4)<1);
+  const qrs=links.filter(l=>l.isExternal()&&l.getURI().includes('youtu')&&Math.abs(l.getBounds()[2]-l.getBounds()[0]-13.6*72/25.4)<1&&Math.abs(l.getBounds()[3]-l.getBounds()[1]-13.6*72/25.4)<1);
   const scan=qrs.length?page.toPixmap(mupdf.Matrix.scale(300/72,300/72),mupdf.ColorSpace.DeviceRGB,false,true):null;
   for(const l of qrs){const b=l.getBounds(),s=300/72,px=scan.getPixels(),W=scan.getWidth(),H=scan.getHeight(),N=scan.getNumberOfComponents();const x0=Math.max(0,Math.floor((b[0]-3)*s)),y0=Math.max(0,Math.floor((b[1]-3)*s)),x1=Math.min(W,Math.ceil((b[2]+3)*s)),y1=Math.min(H,Math.ceil((b[3]+3)*s)),w=x1-x0,h=y1-y0,rgba=new Uint8ClampedArray(w*h*4);
    for(let y=0;y<h;y++)for(let x=0;x<w;x++){const src=((y+y0)*W+x+x0)*N,dst=(y*w+x)*4;rgba[dst]=px[src];rgba[dst+1]=px[src+1];rgba[dst+2]=px[src+2];rgba[dst+3]=255;}

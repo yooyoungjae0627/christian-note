@@ -1,8 +1,8 @@
 {
   "chapter": 2,
-  "pages": 43,
+  "pages": 39,
   "qr_expected": 12,
   "qr_decoded": 12,
-  "internal_links": 39,
+  "internal_links": 16,
   "errors": []
 }

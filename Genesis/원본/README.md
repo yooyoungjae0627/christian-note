@@ -5,11 +5,16 @@
 재생성은 저장소 루트에서 다음 순서로 실행한다. Python은 Codex 번들 Python의 절대 경로를 사용하고 `-X utf8` 옵션을 준다. Node 패키지는 기존 `%TEMP%/topicbook/node_modules`에서 읽으며 설치·캐시를 저장소에 만들지 않는다.
 
 1. `node Genesis/원본/verify_chapter_pdfs.mjs qr`
-2. 번들 Python으로 `Genesis/원본/build_chapters.py` 실행
+2. 번들 Python으로 `Genesis/원본/build_chapters.py` 실행 — 기준 스타일 빌더로 연결된다.
 3. 번들 Python으로 `Genesis/원본/verify_chapters.py` 실행
 4. `node Genesis/원본/verify_chapter_pdfs.mjs check`
 5. `tools/check_epub.mjs`를 의존성이 있는 임시 런타임에 복사해 완성본 EPUB 3개 검사
-6. PDF 페이지 PNG와 EPUB 렌더링을 확인한다. PDF 검사용 이미지는 `%TEMP%/genesis-chapters-20261010`에 생성된다.
+6. 번들 Python으로 `Genesis/원본/verify_reference_style.py` 실행
+7. PDF 페이지 PNG와 EPUB 배치를 확인한다. PDF 검사용 이미지는 `%TEMP%/genesis-chapters-20261010`에 생성된다.
+
+`build_reference_chapters.py`가 현재 조판 원본이며 `reference_style.css`와 `reference_style.json`을 사용한다. `extract_reference_style.py`는 기준 PDF의 실제 문단별 글꼴·강조 범위를 추출한다. 원본을 다시 추출할 때만 실행한다. `inspect_reference_style.mjs`는 기준 PDF의 검사 페이지를 렌더링한다.
+
+정적 Noto 폰트는 `prepare_reference_fonts.py`로 Windows의 Noto Serif KR / Noto Sans KR 가변 폰트에서 만든다. 빌더가 자동 호출한다. Python의 fontTools가 필요하며 이번 환경에는 `%TEMP%/genesis-style-20261010/python-libs`에 설치했다. 폰트와 HTML, 중간 PDF는 같은 임시 폴더에 두고 커밋하지 않는다. Edge로 PDF를 만든 뒤 기존 `tools/pdf2epub.mjs`로 고정 배치 EPUB을 만들고 페이지별 본문 전사를 추가한다. EPUB 페이지와 클릭 영역은 PDF와 대응한다.
 
 `prepare_chapters.py`와 `review_chapters.py`는 원문 추출·근거 확정 단계의 스크립트다. 전자는 바탕화면의 기존 해설 PDF가 필요하며 장별 JSON을 덮어쓰므로 확정 원본으로 다시 빌드할 때 실행하지 않는다. 기존 자료의 오류 수정은 `corrections.json`에 있다.
 
