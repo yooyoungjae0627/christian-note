@@ -7,7 +7,7 @@ import { execFileSync } from "child_process";
 export const EDGE = ["C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", "C:/Program Files/Microsoft/Edge/Application/msedge.exe"].find(fs.existsSync);
 const wait = (ms) => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 const url = (f) => "file:///" + path.resolve(f).split(path.sep).join("/");
-const base = (tag) => ["--headless=new", "--no-first-run", "--disable-gpu", "--hide-scrollbars", "--allow-file-access-from-files", "--user-data-dir=" + path.join(os.tmpdir(), `dw_edge_${tag}_${process.pid}`)];
+const base = (tag) => ["--headless=new", "--mute-audio", "--no-first-run", "--disable-gpu", "--hide-scrollbars", "--allow-file-access-from-files", "--user-data-dir=" + path.join(os.tmpdir(), `dw_edge_${tag}_${process.pid}`)];
 
 // 파일이 다 써질 때까지 기다린다(Edge가 실행기만 먼저 끝내는 경우가 있다)
 function waitFile(f) {

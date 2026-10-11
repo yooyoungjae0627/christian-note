@@ -35,7 +35,7 @@ function overlay(l, color, top) {
   fs.writeFileSync(html, `<!doctype html><html><head><meta charset="utf-8"><style>@page{size:148mm 210mm;margin:0}html,body{margin:0;background:transparent}
   div{position:absolute;${pos};top:${top}pt;font:${centered ? 400 : 500} ${l.font.size}pt/1 "Noto Sans KR",sans-serif;color:${color};white-space:nowrap}</style></head><body><div>${NEW}</div></body></html>`);
   if (fs.existsSync(pdf)) fs.rmSync(pdf);
-  execFileSync(EDGE, ["--headless=new", "--no-first-run", "--disable-gpu", "--user-data-dir=" + path.join(tmp, "edge"), "--no-pdf-header-footer", "--print-to-pdf=" + pdf, "file:///" + html.split(path.sep).join("/")], { stdio: "ignore", timeout: 120000 });
+  execFileSync(EDGE, ["--headless=new", "--mute-audio", "--no-first-run", "--disable-gpu", "--user-data-dir=" + path.join(tmp, "edge"), "--no-pdf-header-footer", "--print-to-pdf=" + pdf, "file:///" + html.split(path.sep).join("/")], { stdio: "ignore", timeout: 120000 });
   for (let i = 0; i < 100 && !(fs.existsSync(pdf) && fs.statSync(pdf).size > 0); i++) Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 200);
   return fs.readFileSync(pdf);
 }
