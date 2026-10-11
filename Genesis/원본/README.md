@@ -1,9 +1,10 @@
-# 창세기 1–3장 교재 원본
+# 창세기 교재 원본
 
-현재 배포본은 `chapter01.json`–`chapter03.json`의 확정 해설과 `verses_01-03.json`의 표준킹제임스성경 한영 본문을 사용한다. `chapter_extras.py`에는 장별 문제·답안, FAQ와 요약 구성이 있다. 근거 항목에는 원본 파일·쪽수·인용 부분·확정 상태·기존 영상 주소를 보존한다.
+현재 배포본은 `chapter01.json`–`chapter10.json`의 확정 해설과 `verses_01-03.json`·`verses_04-10.json`의 표준킹제임스성경 한영 본문을 사용한다. 4장부터는 장별 JSON에 강조(`spans`)·인용 여부(`quote`)·직접/연결 구분(`basis`)·학습 자료(`learning`)·표지 부제와 표어를 함께 둔다. 빌드·검사 스크립트는 장 번호를 인자로 받는다(예: `build_chapters.py 4 5`). 인자가 없으면 1–10장 전부다. `chapter_extras.py`에는 장별 문제·답안, FAQ와 요약 구성이 있다. 근거 항목에는 원본 파일·쪽수·인용 부분·확정 상태·기존 영상 주소를 보존한다.
 
 재생성은 저장소 루트에서 다음 순서로 실행한다. Python은 Codex 번들 Python의 절대 경로를 사용하고 `-X utf8` 옵션을 준다. Node 패키지는 기존 `%TEMP%/topicbook/node_modules`에서 읽으며 설치·캐시를 저장소에 만들지 않는다.
 
+0. Node 의존성: `tools/package.json`을 `%TEMP%/topicbook`에 복사해 `npm i`.
 1. `node Genesis/원본/verify_chapter_pdfs.mjs qr`
 2. 번들 Python으로 `Genesis/원본/build_chapters.py` 실행 — 기준 스타일 빌더로 연결된다.
 3. 번들 Python으로 `Genesis/원본/verify_chapters.py` 실행

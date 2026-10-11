@@ -10,6 +10,7 @@
     "epub_video_links": 72,
     "questions": 25,
     "faq": 12,
+    "summary": 20,
     "errors": []
   },
   {
@@ -23,6 +24,7 @@
     "epub_video_links": 42,
     "questions": 25,
     "faq": 12,
+    "summary": 20,
     "errors": []
   },
   {
@@ -36,6 +38,105 @@
     "epub_video_links": 48,
     "questions": 25,
     "faq": 12,
+    "summary": 20,
+    "errors": []
+  },
+  {
+    "chapter": 4,
+    "pages": 36,
+    "verses_bilingual": 26,
+    "comments": 20,
+    "source_entries": 23,
+    "qr_expected": 4,
+    "pdf_video_links": 16,
+    "epub_video_links": 16,
+    "questions": 25,
+    "faq": 12,
+    "summary": 18,
+    "errors": []
+  },
+  {
+    "chapter": 5,
+    "pages": 32,
+    "verses_bilingual": 32,
+    "comments": 22,
+    "source_entries": 22,
+    "qr_expected": 5,
+    "pdf_video_links": 17,
+    "epub_video_links": 17,
+    "questions": 25,
+    "faq": 12,
+    "summary": 18,
+    "errors": []
+  },
+  {
+    "chapter": 6,
+    "pages": 41,
+    "verses_bilingual": 22,
+    "comments": 34,
+    "source_entries": 35,
+    "qr_expected": 6,
+    "pdf_video_links": 17,
+    "epub_video_links": 17,
+    "questions": 25,
+    "faq": 12,
+    "summary": 18,
+    "errors": []
+  },
+  {
+    "chapter": 7,
+    "pages": 32,
+    "verses_bilingual": 24,
+    "comments": 12,
+    "source_entries": 12,
+    "qr_expected": 7,
+    "pdf_video_links": 39,
+    "epub_video_links": 39,
+    "questions": 25,
+    "faq": 12,
+    "summary": 12,
+    "errors": []
+  },
+  {
+    "chapter": 8,
+    "pages": 33,
+    "verses_bilingual": 22,
+    "comments": 12,
+    "source_entries": 15,
+    "qr_expected": 11,
+    "pdf_video_links": 56,
+    "epub_video_links": 56,
+    "questions": 25,
+    "faq": 12,
+    "summary": 12,
+    "errors": []
+  },
+  {
+    "chapter": 9,
+    "pages": 33,
+    "verses_bilingual": 29,
+    "comments": 15,
+    "source_entries": 15,
+    "qr_expected": 7,
+    "pdf_video_links": 32,
+    "epub_video_links": 32,
+    "questions": 25,
+    "faq": 12,
+    "summary": 15,
+    "errors": []
+  },
+  {
+    "chapter": 10,
+    "pages": 32,
+    "verses_bilingual": 32,
+    "comments": 14,
+    "source_entries": 15,
+    "qr_expected": 5,
+    "pdf_video_links": 20,
+    "epub_video_links": 20,
+    "questions": 25,
+    "faq": 12,
+    "summary": 14,
     "errors": []
   }
 ]

@@ -40,5 +40,89 @@
     "highlight_mismatches": [],
     "outside_glyphs": [],
     "errors": []
+  },
+  {
+    "chapter": 4,
+    "body_font": "Noto Serif KR",
+    "body_size_pt": 10.2975,
+    "median_tracking_pt": -0.0,
+    "reference_highlight_spans_checked": 24,
+    "reference_first_paragraph_y_deltas_pt": null,
+    "verse_background_shapes": 16,
+    "highlight_mismatches": [],
+    "outside_glyphs": [],
+    "errors": []
+  },
+  {
+    "chapter": 5,
+    "body_font": "Noto Serif KR",
+    "body_size_pt": 10.2975,
+    "median_tracking_pt": -0.0,
+    "reference_highlight_spans_checked": 21,
+    "reference_first_paragraph_y_deltas_pt": null,
+    "verse_background_shapes": 15,
+    "highlight_mismatches": [],
+    "outside_glyphs": [],
+    "errors": []
+  },
+  {
+    "chapter": 6,
+    "body_font": "Noto Serif KR",
+    "body_size_pt": 10.2975,
+    "median_tracking_pt": -0.0,
+    "reference_highlight_spans_checked": 27,
+    "reference_first_paragraph_y_deltas_pt": null,
+    "verse_background_shapes": 17,
+    "highlight_mismatches": [],
+    "outside_glyphs": [],
+    "errors": []
+  },
+  {
+    "chapter": 7,
+    "body_font": "Noto Serif KR",
+    "body_size_pt": 10.2975,
+    "median_tracking_pt": -0.0,
+    "reference_highlight_spans_checked": 14,
+    "reference_first_paragraph_y_deltas_pt": null,
+    "verse_background_shapes": 16,
+    "highlight_mismatches": [],
+    "outside_glyphs": [],
+    "errors": []
+  },
+  {
+    "chapter": 8,
+    "body_font": "Noto Serif KR",
+    "body_size_pt": 10.2975,
+    "median_tracking_pt": -0.0,
+    "reference_highlight_spans_checked": 17,
+    "reference_first_paragraph_y_deltas_pt": null,
+    "verse_background_shapes": 12,
+    "highlight_mismatches": [],
+    "outside_glyphs": [],
+    "errors": []
+  },
+  {
+    "chapter": 9,
+    "body_font": "Noto Serif KR",
+    "body_size_pt": 10.2975,
+    "median_tracking_pt": -0.0,
+    "reference_highlight_spans_checked": 15,
+    "reference_first_paragraph_y_deltas_pt": null,
+    "verse_background_shapes": 16,
+    "highlight_mismatches": [],
+    "outside_glyphs": [],
+    "errors": []
+  },
+  {
+    "chapter": 10,
+    "body_font": "Noto Serif KR",
+    "body_size_pt": 10.2975,
+    "median_tracking_pt": -0.0,
+    "reference_highlight_spans_checked": 16,
+    "reference_first_paragraph_y_deltas_pt": null,
+    "verse_background_shapes": 20,
+    "highlight_mismatches": [],
+    "outside_glyphs": [],
+    "errors": []
   }
 ]

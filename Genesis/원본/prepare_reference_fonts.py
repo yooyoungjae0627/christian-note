@@ -9,6 +9,11 @@ from fontTools import subset
 R=Path(__file__).resolve().parents[2]
 text=''.join(p.read_text(encoding='utf-8-sig') for p in (R/'Genesis/원본').glob('*.json'))
 text+=(R/'Genesis/원본/build_reference_chapters.py').read_text(encoding='utf8')
+# The subset must cover every chapter's glyphs: rebuild when the source text changes.
+import hashlib
+digest=hashlib.sha256(text.encode('utf8')).hexdigest();stamp=T/'font-text.sha256'
+if not stamp.exists() or stamp.read_text()!=digest:
+ for old in T.glob('Noto*KR-*.ttf'):old.unlink()
 for family,weights in [('Serif',[400,700]),('Sans',[300,400,500,700,900])]:
  for weight in weights:
   file=T/f'Noto{family}KR-{weight}.ttf'
@@ -23,3 +28,4 @@ for family,weights in [('Serif',[400,700]),('Sans',[300,400,500,700,900])]:
    if name.nameID in (2,17):name.string=label.encode(name.getEncoding(),errors='replace')
    if name.nameID==6:name.string=f'Noto-{family}-KR-{label}'.encode(name.getEncoding(),errors='replace')
   font.save(file);print(f'{family} {weight}: {file.stat().st_size} bytes',flush=True)
+stamp.write_text(digest)

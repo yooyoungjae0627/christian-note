@@ -7,7 +7,9 @@ logging.getLogger('pdfminer').setLevel(logging.ERROR)
 B=Path(__file__).parent;R=B.parents[1];ref=json.loads((B/'reference_style.json').read_text(encoding='utf8'));results=[]
 def nc(t):return ''.join(x for x in unicodedata.normalize('NFC',t) if not x.isspace())
 def like(v,t):return isinstance(v,(list,tuple)) and len(v)==3 and max(abs(a-b) for a,b in zip(v,t))<.005
-for ch in (1,2,3):
+import sys
+from build_reference_chapters import spans_of
+for ch in ([int(x) for x in sys.argv[1:]] or range(1,11)):
  errors=[];r=PdfReader(R/f'Genesis/창세기_{ch:02}장_교재.pdf');end=r.get_destination_page_number(next(x for x in r.outline if x.title=='한눈에 보는 이야기'))
  d=json.loads((B/f'chapter{ch:02}.json').read_text(encoding='utf8'));comments=[c for s in d['sections'] for c in s['comments']]
  stream=[];sizes=[];gaps=[];outside=[];verse_backgrounds=0
@@ -47,7 +49,7 @@ for ch in (1,2,3):
   clean=nc(c['text']);start=flat.find(clean,cursor)
   if start<0:errors.append('Cannot locate rendered commentary '+c['id']);continue
   cursor=start+len(clean)
-  for s in ref['comments'][c['id']]['spans']:
+  for s in spans_of(c):
    k=len(nc(c['text'][:s['start']]));n=len(nc(s['text']))
    if s['level']<=3:
     actual=[v for x,v in stream[start+k:start+k+n]]
