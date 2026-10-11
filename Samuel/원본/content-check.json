@@ -1,0 +1,287 @@
+[
+ {
+  "chapter": 1,
+  "verses": 28,
+  "sections": 4,
+  "comments": 11,
+  "basis": {
+   "direct": 4,
+   "linked": 2,
+   "doctrine": 5
+  },
+  "evidence": 13,
+  "questions": 32,
+  "faq": 12,
+  "summary": 14,
+  "glossary": 8,
+  "notes": 2,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 2,
+  "verses": 36,
+  "sections": 6,
+  "comments": 15,
+  "basis": {
+   "direct": 0,
+   "linked": 2,
+   "doctrine": 13
+  },
+  "evidence": 20,
+  "questions": 37,
+  "faq": 13,
+  "summary": 17,
+  "glossary": 8,
+  "notes": 5,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 3,
+  "verses": 21,
+  "sections": 5,
+  "comments": 11,
+  "basis": {
+   "direct": 1,
+   "linked": 4,
+   "doctrine": 6
+  },
+  "evidence": 15,
+  "questions": 35,
+  "faq": 12,
+  "summary": 14,
+  "glossary": 8,
+  "notes": 4,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 4,
+  "verses": 22,
+  "sections": 6,
+  "comments": 12,
+  "basis": {
+   "direct": 4,
+   "linked": 2,
+   "doctrine": 6
+  },
+  "evidence": 15,
+  "questions": 34,
+  "faq": 12,
+  "summary": 14,
+  "glossary": 7,
+  "notes": 3,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 5,
+  "verses": 12,
+  "sections": 5,
+  "comments": 12,
+  "basis": {
+   "direct": 0,
+   "linked": 4,
+   "doctrine": 8
+  },
+  "evidence": 12,
+  "questions": 30,
+  "faq": 12,
+  "summary": 14,
+  "glossary": 7,
+  "notes": 1,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 6,
+  "verses": 21,
+  "sections": 5,
+  "comments": 11,
+  "basis": {
+   "direct": 0,
+   "linked": 3,
+   "doctrine": 8
+  },
+  "evidence": 15,
+  "questions": 32,
+  "faq": 12,
+  "summary": 14,
+  "glossary": 8,
+  "notes": 3,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 7,
+  "verses": 17,
+  "sections": 6,
+  "comments": 10,
+  "basis": {
+   "direct": 0,
+   "linked": 5,
+   "doctrine": 5
+  },
+  "evidence": 14,
+  "questions": 36,
+  "faq": 12,
+  "summary": 14,
+  "glossary": 8,
+  "notes": 1,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 8,
+  "verses": 22,
+  "sections": 6,
+  "comments": 9,
+  "basis": {
+   "direct": 0,
+   "linked": 0,
+   "doctrine": 9
+  },
+  "evidence": 9,
+  "questions": 33,
+  "faq": 12,
+  "summary": 14,
+  "glossary": 7,
+  "notes": 1,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 9,
+  "verses": 27,
+  "sections": 5,
+  "comments": 14,
+  "basis": {
+   "direct": 3,
+   "linked": 6,
+   "doctrine": 5
+  },
+  "evidence": 16,
+  "questions": 37,
+  "faq": 13,
+  "summary": 16,
+  "glossary": 8,
+  "notes": 0,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 10,
+  "verses": 27,
+  "sections": 6,
+  "comments": 12,
+  "basis": {
+   "direct": 1,
+   "linked": 7,
+   "doctrine": 4
+  },
+  "evidence": 17,
+  "questions": 34,
+  "faq": 13,
+  "summary": 16,
+  "glossary": 8,
+  "notes": 4,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 11,
+  "verses": 15,
+  "sections": 5,
+  "comments": 11,
+  "basis": {
+   "direct": 1,
+   "linked": 7,
+   "doctrine": 3
+  },
+  "evidence": 15,
+  "questions": 31,
+  "faq": 12,
+  "summary": 15,
+  "glossary": 7,
+  "notes": 1,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 12,
+  "verses": 25,
+  "sections": 6,
+  "comments": 12,
+  "basis": {
+   "direct": 0,
+   "linked": 4,
+   "doctrine": 8
+  },
+  "evidence": 14,
+  "questions": 33,
+  "faq": 13,
+  "summary": 16,
+  "glossary": 7,
+  "notes": 2,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 13,
+  "verses": 23,
+  "sections": 4,
+  "comments": 12,
+  "basis": {
+   "direct": 7,
+   "linked": 2,
+   "doctrine": 3
+  },
+  "evidence": 12,
+  "questions": 28,
+  "faq": 12,
+  "summary": 14,
+  "glossary": 7,
+  "notes": 2,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 14,
+  "verses": 52,
+  "sections": 7,
+  "comments": 14,
+  "basis": {
+   "direct": 5,
+   "linked": 3,
+   "doctrine": 6
+  },
+  "evidence": 14,
+  "questions": 32,
+  "faq": 13,
+  "summary": 15,
+  "glossary": 8,
+  "notes": 7,
+  "errors": [],
+  "warn": []
+ },
+ {
+  "chapter": 15,
+  "verses": 35,
+  "sections": 7,
+  "comments": 17,
+  "basis": {
+   "direct": 9,
+   "linked": 6,
+   "doctrine": 2
+  },
+  "evidence": 20,
+  "questions": 36,
+  "faq": 14,
+  "summary": 18,
+  "glossary": 9,
+  "notes": 5,
+  "errors": [],
+  "warn": []
+ }
+]

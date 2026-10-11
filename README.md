@@ -29,7 +29,8 @@
 | 첫열매들 예배 강의, "주제별 교재", 새 예배 주제 | **Theme** | `docs/policy/성경주제별_교재_제작지침.md` (+ 밀크 ①) | `Theme/원본/` | `Theme/NN_이름.pdf·.epub` |
 | 주간 성경 구절 테스트 카드 | cards | `docs/policy/성경구절_테스트카드_제작정책.md` | — | `cards/*.html` |
 | 창세기 장별 교재, 해설에 근거 구간 연결 | **Genesis** | `docs/policy/창세기_교재_제작지침.md` | `Genesis/원본/` | `Genesis/창세기_NN장_교재.pdf·.epub` (1–50장 각각, 현재 1–10장) |
-| 사무엘상·하 강의 스크립트, 사무엘상 장별 교재 자료 | **Samuel** | `docs/policy/다윗의삶_강의스크립트_자료정책.md` | `Samuel/강의스크립트/` | (자료 보관 — 「다윗의 삶」 59편 전체 스크립트·시각 링크, 목록 `Samuel/README.md`) |
+| 사무엘상 장별 교재 | **Samuel** | `docs/policy/사무엘상_교재_제작지침.md` (+ 창세기 지침) | `Samuel/원본/` | `Samuel/사무엘상_NN장_교재.pdf·.epub` (현재 1–15장) |
+| 사무엘상·하 강의 스크립트(교재 자료) | Samuel | `docs/policy/다윗의삶_강의스크립트_자료정책.md` | `Samuel/강의스크립트/` | (자료 보관 — 「다윗의 삶」 59편 전체 스크립트·시각 링크, 목록 `Samuel/README.md`) |
 
 각 시리즈 폴더의 `POLICY.md`는 이 표와 같은 안내(어느 지침을 읽고 무엇을 실행하는지)를 그 폴더 안에서 다시 보여 줍니다. **규칙 본문은 `docs/policy/`의 지침 한 곳에만** 적습니다(두 곳에 적으면 어긋납니다).
 
@@ -58,7 +59,7 @@ docs/
 David/   POLICY.md, 원본/(원고·도구), 완성본 PDF·EPUB
 Milk/    POLICY.md, 완성본 PDF·EPUB
 Theme/   POLICY.md, 원본/(이야기별 원고·그림·도구), 완성본 PDF·EPUB
-Samuel/  README.md(강의 목록·사무엘상 1–15장 근거 색인), 강의스크립트/(「다윗의 삶」 59편 스크립트 md)
+Samuel/  README.md(강의 목록·근거 색인), 강의스크립트/(「다윗의 삶」 59편 스크립트 md), 원본/(사무엘상 원고·도구), 완성본 PDF·EPUB
 cards/   주간 구절 테스트 카드 HTML
 source_text/  밀크 교재 PDF에서 뽑은 글자(검색용)
 tools/   시리즈 공통 도구(kjv.mjs 표준킹제임스성경 구절 찾기, pdf2epub.mjs, check_epub.mjs)

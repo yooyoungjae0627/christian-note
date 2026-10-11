@@ -13,6 +13,7 @@ GitHub: `yooyoungjae0627/christian-note`. 요청자(유영재)가 자료를 고�
 | 다윗의 삶 / 다윗 시리즈 / 사무엘기 영어 | David | `docs/policy/다윗의삶_교재_제작지침.md` | `David/` |
 | 밀크 N강 | Milk | `docs/policy/밀크교재_제작지침_1_전체판.md` (+ `_2_말씀판.md`) | `Milk/` |
 | 첫열매들 예배 강의 / 주제별 교재 | Theme | `docs/policy/성경주제별_교재_제작지침.md` (+ 밀크 ①) | `Theme/` |
+| 사무엘상 N장 / 사무엘상 장별 교재 | Samuel | `docs/policy/사무엘상_교재_제작지침.md` (+ 강의 스크립트 `docs/policy/다윗의삶_강의스크립트_자료정책.md`) | `Samuel/` |
 | 주간 구절 테스트 카드 HTML | cards | `docs/policy/성경구절_테스트카드_제작정책.md` | `cards/` |
 | 빌드 파이프라인 세부(옛 스킬) | — | `docs/policy/참고_lecture-to-family-book_스킬_구버전.md` — 위 지침과 어긋나면 위 지침 우선 | — |
 

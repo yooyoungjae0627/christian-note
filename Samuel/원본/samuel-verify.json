@@ -1,0 +1,280 @@
+[
+ {
+  "chapter": 1,
+  "pages": 35,
+  "verses_bilingual": 28,
+  "comments": 11,
+  "basis": {
+   "doctrine": 5,
+   "direct": 4,
+   "linked": 2
+  },
+  "source_entries": 13,
+  "qr_expected": 2,
+  "pdf_video_links": 10,
+  "epub_video_links": 10,
+  "questions": 32,
+  "faq": 12,
+  "summary": 14,
+  "errors": []
+ },
+ {
+  "chapter": 2,
+  "pages": 45,
+  "verses_bilingual": 36,
+  "comments": 15,
+  "basis": {
+   "linked": 2,
+   "doctrine": 13
+  },
+  "source_entries": 20,
+  "qr_expected": 11,
+  "pdf_video_links": 44,
+  "epub_video_links": 44,
+  "questions": 37,
+  "faq": 13,
+  "summary": 17,
+  "errors": []
+ },
+ {
+  "chapter": 3,
+  "pages": 36,
+  "verses_bilingual": 21,
+  "comments": 11,
+  "basis": {
+   "doctrine": 6,
+   "direct": 1,
+   "linked": 4
+  },
+  "source_entries": 15,
+  "qr_expected": 10,
+  "pdf_video_links": 46,
+  "epub_video_links": 46,
+  "questions": 35,
+  "faq": 12,
+  "summary": 14,
+  "errors": []
+ },
+ {
+  "chapter": 4,
+  "pages": 38,
+  "verses_bilingual": 22,
+  "comments": 12,
+  "basis": {
+   "linked": 2,
+   "direct": 4,
+   "doctrine": 6
+  },
+  "source_entries": 15,
+  "qr_expected": 14,
+  "pdf_video_links": 63,
+  "epub_video_links": 63,
+  "questions": 34,
+  "faq": 12,
+  "summary": 14,
+  "errors": []
+ },
+ {
+  "chapter": 5,
+  "pages": 31,
+  "verses_bilingual": 12,
+  "comments": 12,
+  "basis": {
+   "linked": 4,
+   "doctrine": 8
+  },
+  "source_entries": 12,
+  "qr_expected": 10,
+  "pdf_video_links": 43,
+  "epub_video_links": 43,
+  "questions": 30,
+  "faq": 12,
+  "summary": 14,
+  "errors": []
+ },
+ {
+  "chapter": 6,
+  "pages": 37,
+  "verses_bilingual": 21,
+  "comments": 11,
+  "basis": {
+   "linked": 3,
+   "doctrine": 8
+  },
+  "source_entries": 15,
+  "qr_expected": 12,
+  "pdf_video_links": 59,
+  "epub_video_links": 59,
+  "questions": 32,
+  "faq": 12,
+  "summary": 14,
+  "errors": []
+ },
+ {
+  "chapter": 7,
+  "pages": 38,
+  "verses_bilingual": 17,
+  "comments": 10,
+  "basis": {
+   "linked": 5,
+   "doctrine": 5
+  },
+  "source_entries": 14,
+  "qr_expected": 13,
+  "pdf_video_links": 67,
+  "epub_video_links": 67,
+  "questions": 36,
+  "faq": 12,
+  "summary": 14,
+  "errors": []
+ },
+ {
+  "chapter": 8,
+  "pages": 34,
+  "verses_bilingual": 22,
+  "comments": 9,
+  "basis": {
+   "doctrine": 9
+  },
+  "source_entries": 9,
+  "qr_expected": 7,
+  "pdf_video_links": 36,
+  "epub_video_links": 36,
+  "questions": 33,
+  "faq": 12,
+  "summary": 14,
+  "errors": []
+ },
+ {
+  "chapter": 9,
+  "pages": 43,
+  "verses_bilingual": 27,
+  "comments": 14,
+  "basis": {
+   "linked": 6,
+   "doctrine": 5,
+   "direct": 3
+  },
+  "source_entries": 16,
+  "qr_expected": 14,
+  "pdf_video_links": 61,
+  "epub_video_links": 61,
+  "questions": 37,
+  "faq": 13,
+  "summary": 16,
+  "errors": []
+ },
+ {
+  "chapter": 10,
+  "pages": 41,
+  "verses_bilingual": 27,
+  "comments": 12,
+  "basis": {
+   "doctrine": 4,
+   "linked": 7,
+   "direct": 1
+  },
+  "source_entries": 17,
+  "qr_expected": 11,
+  "pdf_video_links": 50,
+  "epub_video_links": 50,
+  "questions": 34,
+  "faq": 13,
+  "summary": 16,
+  "errors": []
+ },
+ {
+  "chapter": 11,
+  "pages": 34,
+  "verses_bilingual": 15,
+  "comments": 11,
+  "basis": {
+   "direct": 1,
+   "linked": 7,
+   "doctrine": 3
+  },
+  "source_entries": 15,
+  "qr_expected": 13,
+  "pdf_video_links": 60,
+  "epub_video_links": 60,
+  "questions": 31,
+  "faq": 12,
+  "summary": 15,
+  "errors": []
+ },
+ {
+  "chapter": 12,
+  "pages": 40,
+  "verses_bilingual": 25,
+  "comments": 12,
+  "basis": {
+   "linked": 4,
+   "doctrine": 8
+  },
+  "source_entries": 14,
+  "qr_expected": 8,
+  "pdf_video_links": 38,
+  "epub_video_links": 38,
+  "questions": 33,
+  "faq": 13,
+  "summary": 16,
+  "errors": []
+ },
+ {
+  "chapter": 13,
+  "pages": 34,
+  "verses_bilingual": 23,
+  "comments": 12,
+  "basis": {
+   "linked": 2,
+   "direct": 7,
+   "doctrine": 3
+  },
+  "source_entries": 12,
+  "qr_expected": 12,
+  "pdf_video_links": 51,
+  "epub_video_links": 51,
+  "questions": 28,
+  "faq": 12,
+  "summary": 14,
+  "errors": []
+ },
+ {
+  "chapter": 14,
+  "pages": 45,
+  "verses_bilingual": 52,
+  "comments": 14,
+  "basis": {
+   "linked": 3,
+   "direct": 5,
+   "doctrine": 6
+  },
+  "source_entries": 14,
+  "qr_expected": 11,
+  "pdf_video_links": 45,
+  "epub_video_links": 45,
+  "questions": 32,
+  "faq": 13,
+  "summary": 15,
+  "errors": []
+ },
+ {
+  "chapter": 15,
+  "pages": 46,
+  "verses_bilingual": 35,
+  "comments": 17,
+  "basis": {
+   "direct": 9,
+   "linked": 6,
+   "doctrine": 2
+  },
+  "source_entries": 20,
+  "qr_expected": 17,
+  "pdf_video_links": 67,
+  "epub_video_links": 67,
+  "questions": 36,
+  "faq": 14,
+  "summary": 18,
+  "errors": []
+ }
+]
