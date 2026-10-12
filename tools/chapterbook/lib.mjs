@@ -106,7 +106,7 @@ export const sbcFile = (f) => f.startsWith("Samuel/강의스크립트/");
 
 export const BASIS = {
   direct: { tag: "", cls: "" },
-  linked: { tag: " · 관련 강의 연결", cls: "" },
+  linked: { tag: "", cls: "" },
   doctrine: { tag: " · 교회 교리 적용", cls: "" },
   external: { tag: " · 외부 해설(2순위)", cls: "external", badge: "외부 해설 · 2순위" },
   sbc: { tag: " · 이이레 목사 강의(3순위)", cls: "sbc", badge: "이이레 목사 강의 · 3순위" },

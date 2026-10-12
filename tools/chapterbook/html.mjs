@@ -29,11 +29,21 @@ function where(e) {
 }
 // 유튜브 재생 버튼 모양(빨간 둥근 사각형 + 흰 삼각형)
 export const YT = `<svg class="yt" viewBox="0 0 28 20"><rect width="28" height="20" rx="5" fill="#ff0000"/><path d="M11 5.5L19.5 10L11 14.5Z" fill="#fff"/></svg>`;
+// 교재 PDF 출처 한 줄: "밀크 7강 제사장 교회 VS 신부 교회" (파일 이름에서 제목을 뽑아 교재 이름 뒤에 한 번만)
+function pdfTitle(e) {
+  const nf = (x) => String(x || "").normalize("NFC");
+  let t = nf(path.basename(nf(e.file), ".pdf"));
+  t = t.replace(/^[0-9]+[_ ]/, "").replace(new RegExp("[_ ]?" + nf("밀크") + "[0-9]+(-[0-9]+)?" + nf("강") + "$"), "").split("_").join(" ").replace(/\bvs\b/gi, "VS").trim();
+  const src = nf(e.source).trim();
+  const flat = (x) => x.replace(/[\s「」]/g, "");
+  if (!t || flat(src).includes(flat(t))) return src;
+  return src + " " + t;
+}
 function sourceRows(c, qr) {
   return c.evidence.map((e) => {
     const basis = BASIS[c.basis].tag;
-    let label = e.type === "external" ? `${e.author} · ${e.source}` : e.source;
-    let text = `〔${esc(label)}${esc(where(e))}〕<span class="basis">${esc(basis)}</span>` + (e.type === "pdf" ? `<br/><span class="file">${esc(path.basename(e.file))}</span>` : "");
+    let label = e.type === "external" ? `${e.author} · ${e.source}` : e.type === "pdf" ? pdfTitle(e) : e.source;
+    let text = `〔${esc(label)}${esc(where(e))}〕<span class="basis">${esc(basis)}</span>` + "";
     let img = "";
     if (e.url && e.type === "external") text += `<br/><a class="jump" href="${esc(e.url)}">원문 보기 ↗</a>`;
     else if (e.url) {
@@ -52,7 +62,7 @@ export function introBlocks(book) {
   const B = BOOKS[book];
   return [
     ["이 책은", `${B.ko}의 절 순서로 읽으며 첫열매들 교회의 강의와 교재, 교회 교리로 본문을 이해하는 교재입니다. 해설을 붙일 근거를 찾지 못한 부분은 본문을 그대로 읽도록 남겼습니다.`],
-    ["해설의 근거와 순위", "해설은 성경 해석 지침의 순위를 따릅니다. 1순위는 첫열매들 교회의 영상 강의와 교재입니다. 출처 줄에 표시가 없으면 강의·교재가 그 절을 직접 풀이한 것이고, ‘관련 강의 연결’은 다른 맥락의 강의가 이 절을 언급한 것, ‘교회 교리 적용’은 교회 교리(밀크 교재 등)의 원리를 이 절에 비추어 본 것입니다. 1순위 근거가 없는 단락에만 2순위 ‘외부 해설’(세대주의 해설가 — 스코필드 등 — 의 해설 가운데 교회 교리에 가까운 것)을, 그다음 3순위 ‘이이레 목사 강의’(서울침례교회 「다윗의 삶」)를 썼습니다. 2·3순위는 회색·갈색 줄로 구분했으며 교회의 가르침으로 소개하지 않습니다."],
+    ["해설의 근거와 순위", "해설은 성경 해석 지침의 순위를 따릅니다. 1순위는 첫열매들 교회의 영상 강의와 교재입니다. 출처 줄에 표시가 없으면 강의·교재가 그 절을 풀이하거나 언급한 것이고, ‘교회 교리 적용’은 교회 교리(밀크 교재 등)의 원리를 이 절에 비추어 본 것입니다. 1순위 근거가 없는 단락에만 2순위 ‘외부 해설’(세대주의 해설가 — 스코필드 등 — 의 해설 가운데 교회 교리에 가까운 것)을, 그다음 3순위 ‘이이레 목사 강의’(서울침례교회 「다윗의 삶」)를 썼습니다. 2·3순위는 회색·갈색 줄로 구분했으며 교회의 가르침으로 소개하지 않습니다."],
     ["성경 본문 — 칠판", "한글과 영어 본문은 표준킹제임스성경 한영대역의 글자 그대로입니다. 칠판의 밑줄과 형광펜은 글자를 바꾸지 않고 덧씌운 표시이며, KJV 영어에도 같은 뜻의 자리에 같은 표시를 했습니다. 색의 뜻은 칠판마다 맨 위에 적었습니다. KJV 아래의 작은 글씨는 현대 영어 번역 World English Bible(British Edition, 퍼블릭 도메인)입니다. 칠판 끝에는 그 단락의 영어 강의(주요 구문·필수 문법)와 단어장이 있습니다."],
     ["그림", "이 장의 인물과 관계도, 지명이 나오는 장의 지도를 본문 앞에 두었습니다. 지도의 위치는 대략적인 것이며, 위치가 알려지지 않은 곳은 따로 적었습니다."],
     ["영상 구간과 차례", "QR 또는 빨간 유튜브 버튼을 누르면 그 구간부터 영상이 재생됩니다. 강의 시각은 YouTube 자막 패널에 표시된 그 줄의 시작 시각이고, 교재 PDF의 시각은 원 교재에 실린 구간 주소입니다. 이번 제작에서 영상을 재생하여 발언 시점을 다시 확인하지는 않았습니다. 차례의 제목을 누르면 해당 단락으로 이동합니다."],
@@ -82,7 +92,7 @@ export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "" } =
     for (const x of d.people) o += `<div class="person"><span class="pn">${esc(x.name)}</span>${x.en ? `<span class="pe">${esc(x.en)}</span>` : ""}<div>${esc(x.desc)}</div><div class="pr">근거: ${B.ko} ${esc(x.refs.join(", "))}</div></div>`;
     o += `</div>`;
     nav.push([p + "people", "이 장의 인물", 1]);
-    if (d.relations?.length) { const nm = Object.fromEntries(d.people.map((x) => [x.id, x.name])); o += `<div class="lab">인물 관계도</div><div class="figure">${relationSvg(d.people, d.relations)}${relLegendHtml(d.relations)}</div><table class="rel-refs"><thead><tr><th>관계</th><th>근거</th></tr></thead><tbody>` + d.relations.map((r) => `<tr><td>${esc(nm[r.from])} — ${esc(nm[r.to])}${r.label ? ` · ${esc(r.label)}` : ""}</td><td>${B.ko} ${esc(r.ref)}</td></tr>`).join("") + `</tbody></table>`; }
+    if (d.relations?.length) { const nm = Object.fromEntries(d.people.map((x) => [x.id, x.name])); o += `<div class="figure relfig"><div class="lab">인물 관계도</div>${relationSvg(d.people, d.relations)}${relLegendHtml(d.relations)}</div><table class="rel-refs"><thead><tr><th>관계</th><th>근거</th></tr></thead><tbody>` + d.relations.map((r) => `<tr><td>${esc(nm[r.from])} — ${esc(nm[r.to])}${r.label ? ` · ${esc(r.label)}` : ""}</td><td>${B.ko} ${esc(r.ref)}</td></tr>`).join("") + `</tbody></table>`; }
   }
   // 지도 — views가 있으면 전체 지도와 확대 지도 등 여러 장
   if (d.map?.places?.length) {

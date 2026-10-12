@@ -138,16 +138,20 @@ export function relationSvg(people, relations) {
   const adj = (a, b) => relations.find((r) => (r.from === a.id && r.to === b.id) || (r.from === b.id && r.to === a.id));
   const gapOf = (a, b) => { const r = adj(a, b); return Math.max(46, r?.label ? textW(r.label, TAG) + 34 : 46); };
   const rowWidth = (row) => row.reduce((s, p, i) => s + pw(p) + (i ? gapOf(row[i - 1], p) : 0), 0);
-  const W = Math.max(640, ...rows.map((r) => rowWidth(r) + 40));
+  // 세대가 7줄을 넘으면 두 단으로 꺾어 놓는다(관계도는 한 쪽에, 글자는 크게 — 지침 §5)
+  const cols = rows.length > 7 ? 2 : 1, perCol = Math.ceil(rows.length / cols);
+  const colW = Math.max(cols > 1 ? 330 : 640, ...rows.map((r) => rowWidth(r) + 40));
+  const W = colW * cols;
   const pos = {};
   rows.forEach((row, gi) => {
-    let x = (W - rowWidth(row)) / 2;
+    const col = Math.floor(gi / perCol), ri = gi % perCol;
+    let x = col * colW + (colW - rowWidth(row)) / 2;
     row.forEach((p, i) => {
       if (i) x += gapOf(row[i - 1], p);
-      const w = pw(p); pos[p.id] = { x: x + w / 2, y: top + gi * rowH + boxH / 2, w, p, row: gi, idx: i }; x += w;
+      const w = pw(p); pos[p.id] = { x: x + w / 2, y: top + ri * rowH + boxH / 2, w, p, row: gi, idx: i }; x += w;
     });
   });
-  const H = top + (rows.length - 1) * rowH + boxH + 26;
+  const H = top + (Math.min(rows.length, perCol) - 1) * rowH + boxH + 26;
   const boxes = Object.values(pos).map((n) => ({ x: n.x - n.w / 2, y: n.y - boxH / 2, w: n.w, h: boxH }));
   const lines = [], tags = [];
   for (const r of relations) {

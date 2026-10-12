@@ -186,3 +186,10 @@ table.rel-refs td:last-child{white-space:nowrap;color:#8a6420;width:24%;}
 /* 칠판: 절 안에서도 쪽을 넘길 수 있게(절마다 쪽이 비던 문제), 한글·영어 각 문단은 쪼개지 않음 */
 .verse .vrow{break-inside:auto;}
 .verse .ko,.verse .en,.verse .web{break-inside:avoid;orphans:2;widows:2;}
+
+/* 관계도는 제목과 함께 한 쪽 안에 · 영어 문법 칩은 잘리지 않게 */
+.relfig{break-inside:avoid;}
+.relfig svg.relsvg{display:block;width:auto;max-width:100%;max-height:150mm;margin:0 auto;}
+.lesson .lg2{display:inline-block;white-space:nowrap;}
+.summary,.questions{padding-left:9mm;}
+.summary li,.questions li{padding-left:1mm;}
