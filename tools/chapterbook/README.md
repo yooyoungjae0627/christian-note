@@ -70,7 +70,7 @@
 - 2순위(external)는 교회 교리(밀크 정리 `docs/doctrine/`)와 어긋나지 않는 대목만. `scofield/<책>-NN.md`에 없으면 1917판 OCR(`scofield_1917_archive_ocr.txt`)에서 `search.mjs 낱말 --only ext`로 찾는다. OCR 잡음이 없는 깨끗한 조각만 excerpt로. url은 장별 md는 그 md의 주소, OCR은 `https://archive.org/details/scofieldreferenc00unse`.
 - 3순위(sbc)는 사무엘상 16장–사무엘하 24장 강의가 대부분이다. 다른 장 강의에서 인용한 대목이면 `source`에 “(사무엘상 N장 강의)”로 출처 맥락을 남긴다.
 - 칠판 표시 색: u 밑줄=중요, y 노랑=하나님의 말씀·약속·언약·명령, g 초록=믿음·순종·은혜·구원, p 분홍=죄·불순종·심판·경고, b 하늘=예표(근거가 예표라고 할 때만). 한 절 최대 3곳, ko·en 한 쌍.
-- 지도 지명 key는 `tools/chapterbook/places.json`에 있는 것만. 없는 지명은 위치가 널리 알려진 곳이면 places.json에 대략 좌표로 추가하고(“위치는 대략”), 학설이 갈리면 `unknown`에 적는다. 지명이 몰리면 `views`로 전체·확대를 나눈다.
+- 지도 지명 key는 `tools/chapterbook/places.json`에 있으면 그대로 쓴다. **places.json은 고치지 않는다**(여러 장을 동시에 작업하므로). 없는 지명은 위치가 널리 알려진 곳이면 원고의 `map.places`에 `{"key":"새키","name":"본문 표기","at":[경도,위도],"ref":"…"}`처럼 대략 좌표를 직접 주고, 학설이 갈리거나 모르면 `unknown`에 적는다. 지명이 몰리면 `views`로 전체·확대를 나눈다.
 - 관계도: 같은 세대(gen)를 같은 줄에, 줄 안 순서는 관계가 있는 사람끼리 이웃하게 `people` 순서를 정한다. 관계 낱말은 짧게(2–6자).
 - 고유 명사는 표준킹제임스 표기(예: 필리스티아인, 쇼코흐, 에크론, 이집트, 하이).
 - 문체: 출판용 이야기체, 고2–3 독해 수준, 짧은 문장, 존댓말.

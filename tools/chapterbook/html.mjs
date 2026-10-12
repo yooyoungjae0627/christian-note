@@ -5,8 +5,12 @@ import crypto from "node:crypto";
 import { BOOKS, HERE, TMP, esc, chapterVerses, rangeVerses, markRanges, applyMarks, MARK, BASIS, timeKo, ffFile, sbcFile, webOf } from "./lib.mjs";
 import { mapSvg, relationSvg, relLegendHtml, coverSvg } from "./art.mjs";
 
-const FONT = `@font-face{font-family:"Noto Serif KR";src:url("${pathUrl("C:/Windows/Fonts/NotoSerifKR-VF.ttf")}") format("truetype");font-weight:200 900;}
-@font-face{font-family:"Noto Sans KR";src:url("${pathUrl("C:/Windows/Fonts/NotoSansKR-VF.ttf")}") format("truetype");font-weight:100 900;}`;
+// 굵기별 정적 Noto 폰트(%TEMP%/chapterbook2/fonts, fetch_fonts.mjs로 받음). 가변 폰트는 Edge가 굵기 변형을 Type3(글자 그림)로 넣어
+// PDF가 커지므로 쓰지 않는다. 정적 폰트가 없으면 빌드를 멈춘다.
+const FD = path.join(TMP, "fonts");
+const FACES = [["Noto Sans KR", 300, "NotoSansKR-300"], ["Noto Sans KR", 400, "NotoSansKR-400"], ["Noto Sans KR", 500, "NotoSansKR-500"], ["Noto Sans KR", 600, "NotoSansKR-700"], ["Noto Sans KR", 700, "NotoSansKR-700"], ["Noto Sans KR", 900, "NotoSansKR-900"], ["Noto Serif KR", 400, "NotoSerifKR-400"], ["Noto Serif KR", 700, "NotoSerifKR-700"]];
+for (const [, , n] of FACES) if (!fs.existsSync(path.join(FD, n + ".ttf"))) throw new Error("정적 폰트 없음: node tools/chapterbook/fetch_fonts.mjs 를 먼저 실행 (" + n + ")");
+const FONT = FACES.map(([fam, w, n]) => `@font-face{font-family:"${fam}";font-weight:${w};font-style:normal;src:url("${pathUrl(path.join(FD, n + ".ttf"))}") format("truetype");}`).join("");
 function pathUrl(p) { return "file:///" + p.replace(/\\/g, "/"); }
 export const CSS = FONT + fs.readFileSync(path.join(HERE, "style.css"), "utf8");
 

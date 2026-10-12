@@ -59,7 +59,7 @@ async function epub(final) {
   const tool = path.join(TOPIC, "pdf2epub-chapterbook.mjs");
   fs.writeFileSync(tool, fs.readFileSync(path.join(R, "tools/pdf2epub.mjs")));
   const out = final.replace(/\.pdf$/, ".epub");
-  execFileSync(process.execPath, [tool, final, out, "--width", "1600", "--quality", "90"], { stdio: "inherit" });
+  execFileSync(process.execPath, [tool, final, out, "--width", "1150", "--quality", "78"], { stdio: "inherit" });
   // 쪽마다 보이지 않는 글자 층(본문 검색·대조용)
   const J = await mod("jszip"); const JSZip = J.loadAsync ? J : J.default;
   const zip = await JSZip.loadAsync(fs.readFileSync(out));
@@ -72,6 +72,7 @@ async function epub(final) {
   }
   const css = Object.keys(zip.files).find((n) => /\.css$/.test(n));
   if (css) zip.file(css, (await zip.file(css).async("string")) + ".text-layer{position:absolute;left:0;top:0;opacity:0;pointer-events:none;width:1px;height:1px;overflow:hidden;font-size:1px;line-height:1px;}");
+  zip.file("mimetype", "application/epub+zip", { compression: "STORE" });
   fs.writeFileSync(out, await zip.generateAsync({ type: "nodebuffer", mimeType: "application/epub+zip", compression: "DEFLATE" }));
   return out;
 }
@@ -96,7 +97,12 @@ const outDir = OUTDIR || path.join(R, B.dir);
 fs.mkdirSync(outDir, { recursive: true });
 const results = [];
 if (rest[0] === "all") {
-  const chs = [...Array(B.chapters)].map((_, i) => i + 1);
+  // 합본: all [시작-끝 권번호]  예) all 1-13 1  → 창세기_합본_1-1권(01-13장)
+  const [r0, r1] = (rest[1] || `1-${B.chapters}`).split("-").map(Number); const vol = rest[2];
+  const chs = [...Array(r1 - r0 + 1)].map((_, i) => r0 + i);
+  const bookNo = { genesis: 1, "1sam": 2, "2sam": 3 }[book];
+  const pad = (n) => String(n).padStart(2, "0");
+  const allName = vol ? `${B.ko}_합본_${bookNo}-${vol}권(${pad(r0)}-${pad(r1)}장)` : B.all;
   const ds = chs.map((c) => loadChapter(book, c));
   await ensureQr(ds.flatMap(urlsOf));
   const render = (pages, withMk) => {
@@ -111,15 +117,17 @@ if (rest[0] === "all") {
     }
     nav.push(["sources", "참고한 자료", 0]);
     const tocNav = nav.filter((x) => x[2] === 0);
-    const html = cover(book, `${B.ko}<br/>합본 해설`, `${B.ko} 1–${B.chapters}장 — 교회 강의와 교리로 풀어 읽기`, coverSvg(ds[0].cover), ds[0].motto) + howto(book, mk) + toc(tocNav, pages, mk) + body + sourcesTable(allC, mk);
+    const html = cover(book, vol ? `${B.ko}<br/>합본 ${bookNo}-${vol}권` : `${B.ko}<br/>합본 해설`, `${B.ko} ${r0}–${r1}장 — 교회 강의와 교리로 풀어 읽기`, coverSvg(ds[0].cover), ds[0].motto) + howto(book, mk) + toc(tocNav, pages, mk) + body + sourcesTable(allC, mk);
     return { html: page(`${B.ko} 합본 성경 공부 교재`, html), nav };
   };
-  const { raw, nav, pages } = printLoop(`${book}-all`, render);
-  const final = path.join(outDir, B.all + ".pdf");
-  finish(raw, final, B.all, nav, pages);
+  const { raw, nav, pages } = printLoop(`${book}-all-${r0}`, render);
+  const final = path.join(outDir, allName + ".pdf");
+  finish(raw, final, allName, nav, pages);
   results.push({ book, chapter: "all", pdf: final, epub: await epub(final) });
 } else {
+  const failed = [];
   for (const ch of rest.map(Number)) {
+   try {
     const d = loadChapter(book, ch);
     await ensureQr(urlsOf(d));
     const render = (pages, withMk) => {
@@ -134,6 +142,8 @@ if (rest[0] === "all") {
     const final = path.join(outDir, B.out(ch) + ".pdf");
     const removed = finish(raw, final, B.out(ch), nav, pages);
     results.push({ book, chapter: ch, pdf: final, epub: await epub(final), dupLinksRemoved: removed });
+   } catch (e) { console.error(`!! ${book} ${ch}장 빌드 실패: ${e.message}`); failed.push(ch); }
   }
+  if (failed.length) { console.error("실패한 장: " + failed.join(" ")); process.exitCode = 1; }
 }
 console.log(JSON.stringify(results, null, 1));

@@ -104,8 +104,8 @@ for (const ch of chs) {
   for (const p of d.people || []) { if (!p.name || !p.desc) E(`인물 ${p.id} 이름·설명 없음`); if (!p.refs?.length || !p.refs.every(inCh)) E(`인물 ${p.id} 근거 절 이상`); }
   for (const r of d.relations || []) { if (!pids.has(r.from) || !pids.has(r.to)) E(`관계 ${r.from}→${r.to} 인물 없음`); if (!inCh(r.ref)) E(`관계 ${r.from}→${r.to} 근거 절 이상 ${r.ref}`); }
   // 지도
-  for (const p of d.map?.places || []) { if (!PLACES.places[p.key]) E(`지도 지명 없음 ${p.key}`); if (!p.ref || !inCh(p.ref)) E(`지도 지명 ${p.key} 근거 절 이상`); }
-  for (const r of d.map?.routes || []) for (const k of r.path) if (!PLACES.places[k]) E(`경로 지명 없음 ${k}`);
+  for (const p of d.map?.places || []) { if (!PLACES.places[p.key] && !(Array.isArray(p.at) && p.name)) E(`지도 지명 없음 ${p.key}(places.json에 없으면 name과 at:[경도,위도]를 원고에)`); if (!p.ref || !inCh(p.ref)) E(`지도 지명 ${p.key} 근거 절 이상`); }
+  for (const r of d.map?.routes || []) for (const k of r.path) if (!PLACES.places[k] && !(d.map.places || []).some((x) => x.key === k && x.at)) E(`경로 지명 없음 ${k}`);
   for (const v of d.map?.views || []) for (const k of v.keys) if (!(d.map.places || []).some((x) => x.key === k)) E(`지도 보기의 지명이 places에 없음 ${k}`);
   // 영어 구문
   if (d.english) E("장 전체 english는 2판 보강에서 단락별 english로 옮긴다");

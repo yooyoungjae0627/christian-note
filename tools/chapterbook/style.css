@@ -179,3 +179,7 @@ table.rel-refs td:last-child{white-space:nowrap;color:#8a6420;width:24%;}
 .totoc-row{text-align:right;margin:1mm 0 4mm;break-before:avoid;}
 .totoc{display:inline-block;font:700 7.6pt/1.4 "Noto Sans KR";color:#fff;background:#18233f;border-radius:3mm;padding:.8mm 3mm;}
 .bhead{break-inside:avoid;break-before:avoid;}
+/* PDF 용량: 방사형 그라데이션·안쪽 그림자는 Edge가 그림 조각으로 바꾸므로 단색으로 */
+.verse{background:#26362f;box-shadow:none;border-color:#8b6a43;}
+.verse .legend-board{background:#1d2a24;}
+.lesson,.vocab{border-top:.3mm dashed #6f7f77;}

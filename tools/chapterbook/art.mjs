@@ -29,8 +29,11 @@ function place(boxes, W, H, cx, cy, w, h, rings, ang) {
 // map = {places:[{key, name?}], routes:[{path:[key…], ref}], minSpan?, focus?}
 export function mapSvg(map) {
   const W = 640, H = 470;
+  // 원고 안에서 at:[경도,위도]를 준 지명은 places.json에 없어도 쓴다(장마다 따로 작업해도 충돌 없게)
+  const local = Object.fromEntries(map.places.filter((p) => p.at).map((p) => [p.key, { name: p.name, at: p.at, area: p.area }]));
+  const look = (k) => PLACES.places[k] || local[k];
   const pts = map.places.map((p) => {
-    const db = PLACES.places[p.key];
+    const db = look(p.key);
     if (!db) throw new Error("places.json에 없는 지명: " + p.key);
     return { ...db, ...p, name: p.name || db.name };
   });
@@ -58,7 +61,7 @@ export function mapSvg(map) {
   const boxes = [{ x: W - 60, y: 8, w: 52, h: 56 }, { x: 8, y: H - 34, w: 170, h: 28 }];
   const routeSvg = [];
   for (const r of map.routes || []) {
-    const line = r.path.map((k) => PLACES.places[k].at);
+    const line = r.path.map((k) => look(k).at);
     for (let i = 0; i + 1 < line.length; i++) {
       const [a, b] = [line[i], line[i + 1]];
       const ax0 = X(a[0]), ay0 = Y(a[1]), bx0 = X(b[0]), by0 = Y(b[1]);
@@ -174,8 +177,14 @@ export function relationSvg(people, relations) {
       const w = textW(r.label, TAG) + 16, h = TAG + 10;
       let b0 = null;
       for (const [ox, oy] of lab.cand) { const bb = { x: lab.x + ox - w / 2, y: lab.y + oy - h / 2, w, h }; if (bb.x > 2 && bb.x + w < W - 2 && bb.y > 2 && bb.y + h < H - 2 && !boxes.some((o) => hit(bb, o, 1))) { b0 = bb; break; } }
-      if (!b0) throw new Error(`관계 낱말 자리를 찾지 못함: ${r.label}`);
-      boxes.push(b0); tags.push({ ...b0, t: r.label, c: st.stroke });
+      let lead = null;
+      if (!b0) { // 그림 전체에서 선 가운데와 가장 가까운 빈자리 → 지시선
+        let best = null;
+        for (let yy = 4; yy + h < H - 2; yy += 6) for (let xx = 4; xx + w < W - 2; xx += 8) { const bb = { x: xx, y: yy, w, h }; if (boxes.some((o) => hit(bb, o, 1))) continue; const d = Math.hypot(xx + w / 2 - lab.x, yy + h / 2 - lab.y); if (!best || d < best.d) best = { ...bb, d }; }
+        if (!best) throw new Error(`관계 낱말 자리를 찾지 못함: ${r.label}`);
+        b0 = best; lead = [lab.x, lab.y];
+      }
+      boxes.push(b0); tags.push({ ...b0, t: r.label, c: st.stroke, lead });
     }
   }
   const out = [`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${f1(W)} ${H}" class="relsvg">`,
@@ -183,9 +192,10 @@ export function relationSvg(people, relations) {
     `<rect width="${f1(W)}" height="${H}" rx="12" fill="#fbf7ec"/>`, ...lines];
   for (const { x, y, w, p } of Object.values(pos)) {
     const [fill, stroke, color, band] = p.role === "god" ? ["#1c284e", "#c9973b", "#f6e7c1", "#c9973b"] : p.role === "enemy" ? ["#fff4f2", "#c0392b", "#7a1f16", "#c0392b"] : ["#fffdf7", "#b39a5f", "#18233f", "#c9973b"];
-    out.push(`<g filter="url(#sh)"><rect x="${f1(x - w / 2)}" y="${f1(y - boxH / 2)}" width="${f1(w)}" height="${boxH}" rx="12" fill="${fill}" stroke="${stroke}" stroke-width="1.6"/></g><rect x="${f1(x - w / 2 + 12)}" y="${f1(y - boxH / 2)}" width="${f1(w - 24)}" height="4" rx="2" fill="${band}"/>`);
+    out.push(`<rect x="${f1(x - w / 2 + 1.5)}" y="${f1(y - boxH / 2 + 2.5)}" width="${f1(w)}" height="${boxH}" rx="12" fill="#5a4a2a" fill-opacity=".14"/><g><rect x="${f1(x - w / 2)}" y="${f1(y - boxH / 2)}" width="${f1(w)}" height="${boxH}" rx="12" fill="${fill}" stroke="${stroke}" stroke-width="1.6"/></g><rect x="${f1(x - w / 2 + 12)}" y="${f1(y - boxH / 2)}" width="${f1(w - 24)}" height="4" rx="2" fill="${band}"/>`);
     out.push(`<text x="${f1(x)}" y="${f1(y + NAME * 0.38)}" text-anchor="middle" font-size="${NAME}" font-weight="700" font-family="Noto Sans KR" fill="${color}">${esc(p.name)}</text>`);
   }
+  for (const t of tags) if (t.lead) out.push(`<line x1="${f1(t.lead[0])}" y1="${f1(t.lead[1])}" x2="${f1(t.x + t.w / 2)}" y2="${f1(t.y + t.h / 2)}" stroke="${t.c}" stroke-width="1" stroke-dasharray="2 2"/>`);
   for (const t of tags) out.push(`<rect x="${f1(t.x)}" y="${f1(t.y)}" width="${f1(t.w)}" height="${f1(t.h)}" rx="${f1(t.h / 2)}" fill="#fff" stroke="${t.c}" stroke-width="1.2"/><text x="${f1(t.x + t.w / 2)}" y="${f1(t.y + t.h / 2 + TAG * 0.36)}" text-anchor="middle" font-size="${TAG}" font-weight="500" font-family="Noto Sans KR" fill="${t.c}">${esc(t.t)}</text>`);
   out.push(`</svg>`);
   return out.join("");
