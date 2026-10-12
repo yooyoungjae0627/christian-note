@@ -54,7 +54,7 @@ const marks = (s) => s
   .replace(/<span class="italic">([^<]*)<\/span>/g, "<i>$1</i>")
   .replace(/<(?!\/?(?:i|span)\b)[^>]*>/g, "").replace(/\s+/g, " ").trim();
 
-async function chapter(book, ch) {
+export async function chapter(book, ch) {
   const { name, slug } = await slugOf(book);
   const h = await cached(`${slug}-${ch}.html`, `${SITE}/p/${encodeURIComponent(slug)}/${ch}`);
   const out = new Map();

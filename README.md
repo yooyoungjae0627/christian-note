@@ -28,8 +28,8 @@
 | 밀크(MILK) 강의, 「하나님 말씀의 기초원리」 N강 | **Milk** | `docs/policy/밀크교재_제작지침_1_전체판.md` (+ 말씀판 `_2_말씀판.md`) | (PDF가 원본) | `Milk/<제목>_밀크N강.pdf·.epub` |
 | 첫열매들 예배 강의, "주제별 교재", 새 예배 주제 | **Theme** | `docs/policy/성경주제별_교재_제작지침.md` (+ 밀크 ①) | `Theme/원본/` | `Theme/NN_이름.pdf·.epub` |
 | 주간 성경 구절 테스트 카드 | cards | `docs/policy/성경구절_테스트카드_제작정책.md` | — | `cards/*.html` |
-| 창세기 장별 교재, 해설에 근거 구간 연결 | **Genesis** | `docs/policy/창세기_교재_제작지침.md` | `Genesis/원본/` | `Genesis/창세기_NN장_교재.pdf·.epub` (1–50장 각각, 현재 1–10장) |
-| 사무엘상 장별 교재 | **Samuel** | `docs/policy/사무엘상_교재_제작지침.md` (+ 창세기 지침) | `Samuel/원본/` | `Samuel/사무엘상_NN장_교재.pdf·.epub` (현재 1–15장) |
+| 창세기 장별 교재·합본 | **Genesis** | `docs/policy/장별해설서_제작지침.md` (2판, + `성경해석_지침.md`) | `Genesis/원본/2판/` | `Genesis/창세기_NN장_교재.pdf·.epub` (1–50장) + `창세기_합본_교재.pdf·.epub` |
+| 사무엘상·하 장별 교재·합본 | **Samuel** | `docs/policy/장별해설서_제작지침.md` (2판, + `성경해석_지침.md`) | `Samuel/원본/2판/` | `Samuel/사무엘상_NN장_교재`(1–31장)·`사무엘하_NN장_교재`(1–24장) PDF·EPUB + 상·하 합본 |
 | 사무엘상·하 강의 스크립트(교재 자료) | Samuel | `docs/policy/다윗의삶_강의스크립트_자료정책.md` | `Samuel/강의스크립트/` | (자료 보관 — 「다윗의 삶」 59편 전체 스크립트·시각 링크, 목록 `Samuel/README.md`) |
 | **성경 해석 질문**(구절 뜻·교리·인물·사건 해석) | 해석 | `docs/policy/성경해석_지침.md` — 1순위 첫열매들 영상, 2순위 세대주의 해설(스코필드·무디·라킨·럭크만, 출처 필수), 3순위 이이레 목사 강의 | `memory-bank/첫열매들_강의스크립트/` | (자료 보관 — 첫열매들 재생목록 4개 전체 스크립트·시각 링크, 목록 `memory-bank/README.md`) |
 
