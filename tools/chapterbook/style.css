@@ -183,3 +183,6 @@ table.rel-refs td:last-child{white-space:nowrap;color:#8a6420;width:24%;}
 .verse{background:#26362f;box-shadow:none;border-color:#8b6a43;}
 .verse .legend-board{background:#1d2a24;}
 .lesson,.vocab{border-top:.3mm dashed #6f7f77;}
+/* 칠판: 절 안에서도 쪽을 넘길 수 있게(절마다 쪽이 비던 문제), 한글·영어 각 문단은 쪼개지 않음 */
+.verse .vrow{break-inside:auto;}
+.verse .ko,.verse .en,.verse .web{break-inside:avoid;orphans:2;widows:2;}
