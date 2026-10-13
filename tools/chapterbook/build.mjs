@@ -110,7 +110,7 @@ if (rest[0] === "all") {
     let nav = [], body = "", allC = [];
     for (const [i, d] of ds.entries()) {
       const ch = chs[i], p = `c${ch}-`;
-      const a = chapterParts(book, ch, d, { p, qr: true, mk });
+      const a = chapterParts(book, ch, d, { p, qr: false, mk });
       const l = learning(book, ch, d, a.comments, { p, mk, inBook: true });
       nav.push([p + "chapter", `${ch}장 ${d.subtitle}`, 0], ...a.nav.slice(1).map(([k, t]) => [k, t, 1]), ...l.nav.map(([k, t]) => [k, t, 1]));
       body += a.html + l.html; allC.push(...Object.values(a.comments));
@@ -132,7 +132,7 @@ if (rest[0] === "all") {
     await ensureQr(urlsOf(d));
     const render = (pages, withMk) => {
       const mk = withMk ? marker : () => "";
-      const a = chapterParts(book, ch, d, { qr: true, mk });
+      const a = chapterParts(book, ch, d, { qr: false, mk });
       const l = learning(book, ch, d, a.comments, { mk });
       const nav = [...a.nav, ...l.nav, ["sources", "참고한 자료", 0]];
       const html = cover(book, `${B.ko}<br/>${ch}장 해설`, `${d.subtitle} — 교회 강의와 교리로 풀어 읽기`, coverSvg(d.cover), d.motto) + howto(book, mk) + toc(nav, pages, mk) + a.html + l.html + sourcesTable(Object.values(a.comments), mk);

@@ -68,7 +68,10 @@ export function markRanges(plain, marks, lang) {
 }
 export function applyMarks(html, plain, ranges) {
   if (strip(html) !== plain) throw new Error("본문 HTML과 글자가 다름: " + plain.slice(0, 30));
-  const clsAt = (p) => ranges.find((r) => p >= r.s && p < r.e)?.cls || null;
+  // 표시 하나가 태그로 여러 조각이 되어도 형광펜 위 색 안내(lead)는 첫 조각에만(지침 §3, 2026-10-13)
+  const at = (p) => ranges.find((r) => p >= r.s && p < r.e) || null;
+  const seen = new Set();
+  const clsAt = (p) => { const r = at(p); if (!r) return null; if (seen.has(r)) return r.cls; seen.add(r); return r.cls + " lead"; };
   let out = "", p = 0, open = null, i = 0;
   while (i < html.length) {
     if (html[i] === "<") {
@@ -78,8 +81,8 @@ export function applyMarks(html, plain, ranges) {
     }
     let ch = html[i], len = 1;
     if (ch === "&") { const j = html.indexOf(";", i); if (j > i && j - i < 8) { len = j - i + 1; } }
-    const c = clsAt(p);
-    if (c !== open) { if (open) out += "</span>"; if (c) out += `<span class="${c}">`; open = c; }
+    const r = at(p);
+    if (r !== open) { if (open) out += "</span>"; if (r) out += `<span class="${clsAt(p)}">`; open = r; }
     out += html.slice(i, i + len); i += len; p += 1;
   }
   if (open) out += "</span>";

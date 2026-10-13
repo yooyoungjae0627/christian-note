@@ -193,3 +193,32 @@ table.rel-refs td:last-child{white-space:nowrap;color:#8a6420;width:24%;}
 .lesson .lg2{display:inline-block;white-space:nowrap;}
 .summary,.questions{padding-left:9mm;}
 .summary li,.questions li{padding-left:1mm;}
+
+/* ── 2026-10-13(사용자 지시): 검은 칠판·굵은 글씨, 형광펜 위 색 안내, 현대 영어 색 상자, 이탤릭 금지, 출처 칸 맞춤(QR 없음) ── */
+*{font-style:normal !important;}
+.verse{background:#111214;border:.5mm solid #3a3a3e;border-radius:1.6mm;color:#fff;}
+.verse .legend-board{background:#1c1d21;}
+.verse .ko{font-family:"Noto Sans KR",sans-serif;font-weight:500;font-size:12pt;line-height:2.35;color:#fff;}
+.verse .ko .g1,.verse .ko .g2,.verse .ko .g3{font-weight:700;}
+.verse .en{font:700 10.6pt/2.2 "Times New Roman",serif;color:#eef0f2;margin-top:.6mm;}
+.verse .num{top:2.2mm;}
+.lead{position:relative;}
+.lead::before{position:absolute;left:0;top:-1.32em;font:700 5.8pt/1 "Noto Sans KR",sans-serif;white-space:nowrap;letter-spacing:0;padding:.25mm .7mm;border-radius:.5mm;color:#111 !important;}
+.mk-y.lead::before{content:"말씀";background:#f5e16a;}
+.mk-g.lead::before{content:"믿음·은혜";background:#a6e28f;}
+.mk-p.lead::before{content:"죄·심판";background:#f7a3c6;}
+.mk-b.lead::before{content:"예표";background:#9dd8f2;}
+.mk-u.lead::before{content:none;}
+.verse .web{display:block;background:#173238;border-left:1mm solid #5fb7c0;border-radius:1mm;padding:1.4mm 2.6mm 1.6mm;margin:1.2mm 0 0;font:400 9.4pt/1.6 "Times New Roman",serif;color:#dff1f2;break-inside:avoid;}
+.verse .web .wt{display:inline-block;font:700 6.4pt/1.4 "Noto Sans KR",sans-serif;color:#0f2a2e;background:#5fb7c0;border-radius:.6mm;padding:0 1.2mm;margin-right:1.6mm;vertical-align:1px;}
+.verse .vs{color:#a7a9ae;}
+.verse .lesson,.verse .vocab{border-top:.3mm dashed #55575c;}
+.srcbox{border:.25mm solid #e3d5b2;border-radius:1.2mm;background:#fdfaf2;margin:1.2mm 0 3.6mm;break-inside:avoid;}
+.srow{display:grid;grid-template-columns:1fr 26mm;align-items:center;column-gap:2mm;padding:1mm 2.4mm;min-height:6.4mm;}
+.srow+.srow{border-top:.2mm solid #eadfc4;}
+.srow .sl{font:7.6pt/1.5 "Noto Sans KR",sans-serif;color:#8a6420;}
+.srow .sl .basis{color:#a0814a;}
+.srow .sj{text-align:right;}
+.srow .jump{display:inline-flex;align-items:center;gap:1.2mm;font:700 7.8pt/1.3 "Noto Sans KR",sans-serif;color:#c4302b;white-space:nowrap;}
+.srow .jump .yt{width:5.6mm;height:4mm;}
+.qa .srcbox{margin-top:.8mm;}

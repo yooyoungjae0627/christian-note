@@ -39,19 +39,14 @@ function pdfTitle(e) {
   if (!t || flat(src).includes(flat(t))) return src;
   return src + " " + t;
 }
-function sourceRows(c, qr) {
-  return c.evidence.map((e) => {
+// 출처 상자: 출처마다 한 줄, 왼쪽 칸 이름 · 오른쪽 칸 ▶ 분·초(QR 없음, 지침 §2-2, 2026-10-13)
+function sourceRows(c) {
+  return `<div class="srcbox">` + c.evidence.map((e) => {
     const basis = BASIS[c.basis].tag;
-    let label = e.type === "external" ? `${e.author} · ${e.source}` : e.type === "pdf" ? pdfTitle(e) : e.source;
-    let text = `〔${esc(label)}${esc(where(e))}〕<span class="basis">${esc(basis)}</span>` + "";
-    let img = "";
-    if (e.url && e.type === "external") text += `<br/><a class="jump" href="${esc(e.url)}">원문 보기 ↗</a>`;
-    else if (e.url) {
-      text += `<br/><a class="jump" href="${esc(e.url)}">${YT}<span>${timeKo(e.url)}</span></a>`;
-      if (qr) img = `<div class="qr"><a href="${esc(e.url)}"><img src="${pathUrl(qrFile(e.url))}" alt="강의 구간 QR"/></a><div class="hint">클릭하면 해당 구간으로 이동합니다.</div></div>`;
-    }
-    return `<div class="source-row"><div class="source-text">${text}</div>${img}</div>`;
-  }).join("");
+    const label = e.type === "external" ? `${e.author} · ${e.source}` : e.type === "pdf" ? pdfTitle(e) : e.source;
+    const jump = !e.url ? "" : e.type === "external" ? `<a class="jump" href="${esc(e.url)}">원문 보기 ↗</a>` : `<a class="jump" href="${esc(e.url)}">${YT}<span>${timeKo(e.url)}</span></a>`;
+    return `<div class="srow"><div class="sl">${esc(label)}${esc(where(e))}<span class="basis">${esc(basis)}</span></div><div class="sj">${jump}</div></div>`;
+  }).join("") + `</div>`;
 }
 export const TOTOC = `<div class="totoc-row"><a class="totoc" href="#toc">▲ 차례로</a></div>`;
 const header = (label, en, key, mk) => `<section class="front" id="${key}">${mk(key)}<p class="eyebrow">${en}</p><h1>${esc(label)}</h1><div class="gold"></div>`;
@@ -63,9 +58,9 @@ export function introBlocks(book) {
   return [
     ["이 책은", `${B.ko}의 절 순서로 읽으며 첫열매들 교회의 강의와 교재, 교회 교리로 본문을 이해하는 교재입니다. 해설을 붙일 근거를 찾지 못한 부분은 본문을 그대로 읽도록 남겼습니다.`],
     ["해설의 근거와 순위", "해설은 성경 해석 지침의 순위를 따릅니다. 1순위는 첫열매들 교회의 영상 강의와 교재입니다. 출처 줄에 표시가 없으면 강의·교재가 그 절을 풀이하거나 언급한 것이고, ‘교회 교리 적용’은 교회 교리(밀크 교재 등)의 원리를 이 절에 비추어 본 것입니다. 1순위 근거가 없는 단락에만 2순위 ‘외부 해설’(세대주의 해설가 — 스코필드 등 — 의 해설 가운데 교회 교리에 가까운 것)을, 그다음 3순위 ‘이이레 목사 강의’(서울침례교회 「다윗의 삶」)를 썼습니다. 2·3순위는 회색·갈색 줄로 구분했으며 교회의 가르침으로 소개하지 않습니다."],
-    ["성경 본문 — 칠판", "한글과 영어 본문은 표준킹제임스성경 한영대역의 글자 그대로입니다. 칠판의 밑줄과 형광펜은 글자를 바꾸지 않고 덧씌운 표시이며, KJV 영어에도 같은 뜻의 자리에 같은 표시를 했습니다. 색의 뜻은 칠판마다 맨 위에 적었습니다. KJV 아래의 작은 글씨는 현대 영어 번역 World English Bible(British Edition, 퍼블릭 도메인)입니다. 칠판 끝에는 그 단락의 영어 강의(주요 구문·필수 문법)와 단어장이 있습니다."],
+    ["성경 본문 — 칠판", "한글과 영어 본문은 표준킹제임스성경 한영대역의 글자 그대로입니다. 칠판의 밑줄과 형광펜은 글자를 바꾸지 않고 덧씌운 표시이며, KJV 영어에도 같은 뜻의 자리에 같은 표시를 했습니다. 색의 뜻은 칠판마다 맨 위에, 형광펜 바로 위에도 작게 적었습니다. KJV 아래 색 상자는 현대 영어 번역 World English Bible(British Edition, 퍼블릭 도메인)입니다. 칠판 끝에는 그 단락의 영어 강의(주요 구문·필수 문법)와 단어장이 있습니다."],
     ["그림", "이 장의 인물과 관계도, 지명이 나오는 장의 지도를 본문 앞에 두었습니다. 지도의 위치는 대략적인 것이며, 위치가 알려지지 않은 곳은 따로 적었습니다."],
-    ["영상 구간과 차례", "QR 또는 빨간 유튜브 버튼을 누르면 그 구간부터 영상이 재생됩니다. 강의 시각은 YouTube 자막 패널에 표시된 그 줄의 시작 시각이고, 교재 PDF의 시각은 원 교재에 실린 구간 주소입니다. 이번 제작에서 영상을 재생하여 발언 시점을 다시 확인하지는 않았습니다. 차례의 제목을 누르면 해당 단락으로 이동합니다."],
+    ["영상 구간과 차례", "빨간 유튜브 버튼을 누르면 그 구간부터 영상이 재생됩니다. 강의 시각은 YouTube 자막 패널에 표시된 그 줄의 시작 시각이고, 교재 PDF 출처의 시각은 원 교재에 실린 구간 주소이거나, 그 쪽이 속한 구간의 시작 시각입니다. 이번 제작에서 영상을 재생하여 발언 시점을 다시 확인하지는 않았습니다. 차례의 제목을 누르면 해당 단락으로 이동합니다."],
   ];
 }
 export function howto(book, mk) {
@@ -117,7 +112,7 @@ export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "" } =
       const ko = applyMarks(v.koHtml, v.ko, markRanges(v.ko, ms, "ko"));
       const en = applyMarks(v.enHtml, v.en, markRanges(v.en, ms, "en"));
       const web = webOf(book, v.ref);
-      o += `<div class="vrow"><span class="num">${v.ref.split(":")[1]}</span><p class="ko">${ko}</p><p class="en">${en}</p>${web ? `<p class="web">${esc(web)}</p>` : ""}</div>` + (vi === 0 ? `</div>` : "");
+      o += `<div class="vrow"><span class="num">${v.ref.split(":")[1]}</span><p class="ko">${ko}</p><p class="en">${en}</p>${web ? `<div class="web"><span class="wt">현대 영어</span>${esc(web)}</div>` : ""}</div>` + (vi === 0 ? `</div>` : "");
     }
     o += `<div class="vs">한글·KJV: 표준킹제임스성경 한영대역 · kingjamesbiblekorea.com &nbsp;|&nbsp; 현대 영어: World English Bible (British Edition), public domain</div>`;
     if (s.english?.length) {
@@ -127,11 +122,11 @@ export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "" } =
     }
     if (s.vocab?.length) o += `<div class="vocab"><div class="lt">단어장</div><div class="vw">` + s.vocab.map((w) => `<span class="w"><b>${esc(w.w)}</b> ${esc(w.ko)} <i>${w.ref.split(":")[1]}절</i></span>`).join("") + `</div></div>`;
     o += `</div>`;
-    if (s.story) o += `<div class="story"><div class="st">이야기로 읽기</div><p>${esc(s.story)}</p></div>`;
+    // 「이야기로 읽기」는 싣지 않는다(지침 §2-1, 2026-10-13)
     if (s.comments.length) o += `<div class="category">해설</div>`;
     for (const c of s.comments) {
       const b = BASIS[c.basis];
-      o += `<div class="comment ${b.cls}"><p class="${c.quote ? "quote" : ""}">${b.badge ? `<span class="badge-src">${b.badge}</span>` : ""}${inline(c)}</p>${sourceRows(c, qr)}</div>`;
+      o += `<div class="comment ${b.cls}"><p class="${c.quote ? "quote" : ""}">${b.badge ? `<span class="badge-src">${b.badge}</span>` : ""}${inline(c)}</p>${sourceRows(c)}</div>`;
     }
     for (const t of s.notes || []) o += `<div class="note"><b>해설 미수록</b><br/>${esc(t)}</div>`;
     o += TOTOC;
@@ -147,7 +142,7 @@ export function learning(book, ch, d, comments, { p = "", mk = () => "", inBook 
   const sec = (label, en, key) => { nav.push([p + key, (inBook ? `${ch}장 ` : "") + label, inBook ? 1 : 0]); return header(label, en, p + key, mk); };
   let o = sec("한눈에 보는 이야기", "SUMMARY", "summary") + `<ol class="summary">` + L.summary.map((x) => `<li>${esc(x.text)}</li>`).join("") + `</ol>${TOTOC}</section>`;
   o += sec("개념 문제", "QUESTIONS", "questions") + `<ol class="questions">` + L.questions.map((x) => `<li>${esc(x.q)}</li>`).join("") + `</ol>${TOTOC}</section>`;
-  o += sec("답안과 근거", "ANSWERS", "answers") + L.questions.map((x, i) => `<div class="qa"><p class="q">${String(i + 1).padStart(2, "0")}. ${esc(x.q)}</p><p class="answer">${esc(x.a)}</p><div class="source-text">${basisOf(B, d, x)}</div>${x.key ? sourceRows(comments[x.key], false) : ""}</div>`).join("") + TOTOC + `</section>`;
+  o += sec("답안과 근거", "ANSWERS", "answers") + L.questions.map((x, i) => `<div class="qa"><p class="q">${String(i + 1).padStart(2, "0")}. ${esc(x.q)}</p><p class="answer">${esc(x.a)}</p><div class="source-text">${basisOf(B, d, x)}</div>${x.key ? sourceRows(comments[x.key]) : ""}</div>`).join("") + TOTOC + `</section>`;
   o += sec("예상 질문과 답변", "QUESTIONS & ANSWERS", "faq") + `<div class="note">이 장의 해설에서 확인한 설명으로 답합니다.</div>` + L.faq.map((x, i) => { const c = comments[x.key]; return `<p class="q">Q${i + 1}. ${esc(x.q)}</p><p>${esc(c.text)}</p>${sourceRows(c, false)}`; }).join("") + TOTOC + `</section>`;
   o += sec("용어 풀이", "GLOSSARY", "glossary") + L.glossary.map((x) => `<div class="gl"><div class="gt">${esc(x.term)}</div><p>${esc(x.text)}</p><div class="source-text">${basisOf(B, d, x)}</div></div>`).join("") + TOTOC + `</section>`;
   return { html: o, nav };

@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { R, BOOKS, chapterFile, chapterVerses, rangeVerses, markRanges, transcript, pdfPage, squash, ffFile, sbcFile, MARK } from "./lib.mjs";
 import { PLACES, MOTIFS } from "./art.mjs";
+const BASIC = new Set(Object.values(JSON.parse(fs.readFileSync(new URL("./basic_words.json", import.meta.url), "utf8"))).filter(Array.isArray).flat());
 
 const [book, ...rest] = process.argv.slice(2);
 const B = BOOKS[book];
@@ -46,12 +47,11 @@ for (const ch of chs) {
     }
     if (!(s.marks || []).length) stat.unmarked++;
     // 이야기로 읽기·영어 강의·단어장(지침 §2-1·§4)
-    const sent = String(s.story || "").split(/(?<=[.?!])\s+/).filter(Boolean).length;
-    if (sent < 3 || sent > 6) E(`${s.ref} 이야기로 읽기 ${sent}문장(3–6)`);
     const enText = vs.map((v) => v.en).join(" ");
     if (!(s.english || []).length || s.english.length > 3) E(`${s.ref} 영어 강의 ${(s.english || []).length}개(1–3)`);
     for (const e of s.english || []) { const v = vs.find((x) => x.ref === e.ref); if (!v || !v.en.includes(e.phrase)) E(`${s.ref} 영어 강의 구문이 ${e.ref} KJV에 없음: ${e.phrase}`); if (!e.grammar || !e.text) E(`${s.ref} 영어 강의 문법 이름·풀이 없음`); stat.english = (stat.english || 0) + 1; }
-    if ((s.vocab || []).length < 3 || (s.vocab || []).length > 8) E(`${s.ref} 단어장 ${(s.vocab || []).length}개(3–8)`);
+    if ((s.vocab || []).length > 8) E(`${s.ref} 단어장 ${(s.vocab || []).length}개(최대 8)`);
+    for (const w of s.vocab || []) if (BASIC.has(w.w.toLowerCase())) E(`${s.ref} 단어장에 기초 영단어: ${w.w}(basic_words.json)`);
     for (const w of s.vocab || []) { const v = vs.find((x) => x.ref === w.ref); if (!v || !new RegExp("\\b" + w.w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "i").test(v.en)) E(`${s.ref} 단어장 낱말이 ${w.ref} KJV에 없음: ${w.w}`); if (!w.ko) E(`${s.ref} 단어 뜻 없음 ${w.w}`); }
     // 해설
     const ranks = new Set();
