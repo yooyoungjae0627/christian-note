@@ -3,7 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { R, BOOKS, chapterFile, chapterVerses, rangeVerses, markRanges, transcript, pdfPage, squash, ffFile, sbcFile, MARK } from "./lib.mjs";
-import { PLACES, MOTIFS } from "./art.mjs";
+import { PLACES, MOTIFS, relationIssues, mapViews, mapSvg, mapIssues } from "./art.mjs";
 const BASIC = new Set(Object.values(JSON.parse(fs.readFileSync(new URL("./basic_words.json", import.meta.url), "utf8"))).filter(Array.isArray).flat());
 
 const [book, ...rest] = process.argv.slice(2);
@@ -107,6 +107,9 @@ for (const ch of chs) {
   for (const p of d.map?.places || []) { if (!PLACES.places[p.key] && !(Array.isArray(p.at) && p.name)) E(`지도 지명 없음 ${p.key}(places.json에 없으면 name과 at:[경도,위도]를 원고에)`); if (!p.ref || !inCh(p.ref)) E(`지도 지명 ${p.key} 근거 절 이상`); }
   for (const r of d.map?.routes || []) for (const k of r.path) if (!PLACES.places[k] && !(d.map.places || []).some((x) => x.key === k && x.at)) E(`경로 지명 없음 ${k}`);
   for (const v of d.map?.views || []) for (const k of v.keys) if (!(d.map.places || []).some((x) => x.key === k)) E(`지도 보기의 지명이 places에 없음 ${k}`);
+  // 그림 겹침(지침 §5·§6): 관계도·지도 글자가 상자·선·다른 글자에 가려지지 않는지 실제 배치로 검사
+  if (d.people?.length && d.relations?.length) { try { for (const m of relationIssues(d.people, d.relations).issues) E("관계도 " + m); } catch (e) { E("관계도 배치 실패 " + e.message); } }
+  if (d.map?.places?.length) { try { for (const v of mapViews(d.map)) { const places = d.map.places.filter((x) => v.keys.includes(x.key)); const routes = (d.map.routes || []).map((r) => ({ ...r, path: r.path.filter((k) => v.keys.includes(k)) })).filter((r) => r.path.length > 1); mapSvg({ places, routes, minSpan: v.minSpan, focus: v.focus, hide: v.hide, frames: v.frames }); for (const m of mapIssues) E("지도 " + m); } } catch (e) { E("지도 배치 실패 " + e.message); } }
   // 영어 구문
   if (d.english) E("장 전체 english는 2판 보강에서 단락별 english로 옮긴다");
   // 학습 자료

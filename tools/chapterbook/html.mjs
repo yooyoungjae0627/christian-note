@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { BOOKS, HERE, TMP, esc, chapterVerses, rangeVerses, markRanges, applyMarks, MARK, BASIS, timeKo, ffFile, sbcFile, webOf } from "./lib.mjs";
-import { mapSvg, relationSvg, relLegendHtml, coverSvg } from "./art.mjs";
+import { mapSvg, mapViews, relationSvg, relLegendHtml, coverSvg } from "./art.mjs";
 
 // 굵기별 정적 Noto 폰트(%TEMP%/chapterbook2/fonts, fetch_fonts.mjs로 받음). 가변 폰트는 Edge가 굵기 변형을 Type3(글자 그림)로 넣어
 // PDF가 커지므로 쓰지 않는다. 정적 폰트가 없으면 빌드를 멈춘다.
@@ -88,17 +88,17 @@ export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "", he
     for (const x of d.people) o += `<div class="person"><span class="pn">${esc(x.name)}</span>${x.en ? `<span class="pe">${esc(x.en)}</span>` : ""}<div>${esc(x.desc)}</div><div class="pr">근거: ${B.ko} ${esc(x.refs.join(", "))}</div></div>`;
     o += `</div>`;
     nav.push([p + "people", "이 장의 인물", 1]);
-    if (d.relations?.length) { const nm = Object.fromEntries(d.people.map((x) => [x.id, x.name])); o += `<div class="figure relfig"><div class="lab">인물 관계도</div>${relationSvg(d.people, d.relations)}${relLegendHtml(d.relations)}</div><table class="rel-refs"><thead><tr><th>관계</th><th>근거</th></tr></thead><tbody>` + d.relations.map((r) => `<tr><td>${esc(nm[r.from])} — ${esc(nm[r.to])}${r.label ? ` · ${esc(r.label)}` : ""}</td><td>${B.ko} ${esc(r.ref)}</td></tr>`).join("") + `</tbody></table>`; }
+    if (d.relations?.length) { const nm = Object.fromEntries(d.people.map((x) => [x.id, x.name])); o += `<div class="figure relfig"><div class="lab">인물 관계도</div>${relationSvg(d.people, d.relations)}${relLegendHtml(d.relations, d.people)}</div><table class="rel-refs"><thead><tr><th>관계</th><th>근거</th></tr></thead><tbody>` + d.relations.map((r) => `<tr><td>${esc(nm[r.from])} — ${esc(nm[r.to])}${r.label ? ` · ${esc(r.label)}` : ""}</td><td>${B.ko} ${esc(r.ref)}</td></tr>`).join("") + `</tbody></table>`; }
   }
   // 지도 — views가 있으면 전체 지도와 확대 지도 등 여러 장
   if (d.map?.places?.length) {
-    const views = d.map.views || [{ keys: d.map.places.map((x) => x.key), minSpan: d.map.minSpan }];
+    const views = mapViews(d.map);
     o += `<div class="lab" id="${p}map">${mk(p + "map")}이 장의 지도</div>`;
     views.forEach((v, vi) => {
       const places = d.map.places.filter((x) => v.keys.includes(x.key));
       const routes = (d.map.routes || []).map((r) => ({ ...r, path: r.path.filter((k) => v.keys.includes(k)) })).filter((r) => r.path.length > 1);
       const last = vi === views.length - 1;
-      o += `<div class="figure">${v.title ? `<div class="map-title">${esc(v.title)}</div>` : ""}${mapSvg({ places, routes, minSpan: v.minSpan, focus: v.focus })}${last ? `<div class="cap">붉은 점·굵은 이름 = 이 장에 나오는 지명. 옅은 이름 = 주변 지역. 위치는 대략적인 것입니다.${d.map.routes?.length ? " 붉은 점선 화살표 = 본문의 이동 경로(" + esc(d.map.routes.map((r) => r.ref).join(", ")) + ")." : ""}</div>${d.map.unknown?.length ? `<div class="unknown">위치 미상: ${esc(d.map.unknown.map((u) => `${u.name}(${u.ref}) ${u.note || ""}`.trim()).join(" · "))}</div>` : ""}` : ""}</div>`;
+      o += `<div class="figure">${v.title ? `<div class="map-title">${esc(v.title)}</div>` : ""}${mapSvg({ places, routes, minSpan: v.minSpan, focus: v.focus, hide: v.hide, frames: v.frames })}${last ? `<div class="cap">붉은 점·굵은 이름 = 이 장에 나오는 지명. 옅은 이름 = 주변 지역. 위치는 대략적인 것입니다.${d.map.routes?.length ? " 붉은 점선 화살표 = 본문의 이동 경로(" + esc(d.map.routes.map((r) => r.ref).join(", ")) + ")." : ""}</div>${d.map.unknown?.length ? `<div class="unknown">위치 미상: ${esc(d.map.unknown.map((u) => `${u.name}(${u.ref}) ${u.note || ""}`.trim()).join(" · "))}</div>` : ""}` : ""}</div>`;
     });
     nav.push([p + "map", "이 장의 지도", 1]);
   }

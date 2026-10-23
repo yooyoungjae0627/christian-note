@@ -27,20 +27,14 @@ function place(boxes, W, H, cx, cy, w, h, rings, ang) {
 
 // ───────────── 지도 ─────────────
 // map = {places:[{key, name?}], routes:[{path:[key…], ref}], minSpan?, focus?}
-export function mapSvg(map) {
-  const W = 640, H = 470;
-  // 원고 안에서 at:[경도,위도]를 준 지명은 places.json에 없어도 쓴다(장마다 따로 작업해도 충돌 없게)
+const MAP_W = 640, MAP_H = 470;
+// 지도 투영(경도·위도 → 그림 좌표). mapSvg와 확대 지도 나누기(mapViews)가 같은 계산을 쓴다.
+function project(map) {
+  const W = MAP_W, H = MAP_H;
   const local = Object.fromEntries(map.places.filter((p) => p.at).map((p) => [p.key, { name: p.name, at: p.at, area: p.area }]));
   const look = (k) => PLACES.places[k] || local[k];
-  const pts = map.places.map((p) => {
-    const db = look(p.key);
-    if (!db) throw new Error("places.json에 없는 지명: " + p.key);
-    return { ...db, ...p, name: p.name || db.name };
-  });
-  let [x0, y0, x1, y1] = map.focus || [
-    Math.min(...pts.map((p) => p.at[0])), Math.min(...pts.map((p) => p.at[1])),
-    Math.max(...pts.map((p) => p.at[0])), Math.max(...pts.map((p) => p.at[1])),
-  ];
+  const pts = map.places.map((p) => { const db = look(p.key); if (!db) throw new Error("places.json에 없는 지명: " + p.key); return { ...db, ...p, name: p.name || db.name }; });
+  let [x0, y0, x1, y1] = map.focus || [Math.min(...pts.map((p) => p.at[0])), Math.min(...pts.map((p) => p.at[1])), Math.max(...pts.map((p) => p.at[0])), Math.max(...pts.map((p) => p.at[1]))];
   const kx = Math.cos(((y0 + y1) / 2) * Math.PI / 180);
   let w = (x1 - x0) * kx, h = y1 - y0;
   const minSpan = map.minSpan || 0.9;
@@ -49,7 +43,44 @@ export function mapSvg(map) {
   if (w / h > W / H) h = w * H / W; else w = h * W / H;
   const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
   x0 = cx - w / kx / 2; x1 = cx + w / kx / 2; y0 = cy - h / 2; y1 = cy + h / 2;
-  const X = (lon) => (lon - x0) / (x1 - x0) * W, Y = (lat) => (y1 - lat) / (y1 - y0) * H;
+  return { W, H, look, pts, x0, y0, x1, y1, kx, X: (lon) => (lon - x0) / (x1 - x0) * W, Y: (lat) => (y1 - lat) / (y1 - y0) * H };
+}
+// 한 지도 안에서 점이 몰린 곳(이름을 붙이면 어느 점의 이름인지 헷갈리는 곳)을 찾아 확대 지도로 따로 뺀다.
+// view = {title?, keys, minSpan?, focus?} → [{…view, hide:[keys], frames:[{keys, tag}]}, {확대 view} …]
+export function mapViews(map) {
+  const base = map.views || [{ keys: map.places.map((x) => x.key), minSpan: map.minSpan }];
+  const out = [];
+  const NUM = "①②③④⑤⑥⑦⑧⑨";
+  // 원고가 붙인 번호(①…)보다 뒤 번호부터
+  let n = Math.max(base.length, ...base.map((v) => NUM.indexOf((v.title || "")[0]) + 1));
+  // 원고에 이미 그 지명들을 좁게 그린 지도가 있으면 확대 지도를 또 만들지 않는다
+  const narrow = base.filter((v) => { const pr = project({ places: map.places.filter((x) => v.keys.includes(x.key)), minSpan: v.minSpan, focus: v.focus }); return pr.x1 - pr.x0 <= 2.2; });
+  for (const v of base) {
+    const places = map.places.filter((x) => v.keys.includes(x.key));
+    const pr = project({ places, minSpan: v.minSpan, focus: v.focus });
+    const dots = pr.pts.filter((p) => !p.area).map((p) => ({ key: p.key, x: pr.X(p.at[0]), y: pr.Y(p.at[1]) }));
+    // 46px 안에 있는 점끼리 묶음
+    const parent = Object.fromEntries(dots.map((d) => [d.key, d.key])); const find = (k) => (parent[k] === k ? k : (parent[k] = find(parent[k])));
+    for (const a of dots) for (const b of dots) if (a.key < b.key && Math.hypot(a.x - b.x, a.y - b.y) < 32) parent[find(a.key)] = find(b.key);
+    const groups = Object.values(dots.reduce((m, d) => ((m[find(d.key)] ||= []).push(d.key), m), {})).filter((g) => g.length >= 2 && g.length < places.length)
+      // 이미 좁은 지역을 그린 지도이거나, 확대해도 점이 떨어지지 않는(거의 같은 자리) 묶음은 확대하지 않고 지시선으로 이름을 붙인다
+      .filter((g) => !narrow.some((w) => w !== v && g.every((k) => w.keys.includes(k))))
+      .filter((g) => pr.x1 - pr.x0 > 2.2 && (() => { const at = g.map((k) => pr.pts.find((p) => p.key === k).at); return Math.max(...at.map((p) => p[0])) - Math.min(...at.map((p) => p[0])) + Math.max(...at.map((p) => p[1])) - Math.min(...at.map((p) => p[1])) > 0.06; })());
+    const hide = [], frames = [], zooms = [];
+    for (const g of groups) {
+      n++; const tag = "확대 " + NUM[n - 1];
+      hide.push(...g); frames.push({ keys: g, tag });
+      const names = places.filter((p) => g.includes(p.key)).map((p) => p.name || PLACES.places[p.key]?.name || p.key);
+      zooms.push({ title: `${NUM[n - 1]} 확대 — ${names.join("·")}`, keys: g, minSpan: 0.9, zoomOf: true });
+    }
+    out.push({ ...v, title: v.title || (zooms.length ? "① 전체" : undefined), hide, frames }, ...zooms);
+  }
+  return out;
+}
+export const mapIssues = [];
+export function mapSvg(map) {
+  const W = MAP_W, H = MAP_H;
+  const { look, pts, x0, y0, x1, y1, kx, X, Y } = project(map);
   const P = (a) => `${f1(X(a[0]))},${f1(Y(a[1]))}`;
   const inside = (a, m = 0) => a[0] > x0 + m && a[0] < x1 - m && a[1] > y0 + m && a[1] < y1 - m;
   const base = [`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="mapsvg">`,
@@ -75,7 +106,7 @@ export function mapSvg(map) {
   }
   const dots = [], labels = [];
   for (const p of pts) if (!p.area) { const x = X(p.at[0]), y = Y(p.at[1]); boxes.push({ x: x - 7, y: y - 7, w: 14, h: 14 }); dots.push(`<circle cx="${f1(x)}" cy="${f1(y)}" r="5.6" fill="#c0392b" stroke="#fff" stroke-width="1.8"/>`); }
-  const S = { main: 19, area: 18, sea: 16, region: 15, river: 14, ctx: 14 };
+  const S = { main: 19, area: 18, sea: 16, region: 15, river: 14, ctx: 14, frame: 15 };
   const put = (x, y, t, cls, rings, required) => {
     const s = S[cls], w = textW(t, s) + 12, h = s + 9;
     let b = place(boxes, W, H, x, y, w, h, rings, ANG);
@@ -86,7 +117,16 @@ export function mapSvg(map) {
     return true;
   };
   // 이 장의 지명 → 반드시(자리가 좁으면 지시선)
-  for (const p of pts) { const x = X(p.at[0]), y = Y(p.at[1]); if (!put(x, y, p.name, p.area ? "area" : "main", p.area ? [0, 14, 28] : [10, 22, 34], true)) throw new Error("지도 이름 자리를 찾지 못함: " + p.name); }
+  // 확대 지도로 뺀 묶음: 점선 테두리와 "확대 ②" 꼬리표(이름은 확대 지도에)
+  const frameSvg = [];
+  for (const f of map.frames || []) {
+    const ps = pts.filter((p) => f.keys.includes(p.key)).map((p) => [X(p.at[0]), Y(p.at[1])]);
+    const fx = Math.min(...ps.map((p) => p[0])) - 14, fy = Math.min(...ps.map((p) => p[1])) - 14, fw = Math.max(...ps.map((p) => p[0])) + 14 - fx, fh = Math.max(...ps.map((p) => p[1])) + 14 - fy;
+    frameSvg.push(`<rect x="${f1(fx)}" y="${f1(fy)}" width="${f1(fw)}" height="${f1(fh)}" rx="8" fill="none" stroke="#7a1f16" stroke-width="1.6" stroke-dasharray="5 3"/>`);
+    boxes.push({ x: fx - 2, y: fy - 2, w: fw + 4, h: 3 }, { x: fx - 2, y: fy + fh - 1, w: fw + 4, h: 3 }, { x: fx - 2, y: fy, w: 3, h: fh }, { x: fx + fw - 1, y: fy, w: 3, h: fh });
+    if (!put(fx + fw / 2, fy + fh / 2, f.tag, "frame", [fh / 2 + 4, fh / 2 + 18, fh / 2 + 34, fh / 2 + 52], true)) throw new Error("확대 꼬리표 자리를 찾지 못함");
+  }
+  for (const p of pts) { if ((map.hide || []).includes(p.key)) continue; const x = X(p.at[0]), y = Y(p.at[1]); if (!put(x, y, p.name, p.area ? "area" : "main", p.area ? [0, 14, 28] : [10, 22, 34], true)) throw new Error("지도 이름 자리를 찾지 못함: " + p.name); }
   // 바다·강·이웃 땅·주변 성읍 → 온전히 놓을 수 있을 때만
   for (const s of PLACES.seas) if (s.name && s.label && inside(s.label)) put(X(s.label[0]), Y(s.label[1]), s.name, "sea", [0, 16, 32], false);
   for (const r of PLACES.rivers) if (r.name && r.label && inside(r.label)) put(X(r.label[0]), Y(r.label[1]), r.name, "river", [0, 12, 24], false);
@@ -101,14 +141,20 @@ export function mapSvg(map) {
     boxes.push(dot);
     if (put(x, y, p.name, "ctx", [8, 18], false)) ctxDots.push(`<circle cx="${f1(x)}" cy="${f1(y)}" r="3" fill="#8f887a"/>`); else boxes.pop();
   }
-  const style = { main: `font-weight="700" fill="#7a1f16"`, area: `font-weight="700" fill="#5b4a2a"`, region: `fill="#8f846c"`, sea: `fill="#3f6f90" font-style="italic"`, river: `fill="#3f6f90" font-style="italic"`, ctx: `fill="#6f685b"` };
-  const out = [...base, ...routeSvg, ...ctxDots, ...dots];
+  const style = { frame: `font-weight="700" fill="#7a1f16"`, main: `font-weight="700" fill="#7a1f16"`, area: `font-weight="700" fill="#5b4a2a"`, region: `fill="#8f846c"`, sea: `fill="#3f6f90" font-style="italic"`, river: `fill="#3f6f90" font-style="italic"`, ctx: `fill="#6f685b"` };
+  const out = [...base, ...routeSvg, ...frameSvg, ...ctxDots, ...dots];
   for (const l of labels) {
-    if (l.r > 24 && (l.cls === "main" || l.cls === "area")) { const tx = Math.min(Math.max(l.ax, l.x), l.x + l.w), ty = Math.min(Math.max(l.ay, l.y), l.y + l.h); out.push(`<line x1="${f1(l.ax)}" y1="${f1(l.ay)}" x2="${f1(tx)}" y2="${f1(ty)}" stroke="#7a1f16" stroke-width="1"/>`); }
-    if (l.cls === "main") out.push(`<rect x="${f1(l.x)}" y="${f1(l.y)}" width="${f1(l.w)}" height="${f1(l.h)}" rx="5" fill="#fffaf0" stroke="#c0392b" stroke-width="1.2"/>`);
+    if (l.r > 12 && (l.cls === "main" || l.cls === "area")) { const tx = Math.min(Math.max(l.ax, l.x), l.x + l.w), ty = Math.min(Math.max(l.ay, l.y), l.y + l.h); out.push(`<line x1="${f1(l.ax)}" y1="${f1(l.ay)}" x2="${f1(tx)}" y2="${f1(ty)}" stroke="#7a1f16" stroke-width="1"/>`); }
+    if (l.cls === "main" || l.cls === "frame") out.push(`<rect x="${f1(l.x)}" y="${f1(l.y)}" width="${f1(l.w)}" height="${f1(l.h)}" rx="5" fill="#fffaf0" stroke="#c0392b" stroke-width="1.2"/>`);
     else if (l.cls !== "sea" && l.cls !== "river") out.push(`<rect x="${f1(l.x)}" y="${f1(l.y)}" width="${f1(l.w)}" height="${f1(l.h)}" rx="4" fill="#f3ead2" fill-opacity=".85"/>`);
     out.push(`<text x="${f1(l.x + l.w / 2)}" y="${f1(l.y + l.h / 2 + l.s * 0.36)}" text-anchor="middle" font-size="${l.s}" font-family="Noto Sans KR" ${style[l.cls]}>${esc(l.t)}</text>`);
   }
+  // 이름표가 붙지 않은(지시선 없는) 지명에서, 다른 점이 자기 점보다 이름표에 더 가까우면 헷갈린다 → 기록
+  const own = (l) => pts.find((p) => p.name === l.t);
+  const dotXY = pts.filter((p) => !p.area).map((p) => [p.name, X(p.at[0]), Y(p.at[1])]);
+  const dist = (l, x, y) => Math.hypot(Math.max(l.x - x, 0, x - l.x - l.w), Math.max(l.y - y, 0, y - l.y - l.h));
+  mapIssues.length = 0;
+  for (const l of labels) if (l.cls === "main" && l.r <= 12) { const o = own(l); if (!o || o.area) continue; const d0 = dist(l, X(o.at[0]), Y(o.at[1])); for (const [nm, x, y] of dotXY) if (nm !== l.t && dist(l, x, y) < d0 - 1) mapIssues.push(`이름표가 다른 점에 더 가까움: ${l.t} ↔ ${nm}`); }
   out.push(`<g transform="translate(${W - 34},36)"><circle r="18" fill="#fffaf0" stroke="#8a7442"/><path d="M0,-14L5,4L0,0L-5,4Z" fill="#8a7442"/><text y="15" text-anchor="middle" font-size="10" font-family="Noto Sans KR" font-weight="700" fill="#8a7442">N</text></g>`);
   const kmPerPx = (x1 - x0) * kx * 111 / W;
   const nice = [5, 10, 20, 50, 100, 200, 300, 500].find((k) => k / kmPerPx > 60) || 500;
@@ -119,99 +165,18 @@ export function mapSvg(map) {
 }
 
 // ───────────── 인물 관계도 ─────────────
-// people:[{id,name,gen,role?}], relations:[{from,to,type,label,directed?}]
-const REL = {
-  spouse: { stroke: "#b8860b", width: 3.2, dash: "", double: true, name: "부부" },
-  parent: { stroke: "#4f6390", width: 2, dash: "", name: "부모·자녀" },
-  sibling: { stroke: "#4f6390", width: 2, dash: "4 3", name: "형제·자매" },
-  kin: { stroke: "#4f6390", width: 2, dash: "1.5 4", name: "친척" },
-  ruler: { stroke: "#2c6e49", width: 2.2, dash: "", name: "왕·신하·주인" },
-  enemy: { stroke: "#c0392b", width: 2.4, dash: "7 4", name: "적대·갈등" },
-  god: { stroke: "#c9973b", width: 2.6, dash: "", name: "주와의 관계" },
-  other: { stroke: "#7b7466", width: 2, dash: "", name: "그 밖의 관계" },
-};
-export function relationSvg(people, relations) {
-  const NAME = 19, TAG = 14, boxH = 54, rowH = 150, top = 26;
-  const gens = [...new Set(people.map((p) => p.gen ?? 0))].sort((a, b) => a - b);
-  const rows = gens.map((g) => people.filter((p) => (p.gen ?? 0) === g));
-  const pw = (p) => Math.max(92, textW(p.name, NAME) + 40);
-  const adj = (a, b) => relations.find((r) => (r.from === a.id && r.to === b.id) || (r.from === b.id && r.to === a.id));
-  const gapOf = (a, b) => { const r = adj(a, b); return Math.max(46, r?.label ? textW(r.label, TAG) + 34 : 46); };
-  const rowWidth = (row) => row.reduce((s, p, i) => s + pw(p) + (i ? gapOf(row[i - 1], p) : 0), 0);
-  // 세대가 7줄을 넘으면 두 단으로 꺾어 놓는다(관계도는 한 쪽에, 글자는 크게 — 지침 §5)
-  const cols = rows.length > 7 ? 2 : 1, perCol = Math.ceil(rows.length / cols);
-  const colW = Math.max(cols > 1 ? 330 : 640, ...rows.map((r) => rowWidth(r) + 40));
-  const W = colW * cols;
-  const pos = {};
-  rows.forEach((row, gi) => {
-    const col = Math.floor(gi / perCol), ri = gi % perCol;
-    let x = col * colW + (colW - rowWidth(row)) / 2;
-    row.forEach((p, i) => {
-      if (i) x += gapOf(row[i - 1], p);
-      const w = pw(p); pos[p.id] = { x: x + w / 2, y: top + ri * rowH + boxH / 2, w, p, row: gi, idx: i }; x += w;
-    });
-  });
-  const H = top + (Math.min(rows.length, perCol) - 1) * rowH + boxH + 26;
-  const boxes = Object.values(pos).map((n) => ({ x: n.x - n.w / 2, y: n.y - boxH / 2, w: n.w, h: boxH }));
-  const lines = [], tags = [];
-  for (const r of relations) {
-    const a = pos[r.from], b = pos[r.to];
-    if (!a || !b) throw new Error(`관계도 인물 없음: ${r.from}→${r.to}`);
-    const st = REL[r.type] || REL.other;
-    const dash = st.dash ? ` stroke-dasharray="${st.dash}"` : "";
-    const arrow = r.directed ? ` marker-end="url(#rar-${REL[r.type] ? r.type : "other"})"` : "";
-    let lab;
-    if (a.row === b.row && Math.abs(a.idx - b.idx) > 1) {
-      // 같은 줄, 사이에 다른 사람이 있으면 위로 휘는 곡선
-      const [l, rr] = a.x < b.x ? [a, b] : [b, a];
-      const y = l.y - boxH / 2, cy = y - 50;
-      lines.push(`<path d="M${f1(l.x)},${f1(y)} C${f1(l.x)},${f1(cy)} ${f1(rr.x)},${f1(cy)} ${f1(rr.x)},${f1(y)}" fill="none" stroke="${st.stroke}" stroke-width="${st.width}"${dash}${arrow}/>`);
-      lab = { x: (l.x + rr.x) / 2, y: cy + 12, cand: [[0, 0], [0, -10], [50, 0], [-50, 0], [0, 14]] };
-    } else {
-      const edge = (p, q) => { const dx = q.x - p.x, dy = q.y - p.y; const s = Math.min((p.w / 2) / Math.abs(dx || 1e-9), (boxH / 2) / Math.abs(dy || 1e-9)); return [p.x + dx * s, p.y + dy * s]; };
-      const [ax, ay] = edge(a, b), [bx, by] = edge(b, a);
-      if (st.double) { const dx = bx - ax, dy = by - ay, l = Math.hypot(dx, dy) || 1, nx = -dy / l * 2.6, ny = dx / l * 2.6; lines.push(`<line x1="${f1(ax + nx)}" y1="${f1(ay + ny)}" x2="${f1(bx + nx)}" y2="${f1(by + ny)}" stroke="${st.stroke}" stroke-width="1.8"/><line x1="${f1(ax - nx)}" y1="${f1(ay - ny)}" x2="${f1(bx - nx)}" y2="${f1(by - ny)}" stroke="${st.stroke}" stroke-width="1.8"/>`); }
-      else lines.push(`<line x1="${f1(ax)}" y1="${f1(ay)}" x2="${f1(bx)}" y2="${f1(by)}" stroke="${st.stroke}" stroke-width="${st.width}"${dash}${arrow}/>`);
-      const dx = bx - ax, dy = by - ay, l = Math.hypot(dx, dy) || 1, nx = -dy / l, ny = dx / l;
-      const mx = (ax + bx) / 2, my = (ay + by) / 2, c = [];
-      for (const t of [0.5, 0.4, 0.6, 0.3, 0.7, 0.22, 0.78]) for (const o of [0, 16, -16, 30, -30, 44, -44]) c.push([ax + dx * t + nx * o - mx, ay + dy * t + ny * o - my]);
-      lab = { x: mx, y: my, cand: c };
-    }
-    if (r.label) {
-      const w = textW(r.label, TAG) + 16, h = TAG + 10;
-      let b0 = null;
-      for (const [ox, oy] of lab.cand) { const bb = { x: lab.x + ox - w / 2, y: lab.y + oy - h / 2, w, h }; if (bb.x > 2 && bb.x + w < W - 2 && bb.y > 2 && bb.y + h < H - 2 && !boxes.some((o) => hit(bb, o, 1))) { b0 = bb; break; } }
-      let lead = null;
-      if (!b0) { // 그림 전체에서 선 가운데와 가장 가까운 빈자리 → 지시선
-        let best = null;
-        for (let yy = 4; yy + h < H - 2; yy += 6) for (let xx = 4; xx + w < W - 2; xx += 8) { const bb = { x: xx, y: yy, w, h }; if (boxes.some((o) => hit(bb, o, 1))) continue; const d = Math.hypot(xx + w / 2 - lab.x, yy + h / 2 - lab.y); if (!best || d < best.d) best = { ...bb, d }; }
-        if (!best) throw new Error(`관계 낱말 자리를 찾지 못함: ${r.label}`);
-        b0 = best; lead = [lab.x, lab.y];
-      }
-      boxes.push(b0); tags.push({ ...b0, t: r.label, c: st.stroke, lead });
-    }
-  }
-  const out = [`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${f1(W)} ${H}" class="relsvg">`,
-    `<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.6" flood-color="#5a4a2a" flood-opacity=".22"/></filter>` + Object.entries(REL).map(([k, s]) => `<marker id="rar-${k}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="${s.stroke}"/></marker>`).join("") + `</defs>`,
-    `<rect width="${f1(W)}" height="${H}" rx="12" fill="#fbf7ec"/>`, ...lines];
-  for (const { x, y, w, p } of Object.values(pos)) {
-    const [fill, stroke, color, band] = p.role === "god" ? ["#1c284e", "#c9973b", "#f6e7c1", "#c9973b"] : p.role === "enemy" ? ["#fff4f2", "#c0392b", "#7a1f16", "#c0392b"] : ["#fffdf7", "#b39a5f", "#18233f", "#c9973b"];
-    out.push(`<rect x="${f1(x - w / 2 + 1.5)}" y="${f1(y - boxH / 2 + 2.5)}" width="${f1(w)}" height="${boxH}" rx="12" fill="#5a4a2a" fill-opacity=".14"/><g><rect x="${f1(x - w / 2)}" y="${f1(y - boxH / 2)}" width="${f1(w)}" height="${boxH}" rx="12" fill="${fill}" stroke="${stroke}" stroke-width="1.6"/></g><rect x="${f1(x - w / 2 + 12)}" y="${f1(y - boxH / 2)}" width="${f1(w - 24)}" height="4" rx="2" fill="${band}"/>`);
-    out.push(`<text x="${f1(x)}" y="${f1(y + NAME * 0.38)}" text-anchor="middle" font-size="${NAME}" font-weight="700" font-family="Noto Sans KR" fill="${color}">${esc(p.name)}</text>`);
-  }
-  for (const t of tags) if (t.lead) out.push(`<line x1="${f1(t.lead[0])}" y1="${f1(t.lead[1])}" x2="${f1(t.x + t.w / 2)}" y2="${f1(t.y + t.h / 2)}" stroke="${t.c}" stroke-width="1" stroke-dasharray="2 2"/>`);
-  for (const t of tags) out.push(`<rect x="${f1(t.x)}" y="${f1(t.y)}" width="${f1(t.w)}" height="${f1(t.h)}" rx="${f1(t.h / 2)}" fill="#fff" stroke="${t.c}" stroke-width="1.2"/><text x="${f1(t.x + t.w / 2)}" y="${f1(t.y + t.h / 2 + TAG * 0.36)}" text-anchor="middle" font-size="${TAG}" font-weight="500" font-family="Noto Sans KR" fill="${t.c}">${esc(t.t)}</text>`);
-  out.push(`</svg>`);
-  return out.join("");
-}
+// 배치·선·글자 자리는 rel.mjs(직각 계보도, 겹침 검사 relationIssues)
+import { REL, relationSvg, relationIssues, hasGenBand } from "./rel.mjs";
+export { relationSvg, relationIssues };
 // 범례: 이 관계도에 쓰인 종류만, HTML 칩(겹치지 않고 줄바꿈)
-export function relLegendHtml(relations) {
+export function relLegendHtml(relations, people) {
+  const band = people && hasGenBand(people, relations) ? `<span class="chip"><svg viewBox="0 0 26 10" class="lg"><rect x="0" y="0" width="26" height="10" rx="3" fill="#efe3c4"/></svg>옅은 띠 = 같은 세대(두 줄로 나눔)</span>` : "";
   const kinds = [...new Set(relations.map((r) => (REL[r.type] ? r.type : "other")))];
   return `<div class="rel-legend">` + kinds.map((k) => {
     const s = REL[k];
     const line = s.double ? `<svg viewBox="0 0 26 10" class="lg"><line x1="0" y1="3" x2="26" y2="3" stroke="${s.stroke}" stroke-width="1.6"/><line x1="0" y1="7" x2="26" y2="7" stroke="${s.stroke}" stroke-width="1.6"/></svg>` : `<svg viewBox="0 0 26 10" class="lg"><line x1="0" y1="5" x2="26" y2="5" stroke="${s.stroke}" stroke-width="2.2"${s.dash ? ` stroke-dasharray="${s.dash}"` : ""}/></svg>`;
     return `<span class="chip">${line}${s.name}</span>`;
-  }).join("") + `</div>`;
+  }).join("") + band + `</div>`;
 }
 
 // ───────────── 표지 선 그림 ─────────────
