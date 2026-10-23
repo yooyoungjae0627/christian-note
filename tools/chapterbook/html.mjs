@@ -75,12 +75,13 @@ export function cover(book, title, sub, art, motto) {
 
 // 한 장의 본문부: 장 머리 → 인물 → 지도 → 절·해설 → 영어 구문 (+ 학습 자료는 learning()으로)
 // p = id 앞붙임(합본에서 장마다 다르게), qr = PDF에 QR 넣기
-export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "" } = {}) {
+// head = 단원 책에서 장 일부만 실을 때 장 머리 글자 {h1, nav}(지침 §0-1)
+export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "", head = null } = {}) {
   const B = BOOKS[book];
   const nav = [];
   const comments = Object.fromEntries(d.sections.flatMap((s) => s.comments.map((c) => [c.id, c])));
-  let o = `<section class="front" id="${p}chapter">${mk(p + "chapter")}<div class="chapter-header"><p class="eyebrow">${B.en} ${ch}</p><h1>${B.ko} ${ch}장</h1><div class="subtitle">${esc(d.subtitle)}</div><div class="gold"></div></div>`;
-  nav.push([p + "chapter", `${B.ko} ${ch}장 — ${d.subtitle}`, 0]);
+  let o = `<section class="front" id="${p}chapter">${mk(p + "chapter")}<div class="chapter-header"><p class="eyebrow">${B.en} ${ch}</p><h1>${head ? esc(head.h1) : `${B.ko} ${ch}장`}</h1>${head ? "" : `<div class="subtitle">${esc(d.subtitle)}</div>`}<div class="gold"></div></div>`;
+  nav.push([p + "chapter", head ? head.nav : `${B.ko} ${ch}장 — ${d.subtitle}`, 0]);
   // 인물
   if (d.people?.length) {
     o += `<div class="lab" id="${p}people">${mk(p + "people")}이 장의 인물</div><div class="people">`;
@@ -137,13 +138,13 @@ export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "" } =
 export function refOf(d, key) { for (const s of d.sections) if (s.comments.some((c) => c.id === key)) return s.ref; throw new Error("없는 해설 key: " + key); }
 const basisOf = (B, d, x) => x.key ? `근거: ${B.ko} ${refOf(d, x.key)} 해설` : `근거: ${B.ko} ${x.verse} 본문`;
 
-export function learning(book, ch, d, comments, { p = "", mk = () => "", inBook = false } = {}) {
+export function learning(book, ch, d, comments, { p = "", mk = () => "", inBook = false, scope = "이 장" } = {}) {
   const B = BOOKS[book], L = d.learning, nav = [];
   const sec = (label, en, key) => { nav.push([p + key, (inBook ? `${ch}장 ` : "") + label, inBook ? 1 : 0]); return header(label, en, p + key, mk); };
   let o = sec("한눈에 보는 이야기", "SUMMARY", "summary") + `<ol class="summary">` + L.summary.map((x) => `<li>${esc(x.text)}</li>`).join("") + `</ol>${TOTOC}</section>`;
   o += sec("개념 문제", "QUESTIONS", "questions") + `<ol class="questions">` + L.questions.map((x) => `<li>${esc(x.q)}</li>`).join("") + `</ol>${TOTOC}</section>`;
   o += sec("답안과 근거", "ANSWERS", "answers") + L.questions.map((x, i) => `<div class="qa"><p class="q">${String(i + 1).padStart(2, "0")}. ${esc(x.q)}</p><p class="answer">${esc(x.a)}</p><div class="source-text">${basisOf(B, d, x)}</div>${x.key ? sourceRows(comments[x.key]) : ""}</div>`).join("") + TOTOC + `</section>`;
-  o += sec("예상 질문과 답변", "QUESTIONS & ANSWERS", "faq") + `<div class="note">이 장의 해설에서 확인한 설명으로 답합니다.</div>` + L.faq.map((x, i) => { const c = comments[x.key]; return `<p class="q">Q${i + 1}. ${esc(x.q)}</p><p>${esc(c.text)}</p>${sourceRows(c, false)}`; }).join("") + TOTOC + `</section>`;
+  o += sec("예상 질문과 답변", "QUESTIONS & ANSWERS", "faq") + `<div class="note">${scope}의 해설에서 확인한 설명으로 답합니다.</div>` + L.faq.map((x, i) => { const c = comments[x.key]; return `<p class="q">Q${i + 1}. ${esc(x.q)}</p><p>${esc(c.text)}</p>${sourceRows(c, false)}`; }).join("") + TOTOC + `</section>`;
   o += sec("용어 풀이", "GLOSSARY", "glossary") + L.glossary.map((x) => `<div class="gl"><div class="gt">${esc(x.term)}</div><p>${esc(x.text)}</p><div class="source-text">${basisOf(B, d, x)}</div></div>`).join("") + TOTOC + `</section>`;
   return { html: o, nav };
 }

@@ -1,6 +1,7 @@
 // 장별 해설서 2판 빌드 — 원고(JSON) → HTML → Edge 인쇄 → 차례 쪽수 맞춤 → mupdf 책갈피 → 고정 배치 EPUB.
 //   node tools/chapterbook/build.mjs genesis 12 [13 …]     장별 책
 //   node tools/chapterbook/build.mjs genesis all             합본(장별 원고를 그대로 묶음)
+//   node tools/chapterbook/build.mjs genesis unit 1 [2 …]    창세기 이야기 단원별 책(지침 §0-1)
 //   --out <폴더>  결과를 다른 폴더에(샘플용). 기본은 Genesis/ 또는 Samuel/
 // Edge 인쇄는 Claude Code 샌드박스 밖에서 실행한다(README 빌드 환경 메모).
 import fs from "node:fs";
@@ -96,7 +97,36 @@ function printLoop(name, render) {
 const outDir = OUTDIR || path.join(R, B.dir);
 fs.mkdirSync(outDir, { recursive: true });
 const results = [];
-if (rest[0] === "all") {
+if (rest[0] === "unit") {
+  // 단원 책: 표지 → 읽는 법 → 차례 → 장마다 [장 머리·인물·지도·단락] → 단원 학습 자료 → 참고 자료
+  const { loadUnit, unitOut, label, check } = await import("./units.mjs");
+  const failed = [];
+  for (const n of rest.slice(1).map(Number)) {
+   try {
+    const errs = check(n); if (errs.length) throw new Error("단원 원고 검사 실패: " + errs.join("; "));
+    const u = loadUnit(n);
+    await ensureQr(u.parts.flatMap((x) => urlsOf(x.d)));
+    const all = { sections: u.parts.flatMap((x) => x.d.sections), learning: u.learning };
+    const render = (pages, withMk) => {
+      const mk = withMk ? marker : () => "";
+      let nav = [], body = "", comments = {};
+      for (const x of u.parts) {
+        const a = chapterParts(book, x.ch, x.d, { p: `c${x.ch}-`, qr: false, mk, head: x.full ? null : { h1: label(x), nav: label(x) } });
+        nav.push(...a.nav); body += a.html; Object.assign(comments, a.comments);
+      }
+      const l = learning(book, 0, all, comments, { mk, scope: "이 책" });
+      nav.push(...l.nav, ["sources", "참고한 자료", 0]);
+      const html = cover(book, `${B.ko}<br/>${esc(u.title)}`, `${u.subtitle} — 교회 강의와 교리로 풀어 읽기`, coverSvg(u.cover), u.motto) + howto(book, mk) + toc(nav, pages, mk) + body + l.html + sourcesTable(Object.values(comments), mk);
+      return { html: page(`${B.ko} ${u.title} 성경 공부 교재`, html), nav };
+    };
+    const { raw, nav, pages } = printLoop(`${book}-unit${n}`, render);
+    const final = path.join(outDir, unitOut(u) + ".pdf");
+    const removed = finish(raw, final, unitOut(u), nav, pages);
+    results.push({ book, unit: n, pdf: final, epub: await epub(final), dupLinksRemoved: removed });
+   } catch (e) { console.error(`!! 단원 ${n} 빌드 실패: ${e.message}`); failed.push(n); }
+  }
+  if (failed.length) { console.error("실패한 단원: " + failed.join(" ")); process.exitCode = 1; }
+} else if (rest[0] === "all") {
   // 합본: all [시작-끝 권번호]  예) all 1-13 1  → 창세기_합본_1-1권(01-13장)
   const [r0, r1] = (rest[1] || `1-${B.chapters}`).split("-").map(Number); const vol = rest[2];
   const chs = [...Array(r1 - r0 + 1)].map((_, i) => r0 + i);

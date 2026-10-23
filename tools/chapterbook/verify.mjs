@@ -1,6 +1,7 @@
 // 장별 해설서 2판 완성본 검사 — PDF: 차례·「차례로」 버튼 등 내부 링크가 제자리로 가는지, QR을 300dpi로 실제 판독해 링크 주소와 같은지,
 // 원고의 영상 근거 주소가 모두 PDF에 있는지, 책갈피가 있는지. EPUB: tools/check_epub.mjs.
 //   node tools/chapterbook/verify.mjs genesis 1 2 …|all [--all-book]   (합본은 --all-book)
+//   node tools/chapterbook/verify.mjs genesis unit 1 2 …            창세기 단원별 책
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
@@ -9,7 +10,8 @@ const args = process.argv.slice(2);
 const allBook = args.includes("--all-book");
 const [book, ...rest] = args.filter((a) => a !== "--all-book");
 const B = BOOKS[book];
-const chs = rest[0] === "all" ? [...Array(B.chapters)].map((_, i) => i + 1) : rest.map(Number);
+const units = rest[0] === "unit" ? await import("./units.mjs") : null;
+const chs = units ? [] : rest[0] === "all" ? [...Array(B.chapters)].map((_, i) => i + 1) : rest.map(Number);
 const mupdf = await mod("mupdf");
 const jsQR = (await mod("jsqr")).default || (await mod("jsqr"));
 const checker = path.join(TOPIC, "check_epub-chapterbook.mjs");
@@ -50,7 +52,7 @@ function checkPdf(file, urls) {
   if (tocPage < 0) errors.push("차례 쪽 없음");
   return { pages: doc.countPages(), internal, toToc, youtube: yt, qr, outline: outline.length, errors };
 }
-const targets = allBook ? [{ name: B.all, urls: chs.flatMap((c) => urlsOf(loadChapter(book, c))) }] : chs.map((c) => ({ name: B.out(c), urls: urlsOf(loadChapter(book, c)) }));
+const targets = units ? rest.slice(1).map(Number).map((n) => { const u = units.loadUnit(n); return { name: units.unitOut(u), urls: u.parts.flatMap((x) => urlsOf(x.d)) }; }) : allBook ? [{ name: B.all, urls: chs.flatMap((c) => urlsOf(loadChapter(book, c))) }] : chs.map((c) => ({ name: B.out(c), urls: urlsOf(loadChapter(book, c)) }));
 function urlsOf(d) { return [...new Set(d.sections.flatMap((s) => s.comments.flatMap((c) => c.evidence.filter((e) => e.url && e.type === "transcript").map((e) => e.url))))]; }
 for (const t of targets) {
   const pdf = path.join(R, B.dir, t.name + ".pdf"), epub = pdf.replace(/\.pdf$/, ".epub");
