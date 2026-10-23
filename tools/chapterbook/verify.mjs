@@ -1,7 +1,7 @@
 // 장별 해설서 2판 완성본 검사 — PDF: 차례·「차례로」 버튼 등 내부 링크가 제자리로 가는지, QR을 300dpi로 실제 판독해 링크 주소와 같은지,
 // 원고의 영상 근거 주소가 모두 PDF에 있는지, 책갈피가 있는지. EPUB: tools/check_epub.mjs.
 //   node tools/chapterbook/verify.mjs genesis 1 2 …|all [--all-book]   (합본은 --all-book)
-//   node tools/chapterbook/verify.mjs genesis unit 1 2 …            창세기 단원별 책
+//   node tools/chapterbook/verify.mjs genesis|1sam|2sam unit 1 2 …   이야기 단원별 책
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
@@ -11,6 +11,7 @@ const allBook = args.includes("--all-book");
 const [book, ...rest] = args.filter((a) => a !== "--all-book");
 const B = BOOKS[book];
 const units = rest[0] === "unit" ? await import("./units.mjs") : null;
+if (units) units.useBook(book);
 const chs = units ? [] : rest[0] === "all" ? [...Array(B.chapters)].map((_, i) => i + 1) : rest.map(Number);
 const mupdf = await mod("mupdf");
 const jsQR = (await mod("jsqr")).default || (await mod("jsqr"));

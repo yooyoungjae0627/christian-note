@@ -1,18 +1,27 @@
-// 창세기 이야기 단원별 책(지침 §0-1, 2026-10-23) — 단원 목록(Genesis/원본/단원/units.json)과 장별 원고로 단원 원고를 만들고 검사한다.
-//   node tools/chapterbook/units.mjs make [N …] [--force]   단원 원고 unitNN.json 만들기(있으면 건너뜀)
-//   node tools/chapterbook/units.mjs check [N …]            단원 원고 검사 — 종료 코드 0이어야 빌드
+// 이야기 단원별 책(지침 §0-1 창세기, §0-2 사무엘상·하, 2026-10-23) — 단원 목록과 장별 원고로 단원 원고를 만들고 검사한다.
+//   node tools/chapterbook/units.mjs [genesis|1sam|2sam] make [N …] [--force]   단원 원고 만들기(있으면 건너뜀). 책을 빼면 genesis
+//   node tools/chapterbook/units.mjs [genesis|1sam|2sam] check [N …]            단원 원고 검사 — 종료 코드 0이어야 빌드
+//   단원 목록: Genesis/원본/단원/units.json(unitNN.json) · Samuel/원본/단원/units-1sam.json(1sam-unitNN.json) · units-2sam.json
 // 해설·칠판·인물·지도는 장별 원고를 그대로 쓰고, 단원 원고에는 제목·표지·표어·학습 자료만 둔다.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { R, loadChapter, chapterVerses } from "./lib.mjs";
+import { R, BOOKS, loadChapter, chapterVerses } from "./lib.mjs";
 import { MOTIFS } from "./art.mjs";
 
-export const UNIT_DIR = path.join(R, "Genesis/원본/단원");
-export const UNITS = JSON.parse(fs.readFileSync(path.join(UNIT_DIR, "units.json"), "utf8"));
-export const unitFile = (n) => path.join(UNIT_DIR, `unit${String(n).padStart(2, "0")}.json`);
-export const unitOut = (u) => `창세기_${String(u.unit).padStart(2, "0")}_${u.title.replace(/\s+/g, "_")}`;
-const LIMIT = { summary: [12, 22], questions: [25, 41], faq: [12, 14], glossary: [5, 12] };
+// 책마다 단원 목록 위치와 원고 이름
+const SPEC = {
+  genesis: { dir: "Genesis/원본/단원", list: "units.json", file: (n) => `unit${n}.json` },
+  "1sam": { dir: "Samuel/원본/단원", list: "units-1sam.json", file: (n) => `1sam-unit${n}.json` },
+  "2sam": { dir: "Samuel/원본/단원", list: "units-2sam.json", file: (n) => `2sam-unit${n}.json` },
+};
+let BOOK = "genesis";
+export let UNITS;
+export function useBook(b) { if (!SPEC[b]) throw new Error("단원 책이 아님 " + b); BOOK = b; UNITS = JSON.parse(fs.readFileSync(path.join(R, SPEC[b].dir, SPEC[b].list), "utf8")); }
+useBook("genesis");
+export const unitFile = (n) => path.join(R, SPEC[BOOK].dir, SPEC[BOOK].file(String(n).padStart(2, "0")));
+export const unitOut = (u) => `${BOOKS[BOOK].ko}_${String(u.unit).padStart(2, "0")}_${u.title.replace(/\s+/g, "_")}`;
+const LIMIT = { summary: [12, 22], questions: [25, 41], faq: [12, 14], glossary: [4, 12] };
 
 const pv = (r) => { const [c, v] = r.split(":").map(Number); return [c, v]; };
 // "12:4" · "12:4-10" · "12:4, 12:6" → 첫 절 [장, 절]
@@ -24,10 +33,10 @@ export function unitParts(u) {
   const [c0, v0] = pv(u.from), [c1, v1] = pv(u.to);
   const parts = [];
   for (let ch = c0; ch <= c1; ch++) {
-    const last = +chapterVerses("genesis", ch).at(-1).ref.split(":")[1];
+    const last = +chapterVerses(BOOK, ch).at(-1).ref.split(":")[1];
     const from = ch === c0 ? v0 : 1, to = ch === c1 ? v1 : last;
     const full = from === 1 && to === last;
-    const src = loadChapter("genesis", ch);
+    const src = loadChapter(BOOK, ch);
     const inR = (r) => { const [c, v] = firstRef(r); return c === ch && v >= from && v <= to; };
     const secIn = (s) => { const [a, z = a] = s.ref.split(":")[1].split("-").map(Number); if ((a < from && z >= from) || (a <= to && z > to)) throw new Error(`단원 ${u.unit} 경계 ${u.from}–${u.to}가 단락 ${s.ref}를 가름`); return a >= from && z <= to; };
     const d = full ? src : { ...src, sections: src.sections.filter(secIn) };
@@ -46,7 +55,7 @@ export function unitParts(u) {
   }
   return parts;
 }
-export const label = (p) => p.full ? `창세기 ${p.ch}장` : `창세기 ${p.ch}:${p.from}–${p.to}`;
+export const label = (p) => p.full ? `${BOOKS[BOOK].ko} ${p.ch}장` : `${BOOKS[BOOK].ko} ${p.ch}:${p.from}–${p.to}`;
 export function loadUnit(n) {
   const u = UNITS.find((x) => x.unit === n); if (!u) throw new Error("없는 단원 " + n);
   const f = unitFile(n);
@@ -62,7 +71,7 @@ function make(u) {
   const ids = new Set(parts.flatMap((p) => p.d.sections.flatMap((s) => s.comments.map((c) => c.id))));
   const vIn = (r) => { const x = firstRef(r); return cmp(x, pv(u.from)) >= 0 && cmp(x, pv(u.to)) <= 0; };
   const ok = (x) => x.key ? ids.has(x.key) : x.verse ? vIn(x.verse) : false;
-  const pool = (k) => parts.flatMap((p) => (loadChapter("genesis", p.ch).learning[k] || []).filter(ok));
+  const pool = (k) => parts.flatMap((p) => (loadChapter(BOOK, p.ch).learning[k] || []).filter(ok));
   const learning = {
     summary: spread(uniq(pool("summary"), (x) => x.text), LIMIT.summary[1]),
     questions: spread(uniq(pool("questions"), (x) => x.q), LIMIT.questions[1]),
@@ -70,7 +79,7 @@ function make(u) {
     glossary: spread(uniq(pool("glossary"), (x) => x.term), LIMIT.glossary[1]),
   };
   // 표어·표지: 단원에 해설 문단이 다 들어간 장의 것을, 앞 장부터
-  const src = parts.map((p) => loadChapter("genesis", p.ch)).find((d) => ids.has(d.motto_comment));
+  const src = parts.map((p) => loadChapter(BOOK, p.ch)).find((d) => ids.has(d.motto_comment));
   if (!src) throw new Error(`단원 ${u.unit}: 표어로 쓸 해설이 없음`);
   return { unit: u.unit, title: u.title, subtitle: u.subtitle, motto: src.motto, motto_comment: src.motto_comment, cover: src.cover, learning };
 }
@@ -99,16 +108,19 @@ export function check(n) {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const [cmd, ...rest] = process.argv.slice(2);
+  const argv = process.argv.slice(2);
+  if (SPEC[argv[0]]) useBook(argv.shift());
+  const [cmd, ...rest] = argv;
   const force = rest.includes("--force");
   const ns = rest.filter((x) => x !== "--force").map(Number);
   const list = ns.length ? ns : UNITS.map((u) => u.unit);
-  // 목록 전체가 창세기 1:1–50:26을 빈틈없이 잇는지
+  // 목록 전체가 책 첫 절부터 끝 절까지 빈틈없이 잇는지
   const order = UNITS.map((u) => [pv(u.from), pv(u.to)]);
   const errs = [];
-  if (cmp(order[0][0], [1, 1]) || cmp(order.at(-1)[1], [50, 26])) errs.push("단원 목록이 1:1–50:26이 아님");
+  const nCh = BOOKS[BOOK].chapters, end = [nCh, +chapterVerses(BOOK, nCh).at(-1).ref.split(":")[1]];
+  if (cmp(order[0][0], [1, 1]) || cmp(order.at(-1)[1], end)) errs.push(`단원 목록이 1:1–${end.join(":")}이 아님`);
   for (let i = 1; i < order.length; i++) {
-    const [c, v] = order[i - 1][1]; const last = +chapterVerses("genesis", c).at(-1).ref.split(":")[1];
+    const [c, v] = order[i - 1][1]; const last = +chapterVerses(BOOK, c).at(-1).ref.split(":")[1];
     const next = v === last ? [c + 1, 1] : [c, v + 1];
     if (cmp(order[i][0], next)) errs.push(`단원 ${i}와 ${i + 1} 사이 빈틈·겹침`);
   }

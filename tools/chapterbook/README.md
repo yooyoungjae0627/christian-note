@@ -18,7 +18,7 @@
 7. `node tools/chapterbook/check.mjs <책> <장>` — **종료 코드 0**이 될 때까지 고친다.
 8. 빌드·시각 검수는 총괄 세션이 한다(`build.mjs`, `render.mjs`).
 
-창세기는 장별 원고를 이야기 단원별 책으로 묶는다(지침 §0-1): 단원 목록 `Genesis/원본/단원/units.json`, 단원 원고 `unitNN.json`(제목·표지·표어·학습 자료). `node tools/chapterbook/units.mjs make|check [N …]` → `build.mjs genesis unit N …` → `verify.mjs genesis unit N …`. 장별 원고는 계속 `check.mjs genesis all`로 검사한다.
+창세기·사무엘상·사무엘하는 장별 원고를 이야기 단원별 책으로 묶는다(지침 §0-1, §0-2 — 사무엘은 권별로 따로: `Samuel/원본/단원/units-1sam.json`·`units-2sam.json`, 원고 `1sam-unitNN.json`·`2sam-unitNN.json`, 명령에 책 이름을 붙여 `units.mjs 1sam check`, `build.mjs 1sam unit N`). 창세기는: 단원 목록 `Genesis/원본/단원/units.json`, 단원 원고 `unitNN.json`(제목·표지·표어·학습 자료). `node tools/chapterbook/units.mjs make|check [N …]` → `build.mjs genesis unit N …` → `verify.mjs genesis unit N …`. 장별 원고는 계속 `check.mjs genesis all`로 검사한다.
 
 책 이름: `genesis`, `1sam`, `2sam`. 원고 위치: `Genesis/원본/2판/chapterNN.json`, `Samuel/원본/2판/1sam-NN.json`, `Samuel/원본/2판/2sam-NN.json`.
 

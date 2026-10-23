@@ -1,7 +1,7 @@
 // 장별 해설서 2판 빌드 — 원고(JSON) → HTML → Edge 인쇄 → 차례 쪽수 맞춤 → mupdf 책갈피 → 고정 배치 EPUB.
 //   node tools/chapterbook/build.mjs genesis 12 [13 …]     장별 책
 //   node tools/chapterbook/build.mjs genesis all             합본(장별 원고를 그대로 묶음)
-//   node tools/chapterbook/build.mjs genesis unit 1 [2 …]    창세기 이야기 단원별 책(지침 §0-1)
+//   node tools/chapterbook/build.mjs genesis|1sam|2sam unit 1 [2 …]    이야기 단원별 책(지침 §0-1, §0-2)
 //   --out <폴더>  결과를 다른 폴더에(샘플용). 기본은 Genesis/ 또는 Samuel/
 // Edge 인쇄는 Claude Code 샌드박스 밖에서 실행한다(README 빌드 환경 메모).
 import fs from "node:fs";
@@ -99,7 +99,8 @@ fs.mkdirSync(outDir, { recursive: true });
 const results = [];
 if (rest[0] === "unit") {
   // 단원 책: 표지 → 읽는 법 → 차례 → 장마다 [장 머리·인물·지도·단락] → 단원 학습 자료 → 참고 자료
-  const { loadUnit, unitOut, label, check } = await import("./units.mjs");
+  const { loadUnit, unitOut, label, check, useBook } = await import("./units.mjs");
+  useBook(book);
   const failed = [];
   for (const n of rest.slice(1).map(Number)) {
    try {
