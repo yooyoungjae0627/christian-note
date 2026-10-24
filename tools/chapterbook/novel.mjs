@@ -19,6 +19,9 @@ function verses(r) {
   return [...Array(z - a + 1)].map((_, i) => [c, a + i]);
 }
 const flat = (s) => s.replace(/\s+/g, " ");
+// 문장 자르기. 셸에서 고치다 백슬래시가 빠져 검사가 몰래 꺼진 일이 두 번 있었으므로(2026-10-24) 불러올 때 스스로 확인한다
+const SENT = /(?<=[.!?…])\s+/;
+if ("가다. 나다! 다다?".split(SENT).length !== 3) throw new Error("novel.mjs: 문장 자르기 정규식이 깨짐(\\s 누락?)");
 
 export function checkNovel(book, n) {
   useBook(book);
@@ -43,7 +46,7 @@ export function checkNovel(book, n) {
       for (const [c, x] of vs) { const k = `${c}:${x}`; if (!text[k]) E.push(`${at} 근거 ${k}가 단원 밖`); else { used.add(k); src += " " + text[k]; } }
     }
     // 대사는 뜻은 그대로 요즘 말투로(§2-4, 2026-10-24) — 근거 절에 인물의 말이 있을 때만 따옴표, 옛 말투는 대사·서술 모두 금지
-    if (/“/.test(p.t) && !/[“”‘’]|말하|말씀|노래|애가|애도|이르|대답|외치|물어|물었|부르|명령|맹세|축복|저주|기도/.test(src)) E.push(`${at} 따옴표 대사가 있는데 근거 절에 인물의 말이 없음`);
+    if (/“/.test(p.t) && !/[“”‘’]|말하|말씀|노래|노랫|애가|애도|이르|대답|외치|물어|물었|부르|명령|맹세|축복|저주|기도/.test(src)) E.push(`${at} 따옴표 대사가 있는데 근거 절에 인물의 말이 없음`);
     const old = p.t.match(/[가-힣]*(하리라|하노라|느니라|이니라|하였더라|하더라|였더라|었더라|았더라|리로다|도다|할지니라|할지어다|하시니라|하라 하|소서|나이다|옵니다|하옵|하였느니라)(?=[\s.,!?”’]|$)/g);
     if (old) E.push(`${at} 옛 말투: ${[...new Set(old)].slice(0, 5).join(", ")}`);
     if ((p.t.match(/“/g) || []).length !== (p.t.match(/”/g) || []).length) E.push(at + " 따옴표 짝이 안 맞음");
@@ -60,7 +63,7 @@ export function checkNovel(book, n) {
   // 문장 생김새(§2-4, 2026-10-24): 끝 두 글자가 같은 서술 문장을 세 번 잇지 않고, '~ㅆ다'(과거형) 서술 문장을 다섯 번 넘게 잇지 않으며, '했다'로 끝나는 문장은 30% 이하
   let narr = 0, haetda = 0;
   d.paras.forEach((p, i) => {
-    const sents = String(p.t || "").replace(/“[^”]*”/g, (q) => q.replace(/[.!?]/g, "")).split(/(?<=[.!?…])s+/).map((x) => x.trim()).filter(Boolean);
+    const sents = String(p.t || "").replace(/“[^”]*”/g, (q) => q.replace(/[.!?]/g, "")).split(SENT).map((x) => x.trim()).filter(Boolean);
     let last = null, run = 0, past = 0;
     for (const x of sents) {
       if (/[”’]$/.test(x) || /^[“‘]/.test(x)) { last = null; run = 0; past = 0; continue; }
