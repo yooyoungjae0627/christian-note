@@ -30,6 +30,7 @@
 | 주간 성경 구절 테스트 카드 | cards | `docs/policy/성경구절_테스트카드_제작정책.md` | — | `cards/*.html` |
 | 창세기 교재(이야기 단원별) | **Genesis** | `docs/policy/장별해설서_제작지침.md` (2판 §0-1, + `성경해석_지침.md`) | `Genesis/원본/2판/`(장별 원고) · `Genesis/원본/단원/`(단원 원고) | `Genesis/창세기_NN_<단원 제목>.pdf·.epub` (30단원: 천지창조 → … → 요셉의 용서) |
 | 사무엘상·하 교재(이야기 단원별, 권별로 따로) | **Samuel** | `docs/policy/장별해설서_제작지침.md` (2판 §0-2, + `성경해석_지침.md`) | `Samuel/원본/2판/`(장별 원고) · `Samuel/원본/단원/`(단원 원고) | `Samuel/사무엘상_NN_<단원 제목>`(24단원)·`사무엘하_NN_<단원 제목>`(22단원) PDF·EPUB |
+| 열왕기상·하 교재(이야기 단원별, 권별로 따로) | **Kings** | `docs/policy/장별해설서_제작지침.md` (2판 §0-3, + `성경해석_지침.md`) | `Kings/원본/2판/`(장별 원고) · `Kings/원본/단원/`(단원 원고) | `Kings/열왕기상_NN_<단원 제목>`·`열왕기하_NN_<단원 제목>` PDF·EPUB (단원 목록 `Kings/README.md`) |
 | 사무엘상·하 강의 스크립트(교재 자료) | Samuel | `docs/policy/다윗의삶_강의스크립트_자료정책.md` | `Samuel/강의스크립트/` | (자료 보관 — 「다윗의 삶」 59편 전체 스크립트·시각 링크, 목록 `Samuel/README.md`) |
 | **성경 해석 질문**(구절 뜻·교리·인물·사건 해석) | 해석 | `docs/policy/성경해석_지침.md` — 1순위 첫열매들 영상, 2순위 세대주의 해설(스코필드·무디·라킨·럭크만, 출처 필수), 3순위 이이레 목사 강의 | `memory-bank/첫열매들_강의스크립트/` | (자료 보관 — 첫열매들 재생목록 4개 전체 스크립트·시각 링크, 목록 `memory-bank/README.md`) |
 
@@ -61,6 +62,7 @@ David/   POLICY.md, 원본/(원고·도구), 완성본 PDF·EPUB
 Milk/    POLICY.md, 완성본 PDF·EPUB
 Theme/   POLICY.md, 원본/(이야기별 원고·그림·도구), 완성본 PDF·EPUB
 Samuel/  README.md(강의 목록·근거 색인), 강의스크립트/(「다윗의 삶」 59편 스크립트 md), 원본/(장별 원고 2판/, 단원 원고 단원/), 완성본 PDF·EPUB
+Kings/   README.md(단원 목록·근거 비율), POLICY.md, 원본/(장별 원고 2판/, 단원 원고 단원/), 완성본 PDF·EPUB
 memory-bank/  README.md(목록), 첫열매들_강의스크립트/(재생목록 4개 전체 스크립트 md — 성경 해석 1순위 근거)
 cards/   주간 구절 테스트 카드 HTML
 source_text/  밀크 교재 PDF에서 뽑은 글자(검색용)

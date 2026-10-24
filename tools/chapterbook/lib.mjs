@@ -15,6 +15,8 @@ export const BOOKS = {
   genesis: { ko: "창세기", en: "GENESIS", chapters: 50, dir: "Genesis", src: "Genesis/원본/2판", verses: "Genesis/원본/2판/verses-genesis.json", json: (n) => `chapter${String(n).padStart(2, "0")}.json`, out: (n) => `창세기_${String(n).padStart(2, "0")}장_교재`, all: "창세기_합본_교재", scofield: "genesis" },
   "1sam": { ko: "사무엘상", en: "1 SAMUEL", chapters: 31, dir: "Samuel", src: "Samuel/원본/2판", verses: "Samuel/원본/2판/verses-1sam.json", json: (n) => `1sam-${String(n).padStart(2, "0")}.json`, out: (n) => `사무엘상_${String(n).padStart(2, "0")}장_교재`, all: "사무엘상_합본_교재", scofield: "1-samuel" },
   "2sam": { ko: "사무엘하", en: "2 SAMUEL", chapters: 24, dir: "Samuel", src: "Samuel/원본/2판", verses: "Samuel/원본/2판/verses-2sam.json", json: (n) => `2sam-${String(n).padStart(2, "0")}.json`, out: (n) => `사무엘하_${String(n).padStart(2, "0")}장_교재`, all: "사무엘하_합본_교재", scofield: "2-samuel" },
+  "1ki": { ko: "열왕기상", en: "1 KINGS", chapters: 22, dir: "Kings", src: "Kings/원본/2판", verses: "Kings/원본/2판/verses-1ki.json", json: (n) => `1ki-${String(n).padStart(2, "0")}.json`, out: (n) => `열왕기상_${String(n).padStart(2, "0")}장_교재`, all: "열왕기상_합본_교재", scofield: "1-kings" },
+  "2ki": { ko: "열왕기하", en: "2 KINGS", chapters: 25, dir: "Kings", src: "Kings/원본/2판", verses: "Kings/원본/2판/verses-2ki.json", json: (n) => `2ki-${String(n).padStart(2, "0")}.json`, out: (n) => `열왕기하_${String(n).padStart(2, "0")}장_교재`, all: "열왕기하_합본_교재", scofield: "2-kings" },
 };
 
 // 외부 모듈은 저장소 밖 %TEMP%/topicbook/node_modules에서 읽는다(README 빌드 환경 메모)

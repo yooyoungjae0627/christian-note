@@ -20,7 +20,9 @@
 
 창세기·사무엘상·사무엘하는 장별 원고를 이야기 단원별 책으로 묶는다(지침 §0-1, §0-2 — 사무엘은 권별로 따로: `Samuel/원본/단원/units-1sam.json`·`units-2sam.json`, 원고 `1sam-unitNN.json`·`2sam-unitNN.json`, 명령에 책 이름을 붙여 `units.mjs 1sam check`, `build.mjs 1sam unit N`). 창세기는: 단원 목록 `Genesis/원본/단원/units.json`, 단원 원고 `unitNN.json`(제목·표지·표어·학습 자료). `node tools/chapterbook/units.mjs make|check [N …]` → `build.mjs genesis unit N …` → `verify.mjs genesis unit N …`. 장별 원고는 계속 `check.mjs genesis all`로 검사한다.
 
-책 이름: `genesis`, `1sam`, `2sam`. 원고 위치: `Genesis/원본/2판/chapterNN.json`, `Samuel/원본/2판/1sam-NN.json`, `Samuel/원본/2판/2sam-NN.json`.
+책 이름: `genesis`, `1sam`, `2sam`, `1ki`, `2ki`. 원고 위치: `Genesis/원본/2판/chapterNN.json`, `Samuel/원본/2판/1sam-NN.json`, `Samuel/원본/2판/2sam-NN.json`, `Kings/원본/2판/1ki-NN.json`, `Kings/원본/2판/2ki-NN.json`.
+
+열왕기상·하(지침 §0-3)도 사무엘과 같다: 단원 목록 `Kings/원본/단원/units-1ki.json`·`units-2ki.json`, 단원 원고 `1ki-unitNN.json`·`2ki-unitNN.json`, `units.mjs 1ki check`, `build.mjs 1ki unit N`. 해설 id는 열왕기상 `kNN-번호`, 열왕기하 `mNN-번호`. 본문·현대 영어·스코필드는 `fetch_verses.mjs`·`fetch_web.mjs`·`fetch_scofield.mjs`로 받았다(이미 있는 책은 건너뜀).
 
 ## 2. 원고 형식
 

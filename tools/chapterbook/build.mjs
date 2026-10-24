@@ -1,8 +1,8 @@
 // 장별 해설서 2판 빌드 — 원고(JSON) → HTML → Edge 인쇄 → 차례 쪽수 맞춤 → mupdf 책갈피 → 고정 배치 EPUB.
 //   node tools/chapterbook/build.mjs genesis 12 [13 …]     장별 책
 //   node tools/chapterbook/build.mjs genesis all             합본(장별 원고를 그대로 묶음)
-//   node tools/chapterbook/build.mjs genesis|1sam|2sam unit 1 [2 …]    이야기 단원별 책(지침 §0-1, §0-2)
-//   --out <폴더>  결과를 다른 폴더에(샘플용). 기본은 Genesis/ 또는 Samuel/
+//   node tools/chapterbook/build.mjs genesis|1sam|2sam|1ki|2ki unit 1 [2 …]    이야기 단원별 책(지침 §0-1, §0-2, §0-3)
+//   --out <폴더>  결과를 다른 폴더에(샘플용). 기본은 Genesis/, Samuel/ 또는 Kings/
 // Edge 인쇄는 Claude Code 샌드박스 밖에서 실행한다(README 빌드 환경 메모).
 import fs from "node:fs";
 import path from "node:path";
@@ -16,7 +16,7 @@ const args = process.argv.slice(2);
 const oi = args.indexOf("--out"); const OUTDIR = oi >= 0 ? path.resolve(args.splice(oi, 2)[1]) : null;
 const [book, ...rest] = args;
 const B = BOOKS[book];
-if (!B) { console.error("사용법: build.mjs genesis|1sam|2sam <장…|all>"); process.exit(2); }
+if (!B) { console.error("사용법: build.mjs genesis|1sam|2sam|1ki|2ki <장…|all|unit N…>"); process.exit(2); }
 const mupdf = await mod("mupdf");
 const QR = await mod("qrcode");
 const marker = (k) => `<span class="marker">@@${k}@@</span>`;
@@ -141,7 +141,7 @@ if (rest[0] === "unit") {
   // 합본: all [시작-끝 권번호]  예) all 1-13 1  → 창세기_합본_1-1권(01-13장)
   const [r0, r1] = (rest[1] || `1-${B.chapters}`).split("-").map(Number); const vol = rest[2];
   const chs = [...Array(r1 - r0 + 1)].map((_, i) => r0 + i);
-  const bookNo = { genesis: 1, "1sam": 2, "2sam": 3 }[book];
+  const bookNo = { genesis: 1, "1sam": 2, "2sam": 3, "1ki": 4, "2ki": 5 }[book];
   const pad = (n) => String(n).padStart(2, "0");
   const allName = vol ? `${B.ko}_합본_${bookNo}-${vol}권(${pad(r0)}-${pad(r1)}장)` : B.all;
   const ds = chs.map((c) => loadChapter(book, c));

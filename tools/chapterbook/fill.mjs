@@ -5,7 +5,7 @@ import fs from "node:fs";
 import { BOOKS, chapterFile, transcript } from "./lib.mjs";
 
 const [book, ...chs] = process.argv.slice(2);
-if (!BOOKS[book]) { console.error("사용법: fill.mjs genesis|1sam|2sam <장…>"); process.exit(2); }
+if (!BOOKS[book]) { console.error("사용법: fill.mjs genesis|1sam|2sam|1ki|2ki <장…>"); process.exit(2); }
 let bad = 0;
 for (const ch of chs.map(Number)) {
   const f = chapterFile(book, ch);

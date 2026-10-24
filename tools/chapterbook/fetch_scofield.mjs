@@ -3,7 +3,7 @@
 //   node tools/chapterbook/fetch_scofield.mjs  → memory-bank/세대주의_해설/scofield/<book>-NN.md
 import fs from "fs";
 const OUT = "memory-bank/세대주의_해설/scofield";
-const BOOKS = [["genesis", "창세기", "Genesis", 50], ["1-samuel", "사무엘상", "1 Samuel", 31], ["2-samuel", "사무엘하", "2 Samuel", 24]];
+const BOOKS = [["genesis", "창세기", "Genesis", 50], ["1-samuel", "사무엘상", "1 Samuel", 31], ["2-samuel", "사무엘하", "2 Samuel", 24], ["1-kings", "열왕기상", "1 Kings", 22], ["2-kings", "열왕기하", "2 Kings", 25]];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const ent = (s) => s.replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;|&#x27;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&mdash;/g, "—").replace(/&ndash;/g, "–");
 fs.mkdirSync(OUT, { recursive: true });

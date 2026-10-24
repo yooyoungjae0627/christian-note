@@ -1,7 +1,7 @@
-// 이야기 단원별 책(지침 §0-1 창세기, §0-2 사무엘상·하, 2026-10-23) — 단원 목록과 장별 원고로 단원 원고를 만들고 검사한다.
-//   node tools/chapterbook/units.mjs [genesis|1sam|2sam] make [N …] [--force]   단원 원고 만들기(있으면 건너뜀). 책을 빼면 genesis
-//   node tools/chapterbook/units.mjs [genesis|1sam|2sam] check [N …]            단원 원고 검사 — 종료 코드 0이어야 빌드
-//   단원 목록: Genesis/원본/단원/units.json(unitNN.json) · Samuel/원본/단원/units-1sam.json(1sam-unitNN.json) · units-2sam.json
+// 이야기 단원별 책(지침 §0-1 창세기, §0-2 사무엘상·하, §0-3 열왕기상·하, 2026-10-23) — 단원 목록과 장별 원고로 단원 원고를 만들고 검사한다.
+//   node tools/chapterbook/units.mjs [genesis|1sam|2sam|1ki|2ki] make [N …] [--force]   단원 원고 만들기(있으면 건너뜀). 책을 빼면 genesis
+//   node tools/chapterbook/units.mjs [genesis|1sam|2sam|1ki|2ki] check [N …]            단원 원고 검사 — 종료 코드 0이어야 빌드
+//   단원 목록: Genesis/원본/단원/units.json(unitNN.json) · Samuel/원본/단원/units-1sam.json(1sam-unitNN.json) · units-2sam.json · Kings/원본/단원/units-1ki.json(1ki-unitNN.json) · units-2ki.json
 // 해설·칠판·인물·지도는 장별 원고를 그대로 쓰고, 단원 원고에는 제목·표지·표어·학습 자료만 둔다.
 import fs from "node:fs";
 import path from "node:path";
@@ -14,6 +14,8 @@ const SPEC = {
   genesis: { dir: "Genesis/원본/단원", list: "units.json", file: (n) => `unit${n}.json` },
   "1sam": { dir: "Samuel/원본/단원", list: "units-1sam.json", file: (n) => `1sam-unit${n}.json` },
   "2sam": { dir: "Samuel/원본/단원", list: "units-2sam.json", file: (n) => `2sam-unit${n}.json` },
+  "1ki": { dir: "Kings/원본/단원", list: "units-1ki.json", file: (n) => `1ki-unit${n}.json` },
+  "2ki": { dir: "Kings/원본/단원", list: "units-2ki.json", file: (n) => `2ki-unit${n}.json` },
 };
 let BOOK = "genesis";
 export let UNITS;

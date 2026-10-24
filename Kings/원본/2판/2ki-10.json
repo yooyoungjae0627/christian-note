@@ -1,0 +1,1318 @@
+{
+ "chapter": 10,
+ "subtitle": "예후의 숙청 — 바알은 멸했으나 금송아지는 남기다",
+ "motto": "주의 말씀이 전혀 땅에 떨어지지 않으리라",
+ "motto_comment": "m10-1",
+ "cover": [
+  {
+   "m": "sword",
+   "x": 112,
+   "y": 292,
+   "s": 1
+  },
+  {
+   "m": "altar",
+   "x": 230,
+   "y": 290,
+   "s": 0.85
+  },
+  {
+   "m": "glow",
+   "x": 170,
+   "y": 118,
+   "s": 0.8
+  }
+ ],
+ "people": [
+  {
+   "id": "elijah",
+   "name": "엘리야",
+   "en": "Elijah",
+   "gen": 0,
+   "desc": "주의 종입니다. 주께서 엘리야를 통하여 아합의 집에 관하여 하신 말씀이 이 장에서 이루어졌습니다.",
+   "refs": [
+    "10:10",
+    "10:17"
+   ]
+  },
+  {
+   "id": "ahab",
+   "name": "아합",
+   "en": "Ahab",
+   "gen": 0,
+   "desc": "사마리아에 칠십 명의 아들이 있던 이스라엘의 왕입니다. 예후는 아합이 바알을 조금 섬겼다고 말했습니다.",
+   "refs": [
+    "10:1",
+    "10:18"
+   ]
+  },
+  {
+   "id": "rechab",
+   "name": "레캅",
+   "en": "Rechab",
+   "gen": 0,
+   "desc": "여호나답의 아버지입니다.",
+   "refs": [
+    "10:15"
+   ]
+  },
+  {
+   "id": "sons",
+   "name": "아합의 아들들",
+   "en": "Ahab's sons",
+   "gen": 1,
+   "desc": "도시의 위대한 사람들 곁에서 자란 왕의 아들 칠십 명입니다. 그들을 기른 자들이 예후의 편지를 받고 그들을 살해하여 머리를 이즈르엘로 보냈습니다.",
+   "refs": [
+    "10:6",
+    "10:7"
+   ]
+  },
+  {
+   "id": "jehu",
+   "name": "예후",
+   "en": "Jehu",
+   "gen": 1,
+   "desc": "아합의 집에 남은 자를 모두 살해하고 이스라엘에서 바알을 멸한 이스라엘의 왕입니다. 그러나 벧엘과 단의 금송아지들은 떠나지 않았고, 사마리아에서 이십팔 년 동안 통치했습니다.",
+   "refs": [
+    "10:28",
+    "10:29",
+    "10:36"
+   ]
+  },
+  {
+   "id": "jehonadab",
+   "name": "여호나답",
+   "en": "Jehonadab",
+   "gen": 1,
+   "desc": "레캅의 아들입니다. 예후에게 손을 내밀어 그의 병거에 올랐고, 예후와 함께 바알의 집에 들어갔습니다.",
+   "refs": [
+    "10:15",
+    "10:23"
+   ]
+  },
+  {
+   "id": "brethren",
+   "name": "아하지야의 형제들",
+   "en": "brethren of Ahaziah",
+   "gen": 2,
+   "desc": "유다 왕 아하지야의 형제들입니다. 왕의 자식들에게 문안하러 내려가다가 털 깎는 집의 구렁에서 사십이 명이 살해되었습니다.",
+   "refs": [
+    "10:13",
+    "10:14"
+   ]
+  },
+  {
+   "id": "jehoahaz",
+   "name": "여호아하즈",
+   "en": "Jehoahaz",
+   "gen": 2,
+   "desc": "예후의 아들로, 예후를 대신하여 통치했습니다.",
+   "refs": [
+    "10:35"
+   ]
+  },
+  {
+   "id": "hazael",
+   "name": "하자엘",
+   "en": "Hazael",
+   "role": "enemy",
+   "gen": 2,
+   "desc": "이스라엘의 모든 변방에서 이스라엘을 친 자입니다. 그 당시에 주께서 이스라엘을 감축하시기 시작하셨습니다.",
+   "refs": [
+    "10:32"
+   ]
+  }
+ ],
+ "relations": [
+  {
+   "from": "elijah",
+   "to": "ahab",
+   "type": "other",
+   "label": "심판의 말씀",
+   "ref": "10:10"
+  },
+  {
+   "from": "ahab",
+   "to": "sons",
+   "type": "parent",
+   "label": "칠십 아들",
+   "ref": "10:1"
+  },
+  {
+   "from": "rechab",
+   "to": "jehonadab",
+   "type": "parent",
+   "label": "아들",
+   "ref": "10:15"
+  },
+  {
+   "from": "jehu",
+   "to": "sons",
+   "type": "enemy",
+   "label": "머리를 요구",
+   "ref": "10:6"
+  },
+  {
+   "from": "jehu",
+   "to": "jehonadab",
+   "type": "other",
+   "label": "병거에 태움",
+   "ref": "10:15"
+  },
+  {
+   "from": "jehu",
+   "to": "brethren",
+   "type": "enemy",
+   "label": "살해",
+   "ref": "10:14"
+  },
+  {
+   "from": "jehu",
+   "to": "jehoahaz",
+   "type": "parent",
+   "label": "아들",
+   "ref": "10:35"
+  },
+  {
+   "from": "hazael",
+   "to": "jehu",
+   "type": "enemy",
+   "label": "이스라엘을 침",
+   "ref": "10:32"
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "jezreel",
+    "name": "이즈르엘",
+    "ref": "10:1"
+   },
+   {
+    "key": "samaria",
+    "name": "사마리아",
+    "at": [
+     35.19,
+     32.28
+    ],
+    "ref": "10:1"
+   },
+   {
+    "key": "bethel",
+    "ref": "10:29"
+   },
+   {
+    "key": "dan",
+    "ref": "10:29"
+   },
+   {
+    "key": "gilead-land",
+    "name": "길르앗",
+    "at": [
+     35.75,
+     32.2
+    ],
+    "area": true,
+    "ref": "10:33"
+   },
+   {
+    "key": "bashan",
+    "name": "바샨",
+    "at": [
+     36.1,
+     32.85
+    ],
+    "area": true,
+    "ref": "10:33"
+   },
+   {
+    "key": "aroer",
+    "name": "아로엘",
+    "at": [
+     35.85,
+     31.47
+    ],
+    "ref": "10:33"
+   }
+  ],
+  "routes": [
+   {
+    "path": [
+     "jezreel",
+     "samaria"
+    ],
+    "ref": "10:12"
+   }
+  ],
+  "minSpan": 0.6,
+  "unknown": [
+   {
+    "name": "털 깎는 집",
+    "ref": "10:12",
+    "note": "예후가 사마리아로 가는 길에 머문 곳"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "10:1-11",
+   "title": "아합의 칠십 아들과 땅에 떨어지지 않은 말씀",
+   "marks": [
+    {
+     "v": "10:6",
+     "t": "p",
+     "ko": "너희 주인의 아들들인 그 남자들의 머리를 취하여",
+     "en": "take ye the heads of the men your master's sons"
+    },
+    {
+     "v": "10:10",
+     "t": "y",
+     "ko": "주의 말씀이 전혀 땅에 떨어지지 않으리라",
+     "en": "there shall fall unto the earth nothing of the word of the LORD"
+    },
+    {
+     "v": "10:10",
+     "t": "u",
+     "ko": "주께서 친히 그분의 종 엘리야를 통하여 말씀하신 것을 이루셨기 때문이라",
+     "en": "the LORD hath done that which he spake by his servant Elijah"
+    },
+    {
+     "v": "10:11",
+     "t": "p",
+     "ko": "그에게 남아 있는 자를 아무도 없게 할 때까지",
+     "en": "until he left him none remaining"
+    }
+   ],
+   "english": [
+    {
+     "ref": "10:4",
+     "phrase": "two kings stood not before him: how then shall we stand?",
+     "grammar": "옛 부정문(동사 + not)",
+     "text": "stood not은 오늘날의 did not stand입니다. KJV는 조동사 do 없이 동사 뒤에 not을 붙여 부정합니다. how then shall we stand?는 ‘그렇다면 우리가 어떻게 서겠느냐’는 수사 의문문입니다."
+    },
+    {
+     "ref": "10:10",
+     "phrase": "there shall fall unto the earth nothing of the word of the LORD",
+     "grammar": "There 구문 + 뒤로 간 주어 nothing",
+     "text": "주어 nothing이 문장 뒤로 가 있습니다. ‘주의 말씀 가운데 아무것도 땅에 떨어지지 않으리라’는 뜻으로, 말씀이 하나도 빠짐없이 이루어진다는 말입니다.",
+     "key": "m10-1"
+    }
+   ],
+   "vocab": [
+    {
+     "w": "letters",
+     "ko": "편지들",
+     "ref": "10:1"
+    },
+    {
+     "w": "armour",
+     "ko": "갑옷",
+     "ref": "10:2"
+    },
+    {
+     "w": "meetest",
+     "ko": "가장 온당한",
+     "ref": "10:3"
+    },
+    {
+     "w": "exceedingly",
+     "ko": "극도로",
+     "ref": "10:4"
+    },
+    {
+     "w": "baskets",
+     "ko": "바구니들",
+     "ref": "10:7"
+    },
+    {
+     "w": "heaps",
+     "ko": "무더기들",
+     "ref": "10:8"
+    },
+    {
+     "w": "conspired",
+     "ko": "모반하였다",
+     "ref": "10:9"
+    },
+    {
+     "w": "kinsfolks",
+     "ko": "육친들",
+     "ref": "10:11"
+    }
+   ],
+   "comments": [
+    {
+     "id": "m10-1",
+     "basis": "external",
+     "text": "스코필드는 1절 앞에 ‘아합의 집에 대한 심판’이라는 소제목을 붙입니다. 그리고 7절에서 왕의 아들 칠십 명이 살해된 일에 열왕기상 21:21을 관주로 답니다. 그 절에서 주께서는 “보라, 내가 너의 위에 해악을 가져오겠고, 너의 후대를 제거하겠으며, 벽에 오줌 누는 자와 이스라엘 안에 갇히고 남겨진 자를 아합으로부터 끊어 버리겠노라.”고 말씀하셨습니다. 예후도 10절에서 “주의 말씀이 전혀 땅에 떨어지지 않으리라”고 말하며, 주께서 엘리야를 통하여 하신 말씀을 이루셨다고 선언합니다.",
+     "spans": [
+      {
+       "text": "아합의 집에 대한 심판",
+       "level": 2
+      },
+      {
+       "text": "“주의 말씀이 전혀 땅에 떨어지지 않으리라”",
+       "level": 3
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기하 10장 소제목·관주",
+       "where": "2 Ki. 10:1 소제목, 10:7 관주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Judgment on the house of Ahab.\n…\nh 1 Ki.21.21.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    },
+    {
+     "id": "m10-2",
+     "basis": "external",
+     "text": "1절과 5절에는 아합의 자식들을 ‘기른 자들’, ‘양육자들’이 나옵니다. 스코필드는 1절의 이 말이 히브리어로 ‘양육하는 자들(nourishers)’이라는 뜻이라고 주석합니다. 왕의 아들 칠십 명은 그들을 기른 도시의 위대한 사람들 곁에 있었고(6절), 바로 그 사람들이 예후의 두 번째 편지를 받고 그들을 살해했습니다(7절).",
+     "spans": [
+      {
+       "text": "양육하는 자들(nourishers)",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기하 10:1 주석",
+       "where": "2 Ki. 10:1 난외주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Heb. nourishers.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "10:12-14",
+   "title": "털 깎는 집의 구렁 — 아하지야의 형제 사십이 명",
+   "marks": [
+    {
+     "v": "10:13",
+     "t": "u",
+     "ko": "우리는 아하지야의 형제들이라",
+     "en": "We are the brethren of Ahaziah"
+    },
+    {
+     "v": "10:14",
+     "t": "p",
+     "ko": "털 깎는 집의 구렁에서 그들을 살해하였으니",
+     "en": "slew them at the pit of the shearing house"
+    }
+   ],
+   "english": [
+    {
+     "ref": "10:13",
+     "phrase": "Who are ye?",
+     "grammar": "옛 2인칭 복수 ye",
+     "text": "ye는 you의 옛 주격 복수형입니다. 여러 사람에게 ‘너희는 누구냐’고 묻는 말입니다."
+    },
+    {
+     "ref": "10:14",
+     "phrase": "Take them alive",
+     "grammar": "명령문 + 목적격 보어(형용사)",
+     "text": "alive는 them의 상태를 말하는 보어입니다. ‘그들을 산 채로 붙잡으라’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "shearing",
+     "ko": "털 깎기",
+     "ref": "10:12"
+    },
+    {
+     "w": "salute",
+     "ko": "문안하다",
+     "ref": "10:13"
+    },
+    {
+     "w": "alive",
+     "ko": "산 채로",
+     "ref": "10:14"
+    },
+    {
+     "w": "pit",
+     "ko": "구렁",
+     "ref": "10:14"
+    }
+   ],
+   "comments": [
+    {
+     "id": "m10-3",
+     "basis": "external",
+     "text": "스코필드는 13절 앞에 ‘유다의 왕자들이 살해됨’이라는 소제목을 붙이고, 역대기하 22:8을 함께 적어 둡니다. 역대기하 22:8은 이 일을 “예후가 아합의 집 위에 심판을 집행하는 와중에” 유다의 통치자들과 아하지야의 형제들의 아들들을 발견하여 살해한 일로 기록합니다.",
+     "spans": [
+      {
+       "text": "유다의 왕자들이 살해됨",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기하 10장 소제목",
+       "where": "2 Ki. 10:13 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "The princes of Judah slain (2 Chr. 22.8).",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "10:15-17",
+   "title": "여호나답을 병거에 태우다 — 주를 위한 나의 열심",
+   "marks": [
+    {
+     "v": "10:15",
+     "t": "u",
+     "ko": "나의 마음이 너의 마음을 향해 올바른 것같이 너의 마음도 올바르냐?",
+     "en": "Is thine heart right, as my heart is with thy heart?"
+    },
+    {
+     "v": "10:16",
+     "t": "u",
+     "ko": "주를 위한 나의 열심을 보라",
+     "en": "see my zeal for the LORD"
+    },
+    {
+     "v": "10:17",
+     "t": "y",
+     "ko": "그분께서 엘리야에게 말씀하신 주의 말씀대로",
+     "en": "according to the saying of the LORD, which he spake to Elijah"
+    }
+   ],
+   "english": [
+    {
+     "ref": "10:15",
+     "phrase": "Is thine heart right, as my heart is with thy heart?",
+     "grammar": "옛 2인칭 소유격 thine · thy",
+     "text": "thine과 thy는 둘 다 ‘너의’입니다. 모음이나 h로 시작하는 낱말 앞에서는 thine을 쓰기도 합니다. ‘내 마음이 네 마음과 함께하듯 네 마음도 올바르냐’는 물음입니다."
+    },
+    {
+     "ref": "10:16",
+     "phrase": "see my zeal for the LORD",
+     "grammar": "명령문",
+     "text": "zeal은 ‘열심, 열정’입니다. 예후가 여호나답에게 자기의 열심을 와서 보라고 권하는 말입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "lighted",
+     "ko": "우연히 만났다(lighted on)",
+     "ref": "10:15"
+    },
+    {
+     "w": "saluted",
+     "ko": "문안하였다",
+     "ref": "10:15"
+    },
+    {
+     "w": "chariot",
+     "ko": "병거",
+     "ref": "10:15"
+    },
+    {
+     "w": "zeal",
+     "ko": "열심",
+     "ref": "10:16"
+    },
+    {
+     "w": "destroyed",
+     "ko": "멸하였다",
+     "ref": "10:17"
+    }
+   ],
+   "comments": [
+    {
+     "id": "m10-4",
+     "basis": "external",
+     "text": "스코필드는 15절 앞에 ‘예후가 여호나답을 살려 둠’이라는 소제목을 붙입니다. 그리고 17절에서 예후가 사마리아에 남아 있던 아합의 사람들을 모두 살해한 일에도 7절과 같이 열왕기상 21:21을 관주로 답니다. 17절도 그 일이 ‘엘리야에게 말씀하신 주의 말씀대로’ 된 일이라고 말합니다.",
+     "spans": [
+      {
+       "text": "예후가 여호나답을 살려 둠",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기하 10장 소제목·관주",
+       "where": "2 Ki. 10:15 소제목, 10:17 관주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Jehu spares Jehonadab.\n…\nc 1 Ki.21.21.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "10:18-27",
+   "title": "바알에게 바칠 성대한 희생 제물 — 교묘한 함정",
+   "marks": [
+    {
+     "v": "10:18",
+     "t": "p",
+     "ko": "아합은 바알을 조금 섬겼도다. 그러나 예후는 그를 많이 섬기리라.",
+     "en": "Ahab served Baal a little; but Jehu shall serve him much."
+    },
+    {
+     "v": "10:19",
+     "t": "u",
+     "ko": "예후는 자신이 바알의 경배자들을 멸하려는 의도를 가지고 그것을 교묘하게 행한 것이라",
+     "en": "Jehu did it in subtilty, to the intent that he might destroy the worshippers of Baal"
+    },
+    {
+     "v": "10:27",
+     "t": "p",
+     "ko": "그것을 변소로 만들었으니",
+     "en": "made it a draught house"
+    }
+   ],
+   "english": [
+    {
+     "ref": "10:19",
+     "phrase": "Jehu did it in subtilty",
+     "grammar": "전치사구 in + 명사(방법)",
+     "text": "subtilty는 subtlety의 옛 철자로 ‘교묘함’입니다. in subtilty는 ‘교묘하게’라는 부사 역할을 합니다.",
+     "key": "m10-5"
+    },
+    {
+     "ref": "10:19",
+     "phrase": "to the intent that he might destroy",
+     "grammar": "목적의 that절(might)",
+     "text": "to the intent that … might …는 ‘…하려는 의도로’입니다. 오늘날의 so that he could …와 비슷합니다."
+    },
+    {
+     "ref": "10:24",
+     "phrase": "his life shall be for the life of him",
+     "grammar": "shall(경고)",
+     "text": "‘그의 생명이 그 사람의 생명을 대신하리라’, 곧 놓친 사람 대신 죽게 된다는 경고입니다. shall이 말하는 사람의 강한 뜻을 나타냅니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "subtilty",
+     "ko": "교묘함",
+     "ref": "10:19"
+    },
+    {
+     "w": "worshippers",
+     "ko": "경배자들",
+     "ref": "10:19"
+    },
+    {
+     "w": "solemn",
+     "ko": "엄숙한",
+     "ref": "10:20"
+    },
+    {
+     "w": "vestry",
+     "ko": "의상실",
+     "ref": "10:22"
+    },
+    {
+     "w": "vestments",
+     "ko": "제복들",
+     "ref": "10:22"
+    },
+    {
+     "w": "images",
+     "ko": "형상들",
+     "ref": "10:26"
+    },
+    {
+     "w": "draught",
+     "ko": "변소(draught house)",
+     "ref": "10:27"
+    }
+   ],
+   "comments": [
+    {
+     "id": "m10-5",
+     "basis": "external",
+     "text": "스코필드는 19절 앞에 ‘예후가 이스라엘에서 바알 숭배를 뿌리 뽑음’이라는 소제목을 붙입니다. 예후는 바알에게 바칠 성대한 희생 제물이 있다며 바알의 예언자와 종과 제사장을 모두 불러 모았습니다. 그러나 본문은 그것이 바알의 경배자들을 멸하려는 의도로 교묘하게 행한 일이었다고 밝힙니다(19절).",
+     "spans": [
+      {
+       "text": "바알 숭배를 뿌리 뽑음",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기하 10장 소제목",
+       "where": "2 Ki. 10:19 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Jehu exterminates Baal worship in Israel.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    },
+    {
+     "id": "m10-6",
+     "basis": "external",
+     "text": "바알의 경배자들이 바알의 집을 한쪽 끝에서 다른 쪽 끝까지 가득 채웠습니다(21절). 스코필드는 이 ‘바알의 집’에 열왕기상 16:32를 관주로 답니다. 그 절은 아합에 대해 “그리고 그가 바알을 위하여 바알의 집 안에 한 제단을 건립하였으니, 그가 그 제단을 사마리아 안에다 쌓았더라.”고 기록합니다. 27절에서 그들은 이 바알의 집을 철거하였습니다.",
+     "spans": [
+      {
+       "text": "열왕기상 16:32",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기하 10:21 관주",
+       "where": "2 Ki. 10:21 관주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "e 1 Ki. 16.32.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    },
+    {
+     "id": "m10-7",
+     "basis": "external",
+     "text": "그들은 바알의 집을 철거하고 그것을 변소로 만들었습니다(27절). 스코필드는 이 대목에 에스라 6:11과 다니엘 2:5, 3:29를 관주로 답니다. 에스라 6:11은 칙령의 말을 변개하는 자에 대해 “그의 집이 이것으로 인하여 거름 더미가 되게 하라.”고 하고, 다니엘 2:5도 “너희 집들은 거름 더미로 만들어지리라.”고 말합니다.",
+     "spans": [
+      {
+       "text": "거름 더미가 되게 하라",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기하 10:27 관주",
+       "where": "2 Ki. 10:27 관주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "g Ezra 6.11; Dan.2.5; 3. 29.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "10:28-29",
+   "title": "바알은 멸했으나 금송아지는 남다",
+   "marks": [
+    {
+     "v": "10:28",
+     "t": "u",
+     "ko": "예후가 이스라엘에서 바알을 멸하였더라",
+     "en": "Jehu destroyed Baal out of Israel"
+    },
+    {
+     "v": "10:29",
+     "t": "p",
+     "ko": "벧엘에 있었고 단에 있었던 금송아지들을 떠나지 아니하였더라",
+     "en": "the golden calves that were in Bethel, and that were in Dan"
+    }
+   ],
+   "english": [
+    {
+     "ref": "10:29",
+     "phrase": "Jehu departed not from after them",
+     "grammar": "옛 부정문 + 전치사 겹침(from after)",
+     "text": "departed not은 did not depart입니다. from after them은 ‘그것들을 뒤따르는 데서’라는 뜻으로, 여로보암의 죄들을 계속 따랐다는 말입니다.",
+     "key": "m10-8"
+    },
+    {
+     "ref": "10:29",
+     "phrase": "to wit",
+     "grammar": "삽입구 to wit(곧, 즉)",
+     "text": "to wit은 ‘곧, 다시 말해’라는 옛 표현입니다. 앞에서 말한 ‘여로보암의 죄들’이 무엇인지 금송아지들로 밝혀 줍니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "Howbeit",
+     "ko": "하지만",
+     "ref": "10:29"
+    },
+    {
+     "w": "wit",
+     "ko": "곧(to wit)",
+     "ref": "10:29"
+    },
+    {
+     "w": "calves",
+     "ko": "송아지들",
+     "ref": "10:29"
+    }
+   ],
+   "comments": [
+    {
+     "id": "m10-8",
+     "basis": "linked",
+     "text": "예후는 이스라엘에서 바알을 멸하였지만, 벧엘과 단에 있던 금송아지들, 곧 이스라엘을 죄짓게 만든 여로보암의 죄들에서는 떠나지 않았습니다(28-29절). 강의 「우물의 의미②(사마리아 여인)」는 사마리아 여인의 이야기를 하면서, 남쪽에는 유다가 있었고 북이스라엘은 남쪽과 북쪽에 제사 지내는 곳들을 자기들끼리 따로 만들었다고 말합니다. 그 여인은 북이스라엘에 있는 그런 산당 같은 곳에서 ‘용서받을 수 있지 않을까?’ 하고 짐승을 죽이며 열심히 제사를 지냈습니다. 그러나 하나님께서는 그런 곳에서 짐승을 죽이는 것으로는 용서해 주지 않으셨고, 그때 예루살렘에 있던 성전, 곧 헤롯이 증축한 두 번째 성전에서 죽여야 용서를 받는다고 강의는 설명합니다.",
+     "spans": [
+      {
+       "text": "제사 지내는 곳들을 자기들끼리 따로 만들었다",
+       "level": 2
+      },
+      {
+       "text": "헤롯이 증축한 두 번째 성전에서 죽여야 용서를 받는다",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「우물의 의미②(사마리아 여인)」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/21_우물의_의미_사마리아_여인.md",
+       "time": "13:29",
+       "to": "14:31",
+       "excerpt": "용서받는 방법이 있다는 거에요 그래 가지고 이제 거기, 남쪽은 유다가 있고 북이스라엘은 남쪽이랑 북쪽에 이렇게 또 제사 지내는 곳들이 있었습니다 자기들끼리 또 만들었어요 거기서 짐승을 죽이면서 ‘용서받을 수 있지 않을까?’ 하고 매일 짐승을 죽이고 있었는데 뭐라고 그랬어요? 누군가 오더니 여기 보시면 이 여자가 자기의 의지력으로는 죄를 안 짓는 것은 이미 불가능하기 때문에 용서받는 것만이 유일한 희망인데 열심히 나름대로 북이스라엘에 있는 그 산당 같은데서 제사를 열심히 지냈는데 하나님이 여기서 짐승 죽이는 건 용서를 안 해주세요 예루살렘에 있는, 이때는 예루살렘에 있었던 두 번째 성전 있잖아요 헤롯이 증축한 그 성전이 있었잖아요 거기서 죽여야 짐승을 거기서 죽이면 용서를 받고 북쪽 이스라엘에서 남쪽이 있는 건데 이런데서 짐승 죽이는 건 용서를 못 받는다고 하니까 이 여자는 하늘이 무너져 내리는 거예요",
+       "url": "https://youtu.be/taPV90YgsUU?t=809"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "10:30-31",
+   "title": "사 대의 약속과 마음을 다하지 않은 예후",
+   "marks": [
+    {
+     "v": "10:30",
+     "t": "y",
+     "ko": "사 대에 속하는 너의 자식들이 이스라엘의 보좌 위에 앉으리라",
+     "en": "thy children of the fourth generation shall sit on the throne of Israel"
+    },
+    {
+     "v": "10:31",
+     "t": "p",
+     "ko": "그의 마음을 다하여 주의하지는 아니하였더라",
+     "en": "took no heed to walk in the law of the LORD God of Israel with all his heart"
+    }
+   ],
+   "english": [
+    {
+     "ref": "10:30",
+     "phrase": "Because thou hast done well in executing that which is right in mine eyes",
+     "grammar": "현재완료(hast done) + 동명사 executing",
+     "text": "thou hast done은 you have done의 옛 형태입니다. in executing은 ‘집행하는 일에 있어서’라는 뜻으로 무엇을 잘했는지 밝힙니다. mine eyes의 mine은 모음 앞에 쓰는 ‘나의’입니다."
+    },
+    {
+     "ref": "10:31",
+     "phrase": "took no heed to walk",
+     "grammar": "take heed to + 동사원형",
+     "text": "take heed는 ‘주의하다, 마음을 쓰다’입니다. no가 붙어 ‘…하려고 주의하지 않았다’가 됩니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "executing",
+     "ko": "집행함",
+     "ref": "10:30"
+    },
+    {
+     "w": "generation",
+     "ko": "대(세대)",
+     "ref": "10:30"
+    },
+    {
+     "w": "throne",
+     "ko": "보좌",
+     "ref": "10:30"
+    },
+    {
+     "w": "heed",
+     "ko": "주의",
+     "ref": "10:31"
+    }
+   ],
+   "comments": [
+    {
+     "id": "m10-9",
+     "basis": "external",
+     "text": "스코필드는 30절 앞에 ‘예후에게 약속된 사 대’라는 소제목을 붙입니다. 그리고 ‘사 대에 속하는 너의 자식들’에 이 장 35절과 열왕기하 13:1, 10, 14:23, 15:8, 12를 관주로 답니다. 이 구절들에는 예후의 아들 여호아하즈, 그의 아들 여호아시, 그의 아들 여로보암, 그의 아들 사카리야가 차례로 이스라엘을 통치한 기록이 나옵니다. 열왕기하 15:12는 “너의 아들들이 사 대까지 이스라엘의 보좌 위에 앉으리라.” 하신 주의 말씀이 “그렇게 이루어졌더라.”고 기록합니다.",
+     "spans": [
+      {
+       "text": "예후에게 약속된 사 대",
+       "level": 2
+      },
+      {
+       "text": "“그렇게 이루어졌더라.”",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기하 10장 소제목·관주",
+       "where": "2 Ki. 10:30 소제목·관주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Four generations promised to Jehu.\n…\nv.35 ; 2 Ki. 13.1,10; 14. 23; 15.8,12.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    },
+    {
+     "id": "m10-10",
+     "basis": "external",
+     "text": "31절은 예후가 이스라엘을 죄짓게 만든 여로보암의 죄들에서 떠나지 아니하였다고 말합니다. 스코필드는 이 ‘여로보암의 죄들’에 열왕기상 14:16을 관주로 답니다. 그 절은 여로보암의 집에 대한 예언 가운데 “그리고 그가 여로보암의 죄들 때문에 이스라엘을 버리리니, 그가 죄를 지었고, 이스라엘로 하여금 죄를 짓게 하였도다.”라는 말씀입니다.",
+     "spans": [
+      {
+       "text": "여로보암의 죄들 때문에 이스라엘을 버리리니",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기하 10:31 관주",
+       "where": "2 Ki. 10:31 관주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "k 1 Ki.14.16.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "10:32-36",
+   "title": "감축되는 이스라엘과 예후의 죽음",
+   "marks": [
+    {
+     "v": "10:32",
+     "t": "p",
+     "ko": "주께서 이스라엘을 감축하시기 시작하셨더라",
+     "en": "the LORD began to cut Israel short"
+    },
+    {
+     "v": "10:36",
+     "t": "u",
+     "ko": "이십팔 년이었더라",
+     "en": "twenty and eight years"
+    }
+   ],
+   "english": [
+    {
+     "ref": "10:32",
+     "phrase": "the LORD began to cut Israel short",
+     "grammar": "cut … short(줄이다)",
+     "text": "cut short는 ‘짧게 자르다, 줄이다’입니다. 주께서 이스라엘을 줄이기 시작하셨다는 뜻입니다.",
+     "key": "m10-11"
+    },
+    {
+     "ref": "10:34",
+     "phrase": "are they not written in the book of the chronicles of the kings of Israel?",
+     "grammar": "부정 의문문(확인)",
+     "text": "‘기록되어 있지 아니하냐?’는 ‘기록되어 있다’를 확인하는 말투입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "coasts",
+     "ko": "변방들",
+     "ref": "10:32"
+    },
+    {
+     "w": "eastward",
+     "ko": "동쪽으로",
+     "ref": "10:33"
+    },
+    {
+     "w": "chronicles",
+     "ko": "연대기들",
+     "ref": "10:34"
+    },
+    {
+     "w": "stead",
+     "ko": "자리(in his stead 그를 대신하여)",
+     "ref": "10:35"
+    }
+   ],
+   "comments": [
+    {
+     "id": "m10-11",
+     "basis": "external",
+     "text": "스코필드는 32절 앞에 ‘이스라엘의 힘이 줄어듦’이라는 소제목을 붙입니다. 그 당시에 주께서 이스라엘을 감축하시기 시작하셨고, 하자엘은 요르단에서부터 동쪽의 길르앗 전역과 바샨에서 이스라엘을 쳤습니다(32-33절). 스코필드는 34절 앞에는 ‘예후의 죽음, 여호아하즈가 이스라엘의 왕위에 오름’이라는 소제목을 붙입니다.",
+     "spans": [
+      {
+       "text": "이스라엘의 힘이 줄어듦",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기하 10장 소제목",
+       "where": "2 Ki. 10:32 · 10:34 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Power of Israel diminished.\n…\nDeath of Jehu: accession of Jehoahaz over Israel.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    },
+    {
+     "id": "m10-12",
+     "basis": "external",
+     "text": "스코필드는 열왕기하를 일곱 부분으로 나누고, 예후가 이스라엘을 통치한 이야기를 그 셋째 부분으로 묶습니다. 예후는 사마리아에서 이십팔 년 동안 이스라엘을 통치하고 그의 조상들과 함께 잠들었으며, 그의 아들 여호아하즈가 그를 대신하여 통치했습니다(35-36절).",
+     "spans": [
+      {
+       "text": "일곱 부분",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기하 머리말",
+       "where": "Second Kings 머리말",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Second Kings is in seven parts:\n…\nIII. The reign of Jehu over Israel,",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "아합은 사마리아에 칠십 명의 아들이 있었고, 예후는 사마리아로 편지들을 보냈습니다.",
+    "verse": "10:1"
+   },
+   {
+    "text": "편지를 받은 자들은 극도로 무서워하며 두 왕도 예후 앞에 서지 못했다고 말했습니다.",
+    "verse": "10:4"
+   },
+   {
+    "text": "그들은 왕의 아들 칠십 명을 살해하고 그 머리를 바구니에 담아 이즈르엘로 보냈습니다.",
+    "verse": "10:7"
+   },
+   {
+    "text": "스코필드는 이 일을 ‘아합의 집에 대한 심판’으로 보고 열왕기상 21:21을 관주로 답니다.",
+    "key": "m10-1"
+   },
+   {
+    "text": "예후는 주께서 엘리야를 통하여 하신 말씀이 하나도 땅에 떨어지지 않았다고 말했습니다.",
+    "verse": "10:10"
+   },
+   {
+    "text": "예후는 아하지야의 형제 사십이 명을 털 깎는 집의 구렁에서 살해했습니다.",
+    "verse": "10:14"
+   },
+   {
+    "text": "예후는 레캅의 아들 여호나답을 살려 두고 병거에 태웠습니다.",
+    "key": "m10-4"
+   },
+   {
+    "text": "예후는 여호나답에게 주를 위한 자기의 열심을 보라고 했습니다.",
+    "verse": "10:16"
+   },
+   {
+    "text": "예후는 바알에게 성대한 희생 제물을 바친다며 경배자들을 모았지만, 그것은 그들을 멸하려는 교묘한 함정이었습니다.",
+    "key": "m10-5"
+   },
+   {
+    "text": "바알의 집은 철거되어 변소가 되었습니다.",
+    "verse": "10:27"
+   },
+   {
+    "text": "예후는 바알을 멸했지만 벧엘과 단의 금송아지들은 떠나지 않았습니다.",
+    "key": "m10-8"
+   },
+   {
+    "text": "강의는 북이스라엘이 따로 만든 제사 장소에서는 짐승을 죽여도 용서받지 못했다고 설명합니다.",
+    "key": "m10-8"
+   },
+   {
+    "text": "주께서는 예후의 자식들이 사 대까지 이스라엘의 보좌에 앉으리라고 하셨고, 그 말씀은 그대로 이루어졌습니다.",
+    "key": "m10-9"
+   },
+   {
+    "text": "그러나 예후는 마음을 다하여 주의 율법 가운데 살아가려고 주의하지 않았습니다.",
+    "verse": "10:31"
+   },
+   {
+    "text": "그 당시에 주께서 이스라엘을 감축하시기 시작하셨고, 하자엘이 이스라엘의 변방을 쳤습니다.",
+    "verse": "10:32"
+   },
+   {
+    "text": "예후는 사마리아에서 이십팔 년 동안 이스라엘을 통치했습니다.",
+    "verse": "10:36"
+   }
+  ],
+  "questions": [
+   {
+    "verse": "10:1",
+    "q": "아합의 아들들은 몇 명이었습니까?",
+    "a": "칠십 명"
+   },
+   {
+    "verse": "10:1",
+    "q": "예후가 편지들을 보낸 곳은 어디입니까?",
+    "a": "사마리아"
+   },
+   {
+    "verse": "10:4",
+    "q": "편지를 받은 자들은 몇 명의 왕이 예후 앞에 서지 못했다고 했습니까?",
+    "a": "두 명의 왕들"
+   },
+   {
+    "verse": "10:7",
+    "q": "그들은 왕의 아들들의 머리를 무엇에 담아 보냈습니까?",
+    "a": "바구니들"
+   },
+   {
+    "verse": "10:8",
+    "q": "예후는 머리들을 어디에 쌓아 두라고 했습니까?",
+    "a": "성문으로 들어가는 진입로"
+   },
+   {
+    "key": "m10-1",
+    "q": "스코필드는 1절 앞에 어떤 소제목을 붙입니까?",
+    "a": "아합의 집에 대한 심판"
+   },
+   {
+    "key": "m10-2",
+    "q": "스코필드는 ‘아합의 자식들을 기른 자들’이 히브리어로 무슨 뜻이라고 주석합니까?",
+    "a": "양육하는 자들(nourishers)"
+   },
+   {
+    "verse": "10:10",
+    "q": "예후는 주께서 누구를 통하여 말씀하신 것을 이루셨다고 했습니까?",
+    "a": "엘리야"
+   },
+   {
+    "verse": "10:14",
+    "q": "털 깎는 집의 구렁에서 살해된 남자들은 몇 명이었습니까?",
+    "a": "사십이 명"
+   },
+   {
+    "key": "m10-3",
+    "q": "역대기하 22:8은 이 일이 어떤 와중에 일어났다고 기록합니까?",
+    "a": "예후가 아합의 집 위에 심판을 집행하는 와중"
+   },
+   {
+    "verse": "10:15",
+    "q": "예후가 만난 레캅의 아들은 누구입니까?",
+    "a": "여호나답"
+   },
+   {
+    "verse": "10:16",
+    "q": "예후는 여호나답에게 무엇을 보라고 했습니까?",
+    "a": "주를 위한 나의 열심"
+   },
+   {
+    "key": "m10-4",
+    "q": "스코필드는 15절 앞에 어떤 소제목을 붙입니까?",
+    "a": "예후가 여호나답을 살려 둠"
+   },
+   {
+    "verse": "10:18",
+    "q": "예후는 아합이 바알을 어떻게 섬겼다고 했습니까?",
+    "a": "조금"
+   },
+   {
+    "verse": "10:19",
+    "q": "예후는 무엇을 하려는 의도로 그 일을 교묘하게 행했습니까?",
+    "a": "바알의 경배자들을 멸하려는"
+   },
+   {
+    "key": "m10-5",
+    "q": "스코필드는 19절 앞에 어떤 소제목을 붙입니까?",
+    "a": "예후가 이스라엘에서 바알 숭배를 뿌리 뽑음"
+   },
+   {
+    "verse": "10:24",
+    "q": "예후는 밖에 장정 몇 명을 지정했습니까?",
+    "a": "팔십 명"
+   },
+   {
+    "key": "m10-6",
+    "q": "스코필드가 ‘바알의 집’에 단 관주는 어느 구절입니까?",
+    "a": "열왕기상 16:32"
+   },
+   {
+    "verse": "10:27",
+    "q": "그들은 바알의 집을 무엇으로 만들었습니까?",
+    "a": "변소"
+   },
+   {
+    "key": "m10-7",
+    "q": "에스라 6:11과 다니엘 2:5는 집이 무엇이 된다고 말합니까?",
+    "a": "거름 더미"
+   },
+   {
+    "verse": "10:29",
+    "q": "예후가 떠나지 아니한 금송아지들은 어디에 있었습니까?",
+    "a": "벧엘, 단"
+   },
+   {
+    "key": "m10-8",
+    "q": "강의에 따르면 하나님께서는 어디에서 짐승을 죽여야 용서해 주셨습니까?",
+    "a": "예루살렘에 있는 성전"
+   },
+   {
+    "verse": "10:30",
+    "q": "예후의 자식들은 몇 대까지 이스라엘의 보좌에 앉게 됩니까?",
+    "a": "사 대"
+   },
+   {
+    "key": "m10-9",
+    "q": "열왕기하 15:12는 사 대에 대한 주의 말씀이 어떻게 되었다고 기록합니까?",
+    "a": "그렇게 이루어졌습니다"
+   },
+   {
+    "key": "m10-10",
+    "q": "스코필드가 ‘여로보암의 죄들’에 단 관주는 무엇입니까?",
+    "a": "열왕기상 14:16"
+   },
+   {
+    "verse": "10:32",
+    "q": "이스라엘의 모든 변방들에서 그들을 친 자는 누구입니까?",
+    "a": "하자엘"
+   },
+   {
+    "verse": "10:33",
+    "q": "아로엘은 어느 강 옆에 있습니까?",
+    "a": "아르논강"
+   },
+   {
+    "verse": "10:35",
+    "q": "예후를 대신하여 통치한 아들은 누구입니까?",
+    "a": "여호아하즈"
+   },
+   {
+    "verse": "10:36",
+    "q": "예후가 사마리아에서 이스라엘을 통치한 기간은 얼마입니까?",
+    "a": "이십팔 년"
+   },
+   {
+    "key": "m10-12",
+    "q": "스코필드는 열왕기하를 몇 부분으로 나눕니까?",
+    "a": "일곱 부분"
+   }
+  ],
+  "faq": [
+   {
+    "q": "왜 아합의 칠십 아들이 한꺼번에 죽었습니까?",
+    "key": "m10-1"
+   },
+   {
+    "q": "예후는 주의 말씀이 어떻게 되었다고 말했습니까?",
+    "key": "m10-1"
+   },
+   {
+    "q": "‘아합의 자식들을 기른 자들’은 어떤 사람들입니까?",
+    "key": "m10-2"
+   },
+   {
+    "q": "예후가 죽인 아하지야의 형제들은 누구였습니까?",
+    "key": "m10-3"
+   },
+   {
+    "q": "여호나답을 만난 장면에 스코필드는 어떤 제목을 붙입니까?",
+    "key": "m10-4"
+   },
+   {
+    "q": "예후는 정말 바알을 섬기려고 했습니까?",
+    "key": "m10-5"
+   },
+   {
+    "q": "예후가 무너뜨린 ‘바알의 집’에 스코필드는 어떤 구절을 관주로 답니까?",
+    "key": "m10-6"
+   },
+   {
+    "q": "성경의 다른 곳에도 집을 거름 더미로 만드는 일이 나옵니까?",
+    "key": "m10-7"
+   },
+   {
+    "q": "북이스라엘이 따로 만든 제사 장소에서 드린 제사는 받아들여졌습니까?",
+    "key": "m10-8"
+   },
+   {
+    "q": "예후의 왕조는 얼마나 이어졌습니까?",
+    "key": "m10-9"
+   },
+   {
+    "q": "여로보암의 죄는 이스라엘에 어떤 결과를 가져온다고 예언되었습니까?",
+    "key": "m10-10"
+   },
+   {
+    "q": "예후 시대에 이스라엘의 영토는 어떻게 되었습니까?",
+    "key": "m10-11"
+   },
+   {
+    "q": "예후의 이야기는 열왕기하 전체에서 어디에 놓입니까?",
+    "key": "m10-12"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "털 깎는 집",
+    "verse": "10:12",
+    "text": "예후가 사마리아로 가는 길에 머문 곳입니다. 그곳의 구렁에서 아하지야의 형제 사십이 명이 살해되었습니다."
+   },
+   {
+    "term": "레캅",
+    "verse": "10:15",
+    "text": "여호나답의 아버지입니다."
+   },
+   {
+    "term": "바알",
+    "key": "m10-5",
+    "text": "아합이 섬긴 우상입니다. 예후는 바알의 경배자들을 바알의 집에 모아 멸하였습니다."
+   },
+   {
+    "term": "금송아지",
+    "key": "m10-8",
+    "text": "‘여로보암의 죄들’이라고 불린, 벧엘과 단에 있던 금송아지들입니다. 예후는 이것들을 떠나지 않았습니다."
+   },
+   {
+    "term": "사 대",
+    "key": "m10-9",
+    "text": "네 세대입니다. 주께서 예후의 자식들이 사 대까지 이스라엘의 보좌에 앉으리라고 하셨습니다."
+   },
+   {
+    "term": "아로엘",
+    "verse": "10:33",
+    "text": "아르논강 옆에 있는 곳입니다. 하자엘은 아로엘부터 길르앗과 바샨까지 이스라엘을 쳤습니다."
+   },
+   {
+    "term": "연대기들의 책",
+    "verse": "10:34",
+    "text": "이스라엘 왕들의 행적이 기록된 책입니다. 예후의 나머지 행적도 그 책에 기록되어 있다고 합니다."
+   }
+  ]
+ }
+}

@@ -8,7 +8,7 @@ const BASIC = new Set(Object.values(JSON.parse(fs.readFileSync(new URL("./basic_
 
 const [book, ...rest] = process.argv.slice(2);
 const B = BOOKS[book];
-if (!B) { console.error("사용법: check.mjs genesis|1sam|2sam <장…|all>"); process.exit(2); }
+if (!B) { console.error("사용법: check.mjs genesis|1sam|2sam|1ki|2ki <장…|all>"); process.exit(2); }
 const chs = rest[0] === "all" ? [...Array(B.chapters)].map((_, i) => i + 1) : rest.map(Number);
 const AUTHORS = ["C. I. 스코필드", "D. L. 무디", "클라렌스 라킨", "피터 럭크만"];
 const RANK = { direct: 1, linked: 1, doctrine: 1, external: 2, sbc: 3 };

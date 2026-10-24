@@ -1,10 +1,10 @@
 // 현대 영어 본문 받기 — World English Bible, British Edition(WEBBE, 퍼블릭 도메인). KJV처럼 "the LORD"를 쓴다.
 // 출처 bible-api.com(translation=webbe). 글자는 줄바꿈만 공백으로 바꾸고 그대로 둔다(지침 §3).
-//   node tools/chapterbook/fetch_web.mjs   → Genesis/원본/2판/verses-genesis-web.json, Samuel/원본/2판/verses-1sam-web.json·verses-2sam-web.json
+//   node tools/chapterbook/fetch_web.mjs   → Genesis/원본/2판/verses-genesis-web.json, Samuel/원본/2판/verses-1sam-web.json·verses-2sam-web.json, Kings/원본/2판/verses-1ki-web.json·verses-2ki-web.json
 import fs from "node:fs";
 import path from "node:path";
 import { R } from "./lib.mjs";
-const BOOKS = [["genesis", 50, "Genesis/원본/2판/verses-genesis-web.json"], ["1 samuel", 31, "Samuel/원본/2판/verses-1sam-web.json"], ["2 samuel", 24, "Samuel/원본/2판/verses-2sam-web.json"]];
+const BOOKS = [["genesis", 50, "Genesis/원본/2판/verses-genesis-web.json"], ["1 samuel", 31, "Samuel/원본/2판/verses-1sam-web.json"], ["2 samuel", 24, "Samuel/원본/2판/verses-2sam-web.json"], ["1 kings", 22, "Kings/원본/2판/verses-1ki-web.json"], ["2 kings", 25, "Kings/원본/2판/verses-2ki-web.json"]];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 for (const [book, n, out] of BOOKS) {
   const file = path.join(R, out);

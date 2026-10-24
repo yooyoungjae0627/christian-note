@@ -1,0 +1,1161 @@
+{
+ "chapter": 15,
+ "subtitle": "아비얌과 아사 — 다윗의 마음, 나뉜 두 왕국",
+ "motto": "뉘우치고 돌아온 것을 더 높이 봐 주신다",
+ "motto_comment": "k15-2",
+ "cover": [
+  {
+   "m": "crown",
+   "x": 170,
+   "y": 120,
+   "s": 0.9
+  },
+  {
+   "m": "altar",
+   "x": 110,
+   "y": 270,
+   "s": 0.85
+  },
+  {
+   "m": "sword",
+   "x": 235,
+   "y": 260,
+   "s": 0.85
+  }
+ ],
+ "people": [
+  {
+   "id": "david",
+   "name": "다윗",
+   "en": "David",
+   "gen": 0,
+   "desc": "아비얌과 아사의 조상입니다. 본문은 그가 히타이트족 우리야 사건만을 제외하고는 평생 주의 눈에 옳은 것을 행했다고 말합니다.",
+   "refs": [
+    "15:3",
+    "15:5"
+   ]
+  },
+  {
+   "id": "maachah",
+   "name": "마아카",
+   "en": "Maachah",
+   "gen": 0,
+   "desc": "아비샬롬의 딸로, 본문은 아비얌의 어머니이자 아사의 어머니로 기록합니다. 작은 수풀 속에 우상을 만들어 아사에게 태후 자리에서 폐위되었습니다.",
+   "refs": [
+    "15:2",
+    "15:10",
+    "15:13"
+   ]
+  },
+  {
+   "id": "jeroboam",
+   "name": "여로보암",
+   "en": "Jeroboam",
+   "gen": 0,
+   "desc": "느밧의 아들로 이스라엘의 왕이었습니다. 이스라엘이 죄를 짓게 만들었고, 그의 온 집은 바아샤에게 멸망했습니다.",
+   "refs": [
+    "15:1",
+    "15:29"
+   ]
+  },
+  {
+   "id": "abijam",
+   "name": "아비얌",
+   "en": "Abijam",
+   "gen": 1,
+   "desc": "여로보암왕의 제십팔 년에 유다 왕이 되어 예루살렘에서 삼 년 동안 다스렸습니다. 아버지의 죄들 가운데 살았고, 그의 마음은 주께 완전하지 않았습니다.",
+   "refs": [
+    "15:1",
+    "15:3"
+   ]
+  },
+  {
+   "id": "nadab",
+   "name": "나답",
+   "en": "Nadab",
+   "gen": 1,
+   "desc": "여로보암의 아들로 이스라엘을 이 년 동안 다스렸습니다. 깁브돈을 포위하던 중에 바아샤에게 죽었습니다.",
+   "refs": [
+    "15:25",
+    "15:27"
+   ]
+  },
+  {
+   "id": "baasha",
+   "name": "바아샤",
+   "en": "Baasha",
+   "gen": 1,
+   "desc": "잇사칼 집안 아히쟈의 아들입니다. 나답을 죽이고 이스라엘 왕이 되어 여로보암의 온 집을 쳤고, 아사와 평생 전쟁했습니다.",
+   "refs": [
+    "15:27",
+    "15:29",
+    "15:32"
+   ]
+  },
+  {
+   "id": "asa",
+   "name": "아사",
+   "en": "Asa",
+   "gen": 2,
+   "desc": "아비얌의 아들로 예루살렘에서 사십일 년 동안 유다를 다스렸습니다. 우상들을 치우고 어머니를 태후 자리에서 폐했으며, 그의 마음은 평생 주께 완전했습니다.",
+   "refs": [
+    "15:8",
+    "15:10",
+    "15:14"
+   ]
+  },
+  {
+   "id": "benhadad",
+   "name": "벤하닷",
+   "en": "Benhadad",
+   "gen": 2,
+   "desc": "다마스쿠스에 거하던 시리아 왕입니다. 아사가 보낸 은과 금을 받고 이스라엘의 도시들을 쳤습니다.",
+   "refs": [
+    "15:18",
+    "15:20"
+   ]
+  },
+  {
+   "id": "jehoshaphat",
+   "name": "여호샤팟",
+   "en": "Jehoshaphat",
+   "gen": 3,
+   "desc": "아사의 아들로, 아사를 대신하여 유다를 다스렸습니다.",
+   "refs": [
+    "15:24"
+   ]
+  }
+ ],
+ "relations": [
+  {
+   "from": "david",
+   "to": "abijam",
+   "type": "kin",
+   "label": "조상",
+   "ref": "15:3"
+  },
+  {
+   "from": "maachah",
+   "to": "abijam",
+   "type": "parent",
+   "label": "어머니",
+   "ref": "15:2"
+  },
+  {
+   "from": "jeroboam",
+   "to": "nadab",
+   "type": "parent",
+   "label": "아들",
+   "ref": "15:25"
+  },
+  {
+   "from": "abijam",
+   "to": "asa",
+   "type": "parent",
+   "label": "아들",
+   "ref": "15:8"
+  },
+  {
+   "from": "asa",
+   "to": "maachah",
+   "type": "other",
+   "label": "폐위",
+   "ref": "15:13",
+   "directed": true
+  },
+  {
+   "from": "baasha",
+   "to": "nadab",
+   "type": "enemy",
+   "label": "살해",
+   "ref": "15:28"
+  },
+  {
+   "from": "asa",
+   "to": "baasha",
+   "type": "enemy",
+   "label": "전쟁",
+   "ref": "15:16"
+  },
+  {
+   "from": "asa",
+   "to": "benhadad",
+   "type": "other",
+   "label": "맹약",
+   "ref": "15:19"
+  },
+  {
+   "from": "asa",
+   "to": "jehoshaphat",
+   "type": "parent",
+   "label": "아들",
+   "ref": "15:24"
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "jerusalem",
+    "name": "예루살렘",
+    "ref": "15:2"
+   },
+   {
+    "key": "kidron",
+    "name": "키드론 시내",
+    "at": [
+     35.24,
+     31.775
+    ],
+    "ref": "15:13"
+   },
+   {
+    "key": "ramah",
+    "name": "라마흐",
+    "ref": "15:17"
+   },
+   {
+    "key": "damascus",
+    "name": "다마스쿠스",
+    "ref": "15:18"
+   },
+   {
+    "key": "dan",
+    "name": "단",
+    "ref": "15:20"
+   },
+   {
+    "key": "abel-beth-maachah",
+    "name": "아벨벧마아카",
+    "at": [
+     35.58,
+     33.26
+    ],
+    "ref": "15:20"
+   },
+   {
+    "key": "cinneroth",
+    "name": "킨느롯",
+    "at": [
+     35.58,
+     32.83
+    ],
+    "area": true,
+    "ref": "15:20"
+   },
+   {
+    "key": "naphtali",
+    "name": "납탈리",
+    "at": [
+     35.42,
+     33.02
+    ],
+    "area": true,
+    "ref": "15:20"
+   },
+   {
+    "key": "tirzah",
+    "name": "티르자",
+    "at": [
+     35.38,
+     32.29
+    ],
+    "ref": "15:21"
+   },
+   {
+    "key": "geba",
+    "name": "그바",
+    "at": [
+     35.26,
+     31.855
+    ],
+    "ref": "15:22"
+   },
+   {
+    "key": "mizpeh",
+    "name": "미즈파",
+    "ref": "15:22"
+   }
+  ],
+  "routes": [
+   {
+    "path": [
+     "damascus",
+     "dan"
+    ],
+    "ref": "15:20"
+   }
+  ],
+  "minSpan": 0.6,
+  "unknown": [
+   {
+    "name": "이욘",
+    "ref": "15:20",
+    "note": "벤하닷의 군대가 친 이스라엘의 도시"
+   },
+   {
+    "name": "깁브돈",
+    "ref": "15:27",
+    "note": "필리스티아인들에게 속하였던 곳, 나답이 포위하던 성읍"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "15:1-8",
+   "title": "다윗의 마음과 같지 않았던 아비얌",
+   "marks": [
+    {
+     "v": "15:3",
+     "t": "p",
+     "ko": "그의 마음이 주 그의 하나님과 더불어 완전하지 아니하였으니",
+     "en": "his heart was not perfect with the LORD his God"
+    },
+    {
+     "v": "15:4",
+     "t": "y",
+     "ko": "다윗으로 인하여 예루살렘에서 그에게 한 등불을 주셨으니",
+     "en": "for David's sake did the LORD his God give him a lamp in Jerusalem"
+    },
+    {
+     "v": "15:5",
+     "t": "g",
+     "ko": "주의 눈들에 옳은 것을 행하여",
+     "en": "did that which was right in the eyes of the LORD"
+    },
+    {
+     "v": "15:5",
+     "t": "u",
+     "ko": "히타이트족 우리야 사건만을 제외하고는",
+     "en": "save only in the matter of Uriah the Hittite"
+    }
+   ],
+   "story": "여로보암왕의 제십팔 년에 아비얌이 유다 왕이 되어 예루살렘에서 삼 년 동안 다스렸습니다. 그는 아버지의 죄들 가운데 살았고, 그의 마음은 다윗의 마음처럼 주께 완전하지 않았습니다. 그래도 주께서는 다윗으로 인하여 예루살렘에 한 등불을 주셨습니다. 아비얌이 죽자 그의 아들 아사가 왕이 되었습니다.",
+   "english": [
+    {
+     "ref": "15:4",
+     "phrase": "for David's sake did the LORD his God give him a lamp",
+     "grammar": "도치(부사구 + did + 주어 + 동사원형)",
+     "text": "for David's sake(다윗을 위하여)를 앞에 두고 did … give로 주어와 동사의 자리를 바꾸어 강조합니다. 현대 영어로는 the LORD his God gave him a lamp for David's sake입니다. 뒤의 to set up his son after him이 ‘등불’의 뜻을 풀어 줍니다."
+    },
+    {
+     "ref": "15:5",
+     "phrase": "save only in the matter of Uriah the Hittite",
+     "grammar": "전치사 save(= except)",
+     "text": "save는 여기서 ‘구하다’가 아니라 ‘~을 제외하고’라는 전치사입니다. WEB은 except only in the matter of Uriah the Hittite라고 옮깁니다.",
+     "key": "k15-1"
+    },
+    {
+     "ref": "15:7",
+     "phrase": "are they not written in the book of the chronicles of the kings of Judah?",
+     "grammar": "수사의문문",
+     "text": "‘기록되어 있지 아니하냐?’는 대답을 바라는 질문이 아니라 ‘기록되어 있다’는 뜻을 강하게 말하는 수사의문문입니다. 열왕기에서 왕마다 되풀이되는 맺음말입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "reigned",
+     "ko": "통치했다",
+     "ref": "15:1"
+    },
+    {
+     "w": "perfect",
+     "ko": "완전한, 온전한",
+     "ref": "15:3"
+    },
+    {
+     "w": "lamp",
+     "ko": "등불",
+     "ref": "15:4"
+    },
+    {
+     "w": "establish",
+     "ko": "확고히 세우다",
+     "ref": "15:4"
+    },
+    {
+     "w": "chronicles",
+     "ko": "연대기",
+     "ref": "15:7"
+    },
+    {
+     "w": "stead",
+     "ko": "대신, 자리",
+     "ref": "15:8"
+    }
+   ],
+   "comments": [
+    {
+     "id": "k15-1",
+     "basis": "linked",
+     "text": "본문은 아비얌의 마음이 그의 조상 다윗의 마음처럼 주와 더불어 완전하지 않았다고 말합니다(15:3). 그러면서 다윗은 히타이트족 우리야 사건만을 제외하고는 평생 주의 눈에 옳은 것을 행했다고 기록합니다(15:5). 강의는 바로 앞 장에서 하나님께서 여로보암에게 전하게 하신 말씀을 읽습니다. 다윗은 “나의 명령들을 지켰고, 나의 눈들에 옳은 것만을 행하려고 그의 마음을 다하여 나를 따랐도다.”(14:8)라는 말씀입니다. 강의는 옳은 일을 ‘많이’ 했다는 것이 아니라 옳은 일‘만’ 했다고 되어 있다는 점을 짚습니다. 그런데 다윗은 자기를 위해 목숨을 걸고 싸우는 충성스러운 군인의 아내를 빼앗았고, 그것을 덮으려고 그 남편을 죽였습니다. 살인과 간음을 했는데도 정직한 일만 했다고 하시는 것입니다.",
+     "spans": [
+      {
+       "text": "옳은 일‘만’ 했다고 되어 있다는 점",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 인물 시리즈 「베드로」",
+       "file": "memory-bank/첫열매들_강의스크립트/3_인물시리즈/04_인물시리즈_베드로.md",
+       "time": "26:36",
+       "to": "28:19",
+       "excerpt": "열왕기상 14장 있니다 이제 하나님이 여로보암에게 전달하라고 이제 주시는 말씀인데요 8절 읽어 보겠습니다 열왕기상 14장 절입 다의 집에서 왕국을 나누어 너에게 주었거늘 너는 종 다이을 지키고 그의 마음을 다하여 나를 따르며에 오른 것만을 했던 것같이 행하지 아니하고 보을 혼내면서 하신 말씀인데 다이 어떤 일만 했다고요에 옳은 일만 했요 일 했다가 아니라 옳은 일을 많이 했다가 아니라 옳은 일만 했다예요 개역한글 한글 킹제임스 흥정 다 다 똑같이 번역해어요 옳은 일만 했다고 여러분 우리가 알죠 다은 자기의 충성스러운 부 에 자기를 위해 목숨을 걸고 싸우는 군인의 아내를 뺏었어요 그리고 그 아내를 뺏은 거를 업 덮으려고 그 남편을 죽였어요 성경에서 말하는 가장 대표적인 이제 세개면 우상숭배 살인 간음 있데요 살인과 간음을 했어요 근데 정직한 일만 했다고요",
+       "url": "https://youtu.be/QGXBcYE4mc0?t=1596"
+      }
+     ]
+    },
+    {
+     "id": "k15-2",
+     "basis": "linked",
+     "text": "예배 강의 「두려움과 기쁨」은 다윗이 우리야의 아내를 빼앗고 우리야를 죽인 다음에도 멀쩡히 잘 살고 있었다고 말합니다. 양심이 순간적으로 작동하지 않았기 때문입니다. 그런데 옆에 나단이 있었고, 나단이 딱 찔러 주자 다윗은 ‘하나님, 잘못했습니다’ 하며 눈물로 침대가 젖도록 울었습니다. 인물 시리즈 「베드로」는 다윗이 그런 일을 하고도 옳은 일만 했다고 기록된 까닭을 여기에서 설명합니다. 하나님께서는 다윗이 한 잘못보다, 그런 잘못을 하고 뉘우치고 돌아온 것을 더 높이 봐 주신다는 것입니다.",
+     "spans": [
+      {
+       "text": "뉘우치고 돌아온 것을 더 높이 봐 주신다",
+       "level": 3
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「두려움과 기쁨」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/54_두려움과_기쁨.md",
+       "time": "33:12",
+       "to": "33:27",
+       "excerpt": "자 여러분, 다윗은 세상에 우리야 아내를 뺏고 우리야를 죽인 다음에 멀쩡히 잘 살고 있는 거예요 양심이 순간적으로 작동을 안해서 근데 옆에 나단이 있었죠 나단이 딱 찔러주자 '하나님, 잘못했습니다' 하며 눈물로 침대가 젖었다고 하니 얼마나 가슴 아프게 울었겠어요",
+       "url": "https://youtu.be/zyLUvUPX8Og?t=1992"
+      },
+      {
+       "type": "transcript",
+       "source": "첫열매들 인물 시리즈 「베드로」",
+       "file": "memory-bank/첫열매들_강의스크립트/3_인물시리즈/04_인물시리즈_베드로.md",
+       "time": "31:43",
+       "to": "31:52",
+       "excerpt": "사람이잖아요 다윗이 한이 잘못보다 이런 잘못을 하고 뉘우치고 돌아온 그걸 더 높이 봐 주시는 거예요",
+       "url": "https://youtu.be/QGXBcYE4mc0?t=1903"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "15:4(다윗으로 인하여 주신 한 등불)와 15:6-8(르호보암과 여로보암의 전쟁, 아비얌의 죽음)을 따로 풀이한 근거는 찾지 못했습니다."
+   ]
+  },
+  {
+   "ref": "15:9-15",
+   "title": "우상을 치운 아사와 남은 높은 처소들",
+   "marks": [
+    {
+     "v": "15:11",
+     "t": "g",
+     "ko": "그의 조상 다윗이 행한 대로 주의 눈들에 옳은 것을 행하였더라",
+     "en": "did that which was right in the eyes of the LORD, as did David his father"
+    },
+    {
+     "v": "15:13",
+     "t": "p",
+     "ko": "그녀가 한 작은 수풀 속에 어떤 우상을 만든 까닭이라",
+     "en": "she had made an idol in a grove"
+    },
+    {
+     "v": "15:14",
+     "t": "u",
+     "ko": "높은 처소들은 치워지지 아니하였더라",
+     "en": "the high places were not removed"
+    },
+    {
+     "v": "15:14",
+     "t": "g",
+     "ko": "아사의 마음이 그의 모든 날들 동안 주께 완전하였더라",
+     "en": "Asa's heart was perfect with the LORD all his days"
+    }
+   ],
+   "story": "여로보암의 제이십 년에 아사가 유다 왕이 되어 사십일 년 동안 다스렸습니다. 아사는 다윗처럼 주의 눈에 옳은 것을 행하여 소돔족들을 없애고 조상들이 만든 우상들을 치웠습니다. 작은 수풀 속에 우상을 만든 어머니 마아카도 태후 자리에서 폐하고, 그 우상을 키드론 시내 옆에서 태웠습니다. 높은 처소들은 치워지지 않았지만, 아사의 마음은 평생 주께 완전했습니다.",
+   "english": [
+    {
+     "ref": "15:13",
+     "phrase": "even her he removed from being queen",
+     "grammar": "목적어 도치·강조(even her)",
+     "text": "her를 동사 앞으로 끌어내고 even을 붙여 ‘그녀까지도’를 강조합니다. remove from being queen은 ‘태후 자리에서 물러나게 하다’입니다."
+    },
+    {
+     "ref": "15:14",
+     "phrase": "nevertheless Asa's heart was perfect with the LORD",
+     "grammar": "접속부사 nevertheless",
+     "text": "nevertheless는 ‘그럼에도 불구하고’입니다. 높은 처소들이 남았다는 앞말과 아사의 마음이 완전했다는 뒷말을 맞세웁니다.",
+     "key": "k15-4"
+    },
+    {
+     "ref": "15:15",
+     "phrase": "the things which himself had dedicated",
+     "grammar": "과거완료 had + p.p. / 강조 재귀대명사",
+     "text": "had dedicated는 주의 집에 들이기 전에 이미 ‘봉헌해 두었던’ 것을 나타냅니다. himself는 주어를 강조하는 말로, 현대 영어라면 the things which he himself had dedicated입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "sodomites",
+     "ko": "소돔족(남색하는 자들)",
+     "ref": "15:12"
+    },
+    {
+     "w": "idols",
+     "ko": "우상들",
+     "ref": "15:12"
+    },
+    {
+     "w": "grove",
+     "ko": "작은 수풀(아세라)",
+     "ref": "15:13"
+    },
+    {
+     "w": "brook",
+     "ko": "시내",
+     "ref": "15:13"
+    },
+    {
+     "w": "dedicated",
+     "ko": "봉헌했다",
+     "ref": "15:15"
+    },
+    {
+     "w": "vessels",
+     "ko": "기물들",
+     "ref": "15:15"
+    }
+   ],
+   "comments": [
+    {
+     "id": "k15-3",
+     "basis": "external",
+     "text": "아사는 우상들을 치우고, 작은 수풀 속에 우상을 만든 어머니 마아카를 태후 자리에서 폐했습니다. 그러나 높은 처소들은 치워지지 않았습니다(15:12-14). 스코필드는 높은 곳에 제단을 두는 일이 아주 오래되고 널리 퍼진 관습이었다고 설명합니다. 그런데 모리아산과 성전이 하나님께 드리는 예배의 중심으로 세워진 뒤로, 높은 처소들은 우상 숭배와 같은 것으로 여겨지게 되었습니다. 그는 왕들의 시대에도 주께 드리는 지방 제사가 이런 ‘높은 처소들’에서 드려졌던 것으로 보이며, 아사의 어머니가 그런 곳 가운데 하나를 우상으로 더럽혔다고 말합니다. 성전이 세워진 뒤에도 주를 섬기는 예배에까지 높은 처소가 거듭 쓰였다는 것은, 그 관습이 얼마나 깊이 뿌리박혀 있었는지를 보여 준다는 것입니다.",
+     "spans": [
+      {
+       "text": "그 관습이 얼마나 깊이 뿌리박혀 있었는지",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기상 3:2 주 ‘높은 처소들’",
+       "where": "1 Ki. 3:2 주석",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "The use of commanding elevations for altars seems to have been immemorial and universal.\n…\nMount Moriah and the temple as the centre of divine worship\n…\nhigh places became identified with idolatrous practices\n…\nrecurrence to the use of high places, even for Jehovistic worship (1 Ki. 15. 14 note), and after the building of the temple, proves how deeply rooted the custom was.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      },
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기상 15:14 주",
+       "where": "1 Ki. 15:14 주석",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "It appears that local sacrifices to Jehovah\n…\nwere offered in the times of the kings upon “high places”\n…\nApparently Asa’s mother had defiled one of these with an idol (1 Ki. 15. 13).",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    },
+    {
+     "id": "k15-4",
+     "basis": "external",
+     "text": "본문은 아비얌의 마음은 주와 더불어 완전하지 않았지만(15:3), 아사의 마음은 그의 모든 날 동안 주께 완전했다고 대조합니다(15:14). 스코필드는 15장 3절의 ‘완전한(perfect)’에 열왕기상 8장 61절의 주석을 보라는 관주를 달았습니다. 그 주석에서 그는 이 말이 하나님을 향한 온 마음과 한마음과 진실함을 뜻한다고 설명합니다. 죄가 하나도 없는 완전함을 뜻하는 말은 아니라는 것입니다.",
+     "spans": [
+      {
+       "text": "죄가 하나도 없는 완전함을 뜻하는 말은 아니라는 것",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기상 15:3 관주와 8:61 주 ‘완전한’",
+       "where": "1 Ki. 15:3 관주 b · 1 Ki. 8:61 주석 c",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "b See 1 Ki.8. 61.\n…\nThe word implies whole-heart- edness for God, single- mindedness, sincerity — not sinless perfection.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    },
+    {
+     "id": "k15-5",
+     "basis": "external",
+     "text": "아사의 어머니 마아카는 ‘한 작은 수풀 속에’ 우상을 만들었습니다(15:13). 스코필드는 KJV가 ‘작은 수풀(grove)’로 옮긴 히브리어 아세라가 그곳에 모셔 둔 우상까지 뜻한다고 설명합니다. 이 우상은 흔히 신성하게 여기는 나무였던 것으로 보이며, 그 모양이 아시리아의 기념물들에 자주 나온다고 합니다. 그는 작은 수풀들이 높은 처소들처럼 우상 숭배와 연관되어 왔고, 배교한 이스라엘에서는 온갖 형태의 우상 숭배와 연관되었다고 덧붙입니다.",
+     "spans": [
+      {
+       "text": "그곳에 모셔 둔 우상까지 뜻한다",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 3:7 주 ‘작은 수풀’",
+       "where": "Judg. 3:7 주석(1 Ki. 15:13 관주 h ‘See Deut. 16.21’)",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Groves, like high places, have been associated with idolatrous worship\n…\nHeb. asherah, trans. “grove,” means also the idol enshrined there (Deut. 16. 21). This idol seems often to have been a sacred tree, the figure of which is constantly found on Assyrian monuments. In apostate Israel however such groves were associated with every form of idolatry",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "15:9-10(아사의 즉위)과 15:15(봉헌물을 주의 집에 들임)를 따로 풀이한 근거는 찾지 못했습니다."
+   ]
+  },
+  {
+   "ref": "15:16-24",
+   "title": "바아샤와의 전쟁, 시리아와 맺은 맹약",
+   "marks": [
+    {
+     "v": "15:16",
+     "t": "u",
+     "ko": "아사와 이스라엘 왕 바아샤 사이에는 그들의 모든 날들에 전쟁이 있었더라",
+     "en": "there was war between Asa and Baasha king of Israel all their days"
+    },
+    {
+     "v": "15:18",
+     "t": "u",
+     "ko": "주의 집의 보물들과 왕의 집의 보물들 안에 남아 있던 모든 은과 금을 취하여",
+     "en": "took all the silver and the gold that were left in the treasures of the house of the LORD"
+    },
+    {
+     "v": "15:23",
+     "t": "u",
+     "ko": "그가 자신의 두 발에 질병이 생겼더라",
+     "en": "he was diseased in his feet"
+    }
+   ],
+   "story": "아사와 이스라엘 왕 바아샤는 평생 전쟁했습니다. 바아샤가 라마흐를 건축하여 아무도 아사에게 드나들지 못하게 하자, 아사는 주의 집과 왕의 집에 남은 은과 금을 시리아 왕 벤하닷에게 보내 바아샤와의 맹약을 깨 달라고 청했습니다. 벤하닷이 이스라엘의 북쪽 도시들을 치자 바아샤는 라마흐 건축을 멈추고 티르자로 물러났습니다. 아사는 라마흐의 돌과 재목으로 그바와 미즈파를 건축했고, 노년에 발에 병이 든 뒤 죽어 다윗의 도시에 장사되었습니다.",
+   "english": [
+    {
+     "ref": "15:17",
+     "phrase": "that he might not suffer any to go out or come in",
+     "grammar": "목적절 that + might / 옛 뜻 suffer(= 허락하다)",
+     "text": "suffer는 여기서 ‘고통받다’가 아니라 ‘허락하다’(allow)라는 옛 뜻입니다. that he might not …은 ‘~하지 못하게 하려고’라는 목적절입니다. WEB은 that he might not allow anyone to go out or come in이라고 옮깁니다."
+    },
+    {
+     "ref": "15:20",
+     "phrase": "So Benhadad hearkened unto king Asa",
+     "grammar": "옛 동사 hearken unto",
+     "text": "hearken unto는 ‘~에게 귀를 기울이다, 말을 들어주다’입니다. WEB은 Ben Hadad listened to King Asa라고 옮깁니다."
+    },
+    {
+     "ref": "15:22",
+     "phrase": "none was exempted",
+     "grammar": "수동태(be + p.p.)",
+     "text": "‘아무도 면제되지 않았다’, 곧 온 유다가 빠짐없이 동원되었다는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "league",
+     "ko": "맹약, 동맹",
+     "ref": "15:19"
+    },
+    {
+     "w": "present",
+     "ko": "선물, 증여물",
+     "ref": "15:19"
+    },
+    {
+     "w": "hearkened",
+     "ko": "귀를 기울였다",
+     "ref": "15:20"
+    },
+    {
+     "w": "captains",
+     "ko": "대장들",
+     "ref": "15:20"
+    },
+    {
+     "w": "proclamation",
+     "ko": "포고령",
+     "ref": "15:22"
+    },
+    {
+     "w": "exempted",
+     "ko": "면제된",
+     "ref": "15:22"
+    },
+    {
+     "w": "timber",
+     "ko": "재목",
+     "ref": "15:22"
+    },
+    {
+     "w": "diseased",
+     "ko": "병든",
+     "ref": "15:23"
+    }
+   ],
+   "comments": [
+    {
+     "id": "k15-6",
+     "basis": "linked",
+     "text": "아사와 이스라엘 왕 바아샤 사이에는 그들의 모든 날 동안 전쟁이 있었습니다(15:16). 밀크 8강은 솔로몬 성전이 세워진 뒤 유대인들이 너무너무 타락해서 나라가 반으로 쪼개졌다고 설명합니다. 우리 한국이 북한과 남한으로 나뉘듯이 북이스라엘과 남유다로 나뉘었고, 북이스라엘이 기원전 722년에 먼저 망합니다. 이 장에서 서로 싸우는 유다 왕 아사와 이스라엘 왕 바아샤는 바로 그 두 나라의 왕입니다.",
+     "spans": [
+      {
+       "text": "나라가 반으로 쪼개졌다",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "pdf",
+       "source": "밀크 8강 「7년 환란」",
+       "file": "Milk/7년환란_밀크8강.pdf",
+       "pages": [
+        21,
+        22
+       ],
+       "excerpt": "솔로몬 성전과 나라의 분열\n…\n유대인들이 여기서 너무너무 타락을 합니다. 그래서 일단\n나라가 반으로 쪼개집니다. 우리 한국이 북한과 남한으로 나뉘듯이\n북이스라엘과 남유다로 나뉘어서, 북이스라엘이 기원전 722년에 먼저\n망합니다.",
+       "url": "https://youtu.be/JWWtATCgDkg?t=917"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "15:17-24(라마흐 건축, 시리아 왕 벤하닷과 맺은 맹약, 아사의 노년의 병과 죽음)을 따로 풀이한 근거는 찾지 못했습니다."
+   ]
+  },
+  {
+   "ref": "15:25-34",
+   "title": "나답과 바아샤 — 여로보암의 길",
+   "marks": [
+    {
+     "v": "15:26",
+     "t": "p",
+     "ko": "그가 이스라엘로 하여금 죄를 짓게 만든 그의 죄 가운데 살아갔더라",
+     "en": "in his sin wherewith he made Israel to sin"
+    },
+    {
+     "v": "15:29",
+     "t": "y",
+     "ko": "주께서 말씀하신 것, 곧 친히 그분의 종 실로족 아히쟈를 통하여 말씀하신 것에 따른 것이라",
+     "en": "according unto the saying of the LORD, which he spake by his servant Ahijah the Shilonite"
+    },
+    {
+     "v": "15:34",
+     "t": "p",
+     "ko": "주의 목전에 악을 행하고",
+     "en": "he did evil in the sight of the LORD"
+    }
+   ],
+   "story": "아사의 제이년에 여로보암의 아들 나답이 이스라엘 왕이 되어 이 년 동안 다스리며 아버지의 길 가운데 살았습니다. 나답과 온 이스라엘이 깁브돈을 포위하고 있을 때, 잇사칼 집안의 바아샤가 모반하여 그를 죽이고 왕이 되었습니다. 바아샤는 왕이 되자 여로보암의 온 집을 쳐서 숨 쉬는 자를 하나도 남기지 않았으니, 실로족 아히쟈를 통해 하신 주의 말씀대로였습니다. 바아샤도 티르자에서 이십사 년 동안 다스리며 여로보암의 길 가운데 살았습니다.",
+   "english": [
+    {
+     "ref": "15:26",
+     "phrase": "wherewith he made Israel to sin",
+     "grammar": "관계부사 wherewith / 사역 make + 목적어 + to부정사",
+     "text": "wherewith는 ‘그것으로써’(with which)입니다. 옛 영어에서는 사역동사 make 뒤에 to를 붙여 made Israel to sin(이스라엘이 죄짓게 했다)이라고도 썼습니다. 현대 영어는 made Israel sin입니다."
+    },
+    {
+     "ref": "15:29",
+     "phrase": "he left not to Jeroboam any that breathed",
+     "grammar": "옛 부정 어순(동사 + not)",
+     "text": "옛 영어는 조동사 없이 동사 뒤에 not을 두었습니다. 현대 영어로는 he didn't leave … anyone who breathed입니다. any that breathed는 ‘숨 쉬는 자는 누구든’입니다."
+    },
+    {
+     "ref": "15:30",
+     "phrase": "by his provocation wherewith he provoked the LORD God of Israel to anger",
+     "grammar": "같은 뿌리 낱말의 반복(provocation – provoked)",
+     "text": "명사 provocation과 동사 provoked를 겹쳐 써서 여로보암이 하나님을 노엽게 한 일을 강조합니다. provoke … to anger는 ‘노하게 하다’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "conspired",
+     "ko": "모반했다",
+     "ref": "15:27"
+    },
+    {
+     "w": "siege",
+     "ko": "포위",
+     "ref": "15:27"
+    },
+    {
+     "w": "slay",
+     "ko": "죽이다",
+     "ref": "15:28"
+    },
+    {
+     "w": "breathed",
+     "ko": "숨 쉬었다",
+     "ref": "15:29"
+    },
+    {
+     "w": "provocation",
+     "ko": "자극, 노엽게 함",
+     "ref": "15:30"
+    }
+   ],
+   "comments": [
+    {
+     "id": "k15-7",
+     "basis": "external",
+     "text": "스코필드는 열왕기상이 다윗의 죽음, 솔로몬의 통치와 성전 건축, 솔로몬의 죽음, 르호보암과 여로보암 아래에서 왕국이 나뉜 일, 그리고 그 뒤 두 왕국의 역사를 기록한다고 소개합니다. 이 단락은 그 가운데 이스라엘 왕 나답과 바아샤의 이야기입니다. 그는 이 대목에 「나답이 이스라엘의 왕위에 오름」, 「바아샤의 반역과 즉위」, 「유다 왕 아사와 이스라엘 왕 바아샤 사이의 전쟁」이라는 소제목을 붙였습니다. 여로보암의 아들 나답은 이 년 만에 바아샤에게 죽고, 바아샤가 대신 왕이 되었습니다(15:25-28).",
+     "spans": [
+      {
+       "text": "두 왕국의 역사",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 열왕기상 머리말과 15장 소제목",
+       "where": "1 Kings 머리말 · 1 Ki. 15:25, 27, 32 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "First Kings records the death of David, the reign of Solomon, the building of the temple, death of Solomon, division of the kingdom under Rehoboam and Jeroboam, and the history of the two kingdoms\n…\nAccession of Nadab over Israel.\n…\nRebellion and accession of Baasha over Israel.\n…\nWar between Asa, king of Judah, and Baasha, king of Israel.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ],
+   "notes": [
+    "15:29-30(여로보암의 집이 멸망한 까닭)과 15:33-34(바아샤의 통치)를 따로 풀이한 근거는 찾지 못했습니다."
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "여로보암왕의 제십팔 년에 아비얌이 유다 왕이 되어 예루살렘에서 삼 년 동안 다스렸습니다.",
+    "verse": "15:2"
+   },
+   {
+    "text": "아비얌은 아버지의 죄들 가운데 살았고, 그의 마음은 다윗의 마음처럼 주께 완전하지 않았습니다.",
+    "verse": "15:3"
+   },
+   {
+    "text": "그럼에도 주께서는 다윗으로 인하여 예루살렘에 한 등불을 주셨습니다.",
+    "verse": "15:4"
+   },
+   {
+    "text": "강의는 다윗이 우리야의 일을 저질렀는데도 하나님께서 그가 옳은 일만 했다고 하신 점을 짚습니다.",
+    "key": "k15-1"
+   },
+   {
+    "text": "하나님께서는 다윗의 잘못보다 뉘우치고 돌아온 것을 더 높이 봐 주십니다.",
+    "key": "k15-2"
+   },
+   {
+    "text": "아사는 그의 조상 다윗처럼 주의 눈에 옳은 것을 행했습니다.",
+    "verse": "15:11"
+   },
+   {
+    "text": "아사는 우상을 만든 어머니 마아카를 태후 자리에서 폐하고 그 우상을 키드론 시내 옆에서 태웠습니다.",
+    "verse": "15:13"
+   },
+   {
+    "text": "높은 처소들은 치워지지 않았는데, 스코필드는 그 관습이 깊이 뿌리박혀 있었다고 설명합니다.",
+    "key": "k15-3"
+   },
+   {
+    "text": "스코필드는 ‘완전한 마음’을 죄 없는 완전함이 아니라 하나님을 향한 온 마음과 진실함으로 풀이합니다.",
+    "key": "k15-4"
+   },
+   {
+    "text": "스코필드는 ‘작은 수풀’이 우상 숭배와 연관된 곳이며 그곳에 모신 우상까지 가리킨다고 설명합니다.",
+    "key": "k15-5"
+   },
+   {
+    "text": "유대인들의 타락으로 나라가 북이스라엘과 남유다로 쪼개졌고, 아사와 바아샤는 그 두 나라의 왕이었습니다.",
+    "key": "k15-6"
+   },
+   {
+    "text": "아사는 시리아 왕 벤하닷에게 은과 금을 보내며 바아샤와 맺은 맹약을 깨 달라고 청했습니다.",
+    "verse": "15:19"
+   },
+   {
+    "text": "아사는 라마흐의 돌과 재목으로 베냐민의 그바와 미즈파를 건축했습니다.",
+    "verse": "15:22"
+   },
+   {
+    "text": "아사가 죽고 그의 아들 여호샤팟이 왕이 되었습니다.",
+    "verse": "15:24"
+   },
+   {
+    "text": "바아샤는 나답을 죽이고 대신 이스라엘 왕이 되었습니다.",
+    "verse": "15:28"
+   },
+   {
+    "text": "바아샤가 여로보암의 온 집을 친 것은 실로족 아히쟈를 통해 하신 주의 말씀대로였습니다.",
+    "verse": "15:29"
+   },
+   {
+    "text": "스코필드는 열왕기상이 나뉜 두 왕국의 역사를 기록한다고 소개합니다.",
+    "key": "k15-7"
+   },
+   {
+    "text": "바아샤도 주의 목전에 악을 행하며 여로보암의 길 가운데 살아갔습니다.",
+    "verse": "15:34"
+   }
+  ],
+  "questions": [
+   {
+    "verse": "15:1",
+    "q": "아비얌이 유다를 다스리기 시작한 것은 누구의 제십팔 년입니까?",
+    "a": "느밧의 아들 여로보암왕"
+   },
+   {
+    "verse": "15:2",
+    "q": "아비얌은 예루살렘에서 몇 년 동안 통치했습니까?",
+    "a": "삼 년"
+   },
+   {
+    "verse": "15:2",
+    "q": "아비얌의 어머니는 누구입니까?",
+    "a": "아비샬롬의 딸 마아카"
+   },
+   {
+    "verse": "15:4",
+    "q": "주께서 다윗으로 인하여 예루살렘에서 아비얌에게 주신 것은 무엇입니까?",
+    "a": "한 등불"
+   },
+   {
+    "verse": "15:5",
+    "q": "다윗이 주의 명령에서 벗어난 단 하나의 일은 무엇입니까?",
+    "a": "히타이트족 우리야 사건"
+   },
+   {
+    "key": "k15-1",
+    "q": "강의는 열왕기상 14장 8절이 다윗을 두고 어떻게 말한다고 짚습니까?",
+    "a": "옳은 일을 많이 한 것이 아니라 옳은 일만 했다고 말합니다"
+   },
+   {
+    "key": "k15-1",
+    "q": "강의에 따르면 다윗이 우리야에게 저지른 두 가지 큰 죄는 무엇입니까?",
+    "a": "살인과 간음"
+   },
+   {
+    "key": "k15-2",
+    "q": "다윗의 죄를 딱 찔러 준 사람은 누구입니까?",
+    "a": "나단"
+   },
+   {
+    "key": "k15-2",
+    "q": "하나님께서 다윗의 잘못보다 더 높이 봐 주신 것은 무엇입니까?",
+    "a": "잘못을 하고 뉘우치고 돌아온 것"
+   },
+   {
+    "verse": "15:10",
+    "q": "아사는 예루살렘에서 몇 년 동안 통치했습니까?",
+    "a": "사십일 년"
+   },
+   {
+    "verse": "15:13",
+    "q": "아사가 마아카의 우상을 태운 곳은 어디입니까?",
+    "a": "키드론 시내"
+   },
+   {
+    "verse": "15:13",
+    "q": "아사는 어머니 마아카를 어떤 자리에서 폐했습니까?",
+    "a": "태후직"
+   },
+   {
+    "verse": "15:14",
+    "q": "아사 때에 치워지지 않은 것은 무엇입니까?",
+    "a": "높은 처소들"
+   },
+   {
+    "key": "k15-3",
+    "q": "스코필드에 따르면 높은 처소들은 언제부터 우상 숭배와 같은 것으로 여겨지게 되었습니까?",
+    "a": "모리아산과 성전이 예배의 중심으로 세워진 뒤"
+   },
+   {
+    "key": "k15-3",
+    "q": "성전이 세워진 뒤에도 높은 처소가 거듭 쓰인 것은 무엇을 보여 줍니까?",
+    "a": "그 관습이 깊이 뿌리박혀 있었다는 것"
+   },
+   {
+    "key": "k15-4",
+    "q": "스코필드는 ‘완전한(perfect)’ 마음을 무엇이라고 풀이합니까?",
+    "a": "하나님을 향한 온 마음, 한마음, 진실함"
+   },
+   {
+    "key": "k15-4",
+    "q": "스코필드에 따르면 ‘완전한 마음’은 어떤 완전함을 뜻하지 않습니까?",
+    "a": "죄가 하나도 없는 완전함"
+   },
+   {
+    "key": "k15-5",
+    "q": "KJV가 ‘grove’로 옮긴 히브리어 낱말은 무엇입니까?",
+    "a": "아세라"
+   },
+   {
+    "verse": "15:15",
+    "q": "아사가 주의 집 안으로 들인 봉헌물은 무엇입니까?",
+    "a": "은과 금과 기물들"
+   },
+   {
+    "verse": "15:17",
+    "q": "바아샤가 유다를 대적하여 건축한 곳은 어디입니까?",
+    "a": "라마흐"
+   },
+   {
+    "verse": "15:18",
+    "q": "아사가 은과 금을 보낸 시리아 왕은 누구입니까?",
+    "a": "벤하닷"
+   },
+   {
+    "verse": "15:18",
+    "q": "벤하닷이 거하던 곳은 어디입니까?",
+    "a": "다마스쿠스"
+   },
+   {
+    "key": "k15-6",
+    "q": "밀크 8강에 따르면 나라가 반으로 쪼개진 까닭은 무엇입니까?",
+    "a": "유대인들이 너무너무 타락했기 때문"
+   },
+   {
+    "key": "k15-6",
+    "q": "쪼개진 두 나라 가운데 먼저 망한 나라는 어디이며 언제입니까?",
+    "a": "북이스라엘, 기원전 722년"
+   },
+   {
+    "verse": "15:21",
+    "q": "라마흐 건축을 중지한 바아샤는 어디에서 지냈습니까?",
+    "a": "티르자"
+   },
+   {
+    "verse": "15:22",
+    "q": "아사가 라마흐의 돌과 재목으로 건축한 두 곳은 어디입니까?",
+    "a": "그바, 미즈파"
+   },
+   {
+    "verse": "15:23",
+    "q": "아사는 노년에 몸의 어디에 질병이 생겼습니까?",
+    "a": "두 발"
+   },
+   {
+    "verse": "15:24",
+    "q": "아사를 대신하여 통치한 아들은 누구입니까?",
+    "a": "여호샤팟"
+   },
+   {
+    "verse": "15:27",
+    "q": "바아샤가 나답을 친 곳은 어디입니까?",
+    "a": "깁브돈"
+   },
+   {
+    "verse": "15:29",
+    "q": "바아샤가 여로보암의 온 집을 친 것은 누구를 통하여 하신 주의 말씀에 따른 것입니까?",
+    "a": "실로족 아히쟈"
+   },
+   {
+    "verse": "15:33",
+    "q": "바아샤는 어디에서 몇 년 동안 이스라엘을 통치했습니까?",
+    "a": "티르자, 이십사 년"
+   },
+   {
+    "key": "k15-7",
+    "q": "스코필드는 열왕기상이 왕국이 나뉜 뒤 무엇을 기록한다고 소개합니까?",
+    "a": "두 왕국의 역사"
+   }
+  ],
+  "faq": [
+   {
+    "q": "다윗은 큰 죄를 지었는데 왜 옳은 일만 했다고 합니까?",
+    "key": "k15-1"
+   },
+   {
+    "q": "열왕기상 14장 8절과 15장 5절은 어떻게 이어집니까?",
+    "key": "k15-1"
+   },
+   {
+    "q": "다윗은 어떻게 죄에서 돌아왔습니까?",
+    "key": "k15-2"
+   },
+   {
+    "q": "하나님께서는 죄를 지은 사람의 무엇을 더 높이 보십니까?",
+    "key": "k15-2"
+   },
+   {
+    "q": "높은 처소들은 무엇이었습니까?",
+    "key": "k15-3"
+   },
+   {
+    "q": "아사는 개혁을 했는데 왜 높은 처소들이 남았습니까?",
+    "key": "k15-3"
+   },
+   {
+    "q": "높은 처소가 남아 있었는데 아사의 마음이 완전했다는 것은 무슨 뜻입니까?",
+    "key": "k15-4"
+   },
+   {
+    "q": "‘완전한 마음’은 죄를 짓지 않는다는 뜻입니까?",
+    "key": "k15-4"
+   },
+   {
+    "q": "아사의 어머니가 만든 ‘작은 수풀’의 우상은 무엇입니까?",
+    "key": "k15-5"
+   },
+   {
+    "q": "유다와 이스라엘은 어떻게 두 나라가 되었습니까?",
+    "key": "k15-6"
+   },
+   {
+    "q": "북이스라엘은 결국 어떻게 됩니까?",
+    "key": "k15-6"
+   },
+   {
+    "q": "열왕기상은 어떤 내용을 담은 책입니까?",
+    "key": "k15-7"
+   },
+   {
+    "q": "나답은 어떻게 왕위를 잃었습니까?",
+    "key": "k15-7"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "등불",
+    "verse": "15:4",
+    "text": "주께서 다윗으로 인하여 예루살렘에서 아비얌에게 주신 것입니다. 본문은 그 뜻을 그의 뒤를 이어 그의 아들을 세우시고 예루살렘을 확고히 세우신 것으로 풀어 줍니다."
+   },
+   {
+    "term": "태후",
+    "verse": "15:13",
+    "text": "마아카가 앉아 있던 자리(KJV queen)입니다. 아사는 우상을 만든 어머니 마아카를 이 자리에서 폐했습니다."
+   },
+   {
+    "term": "높은 처소",
+    "key": "k15-3",
+    "text": "높은 곳에 제단을 둔 예배 터입니다. 스코필드는 성전이 예배의 중심으로 세워진 뒤로 우상 숭배와 같은 것으로 여겨졌다고 설명합니다."
+   },
+   {
+    "term": "완전한 마음",
+    "key": "k15-4",
+    "text": "스코필드의 풀이로는 하나님을 향한 온 마음과 한마음과 진실함입니다. 죄 없는 완전함을 뜻하지 않습니다."
+   },
+   {
+    "term": "작은 수풀(grove)",
+    "key": "k15-5",
+    "text": "히브리어 아세라를 옮긴 말입니다. 스코필드는 이 말이 그곳에 모신 우상까지 가리키며, 높은 처소처럼 우상 숭배와 연관되었다고 설명합니다."
+   },
+   {
+    "term": "맹약(league)",
+    "verse": "15:19",
+    "text": "아사는 시리아 왕 벤하닷에게 ‘나와 당신 사이에’ 한 맹약이 있다고 말했습니다. 그리고 은과 금을 보내며, 벤하닷이 이스라엘 왕 바아샤와 맺은 맹약을 깨 달라고 했습니다."
+   },
+   {
+    "term": "유다 왕들의 연대기들의 책",
+    "verse": "15:7",
+    "text": "아비얌의 나머지 행적이 기록되어 있다고 본문이 말하는 책입니다."
+   }
+  ]
+ }
+}
