@@ -43,8 +43,8 @@ export function checkNovel(book, n) {
       for (const [c, x] of vs) { const k = `${c}:${x}`; if (!text[k]) E.push(`${at} 근거 ${k}가 단원 밖`); else { used.add(k); src += " " + text[k]; } }
     }
     // 대사는 뜻은 그대로 요즘 말투로(§2-4, 2026-10-24) — 근거 절에 인물의 말이 있을 때만 따옴표, 옛 말투는 대사·서술 모두 금지
-    if (/“/.test(p.t) && !/[“‘]|말하|이르|대답|외치|물어|물었|부르|명령|맹세|축복|저주|기도/.test(src)) E.push(`${at} 따옴표 대사가 있는데 근거 절에 인물의 말이 없음`);
-    const old = p.t.match(/[가-힣]*(하리라|하노라|느니라|이니라|하였더라|하더라|였더라|었더라|았더라|리로다|도다|할지니라|할지어다|하시니라|하라 하|소서|나이다|옵니다|하옵|하였느니라)(?=[s.,!?”’]|$)/g);
+    if (/“/.test(p.t) && !/[“”‘’]|말하|말씀|노래|애가|애도|이르|대답|외치|물어|물었|부르|명령|맹세|축복|저주|기도/.test(src)) E.push(`${at} 따옴표 대사가 있는데 근거 절에 인물의 말이 없음`);
+    const old = p.t.match(/[가-힣]*(하리라|하노라|느니라|이니라|하였더라|하더라|였더라|었더라|았더라|리로다|도다|할지니라|할지어다|하시니라|하라 하|소서|나이다|옵니다|하옵|하였느니라)(?=[\s.,!?”’]|$)/g);
     if (old) E.push(`${at} 옛 말투: ${[...new Set(old)].slice(0, 5).join(", ")}`);
     if ((p.t.match(/“/g) || []).length !== (p.t.match(/”/g) || []).length) E.push(at + " 따옴표 짝이 안 맞음");
     // 구절에 기반한 이야기만(§2-4) — 따옴표 밖 서술에 해설·추측·교훈 말투가 있으면 실패
@@ -57,6 +57,21 @@ export function checkNovel(book, n) {
     const miss = (verses(s.ref) || []).filter(([c, x]) => !used.has(`${c}:${x}`)).map(([c, x]) => `${c}:${x}`);
     if (miss.length) E.push(`단락 ${s.ref} 「${s.title}」에서 이야기에 없는 절: ${miss.join(", ")}`);
   }
+  // 문장 생김새(§2-4, 2026-10-24): 끝 두 글자가 같은 서술 문장을 세 번 잇지 않고, '~ㅆ다'(과거형) 서술 문장을 다섯 번 넘게 잇지 않으며, '했다'로 끝나는 문장은 30% 이하
+  let narr = 0, haetda = 0;
+  d.paras.forEach((p, i) => {
+    const sents = String(p.t || "").replace(/“[^”]*”/g, (q) => q.replace(/[.!?]/g, "")).split(/(?<=[.!?…])s+/).map((x) => x.trim()).filter(Boolean);
+    let last = null, run = 0, past = 0;
+    for (const x of sents) {
+      if (/[”’]$/.test(x) || /^[“‘]/.test(x)) { last = null; run = 0; past = 0; continue; }
+      const k = x.replace(/[.!?…]+$/, "").slice(-2); narr++; if (k === "했다") haetda++;
+      run = k === last ? run + 1 : 1; last = k;
+      const pc = k.charCodeAt(0) - 0xac00; past = k[1] === "다" && pc >= 0 && pc % 28 === 20 ? past + 1 : 0;
+      if (past === 6) E.push(`${i + 1}번째 문단 과거형 '~ㅆ다' 문장 여섯 번 연속(문장 생김새를 바꿀 것): …${x.slice(-24)}`);
+      if (run === 3) E.push(`${i + 1}번째 문단 같은 어미 '${k}' 세 번 연속: …${x.slice(-24)}`);
+    }
+  });
+  if (narr >= 10 && haetda / narr > 0.3) E.push(`'했다'로 끝나는 문장 ${Math.round(haetda / narr * 100)}%(30% 이하)`);
   // 분량은 단원 본문 글자 수에 맞춘다(구절로만 풀면 본문 길이와 비슷하다). 너무 길면 해설로 채운 것이다
   const lo = Math.round(vChars * 0.7), hi = Math.round(vChars * 1.5) + 300;
   if (chars < lo || chars > hi) E.push(`분량 ${chars}자(이 단원 본문 ${vChars}자 → ${lo}–${hi}자)`);
