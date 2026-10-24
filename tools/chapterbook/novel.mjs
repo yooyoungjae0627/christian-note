@@ -1,7 +1,7 @@
 // 단원 책 서두의 「소설로 먼저 읽기」(지침 §2-4, 모든 성경 책 공통, 사용자 지시 2026-10-23) — 성경 본문이 나오기 전에 단원 전체 이야기를 소설처럼 풀어 쓴다.
 //   node tools/chapterbook/novel.mjs <genesis|1sam|2sam|1ki|2ki …> check [N …]   원고 검사 — 종료 코드 0이어야 빌드
 // 원고: 단원 원고와 같은 폴더의 <책>-novelNN.json  { "paras": [ { "t": "문단", "refs": ["1:1-8"] } ] }
-// 검사: 문단 근거 절이 단원 범위 안, 단원의 모든 단락을 문단 근거가 덮음, “ ” 안 글자는 그 문단 근거 절 본문에 글자 그대로, 분량.
+// 검사: 문단 근거 절이 단원 범위 안, 단원의 모든 단락을 문단 근거가 덮음, 대사는 근거 절에 말이 있을 때만·옛 말투 금지, 해설 말투 금지, 분량.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -42,7 +42,10 @@ export function checkNovel(book, n) {
       const vs = verses(r); if (!vs) { E.push(`${at} 근거 형식 ${r}`); continue; }
       for (const [c, x] of vs) { const k = `${c}:${x}`; if (!text[k]) E.push(`${at} 근거 ${k}가 단원 밖`); else { used.add(k); src += " " + text[k]; } }
     }
-    for (const q of p.t.matchAll(/“([^”]*)”/g)) if (!flat(src).includes(flat(q[1]))) E.push(`${at} 따옴표 안 글자가 근거 절 본문에 없음: “${q[1].slice(0, 40)}”`);
+    // 대사는 뜻은 그대로 요즘 말투로(§2-4, 2026-10-24) — 근거 절에 인물의 말이 있을 때만 따옴표, 옛 말투는 대사·서술 모두 금지
+    if (/“/.test(p.t) && !/[“‘]|말하|이르|대답|외치|물어|물었|부르|명령|맹세|축복|저주|기도/.test(src)) E.push(`${at} 따옴표 대사가 있는데 근거 절에 인물의 말이 없음`);
+    const old = p.t.match(/[가-힣]*(하리라|하노라|느니라|이니라|하였더라|하더라|였더라|었더라|았더라|리로다|도다|할지니라|할지어다|하시니라|하라 하|소서|나이다|옵니다|하옵|하였느니라)(?=[s.,!?”’]|$)/g);
+    if (old) E.push(`${at} 옛 말투: ${[...new Set(old)].slice(0, 5).join(", ")}`);
     if ((p.t.match(/“/g) || []).length !== (p.t.match(/”/g) || []).length) E.push(at + " 따옴표 짝이 안 맞음");
     // 구절에 기반한 이야기만(§2-4) — 따옴표 밖 서술에 해설·추측·교훈 말투가 있으면 실패
     const narr = p.t.replace(/“[^”]*”/g, "");
@@ -73,7 +76,7 @@ export function novelHtml(book, n, mk = () => "") {
     if (u.parts.length > 1 && c !== ch) { o += `<div class="nv-ch">${B.ko} ${c}장</div>`; ch = c; }
     o += `<p class="nv">${esc(p.t)}</p>`;
   });
-  o += `<p class="nv-note">이 이야기는 ${esc(B.ko)} ${range} 본문(표준킹제임스성경)의 구절만으로 풀어 썼습니다. “ ” 안의 말은 성경 본문 글자 그대로입니다. 이제 칠판의 본문으로 한 단락씩 읽어 봅니다.</p></div></section>`;
+  o += `<p class="nv-note">이 이야기는 ${esc(B.ko)} ${range} 본문(표준킹제임스성경)의 구절만으로 풀어 썼습니다. “ ” 안의 말은 본문의 뜻을 바꾸지 않고 요즘 말투로 옮긴 것입니다. 이제 칠판의 본문으로 한 단락씩 읽어 봅니다.</p></div></section>`;
   return { html: NOVEL_CSS + o, nav: [["novel", "소설로 먼저 읽기", 0]] };
 }
 const NOVEL_CSS = `<style>
