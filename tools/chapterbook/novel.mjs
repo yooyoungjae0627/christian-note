@@ -98,7 +98,9 @@ export function novelHtml(book, n, mk = () => "") {
     if (i === d.paras.length - 1) o += `<div class="nv-end">`;
     const c = +String(p.refs[0]).split(":")[0];
     if (u.parts.length > 1 && c !== ch) { o += `<div class="nv-ch">${B.ko} ${c}장</div>`; ch = c; }
-    o += `<p class="nv">${esc(p.t)}</p>`;
+    else if (p.scene && i > 0) o += `<div class="nv-br">◆</div>`; // 장면 바꿈(§2-4 서술 방식 본보기)
+    // 노래·시는 줄을 나눠 운문으로(줄바꿈 \n). 그 밖의 문단은 산문
+    o += p.poem ? `<div class="nv-poem">${p.t.split("\n").map((l) => `<p>${esc(l)}</p>`).join("")}</div>` : `<p class="nv">${esc(p.t)}</p>`;
   });
   o += `<p class="nv-note">이 이야기는 ${esc(B.ko)} ${range} 본문(표준킹제임스성경)의 구절만으로 풀어 썼습니다. “ ” 안의 말은 본문의 뜻을 바꾸지 않고 요즘 말투로 옮긴 것입니다. 이제 칠판의 본문으로 한 단락씩 읽어 봅니다.</p></div></section>`;
   return { html: NOVEL_CSS + o, nav: [["novel", "소설로 먼저 읽기", 0]] };
@@ -111,6 +113,11 @@ const NOVEL_CSS = `<style>
 .novel .nv-ch{font:700 9pt "Noto Sans KR",sans-serif;letter-spacing:.14em;color:#c9973b;text-align:center;margin:6mm 0 3.5mm;break-after:avoid;}
 .novel .nv-ch:before,.novel .nv-ch:after{content:"—";margin:0 2mm;color:#d8c08a;}
 .novel .nv-end{break-inside:avoid;}
+.novel .nv-br{text-align:center;color:#c9973b;font-size:8pt;letter-spacing:1em;margin:4mm 0 3.5mm;break-after:avoid;}
+.novel .gold + .nv-br{display:none;}
+.novel .nv-br + p.nv{text-indent:0;}
+.novel .nv-poem{margin:1.5mm 0 3mm 7mm;padding-left:3mm;border-left:.6mm solid #e6d3a3;break-inside:avoid;}
+.novel .nv-poem p{font-size:10.4pt;line-height:1.8;margin:0 0 .6mm;}
 .novel .nv-note{font:8.6pt/1.75 "Noto Sans KR",sans-serif;color:#6b6b6b;border-top:.2mm solid #e2d6b8;padding-top:2.5mm;margin-top:6mm;}
 </style>`;
 
