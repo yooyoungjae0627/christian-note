@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="b34" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0.06"/>
+    </linearGradient>
+    <radialGradient id="h34" cx="50%" cy="0%" r="70%">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- 위에서 내리는 빛: 하나님께서 해 주실 것에 대한 자신감 -->
+  <path d="M30 58 Q100 0 170 58 Z" fill="url(#h34)"/>
+  <path d="M30 58 Q100 0 170 58" fill="none" stroke="#e8c983" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="88,40 112,40 132,150 68,150" fill="url(#b34)"/>
+  <!-- 바닥 -->
+  <path d="M16 182 Q100 160 184 182" fill="none" stroke="#e9ecf5" stroke-width="1.6" stroke-opacity="0.5" stroke-linecap="round"/>
+  <!-- 내려놓은 활: 사냥꾼의 자신감 -->
+  <g fill="none" stroke="#ff5a6a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85">
+    <path d="M24 170 Q60 132 98 172"/>
+    <line x1="24" y1="170" x2="98" y2="172" stroke-width="1.2"/>
+  </g>
+  <!-- 내려놓은 화살들 -->
+  <g fill="none" stroke="#ff5a6a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85">
+    <line x1="112" y1="176" x2="176" y2="170"/>
+    <polyline points="170,166 176,170 170,175"/>
+    <line x1="116" y1="183" x2="178" y2="179"/>
+    <polyline points="172,175 178,179 172,183"/>
+  </g>
+  <!-- 무릎 꿇고 위를 바라보는 사람 -->
+  <g fill="none" stroke="#e9ecf5" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="104" r="7" fill="#1b2650" fill-opacity="0.6"/>
+    <line x1="100" y1="111" x2="100" y2="134"/>
+    <polyline points="88,102 100,118 112,102"/>
+    <polyline points="100,134 90,146 104,152"/>
+  </g>
+  <!-- 넘치는 은혜 -->
+  <g fill="#a6f04a" fill-opacity="0.9">
+    <circle cx="80" cy="74" r="1.8"/><circle cx="122" cy="68" r="1.8"/><circle cx="100" cy="60" r="2.2"/><circle cx="66" cy="94" r="1.5"/><circle cx="136" cy="90" r="1.5"/>
+  </g>
+</svg>
