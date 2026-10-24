@@ -56,6 +56,9 @@ function finish(raw, final, title, nav, pages) {
   fs.writeFileSync(final, doc.saveToBuffer("compress,garbage").asUint8Array());
   return removed;
 }
+// 방금 쓴 큰 파일을 백신 등이 잠깐 잡고 있으면 Windows가 UNKNOWN/EBUSY로 열기를 거부한다 → 잠시 기다렸다 다시(2026-10-24)
+const wait = (ms) => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
+function retryFs(fn) { for (let i = 0; ; i++) { try { return fn(); } catch (e) { if (i >= 20 || !/UNKNOWN|EBUSY|EPERM|EACCES/.test(e.code || e.message)) throw e; wait(1500); } } }
 async function epub(final) {
   const tool = path.join(TOPIC, "pdf2epub-chapterbook.mjs");
   fs.writeFileSync(tool, fs.readFileSync(path.join(R, "tools/pdf2epub.mjs")));
@@ -63,7 +66,7 @@ async function epub(final) {
   execFileSync(process.execPath, [tool, final, out, "--width", "1150", "--quality", "78"], { stdio: "inherit" });
   // 쪽마다 보이지 않는 글자 층(본문 검색·대조용)
   const J = await mod("jszip"); const JSZip = J.loadAsync ? J : J.default;
-  const zip = await JSZip.loadAsync(fs.readFileSync(out));
+  const zip = await JSZip.loadAsync(retryFs(() => fs.readFileSync(out)));
   const doc = mupdf.Document.openDocument(fs.readFileSync(final), "application/pdf");
   for (const name of Object.keys(zip.files)) {
     const m = name.match(/^OEBPS\/p(\d+)\.xhtml$/); if (!m) continue;
@@ -74,7 +77,8 @@ async function epub(final) {
   const css = Object.keys(zip.files).find((n) => /\.css$/.test(n));
   if (css) zip.file(css, (await zip.file(css).async("string")) + ".text-layer{position:absolute;left:0;top:0;opacity:0;pointer-events:none;width:1px;height:1px;overflow:hidden;font-size:1px;line-height:1px;}");
   zip.file("mimetype", "application/epub+zip", { compression: "STORE" });
-  fs.writeFileSync(out, await zip.generateAsync({ type: "nodebuffer", mimeType: "application/epub+zip", compression: "DEFLATE" }));
+  const buf = await zip.generateAsync({ type: "nodebuffer", mimeType: "application/epub+zip", compression: "DEFLATE" });
+  retryFs(() => fs.writeFileSync(out, buf));
   return out;
 }
 function printLoop(name, render) {
@@ -101,16 +105,22 @@ if (rest[0] === "unit") {
   // 단원 책: 표지 → 읽는 법 → 차례 → 장마다 [장 머리·인물·지도·단락] → 단원 학습 자료 → 참고 자료
   const { loadUnit, unitOut, label, check, useBook } = await import("./units.mjs");
   useBook(book);
+  const novel = await import("./novel.mjs");
   const failed = [];
   for (const n of rest.slice(1).map(Number)) {
    try {
     const errs = check(n); if (errs.length) throw new Error("단원 원고 검사 실패: " + errs.join("; "));
+    // 본문 앞 「소설로 먼저 읽기」(지침 §2-4, 모든 책 공통) — 원고가 있으면 검사를 통과해야 빌드, 없으면 경고
+    const nv = novel.hasNovel(book, n) ? novel : null;
+    if (!nv) console.error(`경고: ${book} 단원 ${n} 「소설로 먼저 읽기」 원고 없음(지침 §2-4) — 완성본이 아님`);
+    if (nv) { const ne = nv.checkNovel(book, n); if (ne.length) throw new Error("소설 원고 검사 실패: " + ne.join("; ")); }
     const u = loadUnit(n);
     await ensureQr(u.parts.flatMap((x) => urlsOf(x.d)));
     const all = { sections: u.parts.flatMap((x) => x.d.sections), learning: u.learning };
     const render = (pages, withMk) => {
       const mk = withMk ? marker : () => "";
       let nav = [], body = "", comments = {};
+      if (nv) { const s = nv.novelHtml(book, n, mk); nav.push(...s.nav); body += s.html; }
       for (const x of u.parts) {
         const a = chapterParts(book, x.ch, x.d, { p: `c${x.ch}-`, qr: false, mk, head: x.full ? null : { h1: label(x), nav: label(x) } });
         nav.push(...a.nav); body += a.html; Object.assign(comments, a.comments);

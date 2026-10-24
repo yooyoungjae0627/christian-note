@@ -21,6 +21,8 @@ export function useBook(b) { if (!SPEC[b]) throw new Error("단원 책이 아님
 useBook("genesis");
 export const unitFile = (n) => path.join(R, SPEC[BOOK].dir, SPEC[BOOK].file(String(n).padStart(2, "0")));
 export const unitOut = (u) => `${BOOKS[BOOK].ko}_${String(u.unit).padStart(2, "0")}_${u.title.replace(/\s+/g, "_")}`;
+export const unitDir = () => path.join(R, SPEC[BOOK].dir);
+export const isUnitBook = (b) => !!SPEC[b];
 const LIMIT = { summary: [12, 22], questions: [25, 41], faq: [12, 14], glossary: [4, 12] };
 
 const pv = (r) => { const [c, v] = r.split(":").map(Number); return [c, v]; };
