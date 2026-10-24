@@ -33,9 +33,15 @@ export function checkNovel(book, n) {
   for (const p of u.parts) for (const v of chapterVerses(book, p.ch)) { const [c, x] = v.ref.split(":").map(Number); if (x >= p.from && x <= p.to) { text[`${c}:${x}`] = v.ko; nVerse++; vChars += v.ko.length; } }
   if (!Array.isArray(d.paras) || !d.paras.length) return ["문단 없음"];
   const used = new Set(); let chars = 0;
+  // 해설에 근거한 속마음(§2-4 소설 장치 6) — basis에 단 해설 id는 이 단원 장별 원고의 해설이어야 한다
+  const commentIds = new Set(u.parts.flatMap((x) => x.d.sections.flatMap((s) => s.comments.map((c) => c.id))));
   d.paras.forEach((p, i) => {
     const at = `${i + 1}번째 문단`;
     if (!p.t || typeof p.t !== "string") { E.push(at + " 글 없음"); return; }
+    if (p.basis !== undefined) {
+      if (!Array.isArray(p.basis) || !p.basis.length) E.push(at + " basis는 해설 id 목록이어야 함");
+      else for (const b of p.basis) if (!commentIds.has(b)) E.push(`${at} basis 해설 id가 이 단원에 없음: ${b}`);
+    }
     chars += p.t.length;
     if (/["']/.test(p.t)) E.push(at + " 곧은 따옴표 — 대사는 “ ”로");
     if (/[A-Za-z]/.test(p.t)) E.push(at + " 영어 글자");
