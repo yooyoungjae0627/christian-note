@@ -1,5 +1,5 @@
-"""완성 PDF·EPUB 검사(Genesis/원본/verify_chapters.py를 사무엘상용으로 옮김). 원고 근거 대조는 check_content.mjs가 한다.
-   번들 Python -X utf8 Samuel/원본/verify_samuel.py [장 …]"""
+"""완성 PDF·EPUB 검사(창세기/원본/verify_chapters.py를 사무엘상용으로 옮김). 원고 근거 대조는 check_content.mjs가 한다.
+   번들 Python -X utf8 사무엘상·하/원본/verify_samuel.py [장 …]"""
 import json,re,zipfile,sys,logging,xml.etree.ElementTree as ET
 import pdfplumber
 logging.getLogger('pdfminer').setLevel(logging.ERROR)
@@ -13,7 +13,7 @@ CHAPTERS=[int(x) for x in sys.argv[1:]] or list(range(1,16))
 for ch in CHAPTERS:
  errors=[];d=json.loads((B/f'chapter{ch:02}.json').read_text(encoding='utf-8'));L=d['learning']
  comments={c['id']:c for s in d['sections'] for c in s['comments']}
- pdfpath=R/f'Samuel/사무엘상_{ch:02}장_교재.pdf';epubpath=pdfpath.with_suffix('.epub');pdf=PdfReader(pdfpath)
+ pdfpath=R/f'사무엘상·하/사무엘상_{ch:02}장_교재.pdf';epubpath=pdfpath.with_suffix('.epub');pdf=PdfReader(pdfpath)
  with pdfplumber.open(pdfpath) as pp:pdftext='\n'.join(re.sub(r'\n\s*\d+\s*$','',p.extract_text() or '') for p in pp.pages)
  selected=[v for v in vs if v['ref'].split(':')[0]==str(ch)]
  with zipfile.ZipFile(epubpath) as z:

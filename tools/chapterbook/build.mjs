@@ -2,7 +2,7 @@
 //   node tools/chapterbook/build.mjs genesis 12 [13 …]     장별 책
 //   node tools/chapterbook/build.mjs genesis all             합본(장별 원고를 그대로 묶음)
 //   node tools/chapterbook/build.mjs genesis|1sam|2sam|1ki|2ki unit 1 [2 …]    이야기 단원별 책(지침 §0-1, §0-2, §0-3)
-//   --out <폴더>  결과를 다른 폴더에(샘플용). 기본은 Genesis/, Samuel/ 또는 Kings/
+//   --out <폴더>  결과를 다른 폴더에(샘플용). 기본은 창세기/, 사무엘상·하/ 또는 열왕기상·하/
 // Edge 인쇄는 Claude Code 샌드박스 밖에서 실행한다(README 빌드 환경 메모).
 import fs from "node:fs";
 import path from "node:path";

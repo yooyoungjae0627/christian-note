@@ -1,5 +1,5 @@
 // 교회 자료 전체(Theme·Milk PDF 쪽 글자 + 「다윗의 삶」 강의 스크립트)에서 낱말을 찾는다.
-//   node Samuel/원본/search.mjs 한나 [언약궤 …]     → 낱말마다 걸린 곳(파일·쪽/시각)과 앞뒤 글
+//   node 사무엘상·하/원본/search.mjs 한나 [언약궤 …]     → 낱말마다 걸린 곳(파일·쪽/시각)과 앞뒤 글
 //   --ctx 120  앞뒤 글자 수 / --max 40  낱말당 최대 결과 / --only pdf|transcript
 // 결과는 후보일 뿐이다. 채택할 때는 그 쪽·그 시각 앞뒤를 직접 읽고 맥락을 확인한다.
 import fs from 'node:fs';
@@ -12,17 +12,17 @@ const opt = (k, d) => { const i = args.indexOf(k); if (i < 0) return d; const v 
 const ctx = +opt('--ctx', 90), max = +opt('--max', 40), only = opt('--only', '');
 
 export function loadCorpus() {
-  const books = JSON.parse(fs.readFileSync(path.join(R, 'Genesis/자료검토/전체_PDF_본문색인.json'), 'utf8')).books;
+  const books = JSON.parse(fs.readFileSync(path.join(R, '창세기/자료검토/전체_PDF_본문색인.json'), 'utf8')).books;
   return books;
 }
 export function loadTranscripts() {
-  const dir = path.join(R, 'Samuel/강의스크립트');
+  const dir = path.join(R, '사무엘상·하/강의스크립트');
   return fs.readdirSync(dir).filter(f => f.endsWith('.md')).sort().map(f => {
     const lines = fs.readFileSync(path.join(dir, f), 'utf8').split(/\r?\n/)
       .map(l => l.match(/^- \[([\d:]+)\]\((https:\/\/youtu\.be\/[\w-]{11}\?t=\d+)\) (.*)$/)).filter(Boolean)
       .map(m => ({ time: m[1], url: m[2], text: m[3] }));
     const title = fs.readFileSync(path.join(dir, f), 'utf8').match(/^# (.*)$/m)[1];
-    return { file: `Samuel/강의스크립트/${f}`, title, lines };
+    return { file: `사무엘상·하/강의스크립트/${f}`, title, lines };
   });
 }
 

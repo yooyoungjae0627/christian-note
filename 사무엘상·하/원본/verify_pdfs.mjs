@@ -3,10 +3,10 @@ const require=createRequire(path.join(os.tmpdir(),'topicbook','package.json'));c
 const temp=path.join(os.tmpdir(),'samuel-chapters');fs.mkdirSync(temp,{recursive:true});const mode=process.argv[2],chapters=process.argv.slice(3).map(Number);
 for(const ch of (chapters.length?chapters:[...Array(15)].map((_,i)=>i+1))){
  const nn=String(ch).padStart(2,'0');
- const data=JSON.parse(fs.readFileSync(`Samuel/원본/chapter${nn}.json`,'utf8'));
+ const data=JSON.parse(fs.readFileSync(`사무엘상·하/원본/chapter${nn}.json`,'utf8'));
  const entries=data.sections.flatMap(s=>s.comments.flatMap(c=>c.evidence.map((e,i)=>({...e,id:c.id+'-'+i}))));
  if(mode==='qr'){for(const e of entries.filter(e=>e.url))await QRCode.toFile(path.join(temp,e.id+'.png'),e.url,{width:250,margin:4,errorCorrectionLevel:'M'});console.log({chapter:ch,qr:entries.filter(e=>e.url).length});continue;}
- const doc=mupdf.Document.openDocument(fs.readFileSync(`Samuel/사무엘상_${nn}장_교재.pdf`),'application/pdf');let decoded=0,internal=0;const errors=[],actual=[],pageStats=[];
+ const doc=mupdf.Document.openDocument(fs.readFileSync(`사무엘상·하/사무엘상_${nn}장_교재.pdf`),'application/pdf');let decoded=0,internal=0;const errors=[],actual=[],pageStats=[];
  for(let i=0;i<doc.countPages();i++){
   const page=doc.loadPage(i),links=page.getLinks();
   for(const l of links.filter(l=>!l.isExternal())){internal++;try{const d=doc.resolveLinkDestination(l.getURI());if(d.page<0||d.page>=doc.countPages())errors.push(`bad internal destination page ${i+1}`);}catch(e){errors.push(e.message);}}
@@ -20,5 +20,5 @@ for(const ch of (chapters.length?chapters:[...Array(15)].map((_,i)=>i+1))){
   const st=page.toStructuredText();const obj=JSON.parse(st.asJSON());pageStats.push({page:i+1,text:st.asText(),blocks:obj.blocks});st.destroy();page.destroy();
  }
  const expected=entries.filter(e=>e.url).map(e=>e.url).sort();if(JSON.stringify(actual.sort())!==JSON.stringify(expected))errors.push('QR URL multiset differs from evidence');
- const result={chapter:ch,pages:doc.countPages(),qr_expected:expected.length,qr_decoded:decoded,internal_links:internal,errors};fs.writeFileSync(`Samuel/원본/chapter${nn}-pdf-check.json`,JSON.stringify(result,null,2));fs.writeFileSync(path.join(temp,`ch${ch}-pages.json`),JSON.stringify(pageStats));console.log(result);doc.destroy();if(errors.length)process.exitCode=1;
+ const result={chapter:ch,pages:doc.countPages(),qr_expected:expected.length,qr_decoded:decoded,internal_links:internal,errors};fs.writeFileSync(`사무엘상·하/원본/chapter${nn}-pdf-check.json`,JSON.stringify(result,null,2));fs.writeFileSync(path.join(temp,`ch${ch}-pages.json`),JSON.stringify(pageStats));console.log(result);doc.destroy();if(errors.length)process.exitCode=1;
 }

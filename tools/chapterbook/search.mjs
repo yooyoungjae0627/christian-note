@@ -1,9 +1,9 @@
 // 장별 해설서 2판 근거 찾기 — 성경 해석 지침의 순위대로 자료 전체에서 낱말을 찾는다.
 //   node tools/chapterbook/search.mjs 아브람 하란 [--ctx 120] [--max 40] [--only ff|pdf|ext|sbc]
 //   [1순위·영상] 첫열매들 강의 스크립트 memory-bank/첫열매들_강의스크립트/
-//   [1순위·교재] Theme·Milk PDF 쪽 글자 (Genesis/자료검토/전체_PDF_본문색인.json)
+//   [1순위·교재] Theme·Milk PDF 쪽 글자 (창세기/자료검토/전체_PDF_본문색인.json)
 //   [2순위·외부] 스코필드 관주 해설 memory-bank/세대주의_해설/ (장별 md + 1917판 OCR 전체)
-//   [3순위·이이레] 「다윗의 삶」 스크립트 Samuel/강의스크립트/
+//   [3순위·이이레] 「다윗의 삶」 스크립트 사무엘상·하/강의스크립트/
 // 결과는 후보일 뿐이다. 채택할 때는 그 쪽·그 시각 앞뒤를 직접 읽고 맥락을 확인한다.
 import fs from "node:fs";
 import path from "node:path";
@@ -21,8 +21,8 @@ export function loadTranscriptDir(dir) {
   });
 }
 export const loadFirstfruits = () => loadTranscriptDir("memory-bank/첫열매들_강의스크립트");
-export const loadSbc = () => loadTranscriptDir("Samuel/강의스크립트");
-export const loadPdf = () => JSON.parse(fs.readFileSync(path.join(R, "Genesis/자료검토/전체_PDF_본문색인.json"), "utf8")).books;
+export const loadSbc = () => loadTranscriptDir("사무엘상·하/강의스크립트");
+export const loadPdf = () => JSON.parse(fs.readFileSync(path.join(R, "창세기/자료검토/전체_PDF_본문색인.json"), "utf8")).books;
 export function loadExternal() {
   const d = path.join(R, "memory-bank/세대주의_해설");
   return walk(d).filter((f) => /\.(md|txt)$/.test(f) && !f.endsWith("README.md")).map((f) => ({ file: rel(f), text: fs.readFileSync(f, "utf8") }));

@@ -1,6 +1,6 @@
-"""사무엘상 장별 교재 빌드 — Genesis/원본/build_reference_chapters.py를 사무엘상용으로 옮긴 것.
+"""사무엘상 장별 교재 빌드 — 창세기/원본/build_reference_chapters.py를 사무엘상용으로 옮긴 것.
 같은 기준 스타일(reference_style.css)로 PDF를 만들고, 고정 배치 EPUB을 만든다.
-   번들 Python -X utf8 Samuel/원본/build_samuel.py [장 …]"""
+   번들 Python -X utf8 사무엘상·하/원본/build_samuel.py [장 …]"""
 import json,re,html,os,sys,subprocess,zipfile,logging
 import pdfplumber
 logging.getLogger('pdfminer').setLevel(logging.ERROR)

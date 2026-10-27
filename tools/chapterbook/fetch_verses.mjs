@@ -1,8 +1,8 @@
 // 장별 해설서 2판 본문 받기 — 표준킹제임스성경 한영대역(tools/kjv.mjs) 글자 그대로.
-//   node tools/chapterbook/fetch_verses.mjs   → Genesis/원본/2판/verses-genesis.json, Samuel/원본/2판/verses-1sam.json·verses-2sam.json, Kings/원본/2판/verses-1ki.json·verses-2ki.json
+//   node tools/chapterbook/fetch_verses.mjs   → 창세기/원본/2판/verses-genesis.json, 사무엘상·하/원본/2판/verses-1sam.json·verses-2sam.json, 열왕기상·하/원본/2판/verses-1ki.json·verses-2ki.json
 import fs from "fs";
 import { chapter } from "../kjv.mjs";
-const BOOKS = [["창세기", 50, "Genesis/원본/2판/verses-genesis.json"], ["사무엘상", 31, "Samuel/원본/2판/verses-1sam.json"], ["사무엘하", 24, "Samuel/원본/2판/verses-2sam.json"], ["열왕기상", 22, "Kings/원본/2판/verses-1ki.json"], ["열왕기하", 25, "Kings/원본/2판/verses-2ki.json"]];
+const BOOKS = [["창세기", 50, "창세기/원본/2판/verses-genesis.json"], ["사무엘상", 31, "사무엘상·하/원본/2판/verses-1sam.json"], ["사무엘하", 24, "사무엘상·하/원본/2판/verses-2sam.json"], ["열왕기상", 22, "열왕기상·하/원본/2판/verses-1ki.json"], ["열왕기하", 25, "열왕기상·하/원본/2판/verses-2ki.json"]];
 for (const [book, n, out] of BOOKS) {
   if (fs.existsSync(out)) continue; // 이미 받은 책은 다시 받지 않는다(본문 고치지 않음)
   const all = [];

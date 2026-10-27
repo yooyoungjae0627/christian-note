@@ -2,7 +2,7 @@
 
 규칙 원본: [docs/policy/장별해설서_제작지침.md](../../docs/policy/장별해설서_제작지침.md) · 근거 순위: [docs/policy/성경해석_지침.md](../../docs/policy/성경해석_지침.md).
 이 문서는 **원고(JSON)를 어떻게 쓰고 검사하는지**만 적는다. 규칙이 어긋나면 지침이 우선한다.
-샘플(형식의 본보기): `Genesis/원본/2판/chapter12.json`(1순위 위주), `Samuel/원본/2판/1sam-17.json`(3순위·2순위 위주).
+샘플(형식의 본보기): `창세기/원본/2판/chapter12.json`(1순위 위주), `사무엘상·하/원본/2판/1sam-17.json`(3순위·2순위 위주).
 
 ## 1. 작업 순서 (장 하나)
 
@@ -18,11 +18,11 @@
 7. `node tools/chapterbook/check.mjs <책> <장>` — **종료 코드 0**이 될 때까지 고친다.
 8. 빌드·시각 검수는 총괄 세션이 한다(`build.mjs`, `render.mjs`).
 
-창세기·사무엘상·사무엘하는 장별 원고를 이야기 단원별 책으로 묶는다(지침 §0-1, §0-2 — 사무엘은 권별로 따로: `Samuel/원본/단원/units-1sam.json`·`units-2sam.json`, 원고 `1sam-unitNN.json`·`2sam-unitNN.json`, 명령에 책 이름을 붙여 `units.mjs 1sam check`, `build.mjs 1sam unit N`). 창세기는: 단원 목록 `Genesis/원본/단원/units.json`, 단원 원고 `unitNN.json`(제목·표지·표어·학습 자료). `node tools/chapterbook/units.mjs make|check [N …]` → `build.mjs genesis unit N …` → `verify.mjs genesis unit N …`. 장별 원고는 계속 `check.mjs genesis all`로 검사한다.
+창세기·사무엘상·사무엘하는 장별 원고를 이야기 단원별 책으로 묶는다(지침 §0-1, §0-2 — 사무엘은 권별로 따로: `사무엘상·하/원본/단원/units-1sam.json`·`units-2sam.json`, 원고 `1sam-unitNN.json`·`2sam-unitNN.json`, 명령에 책 이름을 붙여 `units.mjs 1sam check`, `build.mjs 1sam unit N`). 창세기는: 단원 목록 `창세기/원본/단원/units.json`, 단원 원고 `unitNN.json`(제목·표지·표어·학습 자료). `node tools/chapterbook/units.mjs make|check [N …]` → `build.mjs genesis unit N …` → `verify.mjs genesis unit N …`. 장별 원고는 계속 `check.mjs genesis all`로 검사한다.
 
-책 이름: `genesis`, `1sam`, `2sam`, `1ki`, `2ki`. 원고 위치: `Genesis/원본/2판/chapterNN.json`, `Samuel/원본/2판/1sam-NN.json`, `Samuel/원본/2판/2sam-NN.json`, `Kings/원본/2판/1ki-NN.json`, `Kings/원본/2판/2ki-NN.json`.
+책 이름: `genesis`, `1sam`, `2sam`, `1ki`, `2ki`. 원고 위치: `창세기/원본/2판/chapterNN.json`, `사무엘상·하/원본/2판/1sam-NN.json`, `사무엘상·하/원본/2판/2sam-NN.json`, `열왕기상·하/원본/2판/1ki-NN.json`, `열왕기상·하/원본/2판/2ki-NN.json`.
 
-열왕기상·하(지침 §0-3)도 사무엘과 같다: 단원 목록 `Kings/원본/단원/units-1ki.json`·`units-2ki.json`, 단원 원고 `1ki-unitNN.json`·`2ki-unitNN.json`, `units.mjs 1ki check`, `build.mjs 1ki unit N`. 해설 id는 열왕기상 `kNN-번호`, 열왕기하 `mNN-번호`. 본문·현대 영어·스코필드는 `fetch_verses.mjs`·`fetch_web.mjs`·`fetch_scofield.mjs`로 받았다(이미 있는 책은 건너뜀).
+열왕기상·하(지침 §0-3)도 사무엘과 같다: 단원 목록 `열왕기상·하/원본/단원/units-1ki.json`·`units-2ki.json`, 단원 원고 `1ki-unitNN.json`·`2ki-unitNN.json`, `units.mjs 1ki check`, `build.mjs 1ki unit N`. 해설 id는 열왕기상 `kNN-번호`, 열왕기하 `mNN-번호`. 본문·현대 영어·스코필드는 `fetch_verses.mjs`·`fetch_web.mjs`·`fetch_scofield.mjs`로 받았다(이미 있는 책은 건너뜀).
 
 ## 2. 원고 형식
 
@@ -52,8 +52,8 @@
      "quote": false,
      "evidence": [
        {"type": "transcript", "source": "첫열매들 예배 「강의 제목」", "file": "memory-bank/첫열매들_강의스크립트/…md", "time": "22:42", "to": "23:34"},
-       {"type": "transcript", "source": "이이레 목사 「다윗의 삶」 N편 「제목」(사무엘상 N장 강의)", "file": "Samuel/강의스크립트/…md", "time": "…", "to": "…"},
-       {"type": "pdf", "source": "예배 강의 「제목」", "file": "Theme/23_겁쟁이들의_하나님.pdf", "pages": [19], "excerpt": "그 쪽 글자 그대로(조각은 \n…\n 으로)", "url": null},
+       {"type": "transcript", "source": "이이레 목사 「다윗의 삶」 N편 「제목」(사무엘상 N장 강의)", "file": "사무엘상·하/강의스크립트/…md", "time": "…", "to": "…"},
+       {"type": "pdf", "source": "예배 강의 「제목」", "file": "첫열매들 강의 정리/23_겁쟁이들의_하나님.pdf", "pages": [19], "excerpt": "그 쪽 글자 그대로(조각은 \n…\n 으로)", "url": null},
        {"type": "external", "author": "C. I. 스코필드", "source": "스코필드 관주 해설(1917) …", "where": "Gen. 12:10 주석", "file": "memory-bank/세대주의_해설/scofield/genesis-12.md 또는 scofield_1917_archive_ocr.txt", "excerpt": "영어 원문 그대로(조각은 \n…\n)", "url": "확인한 주소"}
      ]}],
    "notes": ["(근거가 없을 때) …을 풀이한 근거를 찾지 못했습니다. 본문만 싣습니다."]
