@@ -70,7 +70,7 @@ export function howto(book, mk) {
   return o;
 }
 export function cover(book, title, sub, art, motto) {
-  return `<section class="cover"><i class="diamond top"></i><i class="diamond bottom"></i><div class="ed">FIRSTFRUITS · 첫열매들 교리로 읽는 성경</div><h1>${title}</h1><div class="sub">${esc(sub)}</div><div class="art">${art}</div><div class="motto">${esc(motto)}</div><div class="bar"></div><div class="bot">첫열매들(FIRSTFRUITS) 강의와 교재로 엮은<br/>성도 유영재 교재</div></section>`;
+  return `<section class="cover"><i class="diamond top"></i><i class="diamond bottom"></i><div class="ed">FIRSTFRUITS · 첫열매들 교리로 읽는 성경</div><h1>${title}</h1><div class="sub">${esc(sub)}</div><div class="art">${art}</div><div class="motto">${esc(motto)}</div><div class="bar"></div><div class="bot">첫열매들(FIRSTFRUITS) 강의와 교재로 엮은</div></section>`;
 }
 
 // 한 장의 본문부: 장 머리 → 인물 → 지도 → 절·해설 → 영어 구문 (+ 학습 자료는 learning()으로)

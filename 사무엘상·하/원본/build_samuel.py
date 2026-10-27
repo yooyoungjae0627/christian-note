@@ -65,7 +65,7 @@ def htmlbook(ch,d,pages,markers=False):
  comments={c['id']:c for s in d['sections'] for c in s['comments']};refs={c['id']:s['ref'] for s in d['sections'] for c in s['comments']};L=d['learning']
  nav=[('chapter',f'사무엘상 {ch}장')]+[(f's{i+1}',s['ref']+' '+s['title']) for i,s in enumerate(d['sections'])]+[('summary','한눈에 보는 이야기'),('questions','개념 문제'),('answers','답안과 근거'),('faq','예상 질문과 답변'),('glossary','용어 풀이'),('sources','참고한 교회 자료')]
  motto=esc(d['motto'])
- out=[f'<section class="cover"><i class="diamond top"></i><i class="diamond bottom"></i><div class="ed">FIRSTFRUITS · 첫열매들 교리로 읽는 성경</div><h1>사무엘상<br/>{ch}장 해설</h1><div class="sub">{esc(d["subtitle"])} — 교회 강의와 교리로 풀어 읽기</div><div class="art">{CHAPTER_ART[ch]}</div><div class="motto">{motto}</div><div class="bar"></div><div class="bot">첫열매들(FIRSTFRUITS) 강의와 교재로 엮은<br/>성도 유영재 교재</div></section>']
+ out=[f'<section class="cover"><i class="diamond top"></i><i class="diamond bottom"></i><div class="ed">FIRSTFRUITS · 첫열매들 교리로 읽는 성경</div><h1>사무엘상<br/>{ch}장 해설</h1><div class="sub">{esc(d["subtitle"])} — 교회 강의와 교리로 풀어 읽기</div><div class="art">{CHAPTER_ART[ch]}</div><div class="motto">{motto}</div><div class="bar"></div><div class="bot">첫열매들(FIRSTFRUITS) 강의와 교재로 엮은</div></section>']
  out.append(header('이 책을 읽는 법','HOW TO READ','howto',marker))
  for label,text in INTRO:out.append('<div class="lab">'+label+'</div><p>'+esc(text)+'</p>')
  out.append('<div class="lab">강조 표시</div><table class="legend"><tr><td><span class="hl1">노란 바탕</span></td><td>중요</td></tr><tr><td><span class="hl2">노란 바탕 + 굵게</span></td><td>더 중요</td></tr><tr><td><span class="hl3">노란 바탕 + 굵게 + 빨간 밑줄</span></td><td>핵심 명제</td></tr><tr><td>파란 인용 상자</td><td>교재 문장을 그대로 옮긴 곳</td></tr></table></section>')
