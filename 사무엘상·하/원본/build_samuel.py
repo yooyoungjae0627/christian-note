@@ -6,7 +6,7 @@ import pdfplumber
 logging.getLogger('pdfminer').setLevel(logging.ERROR)
 from pathlib import Path
 from pypdf import PdfReader,PdfWriter
-B=Path(__file__).resolve().parent;R=B.parents[1];OUT=R/'Samuel'
+B=Path(__file__).resolve().parent;R=B.parents[1];OUT=R/'사무엘상·하'
 T=Path(os.environ['TEMP'])/'samuel-style';T.mkdir(exist_ok=True)
 QR=Path(os.environ['TEMP'])/'samuel-chapters'
 NODE='C:/Program Files/nodejs/node.exe'
