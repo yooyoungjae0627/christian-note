@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="g35" cx="50%" cy="52%" r="50%">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- 가운데 빛: 말씀을 가운데 둔 교제 -->
+  <circle cx="100" cy="104" r="62" fill="url(#g35)"/>
+  <!-- 서로 이어진 둥근 자리(한 몸) -->
+  <circle cx="100" cy="104" r="54" fill="none" stroke="#e8c983" stroke-width="1.6" stroke-dasharray="3 5" stroke-opacity="0.8"/>
+  <!-- 펼친 성경 -->
+  <g fill="none" stroke="#e8c983" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M100 96 Q86 88 72 92 L72 116 Q86 112 100 120 Z" fill="#f3d999" fill-opacity="0.18"/>
+    <path d="M100 96 Q114 88 128 92 L128 116 Q114 112 100 120 Z" fill="#f3d999" fill-opacity="0.18"/>
+    <line x1="100" y1="96" x2="100" y2="120"/>
+  </g>
+  <g stroke="#e8c983" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.8">
+    <line x1="78" y1="99" x2="94" y2="101"/><line x1="78" y1="105" x2="94" y2="107"/>
+    <line x1="106" y1="101" x2="122" y2="99"/><line x1="106" y1="107" x2="122" y2="105"/>
+  </g>
+  <!-- 둘러앉은 지체들(얼굴 없이) -->
+  <g fill="#1b2650" fill-opacity="0.55" stroke="#e9ecf5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="rotate(0 100 104)"><circle cx="100" cy="40" r="7"/><path d="M88 60 Q100 48 112 60"/></g>
+    <g transform="rotate(45 100 104)"><circle cx="100" cy="40" r="7"/><path d="M88 60 Q100 48 112 60"/></g>
+    <g transform="rotate(90 100 104)"><circle cx="100" cy="40" r="7"/><path d="M88 60 Q100 48 112 60"/></g>
+    <g transform="rotate(135 100 104)"><circle cx="100" cy="40" r="7"/><path d="M88 60 Q100 48 112 60"/></g>
+    <g transform="rotate(180 100 104)"><circle cx="100" cy="40" r="7"/><path d="M88 60 Q100 48 112 60"/></g>
+    <g transform="rotate(225 100 104)"><circle cx="100" cy="40" r="7"/><path d="M88 60 Q100 48 112 60"/></g>
+    <g transform="rotate(270 100 104)"><circle cx="100" cy="40" r="7"/><path d="M88 60 Q100 48 112 60"/></g>
+    <g transform="rotate(315 100 104)"><circle cx="100" cy="40" r="7"/><path d="M88 60 Q100 48 112 60"/></g>
+  </g>
+  <!-- 세 원칙: 질서 · 원칙 · 배려 -->
+  <g fill="#ffd84a">
+    <circle cx="86" cy="134" r="3.2"/><circle cx="100" cy="137" r="3.2"/><circle cx="114" cy="134" r="3.2"/>
+  </g>
+</svg>
