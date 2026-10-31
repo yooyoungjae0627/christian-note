@@ -6,7 +6,7 @@ import path from "node:path";
 import { TMP, BOOKS, mod, loadChapter, esc } from "./lib.mjs";
 import { CSS } from "./html.mjs";
 import { relationSvg, relLegendHtml, mapSvg, mapViews } from "./art.mjs";
-import { edgePrint } from "../../David/원본/tools/edge.mjs";
+import { edgePrint } from "../../첫열매들 강의 정리/원본/tools/edge.mjs";
 
 const [book, ...rest] = process.argv.slice(2);
 const B = BOOKS[book];

@@ -8,6 +8,7 @@ a { color: inherit; text-decoration: none; }
 a.yt { color: #c0392b; font-weight: bold; white-space: nowrap; font-size: .9em; }
 .gold { width: 3em; height: .22em; background: #c9973b; margin: .5em 0 1.2em; }
 .lab { border-left: .25em solid #c9973b; padding-left: .5em; font-weight: bold; color: #18233f; margin: 1.2em 0 .4em; }
+#howto .lab { margin: 2.6em 0 .5em; }
 .cover { text-align: center; margin: 0; } .cover img { max-width: 100%; max-height: 100%; }
 body.cover { margin: 0; }
 .cor { border-left: .25em solid #c9973b; background: #fbf6ea; color: #1d1d1f; padding: .7em 1em; margin: 1.2em 0; font-size: .95em; }

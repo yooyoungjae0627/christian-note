@@ -42,10 +42,12 @@ a { color: inherit; text-decoration: none; }
 .sk { font: 700 8pt "Noto Sans KR", sans-serif; color: #c9973b; letter-spacing: .12em; }
 .gold { width: 17mm; height: 1.1mm; background: #c9973b; border-radius: .6mm; margin: 2.5mm 0 6mm; }
 .lab { border-left: 1.2mm solid #c9973b; padding-left: 2.5mm; font-weight: 700; color: #18233f; font-size: 10.5pt; margin: 3.6mm 0 1.4mm; }
-#howto p.bp { font-size: 9pt; line-height: 1.62; margin-bottom: 1mm; }
-#howto .lab { margin: 2.8mm 0 1.1mm; font-size: 10pt; }
-#howto .gold { margin-bottom: 3.5mm; }
-#howto h1 { margin-top: 0; }
+#howto p.bp { font-size: 9pt; line-height: 1.55; margin-bottom: .6mm; }
+#howto .lab { margin: 6mm 0 1.2mm; font-size: 10pt; break-after: avoid; }
+#howto .gold { margin-bottom: 3.2mm; }
+#howto table.legend td { padding: .45mm 1mm; }
+#howto h1 { margin: 0 0 2mm; }
+#howto .gold { margin-top: 1.5mm; }
 .cor { border-left: 1mm solid #c9973b; background: #fbf6ea; padding: 3mm 4mm; margin-top: 6mm; font-size: 9.6pt; line-height: 1.8; }
 .cor p { margin: 0 0 1.6mm; }
 .cor .vs { text-align: right; font-size: 7.8pt; color: #6b5d3d; font-family: "Noto Sans KR", sans-serif; }

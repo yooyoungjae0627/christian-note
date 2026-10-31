@@ -30,6 +30,7 @@ h1,h2,h3,.eyebrow,.subtitle,.vl,.vs,.category,.source-row,.toc,.badge,table{font
 .chapter-header .gold{margin:4.1mm 0 6.2mm;}
 .lab{border-left:1.1mm solid #c9973b;padding-left:2.5mm;font:700 9.6pt/1.6 "Noto Sans KR";color:#18233f;margin:3.5mm 0 1.3mm;break-after:avoid;}
 #howto p{font-size:8.7pt;line-height:1.6;margin-bottom:1.5mm;}
+#howto p + .lab{margin-top:6mm;}
 table.legend{width:100%;border-collapse:collapse;font:8.4pt/1.4 "Noto Sans KR";}
 table.legend td{border-bottom:.2mm solid #e3dccb;padding:.9mm 1mm;vertical-align:middle;}
 table.legend td:first-child{width:36%;}
