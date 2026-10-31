@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="g36" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="80" fill="url(#g36)"/>
+  <!-- 셋째 하늘의 빛(아버지) -->
+  <g stroke="#e8c983" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.85">
+    <line x1="100" y1="14" x2="100" y2="26"/><line x1="82" y1="18" x2="86" y2="29"/><line x1="118" y1="18" x2="114" y2="29"/>
+  </g>
+  <path d="M60 40 Q100 22 140 40" fill="none" stroke="#e8c983" stroke-width="2.2"/>
+  <!-- 아버지에게서 내려오는 영(점선) -->
+  <path d="M100 42 L100 70" stroke="#a6f04a" stroke-width="2" stroke-dasharray="3 4" stroke-opacity="0.8"/>
+  <!-- 영·혼·몸: 바깥 몸(테두리), 안쪽 혼, 가운데 영 -->
+  <circle cx="100" cy="122" r="46" fill="none" stroke="#e9a54a" stroke-width="3"/>
+  <circle cx="100" cy="122" r="32" fill="#5aa8ff" fill-opacity="0.22" stroke="#5aa8ff" stroke-width="3"/>
+  <circle cx="100" cy="122" r="13" fill="#a6f04a" fill-opacity="0.35" stroke="#a6f04a" stroke-width="2.4"/>
+  <!-- 선택의 갈래(혼이 고르는 두 길) -->
+  <g fill="none" stroke="#f3e3b8" stroke-width="2" stroke-linecap="round">
+    <path d="M100 168 L100 186"/><path d="M100 186 L82 196"/><path d="M100 186 L118 196"/>
+  </g>
+</svg>
