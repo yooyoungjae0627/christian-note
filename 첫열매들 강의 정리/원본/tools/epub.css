@@ -70,12 +70,12 @@ figure.slide figcaption { font-size: .8em; color: #777; margin-top: .2em; }
 .front { margin-top: 2em; }
 .sk { color: #c9973b; font-weight: bold; font-size: .8em; letter-spacing: .12em; }
 .added { font-size: .8em; color: #8a7a52; margin: -.6em 0 1em; }
-ol.sum li { margin-bottom: .5em; }
-.qz { margin-bottom: .6em; }
+ol.sum li { margin-bottom: 1em; }
+.qz { margin-bottom: 1.2em; }
 .qz p { display: inline; }
 .num { display: inline-block; min-width: 1.6em; height: 1.6em; line-height: 1.6em; border-radius: .8em; background: #18233f; color: #fff; text-align: center; font-size: .8em; font-weight: bold; margin-right: .4em; }
 .num.gold { background: #c9973b; width: 1.6em; height: 1.6em; margin: 0 .4em 0 0; }
-.an, .fq { margin-bottom: 1.2em; }
+.an, .fq { margin-bottom: 2em; }
 .anq { font-weight: bold; }
 .ana { background: #fff6d9; color: #1d1d1f; border-left: .25em solid #c9973b; border-radius: .3em; padding: .3em .7em; margin: .3em 0; }
 .anw { font-size: .82em; color: #777; }
@@ -87,7 +87,7 @@ ol.sum li { margin-bottom: .5em; }
 .fqq { font-weight: bold; color: #18233f; }
 .qn { background: #c9973b; color: #fff; border-radius: .2em; padding: 0 .3em; margin-right: .4em; font-size: .85em; }
 .fqa { margin: .3em 0; }
-.gl { margin-bottom: .8em; }
+.gl { margin-bottom: 1.4em; }
 .gl .gt { font-weight: bold; color: #18233f; }
 .gl p { margin: .1em 0 0; }
 

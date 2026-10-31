@@ -71,14 +71,14 @@ table.legend td:first-child{width:36%;}
 .note{background:#eef3f8;border-left:.8mm solid #6b8bb5;border-radius:1.4mm;padding:2.2mm 3.4mm;margin:1mm 0 4mm;font-size:8.8pt;line-height:1.7;break-inside:avoid;}
 .keep-start{break-inside:avoid;}
 .summary{padding-left:5mm;margin:0;}
-.summary li{font-size:9.6pt;line-height:1.8;margin-bottom:1.6mm;}
+.summary li{font-size:9.6pt;line-height:1.8;margin-bottom:3.2mm;}
 .questions{padding-left:5mm;margin:0;}
-.questions li{font-size:9.6pt;line-height:1.8;margin-bottom:2mm;}
-.qa{break-inside:avoid;margin:0 0 3mm;}
+.questions li{font-size:9.6pt;line-height:1.8;margin-bottom:4.6mm;}
+.qa{break-inside:avoid;margin:0 0 6mm;}
 .q{font:700 9.6pt/1.7 "Noto Sans KR";color:#18233f;margin:0 0 1.2mm;break-after:avoid;}
 #faq>p:not(.q){break-after:avoid;}
 .answer{background:#fbf6ea;border-left:1mm solid #c9973b;border-radius:1.4mm;padding:2mm 3.2mm;font-size:9.6pt;line-height:1.75;margin:0 0 1mm;}
-.gl{break-inside:avoid;margin-bottom:3mm;font-size:9.2pt;line-height:1.7;}
+.gl{break-inside:avoid;margin-bottom:5mm;font-size:9.2pt;line-height:1.7;}
 .gl .gt{font:700 9.6pt/1.6 "Noto Sans KR";color:#18233f;}
 .gl p{margin:.3mm 0 0;}
 .source-table{width:100%;border-collapse:collapse;font:8.2pt/1.6 "Noto Sans KR";}

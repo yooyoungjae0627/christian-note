@@ -107,7 +107,8 @@ export function pdfPage(file, page) {
 }
 export const squash = (s) => String(s).replace(/\s+/g, " ").trim();
 export const ffFile = (f) => f.startsWith("memory-bank/첫열매들_강의스크립트/");
-export const sbcFile = (f) => f.startsWith("사무엘상·하/강의스크립트/");
+// 원고에는 폴더 이름을 바꾸기 전 경로(Samuel/강의스크립트/)가 남아 있다 — 둘 다 3순위로 본다(2026-10-31)
+export const sbcFile = (f) => f.startsWith("사무엘상·하/강의스크립트/") || f.startsWith("Samuel/강의스크립트/");
 
 export const BASIS = {
   direct: { tag: "", cls: "" },

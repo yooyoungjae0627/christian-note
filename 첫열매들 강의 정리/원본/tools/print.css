@@ -134,16 +134,16 @@ figure.slide figcaption { font-size: 7.8pt; color: #666; margin: 1.2mm 0 0; line
 
 /* 한눈에 보는 이야기 */
 .added { font: 7.8pt "Noto Sans KR", sans-serif; color: #8a7a52; margin: -3mm 0 4mm; }
-ol.sum { padding-left: 5mm; margin: 0; } ol.sum li { margin-bottom: 1.5mm; font-size: 9.6pt; line-height: 1.72; }
+ol.sum { padding-left: 5mm; margin: 0; } ol.sum li { margin-bottom: 3.2mm; font-size: 9.6pt; line-height: 1.72; }
 
 /* 개념 문제 */
 .num { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 6.5mm; height: 6.5mm; border-radius: 50%; background: #18233f; color: #fff; font: 700 7.6pt "Noto Sans KR", sans-serif; margin-right: 2.2mm; }
 .num.gold { background: #c9973b; margin-top: 0; margin-bottom: 0; }
-.qz { display: flex; align-items: flex-start; break-inside: avoid; margin-bottom: 2.6mm; }
+.qz { display: flex; align-items: flex-start; break-inside: avoid; margin-bottom: 4.6mm; }
 .qz p { margin: 0; font-size: 9.8pt; line-height: 1.7; padding-top: .2mm; }
 
 /* 답안 · 예상 질문: 오른쪽 QR 칸(19mm)을 따로 두어 QR끼리 붙지 않게 */
-.an, .fq { display: flex; gap: 3mm; align-items: flex-start; break-inside: avoid; margin-bottom: 3.4mm; min-height: 23mm; }
+.an, .fq { display: flex; gap: 3mm; align-items: flex-start; break-inside: avoid; margin-bottom: 6mm; min-height: 23mm; }
 .fq { min-height: 24mm; }
 .anb, .fqb { flex: 1; }
 .anr { flex: none; width: 19mm; }
@@ -161,7 +161,7 @@ ol.sum { padding-left: 5mm; margin: 0; } ol.sum li { margin-bottom: 1.5mm; font-
 .fqa { font-size: 9.6pt; line-height: 1.72; margin: 1mm 0 1mm; }
 
 /* 용어·인물 풀이 */
-.gl { break-inside: avoid; margin-bottom: 3mm; font-size: 9.2pt; line-height: 1.7; }
+.gl { break-inside: avoid; margin-bottom: 5mm; font-size: 9.2pt; line-height: 1.7; }
 .gl .gt { font: 700 9.6pt "Noto Sans KR", sans-serif; color: #18233f; }
 .gl p { margin: .3mm 0 0; }
 
