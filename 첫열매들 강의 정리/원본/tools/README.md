@@ -48,6 +48,7 @@ node audit.mjs out\NN_이름.pdf out\toc_pages.json   (남은 공란 보고)
 ```
 - 책 번호 없이 돌리면 멈춘다(강의를 한 권에 묶지 않도록). 여러 권은 책마다 위 순서를 돌린다.
 - Edge는 Claude Code 샌드박스 안에서 바로 종료되므로 **샌드박스 밖에서** 실행한다.
+- **클라우드 세션(리눅스)**(2026-11-01): `bash tools/cloud_setup.sh`(저장소 루트 tools) 뒤 `/tmp/topicbook`에 이 폴더를 복사해 같은 순서로 돌린다. `edge.mjs`가 Edge 대신 headless Chromium(Playwright 내장 `chrome-headless-shell`)을 고른다(`BROWSER` 환경 변수로 바꿀 수 있음). 일반 `chromium`은 `--user-data-dir`를 주면 멈춰서 쓰지 않는다. 그림 주소는 절대 경로로(`html.mjs`). 글줄 높이가 Windows와 0.1~0.9pt 달라 `build_pdf.mjs`가 리눅스에서만 이동점을 1pt 덜 내린다. 36권 시험: Windows 완성본과 쪽수 같음(91), verify 둘 다 exit 0.
 - 차례 쪽 번호: 제목마다 보이지 않는 표식(@@id@@)을 넣어 찍고, 표식이 나온 쪽을 읽어 다시 찍는다(값이 안 바뀔 때까지).
 - **Edge 이동점 버그**: Chromium은 PDF 이동점 높이를 쪽 위 여백(16mm)만큼 덜 내려 적는다. `build_pdf.mjs`의 `fixDests`가 바로잡는다. 이게 없으면 「목차로 이동」을 눌렀을 때 차례 항목이 화면 맨 위가 아니라 16mm 아래에 온다.
 - verify_pdf: 모든 QR 300dpi 판독, 영상ID, 빠진 영상 링크, 차례 쪽 번호, 「목차로 이동」 도착 높이(차례 항목 막대 바로 위 0~6pt)·단추 위치(왼쪽 아래), 본문 그림 수 = 슬라이드 수.

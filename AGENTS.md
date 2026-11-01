@@ -38,4 +38,5 @@ GitHub: `yooyoungjae0627/christian-note`. 요청자(유영재)가 자료를 고�
 - Windows. Git Bash에 `pdftotext`만 있음(`-enc UTF-8` 필수). 페이지 그림은 Node `mupdf`로 찍어 본다.
 - `python` 명령은 실제 파이썬이 아님.
 - node_modules는 저장소·OneDrive 밖 임시 폴더(예: `%TEMP%\topicbook`)에 설치하고 도구를 복사해 실행. Edge 명령줄 인쇄는 샌드박스 밖에서.
+- 클라우드 세션(리눅스)에서는 먼저 `bash tools/cloud_setup.sh`(한글 글꼴·빌드 의존성·받아쓰기 엔진) — 빌드는 `/tmp/topicbook`에서 headless Chromium으로. 세부: `첫열매들 강의 정리/원본/tools/README.md`.
 - 바탕화면 경로: `C:\Users\PC\OneDrive\바탕 화면` (OneDrive 동기화 — 채팅에 첨부된 파일이 디스크에 없을 수 있음). 2026-10-09부터 완성본의 원본 위치는 이 저장소다.

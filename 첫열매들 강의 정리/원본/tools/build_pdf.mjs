@@ -99,7 +99,9 @@ for (let pass = 1; pass <= 5; pass++) {
 }
 // Edge(Chromium)는 이동점(named destination)의 높이를 쪽 위 여백(16mm)만큼 덜 내려 적는다.
 // 그대로 두면 「목차로 이동」을 눌렀을 때 차례 항목이 화면 맨 위가 아니라 16mm 아래에 온다 → 여백만큼 바로잡는다.
-const TOP_MARGIN_PT = (16 * 72) / 25.4;
+// 리눅스(클라우드 세션, Chromium + 고정 굵기 Noto Sans KR)는 글줄 높이가 Windows보다 0.1~0.9pt 낮게 읽혀
+// verify_pdf의 도착 높이 검사(0pt 이상)에 걸린다 → 리눅스에서만 1pt 덜 내린다. Windows 결과는 그대로(2026-11-01).
+const TOP_MARGIN_PT = (16 * 72) / 25.4 - (process.platform === "linux" ? 1 : 0);
 function fixDests(file) {
   const doc = mupdf.Document.openDocument(fs.readFileSync(file), "application/pdf");
   const dests = doc.getTrailer().get("Root").get("Dests");

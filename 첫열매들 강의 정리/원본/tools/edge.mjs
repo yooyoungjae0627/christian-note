@@ -4,10 +4,12 @@ import path from "path";
 import os from "os";
 import { execFileSync } from "child_process";
 
-export const EDGE = ["C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", "C:/Program Files/Microsoft/Edge/Application/msedge.exe"].find(fs.existsSync);
+// Windows는 Edge, 리눅스(클라우드 세션)는 Chromium으로 대신한다. BROWSER 환경 변수로 직접 지정할 수도 있다.
+export const EDGE = [process.env.BROWSER, "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", "C:/Program Files/Microsoft/Edge/Application/msedge.exe", "/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell", "/usr/bin/chromium", "/usr/bin/google-chrome"].filter(Boolean).find(fs.existsSync);
+const LINUX = process.platform === "linux";
 const wait = (ms) => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
-const url = (f) => "file:///" + path.resolve(f).split(path.sep).join("/");
-const base = (tag) => ["--headless=new", "--mute-audio", "--no-first-run", "--disable-gpu", "--hide-scrollbars", "--allow-file-access-from-files", "--user-data-dir=" + path.join(os.tmpdir(), `tb_edge_${tag}_${process.pid}`)];
+const url = (f) => { const p = path.resolve(f).split(path.sep).join("/"); return "file://" + (p.startsWith("/") ? "" : "/") + p; };
+const base = (tag) => [...(LINUX ? ["--no-sandbox"] : []), "--headless=new", "--mute-audio", "--no-first-run", "--disable-gpu", "--hide-scrollbars", "--allow-file-access-from-files", "--user-data-dir=" + path.join(os.tmpdir(), `tb_edge_${tag}_${process.pid}`)];
 
 // 파일이 다 써질 때까지 기다린다(Edge가 실행기만 먼저 끝내는 경우가 있다)
 function waitFile(f) {

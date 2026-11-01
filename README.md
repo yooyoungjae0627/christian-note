@@ -81,3 +81,4 @@ tools/   시리즈 공통 도구(kjv.mjs 표준킹제임스성경 구절 찾기,
 - Windows, Node + Microsoft Edge 명령줄 인쇄. Python 없음.
 - node_modules는 저장소·OneDrive 밖의 임시 폴더에 설치하고 도구를 복사해 실행합니다(`tools/package.json` 참고).
 - Edge는 Claude Code 샌드박스 안에서 바로 종료되므로 빌드는 샌드박스 밖에서 실행합니다.
+- 클라우드 세션(리눅스): `bash tools/cloud_setup.sh` 한 번이면 한글 글꼴·빌드 의존성·받아쓰기 엔진이 준비되고, 빌드는 `/tmp/topicbook`에서 headless Chromium으로 돕니다(2026-11-01).
