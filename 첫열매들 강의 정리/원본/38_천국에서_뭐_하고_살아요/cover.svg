@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="h35" cx="50%" cy="38%" r="55%">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- 새 예루살렘: 길이·너비·높이가 같은 도성에서 빛이 보석을 뚫고 나온다 -->
+  <circle cx="100" cy="76" r="80" fill="url(#h35)"/>
+  <g fill="none" stroke="#e8c983" stroke-width="2.4" stroke-linejoin="round">
+    <polygon points="70,58 100,46 130,58 130,112 100,124 70,112"/>
+    <polyline points="70,58 100,70 130,58"/>
+    <line x1="100" y1="70" x2="100" y2="124"/>
+  </g>
+  <g stroke="#f3d999" stroke-width="1.2" stroke-opacity="0.7" stroke-linecap="round">
+    <line x1="100" y1="40" x2="100" y2="18"/><line x1="78" y1="44" x2="64" y2="26"/><line x1="122" y1="44" x2="136" y2="26"/>
+    <line x1="62" y1="62" x2="40" y2="54"/><line x1="138" y1="62" x2="160" y2="54"/>
+  </g>
+  <!-- 보석 기초 -->
+  <g stroke="none">
+    <rect x="78" y="80" width="6" height="6" fill="#6fb8ff" transform="rotate(45 81 83)"/>
+    <rect x="88" y="94" width="6" height="6" fill="#a6f04a" transform="rotate(45 91 97)"/>
+    <rect x="112" y="80" width="6" height="6" fill="#e08bff" transform="rotate(45 115 83)"/>
+    <rect x="108" y="96" width="6" height="6" fill="#fff23a" transform="rotate(45 111 99)"/>
+  </g>
+  <!-- 생명수의 강과 양편의 생명나무 -->
+  <path d="M100 124 Q92 150 100 186" fill="none" stroke="#9dd8f2" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8"/>
+  <g fill="none" stroke="#a6f04a" stroke-width="2" stroke-linecap="round">
+    <line x1="64" y1="168" x2="64" y2="148"/><circle cx="64" cy="140" r="10"/>
+    <line x1="136" y1="168" x2="136" y2="148"/><circle cx="136" cy="140" r="10"/>
+  </g>
+  <path d="M16 180 Q100 160 184 180" fill="none" stroke="#e9ecf5" stroke-width="1.4" stroke-opacity="0.45" stroke-linecap="round"/>
+  <!-- 영광이 서로 다른 별들 -->
+  <g fill="#fff">
+    <circle cx="30" cy="30" r="2.6"/><circle cx="170" cy="34" r="1.6"/><circle cx="24" cy="96" r="1.2"/><circle cx="178" cy="100" r="2.2"/><circle cx="46" cy="124" r="1.6"/><circle cx="156" cy="126" r="1"/>
+  </g>
+</svg>
