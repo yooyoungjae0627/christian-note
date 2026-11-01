@@ -12,7 +12,8 @@ const audio = args.includes("--audio");
 const [video, outDir, th = "0.12"] = args.filter((a) => a !== "--audio");
 if (!video || !outDir) { console.error("사용: node frames.mjs <영상> <출력폴더> [문턱] [--audio]"); process.exit(2); }
 fs.mkdirSync(outDir, { recursive: true });
-const run = (a) => { const r = spawnSync("ffmpeg", ["-hide_banner", "-nostdin", "-y", ...a], { encoding: "utf8", maxBuffer: 1 << 28 });
+const FF = process.env.FFMPEG || "ffmpeg"; // zoombook.mjs가 ffmpeg-static 경로를 넘길 수 있다
+const run = (a) => { const r = spawnSync(FF, ["-hide_banner", "-nostdin", "-y", ...a], { encoding: "utf8", maxBuffer: 1 << 28 });
   if (r.status !== 0) { console.error(r.stderr.slice(-2000)); process.exit(r.status || 1); } return r.stderr; };
 if (audio) { run(["-i", video, "-vn", "-ac", "1", "-ar", "16000", path.join(outDir, "audio.wav")]); console.error("audio.wav 만듦"); }
 // 첫 프레임 + 장면이 바뀌는 프레임
