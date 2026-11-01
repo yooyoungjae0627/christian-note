@@ -1,3 +1,4 @@
+import path from "path";
 // 본문 HTML 조각. mode = "pdf"(QR) | "epub"(▶ 시각 링크만)
 // 유튜브 링크를 받지 않은 이야기(S.vid === "")는 QR·▶ 시각을 하나도 넣지 않는다(사용자 지시 2026-10-03)
 import QRCode from "qrcode";
@@ -6,7 +7,8 @@ import { esc, inline, ytUrl, ordinal, sid, chId, secId, tocId, chLabel } from ".
 let MODE = "pdf";
 export const setMode = (m) => { MODE = m; };
 // PDF는 그림을 절대 경로로, EPUB은 묶음 안 파일 이름으로
-let IMG = (S, b) => "file:///" + b.path.replace(/\\/g, "/");
+// 절대 경로로 바꿔 file 주소로(Windows C:/… 와 리눅스 /… 모두)
+let IMG = (S, b) => { const p = path.resolve(b.path).replace(/\\/g, "/"); return "file://" + (p.startsWith("/") ? "" : "/") + p; };
 export const setImgResolver = (fn) => { IMG = fn; };
 // 「목차로 이동」: 차례의 해당 항목(id = toc-<제목 id>)으로. EPUB은 contents.xhtml#…
 let TOC = (id) => `#toc-${id}`;

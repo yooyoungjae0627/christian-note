@@ -16,6 +16,7 @@ GitHub: `yooyoungjae0627/christian-note`. 요청자(유영재)가 자료를 고�
 | 창세기 이야기 단원별 교재(천지창조·아담과 이브 …) · 사무엘상·하 이야기 단원별 교재(권별, 한나의 기도 … 다윗의 노래) · 열왕기상·하 이야기 단원별 교재(권별, 솔로몬 … 예루살렘의 멸망) | Genesis·Samuel·Kings | `docs/policy/장별해설서_제작지침.md` (2판) + `docs/policy/성경해석_지침.md` | `창세기/`, `사무엘상·하/`, `열왕기상·하/` |
 | 주간 구절 테스트 카드 HTML | cards | `docs/policy/성경구절_테스트카드_제작정책.md` | `cards/` |
 | **실시간 강의 받아쓰기** (「받아쓰기 시작·반영·끝」, `/live-lecture`) | Theme | `docs/policy/실시간_강의받아쓰기_지침.md` (+ 주제별 지침) | `첫열매들 강의 정리/` |
+| **최근 줌 녹화 교재 집필해줘** / 줌 녹화 책 (줌 강의 녹화 → 책, `/zoom-book`, `node tools/zoom/zoombook.mjs`) | Theme | `docs/policy/줌녹화_교재_지침.md` (+ 주제별 지침) — 영상 이동 없음 | `첫열매들 강의 정리/` |
 | **성경 해석 질문** (구절 뜻·교리·인물 해석) | 해석 | `docs/policy/성경해석_지침.md` — 1순위 첫열매들 영상(분:초 링크), 2순위 세대주의 해설(출처 필수), 3순위 이이레 목사 강의 | `memory-bank/첫열매들_강의스크립트/` |
 | 빌드 파이프라인 세부(옛 스킬) | — | `docs/policy/참고_lecture-to-family-book_스킬_구버전.md` — 위 지침과 어긋나면 위 지침 우선 | — |
 
@@ -37,4 +38,5 @@ GitHub: `yooyoungjae0627/christian-note`. 요청자(유영재)가 자료를 고�
 - Windows. Git Bash에 `pdftotext`만 있음(`-enc UTF-8` 필수). 페이지 그림은 Node `mupdf`로 찍어 본다.
 - `python` 명령은 실제 파이썬이 아님.
 - node_modules는 저장소·OneDrive 밖 임시 폴더(예: `%TEMP%\topicbook`)에 설치하고 도구를 복사해 실행. Edge 명령줄 인쇄는 샌드박스 밖에서.
+- 클라우드 세션(리눅스)에서는 먼저 `bash tools/cloud_setup.sh`(한글 글꼴·빌드 의존성·받아쓰기 엔진) — 빌드는 `/tmp/topicbook`에서 headless Chromium으로. 세부: `첫열매들 강의 정리/원본/tools/README.md`.
 - 바탕화면 경로: `C:\Users\PC\OneDrive\바탕 화면` (OneDrive 동기화 — 채팅에 첨부된 파일이 디스크에 없을 수 있음). 2026-10-09부터 완성본의 원본 위치는 이 저장소다.
