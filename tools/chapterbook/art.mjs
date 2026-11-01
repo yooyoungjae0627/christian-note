@@ -198,7 +198,7 @@ export function mapSvg(map) {
     boxes.push({ x: fx - 2, y: fy - 2, w: fw + 4, h: 3 }, { x: fx - 2, y: fy + fh - 1, w: fw + 4, h: 3 }, { x: fx - 2, y: fy, w: 3, h: fh }, { x: fx + fw - 1, y: fy, w: 3, h: fh });
     if (!put(fx + fw / 2, fy + fh / 2, f.tag, "frame", [fh / 2 + 4, fh / 2 + 18, fh / 2 + 34, fh / 2 + 52], true)) throw new Error("확대 꼬리표 자리를 찾지 못함");
   }
-  for (const p of pts) { if ((map.hide || []).includes(p.key)) continue; const x = X(p.at[0]), y = Y(p.at[1]); if (!put(x, y, p.name, p.area ? "area" : "main", p.area ? [0, 14, 28] : [10, 22, 34], true)) throw new Error("지도 이름 자리를 찾지 못함: " + p.name); }
+  for (const p of pts) { if ((map.hide || []).includes(p.key)) continue; const x = X(p.at[0]), y = Y(p.at[1]); if (!put(x, y, p.name, p.area ? "area" : "main", p.area ? [0, 14, 28, 44, 62] : [10, 22, 34], true)) throw new Error("지도 이름 자리를 찾지 못함: " + p.name); }
   // 바다·강·이웃 땅·주변 성읍 → 온전히 놓을 수 있을 때만
   // 바다·강·주변 지명은 구글 지도 글자가 보여 준다(2026-11-02)
   const used = new Set(pts.map((p) => p.key));
