@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 죄의 경중을 다는 저울: 왼쪽은 수갑(몸의 살인), 오른쪽은 펼친 책(혼의 살인 — 성경을 잘못 가르침), 오른쪽이 더 무겁게 내려간다 -->
+  <circle cx="100" cy="22" r="6" stroke="#e8c983" stroke-width="3"/>
+  <line x1="100" y1="28" x2="100" y2="58" stroke="#e8c983" stroke-width="3.5"/>
+  <line x1="36" y1="52" x2="164" y2="72" stroke="#e8c983" stroke-width="4"/>
+  <circle cx="100" cy="62" r="5" fill="#e8c983"/>
+  <line x1="100" y1="66" x2="100" y2="176" stroke="#e8c983" stroke-width="4"/>
+  <path d="M74 184 H126" stroke="#e8c983" stroke-width="5"/>
+  <!-- 왼쪽 접시 -->
+  <line x1="36" y1="52" x2="16" y2="112" stroke="#f3e3b8" stroke-width="1.6"/>
+  <line x1="36" y1="52" x2="56" y2="112" stroke="#f3e3b8" stroke-width="1.6"/>
+  <path d="M10 112 Q36 130 62 112 Z" stroke="#e8c983" stroke-width="2.5" fill="rgba(232,201,131,.18)"/>
+  <circle cx="27" cy="102" r="7" stroke="#c9ced8" stroke-width="2.6"/>
+  <circle cx="45" cy="102" r="7" stroke="#c9ced8" stroke-width="2.6"/>
+  <line x1="34" y1="102" x2="38" y2="102" stroke="#c9ced8" stroke-width="2.6"/>
+  <!-- 오른쪽 접시 -->
+  <line x1="164" y1="72" x2="144" y2="140" stroke="#f3e3b8" stroke-width="1.6"/>
+  <line x1="164" y1="72" x2="184" y2="140" stroke="#f3e3b8" stroke-width="1.6"/>
+  <path d="M138 140 Q164 158 190 140 Z" stroke="#e8c983" stroke-width="2.5" fill="rgba(232,201,131,.18)"/>
+  <path d="M148 134 Q156 128 164 133 Q172 128 180 134 L180 122 Q172 116 164 121 Q156 116 148 122 Z" stroke="#f3e3b8" stroke-width="2" fill="rgba(243,227,184,.15)"/>
+  <line x1="164" y1="121" x2="164" y2="133" stroke="#f3e3b8" stroke-width="1.6"/>
+</svg>
