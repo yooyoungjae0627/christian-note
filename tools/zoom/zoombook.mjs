@@ -9,7 +9,7 @@
 //   --find : 찾기만 하고 무엇을 찾았는지 출력
 // 결과(저장소 밖): <임시폴더>/zoombook/<녹화 이름>/
 //   info.json(찾은 파일·받아쓰기 방법·줄 수·프레임 수), transcript_raw.txt(주제별 교재 형식), transcript.srt, audio.wav, frames/(슬라이드 후보, frames.tsv)
-// 받아쓰기 순서: 줌 자막(.vtt) → 파이썬 faster-whisper(tools/zoom/transcribe.py) → Node transformers.js(transcribe.mjs)
+// 받아쓰기 순서: 줌 자막(.vtt) → 같은 폴더의 받아쓴 글(.txt, 삼성 음성 녹음 텍스트 변환 등, 시각 포함) → 파이썬 faster-whisper(tools/zoom/transcribe.py) → Node transformers.js(transcribe.mjs)
 // 하나도 안 되면 지어내지 않고 exit 3으로 멈춘다.
 import fs from "node:fs";
 import os from "node:os";
@@ -65,7 +65,9 @@ function bundle(dir, files, main) {
   const video = main && VIDEO.test(main) ? main : newest(VIDEO);
   const audio = main && AUDIO.test(main) ? main : newest(AUDIO);
   // 줌 클라우드 녹화 자막은 보통 *.transcript.vtt
-  const vtt = files.filter((f) => VTT.test(f)).sort((a, b) => /transcript/i.test(b) - /transcript/i.test(a) || mtime(b) - mtime(a))[0] || null;
+  let vtt = files.filter((f) => VTT.test(f)).sort((a, b) => /transcript/i.test(b) - /transcript/i.test(a) || mtime(b) - mtime(a))[0] || null;
+  // 자막이 없으면 삼성 음성 녹음 텍스트 변환(.txt, 시각 포함)을 쓴다. 줌 채팅 파일(chat)은 뺀다.
+  if (!vtt) vtt = files.filter((f) => /\.txt$/i.test(f) && !/chat|채팅/i.test(path.basename(f)) && /\d{1,2}:\d{2}/.test(fs.readFileSync(f, "utf8").slice(0, 4000))).sort((a, b) => mtime(b) - mtime(a))[0] || null;
   if (!video && !audio) fail(`그 폴더에 영상·음성 파일이 없음: ${dir}`, 2);
   return { dir, video, audio, vtt, name: path.basename(dir) };
 }
@@ -109,7 +111,7 @@ if (!fs.existsSync(wav)) {
 // 2) 받아쓰기
 const srt = path.join(work, "transcript.srt");
 let method = null;
-if (rec.vtt) { fs.copyFileSync(rec.vtt, srt); method = "줌 자막 " + path.basename(rec.vtt); }
+if (rec.vtt) { fs.copyFileSync(rec.vtt, srt); method = (/\.txt$/i.test(rec.vtt) ? "받아쓴 글(삼성 음성 녹음 등) " : "줌 자막 ") + path.basename(rec.vtt); }
 if (!method) {
   for (const py of ["python3", "python", "py"]) {
     if (spawnSync(py, ["-c", "import faster_whisper"], { shell: process.platform === "win32" }).status !== 0) continue;
