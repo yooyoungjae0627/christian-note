@@ -15,3 +15,4 @@
 - 2026-11-01: 클라우드 세션 빌드 구축 — `tools/cloud_setup.sh`(글꼴·npm·faster-whisper), edge.mjs가 리눅스에서 chrome-headless-shell 사용, 36권 시험 빌드 91쪽·verify 둘 다 exit 0. 받아쓰기(`tools/zoom/transcribe.py`)는 huggingface.co가 막혀 모델을 못 받음(exit 3) — 사용자가 네트워크 허용 필요.
 - 2026-11-01: 「최근 줌 녹화 교재 집필해줘」 명령 — `tools/zoom/zoombook.mjs`가 최근 녹화 찾기·프레임·음성·받아쓰기를 한 번에(시험: 자막 있음 exit 0, 모델 막힘 exit 3, 변환 전 exit 4, 녹화 없음 exit 2). Windows용 Node 받아쓰기 `transcribe.mjs`는 모델을 못 받아 실제 받아쓰기 미시험.
 - 2026-11-01: 네트워크 설정 없이 하는 길 — 삼성 음성 녹음 텍스트 변환(.txt, 시각 포함)을 영상과 같은 Drive 「줌 녹화」 폴더에 올리면 zoombook이 그것으로 받아쓰기를 대신함(시험 exit 0, 시각 없으면 exit 4). 실제 삼성 내보내기 형식은 첫 사용 때 확인 필요.
+- 2026-11-01: 줌 녹화 + 삼성 음성 녹음 조합 구축 — zoombook이 채팅 첨부(/mnt/user-data/uploads)도 찾고, 삼성 .txt 여러 개를 이름 순으로 이어 붙이고(같은 이름 .m4a 길이 사용), 영상이 없으면 슬라이드 캡처를 씀(시험: exit 0/0/3). Google Drive 「줌 녹화」 폴더 만듦. Drive 연결은 작은 파일만 받을 수 있어 영상은 채팅 첨부로 받아야 함. 실제 삼성 내보내기 형식·1시간 30분 변환·첨부 크기 한도는 미확인.

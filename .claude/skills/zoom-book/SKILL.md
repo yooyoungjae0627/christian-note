@@ -6,7 +6,7 @@ description: 줌(Zoom) 강의 녹화를 받아쓰기·슬라이드 추출해 성
 # 줌 녹화 교재
 
 1. `git pull`로 최신 지침을 받는다.
-2. 클라우드 세션이면 `bash tools/cloud_setup.sh`, 그리고 Google Drive 「줌 녹화」의 가장 최근 녹화(영상 + 같이 올린 자막 .vtt 또는 삼성 음성 녹음 텍스트 .txt)를 `/tmp/zoom_in/<녹화 이름>/` 한 폴더에 받는다.
+2. 클라우드 세션이면 `bash tools/cloud_setup.sh`. 영상은 채팅 첨부(`/mnt/user-data/uploads`)에서, 삼성 음성 녹음 글(.txt)·슬라이드 캡처는 첨부 또는 Google Drive 「줌 녹화」 폴더에서 받는다(Drive는 작은 파일만 — 영상 불가). 흩어져 있으면 한 폴더로 모아 그 폴더를 인자로 준다.
 3. `node tools/zoom/zoombook.mjs` — 가장 최근 녹화를 찾아 받아쓰기·슬라이드 후보를 만든다. exit 0이 아니면 그 메시지를 사용자에게 그대로 알리고 멈춘다.
 4. 이후 원고·그림·빌드·메모리 뱅크는 지침대로.
 
