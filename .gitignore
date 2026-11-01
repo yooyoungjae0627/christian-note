@@ -16,3 +16,7 @@ desktop.ini
 __pycache__/
 *.py[cod]
 _샘플_2판/
+
+# 검사 도구가 남기는 결과 파일(verify-*.json 등)과 임시 작업 폴더 — 커밋하지 않는다(2026-11-02)
+verify-*
+/tmp/

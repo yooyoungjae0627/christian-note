@@ -3,7 +3,8 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { BOOKS, HERE, TMP, esc, chapterVerses, rangeVerses, markRanges, applyMarks, MARK, BASIS, timeKo, ffFile, sbcFile, webOf } from "./lib.mjs";
-import { mapSvg, mapViews, relationSvg, relLegendHtml, coverSvg } from "./art.mjs";
+import { mapSvg, mapViews, coverSvg } from "./art.mjs";
+import { familySvg, familyLegendHtml } from "./famtree.mjs";
 
 // 굵기별 정적 Noto 폰트(%TEMP%/chapterbook2/fonts, fetch_fonts.mjs로 받음). 가변 폰트는 Edge가 굵기 변형을 Type3(글자 그림)로 넣어
 // PDF가 커지므로 쓰지 않는다. 정적 폰트가 없으면 빌드를 멈춘다.
@@ -70,13 +71,13 @@ export function howto(book, mk) {
   return o;
 }
 export function cover(book, title, sub, art, motto) {
-  return `<section class="cover"><i class="diamond top"></i><i class="diamond bottom"></i><div class="ed">FIRSTFRUITS · 첫열매들 교리로 읽는 성경</div><h1>${title}</h1><div class="sub">${esc(sub)}</div><div class="art">${art}</div><div class="motto">${esc(motto)}</div><div class="bar"></div><div class="bot">첫열매들(FIRSTFRUITS) 강의와 교재로 엮은</div></section>`;
+  return `<section class="cover"><i class="diamond top"></i><i class="diamond bottom"></i><div class="ed">FIRSTFRUITS · 첫열매들 교리로 읽는 성경</div><h1>${title}</h1><div class="sub">${esc(sub)}</div><div class="art">${art}</div><div class="motto">${esc(motto)}</div><div class="bar"></div><div class="bot">${book === "genesis" ? "성경 읽기 노트" : "첫열매들(FIRSTFRUITS) 강의와 교재로 엮은"}</div></section>`;
 }
 
 // 한 장의 본문부: 장 머리 → 인물 → 지도 → 절·해설 → 영어 구문 (+ 학습 자료는 learning()으로)
 // p = id 앞붙임(합본에서 장마다 다르게), qr = PDF에 QR 넣기
 // head = 단원 책에서 장 일부만 실을 때 장 머리 글자 {h1, nav}(지침 §0-1)
-export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "", head = null } = {}) {
+export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "", head = null, afterMap = null } = {}) {
   const B = BOOKS[book];
   const nav = [];
   const comments = Object.fromEntries(d.sections.flatMap((s) => s.comments.map((c) => [c.id, c])));
@@ -88,7 +89,7 @@ export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "", he
     for (const x of d.people) o += `<div class="person"><span class="pn">${esc(x.name)}</span>${x.en ? `<span class="pe">${esc(x.en)}</span>` : ""}<div>${esc(x.desc)}</div><div class="pr">근거: ${B.ko} ${esc(x.refs.join(", "))}</div></div>`;
     o += `</div>`;
     nav.push([p + "people", "이 장의 인물", 1]);
-    if (d.relations?.length) { const nm = Object.fromEntries(d.people.map((x) => [x.id, x.name])); o += `<div class="figure relfig"><div class="lab">인물 관계도</div>${relationSvg(d.people, d.relations)}${relLegendHtml(d.relations, d.people)}</div><table class="rel-refs"><thead><tr><th>관계</th><th>근거</th></tr></thead><tbody>` + d.relations.map((r) => `<tr><td>${esc(nm[r.from])} — ${esc(nm[r.to])}${r.label ? ` · ${esc(r.label)}` : ""}</td><td>${B.ko} ${esc(r.ref)}</td></tr>`).join("") + `</tbody></table>`; }
+    if (d.relations?.length) { const nm = Object.fromEntries(d.people.map((x) => [x.id, x.name])); o += `<div class="figure relfig"><div class="lab">인물 관계도</div>${familySvg(d.people, d.relations)}${familyLegendHtml(d.people, d.relations)}</div><table class="rel-refs"><thead><tr><th>관계</th><th>근거</th></tr></thead><tbody>` + d.relations.map((r) => `<tr><td>${esc(nm[r.from])} — ${esc(nm[r.to])}${r.label ? ` · ${esc(r.label)}` : ""}</td><td>${B.ko} ${esc(r.ref)}</td></tr>`).join("") + `</tbody></table>`; }
   }
   // 지도 — views가 있으면 전체 지도와 확대 지도 등 여러 장
   if (d.map?.places?.length) {
@@ -98,10 +99,12 @@ export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "", he
       const places = d.map.places.filter((x) => v.keys.includes(x.key));
       const routes = (d.map.routes || []).map((r) => ({ ...r, path: r.path.filter((k) => v.keys.includes(k)) })).filter((r) => r.path.length > 1);
       const last = vi === views.length - 1;
-      o += `<div class="figure">${v.title ? `<div class="map-title">${esc(v.title)}</div>` : ""}${mapSvg({ places, routes, minSpan: v.minSpan, focus: v.focus, hide: v.hide, frames: v.frames })}${last ? `<div class="cap">붉은 점·굵은 이름 = 이 장에 나오는 지명. 옅은 이름 = 주변 지역. 위치는 대략적인 것입니다.${d.map.routes?.length ? " 붉은 점선 화살표 = 본문의 이동 경로(" + esc(d.map.routes.map((r) => r.ref).join(", ")) + ")." : ""}</div>${d.map.unknown?.length ? `<div class="unknown">위치 미상: ${esc(d.map.unknown.map((u) => `${u.name}(${u.ref}) ${u.note || ""}`.trim()).join(" · "))}</div>` : ""}` : ""}</div>`;
+      o += `<div class="figure">${v.title ? `<div class="map-title">${esc(v.title)}</div>` : ""}${mapSvg({ places, routes, minSpan: v.minSpan, focus: v.focus, hide: v.hide, frames: v.frames })}${last ? `<div class="cap">빨간 점·초록 이름표 = 이 장에 나오는 지명. 빨간 이름표 = 이 장에 나오는 지역. 바탕은 구글 지도이고, 그 위의 작은 글자는 오늘날 지명입니다. 위치는 대략적인 것입니다.${d.map.routes?.length ? " 붉은 점선 화살표 = 본문의 이동 경로(" + esc(d.map.routes.map((r) => r.ref).join(", ")) + ")." : ""}</div>${d.map.unknown?.length ? `<div class="unknown">위치 미상: ${esc(d.map.unknown.map((u) => `${u.name}(${u.ref}) ${u.note || ""}`.trim()).join(" · "))}</div>` : ""}` : ""}</div>`;
     });
     nav.push([p + "map", "이 장의 지도", 1]);
   }
+  // 지도 다음 「만화로 보는 이야기」(단원 책의 첫 장에만, comic.mjs)
+  if (afterMap) { o += afterMap.html; nav.push(...afterMap.nav); }
   // 절과 해설 — 단락마다 칠판 하나: 범례 → 절(한글·KJV·현대 영어) → 영어 강의 → 단어장
   d.sections.forEach((s, i) => {
     const key = `${p}s${i + 1}`;
@@ -127,7 +130,7 @@ export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "", he
     if (s.comments.length) o += `<div class="category">해설</div>`;
     for (const c of s.comments) {
       const b = BASIS[c.basis];
-      o += `<div class="comment ${b.cls}"><p class="${c.quote ? "quote" : ""}">${b.badge ? `<span class="badge-src">${b.badge}</span>` : ""}${inline(c)}</p>${sourceRows(c)}</div>`;
+      o += `<div class="comment ${b.cls}"><p class="${c.quote ? "quote" : ""}">${b.badge ? `<span class="badge-src">${c.also ? "이이레 목사 강의 · 함께 참고" : b.badge}</span>` : ""}${inline(c)}</p>${sourceRows(c)}</div>`;
     }
     for (const t of s.notes || []) o += `<div class="note"><b>해설 미수록</b><br/>${esc(t)}</div>`;
     o += TOTOC;

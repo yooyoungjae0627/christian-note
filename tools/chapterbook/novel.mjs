@@ -107,7 +107,8 @@ export function novelHtml(book, n, mk = () => "") {
 }
 const NOVEL_CSS = `<style>
 .novel .nv-sub{font:600 10pt/1.6 "Noto Sans KR",sans-serif;color:#6b5d3d;margin-top:-1mm;}
-.novel p.nv{font-size:10.8pt;line-height:1.95;text-indent:1em;margin:0 0 2.2mm;}
+/* 번역 소설 조판(사용자 지시 2026-11-02 「띄어쓰기·자간이 왜 이러냐, 해리포터 번역본은 안 그랬다」): 양끝 맞춤·글자 단위 줄바꿈으로 줄 끝 들쭉날쭉 없앰, 문단 사이 띄움 없이 들여쓰기만 */
+.novel p.nv{font-size:10.6pt;line-height:1.8;text-indent:1em;margin:0;text-align:justify;text-justify:inter-character;word-break:normal;line-break:strict;letter-spacing:-.012em;word-spacing:-.02em;}
 .novel .gold + p.nv::first-letter,.novel .nv-ch + p.nv::first-letter{font-size:1.45em;font-weight:700;color:#18233f;}
 .novel .gold + p.nv,.novel .nv-ch + p.nv{text-indent:0;}
 .novel .nv-ch{font:700 9pt "Noto Sans KR",sans-serif;letter-spacing:.14em;color:#c9973b;text-align:center;margin:6mm 0 3.5mm;break-after:avoid;}

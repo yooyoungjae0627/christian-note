@@ -1,0 +1,22 @@
+{
+ "panels": [
+  {"ref": "27:1-4", "cap": "눈이 어두워진 이삭이 맏아들 에서를 불렀다.", "sky": "day",
+   "items": [["tent", 330, 250, 1], ["sit", 110, 252, 1, {"veil": false, "beard": true, "robe": "#8a5a3a", "mood": "calm"}], ["person", 240, 252, 1, {"robe": "#a0522d", "cloth": false, "hair": "#8a3a1a", "bow": true, "pose": "hold", "flip": true}]],
+   "say": [{"t": "짐승을 잡아 오너라. 내가 죽기 전에 너를 축복하마.", "x": 14, "y": 14, "w": 220, "to": [112, 132]}]},
+  {"ref": "27:5-17", "cap": "리브카는 야곱에게 에서의 옷을 입히고 염소 가죽을 붙였다.", "sky": "day",
+   "items": [["goat", 340, 262, 0.8], ["goat", 300, 278, 0.7, {"flip": true}], ["bowl", 220, 262, 1.2, {"steam": true}], ["person", 90, 252, 0.95, {"veil": "#ead2dd", "robe": "#c9798f", "pose": "reach"}], ["person", 170, 252, 0.95, {"robe": "#a0522d", "cloth": false, "skin": true, "mood": "worry", "flip": true}]],
+   "say": [{"t": "내 말을 들어라. 좋은 새끼 염소 두 마리를 끌고 오너라.", "x": 150, "y": 14, "w": 236, "to": [100, 120]}]},
+  {"ref": "27:18-29", "cap": "이삭은 야곱을 알아보지 못하고 그를 축복했다.", "sky": "day",
+   "items": [["sit", 110, 252, 1, {"veil": false, "beard": true, "robe": "#8a5a3a", "mood": "worry"}], ["bowl", 175, 256, 1, {"steam": true}], ["person", 250, 252, 1, {"robe": "#a0522d", "cloth": false, "skin": true, "pose": "forward", "flip": true}]],
+   "say": [{"t": "목소리는 야곱인데, 손은 에서의 손이로구나.", "x": 14, "y": 14, "w": 210, "to": [112, 132]}]},
+  {"ref": "27:30-40", "cap": "뒤늦게 사냥에서 돌아온 에서가 크게 울부짖었다.", "sky": "dusk",
+   "items": [["sit", 110, 252, 1, {"veil": false, "beard": true, "robe": "#8a5a3a", "mood": "surprise"}], ["bowl", 180, 258, 1], ["person", 270, 252, 1, {"robe": "#a0522d", "cloth": false, "hair": "#8a3a1a", "pose": "cry", "mood": "cry", "flip": true}]],
+   "say": [{"t": "아버지, 저도요! 제발 저도 축복해 주세요!", "x": 176, "y": 14, "w": 210, "to": [268, 106]}]},
+  {"ref": "27:41-45", "cap": "에서가 야곱을 미워하자 리브카가 야곱을 피하게 했다.", "sky": "day",
+   "items": [["tent", 60, 250, 0.9], ["person", 120, 252, 0.95, {"veil": "#ead2dd", "robe": "#c9798f", "pose": "forward"}], ["person", 200, 252, 0.95, {"robe": "#6f8fa8", "cloth": false, "flip": true}], ["person", 340, 252, 0.9, {"robe": "#a0522d", "cloth": false, "hair": "#8a3a1a", "bow": true, "pose": "hold", "mood": "angry", "flip": true}]],
+   "say": [{"t": "하란에 있는 내 오라버니 라반에게로 도망쳐라.", "x": 14, "y": 14, "w": 200, "to": [124, 122]}]},
+  {"ref": "28:1-5", "cap": "이삭이 축복하며 보내자 야곱은 파단아람으로 떠났다.", "sky": "day",
+   "items": [["tent", 70, 250, 0.9], ["sit", 150, 252, 0.95, {"veil": false, "beard": true, "robe": "#8a5a3a", "mood": "calm"}], ["person", 300, 252, 0.9, {"robe": "#6f8fa8", "cloth": false, "staff": true, "pose": "forward"}]],
+   "say": [{"t": "가나안의 딸 말고 라반의 딸 가운데서 아내를 얻어라.", "x": 120, "y": 14, "w": 266, "to": [156, 150]}]}
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "panels": [
+  {"ref": "28:10-15", "cap": "돌을 베고 잠든 야곱이 하늘에 닿은 사다리를 보았다.", "sky": "night",
+   "items": [["stars", 200, 0, 1], ["light", 290, 0, 0.7], ["ladder", 250, 250, 1], ["stone", 150, 250, 0.8], ["lying", 110, 238, 1.2, {"robe": "#6f8fa8", "cloth": false, "mood": "sleep"}], ["zzz", 160, 180, 1]],
+   "say": [{"t": "내가 너와 함께 있다. 어디로 가든 너를 지키겠다.", "x": 14, "y": 14, "w": 190, "to": [272, 70], "god": true}]},
+  {"ref": "28:16-22", "cap": "야곱은 돌기둥을 세워 기름을 붓고 벧엘이라 불렀다.", "sky": "dusk",
+   "items": [["sun", 340, 70, 0.8], ["stone", 250, 252, 1.4, {"pillar": true, "oil": true}], ["person", 140, 252, 1, {"robe": "#6f8fa8", "cloth": false, "pose": "pray", "mood": "surprise"}]],
+   "say": [{"t": "이곳은 하나님의 집이다. 하늘의 대문이다!", "x": 14, "y": 14, "w": 200, "to": [140, 120]}]},
+  {"ref": "29:1-20", "cap": "우물가에서 라헬을 만난 야곱은 칠 년을 섬겼다.", "sky": "day",
+   "items": [["well", 200, 266, 1.1], ["stone", 140, 262, 0.9], ["person", 90, 252, 1, {"robe": "#6f8fa8", "cloth": false, "pose": "reach"}], ["person", 310, 252, 0.92, {"veil": "#f0c9a8", "robe": "#d9798f", "staff": true, "flip": true}], ["sheep", 370, 270, 0.7, {"flip": true}], ["sheep", 250, 288, 0.6, {"flip": true}]],
+   "say": [{"t": "라헬을 위해 칠 년 동안 섬기겠습니다.", "x": 160, "y": 14, "w": 226, "to": [110, 118]}]},
+  {"ref": "29:21-30", "cap": "칠 년 뒤 잔치를 치른 아침, 곁의 신부는 레아였다.", "sky": "day",
+   "items": [["tent", 60, 250, 0.9], ["person", 150, 252, 0.92, {"veil": "#c8d7c0", "robe": "#7f9a6f"}], ["person", 240, 252, 1, {"robe": "#6f8fa8", "cloth": false, "pose": "forward", "mood": "angry"}], ["person", 340, 252, 1, {"beard": "#8a7a6a", "robe": "#6b5a8a", "flip": true}]],
+   "say": [{"t": "어떻게 저를 속이실 수가 있습니까?", "x": 120, "y": 14, "w": 200, "to": [244, 108]}]},
+  {"ref": "30:1-24", "cap": "레아와 라헬, 두 하녀에게서 아들들이 태어났다.", "sky": "day",
+   "items": [["tent", 200, 250, 0.9], ["person", 90, 252, 0.92, {"veil": "#c8d7c0", "robe": "#7f9a6f", "pose": "hold", "baby": true}], ["person", 320, 252, 0.92, {"veil": "#f0c9a8", "robe": "#d9798f", "pose": "hold", "baby": true, "mood": "smile", "flip": true}]],
+   "say": [{"t": "하나님께서 내 부끄러움을 씻어 주셨어.", "x": 180, "y": 14, "w": 206, "to": [318, 116]}]},
+  {"ref": "30:25-43", "cap": "얼룩지고 점박이인 가축이 늘어 야곱은 크게 불어났다.", "sky": "day",
+   "items": [["tree", 50, 252, 0.9], ["camel", 340, 250, 0.7], ["person", 110, 252, 0.95, {"robe": "#6f8fa8", "cloth": false, "staff": true, "pose": "forward"}], ["goat", 190, 268, 0.8, {"wool": "#9a7a5a"}], ["sheep", 240, 282, 0.75, {"wool": "#c9a07a"}], ["sheep", 290, 270, 0.75], ["goat", 160, 296, 0.6, {"wool": "#6b5a4a"}]],
+   "say": [{"t": "얼룩지고 점박이인 것이 제 품삯이 될 겁니다.", "x": 14, "y": 14, "w": 230, "to": [112, 118]}]}
+ ]
+}

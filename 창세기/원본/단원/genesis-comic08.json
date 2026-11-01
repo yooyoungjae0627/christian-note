@@ -1,0 +1,401 @@
+{
+ "panels": [
+  {
+   "ref": "14:1-9",
+   "cap": "네 왕과 다섯 왕이 싯딤 계곡에서 맞붙었다.",
+   "sky": "day",
+   "items": [
+    [
+     "person",
+     30,
+     254,
+     0.76,
+     {
+      "crown": true,
+      "robe": "#7a3b2a",
+      "cloth": false,
+      "pose": "forward",
+      "staff": true
+     }
+    ],
+    [
+     "person",
+     82,
+     254,
+     0.76,
+     {
+      "crown": true,
+      "robe": "#5b4a8a",
+      "cloth": false,
+      "pose": "forward"
+     }
+    ],
+    [
+     "person",
+     134,
+     254,
+     0.76,
+     {
+      "crown": true,
+      "robe": "#3f6f5a",
+      "cloth": false,
+      "pose": "forward"
+     }
+    ],
+    [
+     "person",
+     205,
+     258,
+     0.66,
+     {
+      "crown": true,
+      "robe": "#b5483a",
+      "cloth": false,
+      "flip": true,
+      "pose": "forward"
+     }
+    ],
+    [
+     "person",
+     245,
+     258,
+     0.66,
+     {
+      "crown": true,
+      "robe": "#c9973b",
+      "cloth": false,
+      "flip": true,
+      "pose": "forward"
+     }
+    ],
+    [
+     "person",
+     285,
+     258,
+     0.66,
+     {
+      "crown": true,
+      "robe": "#5f7fa6",
+      "cloth": false,
+      "flip": true,
+      "pose": "forward"
+     }
+    ],
+    [
+     "person",
+     325,
+     258,
+     0.66,
+     {
+      "crown": true,
+      "robe": "#9b8a6a",
+      "cloth": false,
+      "flip": true,
+      "pose": "forward"
+     }
+    ]
+   ]
+  },
+  {
+   "ref": "14:10-12",
+   "cap": "소돔 왕은 수렁에 빠지고, 롯은 재물과 함께 끌려갔다.",
+   "sky": "dusk",
+   "items": [
+    [
+     "pit",
+     80,
+     262,
+     1.1
+    ],
+    [
+     "person",
+     80,
+     262,
+     0.55,
+     {
+      "crown": true,
+      "robe": "#b5483a",
+      "cloth": false,
+      "pose": "raise",
+      "mood": "surprise"
+     }
+    ],
+    [
+     "sack",
+     210,
+     268,
+     0.9
+    ],
+    [
+     "person",
+     260,
+     254,
+     0.95,
+     {
+      "robe": "#5f7fa6",
+      "cloth": "#e6e0cc",
+      "band": "#3a5a7a",
+      "flip": true
+     }
+    ],
+    [
+     "person",
+     345,
+     254,
+     0.95,
+     {
+      "robe": "#6e5a4a",
+      "cloth": false,
+      "staff": true,
+      "pose": "forward",
+      "flip": true
+     }
+    ]
+   ]
+  },
+  {
+   "ref": "14:13-14",
+   "cap": "소식을 들은 아브람이 종 삼백십팔 명을 무장시켜 뒤쫓았다.",
+   "sky": "day",
+   "items": [
+    [
+     "tent",
+     60,
+     250,
+     0.8
+    ],
+    [
+     "person",
+     170,
+     254,
+     0.8,
+     {
+      "robe": "#9b8a6a",
+      "staff": true,
+      "pose": "forward"
+     }
+    ],
+    [
+     "person",
+     225,
+     254,
+     0.8,
+     {
+      "robe": "#7f8fa6",
+      "staff": true,
+      "pose": "forward"
+     }
+    ],
+    [
+     "person",
+     280,
+     254,
+     0.8,
+     {
+      "robe": "#9b8a6a",
+      "staff": true,
+      "pose": "forward"
+     }
+    ],
+    [
+     "person",
+     345,
+     252,
+     1,
+     {
+      "beard": true,
+      "robe": "#8a5a3a",
+      "pose": "reach",
+      "staff": true
+     }
+    ]
+   ]
+  },
+  {
+   "ref": "14:15-16",
+   "cap": "밤에 적을 친 아브람이 롯과 재물, 사람들을 되찾았다.",
+   "sky": "night",
+   "items": [
+    [
+     "stars",
+     200,
+     0,
+     1
+    ],
+    [
+     "moon",
+     360,
+     40,
+     1
+    ],
+    [
+     "sack",
+     60,
+     268,
+     0.9
+    ],
+    [
+     "sack",
+     95,
+     272,
+     0.8
+    ],
+    [
+     "person",
+     170,
+     254,
+     0.95,
+     {
+      "robe": "#5f7fa6",
+      "cloth": "#e6e0cc",
+      "band": "#3a5a7a"
+     }
+    ],
+    [
+     "person",
+     280,
+     252,
+     1,
+     {
+      "beard": true,
+      "robe": "#8a5a3a",
+      "pose": "forward",
+      "staff": true,
+      "flip": true
+     }
+    ]
+   ]
+  },
+  {
+   "ref": "14:18-20",
+   "cap": "살렘 왕 멜키제덱이 빵과 포도즙을 들고 와 축복했다.",
+   "sky": "day",
+   "items": [
+    [
+     "bowl",
+     205,
+     262,
+     1.1,
+     {
+      "c": "#d9a35e"
+     }
+    ],
+    [
+     "cup",
+     235,
+     268,
+     1
+    ],
+    [
+     "coins",
+     160,
+     286,
+     1
+    ],
+    [
+     "person",
+     95,
+     252,
+     1,
+     {
+      "beard": true,
+      "robe": "#8a5a3a",
+      "pose": "pray"
+     }
+    ],
+    [
+     "person",
+     315,
+     252,
+     1,
+     {
+      "crown": true,
+      "beard": true,
+      "robe": "#f2efe6",
+      "cloth": false,
+      "hair": "#d8d8d2",
+      "pose": "wide",
+      "flip": true
+     }
+    ]
+   ],
+   "say": [
+    {
+     "t": "지극히 높으신 하나님께 속한 아브람이 복을 받기를!",
+     "x": 140,
+     "y": 10,
+     "w": 250,
+     "to": [
+      318,
+      86
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "14:21-24",
+   "cap": "아브람은 소돔 왕의 재물을 실오라기 하나도 받지 않았다.",
+   "sky": "day",
+   "items": [
+    [
+     "coins",
+     205,
+     282,
+     1.2
+    ],
+    [
+     "sack",
+     230,
+     270,
+     0.8
+    ],
+    [
+     "person",
+     95,
+     252,
+     1,
+     {
+      "beard": true,
+      "robe": "#8a5a3a",
+      "pose": "wide"
+     }
+    ],
+    [
+     "person",
+     320,
+     254,
+     1,
+     {
+      "crown": true,
+      "robe": "#b5483a",
+      "cloth": false,
+      "pose": "forward",
+      "flip": true
+     }
+    ]
+   ],
+   "say": [
+    {
+     "t": "실오라기 하나도 갖지 않겠소.",
+     "x": 10,
+     "y": 14,
+     "w": 170,
+     "to": [
+      96,
+      104
+     ]
+    },
+    {
+     "t": "재물은 당신이 가지시오.",
+     "x": 220,
+     "y": 14,
+     "w": 170,
+     "to": [
+      320,
+      92
+     ]
+    }
+   ]
+  }
+ ]
+}

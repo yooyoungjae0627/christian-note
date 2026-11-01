@@ -223,3 +223,48 @@ table.rel-refs td:last-child{white-space:nowrap;color:#8a6420;width:24%;}
 .srow .jump{display:inline-flex;align-items:center;gap:1.2mm;font:700 7.8pt/1.3 "Noto Sans KR",sans-serif;color:#c4302b;white-space:nowrap;}
 .srow .jump .yt{width:5.6mm;height:4mm;}
 .qa .srcbox{margin-top:.8mm;}
+
+/* ── 2026-11-02(사용자 지시 「칠판이 안 예쁘고 가독성이 떨어진다 — 띄어쓰기·글자 크기 신경 써서」): 칠판 3판 ──
+   줄간격을 2.35→2.0으로 줄여 글줄이 이어 읽히게, 영어는 굵은 Times 대신 보통 굵기 세리프로, 절 사이에 가는 구분선 */
+.verse{background:#15171b;border:.3mm solid #2e3138;border-radius:2.2mm;padding:3.6mm 4.6mm 3.4mm 3.6mm;}
+.verse .legend-board{gap:.6mm 2.6mm;background:#1e2127;border-radius:1.2mm;padding:1.2mm 2.4mm;margin:0 0 3mm;font:500 6.8pt/1.55 "Noto Sans KR",sans-serif;color:#b9bdc6;}
+.verse .vl{font:700 7.2pt/1.4 "Noto Sans KR",sans-serif;letter-spacing:.1em;color:#d9b65c;margin:0 0 2.8mm;}
+.verse .vrow{padding:0 0 2.6mm 8.4mm;margin:0 0 2.6mm;border-bottom:.2mm solid #2a2d34;}
+.verse .vrow:has(+ .vs){border-bottom:none;padding-bottom:0;margin-bottom:1.6mm;}
+.verse .num{top:.9mm;font:700 8pt/1.5 "Noto Sans KR",sans-serif;color:#d9b65c;}
+.verse .ko{font:500 11.4pt/2.0 "Noto Sans KR",sans-serif;letter-spacing:-.005em;word-spacing:.08em;color:#f3f4f6;margin:0;}
+.verse .ko .g1,.verse .ko .g2,.verse .ko .g3{font-weight:700;}
+.verse .en{font:400 9.6pt/1.72 "Noto Serif KR",Georgia,serif;letter-spacing:.01em;word-spacing:.04em;color:#b8bfc9;margin:1.4mm 0 0;}
+.verse .web{background:#182a2e;border-left:.8mm solid #5fb7c0;font:400 8.8pt/1.6 "Noto Serif KR",Georgia,serif;color:#cfe3e4;margin:2mm 0 0;padding:1.4mm 2.6mm 1.5mm;}
+.mk-u{text-decoration-thickness:.25mm;text-underline-offset:.9mm;text-decoration-color:rgba(255,255,255,.75);}
+.mk-y,.mk-g,.mk-p,.mk-b{padding:0 .5mm;border-radius:.8mm;}
+.lead::before{top:-.88em;font:700 5.4pt/1 "Noto Sans KR",sans-serif;padding:.25mm .7mm;}
+.verse .en .lead::before{content:none;}
+.verse .vs{font-size:6.2pt;color:#8d929b;}
+.verse .lesson,.verse .vocab{border-top:.2mm solid #2e3138;margin-top:3mm;padding-top:2.6mm;}
+.lesson .lp{font:600 10pt/1.55 "Noto Serif KR",Georgia,serif;}
+.lesson p{font:400 9pt/1.7 "Noto Sans KR",sans-serif;color:#d5d8de;}
+.vocab .w b{font:600 10pt "Noto Serif KR",Georgia,serif;}
+/* 인물 관계도 3판(famtree.mjs): 그림과 범례는 한 쪽 안에서만 */
+.relfig{break-inside:avoid;}
+.relfig svg.famtree{display:block;width:100%;height:auto;max-height:150mm;margin:0 auto;}
+.fam-note{color:#8a7442;}
+/* ── 2026-11-02(사용자 지시 「칠판 색 좀 바꾸라고, 좀 이쁘게」 → 견본 넷 중 D 「소프트 블루」 선택): 밝은 회청 바탕·남색 글자·왼쪽 남색 띠 ── */
+.verse{background:#eef3f9;border:.3mm solid #cfdbea;border-left:1.4mm solid #3f5f95;color:#1d2738;}
+.verse .legend-board{background:#e0e8f3;color:#3d4b63;}
+.verse .vl,.verse .num{color:#3f5f95;}
+.verse .ko,.verse .ko .g1,.verse .ko .g2,.verse .ko .g3{color:#1b2436;}
+.verse .en{color:#556380;}
+.verse .vrow{border-bottom-color:#d6e0ec;}
+.verse .web{background:#ffffff;border-left-color:#7aa0d4;color:#2a3a55;}
+.verse .web .wt{color:#fff;background:#5a80bd;}
+.mk-u{text-decoration-color:#1b2436;}
+.verse .vs{color:#7d8aa0;}
+.verse .lesson,.verse .vocab{border-top:.2mm solid #cfdbea;}
+.lesson .lt,.vocab .lt{color:#3f5f95;}
+.lesson .lr{background:#3f5f95;color:#fff;}
+.lesson .lp{color:#1b2436;}
+.lesson .lg2{color:#2f7fa8;border-color:#2f7fa8;}
+.lesson p,.vocab .w{color:#3a465c;}
+.vocab .w b{color:#1b2436;}
+.vocab .w i{color:#7d8aa0;}

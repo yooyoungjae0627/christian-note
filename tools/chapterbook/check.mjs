@@ -2,8 +2,9 @@
 //   node tools/chapterbook/check.mjs genesis 12 [13 …]   또는  genesis all
 import fs from "node:fs";
 import path from "node:path";
-import { R, BOOKS, chapterFile, chapterVerses, rangeVerses, markRanges, transcript, pdfPage, squash, ffFile, sbcFile, MARK } from "./lib.mjs";
-import { PLACES, MOTIFS, relationIssues, mapViews, mapSvg, mapIssues } from "./art.mjs";
+import { R, BOOKS, chapterFile, chapterVerses, rangeVerses, markRanges, transcript, pdfPage, squash, ffFile, sbcFile, MARK, diskPath } from "./lib.mjs";
+import { PLACES, MOTIFS, mapViews, mapSvg, mapIssues } from "./art.mjs";
+import { familyIssues } from "./famtree.mjs";
 const BASIC = new Set(Object.values(JSON.parse(fs.readFileSync(new URL("./basic_words.json", import.meta.url), "utf8"))).filter(Array.isArray).flat());
 
 const [book, ...rest] = process.argv.slice(2);
@@ -58,12 +59,14 @@ for (const ch of chs) {
     for (const c of s.comments || []) {
       if (ids.has(c.id)) E(`해설 id 중복 ${c.id}`); ids.add(c.id);
       if (!RANK[c.basis]) { E(`${c.id} basis 이상 ${c.basis}`); continue; }
-      ranks.add(RANK[c.basis]); stat[c.basis]++;
+      // also = 높은 순위 해설 곁에 함께 싣는 이이레 강의(지침 §2-2, 사용자 지시 2026-11-02) — 순위 막기에서 뺀다
+      if (c.also && c.basis !== "sbc") E(`${c.id} also는 이이레 강의(basis sbc)에만`);
+      if (!c.also) ranks.add(RANK[c.basis]); stat[c.basis]++;
       for (const sp of c.spans || []) { const i = c.text.indexOf(sp.text); if (i < 0 || c.text.indexOf(sp.text, i + 1) >= 0) E(`${c.id} 강조 글자가 정확히 한 번 있어야 함: ${sp.text}`); if (![1, 2, 3].includes(sp.level)) E(`${c.id} 강조 단계 이상`); }
       if ((c.spans || []).length > 3) E(`${c.id} 강조 3개 초과`);
       if (!c.evidence?.length) E(`${c.id} 근거 없음`);
       for (const e of c.evidence || []) {
-        if (!fs.existsSync(path.join(R, e.file))) { E(`${c.id} 파일 없음 ${e.file}`); continue; }
+        if (!fs.existsSync(path.join(R, diskPath(e.file)))) { E(`${c.id} 파일 없음 ${e.file}`); continue; }
         if (e.type === "transcript") {
           if (ffFile(e.file) && RANK[c.basis] !== 1) E(`${c.id} 첫열매들 강의 근거는 basis direct/linked/doctrine`);
           if (sbcFile(e.file) && c.basis !== "sbc") E(`${c.id} 이이레 강의 근거는 basis sbc`);
@@ -108,7 +111,7 @@ for (const ch of chs) {
   for (const r of d.map?.routes || []) for (const k of r.path) if (!PLACES.places[k] && !(d.map.places || []).some((x) => x.key === k && x.at)) E(`경로 지명 없음 ${k}`);
   for (const v of d.map?.views || []) for (const k of v.keys) if (!(d.map.places || []).some((x) => x.key === k)) E(`지도 보기의 지명이 places에 없음 ${k}`);
   // 그림 겹침(지침 §5·§6): 관계도·지도 글자가 상자·선·다른 글자에 가려지지 않는지 실제 배치로 검사
-  if (d.people?.length && d.relations?.length) { try { for (const m of relationIssues(d.people, d.relations).issues) E("관계도 " + m); } catch (e) { E("관계도 배치 실패 " + e.message); } }
+  if (d.people?.length && d.relations?.length) { try { for (const m of familyIssues(d.people, d.relations).issues) E("관계도 " + m); } catch (e) { E("관계도 배치 실패 " + e.message); } }
   if (d.map?.places?.length) { try { for (const v of mapViews(d.map)) { const places = d.map.places.filter((x) => v.keys.includes(x.key)); const routes = (d.map.routes || []).map((r) => ({ ...r, path: r.path.filter((k) => v.keys.includes(k)) })).filter((r) => r.path.length > 1); mapSvg({ places, routes, minSpan: v.minSpan, focus: v.focus, hide: v.hide, frames: v.frames }); for (const m of mapIssues) E("지도 " + m); } } catch (e) { E("지도 배치 실패 " + e.message); } }
   // 영어 구문
   if (d.english) E("장 전체 english는 2판 보강에서 단락별 english로 옮긴다");

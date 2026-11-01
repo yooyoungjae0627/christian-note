@@ -10,6 +10,7 @@ import { execFileSync } from "node:child_process";
 import { R, TMP, BOOKS, TOPIC, mod, loadChapter, esc } from "./lib.mjs";
 import { chapterParts, learning, sourcesTable, toc, page, howto, cover, qrFile } from "./html.mjs";
 import { coverSvg } from "./art.mjs";
+import * as comic from "./comic.mjs";
 import { edgePrint } from "../../첫열매들 강의 정리/원본/tools/edge.mjs";
 
 const args = process.argv.slice(2);
@@ -115,14 +116,18 @@ if (rest[0] === "unit") {
     if (!nv) console.error(`경고: ${book} 단원 ${n} 「소설로 먼저 읽기」 원고 없음(지침 §2-4) — 완성본이 아님`);
     if (nv) { const ne = nv.checkNovel(book, n); if (ne.length) throw new Error("소설 원고 검사 실패: " + ne.join("; ")); }
     const u = loadUnit(n);
+    // 지도 다음 「만화로 보는 이야기」(사용자 지시 2026-11-02) — 원고가 있으면 검사를 통과해야 빌드
+    const hasComic = comic.hasComic(book, n);
+    if (hasComic) { const ce = comic.checkComic(book, n); if (ce.length) throw new Error("만화 원고 검사 실패: " + ce.join("; ")); }
     await ensureQr(u.parts.flatMap((x) => urlsOf(x.d)));
     const all = { sections: u.parts.flatMap((x) => x.d.sections), learning: u.learning };
     const render = (pages, withMk) => {
       const mk = withMk ? marker : () => "";
       let nav = [], body = "", comments = {};
       if (nv) { const s = nv.novelHtml(book, n, mk); nav.push(...s.nav); body += s.html; }
-      for (const x of u.parts) {
-        const a = chapterParts(book, x.ch, x.d, { p: `c${x.ch}-`, qr: false, mk, head: x.full ? null : { h1: label(x), nav: label(x) } });
+      for (const [xi, x] of u.parts.entries()) {
+        const afterMap = hasComic && xi === 0 ? { html: comic.COMIC_CSS + comic.comicHtml(book, n, { title: u.title, bookKo: B.ko }, mk), nav: [["comic", "만화로 보는 이야기", 1]] } : null;
+        const a = chapterParts(book, x.ch, x.d, { p: `c${x.ch}-`, qr: false, mk, head: x.full ? null : { h1: label(x), nav: label(x) }, afterMap });
         nav.push(...a.nav); body += a.html; Object.assign(comments, a.comments);
       }
       const l = learning(book, 0, all, comments, { mk, scope: "이 책" });

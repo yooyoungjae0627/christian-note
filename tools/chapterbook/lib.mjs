@@ -95,7 +95,7 @@ export function applyMarks(html, plain, ranges) {
 const trCache = {};
 export function transcript(file) {
   if (trCache[file]) return trCache[file];
-  const s = fs.readFileSync(path.join(R, file), "utf8");
+  const s = fs.readFileSync(path.join(R, diskPath(file)), "utf8");
   const lines = s.split(/\r?\n/).map((l) => l.match(/^- \[([\d:]+)\]\((https:\/\/youtu\.be\/[\w-]{11}\?t=\d+)\) (.*)$/)).filter(Boolean).map((m) => ({ time: m[1], url: m[2], text: m[3] }));
   return (trCache[file] = { title: s.match(/^# (.*)$/m)[1], lines, video: s.match(/https:\/\/youtu\.be\/([\w-]{11})/)[1] });
 }
@@ -105,6 +105,8 @@ export function pdfPage(file, page) {
   pdfIndex ||= Object.fromEntries(JSON.parse(fs.readFileSync(path.join(R, "창세기/자료검토/전체_PDF_본문색인.json"), "utf8")).books.map((b) => [b.file, b]));
   return pdfIndex[file]?.content.find((p) => p.page === page)?.text ?? null;
 }
+// 원고·PDF 색인에는 폴더 이름을 바꾸기 전 경로(Theme/, Milk/, Samuel/)가 남아 있다 — 디스크에서는 새 폴더로 찾는다(2026-11-02)
+export const diskPath = (f) => { for (const [a, b] of [["Theme/", "첫열매들 강의 정리/"], ["Milk/", "밀크(첫열매들)/"], ["Samuel/", "사무엘상·하/"]]) if (f.startsWith(a)) return b + f.slice(a.length); return f; };
 export const squash = (s) => String(s).replace(/\s+/g, " ").trim();
 export const ffFile = (f) => f.startsWith("memory-bank/첫열매들_강의스크립트/");
 // 원고에는 폴더 이름을 바꾸기 전 경로(Samuel/강의스크립트/)가 남아 있다 — 둘 다 3순위로 본다(2026-10-31)

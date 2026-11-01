@@ -1,0 +1,21 @@
+{
+ "panels": [
+  {"ref": "4:1-2", "cap": "이브가 카인과 아벨을 낳았다. 아벨은 양치기, 카인은 농부.", "sky": "day",
+   "items": [["grain", 40, 256, 0.9], ["grain", 330, 256, 0.9], ["sheep", 360, 284, 0.6], ["person", 130, 252, 1, {"cloth": false, "hair": "#4a3426", "mood": "calm"}], ["person", 220, 252, 0.94, {"cloth": false, "hair": "#4a3426", "robe": "#d58f9f", "pose": "hold", "baby": true, "flip": true, "mood": "calm"}]],
+   "say": [{"t": "내가 주께로부터 한 남자를 얻었어.", "x": 186, "y": 14, "w": 200, "to": [222, 100]}]},
+  {"ref": "4:3-5", "cap": "아벨의 제물은 귀히 여기시고 카인의 제물은 아니었다.", "sky": "day",
+   "items": [["light", 300, 0, 0.8], ["altar", 110, 252, 0.8], ["grain", 110, 210, 0.7], ["altar", 290, 252, 0.8], ["fire", 290, 212, 0.9], ["smoke", 292, 186, 0.7], ["person", 40, 252, 0.9, {"cloth": false, "hair": "#3a2a20", "robe": "#9b8a6a", "mood": "angry"}], ["person", 370, 252, 0.9, {"cloth": false, "hair": "#3a2a20", "robe": "#7f8fa6", "flip": true, "mood": "calm"}]]},
+  {"ref": "4:6-7", "cap": "몹시 화가 난 카인에게 주께서 말씀하셨다.", "sky": "dusk",
+   "items": [["light", 320, 0, 0.9], ["hills", 200, 256, 1], ["person", 150, 252, 1, {"cloth": false, "hair": "#3a2a20", "robe": "#9b8a6a", "mood": "angry"}]],
+   "say": [{"t": "죄가 문 앞에 있다. 너는 그를 다스려야 한다.", "x": 14, "y": 14, "w": 220, "to": [300, 70], "god": true}]},
+  {"ref": "4:8-9", "cap": "들에서 카인이 아벨을 죽였다. 주께서 아벨을 찾으셨다.", "sky": "dusk",
+   "items": [["light", 70, 0, 0.8], ["grain", 360, 256, 0.8], ["lying", 120, 262, 0.9, {"cloth": false, "robe": "#7f8fa6"}], ["person", 280, 252, 1, {"cloth": false, "hair": "#3a2a20", "robe": "#9b8a6a", "flip": true, "mood": "angry"}]],
+   "say": [{"t": "네 아우 아벨은 어디 있느냐?", "x": 14, "y": 14, "w": 170, "to": [80, 60], "god": true}, {"t": "제가 제 아우를 지키는 사람입니까?", "x": 200, "y": 14, "w": 186, "to": [282, 104]}]},
+  {"ref": "4:10-16", "cap": "떠돌이가 된 카인은 주의 앞을 떠나 놋 땅에 살았다.", "sky": "desert",
+   "items": [["hills", 200, 256, 1, {"c": "#d9c08a"}], ["light", 70, 0, 0.7], ["tent", 330, 250, 0.8], ["person", 210, 252, 1, {"cloth": false, "hair": "#3a2a20", "robe": "#9b8a6a", "staff": true, "pose": "forward", "mood": "worry"}]],
+   "say": [{"t": "제 벌이 너무 무거워 감당할 수 없습니다.", "x": 160, "y": 14, "w": 226, "to": [214, 104]}]},
+  {"ref": "4:17-26", "cap": "카인은 도시 에녹을 세웠다. 아담에게는 셋이 태어났다.", "sky": "day",
+   "items": [["city", 110, 250, 0.9], ["person", 260, 252, 0.94, {"cloth": false, "hair": "#4a3426", "robe": "#d58f9f", "pose": "hold", "baby": true, "mood": "calm"}], ["person", 340, 252, 1, {"beard": true, "cloth": false, "hair": "#4a3426", "flip": true, "mood": "calm"}]],
+   "say": [{"t": "하나님께서 아벨 대신 다른 씨를 주셨어.", "x": 14, "y": 14, "w": 210, "to": [256, 104]}]}
+ ]
+}

@@ -1,7 +1,11 @@
 // 장별 해설서 2판 그림: 지도(지침 §6), 인물 관계도(§5), 표지 선 그림(§2).
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
+import os from "node:os";
+import { execFileSync } from "node:child_process";
+import { mod } from "./lib.mjs";
+const mupdf = await mod("mupdf");
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const PLACES = JSON.parse(fs.readFileSync(path.join(HERE, "places.json"), "utf8"));
@@ -43,7 +47,56 @@ function project(map) {
   if (w / h > W / H) h = w * H / W; else w = h * W / H;
   const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
   x0 = cx - w / kx / 2; x1 = cx + w / kx / 2; y0 = cy - h / 2; y1 = cy + h / 2;
-  return { W, H, look, pts, x0, y0, x1, y1, kx, X: (lon) => (lon - x0) / (x1 - x0) * W, Y: (lat) => (y1 - lat) / (y1 - y0) * H };
+  // 바탕은 구글 지도 지형 타일(사용자 지시 2026-11-02 「지도는 니가 그리지 말고 구글에서 따와서 표기해라」) — 웹 메르카토르로 맞춘다.
+  // 512px(scale=2) 타일을 한 칸 256 단위로 놓고, 그림 폭(640)에 맞게 줌을 고른다(배율 sc 1–2).
+  const mx = (lon, z) => (lon + 180) / 360 * 256 * 2 ** z;
+  const my = (lat, z) => { const r = lat * Math.PI / 180; return (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * 256 * 2 ** z; };
+  const z = Math.min(16, Math.floor(Math.log2(W * 360 / (256 * (x1 - x0)))));
+  const sc = W / ((x1 - x0) / 360 * 256 * 2 ** z);
+  const mcx = mx(cx, z), mcy = my(cy, z);
+  const X = (lon) => W / 2 + (mx(lon, z) - mcx) * sc, Y = (lat) => H / 2 + (my(lat, z) - mcy) * sc;
+  const lonOf = (px) => (mcx + (px - W / 2) / sc) / (256 * 2 ** z) * 360 - 180;
+  const latOf = (py) => { const n = Math.PI - 2 * Math.PI * (mcy + (py - H / 2) / sc) / (256 * 2 ** z); return Math.atan(Math.sinh(n)) * 180 / Math.PI; };
+  return { W, H, look, pts, x0: lonOf(0), y0: latOf(H), x1: lonOf(W), y1: latOf(0), kx, X, Y, google: { z, sc, mcx, mcy } };
+}
+// 구글 지도에 이미 찍힌 글자(오늘날 지명·도로 번호) 자리 — 우리 이름표가 가리지 않게 피할 곳(사용자 지시 2026-11-02 「현재 지명이 가린 부분 고려해서 표기 위치를 바꿔라」).
+// 타일을 16px 칸으로 나눠 어두운 점(글자 획)이 많은 칸을 장애물 상자로 돌려준다.
+const INK_CACHE = new Map();
+function googleInk(tiles) {
+  const out = [];
+  for (const t of tiles) {
+    let cells = INK_CACHE.get(t.file);
+    if (!cells) {
+      cells = [];
+      const pm = new mupdf.Image(fs.readFileSync(t.file)).toPixmap();
+      const w = pm.getWidth(), h = pm.getHeight(), n = pm.getNumberOfComponents() + (pm.getAlpha() ? 1 : 0), px = pm.getPixels(), B = 16;
+      for (let by = 0; by < h / B; by++) for (let bx = 0; bx < w / B; bx++) {
+        let dark = 0, all = 0;
+        for (let y = by * B; y < Math.min(h, by * B + B); y += 2) for (let x = bx * B; x < Math.min(w, bx * B + B); x += 2) {
+          const i = (y * w + x) * n; all++;
+          if (0.299 * px[i] + 0.587 * px[i + 1] + 0.114 * px[i + 2] < 125) dark++;
+        }
+        if (dark / all > 0.05) cells.push([bx / (w / B), by / (h / B), 1 / (w / B)]);
+      }
+      INK_CACHE.set(t.file, cells);
+    }
+    for (const [u, v, d] of cells) out.push({ x: t.x + u * t.s, y: t.y + v * t.s, w: d * t.s, h: d * t.s });
+  }
+  return out;
+}
+// 구글 지형 타일(한국어 지명) 받아 두기 — 저장소 밖 임시 폴더에(커밋하지 않음)
+const GT = path.join(os.tmpdir(), "chapterbook2", "gtiles");
+function googleTiles({ z, sc, mcx, mcy }, W, H) {
+  fs.mkdirSync(GT, { recursive: true });
+  const out = [];
+  const tx0 = Math.floor((mcx - W / 2 / sc) / 256), tx1 = Math.floor((mcx + W / 2 / sc) / 256);
+  const ty0 = Math.floor((mcy - H / 2 / sc) / 256), ty1 = Math.floor((mcy + H / 2 / sc) / 256);
+  for (let tx = tx0; tx <= tx1; tx++) for (let ty = ty0; ty <= ty1; ty++) {
+    const file = path.join(GT, `p_${z}_${tx}_${ty}.jpg`);
+    if (!fs.existsSync(file) || fs.statSync(file).size < 500) execFileSync("curl", ["-s", "-f", "-A", "Mozilla/5.0", "-o", file, `https://mt${(tx + ty) % 4}.google.com/vt/lyrs=p&hl=ko&scale=2&x=${tx}&y=${ty}&z=${z}`], { timeout: 60000 });
+    out.push({ file, x: W / 2 + (tx * 256 - mcx) * sc, y: H / 2 + (ty * 256 - mcy) * sc, s: 256 * sc });
+  }
+  return out;
 }
 // 한 지도 안에서 점이 몰린 곳(이름을 붙이면 어느 점의 이름인지 헷갈리는 곳)을 찾아 확대 지도로 따로 뺀다.
 // view = {title?, keys, minSpan?, focus?} → [{…view, hide:[keys], frames:[{keys, tag}]}, {확대 view} …]
@@ -78,16 +131,31 @@ export function mapViews(map) {
   return out;
 }
 export const mapIssues = [];
+// 지명 표시 디자인(사용자 지시 2026-11-02 「확실하게 볼 수 있게 조금 더 크게, 디자인별로 보여 줘 내가 선택하게」)
+//   dot: 점 반지름·색·테두리, size: 이름 글자 크기, box: 이름표 바탕·테두리·글자색(null이면 상자 없이 흰 외곽선 글자)
+export const MARKS = {
+  A: { dot: { r: 9, fill: "#d62828", stroke: "#fff", sw: 3, pin: true }, size: 24, box: { fill: "#ffffff", stroke: "#d62828", sw: 2, text: "#9b1c1c" } },
+  B: { dot: { r: 9, fill: "#d62828", stroke: "#fff", sw: 3 }, size: 24, box: { fill: "#ffe14d", stroke: "#2a2522", sw: 1.6, text: "#111111" } },
+  C: { dot: { r: 9, fill: "#f2c14e", stroke: "#1d2b4f", sw: 3 }, size: 23, box: { fill: "#1d2b4f", stroke: "#f2c14e", sw: 1.6, text: "#ffffff" } },
+  D: { dot: { r: 10, fill: "#d62828", stroke: "#fff", sw: 3.4, ring: true }, size: 27, box: null, halo: "#ffffff", text: "#b01818" },
+  // 2차 후보(사용자 지시 「좀 더 글씨 크게, 보색으로」): 글자 32, 이름표 바탕과 글자를 보색 짝으로
+  E: { dot: { r: 11, fill: "#ffd60a", stroke: "#14213d", sw: 3.4 }, size: 32, box: { fill: "#ffd60a", stroke: "#14213d", sw: 2.4, text: "#14213d" }, area: { fill: "#14213d", stroke: "#ffd60a", text: "#ffd60a" } },
+  F: { dot: { r: 11, fill: "#5a189a", stroke: "#ffd60a", sw: 3.4 }, size: 32, box: { fill: "#5a189a", stroke: "#ffd60a", sw: 2.4, text: "#ffd60a" }, area: { fill: "#ffd60a", stroke: "#5a189a", text: "#5a189a" } },
+  G: { dot: { r: 11, fill: "#ff7b00", stroke: "#0b2a6f", sw: 3.4 }, size: 32, box: { fill: "#0b2a6f", stroke: "#ff7b00", sw: 2.4, text: "#ffa83d" }, area: { fill: "#ff7b00", stroke: "#0b2a6f", text: "#0b2a6f" } },
+  H: { dot: { r: 11, fill: "#d00000", stroke: "#ffffff", sw: 3.4, ring: true }, size: 32, box: { fill: "#0f7a3a", stroke: "#d00000", sw: 2.4, text: "#ffffff" }, area: { fill: "#d00000", stroke: "#0f7a3a", text: "#ffffff" } },
+  old: { dot: { r: 5.6, fill: "#c0392b", stroke: "#fff", sw: 1.8 }, size: 19, box: { fill: "#fffaf0", stroke: "#c0392b", sw: 1.2, text: "#7a1f16" } },
+};
+export let MAP_MARK = "H"; // 사용자 선택 2026-11-02(후보 A–H 중 H: 초록 이름표·흰 글씨, 빨간 점, 지역은 빨간 이름표)
+export const setMapMark = (k) => { MAP_MARK = k; };
 export function mapSvg(map) {
   const W = MAP_W, H = MAP_H;
-  const { look, pts, x0, y0, x1, y1, kx, X, Y } = project(map);
+  const { look, pts, x0, y0, x1, y1, kx, X, Y, google } = project(map);
+  let gtiles = [];
   const P = (a) => `${f1(X(a[0]))},${f1(Y(a[1]))}`;
   const inside = (a, m = 0) => a[0] > x0 + m && a[0] < x1 - m && a[1] > y0 + m && a[1] < y1 - m;
   const base = [`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="mapsvg">`,
     `<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#c0392b"/></marker></defs>`,
-    `<rect width="${W}" height="${H}" fill="#f3ead2"/>`];
-  for (const s of PLACES.seas) base.push(`<polygon points="${s.poly.map(P).join(" ")}" fill="${s.island ? "#f3ead2" : s.lake ? "#a9cde3" : "#c9dfec"}" stroke="#7fa7c2" stroke-width="1.1"/>`);
-  for (const r of PLACES.rivers) base.push(`<polyline points="${r.line.map(P).join(" ")}" fill="none" stroke="#6f9bc0" stroke-width="1.8" stroke-linejoin="round"/>`);
+    `<clipPath id="gclip"><rect width="${W}" height="${H}"/></clipPath><g clip-path="url(#gclip)">` + (gtiles = googleTiles(google, W, H)).map((t) => `<image href="${pathToFileURL(t.file).href}" x="${f1(t.x)}" y="${f1(t.y)}" width="${f1(t.s + 0.6)}" height="${f1(t.s + 0.6)}" preserveAspectRatio="none"/>`).join("") + `</g>`];
   // 장애물: 방위표·축척·점·경로
   const boxes = [{ x: W - 60, y: 8, w: 52, h: 56 }, { x: 8, y: H - 34, w: 170, h: 28 }];
   const routeSvg = [];
@@ -105,8 +173,12 @@ export function mapSvg(map) {
     }
   }
   const dots = [], labels = [];
-  for (const p of pts) if (!p.area) { const x = X(p.at[0]), y = Y(p.at[1]); boxes.push({ x: x - 7, y: y - 7, w: 14, h: 14 }); dots.push(`<circle cx="${f1(x)}" cy="${f1(y)}" r="5.6" fill="#c0392b" stroke="#fff" stroke-width="1.8"/>`); }
-  const S = { main: 19, area: 18, sea: 16, region: 15, river: 14, ctx: 14, frame: 15 };
+  const M = MARKS[map.mark || MAP_MARK], D = M.dot, rr = D.r + D.sw;
+  for (const p of pts) if (!p.area) { const x = X(p.at[0]), y = Y(p.at[1]); boxes.push({ x: x - rr, y: y - rr - (D.pin ? D.r * 2.2 : 0), w: rr * 2, h: rr * 2 + (D.pin ? D.r * 2.2 : 0) });
+    if (D.pin) dots.push(`<path d="M${f1(x)},${f1(y)}c${-D.r * 1.1},${-D.r * 1.4} ${-D.r * 1.6},${-D.r * 2} ${-D.r * 1.6},${-D.r * 2.9}a${D.r * 1.6},${D.r * 1.6} 0 1,1 ${D.r * 3.2},0c0,${D.r * 0.9} ${-D.r * 0.5},${D.r * 1.5} ${-D.r * 1.6},${D.r * 2.9}z" fill="${D.fill}" stroke="${D.stroke}" stroke-width="${D.sw}"/><circle cx="${f1(x)}" cy="${f1(y - D.r * 2.9)}" r="${f1(D.r * 0.6)}" fill="#fff"/>`);
+    else dots.push((D.ring ? `<circle cx="${f1(x)}" cy="${f1(y)}" r="${D.r + 6}" fill="none" stroke="${D.fill}" stroke-width="2.4" opacity=".7"/>` : "") + `<circle cx="${f1(x)}" cy="${f1(y)}" r="${D.r}" fill="${D.fill}" stroke="${D.stroke}" stroke-width="${D.sw}"/>`); }
+  const S = { main: M.size, area: M.size - 2, sea: 16, region: 15, river: 14, ctx: 14, frame: 16 };
+  const gink = google ? googleInk(gtiles) : [];
   const put = (x, y, t, cls, rings, required) => {
     const s = S[cls], w = textW(t, s) + 12, h = s + 9;
     let b = place(boxes, W, H, x, y, w, h, rings, ANG);
@@ -128,12 +200,11 @@ export function mapSvg(map) {
   }
   for (const p of pts) { if ((map.hide || []).includes(p.key)) continue; const x = X(p.at[0]), y = Y(p.at[1]); if (!put(x, y, p.name, p.area ? "area" : "main", p.area ? [0, 14, 28] : [10, 22, 34], true)) throw new Error("지도 이름 자리를 찾지 못함: " + p.name); }
   // 바다·강·이웃 땅·주변 성읍 → 온전히 놓을 수 있을 때만
-  for (const s of PLACES.seas) if (s.name && s.label && inside(s.label)) put(X(s.label[0]), Y(s.label[1]), s.name, "sea", [0, 16, 32], false);
-  for (const r of PLACES.rivers) if (r.name && r.label && inside(r.label)) put(X(r.label[0]), Y(r.label[1]), r.name, "river", [0, 12, 24], false);
+  // 바다·강·주변 지명은 구글 지도 글자가 보여 준다(2026-11-02)
   const used = new Set(pts.map((p) => p.key));
   const ctxDots = [];
   for (const [key, p] of Object.entries(PLACES.places)) {
-    if (!p.context || used.has(key) || !inside(p.at, (x1 - x0) * 0.03)) continue;
+    if (google || !p.context || used.has(key) || !inside(p.at, (x1 - x0) * 0.03)) continue;
     const x = X(p.at[0]), y = Y(p.at[1]);
     if (p.area) { put(x, y, p.name, "region", [0, 14, 26], false); continue; }
     const dot = { x: x - 4, y: y - 4, w: 8, h: 8 };
@@ -141,11 +212,12 @@ export function mapSvg(map) {
     boxes.push(dot);
     if (put(x, y, p.name, "ctx", [8, 18], false)) ctxDots.push(`<circle cx="${f1(x)}" cy="${f1(y)}" r="3" fill="#8f887a"/>`); else boxes.pop();
   }
-  const style = { frame: `font-weight="700" fill="#7a1f16"`, main: `font-weight="700" fill="#7a1f16"`, area: `font-weight="700" fill="#5b4a2a"`, region: `fill="#8f846c"`, sea: `fill="#3f6f90" font-style="italic"`, river: `fill="#3f6f90" font-style="italic"`, ctx: `fill="#6f685b"` };
+  const style = { frame: M.box ? `font-weight="700" fill="${M.box.text}"` : `font-weight="900" fill="${M.text}" stroke="${M.halo}" stroke-width="5" paint-order="stroke"`, main: M.box ? `font-weight="700" fill="${M.box.text}"` : `font-weight="900" fill="${M.text}" stroke="${M.halo}" stroke-width="5" paint-order="stroke"`, area: M.area ? `font-weight="700" fill="${M.area.text}"` : `font-weight="700" fill="#5b4a2a"`, region: `fill="#8f846c"`, sea: `fill="#3f6f90" font-style="italic"`, river: `fill="#3f6f90" font-style="italic"`, ctx: `fill="#6f685b"` };
   const out = [...base, ...routeSvg, ...frameSvg, ...ctxDots, ...dots];
   for (const l of labels) {
     if (l.r > 12 && (l.cls === "main" || l.cls === "area")) { const tx = Math.min(Math.max(l.ax, l.x), l.x + l.w), ty = Math.min(Math.max(l.ay, l.y), l.y + l.h); out.push(`<line x1="${f1(l.ax)}" y1="${f1(l.ay)}" x2="${f1(tx)}" y2="${f1(ty)}" stroke="#7a1f16" stroke-width="1"/>`); }
-    if (l.cls === "main" || l.cls === "frame") out.push(`<rect x="${f1(l.x)}" y="${f1(l.y)}" width="${f1(l.w)}" height="${f1(l.h)}" rx="5" fill="#fffaf0" stroke="#c0392b" stroke-width="1.2"/>`);
+    if ((l.cls === "main" || l.cls === "frame") && M.box) out.push(`<rect x="${f1(l.x)}" y="${f1(l.y)}" width="${f1(l.w)}" height="${f1(l.h)}" rx="6" fill="${M.box.fill}" stroke="${M.box.stroke}" stroke-width="${M.box.sw}"/>`);
+    else if (l.cls === "area" && M.area) out.push(`<rect x="${f1(l.x)}" y="${f1(l.y)}" width="${f1(l.w)}" height="${f1(l.h)}" rx="6" fill="${M.area.fill}" stroke="${M.area.stroke}" stroke-width="2"/>`); // 지역 이름도 보색 이름표(사용자 지시 2026-11-02 「지도랑 똑같은 색으로 하지 말고」)
     else if (l.cls !== "sea" && l.cls !== "river") out.push(`<rect x="${f1(l.x)}" y="${f1(l.y)}" width="${f1(l.w)}" height="${f1(l.h)}" rx="4" fill="#f3ead2" fill-opacity=".85"/>`);
     out.push(`<text x="${f1(l.x + l.w / 2)}" y="${f1(l.y + l.h / 2 + l.s * 0.36)}" text-anchor="middle" font-size="${l.s}" font-family="Noto Sans KR" ${style[l.cls]}>${esc(l.t)}</text>`);
   }
@@ -155,6 +227,7 @@ export function mapSvg(map) {
   const dist = (l, x, y) => Math.hypot(Math.max(l.x - x, 0, x - l.x - l.w), Math.max(l.y - y, 0, y - l.y - l.h));
   mapIssues.length = 0;
   for (const l of labels) if (l.cls === "main" && l.r <= 12) { const o = own(l); if (!o || o.area) continue; const d0 = dist(l, X(o.at[0]), Y(o.at[1])); for (const [nm, x, y] of dotXY) if (nm !== l.t && dist(l, x, y) < d0 - 1) mapIssues.push(`이름표가 다른 점에 더 가까움: ${l.t} ↔ ${nm}`); }
+  if (google) out.push(`<text x="${W - 8}" y="${H - 8}" text-anchor="end" font-size="11" font-family="Noto Sans KR" fill="#333" stroke="#fff" stroke-width="3" paint-order="stroke">지도 데이터 ©2026 Google</text>`);
   out.push(`<g transform="translate(${W - 34},36)"><circle r="18" fill="#fffaf0" stroke="#8a7442"/><path d="M0,-14L5,4L0,0L-5,4Z" fill="#8a7442"/><text y="15" text-anchor="middle" font-size="10" font-family="Noto Sans KR" font-weight="700" fill="#8a7442">N</text></g>`);
   const kmPerPx = (x1 - x0) * kx * 111 / W;
   const nice = [5, 10, 20, 50, 100, 200, 300, 500].find((k) => k / kmPerPx > 60) || 500;
