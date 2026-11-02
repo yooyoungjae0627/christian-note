@@ -98,6 +98,63 @@ function googleTiles({ z, sc, mcx, mcy }, W, H) {
   }
   return out;
 }
+// ───── 위치 안내(사용자 지시 2026-11-02 「현재 이 지역이 어디에 있는지 대륙 지도를 놓고 화살표로 표기를 좀 해줘」) ─────
+// 본 지도 모서리에 작은 대륙 지도(구글 지도 줌 3: 지중해·이집트·아라비아·메소포타미아·튀르키예)를 넣고,
+// 본 지도가 덮는 범위를 붉은 사각형, 굵은 화살표와 「이 지역」 이름표로 가리킨다.
+// 넣지 않는 기준: ① 확대 지도(mapViews가 만든 「확대 ④」), ② 본 지도 경도 폭이 LOC_SKIP_SPAN(20°, 대륙 지도 폭의 약 3/4) 이상 — 이미 대륙 규모라 안내가 필요 없음.
+const LOC = { W: 216, H: 158, z: 3, lon: [24, 51], lat: [23.5, 41.5] };
+const LOC_SKIP_SPAN = 20;
+const ZOOM_SIG = new Set();
+const sigOf = (keys) => [...keys].sort().join("|");
+let LOC_N = 0;
+const mercX = (lon, z) => (lon + 180) / 360 * 256 * 2 ** z;
+const mercY = (lat, z) => { const r = lat * Math.PI / 180; return (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * 256 * 2 ** z; };
+// (ox,oy)에 Wi×Hi 대륙 지도. pr = project(본 지도), box = 이 장 지명 이름표 상자 색(MARKS.H.box)
+function locatorSvg(pr, ox, oy, box) {
+  const Wi = LOC.W, Hi = LOC.H, z = LOC.z, id = ++LOC_N;
+  const sc = Wi / (mercX(LOC.lon[1], z) - mercX(LOC.lon[0], z));
+  const hw = Wi / 2 / sc, hh = Hi / 2 / sc;
+  const rx0 = mercX(pr.x0, z), rx1 = mercX(pr.x1, z), ry0 = mercY(pr.y1, z), ry1 = mercY(pr.y0, z);
+  const clamp = (v, a, b) => (a > b ? (a + b) / 2 : Math.min(Math.max(v, a), b));
+  // 기본 범위 가운데, 본 지도가 밖으로 나가면 그쪽으로 옮김(여백 8px)
+  const m = 8 / sc;
+  const mcx = clamp((mercX(LOC.lon[0], z) + mercX(LOC.lon[1], z)) / 2, rx1 - hw + m, rx0 + hw - m);
+  const mcy = clamp((mercY(LOC.lat[0], z) + mercY(LOC.lat[1], z)) / 2, ry1 - hh + m, ry0 + hh - m);
+  const tiles = googleTiles({ z, sc, mcx, mcy }, Wi, Hi);
+  let x = Wi / 2 + (rx0 - mcx) * sc, y = Hi / 2 + (ry0 - mcy) * sc, w = (rx1 - rx0) * sc, h = (ry1 - ry0) * sc;
+  if (w < 12) { x -= (12 - w) / 2; w = 12; } if (h < 10) { y -= (10 - h) / 2; h = 10; }
+  const rc = [x + w / 2, y + h / 2];
+  // 「이 지역」 이름표: 대륙 지도 안, 사각형에서 넓은 쪽으로
+  const t = "이 지역", fs = 17, lw = textW(t, fs) + 14, lh = fs + 10;
+  const cands = [];
+  for (let k = 0; k < 16; k++) for (const d of [80, 66, 52]) {
+    const a = k * Math.PI / 8, cx = rc[0] + Math.cos(a) * (d + Math.abs(Math.cos(a)) * w / 2), cy = rc[1] + Math.sin(a) * (d * 0.75 + Math.abs(Math.sin(a)) * h / 2);
+    const b = { x: cx - lw / 2, y: cy - lh / 2, w: lw, h: lh };
+    if (b.x < 5 || b.y < 5 || b.x + lw > Wi - 5 || b.y + lh > Hi - 5 || hit(b, { x, y, w, h }, 8)) continue;
+    cands.push({ b, s: Math.cos(a) * (Wi / 2 - rc[0]) + Math.sin(a) * (Hi / 2 - rc[1]) });
+  }
+  cands.sort((p, q) => q.s - p.s);
+  // 사각형이 커서 밖에 자리가 없으면 이름표를 사각형 안 가운데에(화살표 없이)
+  const inner = !cands.length && w > lw + 8 && h > lh + 8 ? { x: rc[0] - lw / 2, y: rc[1] - lh / 2, w: lw, h: lh } : null;
+  const L = cands[0]?.b || inner;
+  // 상자 경계에서 출발해 사각형 경계에서 끝나는 화살표
+  const edge = (bx, from, to) => { const dx = to[0] - from[0], dy = to[1] - from[1]; const t1 = Math.min(dx ? bx.w / 2 / Math.abs(dx) : 1e9, dy ? bx.h / 2 / Math.abs(dy) : 1e9); return [from[0] + dx * t1, from[1] + dy * t1]; };
+  const out = [`<g transform="translate(${f1(ox)},${f1(oy)})">`,
+    `<clipPath id="lclip${id}"><rect width="${Wi}" height="${Hi}"/></clipPath>`,
+    `<defs><marker id="larr${id}" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="3.6" markerHeight="3.6" orient="auto"><path d="M0,0L10,5L0,10z" fill="#d00000"/></marker></defs>`,
+    `<rect x="-3" y="-3" width="${Wi + 6}" height="${Hi + 6}" rx="3" fill="#fff"/>`,
+    `<g clip-path="url(#lclip${id})">` + tiles.map((g) => `<image href="${pathToFileURL(g.file).href}" x="${f1(g.x)}" y="${f1(g.y)}" width="${f1(g.s + 0.6)}" height="${f1(g.s + 0.6)}" preserveAspectRatio="none"/>`).join(""),
+    `<rect x="${f1(x)}" y="${f1(y)}" width="${f1(w)}" height="${f1(h)}" fill="#d00000" fill-opacity=".22" stroke="#d00000" stroke-width="3"/>`];
+  if (L) {
+    const lc = [L.x + L.w / 2, L.y + L.h / 2], a = edge(L, lc, rc), bb = edge({ w: w + 10, h: h + 10 }, rc, lc);
+    const seg = `M${f1(a[0])},${f1(a[1])}L${f1(bb[0])},${f1(bb[1])}`;
+    if (!inner) out.push(`<path d="${seg}" stroke="#fff" stroke-width="8" stroke-linecap="round"/><path d="${seg}" stroke="#d00000" stroke-width="4.5" marker-end="url(#larr${id})"/>`);
+    out.push(`<rect x="${f1(L.x)}" y="${f1(L.y)}" width="${f1(L.w)}" height="${f1(L.h)}" rx="5" fill="${box.fill}" stroke="${box.stroke}" stroke-width="${box.sw}"/>`,
+      `<text x="${f1(lc[0])}" y="${f1(lc[1] + fs * 0.36)}" text-anchor="middle" font-size="${fs}" font-family="Noto Sans KR" font-weight="700" fill="${box.text}">${t}</text>`);
+  }
+  out.push(`</g><rect x="0" y="0" width="${Wi}" height="${Hi}" fill="none" stroke="#5a4a2a" stroke-width="2"/></g>`);
+  return out.join("");
+}
 // 한 지도 안에서 점이 몰린 곳(이름을 붙이면 어느 점의 이름인지 헷갈리는 곳)을 찾아 확대 지도로 따로 뺀다.
 // view = {title?, keys, minSpan?, focus?} → [{…view, hide:[keys], frames:[{keys, tag}]}, {확대 view} …]
 export function mapViews(map) {
@@ -125,6 +182,7 @@ export function mapViews(map) {
       hide.push(...g); frames.push({ keys: g, tag });
       const names = places.filter((p) => g.includes(p.key)).map((p) => p.name || PLACES.places[p.key]?.name || p.key);
       zooms.push({ title: `${NUM[n - 1]} 확대 — ${names.join("·")}`, keys: g, minSpan: 0.9, zoomOf: true });
+      ZOOM_SIG.add(sigOf(g)); // mapSvg가 확대 지도에는 위치 안내를 넣지 않게(부르는 쪽이 zoomOf를 넘기지 않음)
     }
     out.push({ ...v, title: v.title || (zooms.length ? "① 전체" : undefined), hide, frames }, ...zooms);
   }
@@ -188,17 +246,34 @@ export function mapSvg(map) {
     labels.push({ ...b, t, cls, s, ax: x, ay: y });
     return true;
   };
-  // 이 장의 지명 → 반드시(자리가 좁으면 지시선)
-  // 확대 지도로 뺀 묶음: 점선 테두리와 "확대 ②" 꼬리표(이름은 확대 지도에)
-  const frameSvg = [];
-  for (const f of map.frames || []) {
-    const ps = pts.filter((p) => f.keys.includes(p.key)).map((p) => [X(p.at[0]), Y(p.at[1])]);
-    const fx = Math.min(...ps.map((p) => p[0])) - 14, fy = Math.min(...ps.map((p) => p[1])) - 14, fw = Math.max(...ps.map((p) => p[0])) + 14 - fx, fh = Math.max(...ps.map((p) => p[1])) + 14 - fy;
-    frameSvg.push(`<rect x="${f1(fx)}" y="${f1(fy)}" width="${f1(fw)}" height="${f1(fh)}" rx="8" fill="none" stroke="#7a1f16" stroke-width="1.6" stroke-dasharray="5 3"/>`);
-    boxes.push({ x: fx - 2, y: fy - 2, w: fw + 4, h: 3 }, { x: fx - 2, y: fy + fh - 1, w: fw + 4, h: 3 }, { x: fx - 2, y: fy, w: 3, h: fh }, { x: fx + fw - 1, y: fy, w: 3, h: fh });
-    if (!put(fx + fw / 2, fy + fh / 2, f.tag, "frame", [fh / 2 + 4, fh / 2 + 18, fh / 2 + 34, fh / 2 + 52], true)) throw new Error("확대 꼬리표 자리를 찾지 못함");
+  // 위치 안내(대륙 지도) 자리: 이 장의 점·경로·지역 중심을 덮지 않는 모서리 중 구글 글자가 적은 곳부터.
+  // 그 상자를 장애물로 넣고 이름표를 놓아 보고, 자리가 모자라면 다음 모서리, 끝내 안 되면 안내 없이.
+  const wantLoc = google && !map.zoomOf && map.locator !== false && !ZOOM_SIG.has(sigOf(pts.map((p) => p.key))) && x1 - x0 < LOC_SKIP_SPAN;
+  const marks = boxes.slice(2), areaXY = pts.filter((p) => p.area).map((p) => ({ x: X(p.at[0]) - 6, y: Y(p.at[1]) - 6, w: 12, h: 12 }));
+  const corners = !wantLoc ? [] : [[8, 8], [W - 8 - LOC.W, 72], [8, H - 50 - LOC.H], [W - 8 - LOC.W, H - 26 - LOC.H]]
+    .map(([x, y]) => ({ x, y, w: LOC.W, h: LOC.H }))
+    .filter((c) => !marks.some((o) => hit(c, o, 14)) && !areaXY.some((o) => hit(c, o, 20)))
+    .map((c) => ({ c, ink: gink.filter((g) => hit(c, g, 0)).length })).sort((p, q) => p.ink - q.ink).map((o) => o.c);
+  const fixed = boxes.slice(), frameSvg = [];
+  let locSvg = "";
+  for (const c of [...corners, null]) {
+    boxes.length = 0; boxes.push(...fixed); labels.length = 0; frameSvg.length = 0;
+    if (c) boxes.push({ x: c.x - 5, y: c.y - 5, w: c.w + 10, h: c.h + 10 });
+    try {
+    // 이 장의 지명 → 반드시(자리가 좁으면 지시선)
+    // 확대 지도로 뺀 묶음: 점선 테두리와 "확대 ②" 꼬리표(이름은 확대 지도에)
+    for (const f of map.frames || []) {
+      const ps = pts.filter((p) => f.keys.includes(p.key)).map((p) => [X(p.at[0]), Y(p.at[1])]);
+      const fx = Math.min(...ps.map((p) => p[0])) - 14, fy = Math.min(...ps.map((p) => p[1])) - 14, fw = Math.max(...ps.map((p) => p[0])) + 14 - fx, fh = Math.max(...ps.map((p) => p[1])) + 14 - fy;
+      frameSvg.push(`<rect x="${f1(fx)}" y="${f1(fy)}" width="${f1(fw)}" height="${f1(fh)}" rx="8" fill="none" stroke="#7a1f16" stroke-width="1.6" stroke-dasharray="5 3"/>`);
+      boxes.push({ x: fx - 2, y: fy - 2, w: fw + 4, h: 3 }, { x: fx - 2, y: fy + fh - 1, w: fw + 4, h: 3 }, { x: fx - 2, y: fy, w: 3, h: fh }, { x: fx + fw - 1, y: fy, w: 3, h: fh });
+      if (!put(fx + fw / 2, fy + fh / 2, f.tag, "frame", [fh / 2 + 4, fh / 2 + 18, fh / 2 + 34, fh / 2 + 52], true)) throw new Error("확대 꼬리표 자리를 찾지 못함");
+    }
+    for (const p of pts) { if ((map.hide || []).includes(p.key)) continue; const x = X(p.at[0]), y = Y(p.at[1]); if (!put(x, y, p.name, p.area ? "area" : "main", p.area ? [0, 14, 28, 44, 62] : [10, 22, 34], true)) throw new Error("지도 이름 자리를 찾지 못함: " + p.name); }
+    } catch (e) { if (!c) throw e; continue; }
+    if (c) locSvg = locatorSvg({ x0, y0, x1, y1 }, c.x, c.y, M.box || MARKS.H.box);
+    break;
   }
-  for (const p of pts) { if ((map.hide || []).includes(p.key)) continue; const x = X(p.at[0]), y = Y(p.at[1]); if (!put(x, y, p.name, p.area ? "area" : "main", p.area ? [0, 14, 28, 44, 62] : [10, 22, 34], true)) throw new Error("지도 이름 자리를 찾지 못함: " + p.name); }
   // 바다·강·이웃 땅·주변 성읍 → 온전히 놓을 수 있을 때만
   // 바다·강·주변 지명은 구글 지도 글자가 보여 준다(2026-11-02)
   const used = new Set(pts.map((p) => p.key));
@@ -213,7 +288,7 @@ export function mapSvg(map) {
     if (put(x, y, p.name, "ctx", [8, 18], false)) ctxDots.push(`<circle cx="${f1(x)}" cy="${f1(y)}" r="3" fill="#8f887a"/>`); else boxes.pop();
   }
   const style = { frame: M.box ? `font-weight="700" fill="${M.box.text}"` : `font-weight="900" fill="${M.text}" stroke="${M.halo}" stroke-width="5" paint-order="stroke"`, main: M.box ? `font-weight="700" fill="${M.box.text}"` : `font-weight="900" fill="${M.text}" stroke="${M.halo}" stroke-width="5" paint-order="stroke"`, area: M.area ? `font-weight="700" fill="${M.area.text}"` : `font-weight="700" fill="#5b4a2a"`, region: `fill="#8f846c"`, sea: `fill="#3f6f90" font-style="italic"`, river: `fill="#3f6f90" font-style="italic"`, ctx: `fill="#6f685b"` };
-  const out = [...base, ...routeSvg, ...frameSvg, ...ctxDots, ...dots];
+  const out = [...base, locSvg, ...routeSvg, ...frameSvg, ...ctxDots, ...dots];
   for (const l of labels) {
     if (l.r > 12 && (l.cls === "main" || l.cls === "area")) { const tx = Math.min(Math.max(l.ax, l.x), l.x + l.w), ty = Math.min(Math.max(l.ay, l.y), l.y + l.h); out.push(`<line x1="${f1(l.ax)}" y1="${f1(l.ay)}" x2="${f1(tx)}" y2="${f1(ty)}" stroke="#7a1f16" stroke-width="1"/>`); }
     if ((l.cls === "main" || l.cls === "frame") && M.box) out.push(`<rect x="${f1(l.x)}" y="${f1(l.y)}" width="${f1(l.w)}" height="${f1(l.h)}" rx="6" fill="${M.box.fill}" stroke="${M.box.stroke}" stroke-width="${M.box.sw}"/>`);

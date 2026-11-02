@@ -1,52 +1,19 @@
-{
- "panels": [
-  {"ref": "26:1-6", "cap": "기근 때 그랄로 간 이삭에게 주께서 나타나셨다.", "sky": "desert", "items": [
-   ["light", 310, 0, 0.9],
-   ["person", 80, 252, 0.92, {"veil": "#ead2dd", "robe": "#c9798f"}],
-   ["person", 165, 252, 1, {"beard": true, "robe": "#5a7a9a", "pose": "pray"}]
-  ], "say": [
-   {"t": "이집트로 내려가지 마라. 이 땅에 머물러라.", "x": 12, "y": 12, "w": 210, "to": [300, 92], "god": true}
-  ]},
-  {"ref": "26:7-11", "cap": "아내를 누이라 했던 이삭을 아비멜렉이 꾸짖었다.", "sky": "day", "items": [
-   ["palace", 330, 250, 0.8],
-   ["person", 70, 252, 1, {"beard": true, "robe": "#5a7a9a", "mood": "worry"}],
-   ["person", 145, 252, 0.92, {"veil": "#ead2dd", "robe": "#c9798f", "mood": "worry"}],
-   ["person", 255, 254, 0.95, {"crown": true, "cloth": false, "robe": "#5b4a8a", "pose": "forward", "flip": true, "mood": "angry"}]
-  ], "say": [
-   {"t": "분명 당신 아내인데, 왜 누이라고 했소?", "x": 150, "y": 10, "w": 236, "to": [262, 104]}
-  ]},
-  {"ref": "26:12-22", "cap": "백 배의 복을 받은 이삭, 우물 다툼 끝에 르호봇을 팠다.", "sky": "day", "items": [
-   ["grain", 30, 254, 0.9],
-   ["grain", 62, 258, 0.8],
-   ["person", 125, 252, 0.95, {"cloth": false, "robe": "#7f8fa6", "mood": "worry"}],
-   ["well", 205, 268, 0.85],
-   ["person", 285, 254, 0.95, {"cloth": false, "robe": "#6a7f5a", "flip": true, "pose": "forward", "staff": true, "mood": "angry"}],
-   ["sheep", 355, 264, 0.7, {"flip": true}]
-  ], "say": [
-   {"t": "그 물은 우리 거요!", "x": 200, "y": 12, "w": 170, "to": [288, 108]}
-  ]},
-  {"ref": "26:23-25", "cap": "베르셰바의 밤, 주께서 나타나시고 이삭은 제단을 쌓았다.", "sky": "night", "items": [
-   ["stars", 200, 0, 1],
-   ["light", 310, 0, 0.8],
-   ["altar", 140, 252, 0.9],
-   ["person", 260, 252, 1, {"beard": true, "robe": "#5a7a9a", "pose": "pray", "flip": true}]
-  ], "say": [
-   {"t": "두려워하지 마라. 내가 너와 함께 있다.", "x": 12, "y": 14, "w": 200, "to": [300, 90], "god": true}
-  ]},
-  {"ref": "26:26-33", "cap": "아비멜렉과 맹세한 날, 종들이 판 우물에서 물이 나왔다.", "sky": "day", "items": [
-   ["person", 80, 252, 1, {"beard": true, "robe": "#5a7a9a", "pose": "forward"}],
-   ["well", 175, 270, 0.75],
-   ["person", 275, 254, 0.95, {"crown": true, "cloth": false, "robe": "#5b4a8a", "flip": true}],
-   ["person", 345, 256, 0.9, {"beard": true, "robe": "#6a6a6a", "flip": true, "staff": true}]
-  ], "say": [
-   {"t": "주께서 당신과 함께 계신 것을 똑똑히 보았소.", "x": 150, "y": 10, "w": 236, "to": [282, 104]}
-  ]},
-  {"ref": "26:34-35", "cap": "에서가 히타이트족 두 아내를 맞자 부모의 마음이 쓰렸다.", "sky": "day", "items": [
-   ["person", 55, 252, 1, {"beard": true, "robe": "#5a7a9a", "mood": "sad"}],
-   ["person", 125, 252, 0.92, {"veil": "#ead2dd", "robe": "#c9798f", "mood": "sad"}],
-   ["person", 220, 252, 1, {"cloth": false, "hair": "#8a3a20", "robe": "#b5483a", "flip": true}],
-   ["person", 290, 252, 0.9, {"veil": "#d6c27a", "robe": "#7a6a9a", "flip": true}],
-   ["person", 350, 252, 0.9, {"veil": "#a8c4a0", "robe": "#b07a4a", "flip": true}]
-  ]}
- ]
-}
+{"from":"chapters","note":"장 원고 comic에서 고른 컷 [장, 컷 번호] — comic.mjs pickPanels","panels":[
+  [26,1],
+  [26,2],
+  [26,3],
+  [26,4],
+  [26,5],
+  [26,6],
+  [26,7],
+  [26,8],
+  [26,9],
+  [26,10],
+  [26,11],
+  [26,12],
+  [26,13],
+  [26,14],
+  [26,15],
+  [26,16],
+  [26,17],
+  [26,18]]}

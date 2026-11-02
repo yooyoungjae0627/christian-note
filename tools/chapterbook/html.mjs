@@ -3,8 +3,10 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { BOOKS, HERE, TMP, esc, chapterVerses, rangeVerses, markRanges, applyMarks, MARK, BASIS, timeKo, ffFile, sbcFile, webOf } from "./lib.mjs";
+import { captionHtml } from "./comic.mjs";
 import { mapSvg, mapViews, coverSvg } from "./art.mjs";
 import { familySvg, familyLegendHtml } from "./famtree.mjs";
+import { portraitOf, portraitFile } from "./portraitart.mjs";
 
 // 굵기별 정적 Noto 폰트(%TEMP%/chapterbook2/fonts, fetch_fonts.mjs로 받음). 가변 폰트는 Edge가 굵기 변형을 Type3(글자 그림)로 넣어
 // PDF가 커지므로 쓰지 않는다. 정적 폰트가 없으면 빌드를 멈춘다.
@@ -86,10 +88,18 @@ export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "", he
   // 인물
   if (d.people?.length) {
     o += `<div class="lab" id="${p}people">${mk(p + "people")}이 장의 인물</div><div class="people">`;
-    for (const x of d.people) o += `<div class="person"><span class="pn">${esc(x.name)}</span>${x.en ? `<span class="pe">${esc(x.en)}</span>` : ""}<div>${esc(x.desc)}</div><div class="pr">근거: ${B.ko} ${esc(x.refs.join(", "))}</div></div>`;
+    for (const x of d.people) o += `<div class="person"><span class="pn">${esc(x.name)}</span>${x.en ? `<span class="pe">${esc(x.en)}</span>` : ""}${x.part ? `<div class="pp">${esc(x.part)}</div>` : ""}<div>${esc(x.desc)}</div><div class="pr">근거: ${B.ko} ${esc(x.refs.join(", "))}</div></div>`;
     o += `</div>`;
     nav.push([p + "people", "이 장의 인물", 1]);
-    if (d.relations?.length) { const nm = Object.fromEntries(d.people.map((x) => [x.id, x.name])); o += `<div class="figure relfig"><div class="lab">인물 관계도</div>${familySvg(d.people, d.relations)}${familyLegendHtml(d.people, d.relations)}</div><table class="rel-refs"><thead><tr><th>관계</th><th>근거</th></tr></thead><tbody>` + d.relations.map((r) => `<tr><td>${esc(nm[r.from])} — ${esc(nm[r.to])}${r.label ? ` · ${esc(r.label)}` : ""}</td><td>${B.ko} ${esc(r.ref)}</td></tr>`).join("") + `</tbody></table>`; }
+    // 관계도 4판: 한 쪽을 통째로 쓰는 초상 관계도(사용자 지시 2026-11-02 "한 장을 할애해도 좋으니 네모 칸보다는 캐릭터로") — 관계 표는 그 다음 쪽에 두 단
+    if (d.relations?.length) {
+      const img = (x) => { const o = portraitOf(x, ch); return o && fs.existsSync(portraitFile(book, o.key)) ? "data:image/jpeg;base64," + fs.readFileSync(portraitFile(book, o.key)).toString("base64") : null; };
+      const nm = Object.fromEntries(d.people.map((x) => [x.id, x.name]));
+      const row = (r) => `<tr><td>${esc(nm[r.from])} — ${esc(nm[r.to])}${r.label ? ` · ${esc(r.label)}` : ""}</td><td>${B.ko} ${esc(r.ref)}</td></tr>`;
+      const cols = d.relations.length > 6 ? 2 : 1, per = Math.ceil(d.relations.length / cols);
+      const tables = [...Array(cols)].map((_, c) => `<table class="rel-refs"><thead><tr><th>관계</th><th>근거</th></tr></thead><tbody>${d.relations.slice(c * per, (c + 1) * per).map(row).join("")}</tbody></table>`).join("");
+      o += `<div class="relpage"><div class="figure relfig"><div class="lab">인물 관계도</div>${familySvg(d.people, d.relations, { img })}${familyLegendHtml(d.people, d.relations)}</div></div><div class="rel-tables c${cols}">${tables}</div>`;
+    }
   }
   // 지도 — views가 있으면 전체 지도와 확대 지도 등 여러 장
   if (d.map?.places?.length) {
@@ -144,7 +154,7 @@ const basisOf = (B, d, x) => x.key ? `근거: ${B.ko} ${refOf(d, x.key)} 해설`
 export function learning(book, ch, d, comments, { p = "", mk = () => "", inBook = false, scope = "이 장" } = {}) {
   const B = BOOKS[book], L = d.learning, nav = [];
   const sec = (label, en, key) => { nav.push([p + key, (inBook ? `${ch}장 ` : "") + label, inBook ? 1 : 0]); return header(label, en, p + key, mk); };
-  let o = sec("한눈에 보는 이야기", "SUMMARY", "summary") + `<ol class="summary">` + L.summary.map((x) => `<li>${esc(x.text)}</li>`).join("") + `</ol>${TOTOC}</section>`;
+  let o = sec("한눈에 보는 이야기", "SUMMARY", "summary") + `<ol class="summary">` + L.summary.map((x) => `<li>${captionHtml({ cap: x.text, u: x.u })}</li>`).join("") + `</ol>${TOTOC}</section>`;
   o += sec("개념 문제", "QUESTIONS", "questions") + `<ol class="questions">` + L.questions.map((x) => `<li>${esc(x.q)}</li>`).join("") + `</ol>${TOTOC}</section>`;
   o += sec("답안과 근거", "ANSWERS", "answers") + L.questions.map((x, i) => `<div class="qa"><p class="q">${String(i + 1).padStart(2, "0")}. ${esc(x.q)}</p><p class="answer">${esc(x.a)}</p><div class="source-text">${basisOf(B, d, x)}</div>${x.key ? sourceRows(comments[x.key]) : ""}</div>`).join("") + TOTOC + `</section>`;
   o += sec("예상 질문과 답변", "QUESTIONS & ANSWERS", "faq") + `<div class="note">${scope}의 해설에서 확인한 설명으로 답합니다.</div>` + L.faq.map((x, i) => { const c = comments[x.key]; return `<p class="q">Q${i + 1}. ${esc(x.q)}</p><p>${esc(c.text)}</p>${sourceRows(c, false)}`; }).join("") + TOTOC + `</section>`;

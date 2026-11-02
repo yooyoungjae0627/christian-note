@@ -1,47 +1,19 @@
-{
- "panels": [
-  {"ref": "25:1-11", "cap": "아브라함이 백일흔다섯 해를 살고 막펠라 동굴에 묻혔다.", "sky": "day", "items": [
-   ["cave", 290, 250, 0.9],
-   ["person", 80, 252, 1, {"cloth": false, "hair": "#3a2a20", "robe": "#5a7a9a"}],
-   ["person", 165, 252, 1, {"beard": true, "robe": "#9b8a6a"}]
-  ]},
-  {"ref": "25:12-18", "cap": "이스마엘의 아들 열둘은 열두 민족의 통치자가 되었다.", "sky": "desert", "items": [
-   ["person", 70, 252, 1, {"beard": true, "robe": "#9b8a6a"}],
-   ["person", 150, 270, 0.5, {"crown": true, "cloth": false, "robe": "#8a5a3a"}],
-   ["person", 190, 274, 0.5, {"crown": true, "cloth": false, "robe": "#6a7f5a"}],
-   ["person", 230, 270, 0.5, {"crown": true, "cloth": false, "robe": "#5b4a8a"}],
-   ["person", 270, 274, 0.5, {"crown": true, "cloth": false, "robe": "#b5483a"}],
-   ["person", 310, 270, 0.5, {"crown": true, "cloth": false, "robe": "#7f8fa6"}],
-   ["person", 350, 274, 0.5, {"crown": true, "cloth": false, "robe": "#c4875a"}]
-  ]},
-  {"ref": "25:19-23", "cap": "이삭의 기도로 아이를 가진 리브카가 주께 여쭈었다.", "sky": "day", "items": [
-   ["light", 310, 0, 0.9],
-   ["person", 80, 252, 1, {"beard": true, "robe": "#5a7a9a", "pose": "pray"}],
-   ["person", 170, 252, 0.95, {"veil": "#ead2dd", "robe": "#c9798f", "pose": "pray", "mood": "worry"}]
-  ], "say": [
-   {"t": "두 민족이 네 태 안에 있다. 형이 동생을 섬길 것이다.", "x": 12, "y": 12, "w": 220, "to": [300, 92], "god": true}
-  ]},
-  {"ref": "25:24-26", "cap": "붉고 털이 많은 에서, 형의 발꿈치를 잡고 나온 야곱.", "sky": "day", "items": [
-   ["tent", 350, 250, 0.7],
-   ["person", 70, 252, 1, {"beard": true, "robe": "#5a7a9a"}],
-   ["sit", 160, 252, 0.95, {"veil": "#ead2dd", "robe": "#c9798f", "mood": "calm"}],
-   ["lying", 232, 270, 0.62, {"robe": "#c0503a", "cloth": false, "hair": "#b5483a"}],
-   ["lying", 296, 274, 0.62, {"robe": "#efe3c8", "cloth": false}]
-  ]},
-  {"ref": "25:27-28", "cap": "에서는 솜씨 좋은 사냥꾼, 야곱은 천막에 머무는 사람.", "sky": "day", "items": [
-   ["bush", 40, 254, 0.8],
-   ["person", 110, 252, 1, {"cloth": false, "hair": "#8a3a20", "robe": "#b5483a", "bow": true}],
-   ["tent", 320, 250, 0.95],
-   ["person", 240, 252, 0.95, {"cloth": false, "hair": "#3a2a20", "robe": "#5a7a9a"}]
-  ]},
-  {"ref": "25:29-34", "cap": "붉은 죽 한 그릇에 에서는 장자권을 팔아 버렸다.", "sky": "day", "items": [
-   ["tent", 360, 250, 0.75],
-   ["person", 90, 252, 1, {"cloth": false, "hair": "#8a3a20", "robe": "#b5483a", "pose": "reach", "mood": "worry"}],
-   ["bowl", 214, 204, 1.1, {"steam": true}],
-   ["person", 265, 252, 0.95, {"cloth": false, "hair": "#3a2a20", "robe": "#5a7a9a", "pose": "hold", "flip": true}]
-  ], "say": [
-   {"t": "저 붉은 죽 좀 먹자. 기운이 하나도 없다.", "x": 10, "y": 12, "w": 180, "to": [96, 104]},
-   {"t": "오늘 형의 장자권을 나한테 파세요.", "x": 206, "y": 12, "w": 184, "to": [270, 108]}
-  ]}
- ]
-}
+{"from":"chapters","note":"장 원고 comic에서 고른 컷 [장, 컷 번호] — comic.mjs pickPanels","panels":[
+  [25,1],
+  [25,2],
+  [25,3],
+  [25,4],
+  [25,5],
+  [25,6],
+  [25,7],
+  [25,8],
+  [25,9],
+  [25,10],
+  [25,11],
+  [25,12],
+  [25,13],
+  [25,14],
+  [25,15],
+  [25,16],
+  [25,17],
+  [25,18]]}

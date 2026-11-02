@@ -268,3 +268,18 @@ table.rel-refs td:last-child{white-space:nowrap;color:#8a6420;width:24%;}
 .lesson p,.vocab .w{color:#3a465c;}
 .vocab .w b{color:#1b2436;}
 .vocab .w i{color:#7d8aa0;}
+
+/* 인물 쉬운 역할 한 줄(사용자 지시 2026-11-02) · 밑줄(만화·한눈에 보는 이야기) */
+.person .pp{font:700 8pt/1.45 "Noto Sans KR";color:#a8452a;margin:.3mm 0 .5mm;}
+.cu{text-decoration:underline;text-decoration-color:#c0392b;text-decoration-thickness:.45mm;text-underline-offset:.7mm;font-weight:700;}
+/* 관계도·범례·관계 표는 한 쪽 안에(사용자 지시 2026-11-02): 표는 7줄부터 두 단(html.mjs가 그림 높이를 표 길이에 맞춰 줄임) */
+.relblock{break-inside:avoid;}
+.relblock .relfig{margin-bottom:1mm;}
+.rel-tables.c2{display:grid;grid-template-columns:1fr 1fr;gap:0 3mm;align-items:start;}
+.rel-tables.c2 table.rel-refs{font-size:7.6pt;}
+.rel-tables.c2 table.rel-refs td:last-child{width:auto;}
+/* 관계도 4판(사용자 지시 2026-11-02 「한 장을 할애해도 좋으니 캐릭터로」): 초상 관계도는 한 쪽을 통째로, 관계 표는 다음에 */
+/* 2026-11-02 「가급적이면 한 페이지에 모두」: 관계도 뒤에 자리가 남으면 관계 표가 같은 쪽에 이어진다(break-after 뺌) */
+.relpage{break-before:page;break-inside:avoid;}
+/* 쪽 안 글 높이 175mm = 그림 + 제목·범례·여백(약 19mm) — famtree.mjs BOX_MM과 같은 값 — 그림이 더 크면 제목만 앞쪽에 남고 그림이 다음 쪽으로 밀렸다(2026-11-02) */
+.relpage .relfig svg.famtree{max-height:156mm;width:100%;height:auto;}

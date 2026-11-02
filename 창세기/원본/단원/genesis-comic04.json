@@ -1,17 +1,19 @@
-{
- "panels": [
-  {"ref": "5:1-5", "cap": "아담이 일백삼십 세에 셋을 낳고 구백삼십 년을 살았다.", "sky": "day",
-   "items": [["tent", 320, 250, 0.9], ["person", 170, 252, 1, {"beard": true, "cloth": false, "hair": "#9a9a9a", "pose": "hold", "baby": true, "mood": "calm"}]]},
-  {"ref": "5:6-20", "cap": "셋, 에노스, 카이난, 마할랄르엘, 야렛으로 이어졌다.", "sky": "day",
-   "items": [["person", 50, 252, 0.8, {"beard": true, "robe": "#8a5a3a"}], ["person", 125, 252, 0.8, {"beard": true, "robe": "#7f8fa6"}], ["person", 200, 252, 0.8, {"beard": true, "robe": "#9b8a6a"}], ["person", 275, 252, 0.8, {"beard": true, "robe": "#6e8a5a"}], ["person", 350, 252, 0.8, {"robe": "#c4875a"}]]},
-  {"ref": "5:21-23", "cap": "에녹은 삼백 년 동안 하나님과 동행했다.", "sky": "day",
-   "items": [["light", 280, 0, 0.9], ["hills", 200, 256, 1], ["person", 180, 252, 1, {"beard": true, "robe": "#5b4a8a", "staff": true, "pose": "forward", "mood": "calm"}]]},
-  {"ref": "5:24", "cap": "하나님께서 데려가셔서, 에녹은 더 이상 없었다.", "sky": "day",
-   "items": [["light", 200, 0, 1.1], ["hills", 200, 256, 1]]},
-  {"ref": "5:25-27", "cap": "므두셀라는 구백육십구 년을 살고 죽었다.", "sky": "dusk",
-   "items": [["grave", 300, 252, 1], ["person", 150, 252, 1, {"beard": true, "robe": "#7f8fa6", "staff": true, "pose": "forward", "mood": "calm"}]]},
-  {"ref": "5:28-32", "cap": "라멕이 노아를 낳았다. 노아는 솀과 함과 야펫을 낳았다.", "sky": "day",
-   "items": [["grain", 60, 256, 0.9], ["bush", 330, 256, 0.7], ["person", 200, 252, 1, {"beard": true, "robe": "#8a5a3a", "pose": "hold", "baby": true, "mood": "calm"}]],
-   "say": [{"t": "이 아이가 우리를 위로해 줄 거다.", "x": 120, "y": 14, "w": 200, "to": [204, 100]}]}
- ]
-}
+{"from":"chapters","note":"장 원고 comic에서 고른 컷 [장, 컷 번호] — comic.mjs pickPanels","panels":[
+  [5,1],
+  [5,2],
+  [5,3],
+  [5,4],
+  [5,5],
+  [5,6],
+  [5,7],
+  [5,8],
+  [5,9],
+  [5,10],
+  [5,11],
+  [5,12],
+  [5,13],
+  [5,14],
+  [5,15],
+  [5,16],
+  [5,17],
+  [5,18]]}

@@ -5,6 +5,7 @@ import path from "node:path";
 import { R, BOOKS, chapterFile, chapterVerses, rangeVerses, markRanges, transcript, pdfPage, squash, ffFile, sbcFile, MARK, diskPath } from "./lib.mjs";
 import { PLACES, MOTIFS, mapViews, mapSvg, mapIssues } from "./art.mjs";
 import { familyIssues } from "./famtree.mjs";
+import { THINGS, BG, PANELS, bubble, says } from "./comic.mjs";
 const BASIC = new Set(Object.values(JSON.parse(fs.readFileSync(new URL("./basic_words.json", import.meta.url), "utf8"))).filter(Array.isArray).flat());
 
 const [book, ...rest] = process.argv.slice(2);
@@ -113,6 +114,51 @@ for (const ch of chs) {
   // 그림 겹침(지침 §5·§6): 관계도·지도 글자가 상자·선·다른 글자에 가려지지 않는지 실제 배치로 검사
   if (d.people?.length && d.relations?.length) { try { for (const m of familyIssues(d.people, d.relations).issues) E("관계도 " + m); } catch (e) { E("관계도 배치 실패 " + e.message); } }
   if (d.map?.places?.length) { try { for (const v of mapViews(d.map)) { const places = d.map.places.filter((x) => v.keys.includes(x.key)); const routes = (d.map.routes || []).map((r) => ({ ...r, path: r.path.filter((k) => v.keys.includes(k)) })).filter((r) => r.path.length > 1); mapSvg({ places, routes, minSpan: v.minSpan, focus: v.focus, hide: v.hide, frames: v.frames }); for (const m of mapIssues) E("지도 " + m); } } catch (e) { E("지도 배치 실패 " + e.message); } }
+  // 만화로 보는 이야기·쉬운 역할·요약 밑줄(사용자 지시 2026-11-02) — comic이 있는 원고에서 검사
+  if (d.comic) {
+    const verseKo = Object.fromEntries(chapterVerses(book, ch).map((v) => [v.ref, v.ko]));
+    const vn = (r) => +String(r).split(":")[1];
+    if (d.comic.length !== PANELS) E(`만화 ${d.comic.length}컷(${PANELS}컷이어야 함)`);
+    let prev = 0;
+    d.comic.forEach((p, i) => {
+      const n = `만화 ${i + 1}컷`;
+      if (!verseKo[p.v]) { E(`${n} 절 이상 ${p.v}`); return; }
+      if (vn(p.v) < prev) E(`${n} 절 순서가 거꾸로 ${p.v}`); prev = vn(p.v);
+      if (!BG[p.bg || "sky"]) E(`${n} 없는 배경 ${p.bg}`);
+      if (!(p.art || []).length) E(`${n} 그림 없음`);
+      for (const a of p.art || []) {
+        if (a.f) { if (!["man", "woman", "child", "angel"].includes(a.f)) E(`${n} 없는 인물 그림 ${a.f}`); }
+        else if (!THINGS[a.m]) E(`${n} 없는 그림 ${a.m}`);
+        if ((a.x ?? 120) < 0 || (a.x ?? 120) > 240 || (a.y ?? 132) < 0 || (a.y ?? 132) > 150) E(`${n} 그림 좌표가 판(240×150) 밖`);
+        if (a.name && [...a.name].length > 10) E(`${n} 이름표가 김(10자 이하): ${a.name}`);
+      }
+      if (!p.cap || [...p.cap].length > 80) E(`${n} 내레이션 ${[...(p.cap || "")].length}자(1–80)`);
+      if (!(p.u || []).length || p.u.length > 2) E(`${n} 밑줄 ${(p.u || []).length}곳(1–2)`);
+      for (const t of p.u || []) { const k = (p.cap || "").indexOf(t); if (k < 0 || p.cap.indexOf(t, k + 1) >= 0) E(`${n} 밑줄 글자가 내레이션에 정확히 한 번 있어야 함: ${t}`); }
+      if (says(p).length > 2) E(`${n} 말풍선은 2개까지`);
+      for (const sy of says(p)) {
+        const ko = verseKo[sy.v];
+        if (!ko || !ko.includes(sy.text)) E(`${n} 말풍선이 ${sy.v} 본문 글자 그대로가 아님: ${sy.text}`);
+        if ([...sy.text].length > 46) E(`${n} 말풍선이 김(46자 이하)`);
+        try { if (bubble(sy).lines.length > 4) E(`${n} 말풍선 4줄 초과`); } catch (e) { E(`${n} 말풍선 ${e.message}`); }
+      }
+    });
+    const secs = d.sections || [];
+    if (secs.length && d.comic.length) {
+      const first = rangeVerses(book, ch, secs[0].ref).map((v) => v.ref), last = rangeVerses(book, ch, secs.at(-1).ref).map((v) => v.ref);
+      if (!first.includes(d.comic[0].v)) E("만화 1컷은 첫 단락에서 시작해야 함");
+      if (!last.includes(d.comic.at(-1).v)) E("만화 마지막 컷은 마지막 단락이어야 함");
+    }
+    for (const p of d.people || []) {
+      if (!p.part || [...p.part].length > 14) E(`인물 ${p.id} 쉬운 역할(part) 1–14자 필요`);
+      if (!p.intro || [...p.intro].length < 8 || [...p.intro].length > 24) E(`인물 ${p.id} 관계도 핵심 소개(intro) 8–24자 필요`);
+      if (p.look && !["man", "woman", "child", "old", "king", "group", "angel"].includes(p.look)) E(`인물 ${p.id} look 이상 ${p.look}`);
+    }
+    for (const x of d.learning?.summary || []) {
+      if (!(x.u || []).length || x.u.length > 2) E(`요약 밑줄 ${(x.u || []).length}곳(1–2): ${x.text.slice(0, 20)}`);
+      for (const t of x.u || []) { const k = x.text.indexOf(t); if (k < 0 || x.text.indexOf(t, k + 1) >= 0) E(`요약 밑줄 글자가 정확히 한 번 있어야 함: ${t}`); }
+    }
+  }
   // 영어 구문
   if (d.english) E("장 전체 english는 2판 보강에서 단락별 english로 옮긴다");
   // 학습 자료

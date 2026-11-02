@@ -1,11 +1,12 @@
 // 단원 책 서두의 「소설로 먼저 읽기」(지침 §2-4, 모든 성경 책 공통, 사용자 지시 2026-10-23) — 성경 본문이 나오기 전에 단원 전체 이야기를 소설처럼 풀어 쓴다.
 //   node tools/chapterbook/novel.mjs <genesis|1sam|2sam|1ki|2ki …> check [N …]   원고 검사 — 종료 코드 0이어야 빌드
-// 원고: 단원 원고와 같은 폴더의 <책>-novelNN.json  { "paras": [ { "t": "문단", "refs": ["1:1-8"] } ] }
+// 원고: 단원 원고와 같은 폴더의 <책>-novelNN.json  { "paras": [ { "t": "문단", "refs": ["1:1-8"], "marks": [{ "t": "y", "ko": "문단 안 글자" }] } ] }
+// marks: 칠판과 같은 형광펜·밑줄(사용자 지시 2026-11-02 "소설이라도 밑줄 쳐 주고", "소설도 중요한 부분에 형광펜 및 밑줄") — t는 lib.mjs MARK(y·g·p·b·u)
 // 검사: 문단 근거 절이 단원 범위 안, 단원의 모든 단락을 문단 근거가 덮음, 대사는 근거 절에 말이 있을 때만·옛 말투 금지, 해설 말투 금지, 분량.
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { R, BOOKS, chapterVerses, esc } from "./lib.mjs";
+import { R, BOOKS, chapterVerses, esc, MARK, markRanges, applyMarks } from "./lib.mjs";
 import { useBook, loadUnit, UNITS, unitDir, isUnitBook } from "./units.mjs";
 
 export const novelFile = (book, n) => { useBook(book); return path.join(unitDir(), `${book}-novel${String(n).padStart(2, "0")}.json`); };
@@ -43,6 +44,14 @@ export function checkNovel(book, n) {
       else for (const b of p.basis) if (!commentIds.has(b)) E.push(`${at} basis 해설 id가 이 단원에 없음: ${b}`);
     }
     chars += p.t.length;
+    if (p.marks !== undefined) {
+      if (!Array.isArray(p.marks)) E.push(at + " marks는 목록이어야 함");
+      else {
+        for (const m of p.marks) if (!MARK[m.t] || !m.ko) E.push(`${at} 표시 형식(t는 ${Object.keys(MARK).join("·")}, ko 글자): ${JSON.stringify(m)}`);
+        try { const rs = markRanges(p.t, p.marks.filter((m) => MARK[m.t] && m.ko), "ko").sort((a, b) => a.s - b.s); rs.forEach((r, k) => { if (k && r.s < rs[k - 1].e) E.push(at + " 표시끼리 겹침"); }); } catch (e) { E.push(at + " " + e.message); }
+        if (p.marks.length > 3) E.push(at + " 표시가 너무 많음(문단마다 3개까지)");
+      }
+    }
     if (/["']/.test(p.t)) E.push(at + " 곧은 따옴표 — 대사는 “ ”로");
     if (/[A-Za-z]/.test(p.t)) E.push(at + " 영어 글자");
     if (!p.refs?.length) { E.push(at + " 근거 절 없음"); return; }
@@ -80,6 +89,10 @@ export function checkNovel(book, n) {
       if (run === 3) E.push(`${i + 1}번째 문단 같은 어미 '${k}' 세 번 연속: …${x.slice(-24)}`);
     }
   });
+  // 형광펜·밑줄은 중요한 곳에만 — 문단 셋에 하나꼴 이상, 둘에 하나꼴 이하(빈 소설·도배 금지)
+  const nm = d.paras.reduce((a, p) => a + (p.marks?.length || 0), 0);
+  if (nm < Math.ceil(d.paras.length / 4)) E.push(`형광펜·밑줄 ${nm}개(문단 ${d.paras.length}개 → ${Math.ceil(d.paras.length / 4)}개 이상)`);
+  if (nm > Math.ceil(d.paras.length * 0.8)) E.push(`형광펜·밑줄 ${nm}개가 너무 많음(문단 ${d.paras.length}개 → ${Math.ceil(d.paras.length * 0.8)}개 이하)`);
   if (narr >= 10 && haetda / narr > 0.3) E.push(`'했다'로 끝나는 문장 ${Math.round(haetda / narr * 100)}%(30% 이하)`);
   // 분량은 단원 본문 글자 수에 맞춘다(구절로만 풀면 본문 길이와 비슷하다). 너무 길면 해설로 채운 것이다
   const lo = Math.round(vChars * 0.7), hi = Math.round(vChars * 1.5) + 300;
@@ -93,6 +106,8 @@ export function novelHtml(book, n, mk = () => "") {
   const d = loadNovel(book, n), u = loadUnit(n), B = BOOKS[book];
   const range = u.parts.map((p) => p.full ? `${p.ch}장` : `${p.ch}:${p.from}–${p.to}`).join(", ");
   let o = `<section class="front novel" id="novel">${mk("novel")}<p class="eyebrow">STORY</p><h1>소설로 먼저 읽기</h1><div class="nv-sub">${esc(B.ko)} ${esc(u.title)}</div><div class="gold"></div>`;
+  // 형광펜 색 안내(칠판과 같은 뜻) — 소설에는 형광펜 위 작은 이름표를 달지 않고 여기 한 번만
+  o += `<div class="nv-legend">${["u", "y", "g", "p", "b"].map((k) => `<span class="${MARK[k][0]}">${esc(MARK[k][1].split(" — ")[0])}</span> ${esc(MARK[k][1].split(" — ")[1])}`).join(" · ")}</div>`;
   let ch = null;
   d.paras.forEach((p, i) => {
     if (i === d.paras.length - 1) o += `<div class="nv-end">`;
@@ -100,7 +115,8 @@ export function novelHtml(book, n, mk = () => "") {
     if (u.parts.length > 1 && c !== ch) { o += `<div class="nv-ch">${B.ko} ${c}장</div>`; ch = c; }
     else if (p.scene && i > 0) o += `<div class="nv-br">◆</div>`; // 장면 바꿈(§2-4 서술 방식 본보기)
     // 노래·시는 줄을 나눠 운문으로(줄바꿈 \n). 그 밖의 문단은 산문
-    o += p.poem ? `<div class="nv-poem">${p.t.split("\n").map((l) => `<p>${esc(l)}</p>`).join("")}</div>` : `<p class="nv">${esc(p.t)}</p>`;
+    const body = p.marks?.length ? applyMarks(esc(p.t), p.t, markRanges(p.t, p.marks, "ko")) : esc(p.t);
+    o += p.poem ? `<div class="nv-poem">${body.split("\n").map((l) => `<p>${l}</p>`).join("")}</div>` : `<p class="nv">${body}</p>`;
   });
   o += `<p class="nv-note">이 이야기는 ${esc(B.ko)} ${range} 본문(표준킹제임스성경)의 구절만으로 풀어 썼습니다. “ ” 안의 말은 본문의 뜻을 바꾸지 않고 요즘 말투로 옮긴 것입니다. 이제 칠판의 본문으로 한 단락씩 읽어 봅니다.</p></div></section>`;
   return { html: NOVEL_CSS + o, nav: [["novel", "소설로 먼저 읽기", 0]] };
@@ -119,6 +135,10 @@ const NOVEL_CSS = `<style>
 .novel .nv-br + p.nv{text-indent:0;}
 .novel .nv-poem{margin:1.5mm 0 3mm 7mm;padding-left:3mm;border-left:.6mm solid #e6d3a3;break-inside:avoid;}
 .novel .nv-poem p{font-size:10.4pt;line-height:1.8;margin:0 0 .6mm;}
+.novel .nv-legend{font:7.6pt/1.7 "Noto Sans KR",sans-serif;color:#5b5b5b;background:#faf6ea;border-radius:1.4mm;padding:1.4mm 2.4mm;margin:0 0 4mm;}
+.novel .lead::before{content:none !important;}
+.novel .mk-u{text-decoration:underline;text-decoration-color:#c0392b;text-decoration-thickness:.4mm;text-underline-offset:.8mm;}
+.novel .mk-y{background:#fbeb8c;}.novel .mk-g{background:#c9efb8;}.novel .mk-p{background:#fbcfe0;}.novel .mk-b{background:#c6e9f8;}
 .novel .nv-note{font:8.6pt/1.75 "Noto Sans KR",sans-serif;color:#6b6b6b;border-top:.2mm solid #e2d6b8;padding-top:2.5mm;margin-top:6mm;}
 </style>`;
 
