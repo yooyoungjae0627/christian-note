@@ -2,7 +2,7 @@
 
 - **지침(단일 원본):** `docs/policy/성경주제별_교재_제작지침.md` + 바탕 `docs/policy/밀크교재_제작지침_1_전체판.md`
 - **근간:** `docs/core/`(밀크 교리 정리 · 교재 집필 정책). 없으면 `docs/doctrine/00_교리_총정리.md`
-- **책 단위:** 첫열매들 예배 강의 1개 = 책 1권. 파일 `NN_이름.pdf` + `NN_이름.epub` (이 폴더)
+- **책 단위:** 첫열매들 예배 강의 1개 = 책 1권. 파일 `이름.pdf` + `이름.epub` (이 폴더, 번호 없이 — 2026-11-04)
 - **작업 원본:** `원본/NN_이름/`(story.txt · transcript_raw.txt · figs · slides), 도구 `원본/tools/` (사용법 `원본/tools/README.md`)
 
 ## 새 강의가 오면

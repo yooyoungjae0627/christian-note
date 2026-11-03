@@ -51,8 +51,9 @@ export function loadBook(root) {
   if (!S.coverText || !S.coverText.length) throw new Error(`[${d}] @cover(표지 핵심 문장) 없음`);
   book.coverArt = fs.readFileSync(art, "utf8").replace(/<\?xml[^>]*>\s*/, "").replace(/<svg\b/, '<svg width="78mm" height="78mm"');
   book.coverMotto = S.coverText;
-  book.pdfName = `${d}.pdf`;
-  book.epubName = `${d}.epub`;
+  const fileBase = d.replace(/^\d+_/, ""); // 완성본 파일 이름에는 번호를 붙이지 않는다(2026-11-04)
+  book.pdfName = `${fileBase}.pdf`;
+  book.epubName = `${fileBase}.epub`;
   book.uid = book.uid.replace(/.{3}$/, "b" + nn); // 책마다 다른 uid(같은 책은 다시 빌드해도 같은 uid)
   return book;
 }

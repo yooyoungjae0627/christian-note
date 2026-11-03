@@ -1,6 +1,6 @@
 # 성경 주제별 교재 — 빌드 도구
 
-**강의 1개 = 책 1권**(2026-10-09). 책마다 `Theme/NN_이름.pdf` + `.epub`. 도구는 책 번호 NN을 받아 그 이야기 하나만 한 권으로 만든다. 정책: `C:\BibleStudy\docs\policy\성경주제별_교재_제작지침.md`.
+**강의 1개 = 책 1권**(2026-10-09). 책마다 `첫열매들 강의 정리/이름.pdf` + `.epub`(번호 없이 — 2026-11-04, 원본 폴더만 `NN_이름`). 도구는 책 번호 NN을 받아 그 이야기 하나만 한 권으로 만든다. 정책: `C:\BibleStudy\docs\policy\성경주제별_교재_제작지침.md`.
 
 ## 새 이야기 더하기
 1. `원본/NN_짧은이름/` 폴더를 만든다(NN = 02, 03 …).
@@ -42,9 +42,9 @@ mkdir %TEMP%\topicbook && cd %TEMP%\topicbook && npm init -y && npm i sharp qrco
 copy "<원본>\tools\*" .
 node figs.mjs      "<원본>" NN        (만든 그림이 있으면: figs/*.html → slides/*.jpg)
 node fit.mjs       "<원본>" out NN     (그림 위치 맞춤 → 이야기 폴더의 layout.json)
-node build_pdf.mjs "<원본>" out NN  && node verify_pdf.mjs  "<원본>" out\NN_이름.pdf NN
-node build_epub.mjs "<원본>" out NN && node verify_epub.mjs "<원본>" out\NN_이름.epub NN
-node audit.mjs out\NN_이름.pdf out\toc_pages.json   (남은 공란 보고)
+node build_pdf.mjs "<원본>" out NN  && node verify_pdf.mjs  "<원본>" out\이름.pdf NN
+node build_epub.mjs "<원본>" out NN && node verify_epub.mjs "<원본>" out\이름.epub NN
+node audit.mjs out\이름.pdf out\toc_pages.json   (남은 공란 보고)
 ```
 - 책 번호 없이 돌리면 멈춘다(강의를 한 권에 묶지 않도록). 여러 권은 책마다 위 순서를 돌린다.
 - Edge는 Claude Code 샌드박스 안에서 바로 종료되므로 **샌드박스 밖에서** 실행한다.
