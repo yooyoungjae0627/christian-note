@@ -8,7 +8,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { R, TMP, BOOKS, TOPIC, mod, loadChapter, esc } from "./lib.mjs";
-import { chapterParts, learning, sourcesTable, toc, page, howto, cover, qrFile } from "./html.mjs";
+import { chapterParts, relationsHtml, learning, sourcesTable, toc, page, howto, cover, qrFile } from "./html.mjs";
 import { coverSvg } from "./art.mjs";
 import * as comic from "./comic.mjs";
 import { edgePrint } from "../../첫열매들 강의 정리/원본/tools/edge.mjs";
@@ -103,7 +103,7 @@ const outDir = OUTDIR || path.join(R, B.dir);
 fs.mkdirSync(outDir, { recursive: true });
 const results = [];
 if (rest[0] === "unit") {
-  // 단원 책: 표지 → 읽는 법 → 차례 → 장마다 [장 머리·인물·지도·단락] → 단원 학습 자료 → 참고 자료
+  // 단원 책: 표지 → 읽는 법 → 차례 → 인물 관계도 → 소설 → 만화 → 장마다 [장 머리·인물·지도·단락] → 단원 학습 자료 → 참고 자료
   const { loadUnit, unitOut, label, check, useBook } = await import("./units.mjs");
   useBook(book);
   const novel = await import("./novel.mjs");
@@ -116,7 +116,7 @@ if (rest[0] === "unit") {
     if (!nv) console.error(`경고: ${book} 단원 ${n} 「소설로 먼저 읽기」 원고 없음(지침 §2-4) — 완성본이 아님`);
     if (nv) { const ne = nv.checkNovel(book, n); if (ne.length) throw new Error("소설 원고 검사 실패: " + ne.join("; ")); }
     const u = loadUnit(n);
-    // 지도 다음 「만화로 보는 이야기」(사용자 지시 2026-11-02) — 원고가 있으면 검사를 통과해야 빌드
+    // 「만화로 보는 이야기」(사용자 지시 2026-11-02, 2026-11-04부터 소설 다음) — 원고가 있으면 검사를 통과해야 빌드
     const hasComic = comic.hasComic(book, n);
     if (hasComic) { const ce = comic.checkComic(book, n); if (ce.length) throw new Error("만화 원고 검사 실패: " + ce.join("; ")); }
     await ensureQr(u.parts.flatMap((x) => urlsOf(x.d)));
@@ -124,10 +124,15 @@ if (rest[0] === "unit") {
     const render = (pages, withMk) => {
       const mk = withMk ? marker : () => "";
       let nav = [], body = "", comments = {};
-      if (nv) { const s = nv.novelHtml(book, n, mk); nav.push(...s.nav); body += s.html; }
-      for (const [xi, x] of u.parts.entries()) {
-        const afterMap = hasComic && xi === 0 ? { html: comic.COMIC_CSS + comic.comicHtml(book, n, { title: u.title, bookKo: B.ko }, mk), nav: [["comic", "만화로 보는 이야기", 1]] } : null;
-        const a = chapterParts(book, x.ch, x.d, { p: `c${x.ch}-`, qr: false, mk, head: x.full ? null : { h1: label(x), nav: label(x) }, afterMap });
+      // 인물 관계도(장마다) → 소설 → 만화 → 장 본문(사용자 지시 2026-11-04 "인물관계도를 소설 앞쪽에, 소설 다음에 만화 컷")
+      for (const x of u.parts) {
+        const id = `c${x.ch}-rel`, r = relationsHtml(book, x.ch, x.d, { id, mk, title: label(x) });
+        if (r) { nav.push([id, `인물 관계도 · ${label(x)}`, 0]); body += r; }
+      }
+      if (nv) { const s = nv.novelHtml(book, n, mk, { comic: hasComic }); nav.push(...s.nav); body += s.html; }
+      if (hasComic) { body += comic.COMIC_CSS + comic.comicHtml(book, n, { title: u.title, bookKo: B.ko }, mk); nav.push(["comic", "만화로 보는 이야기", 0]); }
+      for (const x of u.parts) {
+        const a = chapterParts(book, x.ch, x.d, { p: `c${x.ch}-`, qr: false, mk, head: x.full ? null : { h1: label(x), nav: label(x) }, rel: false });
         nav.push(...a.nav); body += a.html; Object.assign(comments, a.comments);
       }
       const l = learning(book, 0, all, comments, { mk, scope: "이 책" });

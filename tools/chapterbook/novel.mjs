@@ -101,7 +101,7 @@ export function checkNovel(book, n) {
 }
 
 // 표지·읽는 법·차례 다음, 첫 장 머리 앞에 들어가는 쪽
-export function novelHtml(book, n, mk = () => "") {
+export function novelHtml(book, n, mk = () => "", { comic = false } = {}) {
   useBook(book);
   const d = loadNovel(book, n), u = loadUnit(n), B = BOOKS[book];
   const range = u.parts.map((p) => p.full ? `${p.ch}장` : `${p.ch}:${p.from}–${p.to}`).join(", ");
@@ -118,7 +118,7 @@ export function novelHtml(book, n, mk = () => "") {
     const body = p.marks?.length ? applyMarks(esc(p.t), p.t, markRanges(p.t, p.marks, "ko")) : esc(p.t);
     o += p.poem ? `<div class="nv-poem">${body.split("\n").map((l) => `<p>${l}</p>`).join("")}</div>` : `<p class="nv">${body}</p>`;
   });
-  o += `<p class="nv-note">이 이야기는 ${esc(B.ko)} ${range} 본문(표준킹제임스성경)의 구절만으로 풀어 썼습니다. “ ” 안의 말은 본문의 뜻을 바꾸지 않고 요즘 말투로 옮긴 것입니다. 이제 칠판의 본문으로 한 단락씩 읽어 봅니다.</p></div></section>`;
+  o += `<p class="nv-note">이 이야기는 ${esc(B.ko)} ${range} 본문(표준킹제임스성경)의 구절만으로 풀어 썼습니다. “ ” 안의 말은 본문의 뜻을 바꾸지 않고 요즘 말투로 옮긴 것입니다. ${comic ? "이어서 만화로 이야기를 한 번 더 본 뒤, 칠판의 본문으로 한 단락씩 읽어 봅니다." : "이제 칠판의 본문으로 한 단락씩 읽어 봅니다."}</p></div></section>`;
   return { html: NOVEL_CSS + o, nav: [["novel", "소설로 먼저 읽기", 0]] };
 }
 const NOVEL_CSS = `<style>

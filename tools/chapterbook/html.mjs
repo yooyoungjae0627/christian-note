@@ -62,7 +62,7 @@ export function introBlocks(book) {
     ["이 책은", `${B.ko}의 절 순서로 읽으며 첫열매들 교회의 강의와 교재, 교회 교리로 본문을 이해하는 교재입니다.`],
     ["해설의 근거와 순위", "해설은 성경 해석 지침의 순위를 따릅니다. 1순위는 첫열매들 교회의 영상 강의와 교재입니다. 출처 줄에 표시가 없으면 강의·교재가 그 절을 풀이하거나 언급한 것이고, ‘교회 교리 적용’은 교회 교리(밀크 교재 등)의 원리를 이 절에 비추어 본 것입니다. 1순위 근거가 없는 단락에만 2순위 ‘외부 해설’(세대주의 해설가 — 스코필드 등 — 의 해설 가운데 교회 교리에 가까운 것)을, 그다음 3순위 ‘이이레 목사 강의’(서울침례교회 「다윗의 삶」)를 썼습니다. 2·3순위는 회색·갈색 줄로 구분했으며 교회의 가르침으로 소개하지 않습니다."],
     ["성경 본문 — 칠판", "한글과 영어 본문은 표준킹제임스성경 한영대역의 글자 그대로입니다. 칠판의 밑줄과 형광펜은 글자를 바꾸지 않고 덧씌운 표시이며, KJV 영어에도 같은 뜻의 자리에 같은 표시를 했습니다. 색의 뜻은 칠판마다 맨 위에, 형광펜 바로 위에도 작게 적었습니다. KJV 아래 색 상자는 현대 영어 번역 World English Bible(British Edition, 퍼블릭 도메인)입니다. 칠판 끝에는 그 단락의 영어 강의(주요 구문·필수 문법)와 단어장이 있습니다."],
-    ["그림", "이 장의 인물과 관계도, 지명이 나오는 장의 지도를 본문 앞에 두었습니다. 지도의 위치는 대략적인 것이며, 위치가 알려지지 않은 곳은 따로 적었습니다."],
+    ["그림", "인물 관계도는 소설 앞에, 이 장의 인물과 지명이 나오는 장의 지도는 각 장 본문 앞에 두었습니다. 지도의 위치는 대략적인 것이며, 위치가 알려지지 않은 곳은 따로 적었습니다."],
     ["영상 구간과 차례", "빨간 유튜브 버튼을 누르면 그 구간부터 영상이 재생됩니다. 강의 시각은 YouTube 자막 패널에 표시된 그 줄의 시작 시각이고, 교재 PDF 출처의 시각은 원 교재에 실린 구간 주소이거나, 그 쪽이 속한 구간의 시작 시각입니다. 이번 제작에서 영상을 재생하여 발언 시점을 다시 확인하지는 않았습니다. 차례의 제목을 누르면 해당 단락으로 이동합니다."],
   ];
 }
@@ -79,7 +79,20 @@ export function cover(book, title, sub, art, motto) {
 // 한 장의 본문부: 장 머리 → 인물 → 지도 → 절·해설 → 영어 구문 (+ 학습 자료는 learning()으로)
 // p = id 앞붙임(합본에서 장마다 다르게), qr = PDF에 QR 넣기
 // head = 단원 책에서 장 일부만 실을 때 장 머리 글자 {h1, nav}(지침 §0-1)
-export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "", head = null, afterMap = null } = {}) {
+// 관계도 4판: 한 쪽을 통째로 쓰는 초상 관계도(사용자 지시 2026-11-02 "한 장을 할애해도 좋으니 네모 칸보다는 캐릭터로") — 관계 표는 그 다음 쪽에 두 단
+// 단원 책은 장 안에 두지 않고 소설 앞에 모은다(사용자 지시 2026-11-04 "인물관계도 2개를 소설 앞쪽에") — id·title을 주면 그 자리용 제목
+export function relationsHtml(book, ch, d, { id = "", mk = () => "", title = "" } = {}) {
+  if (!d.people?.length || !d.relations?.length) return "";
+  const B = BOOKS[book];
+  const img = (x) => { const o = portraitOf(x, ch); return o && fs.existsSync(portraitFile(book, o.key)) ? "data:image/jpeg;base64," + fs.readFileSync(portraitFile(book, o.key)).toString("base64") : null; };
+  const nm = Object.fromEntries(d.people.map((x) => [x.id, x.name]));
+  const row = (r) => `<tr><td>${esc(nm[r.from])} — ${esc(nm[r.to])}${r.label ? ` · ${esc(r.label)}` : ""}</td><td>${B.ko} ${esc(r.ref)}</td></tr>`;
+  const cols = d.relations.length > 6 ? 2 : 1, per = Math.ceil(d.relations.length / cols);
+  const tables = [...Array(cols)].map((_, c) => `<table class="rel-refs"><thead><tr><th>관계</th><th>근거</th></tr></thead><tbody>${d.relations.slice(c * per, (c + 1) * per).map(row).join("")}</tbody></table>`).join("");
+  return `<div class="relpage"${id ? ` id="${id}"` : ""}>${id ? mk(id) : ""}<div class="figure relfig"><div class="lab">인물 관계도${title ? ` · ${esc(title)}` : ""}</div>${familySvg(d.people, d.relations, { img })}${familyLegendHtml(d.people, d.relations)}</div></div><div class="rel-tables c${cols}">${tables}</div>`;
+}
+
+export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "", head = null, rel = true } = {}) {
   const B = BOOKS[book];
   const nav = [];
   const comments = Object.fromEntries(d.sections.flatMap((s) => s.comments.map((c) => [c.id, c])));
@@ -91,15 +104,7 @@ export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "", he
     for (const x of d.people) o += `<div class="person"><span class="pn">${esc(x.name)}</span>${x.en ? `<span class="pe">${esc(x.en)}</span>` : ""}${x.part ? `<div class="pp">${esc(x.part)}</div>` : ""}<div>${esc(x.desc)}</div><div class="pr">근거: ${B.ko} ${esc(x.refs.join(", "))}</div></div>`;
     o += `</div>`;
     nav.push([p + "people", "이 장의 인물", 1]);
-    // 관계도 4판: 한 쪽을 통째로 쓰는 초상 관계도(사용자 지시 2026-11-02 "한 장을 할애해도 좋으니 네모 칸보다는 캐릭터로") — 관계 표는 그 다음 쪽에 두 단
-    if (d.relations?.length) {
-      const img = (x) => { const o = portraitOf(x, ch); return o && fs.existsSync(portraitFile(book, o.key)) ? "data:image/jpeg;base64," + fs.readFileSync(portraitFile(book, o.key)).toString("base64") : null; };
-      const nm = Object.fromEntries(d.people.map((x) => [x.id, x.name]));
-      const row = (r) => `<tr><td>${esc(nm[r.from])} — ${esc(nm[r.to])}${r.label ? ` · ${esc(r.label)}` : ""}</td><td>${B.ko} ${esc(r.ref)}</td></tr>`;
-      const cols = d.relations.length > 6 ? 2 : 1, per = Math.ceil(d.relations.length / cols);
-      const tables = [...Array(cols)].map((_, c) => `<table class="rel-refs"><thead><tr><th>관계</th><th>근거</th></tr></thead><tbody>${d.relations.slice(c * per, (c + 1) * per).map(row).join("")}</tbody></table>`).join("");
-      o += `<div class="relpage"><div class="figure relfig"><div class="lab">인물 관계도</div>${familySvg(d.people, d.relations, { img })}${familyLegendHtml(d.people, d.relations)}</div></div><div class="rel-tables c${cols}">${tables}</div>`;
-    }
+    if (rel) o += relationsHtml(book, ch, d);
   }
   // 지도 — views가 있으면 전체 지도와 확대 지도 등 여러 장
   if (d.map?.places?.length) {
@@ -113,8 +118,6 @@ export function chapterParts(book, ch, d, { p = "", qr = true, mk = () => "", he
     });
     nav.push([p + "map", "이 장의 지도", 1]);
   }
-  // 지도 다음 「만화로 보는 이야기」(단원 책의 첫 장에만, comic.mjs)
-  if (afterMap) { o += afterMap.html; nav.push(...afterMap.nav); }
   // 절과 해설 — 단락마다 칠판 하나: 범례 → 절(한글·KJV·현대 영어) → 영어 강의 → 단어장
   d.sections.forEach((s, i) => {
     const key = `${p}s${i + 1}`;
