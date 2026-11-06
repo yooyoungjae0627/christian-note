@@ -1,0 +1,937 @@
+{
+ "chapter": 6,
+ "subtitle": "잠들 수 없었던 왕의 밤과 높아진 모르드캐",
+ "motto": "하나님의 이름은 한 번도 나오지 않지만, 그분의 섭리가 이보다 더 뚜렷한 책은 없습니다",
+ "motto_comment": "e06-2",
+ "cover": [
+  {
+   "m": "stars",
+   "x": 170,
+   "y": 70,
+   "s": 0.85
+  },
+  {
+   "m": "crown",
+   "x": 110,
+   "y": 200,
+   "s": 0.8
+  },
+  {
+   "m": "coat",
+   "x": 230,
+   "y": 220,
+   "s": 0.8
+  },
+  {
+   "m": "city",
+   "x": 170,
+   "y": 300,
+   "s": 0.8
+  }
+ ],
+ "people": [
+  {
+   "id": "king",
+   "name": "아하수에루스왕",
+   "en": "Ahasuerus",
+   "gen": 1,
+   "look": "king",
+   "desc": "잠들 수 없던 밤에 연대기의 기록을 읽게 했습니다. 모르드캐가 받은 영예가 없다는 말을 듣고, 하만에게 모르드캐를 높이라고 명령했습니다.",
+   "refs": [
+    "6:1",
+    "6:3",
+    "6:10"
+   ],
+   "part": "잠들 수 없었던 왕",
+   "intro": "왕 · 모르드캐를 높이라고 명령함"
+  },
+  {
+   "id": "servants",
+   "name": "왕의 종들",
+   "gen": 2,
+   "look": "group",
+   "desc": "왕을 섬기던 종들입니다. 모르드캐를 위하여 행해진 것이 아무것도 없다고 아뢰었고, 뜰에 하만이 서 있다고 알렸습니다.",
+   "refs": [
+    "6:3",
+    "6:5"
+   ],
+   "part": "왕을 섬긴 종들",
+   "intro": "왕을 섬긴 이들 · 하만이 왔다고 알림"
+  },
+  {
+   "id": "mordecai",
+   "name": "모르드캐",
+   "en": "Mordecai",
+   "gen": 1,
+   "look": "man",
+   "desc": "빅다나와 테레시의 음모를 알린 일이 기록되어 있었습니다. 왕실 복장을 입고 왕의 말을 타고 도시의 거리를 지난 뒤, 왕의 대문으로 다시 왔습니다.",
+   "refs": [
+    "6:2",
+    "6:11",
+    "6:12"
+   ],
+   "part": "왕의 영예를 받은 유대인",
+   "intro": "왕을 살린 사람 · 말 타고 높임 받음"
+  },
+  {
+   "id": "haman",
+   "name": "하만",
+   "en": "Haman",
+   "gen": 1,
+   "role": "enemy",
+   "look": "man",
+   "desc": "모르드캐를 매달겠다고 고하러 왔다가, 자기가 말한 영예를 모르드캐에게 해 주어야 했습니다. 애곡하며 머리를 덮은 채 집으로 서둘러 갔습니다.",
+   "refs": [
+    "6:4",
+    "6:11",
+    "6:12"
+   ],
+   "part": "모르드캐를 높인 원수",
+   "intro": "제레시의 남편 · 모르드캐를 말에 태움"
+  },
+  {
+   "id": "zeresh",
+   "name": "제레시",
+   "en": "Zeresh",
+   "gen": 1,
+   "look": "woman",
+   "desc": "하만의 아내입니다. 지혜로운 사람들과 함께, 모르드캐가 유대인들의 씨에 속한다면 하만이 그 앞에서 반드시 쓰러지리라고 말했습니다.",
+   "refs": [
+    "6:13"
+   ],
+   "part": "하만의 아내",
+   "intro": "하만의 아내 · 쓰러지리라고 말함"
+  },
+  {
+   "id": "wise",
+   "name": "하만의 지혜로운 사람들",
+   "gen": 2,
+   "look": "group",
+   "desc": "제레시와 함께 하만에게, 그가 모르드캐 앞에서 쓰러지기 시작했으니 이기지 못하리라고 말했습니다.",
+   "refs": [
+    "6:13"
+   ],
+   "part": "하만 곁의 지혜자들",
+   "intro": "하만의 사람들 · 쓰러지리라고 말함"
+  },
+  {
+   "id": "plotters",
+   "name": "빅다나와 테레시",
+   "en": "Bigthana, Teresh",
+   "gen": 2,
+   "look": "group",
+   "desc": "문을 지키던 왕의 시종장 두 명으로, 아하수에루스왕에게 손을 대려고 모색했습니다. 모르드캐가 그 일을 알린 것이 기록되어 있었습니다.",
+   "refs": [
+    "6:2"
+   ],
+   "part": "왕을 해치려던 시종장",
+   "intro": "문지기 시종장 · 왕을 해치려 함"
+  }
+ ],
+ "relations": [
+  {
+   "from": "king",
+   "to": "servants",
+   "type": "ruler",
+   "label": "섬김",
+   "ref": "6:3"
+  },
+  {
+   "from": "king",
+   "to": "haman",
+   "type": "ruler",
+   "label": "명령함",
+   "ref": "6:10",
+   "directed": true
+  },
+  {
+   "from": "haman",
+   "to": "zeresh",
+   "type": "spouse",
+   "label": "아내",
+   "ref": "6:13"
+  },
+  {
+   "from": "wise",
+   "to": "haman",
+   "type": "other",
+   "label": "쓰러지리라",
+   "ref": "6:13",
+   "directed": true
+  },
+  {
+   "from": "haman",
+   "to": "mordecai",
+   "type": "other",
+   "label": "말에 태워 높임",
+   "ref": "6:11",
+   "directed": true
+  },
+  {
+   "from": "mordecai",
+   "to": "plotters",
+   "type": "other",
+   "label": "음모를 알림",
+   "ref": "6:2",
+   "directed": true
+  }
+ ],
+ "sections": [
+  {
+   "ref": "6:1-3",
+   "title": "그날 밤, 연대기의 책",
+   "marks": [
+    {
+     "v": "6:1",
+     "t": "u",
+     "ko": "그날 밤에 왕이 잠들 수 없는지라",
+     "en": "On that night could not the king sleep"
+    },
+    {
+     "v": "6:2",
+     "t": "u",
+     "ko": "모르드캐가 알렸다고 기록된 것이 발견되었더라",
+     "en": "it was found written, that Mordecai had told of Bigthana and Teresh"
+    },
+    {
+     "v": "6:3",
+     "t": "u",
+     "ko": "그를 위하여 행해진 것이 아무것도 없나이다",
+     "en": "There is nothing done for him"
+    }
+   ],
+   "english": [
+    {
+     "ref": "6:1",
+     "phrase": "On that night could not the king sleep",
+     "grammar": "도치(조동사 + 주어)",
+     "text": "보통 어순은 the king could not sleep입니다. 때를 나타내는 On that night를 앞세우면서 조동사 could not이 주어 앞으로 나왔습니다."
+    },
+    {
+     "ref": "6:2",
+     "phrase": "who sought to lay hand on the king Ahasuerus",
+     "grammar": "관계대명사 who + lay hand on",
+     "text": "who는 앞의 두 시종장을 받습니다. lay hand on은 ‘~에게 손을 대다’, 곧 해치려 한다는 뜻입니다. sought는 seek(찾다, 꾀하다)의 과거입니다."
+    },
+    {
+     "ref": "6:3",
+     "phrase": "What honour and dignity hath been done to Mordecai for this?",
+     "grammar": "현재완료 수동 hath been done",
+     "text": "hath been done은 has been done의 옛 형태로 ‘(지금까지) 행해졌느냐’입니다. 일이 있은 뒤로 이제까지 아무 보상이 없었는지를 묻습니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "records",
+     "ko": "기록",
+     "ref": "6:1"
+    },
+    {
+     "w": "chronicles",
+     "ko": "연대기",
+     "ref": "6:1"
+    },
+    {
+     "w": "chamberlains",
+     "ko": "시종장들",
+     "ref": "6:2"
+    },
+    {
+     "w": "keepers",
+     "ko": "지키는 자들",
+     "ref": "6:2"
+    },
+    {
+     "w": "sought",
+     "ko": "꾀했다(seek의 과거)",
+     "ref": "6:2"
+    },
+    {
+     "w": "dignity",
+     "ko": "위엄",
+     "ref": "6:3"
+    },
+    {
+     "w": "ministered",
+     "ko": "섬겼다",
+     "ref": "6:3"
+    }
+   ],
+   "comments": [
+    {
+     "id": "e06-1",
+     "basis": "external",
+     "text": "스코필드는 1절 ‘왕이 잠들 수 없는지라’에 히브리어로는 「왕의 잠이 달아났다」라는 주석을 달았습니다. 또 2절 빅다나와 테레시의 일에는 관주로 2장 21절을 이어 둡니다. 2장 21–22절에는 두 시종장이 왕에게 손을 대려고 모색한 일이 모르드캐에게 알려졌고, 에스더가 그것을 모르드캐의 이름으로 왕에게 알린 일이 적혀 있습니다.",
+     "spans": [
+      {
+       "text": "「왕의 잠이 달아났다」",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 에스더 6:1 주석·6:2 관주",
+       "where": "Esth. 6:1-2",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "k Heb. the king’s sleep fled away.\n…\nI Esth.2.21.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    },
+    {
+     "id": "e06-2",
+     "basis": "external",
+     "text": "스코필드는 에스더기 머리말에서 이 책의 뜻을 이렇게 말합니다. 에스더기는 흩어진 이스라엘을 주께서 남몰래 지켜보며 돌보신다는 것을 증언하는 책입니다. 하나님의 이름은 한 번도 나오지 않지만, 그분의 섭리가 이보다 더 뚜렷한 책은 없습니다. 섭리란 하나님께서 세상일을 다스리고 이끄시는 것을 말합니다.",
+     "spans": [
+      {
+       "text": "남몰래 지켜보며 돌보신다",
+       "level": 2
+      },
+      {
+       "text": "그분의 섭리가 이보다 더 뚜렷한 책은 없습니다",
+       "level": 3
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 에스더기 머리말",
+       "where": "에스더기 머리말",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "The significance of the Book of Esther is that it testifies to the secret watch care of Jehovah over dispersed Israel. The name of God does not once occur, but in no other book of the Bible is His providence more conspicuous.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "6:4-9",
+   "title": "하만이 마음속으로 한 생각",
+   "marks": [
+    {
+     "v": "6:4",
+     "t": "p",
+     "ko": "자신이 모르드캐를 위하여 예비한 교수대 위에 그를 매달고자",
+     "en": "to hang Mordecai on the gallows that he had prepared for him"
+    },
+    {
+     "v": "6:6",
+     "t": "u",
+     "ko": "왕이 영예롭게 하기를 크게 즐거워할 사람에게 무엇이 이루어져야 하겠느냐",
+     "en": "What shall be done unto the man whom the king delighteth to honour"
+    },
+    {
+     "v": "6:6",
+     "t": "p",
+     "ko": "왕이 나보다 더 영예롭게 해 주기를 크게 즐거워할 자가 누구랴",
+     "en": "To whom would the king delight to do honour more than to myself"
+    },
+    {
+     "v": "6:8",
+     "t": "u",
+     "ko": "왕이 타시는 말과 왕의 머리 위에 씌어진 왕의 관",
+     "en": "the horse that the king rideth upon, and the crown royal which is set upon his head"
+    }
+   ],
+   "english": [
+    {
+     "ref": "6:6",
+     "phrase": "the man whom the king delighteth to honour",
+     "grammar": "목적격 관계대명사 whom",
+     "text": "whom은 the man을 받아 ‘왕이 영예롭게 하기를 즐거워하는 그 사람’이 됩니다. 이 구절이 6–11절에 네 번 되풀이되며 이야기를 이끕니다."
+    },
+    {
+     "ref": "6:6",
+     "phrase": "To whom would the king delight to do honour more than to myself?",
+     "grammar": "수사 의문문 + 재귀대명사",
+     "text": "답을 바라는 질문이 아니라 ‘나 말고 누가 있겠는가’라는 뜻의 수사 의문문입니다. myself는 하만이 자기 자신을 강조하는 재귀대명사입니다."
+    },
+    {
+     "ref": "6:8",
+     "phrase": "the crown royal which is set upon his head",
+     "grammar": "형용사 뒤에 두기",
+     "text": "crown royal은 royal crown(왕관)을 형용사를 뒤에 두어 쓴 옛 말투입니다. which is set upon his head가 ‘그의 머리 위에 씌워진’이라고 꾸밉니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "outward",
+     "ko": "바깥쪽의",
+     "ref": "6:4"
+    },
+    {
+     "w": "delighteth",
+     "ko": "기뻐한다(delight의 옛 형태)",
+     "ref": "6:6"
+    },
+    {
+     "w": "apparel",
+     "ko": "의복, 복장",
+     "ref": "6:8"
+    },
+    {
+     "w": "useth",
+     "ko": "사용한다(use의 옛 형태)",
+     "ref": "6:8"
+    },
+    {
+     "w": "rideth",
+     "ko": "탄다(ride의 옛 형태)",
+     "ref": "6:8"
+    },
+    {
+     "w": "array",
+     "ko": "차려입히다",
+     "ref": "6:9"
+    },
+    {
+     "w": "withal",
+     "ko": "그것으로",
+     "ref": "6:9"
+    },
+    {
+     "w": "proclaim",
+     "ko": "포고하다, 외쳐 알리다",
+     "ref": "6:9"
+    }
+   ],
+   "comments": [
+    {
+     "id": "e06-3",
+     "basis": "external",
+     "text": "스코필드는 4절, 하만이 모르드캐를 위하여 예비한 교수대 위에 그를 매달고자 왕께 고하려 했다는 대목에 관주로 5장 14절을 이어 둡니다. 바로 전날 제레시와 친구들이 오십 큐빗 높이의 교수대를 만들고 내일 왕께 고하라고 권한 그 일입니다. 하만은 그 말대로 왕을 찾아온 것입니다.",
+     "spans": [
+      {
+       "text": "관주로 5장 14절을 이어 둡니다",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 에스더 6:4 관주",
+       "where": "Esth. 6:4 관주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "m Esth.5.1.\nn Esth.5.14.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "6:10-11",
+   "title": "모르드캐에게 바로 그처럼 행하라",
+   "marks": [
+    {
+     "v": "6:10",
+     "t": "u",
+     "ko": "왕의 대문에 앉아 있는 유대인 모르드캐에게 바로 그처럼 행하라",
+     "en": "do even so to Mordecai the Jew, that sitteth at the king's gate"
+    },
+    {
+     "v": "6:11",
+     "t": "u",
+     "ko": "모르드캐를 차려입혔으며",
+     "en": "arrayed Mordecai"
+    }
+   ],
+   "english": [
+    {
+     "ref": "6:10",
+     "phrase": "Make haste, and take the apparel and the horse, as thou hast said",
+     "grammar": "명령문 + 양태의 as",
+     "text": "Make haste는 ‘서둘러라’입니다. as thou hast said는 ‘네가 말한 대로’로, 하만이 자기를 위해 말한 그대로를 하라는 뜻입니다."
+    },
+    {
+     "ref": "6:10",
+     "phrase": "let nothing fail of all that thou hast spoken",
+     "grammar": "let 명령 + 부정 nothing",
+     "text": "let nothing fail은 ‘아무것도 빠지지 않게 하라’입니다. of all that thou hast spoken은 ‘네가 말한 모든 것 가운데’입니다."
+    },
+    {
+     "ref": "6:11",
+     "phrase": "brought him on horseback through the street of the city",
+     "grammar": "방법의 on horseback",
+     "text": "on horseback은 ‘말을 타고’입니다. 9절에서 하만이 말한 그대로 11절에서 이루어진 것을 같은 낱말로 보여 줍니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "haste",
+     "ko": "서두름",
+     "ref": "6:10"
+    },
+    {
+     "w": "sitteth",
+     "ko": "앉아 있다(sit의 옛 형태)",
+     "ref": "6:10"
+    },
+    {
+     "w": "arrayed",
+     "ko": "차려입혔다",
+     "ref": "6:11"
+    },
+    {
+     "w": "horseback",
+     "ko": "말 등",
+     "ref": "6:11"
+    },
+    {
+     "w": "proclaimed",
+     "ko": "반포했다",
+     "ref": "6:11"
+    }
+   ],
+   "comments": [
+    {
+     "id": "e06-4",
+     "basis": "external",
+     "text": "스코필드 관주 성경은 6장 머리에 「하만이 억지로 모르드캐를 높이다」라는 소제목을 달았습니다. 하만은 왕이 영예롭게 하려는 사람이 자기라고 생각하고 그 영예를 말했습니다. 그러나 왕은 그 모든 것을 유대인 모르드캐에게 그대로 행하라고 명령했고, 하만은 모르드캐를 말 등에 태워 도시의 거리를 지나며 그의 앞에서 반포해야 했습니다.",
+     "spans": [
+      {
+       "text": "「하만이 억지로 모르드캐를 높이다」",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 에스더 6장 소제목",
+       "where": "Esth. 6:1 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Haman compelled to exalt Mordecai.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "6:12-14",
+   "title": "그의 앞에서 반드시 쓰러지리라",
+   "marks": [
+    {
+     "v": "6:12",
+     "t": "p",
+     "ko": "하만은 애곡하고 그의 머리를 덮은 채",
+     "en": "Haman hasted to his house mourning, and having his head covered"
+    },
+    {
+     "v": "6:13",
+     "t": "u",
+     "ko": "만일 모르드캐가 유대인들의 씨에 속한다면",
+     "en": "If Mordecai be of the seed of the Jews"
+    },
+    {
+     "v": "6:13",
+     "t": "p",
+     "ko": "그의 앞에서 반드시 쓰러지리라",
+     "en": "shalt surely fall before him"
+    }
+   ],
+   "english": [
+    {
+     "ref": "6:13",
+     "phrase": "If Mordecai be of the seed of the Jews",
+     "grammar": "가정법 현재(if + be)",
+     "text": "옛 영어는 if 뒤에 is 대신 동사 원형 be를 써서 아직 확인되지 않은 조건을 나타냅니다. be of the seed of는 ‘~의 씨(혈통)에 속하다’입니다."
+    },
+    {
+     "ref": "6:13",
+     "phrase": "before whom thou hast begun to fall",
+     "grammar": "전치사 + whom, 현재완료",
+     "text": "before whom은 ‘그(모르드캐) 앞에서’입니다. hast begun to fall은 ‘쓰러지기 시작했다’로, 이미 시작된 일임을 현재완료로 말합니다."
+    },
+    {
+     "ref": "6:14",
+     "phrase": "while they were yet talking with him",
+     "grammar": "때의 while + 진행형",
+     "text": "while ~ were talking은 ‘이야기하고 있는 동안’입니다. yet은 여기서 ‘아직’이라는 뜻으로, 말이 끝나기도 전에 시종장들이 왔음을 보여 줍니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "hasted",
+     "ko": "서둘러 갔다(haste의 옛 동사)",
+     "ref": "6:12"
+    },
+    {
+     "w": "mourning",
+     "ko": "애곡하며",
+     "ref": "6:12"
+    },
+    {
+     "w": "befallen",
+     "ko": "닥친(befall의 과거분사)",
+     "ref": "6:13"
+    },
+    {
+     "w": "prevail",
+     "ko": "이기다",
+     "ref": "6:13"
+    },
+    {
+     "w": "chamberlains",
+     "ko": "시종장들",
+     "ref": "6:14"
+    }
+   ],
+   "comments": [
+    {
+     "id": "e06-5",
+     "basis": "external",
+     "text": "스코필드는 12절, 하만이 그의 머리를 덮은 채 집으로 서둘러 갔다는 말에 관주로 사무엘기하 15장 30절과 예레미야서 14장 3–4절을 이어 둡니다. 사무엘기하 15장 30절에서 다윗은 올리벳산의 오르막길로 올라가며 울고 자기 머리를 덮었으며, 그와 함께한 온 백성도 각각 자기 머리를 덮었습니다.",
+     "spans": [
+      {
+       "text": "울고 자기 머리를 덮었으며",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 에스더 6:12 관주",
+       "where": "Esth. 6:12 관주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "b 2 Sam.15.30; Jer.14.3,4.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "그날 밤 왕은 잠들 수 없어 연대기의 기록이 있는 책을 가져와 읽게 했습니다.",
+    "verse": "6:1",
+    "u": [
+     "잠들 수 없어"
+    ]
+   },
+   {
+    "text": "스코필드는 이 말을 히브리어로 「왕의 잠이 달아났다」라고 풉니다.",
+    "key": "e06-1",
+    "u": [
+     "왕의 잠이 달아났다"
+    ]
+   },
+   {
+    "text": "책에서 모르드캐가 빅다나와 테레시의 음모를 알린 일이 발견되었습니다.",
+    "verse": "6:2",
+    "u": [
+     "음모를 알린 일"
+    ]
+   },
+   {
+    "text": "왕이 물으니, 모르드캐를 위해 행해진 영예는 아무것도 없었습니다.",
+    "verse": "6:3",
+    "u": [
+     "아무것도 없었습니다"
+    ]
+   },
+   {
+    "text": "스코필드는 에스더기에 하나님의 이름이 한 번도 나오지 않지만 그분의 섭리가 가장 뚜렷하다고 말합니다.",
+    "key": "e06-2",
+    "u": [
+     "섭리가 가장 뚜렷하다"
+    ]
+   },
+   {
+    "text": "그때 하만은 모르드캐를 교수대에 매달겠다고 고하려고 바깥뜰에 와 있었습니다.",
+    "verse": "6:4",
+    "u": [
+     "교수대에 매달겠다고"
+    ]
+   },
+   {
+    "text": "스코필드는 이 대목을 전날 교수대를 만든 5장 14절과 이어 둡니다.",
+    "key": "e06-3",
+    "u": [
+     "5장 14절"
+    ]
+   },
+   {
+    "text": "왕은 하만에게 왕이 영예롭게 하기를 즐거워하는 사람에게 무엇을 해야 하느냐고 물었습니다.",
+    "verse": "6:6",
+    "u": [
+     "영예롭게 하기를 즐거워하는 사람"
+    ]
+   },
+   {
+    "text": "하만은 마음속으로 왕이 자기보다 더 영예롭게 할 사람은 없다고 생각했습니다.",
+    "verse": "6:6",
+    "u": [
+     "마음속으로"
+    ]
+   },
+   {
+    "text": "하만은 왕실 복장과 왕이 타는 말과 왕의 관을 그 사람에게 주자고 말했습니다.",
+    "verse": "6:8",
+    "u": [
+     "왕이 타는 말"
+    ]
+   },
+   {
+    "text": "또 가장 고귀한 통치자가 그 사람을 말에 태워 도시의 거리를 지나며 포고하게 하자고 했습니다.",
+    "verse": "6:9",
+    "u": [
+     "도시의 거리"
+    ]
+   },
+   {
+    "text": "왕은 그 모든 것을 대문에 앉아 있는 유대인 모르드캐에게 그대로 행하라고 명령했습니다.",
+    "verse": "6:10",
+    "u": [
+     "유대인 모르드캐"
+    ]
+   },
+   {
+    "text": "스코필드는 6장에 「하만이 억지로 모르드캐를 높이다」라는 소제목을 달았습니다.",
+    "key": "e06-4",
+    "u": [
+     "억지로 모르드캐를 높이다"
+    ]
+   },
+   {
+    "text": "모르드캐는 왕의 대문으로 돌아왔고, 하만은 애곡하며 머리를 덮은 채 집으로 서둘러 갔습니다.",
+    "verse": "6:12",
+    "u": [
+     "머리를 덮은 채"
+    ]
+   },
+   {
+    "text": "제레시와 지혜로운 사람들은 하만이 모르드캐 앞에서 반드시 쓰러지리라고 말했습니다.",
+    "verse": "6:13",
+    "u": [
+     "반드시 쓰러지리라고"
+    ]
+   },
+   {
+    "text": "그들이 아직 말하는 동안 왕의 시종장들이 와서 하만을 에스더의 연회로 서둘러 데려갔습니다.",
+    "verse": "6:14",
+    "u": [
+     "에스더의 연회"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "6:1",
+    "q": "그날 밤 왕은 어떤 형편이었습니까?",
+    "a": "잠들 수 없는지라"
+   },
+   {
+    "verse": "6:1",
+    "q": "왕은 어떤 책을 가져오라고 명령했습니까?",
+    "a": "연대기들의 기록들이 있는 책"
+   },
+   {
+    "key": "e06-1",
+    "q": "스코필드는 ‘왕이 잠들 수 없는지라’를 히브리어로 어떻게 풉니까?",
+    "a": "「왕의 잠이 달아났다」로 풉니다."
+   },
+   {
+    "verse": "6:2",
+    "q": "모르드캐가 알렸다고 기록된 두 시종장의 이름은 무엇입니까?",
+    "a": "빅다나, 테레시"
+   },
+   {
+    "verse": "6:2",
+    "q": "두 시종장은 본래 어떤 일을 하던 사람들이었습니까?",
+    "a": "문을 지키는 자들"
+   },
+   {
+    "key": "e06-1",
+    "q": "스코필드는 6장 2절에 관주로 어느 장을 이어 둡니까?",
+    "a": "2장 21절입니다. 모르드캐가 그 음모를 알게 되어 에스더를 통해 왕에게 알린 일이 그곳에 적혀 있습니다."
+   },
+   {
+    "verse": "6:3",
+    "q": "왕은 모르드캐에게 무엇이 행해졌느냐고 물었습니까?",
+    "a": "영예와 위엄"
+   },
+   {
+    "key": "e06-2",
+    "q": "스코필드는 에스더기가 무엇을 증언한다고 말합니까?",
+    "a": "흩어진 이스라엘을 주께서 남몰래 지켜보며 돌보신다는 것을 증언한다고 말합니다."
+   },
+   {
+    "key": "e06-2",
+    "q": "에스더기에 하나님의 이름은 몇 번 나옵니까?",
+    "a": "한 번도 나오지 않는다고 스코필드는 말합니다. 그러나 그분의 섭리는 어느 책보다 뚜렷하다고 합니다."
+   },
+   {
+    "verse": "6:4",
+    "q": "하만은 왕의 집의 어느 뜰로 들어와 있었습니까?",
+    "a": "바깥뜰"
+   },
+   {
+    "verse": "6:4",
+    "q": "하만은 무엇을 왕에게 고하려고 왔습니까?",
+    "a": "교수대 위에 그를 매달고자"
+   },
+   {
+    "key": "e06-3",
+    "q": "스코필드는 6장 4절을 어느 구절과 이어 둡니까?",
+    "a": "5장 14절입니다. 제레시와 친구들이 교수대를 만들고 내일 왕께 고하라고 권한 구절입니다."
+   },
+   {
+    "verse": "6:5",
+    "q": "왕의 종들은 뜰에 누가 서 있다고 아뢰었습니까?",
+    "a": "하만"
+   },
+   {
+    "verse": "6:6",
+    "q": "하만은 왕이 누구보다 더 영예롭게 할 자가 없다고 생각했습니까?",
+    "a": "나보다"
+   },
+   {
+    "verse": "6:8",
+    "q": "하만이 그 사람에게 주자고 한 세 가지는 무엇입니까?",
+    "a": "왕실 복장, 왕이 타시는 말, 왕의 관"
+   },
+   {
+    "verse": "6:9",
+    "q": "하만은 그 일을 누구의 손에 넘기자고 했습니까?",
+    "a": "가장 고귀한 통치자들 중 한 명"
+   },
+   {
+    "verse": "6:10",
+    "q": "왕은 그 영예를 누구에게 행하라고 했습니까?",
+    "a": "유대인 모르드캐"
+   },
+   {
+    "verse": "6:10",
+    "q": "왕은 하만이 말한 것에서 무엇이 빠지지 않게 하라고 했습니까?",
+    "a": "아무것도 빠지는 것이 없게"
+   },
+   {
+    "key": "e06-4",
+    "q": "스코필드 관주 성경이 6장 머리에 단 소제목은 무엇입니까?",
+    "a": "「하만이 억지로 모르드캐를 높이다」입니다."
+   },
+   {
+    "verse": "6:11",
+    "q": "하만은 모르드캐를 무엇에 태워 도시의 거리를 통과하게 했습니까?",
+    "a": "말 등"
+   },
+   {
+    "verse": "6:12",
+    "q": "영예를 받은 뒤 모르드캐는 어디로 다시 왔습니까?",
+    "a": "왕의 대문"
+   },
+   {
+    "verse": "6:12",
+    "q": "하만은 어떤 모습으로 집에 갔습니까?",
+    "a": "애곡하고, 머리를 덮은 채"
+   },
+   {
+    "key": "e06-5",
+    "q": "스코필드가 하만이 머리를 덮은 모습에 이어 둔 구절 가운데 하나는 무엇입니까?",
+    "a": "사무엘기하 15장 30절입니다. 다윗이 울며 자기 머리를 덮고 올리벳산을 올라간 구절입니다."
+   },
+   {
+    "verse": "6:13",
+    "q": "제레시와 지혜로운 사람들은 모르드캐가 무엇에 속한다면 하만이 이기지 못하리라고 했습니까?",
+    "a": "유대인들의 씨"
+   },
+   {
+    "verse": "6:14",
+    "q": "하만을 연회로 서둘러 데려간 사람들은 누구입니까?",
+    "a": "왕의 시종장들"
+   },
+   {
+    "verse": "6:14",
+    "q": "하만이 끌려간 연회는 누가 마련한 것입니까?",
+    "a": "에스더"
+   }
+  ],
+  "faq": [
+   {
+    "q": "스코필드는 에스더기를 어떤 책이라고 말하나요?",
+    "key": "e06-2"
+   },
+   {
+    "q": "에스더기에는 왜 하나님의 이름이 나오지 않나요?",
+    "key": "e06-2"
+   },
+   {
+    "q": "섭리란 무엇인가요?",
+    "key": "e06-2"
+   },
+   {
+    "q": "‘왕이 잠들 수 없는지라’는 원어로 어떤 뜻인가요?",
+    "key": "e06-1"
+   },
+   {
+    "q": "모르드캐가 왕을 살린 일은 어디에 처음 나오나요?",
+    "key": "e06-1"
+   },
+   {
+    "q": "하만은 왜 그 아침에 왕궁 뜰에 와 있었나요?",
+    "key": "e06-3"
+   },
+   {
+    "q": "하만은 누구를 위한 영예라고 생각하고 그렇게 말했나요?",
+    "key": "e06-4"
+   },
+   {
+    "q": "스코필드는 6장을 한마디로 어떻게 요약하나요?",
+    "key": "e06-4"
+   },
+   {
+    "q": "하만이 직접 모르드캐를 높여야 했던 까닭은 무엇인가요?",
+    "key": "e06-4"
+   },
+   {
+    "q": "하만이 머리를 덮은 것은 무슨 모습인가요?",
+    "key": "e06-5"
+   },
+   {
+    "q": "스코필드는 하만의 모습을 성경의 어느 장면과 이어 읽게 하나요?",
+    "key": "e06-5"
+   },
+   {
+    "q": "빅다나와 테레시의 음모는 어떻게 왕에게 알려졌나요?",
+    "key": "e06-1"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "연대기",
+    "verse": "6:1",
+    "text": "나라에 있었던 일을 차례대로 적어 둔 기록입니다. 왕은 잠들 수 없던 밤에 이 기록을 읽게 했습니다."
+   },
+   {
+    "term": "시종장",
+    "verse": "6:2",
+    "text": "왕 가까이에서 시중드는 관리입니다. 빅다나와 테레시는 문을 지키는 시종장이었습니다."
+   },
+   {
+    "term": "섭리",
+    "key": "e06-2",
+    "text": "하나님께서 세상일을 다스리고 이끄시는 것입니다. 스코필드는 에스더기에서 그것이 가장 뚜렷하다고 말합니다."
+   },
+   {
+    "term": "바깥뜰",
+    "verse": "6:4",
+    "text": "왕의 집의 바깥쪽 뜰입니다. 하만은 모르드캐를 매달겠다고 고하려고 이곳에 와 있었습니다."
+   }
+  ]
+ }
+}

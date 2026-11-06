@@ -1,0 +1,1128 @@
+{
+ "chapter": 32,
+ "subtitle": "파라오를 위한 애가",
+ "motto": "죽자마자 죄의 대가를 치르는 것입니다",
+ "motto_comment": "z32-1",
+ "cover": [
+  {
+   "m": "water",
+   "x": 170,
+   "y": 285,
+   "s": 1
+  },
+  {
+   "m": "stars",
+   "x": 170,
+   "y": 80,
+   "s": 0.9
+  },
+  {
+   "m": "sword",
+   "x": 110,
+   "y": 175,
+   "s": 0.85
+  },
+  {
+   "m": "valley",
+   "x": 245,
+   "y": 220,
+   "s": 0.8
+  }
+ ],
+ "people": [
+  {
+   "id": "lord",
+   "name": "주 하나님",
+   "role": "god",
+   "gen": 0,
+   "desc": "파라오를 위한 애가를 짓게 하신 분입니다. 많은 백성과 함께 그물을 펼쳐 파라오를 끌어올리고, 바빌론 왕의 칼이 그 위에 임하게 하겠다고 하셨습니다.",
+   "refs": [
+    "32:2",
+    "32:3",
+    "32:11"
+   ],
+   "part": "파라오를 심판하시는 분",
+   "intro": "그물을 펼치신 분 · 애가를 짓게 하신 분"
+  },
+  {
+   "id": "ezekiel",
+   "name": "에스겔",
+   "en": "Ezekiel",
+   "gen": 1,
+   "desc": "주께서 ‘사람의 아들’이라고 부르시는 예언자입니다. 제십이년에 파라오를 위한 애가를 짓고, 이집트의 무리를 위하여 통곡하라는 말씀을 받았습니다.",
+   "refs": [
+    "32:1",
+    "32:2",
+    "32:18"
+   ],
+   "part": "애가를 지은 예언자",
+   "look": "man",
+   "intro": "사람의 아들 · 이집트를 위해 통곡한 이"
+  },
+  {
+   "id": "pharaoh",
+   "name": "파라오",
+   "en": "Pharaoh",
+   "role": "enemy",
+   "gen": 1,
+   "desc": "이집트 왕입니다. 민족들 중의 젊은 사자, 바다들의 고래 같다고 불렸습니다. 칼에 살해당해 할례받지 아니한 자들 가운데 눕고, 먼저 내려간 자들을 보며 위로를 받게 됩니다.",
+   "refs": [
+    "32:2",
+    "32:31",
+    "32:32"
+   ],
+   "part": "애가의 주인공",
+   "look": "king",
+   "intro": "젊은 사자 같은 왕 · 그물에 걸린 고래"
+  },
+  {
+   "id": "babylonking",
+   "name": "바빌론 왕",
+   "gen": 1,
+   "desc": "그의 칼이 파라오 위에 임합니다. 주께서는 민족들 중 공포스러운 막강한 자들의 칼로 이집트의 무리를 쓰러지게 하겠다고 하셨습니다.",
+   "refs": [
+    "32:11",
+    "32:12"
+   ],
+   "part": "칼을 든 바빌론 왕",
+   "look": "king",
+   "intro": "바빌론 왕 · 이집트에 칼을 댄 자"
+  },
+  {
+   "id": "nations",
+   "name": "먼저 내려간 민족들",
+   "gen": 2,
+   "desc": "앗슈르, 엘람, 메셱과 투발, 에돔, 북방의 통치자들, 지돈인들입니다. 산 자들의 지역에서 공포를 불러일으켰지만 칼에 살해당해 할례받지 아니한 채 누워 있습니다.",
+   "refs": [
+    "32:22",
+    "32:24",
+    "32:30"
+   ],
+   "part": "구렁에 누운 민족들",
+   "look": "group",
+   "intro": "앗슈르·엘람 등 · 구렁에 먼저 누운 자들"
+  }
+ ],
+ "relations": [
+  {
+   "from": "lord",
+   "to": "ezekiel",
+   "type": "god",
+   "label": "말씀",
+   "ref": "32:1",
+   "directed": true
+  },
+  {
+   "from": "lord",
+   "to": "pharaoh",
+   "type": "god",
+   "label": "그물을 펼침",
+   "ref": "32:3",
+   "directed": true
+  },
+  {
+   "from": "babylonking",
+   "to": "pharaoh",
+   "type": "enemy",
+   "label": "칼이 임함",
+   "ref": "32:11"
+  },
+  {
+   "from": "pharaoh",
+   "to": "nations",
+   "type": "other",
+   "label": "보고 위로받음",
+   "ref": "32:31"
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "egypt",
+    "ref": "32:2"
+   },
+   {
+    "key": "babylon",
+    "ref": "32:11"
+   },
+   {
+    "key": "assyria",
+    "name": "앗슈르",
+    "ref": "32:22"
+   },
+   {
+    "key": "elam",
+    "name": "엘람",
+    "at": [
+     48.6,
+     32.2
+    ],
+    "ref": "32:24"
+   },
+   {
+    "key": "edom",
+    "ref": "32:29"
+   },
+   {
+    "key": "sidon",
+    "name": "지돈",
+    "ref": "32:30"
+   }
+  ],
+  "unknown": [
+   {
+    "name": "메셱과 투발",
+    "ref": "32:26",
+    "note": "이 장에서는 자리를 밝히지 않아 지도에 찍지 않았습니다."
+   },
+   {
+    "name": "북방의 통치자들",
+    "ref": "32:30",
+    "note": "북방이라고만 나와 지도에 찍지 않았습니다."
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "32:1-6",
+   "title": "그물에 걸린 바다들의 고래",
+   "marks": [
+    {
+     "v": "32:2",
+     "t": "u",
+     "ko": "이집트 왕 파라오를 위하여 애가를 지어",
+     "en": "take up a lamentation for Pharaoh king of Egypt"
+    },
+    {
+     "v": "32:2",
+     "t": "u",
+     "ko": "너는 바다들의 고래와도 같도다",
+     "en": "thou art as a whale in the seas"
+    },
+    {
+     "v": "32:3",
+     "t": "p",
+     "ko": "내가 많은 백성들로 이루어진 한 집단과 함께 나의 그물을 너의 위로 펼치겠노라",
+     "en": "I will therefore spread out my net over thee with a company of many people"
+    },
+    {
+     "v": "32:4",
+     "t": "p",
+     "ko": "내가 너를 벌판 위에 내어던지겠으니",
+     "en": "I will cast thee forth upon the open field"
+    },
+    {
+     "v": "32:6",
+     "t": "p",
+     "ko": "네가 그 안에서 헤엄치는 지역을 너의 피로 물을 대어",
+     "en": "I will also water with thy blood the land wherein thou swimmest"
+    }
+   ],
+   "english": [
+    {
+     "ref": "32:2",
+     "phrase": "take up a lamentation for Pharaoh king of Egypt",
+     "grammar": "take up a lamentation",
+     "text": "take up a lamentation은 ‘애가를 짓다, 애가를 부르기 시작하다’입니다. lamentation은 죽은 이를 슬퍼하는 노래입니다."
+    },
+    {
+     "ref": "32:2",
+     "phrase": "troubledst the waters with thy feet, and fouledst their rivers",
+     "grammar": "옛 2인칭 과거 -edst",
+     "text": "troubledst는 troubled, fouledst는 fouled의 옛 2인칭 꼴입니다. ‘네가 발로 물을 어지럽히고 강을 더럽혔다’는 뜻입니다."
+    },
+    {
+     "ref": "32:6",
+     "phrase": "the land wherein thou swimmest",
+     "grammar": "관계부사 wherein",
+     "text": "wherein은 ‘그 안에서’로 in which와 같습니다. swimmest는 swim의 옛 2인칭 꼴입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "lamentation",
+     "ko": "애가",
+     "ref": "32:2"
+    },
+    {
+     "w": "whale",
+     "ko": "고래",
+     "ref": "32:2"
+    },
+    {
+     "w": "troubledst",
+     "ko": "어지럽혔다(옛 2인칭)",
+     "ref": "32:2"
+    },
+    {
+     "w": "fouledst",
+     "ko": "더럽혔다(옛 2인칭)",
+     "ref": "32:2"
+    },
+    {
+     "w": "net",
+     "ko": "그물",
+     "ref": "32:3"
+    },
+    {
+     "w": "company",
+     "ko": "무리, 집단",
+     "ref": "32:3"
+    },
+    {
+     "w": "wherein",
+     "ko": "그 안에서",
+     "ref": "32:6"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "32:7-10",
+   "title": "하늘의 밝은 빛들을 어둡게",
+   "marks": [
+    {
+     "v": "32:7",
+     "t": "p",
+     "ko": "내가 하늘을 가리고 그곳의 별들을 어둡게 하겠노라",
+     "en": "I will cover the heaven, and make the stars thereof dark"
+    },
+    {
+     "v": "32:7",
+     "t": "u",
+     "ko": "내가 해를 구름으로 덮겠으니",
+     "en": "I will cover the sun with a cloud"
+    },
+    {
+     "v": "32:8",
+     "t": "p",
+     "ko": "너의 지역 위에 어둠을 고정시키겠노라",
+     "en": "set darkness upon thy land"
+    },
+    {
+     "v": "32:10",
+     "t": "u",
+     "ko": "모든 사람이 저마다 자기 자신의 생명으로 인하여 떨리라",
+     "en": "every man for his own life"
+    }
+   ],
+   "english": [
+    {
+     "ref": "32:7",
+     "phrase": "make the stars thereof dark",
+     "grammar": "make + 목적어 + 형용사 · thereof",
+     "text": "make A dark는 ‘A를 어둡게 하다’입니다. thereof는 ‘그것의’라는 옛말로, the stars thereof는 ‘그 하늘의 별들’입니다."
+    },
+    {
+     "ref": "32:9",
+     "phrase": "I will also vex the hearts of many people",
+     "grammar": "미래 will · vex",
+     "text": "vex는 ‘괴롭히다, 마음을 어지럽게 하다’입니다. 이집트가 무너지는 소식이 많은 백성의 마음을 흔든다는 말입니다."
+    },
+    {
+     "ref": "32:10",
+     "phrase": "their kings shall be horribly afraid for thee",
+     "grammar": "부사 horribly + 형용사",
+     "text": "horribly afraid는 ‘진저리 치게 무서워하는’입니다. for thee는 ‘너 때문에’라는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "thereof",
+     "ko": "그것의",
+     "ref": "32:7"
+    },
+    {
+     "w": "vex",
+     "ko": "괴롭히다",
+     "ref": "32:9"
+    },
+    {
+     "w": "amazed",
+     "ko": "놀란",
+     "ref": "32:10"
+    },
+    {
+     "w": "horribly",
+     "ko": "끔찍하게",
+     "ref": "32:10"
+    },
+    {
+     "w": "brandish",
+     "ko": "휘두르다",
+     "ref": "32:10"
+    },
+    {
+     "w": "tremble",
+     "ko": "떨다",
+     "ref": "32:10"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "32:11-16",
+   "title": "바빌론 왕의 칼",
+   "marks": [
+    {
+     "v": "32:11",
+     "t": "p",
+     "ko": "바빌론 왕의 칼이 너의 위로 임하리라",
+     "en": "The sword of the king of Babylon shall come upon thee"
+    },
+    {
+     "v": "32:12",
+     "t": "p",
+     "ko": "이집트의 화려한 행렬을 약탈하리니",
+     "en": "they shall spoil the pomp of Egypt"
+    },
+    {
+     "v": "32:15",
+     "t": "u",
+     "ko": "그들은 내가 주라는 것을 알게 되리라",
+     "en": "then shall they know that I am the LORD"
+    },
+    {
+     "v": "32:16",
+     "t": "u",
+     "ko": "민족들의 딸들이 그녀를 애도하리라",
+     "en": "the daughters of the nations shall lament her"
+    }
+   ],
+   "english": [
+    {
+     "ref": "32:12",
+     "phrase": "By the swords of the mighty will I cause thy multitude to fall",
+     "grammar": "도치 · 사역 cause",
+     "text": "수단을 말하는 By the swords of the mighty를 앞에 두고 will I로 순서를 바꾸었습니다. cause A to fall은 ‘A를 쓰러지게 하다’입니다."
+    },
+    {
+     "ref": "32:14",
+     "phrase": "cause their rivers to run like oil",
+     "grammar": "비유 like",
+     "text": "like oil은 ‘기름처럼’입니다. 사람과 짐승의 발이 물을 휘젓지 않아 강이 기름처럼 고요히 흐른다는 그림입니다."
+    },
+    {
+     "ref": "32:15",
+     "phrase": "the country shall be destitute of that whereof it was full",
+     "grammar": "be destitute of · whereof",
+     "text": "be destitute of는 ‘…이 없다, 결핍되다’입니다. whereof는 of which의 옛말로, that whereof it was full은 ‘그것이 가득 차 있던 것’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "spoil",
+     "ko": "약탈하다",
+     "ref": "32:12"
+    },
+    {
+     "w": "pomp",
+     "ko": "화려한 행렬",
+     "ref": "32:12"
+    },
+    {
+     "w": "hoofs",
+     "ko": "발굽들",
+     "ref": "32:13"
+    },
+    {
+     "w": "destitute",
+     "ko": "결핍된",
+     "ref": "32:15"
+    },
+    {
+     "w": "whereof",
+     "ko": "그것의(of which)",
+     "ref": "32:15"
+    },
+    {
+     "w": "smite",
+     "ko": "치다",
+     "ref": "32:15"
+    },
+    {
+     "w": "lament",
+     "ko": "애도하다",
+     "ref": "32:16"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "32:17-21",
+   "title": "땅의 아랫부분들로 내려가라",
+   "marks": [
+    {
+     "v": "32:18",
+     "t": "u",
+     "ko": "이집트의 무리를 위하여 통곡하고",
+     "en": "wail for the multitude of Egypt"
+    },
+    {
+     "v": "32:19",
+     "t": "u",
+     "ko": "네가 아름다움에 있어서 누구를 넘어서느냐",
+     "en": "Whom dost thou pass in beauty"
+    },
+    {
+     "v": "32:19",
+     "t": "p",
+     "ko": "너는 할례받지 아니한 자들과 함께 포개지라",
+     "en": "be thou laid with the uncircumcised"
+    },
+    {
+     "v": "32:21",
+     "t": "p",
+     "ko": "지옥의 한복판에서 그에게 말하리라",
+     "en": "shall speak to him out of the midst of hell"
+    }
+   ],
+   "english": [
+    {
+     "ref": "32:18",
+     "phrase": "wail for the multitude of Egypt, and cast them down",
+     "grammar": "명령문 잇기",
+     "text": "wail(통곡하라)과 cast them down(그들을 던져 내리라) 두 명령이 이어집니다. 예언자가 말로 그들의 내려감을 선포한다는 뜻입니다."
+    },
+    {
+     "ref": "32:19",
+     "phrase": "Whom dost thou pass in beauty? go down",
+     "grammar": "옛 2인칭 dost · 수사 의문문",
+     "text": "dost는 thou와 함께 쓰는 do의 옛 꼴입니다. ‘네가 아름다움으로 누구를 넘어서느냐?’라고 물은 뒤 곧바로 go down(내려가라)이라고 명령합니다."
+    },
+    {
+     "ref": "32:21",
+     "phrase": "they are gone down, they lie uncircumcised, slain by the sword",
+     "grammar": "be gone · 분사 slain",
+     "text": "are gone down은 ‘이미 내려가 있다’는 상태를 말하는 옛 완료입니다. slain by the sword는 ‘칼에 살해당한 채’라는 분사구입니다.",
+     "key": "z32-1"
+    }
+   ],
+   "vocab": [
+    {
+     "w": "wail",
+     "ko": "통곡하다",
+     "ref": "32:18"
+    },
+    {
+     "w": "famous",
+     "ko": "유명한",
+     "ref": "32:18"
+    },
+    {
+     "w": "nether",
+     "ko": "아래쪽의",
+     "ref": "32:18"
+    },
+    {
+     "w": "pit",
+     "ko": "구렁",
+     "ref": "32:18"
+    },
+    {
+     "w": "dost",
+     "ko": "do의 옛 2인칭",
+     "ref": "32:19"
+    },
+    {
+     "w": "uncircumcised",
+     "ko": "할례받지 아니한",
+     "ref": "32:19"
+    },
+    {
+     "w": "hell",
+     "ko": "지옥",
+     "ref": "32:21"
+    }
+   ],
+   "comments": [
+    {
+     "id": "z32-1",
+     "basis": "doctrine",
+     "text": "21절은 막강한 자들 가운데 강한 자가 지옥의 한복판에서 말하고, 칼에 살해당한 자들은 이미 내려가 할례받지 아니한 채 누워 있다고 합니다. 교회 교리에 비추어 보면, 구원받지 못한 죄인이 죽으면 먼저 죽으면서 고통을 겪습니다. 죽고 나서는 몸 없이 혼만 음부에 가서 또 어마어마한 고통을 겪습니다. 죽자마자 죄의 대가를 치르는 것입니다. 그다음 ‘이제 심판이다, 나와라’ 하면 음부에서 나와 다시 흙의 몸 안으로 들어가 죄인으로 확정 판결을 받습니다.",
+     "spans": [
+      {
+       "text": "몸 없이 혼만 음부에 가서",
+       "level": 2
+      },
+      {
+       "text": "죽자마자 죄의 대가를 치르는 것입니다",
+       "level": 3
+      }
+     ],
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「예수님이 불연못에 가시지 않은 이유(대속의 범위)」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/06_예수님이_불연못에_가시지_않은_이유_대속의_범위.md",
+       "time": "21:32",
+       "to": "22:00",
+       "excerpt": "이 죄인이 이때 죄인으로 확정 판결을 받는 것입니다 구원받지 못한 죄인이 죽으면 일단 죽으면서 고통을 겪고 죽고 나서 (몸은 없지만, 혼만 음부에 가지만) 이때 또 어마어마한 고통을 겪습니다 그러니까 죽자마자 죄의 대가를 치릅니다 변상적 책임, 배상적 책임을 지죠 그 다음에 '이제 심판이다 나와라' 하면 음부에서 나오면서 온전한 흙의 몸 안으로 다시 들어가서 죄인 확정 판결을 받고 그다음에 죄인의 형벌 형벌적 책임을 집니다",
+       "url": "https://youtu.be/xWxVnFU9yBU?t=1292"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "32:22-28",
+   "title": "구렁에 누운 앗슈르·엘람·메셱·투발",
+   "marks": [
+    {
+     "v": "32:22",
+     "t": "u",
+     "ko": "앗슈르와 그녀의 집단 전체가 거기에 있도다",
+     "en": "Asshur is there and all her company"
+    },
+    {
+     "v": "32:23",
+     "t": "p",
+     "ko": "산 자들의 지역에서 공포를 불러일으키던 자들이라",
+     "en": "which caused terror in the land of the living"
+    },
+    {
+     "v": "32:24",
+     "t": "u",
+     "ko": "거기에 엘람과 그녀의 모든 무리가",
+     "en": "There is Elam and all her multitude"
+    },
+    {
+     "v": "32:24",
+     "t": "p",
+     "ko": "그들은 구렁으로 내려가는 자들과 함께 자신들의 수치를 짊어졌도다",
+     "en": "yet have they borne their shame with them that go down to the pit"
+    },
+    {
+     "v": "32:26",
+     "t": "u",
+     "ko": "거기에 메셱과 투발과 그녀의 모든 무리가 있도다",
+     "en": "There is Meshech, Tubal, and all her multitude"
+    },
+    {
+     "v": "32:27",
+     "t": "p",
+     "ko": "그들의 죄악들은 그들의 뼈들 위에 있으리라",
+     "en": "their iniquities shall be upon their bones"
+    },
+    {
+     "v": "32:28",
+     "t": "p",
+     "ko": "너는 할례받지 않은 자들의 한복판에서 부서질 것이요",
+     "en": "thou shalt be broken in the midst of the uncircumcised"
+    }
+   ],
+   "english": [
+    {
+     "ref": "32:23",
+     "phrase": "Whose graves are set in the sides of the pit",
+     "grammar": "소유격 관계사 whose",
+     "text": "whose는 앞 절의 앗슈르를 받아 ‘그의 무덤들이’라고 이어 줍니다. the sides of the pit은 ‘구렁의 옆면들’입니다."
+    },
+    {
+     "ref": "32:24",
+     "phrase": "yet have they borne their shame",
+     "grammar": "yet 뒤 도치 · 과거분사 borne",
+     "text": "yet(그럼에도) 뒤에서 have they로 순서가 바뀌었습니다. borne은 bear(짊어지다)의 과거분사입니다."
+    },
+    {
+     "ref": "32:27",
+     "phrase": "they have laid their swords under their heads, but their iniquities shall be upon their bones",
+     "grammar": "대조 but",
+     "text": "칼은 머리 아래에 두었지만(but) 죄악은 뼈 위에 있다고 맞세웁니다. laid는 lay(두다)의 과거분사입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "graves",
+     "ko": "무덤들",
+     "ref": "32:22"
+    },
+    {
+     "w": "terror",
+     "ko": "공포",
+     "ref": "32:23"
+    },
+    {
+     "w": "borne",
+     "ko": "짊어졌다(bear의 과거분사)",
+     "ref": "32:24"
+    },
+    {
+     "w": "shame",
+     "ko": "수치",
+     "ref": "32:24"
+    },
+    {
+     "w": "weapons",
+     "ko": "무기들",
+     "ref": "32:27"
+    },
+    {
+     "w": "iniquities",
+     "ko": "죄악들",
+     "ref": "32:27"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "32:29-32",
+   "title": "에돔과 지돈인들, 그리고 파라오",
+   "marks": [
+    {
+     "v": "32:29",
+     "t": "u",
+     "ko": "거기에 에돔과 그녀의 왕들과 그녀의 모든 통치자들이 있으니",
+     "en": "There is Edom, her kings, and all her princes"
+    },
+    {
+     "v": "32:30",
+     "t": "u",
+     "ko": "모든 지돈인들이 있나니",
+     "en": "all the Zidonians"
+    },
+    {
+     "v": "32:31",
+     "t": "u",
+     "ko": "파라오가 그들을 볼 것이요",
+     "en": "Pharaoh shall see them"
+    },
+    {
+     "v": "32:32",
+     "t": "y",
+     "ko": "이는 내가 산 자들의 지역에서 나에 대한 공포를 불러일으켰기 때문이라",
+     "en": "For I have caused my terror in the land of the living"
+    }
+   ],
+   "english": [
+    {
+     "ref": "32:30",
+     "phrase": "with their terror they are ashamed of their might",
+     "grammar": "be ashamed of",
+     "text": "be ashamed of는 ‘…을 부끄러워하다’입니다. 한때 자랑하던 위세(might)를 이제 부끄러워한다는 뜻입니다."
+    },
+    {
+     "ref": "32:31",
+     "phrase": "shall be comforted over all his multitude",
+     "grammar": "수동 be comforted · over",
+     "text": "be comforted는 ‘위로를 받다’, over는 ‘…에 대하여’입니다. 먼저 내려간 자들을 보고 자기 무리에 대해 위로를 받는다는 말입니다."
+    },
+    {
+     "ref": "32:32",
+     "phrase": "For I have caused my terror in the land of the living",
+     "grammar": "현재완료 · the + 형용사",
+     "text": "have caused는 ‘불러일으켰다’는 현재완료입니다. the living은 ‘산 자들’로, the + 형용사가 사람들을 가리킵니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "princes",
+     "ko": "통치자들",
+     "ref": "32:29"
+    },
+    {
+     "w": "might",
+     "ko": "위세, 힘",
+     "ref": "32:29"
+    },
+    {
+     "w": "ashamed",
+     "ko": "부끄러워하는",
+     "ref": "32:30"
+    },
+    {
+     "w": "comforted",
+     "ko": "위로를 받은",
+     "ref": "32:31"
+    },
+    {
+     "w": "slain",
+     "ko": "살해당한",
+     "ref": "32:31"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "제십이년 열두째 달 일 일에 주께서 에스겔에게 파라오를 위한 애가를 지으라고 하셨습니다.",
+    "verse": "32:2",
+    "u": [
+     "파라오를 위한 애가"
+    ]
+   },
+   {
+    "text": "파라오는 민족들 중의 젊은 사자, 바다들의 고래와 같다고 불렸습니다.",
+    "verse": "32:2",
+    "u": [
+     "바다들의 고래"
+    ]
+   },
+   {
+    "text": "주께서는 많은 백성과 함께 그물을 펼쳐 파라오를 끌어올리겠다고 하셨습니다.",
+    "verse": "32:3",
+    "u": [
+     "그물을 펼쳐"
+    ]
+   },
+   {
+    "text": "파라오는 벌판에 내던져지고 그의 살은 산들 위에 놓입니다.",
+    "verse": "32:5",
+    "u": [
+     "산들 위에"
+    ]
+   },
+   {
+    "text": "주께서 파라오를 내보낼 때 하늘을 가리고 별들을 어둡게 하며 해를 구름으로 덮겠다고 하셨습니다.",
+    "verse": "32:7",
+    "u": [
+     "해를 구름으로 덮겠다고"
+    ]
+   },
+   {
+    "text": "주께서 칼을 휘두르실 때 왕들은 파라오 때문에 진저리 치게 무서워합니다.",
+    "verse": "32:10",
+    "u": [
+     "진저리 치게 무서워합니다"
+    ]
+   },
+   {
+    "text": "바빌론 왕의 칼이 파라오 위에 임합니다.",
+    "verse": "32:11",
+    "u": [
+     "바빌론 왕의 칼"
+    ]
+   },
+   {
+    "text": "막강한 자들이 이집트의 화려한 행렬을 약탈하고 그 무리가 멸망합니다.",
+    "verse": "32:12",
+    "u": [
+     "화려한 행렬"
+    ]
+   },
+   {
+    "text": "이집트가 황량해질 때 그들은 주를 알게 됩니다.",
+    "verse": "32:15",
+    "u": [
+     "주를 알게 됩니다"
+    ]
+   },
+   {
+    "text": "민족들의 딸들이 이집트와 그 모든 무리를 위하여 애도합니다.",
+    "verse": "32:16",
+    "u": [
+     "민족들의 딸들"
+    ]
+   },
+   {
+    "text": "제십이년 그달 십오 일에 에스겔은 이집트의 무리를 위하여 통곡하라는 말씀을 받았습니다.",
+    "verse": "32:18",
+    "u": [
+     "통곡하라는 말씀"
+    ]
+   },
+   {
+    "text": "주께서는 아름다움으로 누구를 넘어서느냐고 물으시고, 할례받지 아니한 자들과 함께 누우라고 하셨습니다.",
+    "verse": "32:19",
+    "u": [
+     "할례받지 아니한 자들과 함께"
+    ]
+   },
+   {
+    "text": "교회 교리는 구원받지 못한 죄인이 죽으면 혼만 음부에 가서 어마어마한 고통을 겪는다고 가르칩니다.",
+    "key": "z32-1",
+    "u": [
+     "혼만 음부에 가서"
+    ]
+   },
+   {
+    "text": "죄인은 죽자마자 죄의 대가를 치르고, 심판 때 음부에서 나와 죄인으로 확정 판결을 받습니다.",
+    "key": "z32-1",
+    "u": [
+     "죽자마자 죄의 대가를"
+    ]
+   },
+   {
+    "text": "앗슈르와 엘람은 산 자들의 지역에서 공포를 불러일으켰지만 칼에 쓰러져 구렁에 누워 있습니다.",
+    "verse": "32:24",
+    "u": [
+     "칼에 쓰러져"
+    ]
+   },
+   {
+    "text": "메셱과 투발도 할례받지 아니한 채 칼에 살해당했습니다.",
+    "verse": "32:26",
+    "u": [
+     "메셱과 투발"
+    ]
+   },
+   {
+    "text": "막강한 자들은 칼을 머리 아래 두고 내려갔지만 그들의 죄악들은 뼈들 위에 있습니다.",
+    "verse": "32:27",
+    "u": [
+     "죄악들은 뼈들 위에"
+    ]
+   },
+   {
+    "text": "에돔과 북방의 통치자들과 지돈인들도 구렁으로 내려가는 자들과 함께 수치를 짊어집니다.",
+    "verse": "32:30",
+    "u": [
+     "수치를 짊어집니다"
+    ]
+   },
+   {
+    "text": "파라오는 그들을 보고 자기 무리로 인하여 위로를 받으며, 할례받지 아니한 자들 가운데 눕혀집니다.",
+    "verse": "32:32",
+    "u": [
+     "위로를 받으며"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "32:1",
+    "q": "이 장의 첫 말씀은 몇 년 몇째 달에 임했습니까?",
+    "a": "제십이년, 열두째 달"
+   },
+   {
+    "verse": "32:2",
+    "q": "주께서 에스겔에게 누구를 위하여 애가를 지으라고 하셨습니까?",
+    "a": "이집트 왕 파라오"
+   },
+   {
+    "verse": "32:2",
+    "q": "파라오는 민족들 중에서 무엇과 같다고 하였습니까?",
+    "a": "젊은 사자"
+   },
+   {
+    "verse": "32:2",
+    "q": "파라오는 바다들의 무엇과 같다고 하였습니까?",
+    "a": "고래"
+   },
+   {
+    "verse": "32:3",
+    "q": "주께서 파라오 위로 펼치겠다고 하신 것은 무엇입니까?",
+    "a": "그물"
+   },
+   {
+    "verse": "32:5",
+    "q": "주께서 파라오의 살을 어디에 올려놓겠다고 하셨습니까?",
+    "a": "산들 위"
+   },
+   {
+    "verse": "32:6",
+    "q": "파라오가 헤엄치는 지역은 무엇으로 물을 대게 됩니까?",
+    "a": "너의 피"
+   },
+   {
+    "verse": "32:7",
+    "q": "주께서 해를 무엇으로 덮겠다고 하셨습니까?",
+    "a": "구름"
+   },
+   {
+    "verse": "32:7",
+    "q": "빛을 내지 못하는 것은 무엇입니까?",
+    "a": "달"
+   },
+   {
+    "verse": "32:10",
+    "q": "파라오가 무너지는 날에 모든 사람이 떠는 까닭은 무엇입니까?",
+    "a": "자기 자신의 생명"
+   },
+   {
+    "verse": "32:11",
+    "q": "파라오 위로 임하는 칼은 누구의 칼입니까?",
+    "a": "바빌론 왕"
+   },
+   {
+    "verse": "32:12",
+    "q": "막강한 자들이 약탈하는 것은 무엇입니까?",
+    "a": "이집트의 화려한 행렬"
+   },
+   {
+    "verse": "32:14",
+    "q": "주께서 그들의 강들을 무엇처럼 흐르게 하겠다고 하셨습니까?",
+    "a": "기름"
+   },
+   {
+    "verse": "32:16",
+    "q": "이집트를 애도하는 것은 누구입니까?",
+    "a": "민족들의 딸들"
+   },
+   {
+    "verse": "32:17",
+    "q": "두 번째 말씀은 제십이년 그달 며칠에 임했습니까?",
+    "a": "십오 일"
+   },
+   {
+    "verse": "32:18",
+    "q": "에스겔은 누구를 위하여 통곡하라는 말씀을 받았습니까?",
+    "a": "이집트의 무리"
+   },
+   {
+    "verse": "32:19",
+    "q": "파라오는 누구와 함께 포개지라는 말을 듣습니까?",
+    "a": "할례받지 아니한 자들"
+   },
+   {
+    "verse": "32:21",
+    "q": "막강한 자들 가운데서 강한 자는 어디에서 말합니까?",
+    "a": "지옥의 한복판"
+   },
+   {
+    "key": "z32-1",
+    "q": "교회 교리에 따르면 구원받지 못한 죄인은 죽은 뒤 어디로 갑니까?",
+    "a": "몸 없이 혼만 음부로 갑니다."
+   },
+   {
+    "key": "z32-1",
+    "q": "죄인은 언제 죄의 대가를 치르기 시작합니까?",
+    "a": "죽자마자 치릅니다."
+   },
+   {
+    "key": "z32-1",
+    "q": "심판 때 음부에 있던 죄인은 어떻게 됩니까?",
+    "a": "음부에서 나와 다시 흙의 몸 안으로 들어가 죄인으로 확정 판결을 받습니다."
+   },
+   {
+    "verse": "32:22",
+    "q": "가장 먼저 거기에 있다고 한 민족은 누구입니까?",
+    "a": "앗슈르"
+   },
+   {
+    "verse": "32:23",
+    "q": "앗슈르의 무덤들은 어디에 자리 잡았습니까?",
+    "a": "구렁의 측면들"
+   },
+   {
+    "verse": "32:24",
+    "q": "앗슈르 다음에 나오는 민족은 누구입니까?",
+    "a": "엘람"
+   },
+   {
+    "verse": "32:24",
+    "q": "엘람은 구렁으로 내려가는 자들과 함께 무엇을 짊어졌습니까?",
+    "a": "수치"
+   },
+   {
+    "verse": "32:26",
+    "q": "엘람 다음에 함께 나오는 두 민족은 누구입니까?",
+    "a": "메셱, 투발"
+   },
+   {
+    "verse": "32:27",
+    "q": "막강한 자들은 자신들의 칼을 어디에 두었습니까?",
+    "a": "그들의 머리 아래"
+   },
+   {
+    "verse": "32:27",
+    "q": "그들의 죄악들은 어디에 있게 됩니까?",
+    "a": "그들의 뼈들 위"
+   },
+   {
+    "verse": "32:29",
+    "q": "왕들과 통치자들과 함께 나오는 나라는 어디입니까?",
+    "a": "에돔"
+   },
+   {
+    "verse": "32:30",
+    "q": "북방의 통치자들과 함께 나오는 사람들은 누구입니까?",
+    "a": "지돈인들"
+   },
+   {
+    "verse": "32:31",
+    "q": "파라오는 그들을 보고 무엇을 받습니까?",
+    "a": "위로"
+   },
+   {
+    "verse": "32:32",
+    "q": "주께서 산 자들의 지역에서 불러일으키셨다고 한 것은 무엇입니까?",
+    "a": "나에 대한 공포"
+   }
+  ],
+  "faq": [
+   {
+    "q": "칼에 살해당한 자들은 죽은 뒤 어디에 있습니까?",
+    "key": "z32-1"
+   },
+   {
+    "q": "구원받지 못한 사람이 죽으면 어떻게 됩니까?",
+    "key": "z32-1"
+   },
+   {
+    "q": "음부에는 몸도 함께 갑니까?",
+    "key": "z32-1"
+   },
+   {
+    "q": "죄의 대가는 언제 치릅니까?",
+    "key": "z32-1"
+   },
+   {
+    "q": "음부에 간 사람은 영원히 거기 있습니까?",
+    "key": "z32-1"
+   },
+   {
+    "q": "‘지옥의 한복판에서 말한다’는 것은 무엇을 보여 줍니까?",
+    "key": "z32-1"
+   },
+   {
+    "q": "심판 때 죽은 사람은 어떤 몸으로 나옵니까?",
+    "key": "z32-1"
+   },
+   {
+    "q": "죄인으로 확정 판결을 받는 때는 언제입니까?",
+    "key": "z32-1"
+   },
+   {
+    "q": "죽는 순간의 고통도 죄의 대가에 들어갑니까?",
+    "key": "z32-1"
+   },
+   {
+    "q": "음부에서 겪는 고통은 어느 정도입니까?",
+    "key": "z32-1"
+   },
+   {
+    "q": "이 장의 표어 ‘죽자마자 죄의 대가를 치르는 것입니다’는 무슨 뜻입니까?",
+    "key": "z32-1"
+   },
+   {
+    "q": "할례받지 아니한 채 누워 있는 자들은 아직 심판을 받지 않은 것입니까?",
+    "key": "z32-1"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "애가",
+    "verse": "32:2",
+    "text": "죽은 이나 무너진 나라를 슬퍼하며 부르는 노래. 주께서 에스겔에게 파라오를 위한 애가를 지으라고 하셨습니다."
+   },
+   {
+    "term": "구렁",
+    "verse": "32:23",
+    "text": "깊은 구덩이. 32장은 칼에 살해당한 민족들의 무덤이 구렁의 측면들에 있다고 말합니다."
+   },
+   {
+    "term": "음부",
+    "key": "z32-1",
+    "text": "구원받지 못한 죄인이 죽은 뒤 몸 없이 혼만 가서 심판을 기다리며 고통을 겪는 곳."
+   },
+   {
+    "term": "할례받지 아니한 자들",
+    "verse": "32:19",
+    "text": "32장에서 칼에 살해당해 구렁에 함께 누운 자들을 부르는 말입니다."
+   },
+   {
+    "term": "산 자들의 지역",
+    "verse": "32:32",
+    "text": "살아 있는 사람들의 땅. 32장의 민족들은 그곳에서 공포를 불러일으켰지만 지금은 구렁에 누워 있습니다."
+   }
+  ]
+ }
+}

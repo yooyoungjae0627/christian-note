@@ -1,0 +1,1172 @@
+{
+ "chapter": 2,
+ "subtitle": "왕비가 된 에스더와 모르드캐의 공로",
+ "motto": "결국은 에스더라는 여자가 유대 민족을 구하게 되는 이야기입니다",
+ "motto_comment": "e02-4",
+ "cover": [
+  {
+   "m": "crown",
+   "x": 170,
+   "y": 115,
+   "s": 1
+  },
+  {
+   "m": "city",
+   "x": 115,
+   "y": 285,
+   "s": 0.85
+  },
+  {
+   "m": "path",
+   "x": 190,
+   "y": 300,
+   "s": 0.7
+  },
+  {
+   "m": "stars",
+   "x": 255,
+   "y": 70,
+   "s": 0.8
+  }
+ ],
+ "people": [
+  {
+   "id": "jair",
+   "name": "야일",
+   "en": "Jair",
+   "gen": 1,
+   "desc": "베냐민족 키시의 자손이자 시므이의 자손으로, 모르드캐의 아버지입니다.",
+   "refs": [
+    "2:5"
+   ],
+   "part": "모르드캐의 아버지",
+   "look": "old",
+   "intro": "베냐민족 · 모르드캐의 아버지"
+  },
+  {
+   "id": "abihail",
+   "name": "아비하일",
+   "en": "Abihail",
+   "gen": 1,
+   "desc": "모르드캐의 삼촌이며 에스더의 아버지입니다. 에스더는 아버지와 어머니를 모두 잃었습니다.",
+   "refs": [
+    "2:7",
+    "2:15"
+   ],
+   "part": "에스더의 아버지",
+   "look": "old",
+   "intro": "모르드캐의 삼촌 · 에스더의 아버지"
+  },
+  {
+   "id": "mordecai",
+   "name": "모르드캐",
+   "en": "Mordecai",
+   "gen": 2,
+   "desc": "슈샨궁에 있던 베냐민족 유대인으로, 예루살렘에서 바빌론 포로로 잡혀갔던 사람입니다. 부모 잃은 삼촌의 딸 에스더를 자기 딸로 삼아 길렀고, 왕을 해치려는 음모를 알려 왕의 목숨을 구했습니다.",
+   "refs": [
+    "2:5",
+    "2:6",
+    "2:7",
+    "2:22"
+   ],
+   "part": "에스더를 기른 사촌",
+   "look": "man",
+   "intro": "에스더를 기른 사촌 · 음모를 알림"
+  },
+  {
+   "id": "esther",
+   "name": "에스더",
+   "en": "Esther",
+   "gen": 2,
+   "desc": "하닷사라고도 불렸으며 어여쁘고 아름다운 처자였습니다. 모르드캐의 명령대로 자기 백성을 알리지 않았고, 왕의 사랑을 받아 와슈티 대신 왕비가 되었습니다.",
+   "refs": [
+    "2:7",
+    "2:10",
+    "2:17"
+   ],
+   "part": "왕비가 된 처자",
+   "look": "woman",
+   "intro": "하닷사 · 와슈티 대신 왕비가 됨"
+  },
+  {
+   "id": "ahasuerus",
+   "name": "아하수에루스왕",
+   "en": "Ahasuerus",
+   "gen": 2,
+   "desc": "진노가 가라앉은 뒤 새 왕비를 찾게 했습니다. 에스더를 모든 여자보다 사랑하여 머리에 왕비의 관을 씌웠습니다.",
+   "refs": [
+    "2:1",
+    "2:4",
+    "2:17"
+   ],
+   "part": "에스더를 사랑한 왕",
+   "look": "king",
+   "intro": "페르시아의 왕 · 에스더를 왕비로 삼음"
+  },
+  {
+   "id": "hegai",
+   "name": "헤가이",
+   "en": "Hegai",
+   "gen": 3,
+   "desc": "궁녀들을 지키던 왕의 시종장입니다. 에스더를 마음에 들어 하여 정화 의식 물품과 시녀 일곱 명을 주고 가장 좋은 자리에 두었습니다.",
+   "refs": [
+    "2:8",
+    "2:9"
+   ],
+   "part": "궁녀를 지킨 시종장",
+   "look": "man",
+   "intro": "궁녀를 지킨 시종장 · 에스더를 도움"
+  },
+  {
+   "id": "conspirators",
+   "name": "빅단과 테레시",
+   "en": "Bigthan, Teresh",
+   "gen": 3,
+   "role": "enemy",
+   "desc": "문을 지키던 왕의 시종장 두 사람입니다. 격노하여 왕에게 손을 대려 했다가 일이 드러나 나무에 매달렸습니다.",
+   "refs": [
+    "2:21",
+    "2:23"
+   ],
+   "part": "왕을 해치려 한 자들",
+   "look": "group",
+   "intro": "문지기 시종장 둘 · 왕을 해치려 함"
+  }
+ ],
+ "relations": [
+  {
+   "from": "jair",
+   "to": "mordecai",
+   "type": "parent",
+   "label": "아들",
+   "ref": "2:5"
+  },
+  {
+   "from": "abihail",
+   "to": "esther",
+   "type": "parent",
+   "label": "딸",
+   "ref": "2:15"
+  },
+  {
+   "from": "abihail",
+   "to": "mordecai",
+   "type": "kin",
+   "label": "삼촌",
+   "ref": "2:15"
+  },
+  {
+   "from": "mordecai",
+   "to": "esther",
+   "type": "other",
+   "label": "딸로 삼음",
+   "ref": "2:7"
+  },
+  {
+   "from": "ahasuerus",
+   "to": "esther",
+   "type": "spouse",
+   "label": "왕비",
+   "ref": "2:17"
+  },
+  {
+   "from": "hegai",
+   "to": "esther",
+   "type": "other",
+   "label": "돌봄",
+   "ref": "2:9"
+  },
+  {
+   "from": "conspirators",
+   "to": "ahasuerus",
+   "type": "enemy",
+   "label": "해치려 함",
+   "ref": "2:21"
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "shushan",
+    "name": "슈샨궁",
+    "at": [
+     48.26,
+     32.19
+    ],
+    "ref": "2:5"
+   },
+   {
+    "key": "jerusalem",
+    "ref": "2:6"
+   },
+   {
+    "key": "babylon",
+    "ref": "2:6"
+   }
+  ],
+  "routes": [
+   {
+    "path": [
+     "jerusalem",
+     "babylon"
+    ],
+    "ref": "2:6"
+   }
+  ],
+  "unknown": []
+ },
+ "sections": [
+  {
+   "ref": "2:1-4",
+   "title": "와슈티를 대신할 왕비를 찾다",
+   "marks": [
+    {
+     "v": "2:1",
+     "t": "u",
+     "ko": "그가 와슈티를 기억하였으니",
+     "en": "he remembered Vashti"
+    },
+    {
+     "v": "2:3",
+     "t": "u",
+     "ko": "어여쁘고 젊은 처녀들을 모두 슈샨궁에 있는 여자들의 집으로 한데 모으게 하시고",
+     "en": "gather together all the fair young virgins unto Shushan the palace"
+    },
+    {
+     "v": "2:4",
+     "t": "u",
+     "ko": "와슈티를 대신하여 왕을 기쁘게 하는 처자가 왕비가 되게 하소서",
+     "en": "let the maiden which pleaseth the king be queen instead of Vashti"
+    }
+   ],
+   "comments": [
+    {
+     "id": "e02-1",
+     "basis": "external",
+     "text": "스코필드는 2장에 ‘에스더가 왕비가 되다’라는 제목을 붙입니다. 또 3절의 시종장 ‘헤게’는 달리 ‘헤가이’라고도 쓰며, 8절에 나오는 헤가이와 같은 이름이라고 적습니다.",
+     "spans": [
+      {
+       "text": "‘에스더가 왕비가 되다’",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 에스더기 2장 소제목 · 2:3 난외주",
+       "where": "Esth. 2 소제목, 2:3 난외주 c",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "CHAPTER 2. Esther made queen.\n…\nOr, Hegai, v.8.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "2:1",
+     "phrase": "when the wrath of king Ahasuerus was appeased",
+     "grammar": "수동태(was appeased)",
+     "text": "appease는 ‘달래다, 가라앉히다’이고, was appeased는 ‘가라앉았다’입니다. 현대 영어(WEB)도 was pacified처럼 수동태로 씁니다."
+    },
+    {
+     "ref": "2:2",
+     "phrase": "Let there be fair young virgins sought for the king",
+     "grammar": "Let there be + 명사 + 과거분사",
+     "text": "‘왕을 위하여 어여쁘고 젊은 처녀들이 찾아지게 하소서’라는 뜻입니다. sought는 seek(찾다)의 과거분사입니다."
+    },
+    {
+     "ref": "2:4",
+     "phrase": "the maiden which pleaseth the king",
+     "grammar": "옛 3인칭 어미 -eth",
+     "text": "pleaseth는 pleases의 옛 형태입니다. 주어가 3인칭 단수일 때 동사에 -eth를 붙였습니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "wrath",
+     "ko": "진노",
+     "ref": "2:1"
+    },
+    {
+     "w": "appeased",
+     "ko": "가라앉은",
+     "ref": "2:1"
+    },
+    {
+     "w": "decreed",
+     "ko": "(칙령으로) 정해진",
+     "ref": "2:1"
+    },
+    {
+     "w": "ministered",
+     "ko": "섬겼다",
+     "ref": "2:2"
+    },
+    {
+     "w": "virgins",
+     "ko": "처녀들",
+     "ref": "2:2"
+    },
+    {
+     "w": "custody",
+     "ko": "관리, 보호",
+     "ref": "2:3"
+    },
+    {
+     "w": "purification",
+     "ko": "정화 의식",
+     "ref": "2:3"
+    },
+    {
+     "w": "maiden",
+     "ko": "처자, 아가씨",
+     "ref": "2:4"
+    }
+   ]
+  },
+  {
+   "ref": "2:5-7",
+   "title": "포로로 잡혀 온 모르드캐와 하닷사",
+   "marks": [
+    {
+     "v": "2:5",
+     "t": "u",
+     "ko": "어떤 유대인 한 명이 있었는데 그의 이름은 모르드캐로",
+     "en": "there was a certain Jew, whose name was Mordecai"
+    },
+    {
+     "v": "2:6",
+     "t": "u",
+     "ko": "예루살렘에서 잡혀갔었으니",
+     "en": "had been carried away from Jerusalem"
+    },
+    {
+     "v": "2:7",
+     "t": "u",
+     "ko": "자기 자신의 딸로 삼았더라",
+     "en": "took for his own daughter"
+    }
+   ],
+   "comments": [
+    {
+     "id": "e02-2",
+     "basis": "linked",
+     "text": "모르드캐는 바빌론 왕 네부카드네자르가 예루살렘에서 잡아간 포로들 가운데 있었습니다. 강의는 이 포로 시대를 이렇게 설명합니다. 다윗이 준비하고 솔로몬이 완성한 성전이 지어진 뒤에도 유대인들은 엉망진창이 되었습니다. 그러자 하나님께서 이방 민족인 바빌론을 써서 치셨고, 유대인들은 70년 동안 포로 생활을 했습니다. 그 뒤 바빌론이 페르시아에 정복되었을 때, 페르시아의 코레스 왕이 하나님의 감동을 받아 그들을 예루살렘으로 보내 주었습니다.",
+     "spans": [
+      {
+       "text": "이방 민족인 바빌론을 써서 치셨고",
+       "level": 2
+      },
+      {
+       "text": "70년 동안 포로 생활",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「하나님이 등을 돌리실 때(신구약 중간사)」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/14_하나님이_등을_돌리실_때_신구약_중간사.md",
+       "time": "6:35",
+       "to": "7:36",
+       "excerpt": "다윗이 준비하고 솔로몬이 완성해서 이런 멋있는 성전이 지어졌죠 여기서 드디어 유대인들은 제사 지내면 좋아하죠 여러분 다 아시죠? 우리는 제사 지내는 게 왜 좋은지 모르겠는데 유대인들은 건물 성전이 생기고 짐승 죽이는 그 제사를 온전히 지낼 때 어마어마한 기쁨이 있어요 여기서 짐승들 어마어마하게 죽이면서 '우리 잘해보자' 잘하긴 뭘 잘해요, 엉망진창이 됐죠 결국은 기원전 586년 하나님께서 치시죠 치실 때는 꼭 이방민족을 사용하십니다 이방민족 바빌론 민족을 써서 이렇게 처참하게 불타 없어집니다 그리고 70년간 포로 생활을 합니다 '한 번 다시 기회를 줄게, 한 번 더 준다 잘해보자' 그래서 이제 여러분이 아시다시피 바빌론이 페르시아에 의해서 정복이 당했을 때 페르시아의 사이러스, 코레스 왕이 하나님의 감동을 받아 예루살렘으로 보내주죠",
+       "url": "https://youtu.be/TaWsyzY6GWQ?t=395"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "2:5",
+     "phrase": "a certain Jew, whose name was Mordecai",
+     "grammar": "소유격 관계대명사 whose",
+     "text": "whose name was Mordecai는 앞의 a certain Jew를 꾸밉니다. ‘이름이 모르드캐인 어떤 유대인’입니다."
+    },
+    {
+     "ref": "2:6",
+     "phrase": "Who had been carried away from Jerusalem",
+     "grammar": "과거완료 수동태(had been + 과거분사)",
+     "text": "had been carried away는 이야기 시점보다 앞서 ‘잡혀갔었다’는 뜻입니다. 모르드캐가 슈샨에 있게 된 까닭을 거슬러 올라가 말합니다.",
+     "key": "e02-2"
+    },
+    {
+     "ref": "2:7",
+     "phrase": "she had neither father nor mother",
+     "grammar": "neither A nor B",
+     "text": "neither A nor B는 ‘A도 B도 아니다’입니다. 에스더에게 아버지도 어머니도 없었다는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "Benjamite",
+     "ko": "베냐민 사람",
+     "ref": "2:5"
+    },
+    {
+     "w": "captivity",
+     "ko": "포로, 사로잡힘",
+     "ref": "2:6"
+    },
+    {
+     "w": "maid",
+     "ko": "처녀, 처자",
+     "ref": "2:7"
+    },
+    {
+     "w": "fair",
+     "ko": "어여쁜",
+     "ref": "2:7"
+    }
+   ]
+  },
+  {
+   "ref": "2:8-11",
+   "title": "헤가이의 호의를 얻은 에스더",
+   "marks": [
+    {
+     "v": "2:9",
+     "t": "u",
+     "ko": "그녀가 그의 친절을 얻어 냈더라",
+     "en": "she obtained kindness of him"
+    },
+    {
+     "v": "2:10",
+     "t": "u",
+     "ko": "에스더는 그녀의 백성도, 그녀의 종족도 알리지 아니하였더라",
+     "en": "Esther had not shewed her people nor her kindred"
+    },
+    {
+     "v": "2:11",
+     "t": "u",
+     "ko": "모르드캐가 날마다 궁녀들의 집의 뜰 앞을 걸으며",
+     "en": "Mordecai walked every day before the court of the women's house"
+    }
+   ],
+   "comments": [
+    {
+     "id": "e02-3",
+     "basis": "external",
+     "text": "9절에서 헤가이는 에스더와 그녀의 시녀들을 궁녀들의 집에서 가장 좋은 곳에 ‘우선 배치하였’습니다. 스코필드는 이 말이 히브리어로 ‘그가 그녀를 바꾸었다’라는 뜻이라고 적습니다. 헤가이가 에스더의 자리를 가장 좋은 곳으로 옮겨 주었다는 말입니다.",
+     "spans": [
+      {
+       "text": "‘그가 그녀를 바꾸었다’",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 에스더기 2:9 난외주",
+       "where": "Esth. 2:9 난외주 i",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Heb. he changed her.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "2:9",
+     "phrase": "she obtained kindness of him",
+     "grammar": "obtain A of B(B에게서 A를 얻다)",
+     "text": "of him은 ‘그에게서’입니다. 현대 영어(WEB)는 she obtained kindness from him으로 씁니다."
+    },
+    {
+     "ref": "2:9",
+     "phrase": "he preferred her and her maids unto the best place",
+     "grammar": "prefer A unto B(A를 B로 옮기다·높이다)",
+     "text": "여기서 prefer는 ‘더 좋아하다’가 아니라 ‘더 좋은 자리로 옮기다’라는 옛 뜻입니다.",
+     "key": "e02-3"
+    },
+    {
+     "ref": "2:11",
+     "phrase": "what should become of her",
+     "grammar": "become of(~이 어떻게 되다)",
+     "text": "what becomes of A는 ‘A가 어떻게 되는가’입니다. 모르드캐가 에스더의 앞날을 알고자 했다는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "decree",
+     "ko": "칙령",
+     "ref": "2:8"
+    },
+    {
+     "w": "obtained",
+     "ko": "얻었다",
+     "ref": "2:9"
+    },
+    {
+     "w": "kindness",
+     "ko": "친절, 호의",
+     "ref": "2:9"
+    },
+    {
+     "w": "speedily",
+     "ko": "신속하게",
+     "ref": "2:9"
+    },
+    {
+     "w": "preferred",
+     "ko": "(더 좋은 곳으로) 옮겼다",
+     "ref": "2:9"
+    },
+    {
+     "w": "kindred",
+     "ko": "친족, 종족",
+     "ref": "2:10"
+    },
+    {
+     "w": "charged",
+     "ko": "명했다",
+     "ref": "2:10"
+    }
+   ]
+  },
+  {
+   "ref": "2:12-14",
+   "title": "열두 달의 정화 의식",
+   "plain": true,
+   "marks": [
+    {
+     "v": "2:12",
+     "t": "u",
+     "ko": "열두 달을 지낸 후에",
+     "en": "after that she had been twelve months"
+    },
+    {
+     "v": "2:14",
+     "t": "u",
+     "ko": "그녀의 이름이 불리는 경우를 제외하면",
+     "en": "that she were called by name"
+    }
+   ],
+   "comments": [],
+   "english": [
+    {
+     "ref": "2:12",
+     "phrase": "to wit, six months with oil of myrrh",
+     "grammar": "to wit(곧, 다시 말하면)",
+     "text": "to wit는 앞말을 풀어 주는 ‘곧’입니다. 열두 달이 몰약 기름 여섯 달과 향품 여섯 달로 이루어졌음을 밝힙니다."
+    },
+    {
+     "ref": "2:13",
+     "phrase": "whatsoever she desired was given her",
+     "grammar": "복합관계대명사 whatsoever",
+     "text": "whatsoever는 whatever의 옛 형태로 ‘무엇이든지’입니다. 이 덩어리 전체가 주어입니다."
+    },
+    {
+     "ref": "2:14",
+     "phrase": "except the king delighted in her",
+     "grammar": "접속사 except(~하지 않는 한)",
+     "text": "except가 절을 이끌어 ‘왕이 그녀를 기뻐하지 않는 한’이라는 조건을 붙입니다. delight in은 ‘~을 기뻐하다’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "myrrh",
+     "ko": "몰약",
+     "ref": "2:12"
+    },
+    {
+     "w": "odours",
+     "ko": "향기, 향품",
+     "ref": "2:12"
+    },
+    {
+     "w": "purifying",
+     "ko": "정화",
+     "ref": "2:12"
+    },
+    {
+     "w": "whatsoever",
+     "ko": "무엇이든지",
+     "ref": "2:13"
+    },
+    {
+     "w": "morrow",
+     "ko": "이튿날",
+     "ref": "2:14"
+    },
+    {
+     "w": "concubines",
+     "ko": "후궁들",
+     "ref": "2:14"
+    },
+    {
+     "w": "delighted",
+     "ko": "기뻐했다",
+     "ref": "2:14"
+    }
+   ]
+  },
+  {
+   "ref": "2:15-18",
+   "title": "왕비의 관을 쓴 에스더",
+   "marks": [
+    {
+     "v": "2:15",
+     "t": "u",
+     "ko": "헤가이가 지정한 것 외에는 아무것도 요구하지 아니하였더라",
+     "en": "she required nothing but what Hegai the king's chamberlain, the keeper of the women, appointed"
+    },
+    {
+     "v": "2:17",
+     "t": "u",
+     "ko": "그녀의 머리 위에 왕비의 관을 씌웠고",
+     "en": "he set the royal crown upon her head"
+    },
+    {
+     "v": "2:17",
+     "t": "u",
+     "ko": "그녀를 와슈티 대신에 왕비로 삼았더라",
+     "en": "made her queen instead of Vashti"
+    }
+   ],
+   "comments": [
+    {
+     "id": "e02-4",
+     "basis": "linked",
+     "text": "강의는 에스더 이야기가 길지 않으니 한번 읽어 보면 좋다고 권합니다. 그리고 줄거리를 이렇게 간추립니다. 결국은 에스더라는 여자가 유대 민족을 구하게 되는 이야기입니다. 이 여자가 어떻게 하다 보니 왕비로 들어가게 됩니다. 강의는 에스더 이야기가 굉장히 복잡하지만 굉장히 재미있는 이야기라고 말합니다.",
+     "spans": [
+      {
+       "text": "어떻게 하다 보니 왕비로 들어가게 됩니다",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 오해 바로잡기 「“하나님이 응답하셨다?” 그 말 함부로 쓰지 맙시다」",
+       "file": "memory-bank/첫열매들_강의스크립트/4_오해바로잡기/02_오해바로잡기_하나님이_응답하셨다_그_말_함부로_쓰지_맙시다_with_92.md",
+       "time": "2:16",
+       "to": "2:38",
+       "excerpt": "하더라 근데이 에스더 이야기는 사실 길지 않아서 여러분들 이렇게 정말 소설책도 있는데 이건 정말는 이야기고 싫어하거든요 스는 싫어하기 때에 읽어보시면 좋은데 이제 결국은 에스더라는 여자가 유대민족을 구하게 되는 일인데이 여자가 어떻게 하다 보니까에 뭐 왕비로 들어가게 되고 아주 뭐 굉장히 복잡한 하지만 굉장히 재밌는 그런 이야기인데요",
+       "url": "https://youtu.be/jeMgs4iWb7Q?t=136"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "2:15",
+     "phrase": "she required nothing but what Hegai the king's chamberlain, the keeper of the women, appointed",
+     "grammar": "nothing but(~ 말고는 아무것도)",
+     "text": "nothing but은 ‘~ 외에는 아무것도 (않다)’입니다. 에스더가 헤가이가 정해 준 것만 가지고 갔다는 뜻입니다."
+    },
+    {
+     "ref": "2:17",
+     "phrase": "the king loved Esther above all the women",
+     "grammar": "비교의 above(~보다 더)",
+     "text": "above all the women은 ‘모든 여자보다 더’입니다. 이어지는 more than all the virgins와 같은 비교를 거듭합니다."
+    },
+    {
+     "ref": "2:16",
+     "phrase": "in the tenth month, which is the month Tebeth",
+     "grammar": "계속적 용법의 which",
+     "text": "쉼표 뒤의 which is는 앞의 ‘열째 달’을 풀어 그 달의 이름을 알려 줍니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "required",
+     "ko": "요구했다",
+     "ref": "2:15"
+    },
+    {
+     "w": "appointed",
+     "ko": "정했다, 지정했다",
+     "ref": "2:15"
+    },
+    {
+     "w": "favour",
+     "ko": "호의, 은총",
+     "ref": "2:15"
+    },
+    {
+     "w": "grace",
+     "ko": "은혜",
+     "ref": "2:17"
+    },
+    {
+     "w": "crown",
+     "ko": "관",
+     "ref": "2:17"
+    },
+    {
+     "w": "release",
+     "ko": "면제",
+     "ref": "2:18"
+    }
+   ]
+  },
+  {
+   "ref": "2:19-23",
+   "title": "왕의 목숨을 구한 모르드캐",
+   "marks": [
+    {
+     "v": "2:20",
+     "t": "u",
+     "ko": "에스더가 모르드캐의 명령을 마치 그녀가 그의 곁에서 길러졌을 때처럼 실행하였기",
+     "en": "Esther did the commandment of Mordecai, like as when she was brought up with him"
+    },
+    {
+     "v": "2:22",
+     "t": "u",
+     "ko": "모르드캐가 왕비 에스더에게 그것을 알렸더라",
+     "en": "who told it unto Esther the queen"
+    },
+    {
+     "v": "2:23",
+     "t": "u",
+     "ko": "왕 앞에서 연대기들의 책 안에 기록되었더라",
+     "en": "it was written in the book of the chronicles before the king"
+    }
+   ],
+   "comments": [
+    {
+     "id": "e02-5",
+     "basis": "external",
+     "text": "스코필드는 21절 앞에 ‘모르드캐가 왕의 목숨을 구하다’라는 소제목을 붙입니다. 그리고 문을 지키던 시종장 ‘빅단’은 달리 ‘빅다나’라고도 하며, 6장 2절에 다시 나온다고 적습니다. 23절에서 이 일은 왕 앞에서 연대기들의 책에 기록되었습니다. 스코필드는 이 대목에 6장 1절을 관주로 달아, 그 기록이 뒤에 다시 등장함을 알려 줍니다.",
+     "spans": [
+      {
+       "text": "‘모르드캐가 왕의 목숨을 구하다’",
+       "level": 2
+      },
+      {
+       "text": "6장 1절을 관주로 달아",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 에스더기 2:21 소제목 · 난외주",
+       "where": "Esth. 2:21 소제목, 2:21·23 난외주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Mordecai saves the king’s life.\n…\nOr, Big- thana, Esth. 6.2.\n…\ng Esth.6.1.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "2:21",
+     "phrase": "sought to lay hand on the king Ahasuerus",
+     "grammar": "숙어 lay hand on(해치다)",
+     "text": "lay hand on은 ‘~에게 손을 대다’, 곧 ‘해치려 하다’입니다. sought는 seek의 과거로 ‘꾀했다’입니다."
+    },
+    {
+     "ref": "2:22",
+     "phrase": "Esther certified the king thereof in Mordecai's name",
+     "grammar": "certify A of B(A에게 B를 확실히 알리다) · thereof",
+     "text": "thereof는 of it, 곧 ‘그 일을’입니다. in Mordecai's name은 ‘모르드캐의 이름으로’입니다.",
+     "key": "e02-5"
+    },
+    {
+     "ref": "2:23",
+     "phrase": "when inquisition was made of the matter",
+     "grammar": "make inquisition of(~을 조사하다)의 수동태",
+     "text": "inquisition은 ‘조사, 심문’입니다. ‘그 일에 대한 조사가 이루어졌을 때’라는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "sought",
+     "ko": "꾀했다(seek의 과거)",
+     "ref": "2:21"
+    },
+    {
+     "w": "certified",
+     "ko": "확실히 알렸다",
+     "ref": "2:22"
+    },
+    {
+     "w": "inquisition",
+     "ko": "조사",
+     "ref": "2:23"
+    },
+    {
+     "w": "hanged",
+     "ko": "매달렸다",
+     "ref": "2:23"
+    },
+    {
+     "w": "chronicles",
+     "ko": "연대기",
+     "ref": "2:23"
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "왕의 진노가 가라앉자 왕은 와슈티와 그녀에게 내려진 칙령을 기억했습니다.",
+    "verse": "2:1",
+    "u": [
+     "와슈티"
+    ]
+   },
+   {
+    "text": "종들은 어여쁘고 젊은 처녀들을 슈샨궁으로 모아 왕비를 고르자고 했습니다.",
+    "verse": "2:3",
+    "u": [
+     "처녀들을 슈샨궁으로 모아"
+    ]
+   },
+   {
+    "text": "스코필드는 2장에 ‘에스더가 왕비가 되다’라는 제목을 붙입니다.",
+    "key": "e02-1",
+    "u": [
+     "에스더가 왕비가 되다"
+    ]
+   },
+   {
+    "text": "슈샨궁에는 베냐민족 유대인 모르드캐가 있었습니다.",
+    "verse": "2:5",
+    "u": [
+     "모르드캐"
+    ]
+   },
+   {
+    "text": "모르드캐는 네부카드네자르가 예루살렘에서 잡아간 포로였습니다.",
+    "verse": "2:6",
+    "u": [
+     "예루살렘에서 잡아간 포로"
+    ]
+   },
+   {
+    "text": "강의는 하나님께서 바빌론을 써서 유대인들을 치셨고 그들이 70년 동안 포로 생활을 했다고 말합니다.",
+    "key": "e02-2",
+    "u": [
+     "70년 동안 포로 생활"
+    ]
+   },
+   {
+    "text": "모르드캐는 부모를 잃은 삼촌의 딸 하닷사, 곧 에스더를 자기 딸로 삼았습니다.",
+    "verse": "2:7",
+    "u": [
+     "자기 딸로 삼았습니다"
+    ]
+   },
+   {
+    "text": "에스더는 헤가이의 마음에 들어 가장 좋은 자리를 얻었습니다.",
+    "verse": "2:9",
+    "u": [
+     "가장 좋은 자리"
+    ]
+   },
+   {
+    "text": "스코필드는 ‘우선 배치하였더라’가 히브리어로 ‘그가 그녀를 바꾸었다’라는 뜻이라고 적습니다.",
+    "key": "e02-3",
+    "u": [
+     "그가 그녀를 바꾸었다"
+    ]
+   },
+   {
+    "text": "에스더는 모르드캐의 명령대로 자기 백성과 종족을 알리지 않았습니다.",
+    "verse": "2:10",
+    "u": [
+     "알리지 않았습니다"
+    ]
+   },
+   {
+    "text": "처자들은 열두 달 동안 몰약 기름과 향품으로 정화 의식을 치렀습니다.",
+    "verse": "2:12",
+    "u": [
+     "열두 달"
+    ]
+   },
+   {
+    "text": "에스더는 헤가이가 정한 것 외에는 아무것도 요구하지 않았습니다.",
+    "verse": "2:15",
+    "u": [
+     "아무것도 요구하지 않았습니다"
+    ]
+   },
+   {
+    "text": "왕은 에스더를 모든 여자보다 사랑하여 와슈티 대신 왕비로 삼았습니다.",
+    "verse": "2:17",
+    "u": [
+     "와슈티 대신 왕비"
+    ]
+   },
+   {
+    "text": "강의는 에스더 이야기가 결국 에스더라는 여자가 유대 민족을 구하게 되는 이야기라고 간추립니다.",
+    "key": "e02-4",
+    "u": [
+     "유대 민족을 구하게 되는 이야기"
+    ]
+   },
+   {
+    "text": "왕은 에스더의 잔치를 열고 속주들에 면제를 베풀었습니다.",
+    "verse": "2:18",
+    "u": [
+     "에스더의 잔치"
+    ]
+   },
+   {
+    "text": "빅단과 테레시가 왕에게 손을 대려 하자 모르드캐가 에스더를 통해 왕에게 알렸습니다.",
+    "verse": "2:22",
+    "u": [
+     "에스더를 통해 왕에게 알렸습니다"
+    ]
+   },
+   {
+    "text": "이 일은 왕 앞에서 연대기들의 책에 기록되었습니다.",
+    "verse": "2:23",
+    "u": [
+     "연대기들의 책"
+    ]
+   },
+   {
+    "text": "스코필드는 21절 앞에 ‘모르드캐가 왕의 목숨을 구하다’라는 소제목을 붙입니다.",
+    "key": "e02-5",
+    "u": [
+     "모르드캐가 왕의 목숨을 구하다"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "2:1",
+    "q": "왕의 진노가 가라앉았을 때 왕은 누구를 기억했습니까?",
+    "a": "와슈티"
+   },
+   {
+    "verse": "2:3",
+    "q": "처녀들은 누구의 관리에 두어졌습니까?",
+    "a": "헤게"
+   },
+   {
+    "verse": "2:4",
+    "q": "종들은 어떤 처자를 왕비로 삼자고 했습니까?",
+    "a": "왕을 기쁘게 하는 처자"
+   },
+   {
+    "key": "e02-1",
+    "q": "스코필드는 3절의 ‘헤게’를 달리 어떻게 쓴다고 합니까?",
+    "a": "헤가이"
+   },
+   {
+    "verse": "2:5",
+    "q": "모르드캐는 어느 족속이었습니까?",
+    "a": "베냐민족"
+   },
+   {
+    "verse": "2:5",
+    "q": "모르드캐의 아버지는 누구입니까?",
+    "a": "야일"
+   },
+   {
+    "verse": "2:6",
+    "q": "모르드캐는 어느 왕과 함께 잡혀간 포로들과 함께 잡혀갔습니까?",
+    "a": "여코니야"
+   },
+   {
+    "verse": "2:6",
+    "q": "모르드캐를 잡아간 바빌론 왕은 누구입니까?",
+    "a": "네부카드네자르"
+   },
+   {
+    "key": "e02-2",
+    "q": "강의에 따르면 하나님께서 유대인들을 치실 때 어느 민족을 쓰셨습니까?",
+    "a": "바빌론"
+   },
+   {
+    "key": "e02-2",
+    "q": "강의에 따르면 유대인들은 몇 년 동안 포로 생활을 했습니까?",
+    "a": "70년"
+   },
+   {
+    "key": "e02-2",
+    "q": "강의에 따르면 유대인들을 예루살렘으로 보내 준 페르시아 왕은 누구입니까?",
+    "a": "코레스"
+   },
+   {
+    "verse": "2:7",
+    "q": "에스더의 다른 이름은 무엇입니까?",
+    "a": "하닷사"
+   },
+   {
+    "verse": "2:7",
+    "q": "모르드캐는 에스더를 무엇으로 삼았습니까?",
+    "a": "자기 자신의 딸"
+   },
+   {
+    "verse": "2:9",
+    "q": "헤가이는 에스더에게 시녀를 몇 명 주었습니까?",
+    "a": "일곱 명"
+   },
+   {
+    "key": "e02-3",
+    "q": "스코필드는 9절의 ‘우선 배치하였더라’를 히브리어로 무슨 뜻이라고 합니까?",
+    "a": "그가 그녀를 바꾸었다"
+   },
+   {
+    "verse": "2:10",
+    "q": "에스더가 알리지 않은 것은 무엇입니까?",
+    "a": "백성, 종족"
+   },
+   {
+    "verse": "2:11",
+    "q": "모르드캐는 날마다 어디 앞을 걸었습니까?",
+    "a": "궁녀들의 집의 뜰"
+   },
+   {
+    "verse": "2:12",
+    "q": "처자들은 처음 여섯 달 동안 무엇으로 정화했습니까?",
+    "a": "몰약 기름"
+   },
+   {
+    "verse": "2:14",
+    "q": "왕에게 다녀온 처자는 누구의 관리에 들어갔습니까?",
+    "a": "샤아슈가즈"
+   },
+   {
+    "verse": "2:15",
+    "q": "에스더의 아버지는 누구입니까?",
+    "a": "아비하일"
+   },
+   {
+    "verse": "2:16",
+    "q": "에스더가 왕의 집에 들어간 달의 이름은 무엇입니까?",
+    "a": "테벳"
+   },
+   {
+    "verse": "2:16",
+    "q": "에스더가 왕에게 들어간 것은 왕의 통치 몇째 해였습니까?",
+    "a": "일곱째 해"
+   },
+   {
+    "verse": "2:17",
+    "q": "왕은 에스더의 머리 위에 무엇을 씌웠습니까?",
+    "a": "왕비의 관"
+   },
+   {
+    "key": "e02-4",
+    "q": "강의는 에스더 이야기의 줄거리를 어떻게 간추립니까?",
+    "a": "에스더라는 여자가 유대 민족을 구하게 되는 이야기"
+   },
+   {
+    "key": "e02-4",
+    "q": "강의는 에스더 이야기가 어떤 이야기라고 말합니까?",
+    "a": "굉장히 복잡하지만 굉장히 재미있는 이야기"
+   },
+   {
+    "verse": "2:18",
+    "q": "왕이 연 성대한 잔치는 누구의 잔치라고 불렸습니까?",
+    "a": "에스더"
+   },
+   {
+    "verse": "2:19",
+    "q": "처녀들이 두 번째 모였을 때 모르드캐는 어디에 앉아 있었습니까?",
+    "a": "왕의 대문"
+   },
+   {
+    "verse": "2:21",
+    "q": "왕에게 손을 대려 한 두 시종장은 누구입니까?",
+    "a": "빅단, 테레시"
+   },
+   {
+    "verse": "2:22",
+    "q": "에스더는 누구의 이름으로 왕에게 알렸습니까?",
+    "a": "모르드캐"
+   },
+   {
+    "verse": "2:23",
+    "q": "음모를 꾸민 두 사람은 어떻게 되었습니까?",
+    "a": "한 나무에 매달렸더라"
+   },
+   {
+    "key": "e02-5",
+    "q": "스코필드는 ‘빅단’을 달리 무엇이라 한다고 적습니까?",
+    "a": "빅다나"
+   }
+  ],
+  "faq": [
+   {
+    "q": "2장은 어떤 이야기인가요?",
+    "key": "e02-1"
+   },
+   {
+    "q": "헤게와 헤가이는 같은 사람인가요?",
+    "key": "e02-1"
+   },
+   {
+    "q": "모르드캐는 왜 페르시아의 슈샨에 있었나요?",
+    "key": "e02-2"
+   },
+   {
+    "q": "유대인들은 왜 바빌론에 포로로 잡혀갔나요?",
+    "key": "e02-2"
+   },
+   {
+    "q": "포로 생활은 얼마나 이어졌나요?",
+    "key": "e02-2"
+   },
+   {
+    "q": "헤가이는 에스더를 어떻게 대했나요?",
+    "key": "e02-3"
+   },
+   {
+    "q": "‘우선 배치하였더라’는 무슨 뜻인가요?",
+    "key": "e02-3"
+   },
+   {
+    "q": "에스더 이야기를 한마디로 하면 무엇인가요?",
+    "key": "e02-4"
+   },
+   {
+    "q": "에스더는 어떻게 왕비가 되었나요?",
+    "key": "e02-4"
+   },
+   {
+    "q": "에스더기는 꼭 읽어 볼 만한 책인가요?",
+    "key": "e02-4"
+   },
+   {
+    "q": "모르드캐는 어떻게 왕의 목숨을 구했나요?",
+    "key": "e02-5"
+   },
+   {
+    "q": "모르드캐의 공로는 어떻게 되었나요?",
+    "key": "e02-5"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "정화 의식",
+    "verse": "2:12",
+    "text": "왕에게 나아가기 전에 몰약 기름과 향품으로 몸을 깨끗하게 하던 일입니다. 이 장에서는 열두 달이 걸렸습니다."
+   },
+   {
+    "term": "하닷사",
+    "verse": "2:7",
+    "text": "에스더의 다른 이름입니다."
+   },
+   {
+    "term": "몰약",
+    "verse": "2:12",
+    "text": "향기로운 기름을 내는 향료입니다. 정화 의식의 처음 여섯 달에 썼습니다."
+   },
+   {
+    "term": "테벳 월",
+    "verse": "2:16",
+    "text": "열째 달의 이름입니다. 에스더가 왕의 집에 들어간 달입니다."
+   },
+   {
+    "term": "연대기들의 책",
+    "verse": "2:23",
+    "text": "왕 앞에서 일어난 일을 적어 두던 책입니다."
+   }
+  ]
+ }
+}

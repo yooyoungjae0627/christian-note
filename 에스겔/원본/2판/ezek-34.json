@@ -1,0 +1,1147 @@
+{
+ "chapter": 34,
+ "subtitle": "이스라엘의 목자들과 참 목자",
+ "motto": "이 말씀 전체가 아직 오지 않은 장래의 회복을 말한다",
+ "motto_comment": "z34-4",
+ "cover": [
+  {
+   "m": "rain",
+   "x": 170,
+   "y": 120,
+   "s": 0.8
+  },
+  {
+   "m": "mountain",
+   "x": 170,
+   "y": 290,
+   "s": 1
+  },
+  {
+   "m": "tree",
+   "x": 90,
+   "y": 300,
+   "s": 1
+  },
+  {
+   "m": "path",
+   "x": 200,
+   "y": 310,
+   "s": 0.7
+  }
+ ],
+ "people": [
+  {
+   "id": "lord",
+   "name": "주",
+   "role": "god",
+   "gen": 0,
+   "desc": "목자들을 대적하시고, 바로 자신이 흩어진 양들을 찾아내어 그들의 본토로 데려가 먹이겠다고 하신 분입니다.",
+   "refs": [
+    "34:10",
+    "34:11",
+    "34:13"
+   ],
+   "part": "양을 찾으시는 분",
+   "intro": "양들을 찾아내시는 · 주 하나님"
+  },
+  {
+   "id": "ezekiel",
+   "name": "에스겔",
+   "en": "Ezekiel",
+   "gen": 1,
+   "look": "man",
+   "desc": "주께서 ‘사람의 아들아’라고 부르시며 이스라엘의 목자들을 대적하여 예언하라고 하신 예언자입니다.",
+   "refs": [
+    "34:2"
+   ],
+   "part": "목자들에게 예언한 자",
+   "intro": "사람의 아들 · 목자들에게 예언함"
+  },
+  {
+   "id": "shepherds",
+   "name": "이스라엘의 목자들",
+   "gen": 1,
+   "look": "group",
+   "desc": "살진 것을 먹고 양털로 옷 입으면서도 양 떼를 먹이지 않은 자들입니다. 강압과 잔인함으로 양들을 다스렸습니다.",
+   "refs": [
+    "34:3",
+    "34:4"
+   ],
+   "part": "자기만 먹인 목자들",
+   "intro": "자기만 먹인 · 이스라엘의 목자들"
+  },
+  {
+   "id": "david",
+   "name": "나의 종 다윗",
+   "en": "David",
+   "gen": 1,
+   "look": "king",
+   "desc": "주께서 양 떼 위에 세우시겠다고 하신 한 목자입니다. 그들을 먹이고 그들 가운데서 통치자가 된다고 하셨습니다.",
+   "refs": [
+    "34:23",
+    "34:24"
+   ],
+   "part": "세워질 한 목자",
+   "intro": "주께서 세우실 · 한 목자"
+  },
+  {
+   "id": "flock",
+   "name": "나의 양 떼",
+   "gen": 2,
+   "look": "group",
+   "desc": "목자가 없어 온 땅에 흩어지고 들짐승의 먹이가 된 양들입니다. 주께서는 그들이 사람들이며 자신이 그들의 하나님이라고 하셨습니다.",
+   "refs": [
+    "34:6",
+    "34:31"
+   ],
+   "part": "흩어진 양들",
+   "intro": "흩어졌던 양 떼 · 주의 초원의 양"
+  }
+ ],
+ "relations": [
+  {
+   "from": "lord",
+   "to": "ezekiel",
+   "type": "god",
+   "label": "예언하라",
+   "ref": "34:2",
+   "directed": true
+  },
+  {
+   "from": "lord",
+   "to": "shepherds",
+   "type": "god",
+   "label": "대적",
+   "ref": "34:10",
+   "directed": true
+  },
+  {
+   "from": "lord",
+   "to": "david",
+   "type": "god",
+   "label": "나의 종",
+   "ref": "34:23",
+   "directed": true
+  },
+  {
+   "from": "lord",
+   "to": "flock",
+   "type": "god",
+   "label": "나의 양 떼",
+   "ref": "34:31",
+   "directed": true
+  },
+  {
+   "from": "shepherds",
+   "to": "flock",
+   "type": "enemy",
+   "label": "강압",
+   "ref": "34:4",
+   "directed": true
+  },
+  {
+   "from": "david",
+   "to": "flock",
+   "type": "ruler",
+   "label": "목자",
+   "ref": "34:23",
+   "directed": true
+  }
+ ],
+ "map": {
+  "places": [],
+  "routes": [],
+  "unknown": []
+ },
+ "sections": [
+  {
+   "ref": "34:1-6",
+   "title": "자기만 먹이는 목자들",
+   "marks": [
+    {
+     "v": "34:2",
+     "t": "p",
+     "ko": "자신들에게만 먹을 것을 공급하는 이스라엘의 목자들에게 화가 있기를 바라노라",
+     "en": "Woe be to the shepherds of Israel that do feed themselves"
+    },
+    {
+     "v": "34:2",
+     "t": "u",
+     "ko": "목자들이 양 떼들을 먹여야 하지 아니하냐?",
+     "en": "should not the shepherds feed the flocks?"
+    },
+    {
+     "v": "34:4",
+     "t": "p",
+     "ko": "강압과 잔인함으로 그들을 다스렸도다",
+     "en": "with force and with cruelty have ye ruled them"
+    },
+    {
+     "v": "34:5",
+     "t": "u",
+     "ko": "목자가 없는 까닭에 그들이 흩어졌도다",
+     "en": "they were scattered, because there is no shepherd"
+    },
+    {
+     "v": "34:6",
+     "t": "u",
+     "ko": "아무도 그들을 찾아다니거나 구하지도 아니하였도다",
+     "en": "none did search or seek after them"
+    }
+   ],
+   "comments": [
+    {
+     "id": "z34-1",
+     "basis": "external",
+     "text": "스코필드는 34장에 ‘이스라엘의 신실하지 못한 목자들에게 주는 메시지’라는 제목을 붙입니다. 양 떼를 먹이지 않고 자기만 먹이는 목자들을 향한 말씀이라는 뜻입니다.",
+     "spans": [
+      {
+       "text": "신실하지 못한 목자들",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 에스겔 34장 제목",
+       "where": "Ezek. 34 장 제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "CHAPTER 34. Message to the faithless\n…\nherds of Israel.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "34:2",
+     "phrase": "Woe be to the shepherds of Israel that do feed themselves!",
+     "grammar": "기원문 Woe be to + 강조의 do",
+     "text": "Woe be to는 ‘…에게 화가 있으라’는 옛 기원문입니다. do feed의 do는 ‘정말로 먹인다’는 강조입니다. themselves가 ‘자기들만’이라는 뜻을 살립니다."
+    },
+    {
+     "ref": "34:2",
+     "phrase": "should not the shepherds feed the flocks?",
+     "grammar": "부정 의문문(마땅함)",
+     "text": "should not … ?은 ‘마땅히 … 해야 하지 않느냐’는 꾸짖음입니다. 대답을 기다리는 질문이 아닙니다."
+    },
+    {
+     "ref": "34:4",
+     "phrase": "The diseased have ye not strengthened",
+     "grammar": "목적어 앞세우기(도치)",
+     "text": "목적어 The diseased(병든 것)를 앞에 두고 have ye not으로 주어와 조동사를 뒤바꿨습니다. 같은 꼴이 이 절에서 다섯 번 이어집니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "prophesy",
+     "ko": "예언하다",
+     "ref": "34:2"
+    },
+    {
+     "w": "woe",
+     "ko": "화, 재앙",
+     "ref": "34:2"
+    },
+    {
+     "w": "wool",
+     "ko": "양털",
+     "ref": "34:3"
+    },
+    {
+     "w": "diseased",
+     "ko": "질병에 걸린",
+     "ref": "34:4"
+    },
+    {
+     "w": "cruelty",
+     "ko": "잔인함",
+     "ref": "34:4"
+    },
+    {
+     "w": "scattered",
+     "ko": "흩어졌다",
+     "ref": "34:5"
+    },
+    {
+     "w": "wandered",
+     "ko": "방황했다",
+     "ref": "34:6"
+    }
+   ]
+  },
+  {
+   "ref": "34:7-10",
+   "title": "내가 목자들을 대적하노라",
+   "plain": true,
+   "marks": [
+    {
+     "v": "34:8",
+     "t": "p",
+     "ko": "목자들이 자신들만 먹고 나의 양 떼를 먹이지 아니하였기 때문이라",
+     "en": "the shepherds fed themselves, and fed not my flock"
+    },
+    {
+     "v": "34:10",
+     "t": "y",
+     "ko": "보라, 내가 목자들을 대적하노라",
+     "en": "Behold, I am against the shepherds"
+    },
+    {
+     "v": "34:10",
+     "t": "g",
+     "ko": "내가 나의 양 떼를 그들의 입에서 구출하여",
+     "en": "I will deliver my flock from their mouth"
+    }
+   ],
+   "comments": [],
+   "english": [
+    {
+     "ref": "34:8",
+     "phrase": "my flock became a prey",
+     "grammar": "become + 보어",
+     "text": "became a prey는 ‘먹이가 되었다’입니다. prey는 짐승에게 잡아먹히는 먹잇감을 말합니다."
+    },
+    {
+     "ref": "34:10",
+     "phrase": "Behold, I am against the shepherds",
+     "grammar": "be against(대적하다)",
+     "text": "be against는 ‘…을 대적하다, 맞서다’입니다. Behold는 ‘보라’라는 옛 감탄사로 뒤의 말에 눈길을 모읍니다."
+    },
+    {
+     "ref": "34:10",
+     "phrase": "cause them to cease from feeding the flock",
+     "grammar": "cause + 목적어 + to부정사",
+     "text": "cause them to cease는 ‘그들로 하여금 그치게 하다’입니다. cease from -ing는 ‘…하기를 그치다’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "prey",
+     "ko": "먹이, 먹잇감",
+     "ref": "34:8"
+    },
+    {
+     "w": "require",
+     "ko": "(책임을) 요구하다",
+     "ref": "34:10"
+    },
+    {
+     "w": "cease",
+     "ko": "그치다, 중단하다",
+     "ref": "34:10"
+    },
+    {
+     "w": "deliver",
+     "ko": "구출하다",
+     "ref": "34:10"
+    }
+   ]
+  },
+  {
+   "ref": "34:11-16",
+   "title": "내가 나의 양들을 찾아내겠노라",
+   "marks": [
+    {
+     "v": "34:11",
+     "t": "y",
+     "ko": "나, 바로 내가 나의 양들을 찾아다니기도 하고 그들을 찾아내기도 하겠노라",
+     "en": "I, even I, will both search my sheep, and seek them out"
+    },
+    {
+     "v": "34:13",
+     "t": "g",
+     "ko": "그들을 그들의 본토로 데려가서",
+     "en": "will bring them to their own land"
+    },
+    {
+     "v": "34:16",
+     "t": "g",
+     "ko": "내가 잃어버린 바 된 자를 찾고",
+     "en": "I will seek that which was lost"
+    },
+    {
+     "v": "34:16",
+     "t": "p",
+     "ko": "내가 살진 자와 강한 자는 멸하겠으니",
+     "en": "I will destroy the fat and the strong"
+    }
+   ],
+   "comments": [
+    {
+     "id": "z34-2",
+     "basis": "external",
+     "text": "스코필드는 이 대목에 ‘이스라엘이 회복되고 다윗의 왕국이 세워진다’는 소제목을 붙입니다. 또 이 구절들을 구약이 말하는 ‘왕국’ 예언의 흐름에 넣어 표시합니다. 주께서 흩어진 양들을 찾아 그들의 본토로 데려가시는 일을 앞으로 세워질 왕국과 이어서 읽는 것입니다.",
+     "spans": [
+      {
+       "text": "이스라엘이 회복되고 다윗의 왕국이 세워진다",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 에스겔 34장 소제목·난외주",
+       "where": "Ezek. 34:11 소제목과 난외주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Israel to be restored: the Davidic kingdom to be set up.\n…\nKingdom (O.T.)",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "34:11",
+     "phrase": "I, even I, will both search my sheep, and seek them out",
+     "grammar": "강조 반복 + both A and B",
+     "text": "I, even I는 ‘나, 바로 내가’라는 강조입니다. both search … and seek them out은 ‘찾아다니기도 하고 찾아내기도 하겠다’입니다. seek out은 끝까지 찾아낸다는 뜻입니다.",
+     "key": "z34-2"
+    },
+    {
+     "ref": "34:12",
+     "phrase": "As a shepherd seeketh out his flock",
+     "grammar": "비교 As … so",
+     "text": "As a shepherd …, so will I …의 꼴로 ‘목자가 … 하듯이 나도 그렇게 하겠다’는 비교입니다. seeketh는 seeks의 옛 꼴입니다."
+    },
+    {
+     "ref": "34:16",
+     "phrase": "I will feed them with judgment",
+     "grammar": "전치사 with(수단)",
+     "text": "with judgment는 ‘심판으로’입니다. 살진 자와 강한 자를 심판으로 먹이겠다는 말로, 앞의 돌봄과 대조됩니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "seeketh",
+     "ko": "찾는다(옛 3인칭)",
+     "ref": "34:12"
+    },
+    {
+     "w": "cloudy",
+     "ko": "구름 낀",
+     "ref": "34:12"
+    },
+    {
+     "w": "inhabited",
+     "ko": "사람이 사는",
+     "ref": "34:13"
+    },
+    {
+     "w": "pasture",
+     "ko": "초원",
+     "ref": "34:14"
+    },
+    {
+     "w": "fold",
+     "ko": "양우리",
+     "ref": "34:14"
+    },
+    {
+     "w": "bind",
+     "ko": "싸매다",
+     "ref": "34:16"
+    },
+    {
+     "w": "judgment",
+     "ko": "심판",
+     "ref": "34:16"
+    }
+   ]
+  },
+  {
+   "ref": "34:17-22",
+   "title": "살진 가축과 야윈 가축 사이의 심판",
+   "plain": true,
+   "marks": [
+    {
+     "v": "34:17",
+     "t": "y",
+     "ko": "내가 가축과 가축 사이를, 숫양들과 숫염소들 사이를 심판하노라",
+     "en": "I judge between cattle and cattle, between the rams and the he goats"
+    },
+    {
+     "v": "34:18",
+     "t": "p",
+     "ko": "너희가 너희의 초원들의 남은 것을 너희 발들로 짓밟아야만 하느냐?",
+     "en": "ye must tread down with your feet the residue of your pastures?"
+    },
+    {
+     "v": "34:22",
+     "t": "g",
+     "ko": "내가 나의 양 떼를 구원하겠으니",
+     "en": "will I save my flock"
+    }
+   ],
+   "comments": [],
+   "english": [
+    {
+     "ref": "34:18",
+     "phrase": "Seemeth it a small thing unto you",
+     "grammar": "의문문 도치 + 옛 3인칭",
+     "text": "Seemeth it …?는 Does it seem …?의 옛 꼴입니다. ‘그것이 너희에게 작은 일로 보이느냐’는 꾸짖는 물음입니다."
+    },
+    {
+     "ref": "34:21",
+     "phrase": "ye have thrust with side and with shoulder",
+     "grammar": "현재완료 + with(수단)",
+     "text": "have thrust는 ‘밀쳐 왔다’는 현재완료입니다. with side and with shoulder는 ‘옆구리와 어깨로’라는 수단입니다."
+    },
+    {
+     "ref": "34:22",
+     "phrase": "they shall no more be a prey",
+     "grammar": "no more + 미래",
+     "text": "shall no more be는 ‘더 이상 … 되지 않을 것이다’입니다. 앞의 my flock became a prey(8절)와 맞물립니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "rams",
+     "ko": "숫양들",
+     "ref": "34:17"
+    },
+    {
+     "w": "residue",
+     "ko": "남은 것",
+     "ref": "34:18"
+    },
+    {
+     "w": "tread",
+     "ko": "짓밟다",
+     "ref": "34:18"
+    },
+    {
+     "w": "foul",
+     "ko": "더럽히다",
+     "ref": "34:18"
+    },
+    {
+     "w": "lean",
+     "ko": "야윈",
+     "ref": "34:20"
+    },
+    {
+     "w": "thrust",
+     "ko": "밀쳤다",
+     "ref": "34:21"
+    },
+    {
+     "w": "horns",
+     "ko": "뿔들",
+     "ref": "34:21"
+    }
+   ]
+  },
+  {
+   "ref": "34:23-24",
+   "title": "한 목자, 나의 종 다윗",
+   "marks": [
+    {
+     "v": "34:23",
+     "t": "y",
+     "ko": "내가 한 목자를 그들 위에 세우겠노라",
+     "en": "I will set up one shepherd over them"
+    },
+    {
+     "v": "34:23",
+     "t": "u",
+     "ko": "바로 나의 종 다윗이라",
+     "en": "even my servant David"
+    },
+    {
+     "v": "34:24",
+     "t": "y",
+     "ko": "나 주가 그들의 하나님이 되고",
+     "en": "I the LORD will be their God"
+    }
+   ],
+   "comments": [
+    {
+     "id": "z34-3",
+     "basis": "external",
+     "text": "스코필드는 스가랴서 주석에서 예언자들이 말한 왕국을 정리하며 이 구절(34:23)을 함께 듭니다. 그 왕국은 다윗의 왕국으로, 다윗의 후손 아래 세워진다고 합니다. 그 후손은 처녀에게서 태어나므로 참사람이라고 말합니다. 또 그 왕국은 하늘에서 비롯되었지만 땅 위에 세워지고, 예루살렘이 그 수도가 된다고 설명합니다.",
+     "spans": [
+      {
+       "text": "다윗의 후손 아래 세워진다",
+       "level": 2
+      },
+      {
+       "text": "예루살렘이 그 수도가 된다",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 스가랴 12장 주석(예언자들이 말한 다윗 언약)",
+       "where": "Zech. 12:8 주석",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Davidic, to be established under an heir of David, who is to be born of a virgin, therefore truly man,\n…\nJer. 23. 5; Ezk. 34. 23; 37. 24;\n…\nA kingdom heavenly in origin, principle, and authority (Dan. 2. 34, 35, 44, 45), but set up on the earth, with Jerusalem as the capital",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "34:23",
+     "phrase": "he shall feed them, even my servant David",
+     "grammar": "동격 even",
+     "text": "even은 여기서 ‘곧, 바로’라는 뜻으로 앞의 he가 누구인지 밝힙니다. ‘그가 그들을 먹이리니, 곧 나의 종 다윗이라’입니다.",
+     "key": "z34-3"
+    },
+    {
+     "ref": "34:24",
+     "phrase": "my servant David a prince among them",
+     "grammar": "동사 생략",
+     "text": "앞 절의 will be가 생략되었습니다. my servant David (will be) a prince among them, ‘나의 종 다윗이 그들 가운데서 통치자가 될 것이다’입니다."
+    },
+    {
+     "ref": "34:24",
+     "phrase": "I the LORD have spoken it",
+     "grammar": "동격 + 현재완료",
+     "text": "I와 the LORD가 같은 분을 가리키는 동격입니다. have spoken은 이미 말했고 그 말이 서 있다는 현재완료입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "shepherd",
+     "ko": "목자",
+     "ref": "34:23"
+    },
+    {
+     "w": "servant",
+     "ko": "종",
+     "ref": "34:23"
+    },
+    {
+     "w": "prince",
+     "ko": "통치자",
+     "ref": "34:24"
+    }
+   ]
+  },
+  {
+   "ref": "34:25-31",
+   "title": "화평의 언약과 복의 소나기",
+   "marks": [
+    {
+     "v": "34:25",
+     "t": "y",
+     "ko": "내가 그들과 화평의 언약을 맺을 것이요",
+     "en": "I will make with them a covenant of peace"
+    },
+    {
+     "v": "34:26",
+     "t": "g",
+     "ko": "거기에 복의 소나기들이 있으리라",
+     "en": "there shall be showers of blessing"
+    },
+    {
+     "v": "34:28",
+     "t": "u",
+     "ko": "아무도 그들을 무섭게 하지 아니하리라",
+     "en": "none shall make them afraid"
+    },
+    {
+     "v": "34:30",
+     "t": "y",
+     "ko": "나 주 그들의 하나님이 그들과 함께 있다는 것을",
+     "en": "I the LORD their God am with them"
+    },
+    {
+     "v": "34:31",
+     "t": "u",
+     "ko": "나는 너희의 하나님이라",
+     "en": "I am your God"
+    }
+   ],
+   "comments": [
+    {
+     "id": "z34-4",
+     "basis": "external",
+     "text": "스코필드는 23절부터 30절까지를 하나로 보고, 이 말씀 전체가 아직 오지 않은 장래의 회복을 말한다고 풀이합니다. 그 까닭도 밝힙니다. 70년 뒤 포로에서 돌아온 남은 자들과 그 후손은 늘 이방인의 멍에 아래 있었습니다. 그리고 서기 70년에는 마침내 그 땅에서 쫓겨나 흩어졌고, 그 흩어짐이 지금도 이어지고 있다는 것입니다.",
+     "spans": [
+      {
+       "text": "이 말씀 전체가 아직 오지 않은 장래의 회복을 말한다",
+       "level": 3
+      },
+      {
+       "text": "늘 이방인의 멍에 아래 있었습니다",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 에스겔 34장 각주",
+       "where": "Ezek. 34:23 각주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "The whole passage (vs. 23-30) speaks of a restoration yet future, for the\n…\nwhich returned after the 70 years, and their posterity, were continually under\n…\nGentile yoke, until, in a.d. 70, they were finally driven from the land into a\n…\nwhich still continues.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    },
+    {
+     "id": "z34-5",
+     "basis": "external",
+     "text": "스코필드는 같은 스가랴서 주석에서 예언자들이 말한 왕국의 도덕적 특징이 의와 화평이라고 정리합니다. 그 왕국에서는 주를 아는 지식이 온 세상에 퍼지고, 짐승의 사나움이 없어진다고 합니다. 이 단락의 화평의 언약과, 악한 짐승들이 그 지역에서 그친다는 약속이 이 설명과 맞닿아 있습니다.",
+     "spans": [
+      {
+       "text": "의와 화평",
+       "level": 2
+      },
+      {
+       "text": "짐승의 사나움이 없어진다",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 스가랴 12장 주석(예언자들이 말한 다윗 언약)",
+       "where": "Zech. 12:8 주석",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "The moral characteristics of the kingdom are to be righteousness and peace.\n…\nthe knowledge of the Lord will be universal; beast ferocity will be",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "34:25",
+     "phrase": "I will make with them a covenant of peace",
+     "grammar": "make a covenant(언약을 맺다)",
+     "text": "make a covenant with는 ‘…와 언약을 맺다’입니다. 여기서는 with them이 앞으로 나왔습니다. of peace는 ‘화평의’입니다.",
+     "key": "z34-5"
+    },
+    {
+     "ref": "34:27",
+     "phrase": "those that served themselves of them",
+     "grammar": "관계절 + 옛 표현 serve oneself of",
+     "text": "serve oneself of는 ‘…을 부려 자기를 섬기게 하다’라는 옛 표현입니다. 이스라엘을 종처럼 부리던 자들을 가리킵니다. 현대 영어는 those who made slaves of them입니다."
+    },
+    {
+     "ref": "34:29",
+     "phrase": "I will raise up for them a plant of renown",
+     "grammar": "raise up + of(성질)",
+     "text": "raise up은 ‘일으키다’입니다. a plant of renown은 ‘이름난 초목’으로, of renown이 ‘유명한’이라는 성질을 나타냅니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "covenant",
+     "ko": "언약",
+     "ref": "34:25"
+    },
+    {
+     "w": "woods",
+     "ko": "숲, 삼림",
+     "ref": "34:25"
+    },
+    {
+     "w": "showers",
+     "ko": "소나기들",
+     "ref": "34:26"
+    },
+    {
+     "w": "yoke",
+     "ko": "멍에",
+     "ref": "34:27"
+    },
+    {
+     "w": "heathen",
+     "ko": "이교도들",
+     "ref": "34:28"
+    },
+    {
+     "w": "renown",
+     "ko": "명성",
+     "ref": "34:29"
+    },
+    {
+     "w": "consumed",
+     "ko": "소멸되다",
+     "ref": "34:29"
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "주께서는 에스겔에게 이스라엘의 목자들을 대적하여 예언하라고 하셨습니다.",
+    "verse": "34:2",
+    "u": [
+     "목자들을 대적하여"
+    ]
+   },
+   {
+    "text": "목자들은 살진 것을 먹고 양털로 옷 입었지만 양 떼를 먹이지는 않았습니다.",
+    "verse": "34:3",
+    "u": [
+     "양 떼를 먹이지는 않았습니다"
+    ]
+   },
+   {
+    "text": "목자들은 병든 양을 고치지 않고 잃어버린 양을 찾지 않았으며, 강압과 잔인함으로 다스렸습니다.",
+    "verse": "34:4",
+    "u": [
+     "강압과 잔인함"
+    ]
+   },
+   {
+    "text": "스코필드는 34장을 이스라엘의 신실하지 못한 목자들에게 주는 메시지라고 부릅니다.",
+    "key": "z34-1",
+    "u": [
+     "신실하지 못한 목자들"
+    ]
+   },
+   {
+    "text": "목자가 없어 양들은 온 땅에 흩어졌고 들짐승의 먹이가 되었습니다.",
+    "verse": "34:5",
+    "u": [
+     "들짐승의 먹이"
+    ]
+   },
+   {
+    "text": "주께서는 목자들을 대적하시고 양 떼를 그들의 입에서 구출하겠다고 하셨습니다.",
+    "verse": "34:10",
+    "u": [
+     "그들의 입에서 구출"
+    ]
+   },
+   {
+    "text": "주께서는 바로 자신이 흩어진 양들을 찾아내겠다고 하셨습니다.",
+    "verse": "34:11",
+    "u": [
+     "바로 자신이"
+    ]
+   },
+   {
+    "text": "주께서는 양들을 나라들에서 모아 그들의 본토로 데려가 이스라엘의 산들 위에서 먹이겠다고 하셨습니다.",
+    "verse": "34:13",
+    "u": [
+     "그들의 본토로"
+    ]
+   },
+   {
+    "text": "스코필드는 이 대목을 이스라엘이 회복되고 다윗의 왕국이 세워지는 일로 봅니다.",
+    "key": "z34-2",
+    "u": [
+     "다윗의 왕국"
+    ]
+   },
+   {
+    "text": "주께서는 잃어버린 자를 찾고 부러진 자를 싸매 주겠지만, 살진 자와 강한 자는 멸하겠다고 하셨습니다.",
+    "verse": "34:16",
+    "u": [
+     "살진 자와 강한 자는 멸하겠다"
+    ]
+   },
+   {
+    "text": "주께서는 가축과 가축 사이, 살진 가축과 야윈 가축 사이를 심판하겠다고 하셨습니다.",
+    "verse": "34:20",
+    "u": [
+     "야윈 가축 사이"
+    ]
+   },
+   {
+    "text": "주께서는 한 목자, 곧 나의 종 다윗을 그들 위에 세우겠다고 하셨습니다.",
+    "verse": "34:23",
+    "u": [
+     "나의 종 다윗"
+    ]
+   },
+   {
+    "text": "스코필드는 예언자들이 말한 왕국이 다윗의 후손 아래 땅 위에 세워지고 예루살렘이 수도가 된다고 정리합니다.",
+    "key": "z34-3",
+    "u": [
+     "예루살렘이 수도"
+    ]
+   },
+   {
+    "text": "주께서는 그들과 화평의 언약을 맺고 악한 짐승들이 그 지역에서 그치게 하겠다고 하셨습니다.",
+    "verse": "34:25",
+    "u": [
+     "화평의 언약"
+    ]
+   },
+   {
+    "text": "주께서는 제때에 소나기가 내리게 하시고 복의 소나기들이 있으리라고 하셨습니다.",
+    "verse": "34:26",
+    "u": [
+     "복의 소나기들"
+    ]
+   },
+   {
+    "text": "스코필드는 23–30절 전체가 아직 오지 않은 장래의 회복을 말한다고 풀이합니다.",
+    "key": "z34-4",
+    "u": [
+     "장래의 회복"
+    ]
+   },
+   {
+    "text": "스코필드는 그 왕국의 도덕적 특징이 의와 화평이며 짐승의 사나움이 없어진다고 합니다.",
+    "key": "z34-5",
+    "u": [
+     "의와 화평"
+    ]
+   },
+   {
+    "text": "그들은 더 이상 이교도들의 먹이가 되지 않고 안전하게 거하며, 아무도 그들을 무섭게 하지 못합니다.",
+    "verse": "34:28",
+    "u": [
+     "안전하게 거하며"
+    ]
+   },
+   {
+    "text": "주께서는 양 떼인 그들이 사람들이며 자신이 그들의 하나님이라고 하셨습니다.",
+    "verse": "34:31",
+    "u": [
+     "그들의 하나님"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "34:2",
+    "q": "주께서는 에스겔에게 누구를 대적하여 예언하라고 하셨습니까?",
+    "a": "이스라엘의 목자들"
+   },
+   {
+    "verse": "34:2",
+    "q": "목자들은 누구에게만 먹을 것을 공급했습니까?",
+    "a": "자신들에게만"
+   },
+   {
+    "verse": "34:3",
+    "q": "목자들은 무엇으로 자기들을 옷 입혔습니까?",
+    "a": "양털"
+   },
+   {
+    "verse": "34:4",
+    "q": "목자들은 무엇으로 양들을 다스렸습니까?",
+    "a": "강압과 잔인함"
+   },
+   {
+    "verse": "34:5",
+    "q": "양들이 흩어진 까닭은 무엇입니까?",
+    "a": "목자가 없는 까닭"
+   },
+   {
+    "verse": "34:6",
+    "q": "양들은 어디에서 방황했습니까?",
+    "a": "모든 산들에 걸쳐, 모든 높은 언덕마다"
+   },
+   {
+    "key": "z34-1",
+    "q": "스코필드는 34장에 어떤 제목을 붙입니까?",
+    "a": "이스라엘의 신실하지 못한 목자들에게 주는 메시지"
+   },
+   {
+    "verse": "34:10",
+    "q": "주께서 목자들의 손에 요구하시겠다고 한 것은 무엇입니까?",
+    "a": "나의 양 떼"
+   },
+   {
+    "verse": "34:10",
+    "q": "주께서 양 떼를 구출하시겠다고 한 곳은 어디입니까?",
+    "a": "그들의 입에서"
+   },
+   {
+    "verse": "34:12",
+    "q": "주께서는 흩어진 양들을 어떤 날에 흩어진 모든 장소에서 구출하겠다고 하셨습니까?",
+    "a": "구름이 껴서 흐리고 어두운 날"
+   },
+   {
+    "verse": "34:13",
+    "q": "주께서는 양들을 모아 어디로 데려가겠다고 하셨습니까?",
+    "a": "그들의 본토"
+   },
+   {
+    "verse": "34:14",
+    "q": "그들의 양우리는 어디가 됩니까?",
+    "a": "이스라엘의 높은 산들 위"
+   },
+   {
+    "key": "z34-2",
+    "q": "스코필드는 34장 11절 이하에 어떤 소제목을 붙입니까?",
+    "a": "이스라엘이 회복되고 다윗의 왕국이 세워진다"
+   },
+   {
+    "verse": "34:16",
+    "q": "주께서 찾고 다시 데려오겠다고 하신 자는 각각 누구입니까?",
+    "a": "잃어버린 바 된 자, 내몰린 자"
+   },
+   {
+    "verse": "34:16",
+    "q": "주께서 멸하겠다고 하신 자는 누구입니까?",
+    "a": "살진 자와 강한 자"
+   },
+   {
+    "verse": "34:17",
+    "q": "주께서는 숫양들과 무엇 사이를 심판하신다고 하셨습니까?",
+    "a": "숫염소들"
+   },
+   {
+    "verse": "34:18",
+    "q": "살진 가축들은 초원의 남은 것을 어떻게 했습니까?",
+    "a": "발들로 짓밟아야만"
+   },
+   {
+    "verse": "34:21",
+    "q": "살진 가축들은 무엇으로 병든 것들을 밀어냈습니까?",
+    "a": "뿔들"
+   },
+   {
+    "verse": "34:23",
+    "q": "주께서 양 떼 위에 세우실 한 목자는 누구입니까?",
+    "a": "나의 종 다윗"
+   },
+   {
+    "verse": "34:24",
+    "q": "나의 종 다윗은 그들 가운데서 무엇이 됩니까?",
+    "a": "통치자"
+   },
+   {
+    "key": "z34-3",
+    "q": "스코필드에 따르면 예언자들이 말한 왕국의 수도는 어디입니까?",
+    "a": "예루살렘"
+   },
+   {
+    "key": "z34-3",
+    "q": "스코필드는 다윗의 후손이 참사람인 까닭을 무엇이라고 합니까?",
+    "a": "처녀에게서 태어나기 때문"
+   },
+   {
+    "verse": "34:25",
+    "q": "주께서 그들과 맺으실 언약은 무엇입니까?",
+    "a": "화평의 언약"
+   },
+   {
+    "verse": "34:25",
+    "q": "그들은 어디에서 잠을 자게 됩니까?",
+    "a": "삼림들 가운데서"
+   },
+   {
+    "verse": "34:26",
+    "q": "그곳에 어떤 소나기들이 있게 됩니까?",
+    "a": "복의 소나기들"
+   },
+   {
+    "verse": "34:29",
+    "q": "주께서 그들을 위하여 일으키실 것은 무엇입니까?",
+    "a": "한 유명한 초목"
+   },
+   {
+    "key": "z34-4",
+    "q": "스코필드는 23–30절이 무엇을 말한다고 풀이합니까?",
+    "a": "아직 오지 않은 장래의 회복"
+   },
+   {
+    "key": "z34-4",
+    "q": "스코필드에 따르면 포로에서 돌아온 남은 자들과 그 후손은 어떤 처지였습니까?",
+    "a": "늘 이방인의 멍에 아래 있었고, 서기 70년에 그 땅에서 쫓겨나 흩어졌다"
+   },
+   {
+    "key": "z34-5",
+    "q": "스코필드가 말하는 왕국의 도덕적 특징 두 가지는 무엇입니까?",
+    "a": "의와 화평"
+   },
+   {
+    "verse": "34:31",
+    "q": "주께서는 나의 초원의 양 떼가 무엇이라고 하셨습니까?",
+    "a": "사람들"
+   }
+  ],
+  "faq": [
+   {
+    "q": "34장의 목자들은 누구에게 하신 말씀인가요?",
+    "key": "z34-1"
+   },
+   {
+    "q": "목자들이 무엇을 잘못했나요?",
+    "key": "z34-1"
+   },
+   {
+    "q": "흩어진 양들을 찾으시는 말씀은 무엇과 이어지나요?",
+    "key": "z34-2"
+   },
+   {
+    "q": "주께서 양들을 본토로 데려가신다는 말씀은 언제 이루어지나요?",
+    "key": "z34-2"
+   },
+   {
+    "q": "‘나의 종 다윗’을 세우신다는 말씀은 어떻게 읽나요?",
+    "key": "z34-3"
+   },
+   {
+    "q": "그 왕국은 어디에 세워지나요?",
+    "key": "z34-3"
+   },
+   {
+    "q": "34장의 회복 약속은 포로에서 돌아왔을 때 이루어진 것인가요?",
+    "key": "z34-4"
+   },
+   {
+    "q": "포로에서 돌아온 이스라엘은 그 뒤에 어떻게 되었나요?",
+    "key": "z34-4"
+   },
+   {
+    "q": "화평의 언약은 어떤 왕국과 이어지나요?",
+    "key": "z34-5"
+   },
+   {
+    "q": "악한 짐승들이 그친다는 말은 무슨 뜻인가요?",
+    "key": "z34-5"
+   },
+   {
+    "q": "이 회복은 아직 오지 않은 일인가요?",
+    "key": "z34-4"
+   },
+   {
+    "q": "다윗의 왕국을 세우는 분은 어떤 분인가요?",
+    "key": "z34-3"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "목자",
+    "verse": "34:2",
+    "text": "양 떼를 먹이고 돌보는 사람입니다. 이 장에서는 이스라엘을 이끌던 자들을 목자로, 백성을 양 떼로 부릅니다."
+   },
+   {
+    "term": "양우리",
+    "verse": "34:14",
+    "text": "양들이 눕고 쉬는 울타리 친 곳입니다."
+   },
+   {
+    "term": "화평의 언약",
+    "verse": "34:25",
+    "text": "주께서 그들과 맺겠다고 하신 언약입니다. 악한 짐승들이 그치고 그들이 안전하게 거하게 됩니다."
+   },
+   {
+    "term": "멍에",
+    "verse": "34:27",
+    "text": "소의 목에 얹어 일을 시키는 나무 틀입니다. 남에게 매여 종처럼 부림당하는 처지를 뜻하기도 합니다."
+   },
+   {
+    "term": "이교도",
+    "verse": "34:28",
+    "text": "주를 섬기지 않는 다른 나라 사람들입니다."
+   },
+   {
+    "term": "장래의 회복",
+    "key": "z34-4",
+    "text": "스코필드가 34장 23–30절을 두고 한 말로, 아직 오지 않은 미래에 이스라엘이 회복된다는 뜻입니다."
+   }
+  ]
+ }
+}
