@@ -17,6 +17,9 @@ export const BOOKS = {
   "2sam": { ko: "사무엘하", en: "2 SAMUEL", chapters: 24, dir: "사무엘상·하", src: "사무엘상·하/원본/2판", verses: "사무엘상·하/원본/2판/verses-2sam.json", json: (n) => `2sam-${String(n).padStart(2, "0")}.json`, out: (n) => `사무엘하_${String(n).padStart(2, "0")}장_교재`, all: "사무엘하_합본_교재", scofield: "2-samuel" },
   "1ki": { ko: "열왕기상", en: "1 KINGS", chapters: 22, dir: "열왕기상·하", src: "열왕기상·하/원본/2판", verses: "열왕기상·하/원본/2판/verses-1ki.json", json: (n) => `1ki-${String(n).padStart(2, "0")}.json`, out: (n) => `열왕기상_${String(n).padStart(2, "0")}장_교재`, all: "열왕기상_합본_교재", scofield: "1-kings" },
   "2ki": { ko: "열왕기하", en: "2 KINGS", chapters: 25, dir: "열왕기상·하", src: "열왕기상·하/원본/2판", verses: "열왕기상·하/원본/2판/verses-2ki.json", json: (n) => `2ki-${String(n).padStart(2, "0")}.json`, out: (n) => `열왕기하_${String(n).padStart(2, "0")}장_교재`, all: "열왕기하_합본_교재", scofield: "2-kings" },
+  exod: { ko: "출애굽기", en: "EXODUS", chapters: 40, dir: "출애굽기", src: "출애굽기/원본/2판", verses: "출애굽기/원본/2판/verses-exod.json", json: (n) => `exod-${String(n).padStart(2, "0")}.json`, out: (n) => `출애굽기_${String(n).padStart(2, "0")}장_교재`, all: "출애굽기_합본_교재", scofield: "exodus" },
+  judg: { ko: "사사기", en: "JUDGES", chapters: 21, dir: "사사기", src: "사사기/원본/2판", verses: "사사기/원본/2판/verses-judg.json", json: (n) => `judg-${String(n).padStart(2, "0")}.json`, out: (n) => `사사기_${String(n).padStart(2, "0")}장_교재`, all: "사사기_합본_교재", scofield: "judges" },
+  job: { ko: "욥기", en: "JOB", chapters: 42, dir: "욥기", src: "욥기/원본/2판", verses: "욥기/원본/2판/verses-job.json", json: (n) => `job-${String(n).padStart(2, "0")}.json`, out: (n) => `욥기_${String(n).padStart(2, "0")}장_교재`, all: "욥기_합본_교재", scofield: "job" },
 };
 
 // 외부 모듈은 저장소 밖 %TEMP%/topicbook/node_modules에서 읽는다(README 빌드 환경 메모)
@@ -106,7 +109,8 @@ export function pdfPage(file, page) {
   return pdfIndex[file]?.content.find((p) => p.page === page)?.text ?? null;
 }
 // 원고·PDF 색인에는 폴더 이름을 바꾸기 전 경로(Theme/, Milk/, Samuel/)가 남아 있다 — 디스크에서는 새 폴더로 찾는다(2026-11-02)
-export const diskPath = (f) => { for (const [a, b] of [["Theme/", "첫열매들 강의 정리/"], ["Milk/", "밀크(첫열매들)/"], ["Samuel/", "사무엘상·하/"]]) if (f.startsWith(a)) return b + f.slice(a.length); return f; };
+// 주제별 교재 완성본은 2026-11-04부터 파일 이름에 번호(NN_)가 없다 — 옛 이름(Theme/08_사탄_정확히_알기.pdf)이면 번호를 떼어 찾는다
+export const diskPath = (f) => { for (const [a, b] of [["Theme/", "첫열매들 강의 정리/"], ["Milk/", "밀크(첫열매들)/"], ["Samuel/", "사무엘상·하/"]]) if (f.startsWith(a)) { const p = b + f.slice(a.length); if (a === "Theme/" && !fs.existsSync(path.join(R, p))) { const q = p.replace(/\/\d{2}_([^/]+)$/, "/$1"); if (fs.existsSync(path.join(R, q))) return q; } return p; } return f; };
 export const squash = (s) => String(s).replace(/\s+/g, " ").trim();
 export const ffFile = (f) => f.startsWith("memory-bank/첫열매들_강의스크립트/");
 // 원고에는 폴더 이름을 바꾸기 전 경로(Samuel/강의스크립트/)가 남아 있다 — 둘 다 3순위로 본다(2026-10-31)

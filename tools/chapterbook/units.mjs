@@ -16,6 +16,9 @@ const SPEC = {
   "2sam": { dir: "사무엘상·하/원본/단원", list: "units-2sam.json", file: (n) => `2sam-unit${n}.json` },
   "1ki": { dir: "열왕기상·하/원본/단원", list: "units-1ki.json", file: (n) => `1ki-unit${n}.json` },
   "2ki": { dir: "열왕기상·하/원본/단원", list: "units-2ki.json", file: (n) => `2ki-unit${n}.json` },
+  exod: { dir: "출애굽기/원본/단원", list: "units-exod.json", file: (n) => `exod-unit${n}.json` },
+  judg: { dir: "사사기/원본/단원", list: "units-judg.json", file: (n) => `judg-unit${n}.json` },
+  job: { dir: "욥기/원본/단원", list: "units-job.json", file: (n) => `job-unit${n}.json` },
 };
 let BOOK = "genesis";
 export let UNITS;

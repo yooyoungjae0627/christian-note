@@ -151,7 +151,7 @@ if (rest[0] === "unit") {
   // 합본: all [시작-끝 권번호]  예) all 1-13 1  → 창세기_합본_1-1권(01-13장)
   const [r0, r1] = (rest[1] || `1-${B.chapters}`).split("-").map(Number); const vol = rest[2];
   const chs = [...Array(r1 - r0 + 1)].map((_, i) => r0 + i);
-  const bookNo = { genesis: 1, "1sam": 2, "2sam": 3, "1ki": 4, "2ki": 5 }[book];
+  const bookNo = { genesis: 1, "1sam": 2, "2sam": 3, "1ki": 4, "2ki": 5, exod: 6, judg: 7, job: 8 }[book];
   const pad = (n) => String(n).padStart(2, "0");
   const allName = vol ? `${B.ko}_합본_${bookNo}-${vol}권(${pad(r0)}-${pad(r1)}장)` : B.all;
   const ds = chs.map((c) => loadChapter(book, c));

@@ -4,7 +4,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { R } from "./lib.mjs";
-const BOOKS = [["genesis", 50, "창세기/원본/2판/verses-genesis-web.json"], ["1 samuel", 31, "사무엘상·하/원본/2판/verses-1sam-web.json"], ["2 samuel", 24, "사무엘상·하/원본/2판/verses-2sam-web.json"], ["1 kings", 22, "열왕기상·하/원본/2판/verses-1ki-web.json"], ["2 kings", 25, "열왕기상·하/원본/2판/verses-2ki-web.json"]];
+const BOOKS = [["genesis", 50, "창세기/원본/2판/verses-genesis-web.json"], ["1 samuel", 31, "사무엘상·하/원본/2판/verses-1sam-web.json"], ["2 samuel", 24, "사무엘상·하/원본/2판/verses-2sam-web.json"], ["1 kings", 22, "열왕기상·하/원본/2판/verses-1ki-web.json"], ["2 kings", 25, "열왕기상·하/원본/2판/verses-2ki-web.json"], ["exodus", 40, "출애굽기/원본/2판/verses-exod-web.json"], ["judges", 21, "사사기/원본/2판/verses-judg-web.json"], ["job", 42, "욥기/원본/2판/verses-job-web.json"]];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 for (const [book, n, out] of BOOKS) {
   const file = path.join(R, out);
