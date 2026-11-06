@@ -1,0 +1,1102 @@
+{
+ "chapter": 15,
+ "subtitle": "여우 삼백 마리와 나귀 턱뼈",
+ "motto": "뼈다귀 하나 들고 천 명을 죽인 것이고, 실제로 일어난 일입니다",
+ "motto_comment": "j15-1",
+ "cover": [
+  {
+   "m": "sheaf",
+   "x": 85,
+   "y": 280,
+   "s": 0.9
+  },
+  {
+   "m": "hand",
+   "x": 175,
+   "y": 245,
+   "s": 0.9
+  },
+  {
+   "m": "well",
+   "x": 260,
+   "y": 280,
+   "s": 0.85
+  },
+  {
+   "m": "mountain",
+   "x": 175,
+   "y": 120,
+   "s": 0.8
+  }
+ ],
+ "people": [
+  {
+   "id": "lord",
+   "name": "주(하나님)",
+   "role": "god",
+   "gen": 0,
+   "desc": "레히에서 주의 영이 삼손 위에 막강하게 임하셨습니다. 목이 말라 부르짖는 삼손을 위해 하나님께서 턱뼈의 우묵한 곳을 쪼개 물이 나오게 하셨습니다.",
+   "refs": [
+    "15:14",
+    "15:18",
+    "15:19"
+   ],
+   "part": "물을 내신 분",
+   "intro": "주의 영이 임하심 · 물을 내어 주심"
+  },
+  {
+   "id": "fatherinlaw",
+   "name": "삼손의 장인",
+   "gen": 0,
+   "look": "old",
+   "desc": "팀나족 사람입니다. 삼손이 딸을 증오한 줄 알고 딸을 삼손의 벗에게 주었고, 대신 여동생을 데려가라고 했습니다. 나중에 필리스티아인들에게 딸과 함께 불태워졌습니다.",
+   "refs": [
+    "15:2",
+    "15:6"
+   ],
+   "part": "딸을 다른 이에게 준 장인",
+   "intro": "팀나족 장인 · 딸을 벗에게 줌"
+  },
+  {
+   "id": "wife",
+   "name": "삼손의 아내",
+   "gen": 1,
+   "look": "woman",
+   "desc": "아버지가 삼손의 벗에게 준 여자입니다. 삼손이 필리스티아인들의 곡식을 불태우자, 필리스티아인들이 올라와 그녀와 그녀의 아버지를 불로 태웠습니다.",
+   "refs": [
+    "15:1",
+    "15:6"
+   ],
+   "part": "불태워진 아내",
+   "intro": "벗에게 주어진 아내 · 불에 태워짐"
+  },
+  {
+   "id": "sister",
+   "name": "아내의 여동생",
+   "gen": 1,
+   "look": "woman",
+   "desc": "장인이 언니보다 더 어여쁘니 대신 아내로 취하라고 삼손에게 내놓은 여동생입니다.",
+   "refs": [
+    "15:2"
+   ],
+   "part": "대신 내놓은 여동생",
+   "intro": "아내의 여동생 · 대신 내놓아짐"
+  },
+  {
+   "id": "samson",
+   "name": "삼손",
+   "en": "Samson",
+   "gen": 1,
+   "look": "man",
+   "desc": "여우 삼백 마리로 필리스티아인들의 곡식밭을 태웠고, 레히에서 나귀의 새 턱뼈로 일천 명을 죽였습니다. 필리스티아인들의 날들에 이십 년 동안 이스라엘을 재판했습니다.",
+   "refs": [
+    "15:4",
+    "15:15",
+    "15:20"
+   ],
+   "part": "턱뼈로 천 명을 친 사람",
+   "intro": "여우로 밭을 태움 · 턱뼈로 천 명"
+  },
+  {
+   "id": "philistines",
+   "name": "필리스티아인들",
+   "role": "enemy",
+   "gen": 2,
+   "look": "group",
+   "desc": "삼손의 아내와 장인을 불태웠고, 삼손을 결박하려고 유다에 올라와 레히에 진을 쳤습니다.",
+   "refs": [
+    "15:6",
+    "15:9",
+    "15:10"
+   ],
+   "part": "삼손의 원수",
+   "intro": "아내를 불태운 원수 · 레히에 진침"
+  },
+  {
+   "id": "judah",
+   "name": "유다 사람 삼천 명",
+   "gen": 2,
+   "look": "group",
+   "desc": "필리스티아인들이 자기들을 다스린다며 에탐 바위로 내려가, 두 개의 새 끈으로 삼손을 결박해 필리스티아인들에게 넘겼습니다.",
+   "refs": [
+    "15:11",
+    "15:13"
+   ],
+   "part": "삼손을 묶어 넘긴 무리",
+   "intro": "유다의 삼천 명 · 삼손을 묶어 넘김"
+  }
+ ],
+ "relations": [
+  {
+   "from": "lord",
+   "to": "samson",
+   "type": "god",
+   "label": "영이 임함·물을 내심",
+   "ref": "15:19",
+   "directed": true
+  },
+  {
+   "from": "fatherinlaw",
+   "to": "wife",
+   "type": "parent",
+   "label": "딸",
+   "ref": "15:2",
+   "directed": true
+  },
+  {
+   "from": "fatherinlaw",
+   "to": "sister",
+   "type": "parent",
+   "label": "딸",
+   "ref": "15:2",
+   "directed": true
+  },
+  {
+   "from": "samson",
+   "to": "wife",
+   "type": "spouse",
+   "label": "아내",
+   "ref": "15:1",
+   "directed": false
+  },
+  {
+   "from": "philistines",
+   "to": "wife",
+   "type": "enemy",
+   "label": "불태움",
+   "ref": "15:6",
+   "directed": true
+  },
+  {
+   "from": "philistines",
+   "to": "samson",
+   "type": "enemy",
+   "label": "결박하려 함",
+   "ref": "15:10",
+   "directed": true
+  },
+  {
+   "from": "judah",
+   "to": "samson",
+   "type": "other",
+   "label": "결박해 넘김",
+   "ref": "15:13",
+   "directed": true
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "judah-15",
+    "name": "유다",
+    "at": [
+     35.1,
+     31.6
+    ],
+    "area": true,
+    "ref": "15:9"
+   }
+  ],
+  "minSpan": 0.8,
+  "unknown": [
+   {
+    "name": "에탐 바위",
+    "ref": "15:8",
+    "note": "삼손이 지낸 바위 꼭대기로, 유다 땅에 있었다고만 나옵니다."
+   },
+   {
+    "name": "레히(라맛레히)",
+    "ref": "15:9",
+    "note": "필리스티아인들이 유다에 진을 친 곳으로, 정확한 자리는 표시하지 않았습니다."
+   },
+   {
+    "name": "엔학코레",
+    "ref": "15:19",
+    "note": "레히 안에 있는 샘입니다."
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "15:1-5",
+   "title": "여우 삼백 마리와 불타는 곡식밭",
+   "marks": [
+    {
+     "v": "15:2",
+     "t": "u",
+     "ko": "내가 그녀를 그대의 벗에게 주었도다",
+     "en": "I gave her to thy companion"
+    },
+    {
+     "v": "15:3",
+     "t": "u",
+     "ko": "그들보다 흠이 덜하리라",
+     "en": "Now shall I be more blameless than the Philistines"
+    },
+    {
+     "v": "15:4",
+     "t": "u",
+     "ko": "삼백 마리의 여우들을 잡았고",
+     "en": "caught three hundred foxes"
+    },
+    {
+     "v": "15:5",
+     "t": "p",
+     "ko": "곡식 더미들과 베지 않은 곡식도 모두 포도원들과 올리브들과 함께 태워 버렸더라",
+     "en": "burnt up both the shocks, and also the standing corn, with the vineyards and olives"
+    }
+   ],
+   "english": [
+    {
+     "ref": "15:2",
+     "phrase": "I verily thought that thou hadst utterly hated her",
+     "grammar": "과거완료 hadst hated",
+     "text": "hadst는 had의 옛 2인칭 꼴입니다. thought(생각했다)보다 앞선 때에 ‘이미 미워했다’고 여겼다는 뜻입니다. verily(진실로)와 utterly(아주)가 말을 세게 합니다."
+    },
+    {
+     "ref": "15:3",
+     "phrase": "Now shall I be more blameless than the Philistines, though I do them a displeasure",
+     "grammar": "비교급 more ~ than · 양보 though",
+     "text": "more blameless than은 ‘~보다 더 흠이 없는’입니다. though는 ‘비록 ~할지라도’라는 양보의 접속사입니다."
+    },
+    {
+     "ref": "15:4",
+     "phrase": "turned tail to tail",
+     "grammar": "명사 + to + 명사(맞대어)",
+     "text": "tail to tail은 ‘꼬리와 꼬리를 맞대어’라는 뜻입니다. face to face(얼굴과 얼굴을 마주하여)와 같은 꼴입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "harvest",
+     "ko": "수확",
+     "ref": "15:1"
+    },
+    {
+     "w": "chamber",
+     "ko": "침실, 방",
+     "ref": "15:1"
+    },
+    {
+     "w": "suffer",
+     "ko": "허락하다(옛 뜻)",
+     "ref": "15:1"
+    },
+    {
+     "w": "blameless",
+     "ko": "흠이 없는",
+     "ref": "15:3"
+    },
+    {
+     "w": "displeasure",
+     "ko": "불쾌한 일",
+     "ref": "15:3"
+    },
+    {
+     "w": "foxes",
+     "ko": "여우들",
+     "ref": "15:4"
+    },
+    {
+     "w": "firebrands",
+     "ko": "불 붙은 나뭇조각들",
+     "ref": "15:4"
+    },
+    {
+     "w": "shocks",
+     "ko": "곡식 더미들",
+     "ref": "15:5"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "15:6-8",
+   "title": "불태워진 아내와 삼손의 복수",
+   "marks": [
+    {
+     "v": "15:6",
+     "t": "p",
+     "ko": "필리스티아인들이 올라와서 그녀와 그녀의 아버지를 불로 태웠더라",
+     "en": "the Philistines came up, and burnt her and her father with fire"
+    },
+    {
+     "v": "15:7",
+     "t": "u",
+     "ko": "여전히 내가 너희들에게 복수가 이루어지게 하겠노라",
+     "en": "yet will I be avenged of you"
+    },
+    {
+     "v": "15:8",
+     "t": "u",
+     "ko": "아주 커다란 살육으로 사정없이 그들을 쳤더라",
+     "en": "he smote them hip and thigh with a great slaughter"
+    }
+   ],
+   "english": [
+    {
+     "ref": "15:6",
+     "phrase": "Who hath done this?",
+     "grammar": "옛 3인칭 hath",
+     "text": "hath는 has의 옛 꼴입니다. Who hath done this?는 ‘누가 이런 짓을 하였느냐’, 현대 영어로 Who has done this?입니다."
+    },
+    {
+     "ref": "15:7",
+     "phrase": "yet will I be avenged of you, and after that I will cease",
+     "grammar": "도치 will I · 수동 be avenged",
+     "text": "will I는 강조를 위해 주어와 조동사의 자리를 바꾼 꼴입니다. be avenged of you는 ‘너희에게 원수를 갚다’, cease는 ‘그치다’입니다."
+    },
+    {
+     "ref": "15:8",
+     "phrase": "he smote them hip and thigh",
+     "grammar": "관용구 hip and thigh",
+     "text": "smote는 smite(치다)의 과거형입니다. hip and thigh(엉덩이와 넓적다리)는 ‘사정없이, 철저하게’라는 뜻의 관용구입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "avenged",
+     "ko": "복수를 이룬",
+     "ref": "15:7"
+    },
+    {
+     "w": "cease",
+     "ko": "그치다",
+     "ref": "15:7"
+    },
+    {
+     "w": "smote",
+     "ko": "쳤다(smite의 과거)",
+     "ref": "15:8"
+    },
+    {
+     "w": "thigh",
+     "ko": "넓적다리",
+     "ref": "15:8"
+    },
+    {
+     "w": "slaughter",
+     "ko": "살육",
+     "ref": "15:8"
+    },
+    {
+     "w": "dwelt",
+     "ko": "지냈다, 거주했다",
+     "ref": "15:8"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "15:9-13",
+   "title": "유다 사람들에게 묶인 삼손",
+   "marks": [
+    {
+     "v": "15:11",
+     "t": "u",
+     "ko": "필리스티아인들이 우리를 다스리는 치리자들임을 너는 모르느냐",
+     "en": "Knowest thou not that the Philistines are rulers over us"
+    },
+    {
+     "v": "15:11",
+     "t": "u",
+     "ko": "그들이 나에게 행한 대로 나도 그렇게 그들에게 행하였도다",
+     "en": "As they did unto me, so have I done unto them"
+    },
+    {
+     "v": "15:13",
+     "t": "u",
+     "ko": "두 개의 새 끈들로 그를 결박하였고",
+     "en": "they bound him with two new cords"
+    }
+   ],
+   "english": [
+    {
+     "ref": "15:10",
+     "phrase": "To bind Samson are we come up",
+     "grammar": "도치(목적 강조) · be come",
+     "text": "보통 순서는 we are come up to bind Samson입니다. 목적을 앞에 두어 강조했습니다. are come은 have come의 옛 꼴입니다."
+    },
+    {
+     "ref": "15:11",
+     "phrase": "As they did unto me, so have I done unto them",
+     "grammar": "As ~, so ~(~한 대로 그렇게)",
+     "text": "As … so …는 ‘~한 대로 그렇게’라는 짝 구문입니다. 받은 대로 갚았다는 삼손의 말입니다."
+    },
+    {
+     "ref": "15:12",
+     "phrase": "Swear unto me, that ye will not fall upon me yourselves",
+     "grammar": "명령문 + that절",
+     "text": "Swear unto me는 ‘내게 맹세하라’는 명령입니다. that 뒤에 맹세할 내용이 옵니다. fall upon은 ‘덮치다’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "pitched",
+     "ko": "진을 쳤다",
+     "ref": "15:9"
+    },
+    {
+     "w": "bind",
+     "ko": "결박하다, 묶다",
+     "ref": "15:10"
+    },
+    {
+     "w": "rulers",
+     "ko": "다스리는 자들",
+     "ref": "15:11"
+    },
+    {
+     "w": "swear",
+     "ko": "맹세하다",
+     "ref": "15:12"
+    },
+    {
+     "w": "cords",
+     "ko": "끈들",
+     "ref": "15:13"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "15:14-17",
+   "title": "나귀의 턱뼈로 친 일천 명",
+   "marks": [
+    {
+     "v": "15:14",
+     "t": "u",
+     "ko": "주의 영이 그의 위에 막강하게 임하셨으니",
+     "en": "the Spirit of the LORD came mightily upon him"
+    },
+    {
+     "v": "15:14",
+     "t": "u",
+     "ko": "그의 포박들이 그의 두 손에서 풀려 떨어졌더라",
+     "en": "his bands loosed from off his hands"
+    },
+    {
+     "v": "15:15",
+     "t": "u",
+     "ko": "나귀의 새 턱뼈를 발견하였으니",
+     "en": "he found a new jawbone of an ass"
+    },
+    {
+     "v": "15:15",
+     "t": "u",
+     "ko": "그것으로 일천 명의 사람들을 살해하였더라",
+     "en": "slew a thousand men therewith"
+    },
+    {
+     "v": "15:17",
+     "t": "u",
+     "ko": "그 장소를 라맛레히라 불렀더라",
+     "en": "called that place Ramathlehi"
+    }
+   ],
+   "english": [
+    {
+     "ref": "15:14",
+     "phrase": "the cords that were upon his arms became as flax that was burnt with fire",
+     "grammar": "관계대명사 that · 비유 as",
+     "text": "the cords that were upon his arms는 ‘그의 팔에 있던 끈들’입니다. became as flax는 ‘아마풀같이 되었다’는 비유로, 끈이 불탄 풀처럼 힘없이 풀렸다는 뜻입니다."
+    },
+    {
+     "ref": "15:15",
+     "phrase": "slew a thousand men therewith",
+     "grammar": "옛 부사 therewith",
+     "text": "therewith는 with it(그것으로)의 옛 꼴입니다. 바로 앞의 턱뼈를 가리킵니다."
+    },
+    {
+     "ref": "15:16",
+     "phrase": "heaps upon heaps",
+     "grammar": "반복 강조 A upon A",
+     "text": "heaps upon heaps는 ‘무더기 위에 무더기’라는 뜻으로, 쓰러진 사람이 얼마나 많았는지를 같은 낱말을 겹쳐 강조합니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "shouted",
+     "ko": "함성을 질렀다",
+     "ref": "15:14"
+    },
+    {
+     "w": "flax",
+     "ko": "아마(풀)",
+     "ref": "15:14"
+    },
+    {
+     "w": "loosed",
+     "ko": "풀렸다",
+     "ref": "15:14"
+    },
+    {
+     "w": "jawbone",
+     "ko": "턱뼈",
+     "ref": "15:15"
+    },
+    {
+     "w": "therewith",
+     "ko": "그것으로",
+     "ref": "15:15"
+    },
+    {
+     "w": "heaps",
+     "ko": "무더기들",
+     "ref": "15:16"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j15-1",
+     "basis": "direct",
+     "text": "강의는 삼손의 많은 일화 가운데 대표적인 것 하나로 15장 15절을 읽습니다. 우리는 과장할 때 ‘일당백’이라는 말까지는 쓰지만, ‘일당천’이라는 말은 너무 심해서 쓰지 않습니다. 그런데 삼손은 천 명을 죽였습니다. 강의는 특히 이렇게 연대순(chronological)으로 사실을 기록한 성경의 책에서 이것은 과장이 아니라고 말합니다. 뼈다귀 하나 들고 천 명을 죽인 것이고, 실제로 일어난 일입니다.",
+     "spans": [
+      {
+       "text": "뼈다귀 하나 들고 천 명을 죽인 것이고, 실제로 일어난 일입니다",
+       "level": 3
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「겁쟁이들의 하나님」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/61_겁쟁이들의_하나님.md",
+       "time": "43:45",
+       "to": "44:52",
+       "excerpt": "너무나 많은 일화가 나오지만요 대표적인 거 하나만 읽어보겠습니다 15장 15절 한번 볼게요 우리가 뭐 아주 과장된 이야기에서 일당백까지는 들어봤죠 ‘일당백이야’ 뭐 이런 말까지 들어봤는데 여러분 일당천 들어보신 적 있어요? 이거는 과장을 해도 너무 심해서 이런 말은 안 쓰죠 일당백 정도가 우리가 쓰는 표현의 한계죠 삼손이 몇 명 죽였어요? 천 명이요 성경에는 특히 이런 chronological 사실을 기록한 책들은 이거 과장이에요? 천 명 죽인 겁니다 뼈다귀 하나 들고 천 명 죽여버린 거예요 천 명을 어떻게 죽이죠? 일어난 일이에요",
+       "url": "https://youtu.be/L6eT1YbYfq4?t=2625"
+      }
+     ]
+    },
+    {
+     "id": "j15-2",
+     "basis": "direct",
+     "text": "강의는 이어서 하나님께서 이런 사람을 왜 있게 하셨는지 말합니다. 힘이 극단까지 간 사람을 하나 보여 주시는 것입니다. 나귀의 턱뼈 하나로 천 명을 죽인 이 일에서 삼손이 가지고 있던 능력의 최고조를 보여 주신 것입니다.",
+     "spans": [
+      {
+       "text": "능력의 최고조",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「겁쟁이들의 하나님」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/61_겁쟁이들의_하나님.md",
+       "time": "44:57",
+       "to": "45:08",
+       "excerpt": "이런 사람을 하나님이 왜 있게 했냐면 이 힘이 극단까지 간 사람을 하나 보여주시는 거예요 가지고 있는 능력의 최고조를 보여주신 거죠",
+       "url": "https://youtu.be/L6eT1YbYfq4?t=2697"
+      }
+     ]
+    },
+    {
+     "id": "j15-3",
+     "basis": "linked",
+     "text": "레히에서 팔의 끈이 불탄 아마풀처럼 풀린 것은 주의 영이 삼손 위에 막강하게 임하셨을 때였습니다. 강의도 삼손이 하나님으로부터 힘을 받았다고 말합니다. 그리고 바울이 자기 의를 다 잃고 하나님으로부터 의를 받은 것을 이와 나란히 놓습니다.",
+     "spans": [
+      {
+       "text": "하나님으로부터 힘을 받았다",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「겁쟁이들의 하나님」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/61_겁쟁이들의_하나님.md",
+       "time": "55:48",
+       "to": "56:10",
+       "excerpt": "그 능력을 자기가 생각했던 그 능력을 완전히 잃어버리고 '아 이게 아니구나' 삼손이 하나님으로부터 힘을 받았듯이 이제 하나님으로부터 의를 받는 거죠 자기 의를 다 잃고 삼손, 구약의 삼손, 신약의 바울이 좀 산이 낮아진 그래서 하나님을 만난 대표적인 예가 아닌가 생각이 들고",
+       "url": "https://youtu.be/L6eT1YbYfq4?t=3348"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "15:18-20",
+   "title": "부르짖은 자의 샘",
+   "marks": [
+    {
+     "v": "15:18",
+     "t": "g",
+     "ko": "당신께서 이 커다란 구출을 당신의 종의 손안에 주셨나이다",
+     "en": "Thou hast given this great deliverance into the hand of thy servant"
+    },
+    {
+     "v": "15:19",
+     "t": "g",
+     "ko": "하나님께서 그 턱뼈에 있던 우묵한 곳을 쪼개셨으니 거기서 물이 나왔더라",
+     "en": "God clave an hollow place that was in the jaw, and there came water thereout"
+    },
+    {
+     "v": "15:19",
+     "t": "u",
+     "ko": "그곳의 이름을 엔학코레라 불렀으니",
+     "en": "he called the name thereof Enhakkore"
+    },
+    {
+     "v": "15:20",
+     "t": "u",
+     "ko": "필리스티아인들의 날들에 이십 년 동안 이스라엘을 재판하였더라",
+     "en": "he judged Israel in the days of the Philistines twenty years"
+    }
+   ],
+   "english": [
+    {
+     "ref": "15:18",
+     "phrase": "now shall I die for thirst, and fall into the hand of the uncircumcised?",
+     "grammar": "의문문 shall I(~해야 합니까)",
+     "text": "shall I die는 ‘제가 죽어야 합니까’라는 하소연의 물음입니다. for thirst는 ‘목마름 때문에’입니다."
+    },
+    {
+     "ref": "15:19",
+     "phrase": "God clave an hollow place that was in the jaw",
+     "grammar": "옛 과거형 clave(cleave)",
+     "text": "clave는 cleave(쪼개다)의 옛 과거형입니다. an hollow는 h 소리가 약해 an을 쓴 옛 표기입니다."
+    },
+    {
+     "ref": "15:19",
+     "phrase": "when he had drunk, his spirit came again, and he revived",
+     "grammar": "과거완료 had drunk",
+     "text": "had drunk는 기운이 돌아오기 전에 이미 물을 마셨다는 앞선 때를 나타냅니다. revived는 ‘다시 살아났다, 기운을 되찾았다’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "athirst",
+     "ko": "목마른",
+     "ref": "15:18"
+    },
+    {
+     "w": "deliverance",
+     "ko": "구출, 구원",
+     "ref": "15:18"
+    },
+    {
+     "w": "clave",
+     "ko": "쪼갰다(cleave의 옛 과거)",
+     "ref": "15:19"
+    },
+    {
+     "w": "hollow",
+     "ko": "우묵한 곳",
+     "ref": "15:19"
+    },
+    {
+     "w": "revived",
+     "ko": "기운을 되찾았다",
+     "ref": "15:19"
+    },
+    {
+     "w": "judged",
+     "ko": "재판했다, 다스렸다",
+     "ref": "15:20"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j15-4",
+     "basis": "external",
+     "text": "스코필드는 ‘엔학코레’라는 이름을 ‘부르짖은 자의 샘’이라고 풉니다. 목이 말라 죽게 된 삼손이 주를 부르자 하나님께서 턱뼈의 우묵한 곳을 쪼개 물이 나오게 하셨고, 삼손은 그곳을 이 이름으로 불렀습니다.",
+     "spans": [
+      {
+       "text": "‘부르짖은 자의 샘’",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 15장",
+       "where": "Judg. 15:19 주석",
+       "file": "memory-bank/세대주의_해설/scofield/judges-15.md",
+       "excerpt": "The well of him that cried.",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/judges/judges-15.html"
+      }
+     ]
+    },
+    {
+     "id": "j15-5",
+     "basis": "external",
+     "text": "스코필드는 삼손이 하나님께 부름을 받아 이스라엘을 재판했고, 영을 놀랍게 받았다고 적습니다. 그러면서도 그가 이스라엘을 위해 오래 남는 일은 이루지 못했다고 평가합니다.",
+     "spans": [
+      {
+       "text": "오래 남는 일은 이루지 못했다",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 16장",
+       "where": "Judg. 16:31 ‘judged’ 주석(15:20과 같은 말)",
+       "file": "memory-bank/세대주의_해설/scofield/judges-16.md",
+       "excerpt": "Called of God to judge Israel, and endued wonderfully with the Spirit, he wrought no abiding work for Israel",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/judges/judges-16.html"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "밀 수확 때 삼손이 아내를 찾아갔지만, 장인은 그녀를 이미 삼손의 벗에게 주었다며 들어가지 못하게 했습니다.",
+    "verse": "15:2",
+    "u": [
+     "벗에게 주었다며"
+    ]
+   },
+   {
+    "text": "장인은 언니보다 더 어여쁜 여동생을 대신 취하라고 했습니다.",
+    "verse": "15:2",
+    "u": [
+     "여동생"
+    ]
+   },
+   {
+    "text": "삼손은 여우 삼백 마리의 꼬리에 불 붙은 나뭇조각을 달아 필리스티아인들의 곡식밭에 풀었습니다.",
+    "verse": "15:4",
+    "u": [
+     "여우 삼백 마리"
+    ]
+   },
+   {
+    "text": "곡식 더미와 베지 않은 곡식, 포도원과 올리브가 모두 탔습니다.",
+    "verse": "15:5",
+    "u": [
+     "모두 탔습니다"
+    ]
+   },
+   {
+    "text": "필리스티아인들은 삼손의 아내와 그녀의 아버지를 불로 태웠습니다.",
+    "verse": "15:6",
+    "u": [
+     "불로 태웠습니다"
+    ]
+   },
+   {
+    "text": "삼손은 복수하겠다고 말하고 커다란 살육으로 그들을 친 뒤 에탐 바위 꼭대기에서 지냈습니다.",
+    "verse": "15:8",
+    "u": [
+     "에탐 바위"
+    ]
+   },
+   {
+    "text": "필리스티아인들이 유다에 진을 치자, 유다 사람 삼천 명이 삼손을 두 개의 새 끈으로 묶어 넘겼습니다.",
+    "verse": "15:13",
+    "u": [
+     "두 개의 새 끈"
+    ]
+   },
+   {
+    "text": "레히에서 주의 영이 삼손 위에 막강하게 임하시자 끈이 불탄 아마풀처럼 풀렸습니다.",
+    "verse": "15:14",
+    "u": [
+     "막강하게 임하시자"
+    ]
+   },
+   {
+    "text": "삼손은 나귀의 새 턱뼈로 일천 명을 죽였습니다.",
+    "verse": "15:15",
+    "u": [
+     "일천 명"
+    ]
+   },
+   {
+    "text": "강의는 일당천은 과장이 아니라 실제로 일어난 일이라고 말합니다.",
+    "key": "j15-1",
+    "u": [
+     "실제로 일어난 일"
+    ]
+   },
+   {
+    "text": "하나님께서는 삼손으로 힘이 극단까지 간 사람, 능력의 최고조를 보여 주셨습니다.",
+    "key": "j15-2",
+    "u": [
+     "능력의 최고조"
+    ]
+   },
+   {
+    "text": "강의는 삼손이 하나님으로부터 힘을 받았다고 말합니다.",
+    "key": "j15-3",
+    "u": [
+     "하나님으로부터 힘을"
+    ]
+   },
+   {
+    "text": "삼손은 턱뼈를 던져 버리고 그곳을 라맛레히라 불렀습니다.",
+    "verse": "15:17",
+    "u": [
+     "라맛레히"
+    ]
+   },
+   {
+    "text": "몹시 목마른 삼손이 주를 부르자 하나님께서 턱뼈의 우묵한 곳을 쪼개 물이 나오게 하셨습니다.",
+    "verse": "15:19",
+    "u": [
+     "물이 나오게"
+    ]
+   },
+   {
+    "text": "스코필드는 ‘엔학코레’를 ‘부르짖은 자의 샘’이라고 풉니다.",
+    "key": "j15-4",
+    "u": [
+     "부르짖은 자의 샘"
+    ]
+   },
+   {
+    "text": "삼손은 필리스티아인들의 날들에 이십 년 동안 이스라엘을 재판했습니다.",
+    "verse": "15:20",
+    "u": [
+     "이십 년 동안"
+    ]
+   },
+   {
+    "text": "스코필드는 삼손이 이스라엘을 위해 오래 남는 일은 이루지 못했다고 평가합니다.",
+    "key": "j15-5",
+    "u": [
+     "오래 남는 일"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "15:1",
+    "q": "삼손이 아내를 찾아간 때는 언제입니까?",
+    "a": "밀 수확의 시기"
+   },
+   {
+    "verse": "15:1",
+    "q": "삼손이 아내에게 가지고 간 것은 무엇입니까?",
+    "a": "새끼 염소 한 마리"
+   },
+   {
+    "verse": "15:2",
+    "q": "장인은 삼손의 아내를 누구에게 주었다고 했습니까?",
+    "a": "그대의 벗"
+   },
+   {
+    "verse": "15:2",
+    "q": "장인은 아내 대신 누구를 취하라고 했습니까?",
+    "a": "여동생"
+   },
+   {
+    "verse": "15:4",
+    "q": "삼손이 잡은 여우는 몇 마리입니까?",
+    "a": "삼백 마리"
+   },
+   {
+    "verse": "15:4",
+    "q": "삼손은 두 꼬리 사이에 무엇을 끼웠습니까?",
+    "a": "불 붙은 나뭇조각"
+   },
+   {
+    "verse": "15:5",
+    "q": "곡식과 함께 탄 것은 무엇입니까?",
+    "a": "포도원들, 올리브들"
+   },
+   {
+    "verse": "15:6",
+    "q": "필리스티아인들은 삼손을 누구의 사위라고 불렀습니까?",
+    "a": "팀나족"
+   },
+   {
+    "verse": "15:6",
+    "q": "필리스티아인들은 누구를 불로 태웠습니까?",
+    "a": "그녀와 그녀의 아버지"
+   },
+   {
+    "verse": "15:8",
+    "q": "삼손이 내려가 지낸 곳은 어디입니까?",
+    "a": "에탐 바위의 꼭대기"
+   },
+   {
+    "verse": "15:9",
+    "q": "필리스티아인들이 군세를 펼친 곳은 어디입니까?",
+    "a": "레히"
+   },
+   {
+    "verse": "15:11",
+    "q": "에탐 바위로 간 유다 사람은 몇 명입니까?",
+    "a": "삼천 명"
+   },
+   {
+    "verse": "15:12",
+    "q": "삼손은 유다 사람들에게 무엇을 맹세하라고 했습니까?",
+    "a": "직접 나를 덮치지 아니하겠다고"
+   },
+   {
+    "verse": "15:13",
+    "q": "유다 사람들은 무엇으로 삼손을 결박했습니까?",
+    "a": "두 개의 새 끈들"
+   },
+   {
+    "verse": "15:14",
+    "q": "주의 영이 임하시자 끈들은 무엇같이 되었습니까?",
+    "a": "아마풀이 불에 태워지는 것"
+   },
+   {
+    "verse": "15:15",
+    "q": "삼손이 손을 내밀어 취한 것은 무엇입니까?",
+    "a": "나귀의 새 턱뼈"
+   },
+   {
+    "verse": "15:15",
+    "q": "삼손이 턱뼈로 죽인 사람은 몇 명입니까?",
+    "a": "일천 명"
+   },
+   {
+    "key": "j15-1",
+    "q": "강의는 우리가 과장할 때 쓰는 말의 한계가 무엇이라고 합니까?",
+    "a": "일당백"
+   },
+   {
+    "key": "j15-1",
+    "q": "강의는 삼손이 천 명을 죽인 일을 과장이라고 봅니까?",
+    "a": "아닙니다. 실제로 일어난 일입니다."
+   },
+   {
+    "key": "j15-1",
+    "q": "강의는 어떤 책들이 사실을 기록했다고 강조합니까?",
+    "a": "연대순(chronological)으로 사실을 기록한 책들"
+   },
+   {
+    "key": "j15-2",
+    "q": "하나님께서 삼손 같은 사람을 있게 하신 까닭은 무엇입니까?",
+    "a": "힘이 극단까지 간 사람을 하나 보여 주시려고"
+   },
+   {
+    "key": "j15-3",
+    "q": "강의는 삼손이 힘을 누구로부터 받았다고 말합니까?",
+    "a": "하나님"
+   },
+   {
+    "verse": "15:17",
+    "q": "삼손이 턱뼈를 던진 뒤 그 장소를 무엇이라 불렀습니까?",
+    "a": "라맛레히"
+   },
+   {
+    "verse": "15:18",
+    "q": "삼손은 무엇으로 인하여 죽을까 봐 주를 불렀습니까?",
+    "a": "목마름"
+   },
+   {
+    "verse": "15:19",
+    "q": "하나님께서 쪼개신 것은 무엇입니까?",
+    "a": "그 턱뼈에 있던 우묵한 곳"
+   },
+   {
+    "verse": "15:19",
+    "q": "삼손이 그 샘에 붙인 이름은 무엇입니까?",
+    "a": "엔학코레"
+   },
+   {
+    "key": "j15-4",
+    "q": "스코필드는 ‘엔학코레’를 무슨 뜻으로 풉니까?",
+    "a": "부르짖은 자의 샘"
+   },
+   {
+    "verse": "15:20",
+    "q": "삼손은 몇 년 동안 이스라엘을 재판했습니까?",
+    "a": "이십 년"
+   },
+   {
+    "key": "j15-5",
+    "q": "스코필드는 삼손이 이스라엘을 위해 무엇을 이루지 못했다고 평가합니까?",
+    "a": "오래 남는 일"
+   }
+  ],
+  "faq": [
+   {
+    "q": "삼손이 정말 혼자서 천 명을 죽였습니까?",
+    "key": "j15-1"
+   },
+   {
+    "q": "‘일당천’은 과장된 말이 아닙니까?",
+    "key": "j15-1"
+   },
+   {
+    "q": "강의는 왜 삼손 이야기 가운데 15장 15절을 골랐습니까?",
+    "key": "j15-1"
+   },
+   {
+    "q": "하나님은 왜 삼손 같은 사람을 있게 하셨습니까?",
+    "key": "j15-2"
+   },
+   {
+    "q": "턱뼈로 천 명을 죽인 일은 무엇을 보여 줍니까?",
+    "key": "j15-2"
+   },
+   {
+    "q": "삼손을 묶은 끈은 어떻게 풀렸습니까?",
+    "key": "j15-3"
+   },
+   {
+    "q": "삼손의 힘은 어디에서 왔습니까?",
+    "key": "j15-3"
+   },
+   {
+    "q": "강의는 삼손을 신약의 누구와 견줍니까?",
+    "key": "j15-3"
+   },
+   {
+    "q": "‘엔학코레’는 무슨 뜻입니까?",
+    "key": "j15-4"
+   },
+   {
+    "q": "목마른 삼손에게 하나님은 어떻게 물을 주셨습니까?",
+    "key": "j15-4"
+   },
+   {
+    "q": "삼손은 어떤 사사였습니까?",
+    "key": "j15-5"
+   },
+   {
+    "q": "삼손은 이스라엘을 위해 무엇을 남겼습니까?",
+    "key": "j15-5"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "나귀의 턱뼈",
+    "verse": "15:15",
+    "text": "삼손이 레히에서 손을 내밀어 취해 일천 명을 죽인 새 턱뼈입니다."
+   },
+   {
+    "term": "라맛레히",
+    "verse": "15:17",
+    "text": "삼손이 턱뼈를 던져 버린 뒤 그 장소에 붙인 이름입니다."
+   },
+   {
+    "term": "엔학코레",
+    "key": "j15-4",
+    "text": "하나님께서 물을 내신 레히의 샘. 스코필드는 ‘부르짖은 자의 샘’이라고 풉니다."
+   },
+   {
+    "term": "일당천",
+    "key": "j15-1",
+    "text": "한 사람이 천 명을 당해 냄. 강의는 삼손의 일이 과장이 아니라 실제로 일어난 일이라고 말합니다."
+   },
+   {
+    "term": "에탐 바위",
+    "verse": "15:8",
+    "text": "필리스티아인들을 친 뒤 삼손이 내려가 지낸 바위 꼭대기입니다."
+   }
+  ]
+ }
+}

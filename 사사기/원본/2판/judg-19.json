@@ -1,0 +1,1207 @@
+{
+ "chapter": 19,
+ "subtitle": "레위인의 첩과 기브아의 죄",
+ "motto": "하나님이 너무너무 말을 안 들으면 그냥 돌아서십니다",
+ "motto_comment": "j19-1",
+ "cover": [
+  {
+   "m": "path",
+   "x": 170,
+   "y": 240,
+   "s": 1
+  },
+  {
+   "m": "city",
+   "x": 245,
+   "y": 292,
+   "s": 0.85
+  },
+  {
+   "m": "tent",
+   "x": 95,
+   "y": 292,
+   "s": 0.75
+  }
+ ],
+ "people": [
+  {
+   "id": "father",
+   "name": "젊은 여인의 아버지",
+   "gen": 0,
+   "desc": "베들레헴유다에 사는 첩의 아버지이자 레위인의 장인입니다. 사위를 크게 기뻐하며 맞이했고, 떠나려는 사위를 날마다 붙잡아 먹고 마시게 했습니다.",
+   "refs": [
+    "19:3",
+    "19:4",
+    "19:9"
+   ],
+   "part": "사위를 붙잡은 장인",
+   "look": "old",
+   "intro": "첩의 아버지 · 사위를 붙잡은 장인"
+  },
+  {
+   "id": "oldman",
+   "name": "노인",
+   "gen": 0,
+   "desc": "에프라임산 출신으로 기브아에 체류하던 노인입니다. 밭일을 마치고 오다 거리의 나그네를 보고 자기 집으로 맞아들였고, 몰려온 남자들에게 나가 그렇게 사악하게 행하지 말라고 했습니다.",
+   "refs": [
+    "19:16",
+    "19:20",
+    "19:23"
+   ],
+   "part": "나그네를 맞은 노인",
+   "look": "old",
+   "intro": "에프라임산 출신 노인 · 나그네를 맞아들임"
+  },
+  {
+   "id": "levite",
+   "name": "레위인",
+   "gen": 1,
+   "desc": "에프라임산 등성이에 체류하던 레위인입니다. 떠나간 첩을 데려오려고 베들레헴유다에 갔다가 돌아오는 길에 기브아에 묵었습니다. 집에 돌아와 첩을 열두 조각으로 토막 내어 이스라엘의 온 지경으로 보냈습니다.",
+   "refs": [
+    "19:1",
+    "19:3",
+    "19:29"
+   ],
+   "part": "첩을 데리러 간 레위인",
+   "look": "man",
+   "intro": "에프라임산의 레위인 · 첩을 열두 조각 냄"
+  },
+  {
+   "id": "concubine",
+   "name": "첩",
+   "gen": 1,
+   "desc": "베들레헴유다 출신으로 레위인의 첩이 된 여자입니다. 남편을 떠나 아버지의 집에서 사 개월을 보냈고, 기브아에서 밤새 욕보인 뒤 노인의 집 문 앞에 쓰러졌습니다.",
+   "refs": [
+    "19:1",
+    "19:2",
+    "19:27"
+   ],
+   "part": "기브아에서 욕보인 첩",
+   "look": "woman",
+   "intro": "레위인의 첩 · 문지방에 쓰러짐"
+  },
+  {
+   "id": "servant",
+   "name": "종",
+   "gen": 1,
+   "desc": "레위인과 함께 길을 간 종입니다. 날이 저물자 여부스족들의 도시에 들어가 묵자고 청했습니다.",
+   "refs": [
+    "19:3",
+    "19:11"
+   ],
+   "part": "여부스에 묵자고 한 종",
+   "look": "man",
+   "intro": "레위인의 종 · 여부스에 묵자고 청함"
+  },
+  {
+   "id": "daughter",
+   "name": "노인의 딸",
+   "gen": 1,
+   "desc": "노인이 남자들에게 내보내겠다고 말한 숫처녀 딸입니다.",
+   "refs": [
+    "19:24"
+   ],
+   "part": "노인의 숫처녀 딸",
+   "look": "woman",
+   "intro": "노인의 딸 · 숫처녀"
+  },
+  {
+   "id": "belial",
+   "name": "벨리알의 아들들",
+   "gen": 1,
+   "desc": "기브아 도시의 남자들입니다. 노인의 집을 에워싸고 문을 두들기며 들어온 남자를 내놓으라고 했고, 첩을 아침까지 밤새 욕보였습니다.",
+   "refs": [
+    "19:22",
+    "19:25"
+   ],
+   "part": "기브아의 악한 남자들",
+   "look": "group",
+   "intro": "기브아의 남자들 · 첩을 밤새 욕보임"
+  }
+ ],
+ "relations": [
+  {
+   "from": "father",
+   "to": "concubine",
+   "type": "parent",
+   "label": "딸",
+   "ref": "19:3"
+  },
+  {
+   "from": "levite",
+   "to": "concubine",
+   "type": "spouse",
+   "label": "첩",
+   "ref": "19:1"
+  },
+  {
+   "from": "oldman",
+   "to": "daughter",
+   "type": "parent",
+   "label": "딸",
+   "ref": "19:24"
+  },
+  {
+   "from": "levite",
+   "to": "servant",
+   "type": "other",
+   "label": "주인과 종",
+   "ref": "19:11"
+  },
+  {
+   "from": "oldman",
+   "to": "levite",
+   "type": "other",
+   "label": "맞아들임",
+   "ref": "19:21",
+   "directed": true
+  },
+  {
+   "from": "belial",
+   "to": "concubine",
+   "type": "enemy",
+   "label": "욕보임",
+   "ref": "19:25",
+   "directed": true
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "mount-ephraim",
+    "name": "에프라임산",
+    "at": [
+     35.25,
+     32.1
+    ],
+    "ref": "19:1"
+   },
+   {
+    "key": "bethlehem",
+    "name": "베들레헴유다",
+    "ref": "19:1"
+   },
+   {
+    "key": "jerusalem",
+    "name": "여부스(예루살렘)",
+    "ref": "19:10"
+   },
+   {
+    "key": "gibeah",
+    "ref": "19:12"
+   },
+   {
+    "key": "ramah",
+    "name": "라마흐",
+    "ref": "19:13"
+   }
+  ],
+  "routes": [
+   {
+    "path": [
+     "bethlehem",
+     "jerusalem",
+     "gibeah"
+    ],
+    "ref": "19:10-14"
+   },
+   {
+    "path": [
+     "gibeah",
+     "mount-ephraim"
+    ],
+    "ref": "19:28"
+   }
+  ],
+  "views": [
+   {
+    "title": "① 베들레헴유다에서 에프라임산까지",
+    "keys": [
+     "bethlehem",
+     "jerusalem",
+     "gibeah",
+     "ramah",
+     "mount-ephraim"
+    ]
+   },
+   {
+    "title": "② 확대 — 여부스·기브아·라마흐",
+    "keys": [
+     "jerusalem",
+     "gibeah",
+     "ramah"
+    ],
+    "minSpan": 0.25
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "19:1-4",
+   "title": "떠나간 첩을 찾아간 레위인",
+   "marks": [
+    {
+     "v": "19:1",
+     "t": "u",
+     "ko": "이스라엘에 왕이 없었을 때",
+     "en": "when there was no king in Israel"
+    },
+    {
+     "v": "19:1",
+     "t": "u",
+     "ko": "한 첩을 자신에게로 취하였더라",
+     "en": "who took to him a concubine"
+    },
+    {
+     "v": "19:2",
+     "t": "p",
+     "ko": "그를 대적하여 매춘부 짓을 하였고",
+     "en": "played the whore against him"
+    },
+    {
+     "v": "19:3",
+     "t": "u",
+     "ko": "그녀에게 자상하게 말하여 그녀를 다시 데려오려고",
+     "en": "to speak friendly unto her, and to bring her again"
+    }
+   ],
+   "english": [
+    {
+     "ref": "19:1",
+     "phrase": "And it came to pass in those days, when there was no king in Israel",
+     "grammar": "관용 도입구 it came to pass",
+     "text": "it came to pass는 ‘이러한 일이 있었다’로 이야기를 여는 성경의 관용구입니다. when there was no king in Israel이 그 때를 밝힙니다. WEB은 It happened in those days, when there was no king in Israel로 옮겼습니다.",
+     "key": "j19-1"
+    },
+    {
+     "ref": "19:3",
+     "phrase": "to speak friendly unto her, and to bring her again",
+     "grammar": "목적의 to부정사",
+     "text": "to speak와 to bring은 ‘~하려고’라는 목적을 나타냅니다. bring her again은 ‘그녀를 다시 데려오다’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "sojourning",
+     "ko": "체류하는, 나그네로 머무는",
+     "ref": "19:1"
+    },
+    {
+     "w": "concubine",
+     "ko": "첩",
+     "ref": "19:1"
+    },
+    {
+     "w": "friendly",
+     "ko": "다정하게, 자상하게",
+     "ref": "19:3"
+    },
+    {
+     "w": "damsel",
+     "ko": "젊은 여인",
+     "ref": "19:3"
+    },
+    {
+     "w": "rejoiced",
+     "ko": "기뻐했다",
+     "ref": "19:3"
+    },
+    {
+     "w": "retained",
+     "ko": "붙잡아 두었다",
+     "ref": "19:4"
+    },
+    {
+     "w": "abode",
+     "ko": "머물렀다(abide의 과거)",
+     "ref": "19:4"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j19-1",
+     "basis": "linked",
+     "text": "19장도 ‘그 당시에 이스라엘에 왕이 없었을 때’로 시작합니다. 17장 6절과 18장 1절에 이어 세 번째입니다. 첫열매들 강의는 재판관기(사사기)가 ‘결국 왕이 없으니까 자기들 멋대로 자기 생각대로 다 하더라’로 끝난다고 짚고, 곧바로 이렇게 말합니다. 하나님이 너무너무 말을 안 들으면 그냥 돌아서십니다. 19장은 그때 이스라엘 가운데서 일어난 한 레위인과 그의 첩의 이야기로 시작합니다.",
+     "spans": [
+      {
+       "text": "하나님이 너무너무 말을 안 들으면 그냥 돌아서십니다",
+       "level": 3
+      }
+     ],
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「하나님이 등을 돌리실 때(신구약 중간사)」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/14_하나님이_등을_돌리실_때_신구약_중간사.md",
+       "time": "5:55",
+       "to": "6:08",
+       "excerpt": "재판관기 끝에 이렇게 끝나죠 '결국 왕이 없으니까 자기들 멋대로 자기 생각대로 다 하더라' 하나님이 너무너무 말을 안 들으면 그냥 돌아서십니다",
+       "url": "https://youtu.be/TaWsyzY6GWQ?t=355"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "19:5-10",
+   "title": "붙잡는 장인, 떠나는 사위",
+   "marks": [
+    {
+     "v": "19:5",
+     "t": "u",
+     "ko": "약간의 빵으로 그대의 마음을 위로하고",
+     "en": "Comfort thine heart with a morsel of bread"
+    },
+    {
+     "v": "19:7",
+     "t": "u",
+     "ko": "그의 장인이 그에게 강권하였더라",
+     "en": "his father in law urged him"
+    },
+    {
+     "v": "19:10",
+     "t": "u",
+     "ko": "그 남자가 그 밤을 지체하려고 하지 아니하였으니",
+     "en": "the man would not tarry that night"
+    },
+    {
+     "v": "19:10",
+     "t": "u",
+     "ko": "여부스는 예루살렘이라",
+     "en": "Jebus, which is Jerusalem"
+    }
+   ],
+   "english": [
+    {
+     "ref": "19:5",
+     "phrase": "Comfort thine heart with a morsel of bread, and afterward go your way",
+     "grammar": "명령문 · thine",
+     "text": "Comfort와 go는 명령형입니다. thine heart는 모음 앞에서 thy 대신 thine을 쓴 형태입니다. a morsel of bread는 ‘빵 한 조각’입니다.",
+     "key": "j19-2"
+    },
+    {
+     "ref": "19:9",
+     "phrase": "Behold, now the day draweth toward evening",
+     "grammar": "옛 3인칭 -eth",
+     "text": "draweth는 draws의 옛 형태로 ‘(날이) 기울다, 다가가다’입니다. 같은 절의 groweth도 grows의 옛 형태입니다."
+    },
+    {
+     "ref": "19:10",
+     "phrase": "But the man would not tarry that night",
+     "grammar": "would not = 하려 하지 않았다",
+     "text": "would not은 여기서 ‘~하려고 하지 않았다’는 거절의 뜻입니다. tarry는 ‘머물다, 지체하다’입니다. WEB은 But the man wouldn’t stay that night으로 옮겼습니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "morsel",
+     "ko": "한 조각",
+     "ref": "19:5"
+    },
+    {
+     "w": "tarry",
+     "ko": "머물다, 지체하다",
+     "ref": "19:6"
+    },
+    {
+     "w": "merry",
+     "ko": "즐거운",
+     "ref": "19:6"
+    },
+    {
+     "w": "urged",
+     "ko": "강권했다, 졸랐다",
+     "ref": "19:7"
+    },
+    {
+     "w": "draweth",
+     "ko": "다가가다(draw의 옛 3인칭)",
+     "ref": "19:9"
+    },
+    {
+     "w": "saddled",
+     "ko": "안장을 얹은",
+     "ref": "19:10"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j19-2",
+     "basis": "external",
+     "text": "스코필드는 5절 장인의 말 ‘약간의 빵으로 그대의 마음을 위로하고’에 시편 104:15를 관주로 달았습니다. 그 구절은 사람의 마음을 흡족하게 하는 포도즙과 “사람의 마음에 힘을 주는 빵”을 말합니다. 장인은 넷째 날과 다섯째 날에도 사위를 붙잡아 먹고 마시게 했지만, 다섯째 날 저녁에 그 남자는 더 지체하려 하지 않고 떠나 여부스 맞은편에 이르렀습니다(19:8-10).",
+     "spans": [
+      {
+       "text": "“사람의 마음에 힘을 주는 빵”",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 19장 관주",
+       "where": "Jud. 19:5 관주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "a Psa. 104.15.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "19:11-15",
+   "title": "여부스를 지나 기브아로",
+   "marks": [
+    {
+     "v": "19:12",
+     "t": "u",
+     "ko": "타국인의 도시 안으로 들어가지 아니하리니",
+     "en": "We will not turn aside hither into the city of a stranger"
+    },
+    {
+     "v": "19:14",
+     "t": "u",
+     "ko": "베냐민에 속한 기브아 옆에 있을 때",
+     "en": "when they were by Gibeah, which belongeth to Benjamin"
+    },
+    {
+     "v": "19:15",
+     "t": "p",
+     "ko": "그들을 자기 집으로 데려가서 묵게 하려는 사람이 아무도 없었기 때문이라",
+     "en": "there was no man that took them into his house to lodging"
+    }
+   ],
+   "english": [
+    {
+     "ref": "19:11",
+     "phrase": "the day was far spent",
+     "grammar": "관용구 far spent",
+     "text": "far spent는 ‘(시간이) 많이 지났다’는 뜻으로, 날이 거의 저물었다는 말입니다. WEB은 the day was far spent를 그대로 썼습니다."
+    },
+    {
+     "ref": "19:12",
+     "phrase": "the city of a stranger, that is not of the children of Israel",
+     "grammar": "관계대명사 that · of 소속",
+     "text": "that is not of the children of Israel이 the city of a stranger를 풀어 줍니다. be of는 ‘~에 속하다’입니다. 레위인이 여부스를 피한 까닭을 영어가 그대로 보여 줍니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "spent",
+     "ko": "(시간이) 다 지난",
+     "ref": "19:11"
+    },
+    {
+     "w": "Jebusites",
+     "ko": "여부스족들",
+     "ref": "19:11"
+    },
+    {
+     "w": "stranger",
+     "ko": "타국인, 낯선 사람",
+     "ref": "19:12"
+    },
+    {
+     "w": "belongeth",
+     "ko": "속하다(belong의 옛 3인칭)",
+     "ref": "19:14"
+    },
+    {
+     "w": "lodging",
+     "ko": "묵을 곳, 묵게 함",
+     "ref": "19:15"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "19:16-21",
+   "title": "에프라임산 출신 노인의 집",
+   "marks": [
+    {
+     "v": "19:16",
+     "t": "u",
+     "ko": "그 역시 에프라임산 출신이었더라",
+     "en": "which was also of mount Ephraim"
+    },
+    {
+     "v": "19:18",
+     "t": "u",
+     "ko": "이제는 제가 주의 집으로 가고 있나이다",
+     "en": "I am now going to the house of the LORD"
+    },
+    {
+     "v": "19:18",
+     "t": "u",
+     "ko": "저를 집으로 영접하는 사람이 전혀 없나이다",
+     "en": "there is no man that receiveth me to house"
+    },
+    {
+     "v": "19:20",
+     "t": "u",
+     "ko": "단, 길에서만은 묵지 말라",
+     "en": "only lodge not in the street"
+    }
+   ],
+   "english": [
+    {
+     "ref": "19:17",
+     "phrase": "Whither goest thou? and whence comest thou?",
+     "grammar": "의문부사 whither · whence",
+     "text": "whither는 ‘어디로’(to where), whence는 ‘어디에서’(from where)입니다. goest와 comest는 thou에 맞춘 옛 형태입니다."
+    },
+    {
+     "ref": "19:20",
+     "phrase": "howsoever let all thy wants lie upon me",
+     "grammar": "let 명령 · howsoever",
+     "text": "howsoever는 ‘어떠하든지’입니다. let all thy wants lie upon me는 ‘너의 모든 부족한 것을 내게 맡겨라’라는 뜻입니다. wants는 여기서 ‘부족한 것들’입니다.",
+     "key": "j19-3"
+    }
+   ],
+   "vocab": [
+    {
+     "w": "wayfaring",
+     "ko": "길을 가는, 여행하는",
+     "ref": "19:17"
+    },
+    {
+     "w": "whither",
+     "ko": "어디로",
+     "ref": "19:17"
+    },
+    {
+     "w": "receiveth",
+     "ko": "영접하다(receive의 옛 3인칭)",
+     "ref": "19:18"
+    },
+    {
+     "w": "provender",
+     "ko": "여물, 꼴",
+     "ref": "19:19"
+    },
+    {
+     "w": "handmaid",
+     "ko": "몸종, 여종",
+     "ref": "19:19"
+    },
+    {
+     "w": "howsoever",
+     "ko": "어떠하든지",
+     "ref": "19:20"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j19-3",
+     "basis": "external",
+     "text": "스코필드는 18절 레위인의 말 ‘주의 집’에 여호수아기 18:1과 사무엘기상 1:3, 7을 관주로 달았습니다. 여호수아기 18:1은 이스라엘 자녀들의 회중 전체가 실로에서 회동하여 거기에 회중의 성막을 설치하였다고 말합니다. 사무엘기상 1:3은 한 남자가 해마다 실로에서 만군의 주께 경배하러 올라갔다고 말합니다. 또 20절 노인의 인사 ‘평안이 너와 함께 있기를 바라노라’에는 사사기 6:23을 달았습니다. 주께서 기드온에게 “너에게 평안이 있기를 바라노라. 두려워하지 말라.” 하신 대목입니다.",
+     "spans": [
+      {
+       "text": "실로에서 회동하여 거기에 회중의 성막을 설치하였다",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 19장 관주",
+       "where": "Jud. 19:18, 20 관주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "b Josh.18.1; 1 Sam. 1.3, 7. c Jud.6.23.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "19:22-26",
+   "title": "벨리알의 아들들이 에워싼 밤",
+   "marks": [
+    {
+     "v": "19:22",
+     "t": "p",
+     "ko": "어떤 벨리알의 아들들",
+     "en": "certain sons of Belial"
+    },
+    {
+     "v": "19:23",
+     "t": "u",
+     "ko": "그렇게 사악하게 행하지 말라",
+     "en": "do not so wickedly"
+    },
+    {
+     "v": "19:25",
+     "t": "p",
+     "ko": "그녀를 아침까지 밤새 욕보였더라",
+     "en": "abused her all the night until the morning"
+    },
+    {
+     "v": "19:26",
+     "t": "u",
+     "ko": "문 앞에서 엎드린 채 날이 밝을 때까지 있었더라",
+     "en": "fell down at the door of the man's house where her lord was, till it was light"
+    }
+   ],
+   "english": [
+    {
+     "ref": "19:22",
+     "phrase": "certain sons of Belial, beset the house round about, and beat at the door",
+     "grammar": "동사 나열 · round about",
+     "text": "beset(에워쌌다)과 beat(두들겼다)이 한 주어에 이어집니다. round about은 ‘빙 둘러’입니다. sons of Belial은 히브리식 표현 ‘~의 아들들’로, 무리의 성격을 말합니다."
+    },
+    {
+     "ref": "19:24",
+     "phrase": "do with them what seemeth good unto you",
+     "grammar": "관계대명사 what · -eth",
+     "text": "what seemeth good unto you는 ‘너희 보기에 좋은 것’입니다. seemeth는 seems의 옛 형태입니다."
+    },
+    {
+     "ref": "19:25",
+     "phrase": "But the men would not hearken to him",
+     "grammar": "would not = 하려 하지 않았다",
+     "text": "hearken은 ‘귀 기울여 듣다’입니다. would not hearken은 ‘들으려 하지 않았다’는 거절의 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "Belial",
+     "ko": "벨리알",
+     "ref": "19:22"
+    },
+    {
+     "w": "beset",
+     "ko": "에워쌌다",
+     "ref": "19:22"
+    },
+    {
+     "w": "wickedly",
+     "ko": "사악하게",
+     "ref": "19:23"
+    },
+    {
+     "w": "folly",
+     "ko": "어리석은 짓",
+     "ref": "19:23"
+    },
+    {
+     "w": "vile",
+     "ko": "천박한, 비열한",
+     "ref": "19:24"
+    },
+    {
+     "w": "hearken",
+     "ko": "귀 기울여 듣다",
+     "ref": "19:25"
+    },
+    {
+     "w": "abused",
+     "ko": "욕보였다",
+     "ref": "19:25"
+    },
+    {
+     "w": "dawning",
+     "ko": "새벽, 동틀 무렵",
+     "ref": "19:26"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j19-4",
+     "basis": "external",
+     "text": "스코필드는 22절 ‘그들이 자신들의 마음에 흥취를 돋우고 있을 때’에 이 장 6절과 9절, 그리고 사사기 16:25를 관주로 달았습니다. 6절과 9절은 장인이 사위에게 마음을 즐겁게 하라고 권한 대목입니다. 사사기 16:25는 필리스티아인들이 “그들의 마음이 들떴을 때” 삼손을 불러 오락거리로 삼은 대목입니다. 또 스코필드는 24절 여백에 ‘이 어리석은 일의 문제’라는 다른 풀이를 적었습니다. 23절에서 노인이 ‘이렇게 어리석은 짓을 하지 말라’고 한 말과 같은 낱말입니다.",
+     "spans": [
+      {
+       "text": "“그들의 마음이 들떴을 때”",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 19장 관주",
+       "where": "Jud. 19:22, 24 관주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "d vs.6,9; Jud.16.25. e the matter of this folly.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "19:27-30",
+   "title": "열두 조각과 온 이스라엘",
+   "marks": [
+    {
+     "v": "19:27",
+     "t": "u",
+     "ko": "그녀의 두 손은 문지방 위에 있었더라",
+     "en": "her hands were upon the threshold"
+    },
+    {
+     "v": "19:28",
+     "t": "u",
+     "ko": "그러나 아무런 대답이 없었더라",
+     "en": "But none answered"
+    },
+    {
+     "v": "19:29",
+     "t": "p",
+     "ko": "열두 조각으로 토막 내었고",
+     "en": "into twelve pieces"
+    },
+    {
+     "v": "19:30",
+     "t": "u",
+     "ko": "그러한 행동은 행해진 적도, 보인 적도 없느니라",
+     "en": "There was no such deed done nor seen"
+    }
+   ],
+   "english": [
+    {
+     "ref": "19:28",
+     "phrase": "Up, and let us be going",
+     "grammar": "let us + 진행형",
+     "text": "Up은 ‘일어나라’를 짧게 줄인 말입니다. let us be going은 ‘이제 가자’입니다. 뒤의 But none answered(아무 대답이 없었다)와 맞부딪칩니다."
+    },
+    {
+     "ref": "19:30",
+     "phrase": "consider of it, take advice, and speak your minds",
+     "grammar": "명령문 셋",
+     "text": "consider, take, speak 세 동사가 명령형입니다. take advice는 ‘상의하다’, speak your minds는 ‘생각을 말하라’입니다. WEB은 Consider it, take counsel, and speak로 옮겼습니다.",
+     "key": "j19-5"
+    }
+   ],
+   "vocab": [
+    {
+     "w": "threshold",
+     "ko": "문지방",
+     "ref": "19:27"
+    },
+    {
+     "w": "knife",
+     "ko": "칼, 단도",
+     "ref": "19:29"
+    },
+    {
+     "w": "pieces",
+     "ko": "조각들",
+     "ref": "19:29"
+    },
+    {
+     "w": "coasts",
+     "ko": "지경, 경계 안 땅",
+     "ref": "19:29"
+    },
+    {
+     "w": "deed",
+     "ko": "행동, 일",
+     "ref": "19:30"
+    },
+    {
+     "w": "advice",
+     "ko": "상의, 조언",
+     "ref": "19:30"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j19-5",
+     "basis": "external",
+     "text": "스코필드는 19장 머리에 ‘혼란 — 사회와 종교의 혼란 (4) 레위인과 그의 첩’이라는 소제목을 붙였습니다. 17장부터 같은 제목 아래 단족의 침략(18장)과 단족의 우상 숭배(18:30)를 이어 붙였고, 이 장을 그 네 번째로 놓았습니다. 그것을 본 모두는 이스라엘 자녀들이 이집트 지역에서 올라온 날부터 이날까지 그러한 행동은 행해진 적도, 보인 적도 없다고 말했습니다. 그리고 그것을 숙고하고 상의하여 생각들을 말하라고 했습니다(19:30).",
+     "spans": [
+      {
+       "text": "(4) 레위인과 그의 첩",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 17–19장 소제목",
+       "where": "Jud. 17:1 · 18:1 · 18:30 · 19:1 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "CHAPTER 17. Confusion, civil and religious.\n…\nConfusion, civil and religious: (2) the Danite invasion.\n…\nConfusion, civil and religious: (3) the Danite idolatry.\n…\nConfusion, civil and religious: (4) the Levite and his concubine.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "이스라엘에 왕이 없을 때, 에프라임산 등성이에 체류하던 레위인이 베들레헴유다에서 첩을 취했습니다.",
+    "verse": "19:1",
+    "u": [
+     "왕이 없을 때"
+    ]
+   },
+   {
+    "text": "강의는 하나님이 너무너무 말을 안 들으면 그냥 돌아서신다고 말합니다.",
+    "key": "j19-1",
+    "u": [
+     "그냥 돌아서신다고"
+    ]
+   },
+   {
+    "text": "첩은 남편을 떠나 베들레헴유다 아버지의 집으로 가서 사 개월을 꼬박 보냈습니다.",
+    "verse": "19:2",
+    "u": [
+     "사 개월을 꼬박"
+    ]
+   },
+   {
+    "text": "남편은 그녀에게 자상하게 말하여 다시 데려오려고 종과 나귀 두 필을 데리고 찾아갔습니다.",
+    "verse": "19:3",
+    "u": [
+     "자상하게 말하여"
+    ]
+   },
+   {
+    "text": "장인은 사위를 크게 기뻐하며 맞았고, 날마다 붙잡아 먹고 마시게 했습니다.",
+    "verse": "19:4",
+    "u": [
+     "날마다 붙잡아"
+    ]
+   },
+   {
+    "text": "스코필드는 ‘빵으로 마음을 위로하라’는 장인의 말에 시편 104:15를 관주로 달았습니다.",
+    "key": "j19-2",
+    "u": [
+     "시편 104:15"
+    ]
+   },
+   {
+    "text": "다섯째 날 저녁, 레위인은 더 지체하지 않고 떠나 여부스, 곧 예루살렘 맞은편에 이르렀습니다.",
+    "verse": "19:10",
+    "u": [
+     "여부스, 곧 예루살렘"
+    ]
+   },
+   {
+    "text": "주인은 이스라엘 자녀들에게 속하지 않은 타국인의 도시에는 들어가지 않겠다며 기브아로 갔습니다.",
+    "verse": "19:12",
+    "u": [
+     "타국인의 도시"
+    ]
+   },
+   {
+    "text": "베냐민에 속한 기브아에서는 그들을 자기 집으로 데려가 묵게 하려는 사람이 아무도 없었습니다.",
+    "verse": "19:15",
+    "u": [
+     "아무도 없었습니다"
+    ]
+   },
+   {
+    "text": "에프라임산 출신 노인이 그들을 자기 집으로 맞아들여 나귀에게 여물을 주고 함께 먹고 마셨습니다.",
+    "verse": "19:21",
+    "u": [
+     "자기 집으로 맞아들여"
+    ]
+   },
+   {
+    "text": "스코필드는 레위인이 말한 ‘주의 집’에 성막이 있던 실로를 말하는 여호수아기 18:1을 관주로 달았습니다.",
+    "key": "j19-3",
+    "u": [
+     "여호수아기 18:1"
+    ]
+   },
+   {
+    "text": "도시의 남자들, 곧 벨리알의 아들들이 집을 에워싸고 들어온 남자를 내놓으라고 했습니다.",
+    "verse": "19:22",
+    "u": [
+     "벨리알의 아들들"
+    ]
+   },
+   {
+    "text": "스코필드는 그들이 마음에 흥취를 돋우던 대목에 삼손을 불러낸 사사기 16:25를 관주로 달았습니다.",
+    "key": "j19-4",
+    "u": [
+     "사사기 16:25"
+    ]
+   },
+   {
+    "text": "남자들은 첩을 아침까지 밤새 욕보였고, 그녀는 새벽에 집 문 앞에 엎드려 쓰러졌습니다.",
+    "verse": "19:25",
+    "u": [
+     "아침까지 밤새 욕보였고"
+    ]
+   },
+   {
+    "text": "아침에 레위인이 ‘일어나라, 우리는 가자’ 했으나 아무런 대답이 없었습니다.",
+    "verse": "19:28",
+    "u": [
+     "아무런 대답이 없었습니다"
+    ]
+   },
+   {
+    "text": "레위인은 집에 돌아와 첩을 열두 조각으로 토막 내어 이스라엘의 온 지경으로 보냈습니다.",
+    "verse": "19:29",
+    "u": [
+     "열두 조각"
+    ]
+   },
+   {
+    "text": "그것을 본 모두가 이집트에서 올라온 날부터 이런 일은 없었다며 숙고하고 상의하자고 했습니다.",
+    "verse": "19:30",
+    "u": [
+     "숙고하고 상의하자고"
+    ]
+   },
+   {
+    "text": "스코필드는 이 장에 ‘혼란 (4) 레위인과 그의 첩’이라는 소제목을 붙였습니다.",
+    "key": "j19-5",
+    "u": [
+     "레위인과 그의 첩"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "19:1",
+    "q": "레위인은 어디에 체류하고 있었습니까?",
+    "a": "에프라임산 등성이"
+   },
+   {
+    "verse": "19:1",
+    "q": "레위인은 어디에서 첩을 취했습니까?",
+    "a": "베들레헴유다"
+   },
+   {
+    "verse": "19:2",
+    "q": "첩은 아버지의 집에서 얼마 동안 지냈습니까?",
+    "a": "사 개월"
+   },
+   {
+    "verse": "19:3",
+    "q": "남편은 첩을 찾아갈 때 누구와 무엇을 데리고 갔습니까?",
+    "a": "그의 종, 두 필의 나귀들"
+   },
+   {
+    "verse": "19:4",
+    "q": "레위인은 처음 장인의 집에서 며칠을 거했습니까?",
+    "a": "삼 일"
+   },
+   {
+    "verse": "19:5",
+    "q": "넷째 날 아침 장인은 무엇으로 마음을 위로하라고 했습니까?",
+    "a": "약간의 빵"
+   },
+   {
+    "verse": "19:8",
+    "q": "다섯째 날 그들은 언제까지 머물며 먹었습니까?",
+    "a": "오후까지"
+   },
+   {
+    "verse": "19:10",
+    "q": "여부스는 어느 곳입니까?",
+    "a": "예루살렘"
+   },
+   {
+    "verse": "19:11",
+    "q": "날이 저물자 종은 어디에 묵자고 청했습니까?",
+    "a": "여부스족들에게 속한 이 도시"
+   },
+   {
+    "verse": "19:12",
+    "q": "주인은 왜 여부스에 들어가지 않겠다고 했습니까?",
+    "a": "이스라엘 자녀들에게 속하지 아니한 곳"
+   },
+   {
+    "verse": "19:13",
+    "q": "레위인이 묵을 곳으로 말한 두 곳은 어디입니까?",
+    "a": "기브아, 라마흐"
+   },
+   {
+    "verse": "19:14",
+    "q": "기브아는 어느 지파에 속한 곳이었습니까?",
+    "a": "베냐민"
+   },
+   {
+    "verse": "19:15",
+    "q": "기브아에서 레위인은 어디에 자리를 잡고 앉았습니까?",
+    "a": "도시의 어떤 거리 가운데"
+   },
+   {
+    "verse": "19:16",
+    "q": "저녁때 밭에서 일을 마치고 온 노인은 어디 출신이었습니까?",
+    "a": "에프라임산"
+   },
+   {
+    "verse": "19:18",
+    "q": "레위인은 이제 어디로 가고 있다고 말했습니까?",
+    "a": "주의 집"
+   },
+   {
+    "verse": "19:20",
+    "q": "노인이 레위인에게 하지 말라고 한 단 한 가지는 무엇입니까?",
+    "a": "길에서만은 묵지 말라"
+   },
+   {
+    "verse": "19:21",
+    "q": "노인의 집에 들어간 그들이 먼저 한 일은 무엇입니까?",
+    "a": "발을 씻었으며, 먹고 마셨더라"
+   },
+   {
+    "verse": "19:22",
+    "q": "집을 에워싼 도시의 남자들은 누구의 아들들이었습니까?",
+    "a": "벨리알의 아들들"
+   },
+   {
+    "verse": "19:23",
+    "q": "노인은 남자들을 무엇이라고 부르며 말렸습니까?",
+    "a": "나의 형제들"
+   },
+   {
+    "verse": "19:25",
+    "q": "남자들은 첩을 언제까지 욕보였습니까?",
+    "a": "아침까지 밤새"
+   },
+   {
+    "verse": "19:27",
+    "q": "아침에 쓰러져 있던 첩의 두 손은 어디에 있었습니까?",
+    "a": "문지방 위"
+   },
+   {
+    "verse": "19:29",
+    "q": "레위인은 첩을 몇 조각으로 토막 냈습니까?",
+    "a": "열두 조각"
+   },
+   {
+    "verse": "19:30",
+    "q": "그것을 본 모두는 언제부터 이런 일이 없었다고 말했습니까?",
+    "a": "이스라엘 자녀들이 이집트 지역에서 올라온 날부터"
+   },
+   {
+    "key": "j19-1",
+    "q": "19장 첫 절은 앞 장들과 어떤 같은 말로 시작합니까?",
+    "a": "‘이스라엘에 왕이 없었을 때’로 시작합니다."
+   },
+   {
+    "key": "j19-1",
+    "q": "강의는 하나님이 너무너무 말을 안 들으면 어떻게 하신다고 말합니까?",
+    "a": "그냥 돌아서신다고 말합니다."
+   },
+   {
+    "key": "j19-2",
+    "q": "스코필드가 5절에 관주로 단 구절은 무엇입니까?",
+    "a": "시편 104:15"
+   },
+   {
+    "key": "j19-3",
+    "q": "스코필드는 18절 ‘주의 집’을 어느 구절들과 이었습니까?",
+    "a": "여호수아기 18:1과 사무엘기상 1:3, 7"
+   },
+   {
+    "key": "j19-3",
+    "q": "여호수아기 18:1에 따르면 회중의 성막은 어디에 설치되었습니까?",
+    "a": "실로"
+   },
+   {
+    "key": "j19-4",
+    "q": "스코필드가 22절 ‘흥취를 돋우고 있을 때’에 단 사사기 구절은 무엇입니까?",
+    "a": "사사기 16:25"
+   },
+   {
+    "key": "j19-4",
+    "q": "스코필드가 24절 여백에 적은 다른 풀이는 무엇입니까?",
+    "a": "이 어리석은 일의 문제"
+   },
+   {
+    "key": "j19-5",
+    "q": "스코필드가 19장 머리에 붙인 소제목은 무엇입니까?",
+    "a": "혼란 — 사회와 종교의 혼란 (4) 레위인과 그의 첩"
+   }
+  ],
+  "faq": [
+   {
+    "q": "19장은 왜 또 ‘왕이 없었을 때’로 시작합니까?",
+    "key": "j19-1"
+   },
+   {
+    "q": "하나님은 끝까지 말을 듣지 않는 백성을 어떻게 하십니까?",
+    "key": "j19-1"
+   },
+   {
+    "q": "장인은 왜 사위를 날마다 붙잡았습니까?",
+    "key": "j19-2"
+   },
+   {
+    "q": "‘빵으로 마음을 위로하라’는 말은 다른 성경 어디와 이어집니까?",
+    "key": "j19-2"
+   },
+   {
+    "q": "레위인이 말한 ‘주의 집’은 어디를 가리킵니까?",
+    "key": "j19-3"
+   },
+   {
+    "q": "노인의 ‘평안이 너와 함께 있기를’이라는 인사는 어디와 이어집니까?",
+    "key": "j19-3"
+   },
+   {
+    "q": "기브아 남자들의 ‘마음의 흥취’는 무엇과 비교됩니까?",
+    "key": "j19-4"
+   },
+   {
+    "q": "노인이 말한 ‘어리석은 짓’은 무엇을 가리킵니까?",
+    "key": "j19-4"
+   },
+   {
+    "q": "스코필드는 19장을 17–18장과 어떻게 묶습니까?",
+    "key": "j19-5"
+   },
+   {
+    "q": "스코필드는 17–19장의 일들을 어떤 제목으로 부릅니까?",
+    "key": "j19-5"
+   },
+   {
+    "q": "이스라엘 사람들은 이 일을 보고 무엇이라고 했습니까?",
+    "key": "j19-5"
+   },
+   {
+    "q": "이 장의 일은 왕이 없던 때와 어떤 관계가 있습니까?",
+    "key": "j19-1"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "첩",
+    "verse": "19:1",
+    "text": "레위인이 베들레헴유다에서 자신에게로 취한 여자. 본문은 그녀를 그의 첩이라 부르고, 레위인을 그녀의 남편이라 부릅니다."
+   },
+   {
+    "term": "여부스",
+    "verse": "19:10",
+    "text": "본문이 ‘여부스는 예루살렘이라’고 밝힌 도시. 그때는 여부스족들에게 속한 타국인의 도시였습니다."
+   },
+   {
+    "term": "기브아",
+    "verse": "19:14",
+    "text": "베냐민에 속한 도시. 레위인 일행이 묵으려다 아무도 맞아들이지 않은 곳입니다."
+   },
+   {
+    "term": "벨리알의 아들들",
+    "verse": "19:22",
+    "text": "노인의 집을 에워싸고 문을 두들긴 기브아 도시의 남자들을 본문이 부른 이름입니다."
+   },
+   {
+    "term": "실로",
+    "key": "j19-3",
+    "text": "여호수아기 18:1에서 회중의 성막을 설치한 곳. 스코필드는 ‘주의 집’을 이곳과 이었습니다."
+   },
+   {
+    "term": "지경",
+    "verse": "19:29",
+    "text": "경계 안의 땅. 레위인은 첩의 조각들을 이스라엘의 온 지경 안으로 보냈습니다."
+   }
+  ]
+ }
+}

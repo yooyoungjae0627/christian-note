@@ -1,0 +1,1159 @@
+{
+ "chapter": 2,
+ "subtitle": "보킴의 천사와 되풀이되는 배반",
+ "motto": "거기서 태어난 자식들은 죄를 지었습니다",
+ "motto_comment": "j02-2",
+ "cover": [
+  {
+   "m": "glow",
+   "x": 236,
+   "y": 110,
+   "s": 0.8
+  },
+  {
+   "m": "altar",
+   "x": 110,
+   "y": 280,
+   "s": 0.85
+  },
+  {
+   "m": "path",
+   "x": 170,
+   "y": 250,
+   "s": 1
+  },
+  {
+   "m": "tree",
+   "x": 250,
+   "y": 285,
+   "s": 0.8
+  }
+ ],
+ "people": [
+  {
+   "id": "lord",
+   "name": "주",
+   "role": "god",
+   "gen": 0,
+   "desc": "이스라엘이 다른 신들을 섬기자 분노하시어 그들을 약탈자들의 손에 넘기셨습니다. 그러면서도 판관들을 일으켜 그 판관의 모든 날 동안 그들을 구출하셨습니다.",
+   "refs": [
+    "2:14",
+    "2:16",
+    "2:18"
+   ],
+   "part": "치시고 다시 건지신 분",
+   "intro": "판관들을 일으키신 분 · 분노하신 분"
+  },
+  {
+   "id": "angel",
+   "name": "주의 천사",
+   "role": "god",
+   "gen": 0,
+   "desc": "길갈에서 보킴으로 올라와, 주께서 이집트에서 데리고 나오셨는데도 이스라엘이 그분의 음성에 순종하지 않았다고 꾸짖었습니다.",
+   "refs": [
+    "2:1",
+    "2:4"
+   ],
+   "part": "보킴에서 꾸짖은 천사",
+   "look": "angel",
+   "intro": "길갈에서 올라온 천사 · 불순종을 꾸짖음"
+  },
+  {
+   "id": "joshua",
+   "name": "여호수아",
+   "en": "Joshua",
+   "gen": 1,
+   "desc": "눈의 아들이며 주의 종입니다. 백성을 각자의 유산으로 보냈고, 일백십 세에 죽어 팀낫헤레스에 장사되었습니다.",
+   "refs": [
+    "2:6",
+    "2:8",
+    "2:9"
+   ],
+   "part": "일백십 세에 죽은 주의 종",
+   "look": "old",
+   "intro": "눈의 아들 · 일백십 세에 죽은 주의 종"
+  },
+  {
+   "id": "elders",
+   "name": "장로들",
+   "gen": 1,
+   "desc": "여호수아 이후에 살아남아 주께서 이스라엘을 위하여 행하신 모든 위대한 역사들을 목격한 사람들입니다. 이들이 사는 동안 백성은 주를 섬겼습니다.",
+   "refs": [
+    "2:7"
+   ],
+   "part": "주의 역사를 본 세대",
+   "look": "group",
+   "intro": "주의 역사를 목격함 · 주를 섬긴 세대"
+  },
+  {
+   "id": "newgen",
+   "name": "또 다른 세대",
+   "gen": 2,
+   "desc": "앞 세대가 조상들에게로 합쳐진 뒤에 일어난 세대입니다. 주를 몰랐고 주께서 이스라엘을 위하여 행하신 일들도 몰라 바알들을 섬겼습니다.",
+   "refs": [
+    "2:10",
+    "2:11"
+   ],
+   "part": "주를 모른 세대",
+   "look": "group",
+   "intro": "뒤에 일어난 세대 · 주를 몰라 바알을 섬김"
+  },
+  {
+   "id": "judges",
+   "name": "판관들",
+   "gen": 2,
+   "desc": "주께서 일으키신 사람들로, 약탈자들의 손에서 이스라엘을 구출했습니다. 그러나 백성은 판관들에게도 경청하지 않았고, 판관이 죽으면 다시 돌아가 다른 신들을 따랐습니다.",
+   "refs": [
+    "2:16",
+    "2:17",
+    "2:19"
+   ],
+   "part": "주께서 일으키신 구출자들",
+   "look": "group",
+   "intro": "주께서 일으키심 · 약탈자들에게서 구출"
+  }
+ ],
+ "relations": [
+  {
+   "from": "angel",
+   "to": "newgen",
+   "type": "god",
+   "label": "꾸짖음",
+   "ref": "2:2",
+   "directed": true
+  },
+  {
+   "from": "lord",
+   "to": "judges",
+   "type": "god",
+   "label": "일으키심",
+   "ref": "2:16",
+   "directed": true
+  },
+  {
+   "from": "joshua",
+   "to": "elders",
+   "type": "other",
+   "label": "함께 섬김",
+   "ref": "2:7"
+  },
+  {
+   "from": "elders",
+   "to": "newgen",
+   "type": "kin",
+   "label": "뒤 세대",
+   "ref": "2:10"
+  },
+  {
+   "from": "judges",
+   "to": "newgen",
+   "type": "ruler",
+   "label": "구출함",
+   "ref": "2:16"
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "gilgal",
+    "ref": "2:1"
+   }
+  ],
+  "routes": [],
+  "minSpan": 0.9,
+  "unknown": [
+   {
+    "name": "보킴",
+    "ref": "2:1",
+    "note": "주의 천사가 길갈에서 올라온 곳으로, 정확한 자리는 표시하지 않았습니다."
+   },
+   {
+    "name": "팀낫헤레스(가아시 언덕 북편)",
+    "ref": "2:9",
+    "note": "에프라임산 속이라고만 나오며 정확한 자리는 표시하지 않았습니다."
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "2:1-5",
+   "title": "보킴 — 우는 사람들",
+   "marks": [
+    {
+     "v": "2:1",
+     "t": "y",
+     "ko": "너희와 맺은 나의 언약을 나는 결코 깨뜨리지 않겠노라",
+     "en": "I will never break my covenant with you"
+    },
+    {
+     "v": "2:2",
+     "t": "p",
+     "ko": "너희가 나의 음성에 순종하지 아니하였도다",
+     "en": "ye have not obeyed my voice"
+    },
+    {
+     "v": "2:3",
+     "t": "p",
+     "ko": "그들이 너희의 옆구리에 가시들같이 될 것이요",
+     "en": "they shall be as thorns in your sides"
+    },
+    {
+     "v": "2:3",
+     "t": "p",
+     "ko": "그들의 신들이 너희에게 올무가 되리라",
+     "en": "their gods shall be a snare unto you"
+    },
+    {
+     "v": "2:4",
+     "t": "u",
+     "ko": "백성이 자신들의 목소리를 높여 울었더라",
+     "en": "the people lifted up their voice, and wept"
+    }
+   ],
+   "english": [
+    {
+     "ref": "2:1",
+     "phrase": "I will never break my covenant with you",
+     "grammar": "의지의 will + never",
+     "text": "will never는 ‘결코 ~하지 않겠다’는 강한 의지를 나타냅니다. 주께서 언약을 깨뜨리지 않겠다고 하신 약속입니다."
+    },
+    {
+     "ref": "2:2",
+     "phrase": "why have ye done this?",
+     "grammar": "옛 2인칭 복수 ye, 현재완료 의문문",
+     "text": "ye는 you의 옛 형태로 여러 사람에게 말할 때 씁니다. have done은 그 일이 지금까지 결과로 남아 있음을 보여 줍니다."
+    },
+    {
+     "ref": "2:3",
+     "phrase": "they shall be as thorns in your sides",
+     "grammar": "예고의 shall + 비유의 as",
+     "text": "shall be는 앞으로 반드시 그렇게 된다는 예고입니다. as thorns는 ‘가시들같이’라는 비유로, 남겨 둔 민족들이 계속 찌르고 괴롭히는 존재가 된다는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "covenant",
+     "ko": "언약",
+     "ref": "2:1"
+    },
+    {
+     "w": "sware",
+     "ko": "맹세했다(swear의 옛 과거)",
+     "ref": "2:1"
+    },
+    {
+     "w": "league",
+     "ko": "맹약, 동맹",
+     "ref": "2:2"
+    },
+    {
+     "w": "altars",
+     "ko": "제단들",
+     "ref": "2:2"
+    },
+    {
+     "w": "thorns",
+     "ko": "가시들",
+     "ref": "2:3"
+    },
+    {
+     "w": "snare",
+     "ko": "올무, 덫",
+     "ref": "2:3"
+    },
+    {
+     "w": "wept",
+     "ko": "울었다(weep의 과거)",
+     "ref": "2:4"
+    },
+    {
+     "w": "sacrificed",
+     "ko": "희생 제물을 드렸다",
+     "ref": "2:5"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j02-1",
+     "basis": "external",
+     "text": "스코필드 관주 성경은 5절의 ‘보킴’이라는 이름에 「곧 우는 사람들」이라는 뜻풀이를 달았습니다. 주의 천사가 전한 말씀을 듣고 백성이 소리를 높여 운 그 자리가 ‘우는 사람들’이라는 이름을 얻은 것입니다.",
+     "spans": [
+      {
+       "text": "「곧 우는 사람들」",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 사사기 2장 난외주",
+       "where": "Judg. 2:5 난외주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "i.e. weepers.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "2:6-11",
+   "title": "주를 모르는 또 다른 세대",
+   "marks": [
+    {
+     "v": "2:7",
+     "t": "g",
+     "ko": "백성이 여호수아의 모든 날들과 여호수아 이후에 살았던 장로들의 모든 날들 동안 주를 섬겼으니",
+     "en": "the people served the LORD all the days of Joshua, and all the days of the elders that outlived Joshua"
+    },
+    {
+     "v": "2:10",
+     "t": "b",
+     "ko": "그들 뒤에 또 다른 세대가 일어났는데",
+     "en": "there arose another generation after them"
+    },
+    {
+     "v": "2:10",
+     "t": "p",
+     "ko": "그 세대는 주를 몰랐고",
+     "en": "which knew not the LORD"
+    },
+    {
+     "v": "2:11",
+     "t": "p",
+     "ko": "바알들을 섬겼더라",
+     "en": "served Baalim"
+    }
+   ],
+   "english": [
+    {
+     "ref": "2:7",
+     "phrase": "the elders that outlived Joshua",
+     "grammar": "관계대명사 that, 동사 outlive",
+     "text": "that outlived Joshua가 elders를 꾸밉니다. outlive는 ‘~보다 오래 살다’라는 뜻입니다. 여호수아가 죽은 뒤에도 살아 있던 장로들입니다.",
+     "key": "j02-2"
+    },
+    {
+     "ref": "2:10",
+     "phrase": "which knew not the LORD",
+     "grammar": "옛 부정문(동사 + not)",
+     "text": "옛 영어는 did not know 대신 knew not처럼 동사 바로 뒤에 not을 둡니다. ‘주를 몰랐다’는 뜻이며, 현대 영어(WEB)는 who didn't know Yahweh로 옮겼습니다.",
+     "key": "j02-2"
+    },
+    {
+     "ref": "2:10",
+     "phrase": "all that generation were gathered unto their fathers",
+     "grammar": "수동태 관용 표현",
+     "text": "be gathered unto one's fathers는 ‘조상들에게로 모이다’, 곧 죽었다는 것을 점잖게 말하는 표현입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "inheritance",
+     "ko": "유산",
+     "ref": "2:6"
+    },
+    {
+     "w": "possess",
+     "ko": "차지하다",
+     "ref": "2:6"
+    },
+    {
+     "w": "outlived",
+     "ko": "~보다 오래 살았다",
+     "ref": "2:7"
+    },
+    {
+     "w": "elders",
+     "ko": "장로들",
+     "ref": "2:7"
+    },
+    {
+     "w": "generation",
+     "ko": "세대",
+     "ref": "2:10"
+    },
+    {
+     "w": "Baalim",
+     "ko": "바알들(Baal의 복수)",
+     "ref": "2:11"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j02-2",
+     "basis": "direct",
+     "text": "밀크 7강은 사사기 2장 7절과 10–11절을 읽으며 천년왕국 출생자들의 그림자를 보여 줍니다. 약속의 땅에 들어가는 과정을 지켜본 1세대들은 하나님이 얼마나 위대하고 무서운 분인지 알았습니다. 그래서 죄를 짓지 않았습니다. 그런데 거기서 태어난 자식들은 죄를 지었습니다. 그 세대는 주를 몰랐고, 주께서 이스라엘을 위하여 행하신 일들도 몰랐기 때문입니다. 강의는 이것이 천년왕국의 상징이라고 말합니다.",
+     "spans": [
+      {
+       "text": "하나님이 얼마나 위대하고 무서운 분인지 알았습니다",
+       "level": 2
+      },
+      {
+       "text": "이것이 천년왕국의 상징",
+       "level": 3
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "pdf",
+       "source": "밀크 7강 「제사장 교회 vs 신부 교회」",
+       "file": "Milk/제사장_교회_vs_신부_교회_밀크7강.pdf",
+       "pages": [
+        47,
+        48
+       ],
+       "excerpt": "약속의 땅에 들어갈 때 들어가는 과정을 지켜본 1세대들은 하나님이 얼마나 위대하고 무서운 분인지 알아서 죄를 짓지 않는데, 거기서 태어난 자식들은 죄를 짓더라고 되어 있거든요. 이것이 천년왕국의 상징입니다.\n…\n그 세대는 주를 몰랐고 심지어 그분께서 이스라엘을 위하여 행하신 일들도 몰랐더라. 그런즉 이스라엘 자녀들이 주의 목전에 악을 행하였고 바알들을 섬겼더라.",
+       "url": "https://youtu.be/BVYo6vMdvm0?t=2949"
+      },
+      {
+       "type": "pdf",
+       "source": "밀크 7강 「제사장 교회 vs 신부 교회」 · 개념 문제 32",
+       "file": "Milk/제사장_교회_vs_신부_교회_밀크7강.pdf",
+       "pages": [
+        98
+       ],
+       "excerpt": "하나님의 역사를 목격한 1세대는 죄를 짓지 않았지만 그 뒤에 태어난 세대는 주를 몰라서 악을 행했기 때문입니다.",
+       "url": "https://youtu.be/BVYo6vMdvm0?t=3012"
+      }
+     ]
+    },
+    {
+     "id": "j02-3",
+     "basis": "direct",
+     "text": "강의는 이 그림자를 천년왕국에 비추어 풀어 줍니다. 7년 환란 끝에 예수님께서 하시는 일을 다 본 사람들은 그분이 어떤 분인지 압니다. 성전에 앉아 계신 그분을 알기에 죄를 짓지 않습니다. 그런데 천년왕국에서 태어난 그들의 자손들은 예수님 무서운 줄을 모릅니다. 태어나 보니 예수님께서 당연히 왕으로 계셨기 때문입니다. 사사기 2장을 읽으며 강의는 ‘똑같은 패턴이 반복되겠구나’라고 말합니다. 그리고 천 년 끝에 드디어 사탄이 음부에서 풀려나 어마어마한 유혹을 합니다.",
+     "spans": [
+      {
+       "text": "예수님 무서운 줄을 모릅니다",
+       "level": 2
+      },
+      {
+       "text": "‘똑같은 패턴이 반복되겠구나’",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "pdf",
+       "source": "밀크 7강 「제사장 교회 vs 신부 교회」",
+       "file": "Milk/제사장_교회_vs_신부_교회_밀크7강.pdf",
+       "pages": [
+        47,
+        48
+       ],
+       "excerpt": "그들은 7년 환란 끝에 예수님께서 하시는 일을 다 보았잖아요. 그분이 어떤 분인지 알잖아요. 저기 성전에 앉아 계신 분 말이에요. 그래서 이들은 죄를 짓지 않아요. 그런데 천년왕국에서 태어난 그들의 자손들은 예수님 무서운 줄을 몰라요. 그들은 태어나 보니 예수님께서 당연히 왕으로 계신 거예요.\n…\n똑같은 패턴이 반복되겠구나.\n…\n그리고 천 년 끝에 드디어 사탄이 음부에서 풀려나 어마어마한 유혹을 하지요.",
+       "url": "https://youtu.be/BVYo6vMdvm0?t=2949"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "2:12-15",
+   "title": "바알과 아슈타롯, 약탈자들의 손",
+   "marks": [
+    {
+     "v": "2:12",
+     "t": "p",
+     "ko": "그들 주위에 있던 백성의 신들에 속한 다른 신들을 따랐으니",
+     "en": "followed other gods, of the gods of the people that were round about them"
+    },
+    {
+     "v": "2:13",
+     "t": "p",
+     "ko": "주를 저버리고 바알과 아슈타롯을 섬겼더라",
+     "en": "forsook the LORD, and served Baal and Ashtaroth"
+    },
+    {
+     "v": "2:14",
+     "t": "p",
+     "ko": "그분께서 주위에 있는 그들의 원수들의 손안에 그들을 파셨더라",
+     "en": "he sold them into the hands of their enemies round about"
+    },
+    {
+     "v": "2:15",
+     "t": "u",
+     "ko": "그들이 대단히 괴로워하였더라",
+     "en": "they were greatly distressed"
+    }
+   ],
+   "english": [
+    {
+     "ref": "2:12",
+     "phrase": "provoked the LORD to anger",
+     "grammar": "provoke + 목적어 + to + 명사",
+     "text": "provoke A to anger는 ‘A를 화나게 하다, A의 분노를 일으키다’라는 뜻입니다."
+    },
+    {
+     "ref": "2:14",
+     "phrase": "he sold them into the hands of their enemies",
+     "grammar": "비유적 동사 sell",
+     "text": "sold는 실제로 값을 받고 팔았다는 말이 아니라, 원수들의 지배 아래 넘겨 버리셨다는 비유입니다. 3장과 4장에서도 같은 표현이 되풀이됩니다."
+    },
+    {
+     "ref": "2:15",
+     "phrase": "Whithersoever they went out",
+     "grammar": "옛 관계부사 whithersoever",
+     "text": "whithersoever는 ‘어디로 가든지’라는 뜻으로, 현대 영어의 wherever에 해당합니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "forsook",
+     "ko": "저버렸다(forsake의 과거)",
+     "ref": "2:12"
+    },
+    {
+     "w": "provoked",
+     "ko": "화나게 했다",
+     "ref": "2:12"
+    },
+    {
+     "w": "spoilers",
+     "ko": "약탈자들",
+     "ref": "2:14"
+    },
+    {
+     "w": "whithersoever",
+     "ko": "어디로 가든지",
+     "ref": "2:15"
+    },
+    {
+     "w": "sworn",
+     "ko": "맹세한(swear의 과거분사)",
+     "ref": "2:15"
+    },
+    {
+     "w": "distressed",
+     "ko": "괴로워하는",
+     "ref": "2:15"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j02-4",
+     "basis": "external",
+     "text": "스코필드는 13절의 ‘아슈타롯’이 아슈토렛의 복수형이라고 설명합니다. 아슈타롯은 아슈토렛의 형상들로, 이스라엘이 영적으로 무너져 내린 때마다 우상으로 섬겨졌다는 것입니다.",
+     "spans": [
+      {
+       "text": "영적으로 무너져 내린 때마다 우상으로 섬겨졌다",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 2:13 주석",
+       "where": "Judg. 2:13 주석",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Ashtaroth, plural of Ashtoreth (1 Ki. 11.5), were figures of Ashtoreth\n…\nwhich were worshipped as idols during times of spiritual declension in Israel",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "2:16-19",
+   "title": "판관들을 일으키셨으나",
+   "marks": [
+    {
+     "v": "2:16",
+     "t": "g",
+     "ko": "주께서 판관들을 일으키셨으니",
+     "en": "the LORD raised up judges"
+    },
+    {
+     "v": "2:17",
+     "t": "p",
+     "ko": "다른 신들을 좇아 행음하러 다녔으며",
+     "en": "they went a whoring after other gods"
+    },
+    {
+     "v": "2:18",
+     "t": "g",
+     "ko": "주께서는 그 판관과 함께하시어",
+     "en": "the LORD was with the judge"
+    },
+    {
+     "v": "2:19",
+     "t": "p",
+     "ko": "그들의 조상들보다 더 자신들을 변질시켜",
+     "en": "corrupted themselves more than their fathers"
+    }
+   ],
+   "english": [
+    {
+     "ref": "2:16",
+     "phrase": "Nevertheless the LORD raised up judges",
+     "grammar": "접속부사 nevertheless",
+     "text": "nevertheless는 ‘그럼에도 불구하고’입니다. 앞 절의 심판에도 불구하고 주께서 구출자를 일으키셨다는 전환을 보여 줍니다.",
+     "key": "j02-5"
+    },
+    {
+     "ref": "2:18",
+     "phrase": "for it repented the LORD because of their groanings",
+     "grammar": "비인칭 주어 it",
+     "text": "it repented the LORD는 ‘그것이 주를 돌이키게 하였다’, 곧 주의 마음이 움직였다는 옛 구문입니다. 그 원인을 because of their groanings(그들의 신음 때문에)가 밝힙니다.",
+     "key": "j02-6"
+    },
+    {
+     "ref": "2:19",
+     "phrase": "they ceased not from their own doings",
+     "grammar": "옛 부정문(동사 + not)",
+     "text": "ceased not은 did not cease, 곧 ‘그치지 않았다’입니다. doings는 ‘행동거지, 하는 짓’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "hearken",
+     "ko": "귀 기울이다",
+     "ref": "2:17"
+    },
+    {
+     "w": "whoring",
+     "ko": "행음하는",
+     "ref": "2:17"
+    },
+    {
+     "w": "repented",
+     "ko": "마음을 돌이켰다",
+     "ref": "2:18"
+    },
+    {
+     "w": "groanings",
+     "ko": "신음들",
+     "ref": "2:18"
+    },
+    {
+     "w": "vexed",
+     "ko": "괴롭혔다",
+     "ref": "2:18"
+    },
+    {
+     "w": "corrupted",
+     "ko": "타락시켰다",
+     "ref": "2:19"
+    },
+    {
+     "w": "stubborn",
+     "ko": "완고한",
+     "ref": "2:19"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j02-5",
+     "basis": "external",
+     "text": "스코필드는 판관들을 이렇게 설명합니다. 판관들은 이스라엘 지파 사람들로, 배교하고 압제당하던 이스라엘의 짐을 주께서 지워 주신 사람들이었습니다. 그들은 선지자들의 영적인 조상이었습니다. 곧 신정의 왕이신 하나님께서 일으키셔서 나라 안에서 그분을 대표하게 하신 사람들이었습니다. 신정은 하나님께서 직접 왕으로 다스리시는 것을 말합니다. 나라의 안전과 번영이 주께 대한 충성과 순종에 떼려야 뗄 수 없이 매여 있었기에, 그들은 나라를 지키는 사람이자 신앙을 바로잡는 사람이었습니다.",
+     "spans": [
+      {
+       "text": "선지자들의 영적인 조상",
+       "level": 2
+      },
+      {
+       "text": "나라 안에서 그분을 대표하게 하신 사람들",
+       "level": 1
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 2:16 주석",
+       "where": "Judg. 2:16 주석",
+       "file": "memory-bank/세대주의_해설/scofield/judges-02.md",
+       "excerpt": "The judges were tribesmen in Israel upon whom the Lord laid the burden of Israel's apostate and oppressed state. They were the spiritual ancestors of the prophets; that is to say, men raised up of God, the theocratic King, to represent Him in the nation. They were patriots and religious reformers because national security and prosperity were inseparably connected with loyalty and obedience to Jehovah.",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/judges/judges-2.html"
+      }
+     ]
+    },
+    {
+     "id": "j02-6",
+     "basis": "external",
+     "text": "스코필드는 사사기를 두 부분으로 나누고, 1장부터 16장까지인 첫 부분의 핵심 구절로 2장 18절을 꼽습니다. 주께서 판관들을 일으키실 때마다 그 판관과 함께하셔서 판관의 모든 날 동안 원수들의 손에서 그들을 구출하셨다는 말씀입니다.",
+     "spans": [
+      {
+       "text": "첫 부분의 핵심 구절로 2장 18절을 꼽습니다",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 머리말",
+       "where": "사사기 머리말",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Judges is in two parts: I. 1.-16. inclusive; key-verse, 2. 18.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "2:20-23",
+   "title": "남겨 두신 민족들",
+   "marks": [
+    {
+     "v": "2:20",
+     "t": "p",
+     "ko": "나의 언약을 위반하였고",
+     "en": "hath transgressed my covenant"
+    },
+    {
+     "v": "2:21",
+     "t": "y",
+     "ko": "어느 민족도 그들 앞에서 내쫓지 아니하겠노라",
+     "en": "I also will not henceforth drive out any from before them"
+    },
+    {
+     "v": "2:22",
+     "t": "u",
+     "ko": "내가 민족들을 통하여 이스라엘을 확인해 보려 함이라",
+     "en": "That through them I may prove Israel"
+    },
+    {
+     "v": "2:23",
+     "t": "u",
+     "ko": "그 민족들을 서둘러 내쫓는 일 없이 그들을 남겨 두셨으며",
+     "en": "the LORD left those nations, without driving them out hastily"
+    }
+   ],
+   "english": [
+    {
+     "ref": "2:20",
+     "phrase": "Because that this people hath transgressed my covenant",
+     "grammar": "옛 접속사 because that",
+     "text": "because that은 오늘날의 because와 같습니다. hath transgressed는 has broken, 곧 ‘언약을 어겼다’입니다."
+    },
+    {
+     "ref": "2:21",
+     "phrase": "I also will not henceforth drive out any from before them",
+     "grammar": "옛 부사 henceforth",
+     "text": "henceforth는 ‘이제부터, 앞으로는’입니다. 1장에서 이스라엘이 ‘내쫓지 아니하였더라’가 되풀이되었는데, 이제는 주께서 ‘내쫓지 아니하겠노라’고 하십니다."
+    },
+    {
+     "ref": "2:22",
+     "phrase": "whether they will keep the way of the LORD to walk therein, as their fathers did keep it, or not",
+     "grammar": "whether ~ or not, 강조의 did",
+     "text": "whether ~ or not은 ‘~할지 아닐지’입니다. did keep의 did는 keep을 강조합니다. therein은 ‘그 안에서’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "transgressed",
+     "ko": "어겼다, 위반했다",
+     "ref": "2:20"
+    },
+    {
+     "w": "henceforth",
+     "ko": "이제부터",
+     "ref": "2:21"
+    },
+    {
+     "w": "prove",
+     "ko": "시험하다, 확인하다",
+     "ref": "2:22"
+    },
+    {
+     "w": "therein",
+     "ko": "그 안에서",
+     "ref": "2:22"
+    },
+    {
+     "w": "hastily",
+     "ko": "서둘러",
+     "ref": "2:23"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j02-7",
+     "basis": "external",
+     "text": "스코필드 관주 성경은 20절 앞에 「이스라엘의 불완전한 순종이 가져온 결과」라는 소제목을 달았습니다. 이스라엘이 주의 언약을 어기고 그분의 음성에 경청하지 않자, 주께서는 여호수아가 남긴 민족들을 더는 내쫓지 않고 그들을 통해 이스라엘을 확인해 보겠다고 하셨습니다.",
+     "spans": [
+      {
+       "text": "「이스라엘의 불완전한 순종이 가져온 결과」",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 사사기 2장 소제목",
+       "where": "Judg. 2:20 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Result of Israel's incomplete obedience.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "주의 천사가 길갈에서 보킴으로 올라와, 주께서는 언약을 결코 깨뜨리지 않겠다고 하셨다고 전했습니다.",
+    "verse": "2:1",
+    "u": [
+     "언약을 결코 깨뜨리지 않겠다"
+    ]
+   },
+   {
+    "text": "그러나 이스라엘은 그 지역 거주자들과 맹약을 맺지 말라는 주의 음성에 순종하지 않았습니다.",
+    "verse": "2:2",
+    "u": [
+     "순종하지 않았습니다"
+    ]
+   },
+   {
+    "text": "그래서 남은 민족들은 옆구리의 가시가 되고 그들의 신들은 올무가 될 것이라는 말씀이 주어졌습니다.",
+    "verse": "2:3",
+    "u": [
+     "옆구리의 가시",
+     "올무"
+    ]
+   },
+   {
+    "text": "백성은 목소리를 높여 울었고, 스코필드는 그곳 이름 보킴에 ‘곧 우는 사람들’이라는 뜻풀이를 달았습니다.",
+    "key": "j02-1",
+    "u": [
+     "우는 사람들"
+    ]
+   },
+   {
+    "text": "백성은 여호수아와 그 뒤의 장로들이 사는 동안 주를 섬겼습니다.",
+    "verse": "2:7",
+    "u": [
+     "주를 섬겼습니다"
+    ]
+   },
+   {
+    "text": "여호수아는 일백십 세에 죽어 팀낫헤레스에 장사되었습니다.",
+    "verse": "2:8",
+    "u": [
+     "일백십 세"
+    ]
+   },
+   {
+    "text": "뒤에 일어난 세대는 주를 몰랐고 주께서 이스라엘을 위해 행하신 일들도 몰랐습니다.",
+    "verse": "2:10",
+    "u": [
+     "주를 몰랐고"
+    ]
+   },
+   {
+    "text": "밀크 7강은 주의 역사를 본 1세대는 죄를 짓지 않았지만 거기서 태어난 자식들은 죄를 지었다고 풀어 줍니다.",
+    "key": "j02-2",
+    "u": [
+     "거기서 태어난 자식들은 죄를 지었다"
+    ]
+   },
+   {
+    "text": "강의는 이것이 천년왕국의 상징이며, 천년왕국에서 태어난 자손들도 예수님 무서운 줄을 모른다고 말합니다.",
+    "key": "j02-3",
+    "u": [
+     "천년왕국의 상징"
+    ]
+   },
+   {
+    "text": "이스라엘은 주를 저버리고 바알과 아슈타롯을 섬겼습니다.",
+    "verse": "2:13",
+    "u": [
+     "바알과 아슈타롯"
+    ]
+   },
+   {
+    "text": "스코필드는 아슈타롯이 영적으로 무너진 때마다 섬겨진 우상의 형상들이라고 설명합니다.",
+    "key": "j02-4",
+    "u": [
+     "영적으로 무너진 때마다"
+    ]
+   },
+   {
+    "text": "주께서 분노하시어 그들을 약탈자들과 원수들의 손에 넘기시니 그들이 대단히 괴로워했습니다.",
+    "verse": "2:15",
+    "u": [
+     "대단히 괴로워했습니다"
+    ]
+   },
+   {
+    "text": "그럼에도 주께서는 판관들을 일으켜 약탈자들의 손에서 그들을 구출하셨습니다.",
+    "verse": "2:16",
+    "u": [
+     "판관들을 일으켜"
+    ]
+   },
+   {
+    "text": "스코필드는 판관들을 선지자들의 영적인 조상, 곧 나라 안에서 하나님을 대표하도록 일으켜진 사람들이라고 설명합니다.",
+    "key": "j02-5",
+    "u": [
+     "선지자들의 영적인 조상"
+    ]
+   },
+   {
+    "text": "판관이 죽으면 백성은 되돌아가 조상들보다 더 자신들을 변질시켰습니다.",
+    "verse": "2:19",
+    "u": [
+     "조상들보다 더"
+    ]
+   },
+   {
+    "text": "스코필드는 2장 18절을 사사기 첫 부분의 핵심 구절로 꼽습니다.",
+    "key": "j02-6",
+    "u": [
+     "핵심 구절"
+    ]
+   },
+   {
+    "text": "주께서는 여호수아가 남긴 민족들을 통해 이스라엘이 주의 길을 지키는지 확인해 보려고 그들을 남겨 두셨습니다.",
+    "verse": "2:22",
+    "u": [
+     "확인해 보려고"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "2:1",
+    "q": "주의 천사는 어디에서 보킴까지 올라왔습니까?",
+    "a": "길갈"
+   },
+   {
+    "verse": "2:1",
+    "q": "주께서 결코 깨뜨리지 않겠다고 하신 것은 무엇입니까?",
+    "a": "언약"
+   },
+   {
+    "verse": "2:2",
+    "q": "이스라엘이 그 지역 거주자들과 맺지 말아야 했던 것은 무엇입니까?",
+    "a": "맹약"
+   },
+   {
+    "verse": "2:2",
+    "q": "이스라엘이 무너뜨려야 했던 것은 무엇입니까?",
+    "a": "제단들"
+   },
+   {
+    "verse": "2:3",
+    "q": "남겨진 민족들은 이스라엘의 옆구리에 무엇같이 된다고 했습니까?",
+    "a": "가시들"
+   },
+   {
+    "verse": "2:3",
+    "q": "그들의 신들은 이스라엘에게 무엇이 된다고 했습니까?",
+    "a": "올무"
+   },
+   {
+    "verse": "2:4",
+    "q": "천사의 말을 들은 백성은 어떻게 반응했습니까?",
+    "a": "울었더라"
+   },
+   {
+    "verse": "2:5",
+    "q": "백성이 그 장소에 붙인 이름은 무엇입니까?",
+    "a": "보킴"
+   },
+   {
+    "verse": "2:8",
+    "q": "여호수아는 몇 세에 죽었습니까?",
+    "a": "일백십 세"
+   },
+   {
+    "verse": "2:9",
+    "q": "여호수아는 어디에 장사되었습니까?",
+    "a": "팀낫헤레스"
+   },
+   {
+    "verse": "2:10",
+    "q": "뒤에 일어난 세대가 몰랐던 것은 무엇입니까?",
+    "a": "주, 그분께서 이스라엘을 위하여 행하신 일들"
+   },
+   {
+    "verse": "2:11",
+    "q": "이스라엘 자녀들이 섬긴 것은 무엇입니까?",
+    "a": "바알들"
+   },
+   {
+    "verse": "2:13",
+    "q": "이스라엘이 주를 저버리고 섬긴 두 신의 이름은 무엇입니까?",
+    "a": "바알, 아슈타롯"
+   },
+   {
+    "verse": "2:14",
+    "q": "주께서 이스라엘을 누구의 손안에 넘기셨습니까?",
+    "a": "약탈자들"
+   },
+   {
+    "verse": "2:16",
+    "q": "주께서 이스라엘을 구출하려고 일으키신 사람들은 누구입니까?",
+    "a": "판관들"
+   },
+   {
+    "verse": "2:17",
+    "q": "백성은 판관들에게 어떻게 했습니까?",
+    "a": "경청하려 하지 아니하였으니"
+   },
+   {
+    "verse": "2:18",
+    "q": "주께서 마음을 돌이키신 것은 무엇 때문이었습니까?",
+    "a": "신음"
+   },
+   {
+    "verse": "2:19",
+    "q": "판관이 죽으면 백성은 누구보다 더 자신들을 변질시켰습니까?",
+    "a": "조상들"
+   },
+   {
+    "verse": "2:21",
+    "q": "주께서 앞으로는 내쫓지 않겠다고 하신 민족들은 누가 남긴 민족들입니까?",
+    "a": "여호수아"
+   },
+   {
+    "verse": "2:22",
+    "q": "주께서 민족들을 통하여 하시려는 일은 무엇입니까?",
+    "a": "이스라엘을 확인해 보려"
+   },
+   {
+    "key": "j02-1",
+    "q": "스코필드는 ‘보킴’이라는 이름의 뜻을 무엇이라고 풀었습니까?",
+    "a": "곧 우는 사람들"
+   },
+   {
+    "key": "j02-2",
+    "q": "밀크 7강에 따르면 약속의 땅에 들어가는 과정을 지켜본 1세대가 죄를 짓지 않은 까닭은 무엇입니까?",
+    "a": "하나님이 얼마나 위대하고 무서운 분인지 알았기 때문입니다."
+   },
+   {
+    "key": "j02-2",
+    "q": "강의는 사사기 2장의 이 장면이 무엇의 상징이라고 말합니까?",
+    "a": "천년왕국"
+   },
+   {
+    "key": "j02-3",
+    "q": "천년왕국에서 태어난 자손들이 예수님 무서운 줄을 모르는 까닭은 무엇입니까?",
+    "a": "태어나 보니 예수님께서 당연히 왕으로 계셨기 때문입니다."
+   },
+   {
+    "key": "j02-3",
+    "q": "강의에 따르면 천 년 끝에 무슨 일이 일어납니까?",
+    "a": "사탄이 음부에서 풀려나 어마어마한 유혹을 합니다."
+   },
+   {
+    "key": "j02-4",
+    "q": "스코필드는 아슈타롯이 언제 우상으로 섬겨졌다고 설명합니까?",
+    "a": "이스라엘이 영적으로 무너져 내린 때마다"
+   },
+   {
+    "key": "j02-5",
+    "q": "스코필드는 판관들을 누구의 영적인 조상이라고 말합니까?",
+    "a": "선지자들"
+   },
+   {
+    "key": "j02-5",
+    "q": "스코필드에 따르면 판관들이 나라를 지키는 사람이자 신앙을 바로잡는 사람이었던 까닭은 무엇입니까?",
+    "a": "나라의 안전과 번영이 주께 대한 충성과 순종에 매여 있었기 때문입니다."
+   },
+   {
+    "key": "j02-6",
+    "q": "스코필드가 사사기 첫 부분의 핵심 구절로 꼽은 절은 무엇입니까?",
+    "a": "2장 18절"
+   },
+   {
+    "key": "j02-7",
+    "q": "스코필드 관주 성경이 20절 앞에 단 소제목은 무엇입니까?",
+    "a": "이스라엘의 불완전한 순종이 가져온 결과"
+   }
+  ],
+  "faq": [
+   {
+    "q": "보킴이라는 이름은 무슨 뜻입니까?",
+    "key": "j02-1"
+   },
+   {
+    "q": "여호수아와 장로들이 살아 있을 때 백성은 왜 주를 섬겼습니까?",
+    "key": "j02-2"
+   },
+   {
+    "q": "뒤에 일어난 세대는 왜 죄를 지었습니까?",
+    "key": "j02-2"
+   },
+   {
+    "q": "사사기 2장이 천년왕국의 상징이 되는 이유는 무엇입니까?",
+    "key": "j02-2"
+   },
+   {
+    "q": "천년왕국에서 태어난 사람들도 죄를 짓습니까?",
+    "key": "j02-3"
+   },
+   {
+    "q": "사사기의 패턴은 천년왕국 끝에 어떻게 다시 나타납니까?",
+    "key": "j02-3"
+   },
+   {
+    "q": "아슈타롯은 무엇입니까?",
+    "key": "j02-4"
+   },
+   {
+    "q": "판관들은 어떤 사람들이었습니까?",
+    "key": "j02-5"
+   },
+   {
+    "q": "판관을 선지자들의 영적인 조상이라고 하는 까닭은 무엇입니까?",
+    "key": "j02-5"
+   },
+   {
+    "q": "2장 18절이 사사기에서 중요한 까닭은 무엇입니까?",
+    "key": "j02-6"
+   },
+   {
+    "q": "주께서는 왜 가나안의 민족들을 남겨 두셨습니까?",
+    "key": "j02-7"
+   },
+   {
+    "q": "이스라엘의 불완전한 순종은 어떤 결과를 낳았습니까?",
+    "key": "j02-7"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "보킴",
+    "key": "j02-1",
+    "text": "주의 천사의 말을 듣고 백성이 운 곳. 스코필드는 ‘우는 사람들’이라는 뜻이라고 풉니다."
+   },
+   {
+    "term": "천년왕국",
+    "key": "j02-3",
+    "text": "예수님께서 왕으로 천 년 동안 다스리시는 왕국. 밀크 7강은 사사기 2장의 두 세대를 천년왕국 출생자들의 그림자로 봅니다."
+   },
+   {
+    "term": "아슈타롯",
+    "key": "j02-4",
+    "text": "아슈토렛의 복수형. 아슈토렛의 형상들로, 이스라엘이 영적으로 무너진 때마다 우상으로 섬겨졌습니다."
+   },
+   {
+    "term": "판관(사사)",
+    "key": "j02-5",
+    "text": "주께서 일으키셔서 이스라엘을 원수들의 손에서 구출하게 하신 지파 사람들."
+   },
+   {
+    "term": "신정",
+    "key": "j02-5",
+    "text": "하나님께서 직접 왕으로 다스리시는 것. 스코필드는 판관들이 신정의 왕이신 하나님을 나라 안에서 대표했다고 설명합니다."
+   }
+  ]
+ }
+}

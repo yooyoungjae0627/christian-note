@@ -1,0 +1,1267 @@
+{
+ "chapter": 11,
+ "subtitle": "입다와 그의 서원",
+ "motto": "맹세하고 안 지키느니 맹세하지 않는 게 낫다",
+ "motto_comment": "j11-3",
+ "cover": [
+  {
+   "m": "mountain",
+   "x": 170,
+   "y": 120,
+   "s": 0.9
+  },
+  {
+   "m": "sword",
+   "x": 100,
+   "y": 250,
+   "s": 0.85
+  },
+  {
+   "m": "harp",
+   "x": 245,
+   "y": 255,
+   "s": 0.85
+  },
+  {
+   "m": "altar",
+   "x": 170,
+   "y": 300,
+   "s": 0.8
+  }
+ ],
+ "people": [
+  {
+   "id": "lord",
+   "name": "주",
+   "role": "god",
+   "gen": 0,
+   "desc": "주의 영이 입다에게 임하셨고, 주께서 암몬 후손들을 입다의 두 손안에 넘기셨습니다. 입다는 주를 ‘심판자’라고 부르며 두 나라 사이를 심판해 달라고 했습니다.",
+   "refs": [
+    "11:27",
+    "11:29",
+    "11:32"
+   ],
+   "part": "암몬을 넘기신 분",
+   "intro": "입다에게 영이 임하게 하심 · 암몬을 넘기심"
+  },
+  {
+   "id": "gilead",
+   "name": "길르앗",
+   "en": "Gilead",
+   "gen": 0,
+   "desc": "입다의 아버지입니다. 입다는 창녀의 아들이었고, 길르앗의 아내도 그에게 아들들을 낳아 주었습니다.",
+   "refs": [
+    "11:1",
+    "11:2"
+   ],
+   "part": "입다의 아버지",
+   "look": "man",
+   "intro": "입다의 아버지 · 아내의 아들들도 둠"
+  },
+  {
+   "id": "brothers",
+   "name": "아내의 아들들",
+   "gen": 1,
+   "desc": "길르앗의 아내가 낳은 아들들입니다. 자라서 입다를 내몰며, 타국 여자의 아들이니 아버지의 집에서 상속받지 못한다고 했습니다.",
+   "refs": [
+    "11:2"
+   ],
+   "part": "입다를 내쫓은 형제들",
+   "look": "group",
+   "intro": "길르앗 아내의 아들들 · 입다를 내몲"
+  },
+  {
+   "id": "jephthah",
+   "name": "입다",
+   "en": "Jephthah",
+   "gen": 1,
+   "desc": "길르앗족의 막강한 용사이며 창녀의 아들입니다. 형제들에게 쫓겨나 톱 지역에 살다가 길르앗 장로들의 부탁으로 수장과 대장이 되었습니다. 주께 서원한 뒤 암몬을 쳐서 이겼지만, 맞으러 나온 사람은 그의 외동딸이었습니다.",
+   "refs": [
+    "11:1",
+    "11:3",
+    "11:11",
+    "11:30",
+    "11:35"
+   ],
+   "part": "서원한 길르앗의 용사",
+   "look": "man",
+   "intro": "쫓겨났던 용사 · 서원하고 이긴 대장"
+  },
+  {
+   "id": "elders",
+   "name": "길르앗의 장로들",
+   "gen": 1,
+   "desc": "암몬이 쳐들어오자 톱 지역으로 가서 입다를 데려왔습니다. 주를 증인으로 삼아 그를 수장으로 세우겠다고 약속했습니다.",
+   "refs": [
+    "11:5",
+    "11:8",
+    "11:10"
+   ],
+   "part": "입다를 데려온 장로들",
+   "look": "group",
+   "intro": "입다를 데려온 이들 · 수장으로 세움"
+  },
+  {
+   "id": "ammonking",
+   "name": "암몬 후손들의 왕",
+   "gen": 1,
+   "role": "enemy",
+   "desc": "이스라엘이 이집트에서 나올 때 아르논에서 얍복과 요르단까지 자기 지역을 빼앗았다며 돌려 달라고 했습니다. 입다의 말을 듣지 않았습니다.",
+   "refs": [
+    "11:13",
+    "11:28"
+   ],
+   "part": "땅을 내놓으라던 왕",
+   "look": "king",
+   "intro": "땅을 돌려 달라던 왕 · 말을 안 들음"
+  },
+  {
+   "id": "daughter",
+   "name": "입다의 딸",
+   "gen": 2,
+   "desc": "입다의 하나뿐인 자식입니다. 탬버린과 춤으로 아버지를 맞으러 나왔고, 아버지의 서원대로 행하라고 했습니다. 두 달 동안 동무들과 산 위에서 처녀 됨을 통곡했습니다.",
+   "refs": [
+    "11:34",
+    "11:36",
+    "11:38"
+   ],
+   "part": "입다의 외동딸",
+   "look": "woman",
+   "intro": "하나뿐인 딸 · 서원대로 행하라 함"
+  }
+ ],
+ "relations": [
+  {
+   "from": "gilead",
+   "to": "brothers",
+   "type": "parent",
+   "label": "아들들",
+   "ref": "11:2"
+  },
+  {
+   "from": "gilead",
+   "to": "jephthah",
+   "type": "parent",
+   "label": "아들",
+   "ref": "11:1"
+  },
+  {
+   "from": "jephthah",
+   "to": "daughter",
+   "type": "parent",
+   "label": "외동딸",
+   "ref": "11:34"
+  },
+  {
+   "from": "brothers",
+   "to": "jephthah",
+   "type": "enemy",
+   "label": "내쫓음",
+   "ref": "11:2",
+   "directed": true
+  },
+  {
+   "from": "elders",
+   "to": "jephthah",
+   "type": "other",
+   "label": "수장으로 세움",
+   "ref": "11:11",
+   "directed": true
+  },
+  {
+   "from": "ammonking",
+   "to": "jephthah",
+   "type": "enemy",
+   "label": "전쟁",
+   "ref": "11:12"
+  },
+  {
+   "from": "lord",
+   "to": "jephthah",
+   "type": "god",
+   "label": "영이 임함",
+   "ref": "11:29",
+   "directed": true
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "egypt",
+    "ref": "11:13"
+   },
+   {
+    "key": "kadesh",
+    "name": "카데시",
+    "ref": "11:16"
+   },
+   {
+    "key": "edom",
+    "ref": "11:17"
+   },
+   {
+    "key": "moab",
+    "ref": "11:17"
+   },
+   {
+    "key": "heshbon",
+    "name": "헤슈본",
+    "at": [
+     35.8,
+     31.8
+    ],
+    "ref": "11:19"
+   },
+   {
+    "key": "aroer",
+    "name": "아로엘",
+    "at": [
+     35.79,
+     31.47
+    ],
+    "ref": "11:26"
+   },
+   {
+    "key": "jabbok",
+    "ref": "11:13"
+   },
+   {
+    "key": "gilead",
+    "name": "길르앗",
+    "at": [
+     35.8,
+     32.25
+    ],
+    "ref": "11:1"
+   },
+   {
+    "key": "ammon",
+    "ref": "11:4"
+   }
+  ],
+  "routes": [
+   {
+    "path": [
+     "egypt",
+     "kadesh",
+     "edom",
+     "moab",
+     "heshbon"
+    ],
+    "ref": "11:16-19"
+   }
+  ],
+  "views": [
+   {
+    "title": "① 이집트에서 헤슈본까지 — 광야 길",
+    "keys": [
+     "egypt",
+     "kadesh",
+     "edom",
+     "moab",
+     "heshbon"
+    ]
+   },
+   {
+    "title": "② 길르앗과 암몬 — 아로엘·헤슈본·얍복",
+    "keys": [
+     "gilead",
+     "ammon",
+     "jabbok",
+     "heshbon",
+     "aroer"
+    ],
+    "minSpan": 0.6
+   }
+  ],
+  "unknown": [
+   {
+    "name": "톱 지역",
+    "ref": "11:3",
+    "note": "입다가 형제들을 피해 거한 곳으로, 정확한 자리는 표시하지 않았습니다."
+   },
+   {
+    "name": "미즈페(길르앗의 미즈페)",
+    "ref": "11:29",
+    "note": "입다의 집이 있던 곳으로, 정확한 자리는 표시하지 않았습니다."
+   },
+   {
+    "name": "아르논",
+    "ref": "11:18",
+    "note": "모압의 경계라고 나옵니다. 지도에는 따로 찍지 않았습니다."
+   },
+   {
+    "name": "야하즈",
+    "ref": "11:20",
+    "note": "시혼이 진을 친 곳으로, 자리가 알려지지 않았습니다."
+   },
+   {
+    "name": "민닛 · 포도원들의 평야",
+    "ref": "11:33",
+    "note": "입다가 암몬을 친 범위로, 자리가 알려지지 않았습니다."
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "11:1-3",
+   "title": "형제들에게 쫓겨난 용사 입다",
+   "marks": [
+    {
+     "v": "11:1",
+     "t": "u",
+     "ko": "막강한 용사였는데 그는 창녀의 아들이었으니",
+     "en": "was a mighty man of valour, and he was the son of an harlot"
+    },
+    {
+     "v": "11:2",
+     "t": "p",
+     "ko": "너는 우리 아버지의 집 안에서 상속받지 못하리라",
+     "en": "Thou shalt not inherit in our father's house"
+    },
+    {
+     "v": "11:3",
+     "t": "u",
+     "ko": "톱 지역 가운데서 거하였더라",
+     "en": "dwelt in the land of Tob"
+    }
+   ],
+   "english": [
+    {
+     "ref": "11:1",
+     "phrase": "a mighty man of valour",
+     "grammar": "of + 추상명사",
+     "text": "man of valour는 ‘용맹을 가진 사람’, 곧 ‘용사’입니다. of 뒤의 추상명사가 형용사처럼 사람을 꾸밉니다."
+    },
+    {
+     "ref": "11:2",
+     "phrase": "Thou shalt not inherit in our father's house; for thou art the son of a strange woman",
+     "grammar": "shalt not · 이유의 for",
+     "text": "Thou shalt not은 ‘너는 …하지 못하리라’입니다. 세미콜론 뒤의 for는 ‘왜냐하면’이라는 이유입니다. strange woman은 ‘타국 여자’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "valour",
+     "ko": "용맹",
+     "ref": "11:1"
+    },
+    {
+     "w": "harlot",
+     "ko": "창녀",
+     "ref": "11:1"
+    },
+    {
+     "w": "begat",
+     "ko": "낳았다(beget의 과거)",
+     "ref": "11:1"
+    },
+    {
+     "w": "inherit",
+     "ko": "상속받다",
+     "ref": "11:2"
+    },
+    {
+     "w": "thrust",
+     "ko": "내몰았다",
+     "ref": "11:2"
+    },
+    {
+     "w": "fled",
+     "ko": "도망쳤다",
+     "ref": "11:3"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j11-1",
+     "basis": "external",
+     "text": "스코필드는 11장에 ‘아홉째 재판관 입다’라는 제목을 붙였습니다. 그리고 1절의 입다 곁에 히브리서 11장 32절을 적고, 그곳에서는 입다의 이름이 ‘Jephthae’라는 철자로 나온다고 밝혔습니다.",
+     "spans": [
+      {
+       "text": "아홉째 재판관 입다",
+       "level": 1
+      },
+      {
+       "text": "히브리서 11장 32절",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 11:1 소제목·난외주",
+       "where": "Jud. 11:1 소제목·난외주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "CHAPTER 11. Jephthah, the ninth Judge.\n…\na Heb.11.32, called Jeph - thae.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "11:4-11",
+   "title": "입다를 데려온 길르앗의 장로들",
+   "marks": [
+    {
+     "v": "11:7",
+     "t": "u",
+     "ko": "너희가 나를 증오하여 나의 아버지 집에서 나를 추방하지 아니하였느냐",
+     "en": "Did not ye hate me, and expel me out of my father's house"
+    },
+    {
+     "v": "11:10",
+     "t": "u",
+     "ko": "주께서 우리 사이에 증인이 되시기를 바라노라",
+     "en": "The LORD be witness between us"
+    },
+    {
+     "v": "11:11",
+     "t": "u",
+     "ko": "미즈페에서 주 앞에 그의 모든 말들을 발설하였더라",
+     "en": "uttered all his words before the LORD in Mizpeh"
+    }
+   ],
+   "english": [
+    {
+     "ref": "11:6",
+     "phrase": "Come, and be our captain, that we may fight with the children of Ammon",
+     "grammar": "목적의 that … may",
+     "text": "that we may fight는 ‘우리가 싸울 수 있도록’이라는 목적입니다. captain은 군대의 ‘대장’입니다."
+    },
+    {
+     "ref": "11:9",
+     "phrase": "and the LORD deliver them before me, shall I be your head?",
+     "grammar": "조건절의 가정법 현재 deliver",
+     "text": "If 조건절 안에서 the LORD deliver처럼 3인칭인데도 -s 없이 동사원형을 썼습니다. 옛 영어의 조건 가정법입니다. 뒤의 shall I be …?는 ‘내가 … 되겠느냐?’입니다."
+    },
+    {
+     "ref": "11:10",
+     "phrase": "The LORD be witness between us",
+     "grammar": "기원의 가정법 현재",
+     "text": "The LORD be witness는 ‘주께서 증인이 되시기를’이라는 바람입니다. 동사원형 be가 기원의 뜻을 냅니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "process",
+     "ko": "(in process of time) 시간이 흐르면서",
+     "ref": "11:4"
+    },
+    {
+     "w": "fetch",
+     "ko": "데려오다",
+     "ref": "11:5"
+    },
+    {
+     "w": "captain",
+     "ko": "대장",
+     "ref": "11:6"
+    },
+    {
+     "w": "expel",
+     "ko": "추방하다",
+     "ref": "11:7"
+    },
+    {
+     "w": "distress",
+     "ko": "괴로움",
+     "ref": "11:7"
+    },
+    {
+     "w": "witness",
+     "ko": "증인",
+     "ref": "11:10"
+    },
+    {
+     "w": "uttered",
+     "ko": "말했다, 발설했다",
+     "ref": "11:11"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "11:12-22",
+   "title": "암몬 왕에게 들려준 광야 길",
+   "marks": [
+    {
+     "v": "11:13",
+     "t": "u",
+     "ko": "평화로이 그 지역들을 도로 반환하라",
+     "en": "restore those lands again peaceably"
+    },
+    {
+     "v": "11:15",
+     "t": "u",
+     "ko": "이스라엘은 모압의 지역을 빼앗아 가지 아니하였고",
+     "en": "Israel took not away the land of Moab"
+    },
+    {
+     "v": "11:21",
+     "t": "g",
+     "ko": "이스라엘의 주 하나님께서 시혼을 그의 모든 백성과 더불어 이스라엘의 손안에 넘기셨으니",
+     "en": "the LORD God of Israel delivered Sihon and all his people into the hand of Israel"
+    }
+   ],
+   "english": [
+    {
+     "ref": "11:12",
+     "phrase": "What hast thou to do with me",
+     "grammar": "관용 표현 What have … to do with",
+     "text": "What hast thou to do with me는 ‘네가 나와 무슨 상관이 있느냐’입니다. hast는 have의 옛 2인칭 꼴입니다."
+    },
+    {
+     "ref": "11:18",
+     "phrase": "compassed the land of Edom, and the land of Moab",
+     "grammar": "compass = 돌아가다",
+     "text": "compass는 여기서 ‘둘레를 돌다, 우회하다’입니다. 한글 본문도 ‘우회하였으며’라고 옮겼습니다."
+    },
+    {
+     "ref": "11:20",
+     "phrase": "But Sihon trusted not Israel to pass through his coast",
+     "grammar": "옛 부정 trusted not",
+     "text": "옛 영어는 do 없이 동사 뒤에 not을 둡니다. trusted not은 현대 영어의 did not trust입니다. coast는 ‘해안’이 아니라 ‘경계, 영토’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "restore",
+     "ko": "돌려주다",
+     "ref": "11:13"
+    },
+    {
+     "w": "peaceably",
+     "ko": "평화로이",
+     "ref": "11:13"
+    },
+    {
+     "w": "wilderness",
+     "ko": "광야",
+     "ref": "11:16"
+    },
+    {
+     "w": "consent",
+     "ko": "동의하다",
+     "ref": "11:17"
+    },
+    {
+     "w": "abode",
+     "ko": "머물렀다(abide의 과거)",
+     "ref": "11:17"
+    },
+    {
+     "w": "compassed",
+     "ko": "우회했다",
+     "ref": "11:18"
+    },
+    {
+     "w": "coast",
+     "ko": "경계, 영토",
+     "ref": "11:20"
+    },
+    {
+     "w": "possessed",
+     "ko": "차지했다",
+     "ref": "11:21"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "11:23-28",
+   "title": "심판자이신 주께서 심판하시기를",
+   "marks": [
+    {
+     "v": "11:24",
+     "t": "u",
+     "ko": "주 우리 하나님께서 우리 앞에서부터 내쫓으시는 자들이 누구든지 그들을 우리가 차지하겠노라",
+     "en": "whomsoever the LORD our God shall drive out from before us, them will we possess"
+    },
+    {
+     "v": "11:27",
+     "t": "u",
+     "ko": "심판자이신 주께서 이날에 이스라엘 자녀들과 암몬의 후손들 사이를 심판하시기를 바라노라",
+     "en": "the LORD the Judge be judge this day between the children of Israel and the children of Ammon"
+    },
+    {
+     "v": "11:28",
+     "t": "p",
+     "ko": "입다의 말들에 경청하지 아니하였더라",
+     "en": "hearkened not unto the words of Jephthah"
+    }
+   ],
+   "english": [
+    {
+     "ref": "11:23",
+     "phrase": "hath dispossessed the Amorites from before his people Israel, and shouldest thou possess it?",
+     "grammar": "현재완료 hath + p.p. · 수사 의문 shouldest",
+     "text": "hath dispossessed는 ‘이미 쫓아내셨다’입니다. shouldest thou possess it?은 ‘네가 그것을 차지해야 한다는 말이냐?’라는 반문입니다."
+    },
+    {
+     "ref": "11:24",
+     "phrase": "Wilt not thou possess that which Chemosh thy god giveth thee to possess?",
+     "grammar": "부정 의문 Wilt not thou · that which",
+     "text": "Wilt not thou …?는 ‘너는 …하지 않겠느냐?’입니다. that which는 ‘…하는 것’(what)입니다. giveth는 gives의 옛 꼴입니다."
+    },
+    {
+     "ref": "11:27",
+     "phrase": "the LORD the Judge be judge this day",
+     "grammar": "동격 · 기원의 be",
+     "text": "the LORD the Judge는 ‘심판자이신 주’로, 두 명사가 같은 분을 가리키는 동격입니다. be judge는 ‘심판하시기를’이라는 바람입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "dispossessed",
+     "ko": "쫓아냈다",
+     "ref": "11:23"
+    },
+    {
+     "w": "whomsoever",
+     "ko": "누구든지",
+     "ref": "11:24"
+    },
+    {
+     "w": "strive",
+     "ko": "다투다",
+     "ref": "11:25"
+    },
+    {
+     "w": "recover",
+     "ko": "되찾다",
+     "ref": "11:26"
+    },
+    {
+     "w": "wrong",
+     "ko": "옳지 않은 일",
+     "ref": "11:27"
+    },
+    {
+     "w": "Howbeit",
+     "ko": "그러나",
+     "ref": "11:28"
+    },
+    {
+     "w": "hearkened",
+     "ko": "귀 기울였다",
+     "ref": "11:28"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "11:29-33",
+   "title": "입다의 서원과 암몬의 굴복",
+   "marks": [
+    {
+     "v": "11:29",
+     "t": "u",
+     "ko": "주의 영이 입다에게 임하셨더라",
+     "en": "the Spirit of the LORD came upon Jephthah"
+    },
+    {
+     "v": "11:30",
+     "t": "u",
+     "ko": "입다가 주께 한 서원으로 서원하였으니",
+     "en": "Jephthah vowed a vow unto the LORD"
+    },
+    {
+     "v": "11:31",
+     "t": "u",
+     "ko": "저의 집 문들에서 저를 맞이하려고 밖으로 나오는 것은 무엇이나",
+     "en": "whatsoever cometh forth of the doors of my house to meet me"
+    },
+    {
+     "v": "11:31",
+     "t": "u",
+     "ko": "제가 번제물로 그것을 바쳐 올리겠나이다",
+     "en": "I will offer it up for a burnt offering"
+    },
+    {
+     "v": "11:32",
+     "t": "g",
+     "ko": "주께서 그들을 그의 두 손안에 넘기셨더라",
+     "en": "the LORD delivered them into his hands"
+    }
+   ],
+   "english": [
+    {
+     "ref": "11:30",
+     "phrase": "Jephthah vowed a vow unto the LORD",
+     "grammar": "동족 목적어 vow a vow",
+     "text": "동사 vow(서원하다)와 명사 vow(서원)가 함께 쓰였습니다. 한글 본문도 ‘한 서원으로 서원하였으니’라고 옮겼습니다.",
+     "key": "j11-2"
+    },
+    {
+     "ref": "11:30",
+     "phrase": "If thou shalt without fail deliver the children of Ammon into mine hands",
+     "grammar": "without fail · 옛 소유격 mine",
+     "text": "without fail은 ‘틀림없이, 실패 없이’입니다. mine hands처럼 모음이나 h 앞에서는 my 대신 mine을 썼습니다."
+    },
+    {
+     "ref": "11:31",
+     "phrase": "whatsoever cometh forth of the doors of my house to meet me",
+     "grammar": "복합관계대명사 whatsoever(주어)",
+     "text": "whatsoever …는 ‘…하는 것은 무엇이든’으로, 이 덩어리 전체가 shall surely be the LORD’S의 주어입니다. cometh는 comes의 옛 꼴입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "Spirit",
+     "ko": "영",
+     "ref": "11:29"
+    },
+    {
+     "w": "vowed",
+     "ko": "서원했다",
+     "ref": "11:30"
+    },
+    {
+     "w": "surely",
+     "ko": "반드시",
+     "ref": "11:31"
+    },
+    {
+     "w": "offering",
+     "ko": "제물",
+     "ref": "11:31"
+    },
+    {
+     "w": "slaughter",
+     "ko": "살육",
+     "ref": "11:33"
+    },
+    {
+     "w": "vineyards",
+     "ko": "포도원들",
+     "ref": "11:33"
+    },
+    {
+     "w": "subdued",
+     "ko": "굴복했다",
+     "ref": "11:33"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j11-2",
+     "basis": "external",
+     "text": "스코필드는 29절의 입다 곁에 ‘입다는 이스라엘의 북동부만 재판한 것으로 보인다’고 적었습니다. 그리고 30절 앞에는 ‘입다의 끔찍한 서원’이라는 소제목을 붙였습니다. 입다는 암몬을 넘겨주시면, 자기 집 문에서 맞으러 나오는 것은 무엇이나 주의 것이 되게 하고 번제물로 바치겠다고 서원했습니다.",
+     "spans": [
+      {
+       "text": "입다의 끔찍한 서원",
+       "level": 3
+      },
+      {
+       "text": "이스라엘의 북동부만",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 11:29-30 소제목·난외주",
+       "where": "Jud. 11:29-30 소제목·난외주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Jephthah seems to have been judge only of north\n…\neast Israel.\n…\nJephthah's awful vow.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "11:34-40",
+   "title": "맞으러 나온 외동딸",
+   "marks": [
+    {
+     "v": "11:34",
+     "t": "u",
+     "ko": "그녀는 그의 하나뿐인 자식이었더라",
+     "en": "she was his only child"
+    },
+    {
+     "v": "11:35",
+     "t": "u",
+     "ko": "내가 나의 입을 주께 열었기에 내가 뒤로 돌이킬 수 없기 때문이라",
+     "en": "I have opened my mouth unto the LORD, and I cannot go back"
+    },
+    {
+     "v": "11:36",
+     "t": "u",
+     "ko": "당신의 입에서 나온 대로 제게 행하소서",
+     "en": "do to me according to that which hath proceeded out of thy mouth"
+    },
+    {
+     "v": "11:39",
+     "t": "u",
+     "ko": "자신이 서원하였던 자신의 서원에 따라 그녀에게 행하였더라",
+     "en": "did with her according to his vow which he had vowed"
+    },
+    {
+     "v": "11:40",
+     "t": "u",
+     "ko": "일 년에 사 일 동안 길르앗족 입다의 딸을 애도하였더라",
+     "en": "lament the daughter of Jephthah the Gileadite four days in a year"
+    }
+   ],
+   "english": [
+    {
+     "ref": "11:35",
+     "phrase": "thou hast brought me very low",
+     "grammar": "bring … low",
+     "text": "bring someone low는 ‘…를 낮추다, 몹시 낙담하게 하다’입니다. 한글 본문은 ‘나를 몹시도 실의에 빠지게 하였으며’라고 옮겼습니다."
+    },
+    {
+     "ref": "11:37",
+     "phrase": "let me alone two months, that I may go up and down upon the mountains",
+     "grammar": "let … alone · 목적의 that … may",
+     "text": "let me alone은 ‘나를 내버려 두다’입니다. that I may …는 ‘…할 수 있도록’이라는 목적입니다."
+    },
+    {
+     "ref": "11:39",
+     "phrase": "who did with her according to his vow which he had vowed",
+     "grammar": "과거완료 had vowed",
+     "text": "had vowed는 딸이 돌아오기 전에 이미 서원했던 일을 가리킵니다. 사건보다 앞선 과거를 과거완료로 나타냅니다.",
+     "key": "j11-3"
+    }
+   ],
+   "vocab": [
+    {
+     "w": "timbrels",
+     "ko": "탬버린들",
+     "ref": "11:34"
+    },
+    {
+     "w": "rent",
+     "ko": "찢었다(rend의 과거)",
+     "ref": "11:35"
+    },
+    {
+     "w": "Alas",
+     "ko": "아, 슬프다",
+     "ref": "11:35"
+    },
+    {
+     "w": "proceeded",
+     "ko": "나왔다",
+     "ref": "11:36"
+    },
+    {
+     "w": "vengeance",
+     "ko": "복수",
+     "ref": "11:36"
+    },
+    {
+     "w": "bewail",
+     "ko": "통곡하다",
+     "ref": "11:37"
+    },
+    {
+     "w": "virginity",
+     "ko": "처녀 됨",
+     "ref": "11:37"
+    },
+    {
+     "w": "lament",
+     "ko": "애도하다",
+     "ref": "11:40"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j11-3",
+     "basis": "doctrine",
+     "text": "입다는 딸을 보자 옷을 찢으며, 자기가 입을 주께 열었으므로 뒤로 돌이킬 수 없다고 말했습니다. 교회 교리에 비추어 보면, 강의는 결혼의 맹세를 설명하면서 그 맹세가 서로에게가 아니라 하나님께 하는 것이라고 가르칩니다. 그래서 그 맹세를 깨는 것은 하나님께 맹세한 것을 깨는 일이고, 어마어마한 일입니다. 맹세하고 안 지키느니 맹세하지 않는 게 낫다는 것입니다. 강의는 하나님께서 ‘지킬 자신 없으면 나한테 맹세하지 마’ 하고 우리에게 권하신다고 말합니다.",
+     "spans": [
+      {
+       "text": "맹세하고 안 지키느니 맹세하지 않는 게 낫다",
+       "level": 3
+      },
+      {
+       "text": "하나님께 맹세한 것을 깨는 일",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「결혼, 누구와 어떻게?」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/44_결혼_누구와_어떻게.md",
+       "time": "46:23",
+       "to": "47:03",
+       "excerpt": "남편은 그 맹세를 하나님에게 하는 거고 아내도 그 맹세를 하나님에게 하는 거예요 그래서 이혼을 하면 서로에게 맹세한 걸 깨는 게 아니고요 하나님한테 맹세한 걸 깨는 거예요 이거는 어마어마한 일이에요 여기보세요 여러분 맹세하고 안 지키느니 맹세하지 않는 게 낫다 맹세하고 어기는 게 얼마나 무서운 일이면 하나님께서 '지킬 자신 없으면 나한테 맹세하지 마' ‘얘들아 지킬 자신 없으면 제발 맹세하지 마 맹세하고 어기면 내가 너희한테 벌을 안 내릴 수가 없어’ ‘진짜 무서운 벌이 가니까 하지마 차라리 맹세를 하지마’ 이렇게 우리에게 권하시는 거예요",
+       "url": "https://youtu.be/l9zAYk3Xf5A?t=2783"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "길르앗족 입다는 막강한 용사였지만 창녀의 아들이었습니다.",
+    "verse": "11:1",
+    "u": [
+     "창녀의 아들"
+    ]
+   },
+   {
+    "text": "길르앗 아내의 아들들은 입다가 타국 여자의 아들이라며 상속받지 못하게 내몰았습니다.",
+    "verse": "11:2",
+    "u": [
+     "상속받지 못하게"
+    ]
+   },
+   {
+    "text": "스코필드는 입다를 ‘아홉째 재판관’이라 부르고 히브리서 11장 32절에도 그 이름이 나온다고 적었습니다.",
+    "key": "j11-1",
+    "u": [
+     "아홉째 재판관"
+    ]
+   },
+   {
+    "text": "암몬이 쳐들어오자 길르앗의 장로들이 톱 지역으로 가서 입다를 데려왔습니다.",
+    "verse": "11:5",
+    "u": [
+     "입다를 데려왔습니다"
+    ]
+   },
+   {
+    "text": "입다는 자기를 쫓아낸 그들이 괴로움 가운데서야 찾아왔다고 따졌습니다.",
+    "verse": "11:7",
+    "u": [
+     "괴로움 가운데서야"
+    ]
+   },
+   {
+    "text": "장로들은 주를 증인으로 삼았고, 백성은 입다를 수장과 대장으로 세웠습니다.",
+    "verse": "11:11",
+    "u": [
+     "수장과 대장"
+    ]
+   },
+   {
+    "text": "암몬 왕은 이스라엘이 아르논에서 얍복과 요르단까지 자기 땅을 빼앗았다며 돌려 달라고 했습니다.",
+    "verse": "11:13",
+    "u": [
+     "돌려 달라고"
+    ]
+   },
+   {
+    "text": "입다는 이스라엘이 모압과 암몬의 땅을 빼앗지 않았다고 답했습니다.",
+    "verse": "11:15",
+    "u": [
+     "빼앗지 않았다고"
+    ]
+   },
+   {
+    "text": "이스라엘은 에돔과 모압을 우회했고, 주께서 시혼과 그의 백성을 이스라엘의 손에 넘기셨습니다.",
+    "verse": "11:21",
+    "u": [
+     "시혼과 그의 백성"
+    ]
+   },
+   {
+    "text": "입다는 심판자이신 주께서 이스라엘과 암몬 사이를 심판하시기를 바랐습니다.",
+    "verse": "11:27",
+    "u": [
+     "심판자이신 주"
+    ]
+   },
+   {
+    "text": "주의 영이 입다에게 임하자, 그는 길르앗과 므낫세를 넘어 암몬 후손들에게 갔습니다.",
+    "verse": "11:29",
+    "u": [
+     "주의 영이 입다에게 임하자"
+    ]
+   },
+   {
+    "text": "입다는 집 문에서 맞으러 나오는 것은 무엇이나 번제물로 바치겠다고 서원했습니다.",
+    "verse": "11:31",
+    "u": [
+     "번제물로 바치겠다고"
+    ]
+   },
+   {
+    "text": "스코필드는 이 서원에 ‘입다의 끔찍한 서원’이라는 소제목을 붙였습니다.",
+    "key": "j11-2",
+    "u": [
+     "끔찍한 서원"
+    ]
+   },
+   {
+    "text": "주께서 암몬을 입다의 손에 넘기셨고, 입다는 아로엘에서 민닛까지 도시 이십 개를 쳤습니다.",
+    "verse": "11:33",
+    "u": [
+     "도시 이십 개"
+    ]
+   },
+   {
+    "text": "미즈페 집에 돌아온 입다를 맞으러 나온 것은 그의 외동딸이었습니다.",
+    "verse": "11:34",
+    "u": [
+     "외동딸"
+    ]
+   },
+   {
+    "text": "입다는 주께 입을 열었으므로 돌이킬 수 없다고 했고, 딸은 그 말대로 행하라고 했습니다.",
+    "verse": "11:36",
+    "u": [
+     "돌이킬 수 없다고"
+    ]
+   },
+   {
+    "text": "강의는 맹세가 하나님께 하는 것이므로 맹세하고 안 지키느니 맹세하지 않는 게 낫다고 가르칩니다.",
+    "key": "j11-3",
+    "u": [
+     "맹세하지 않는 게 낫다고"
+    ]
+   },
+   {
+    "text": "이스라엘의 딸들은 해마다 사 일 동안 입다의 딸을 애도했습니다.",
+    "verse": "11:40",
+    "u": [
+     "해마다 사 일 동안"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "11:1",
+    "q": "입다는 어떤 사람이었습니까?",
+    "a": "막강한 용사"
+   },
+   {
+    "verse": "11:1",
+    "q": "입다는 누구의 아들이었습니까?",
+    "a": "창녀의 아들"
+   },
+   {
+    "verse": "11:2",
+    "q": "형제들은 입다가 누구의 아들이라고 했습니까?",
+    "a": "타국 여자의 아들"
+   },
+   {
+    "verse": "11:3",
+    "q": "입다는 형제들을 피해 어느 지역에서 거했습니까?",
+    "a": "톱 지역"
+   },
+   {
+    "key": "j11-1",
+    "q": "스코필드는 입다를 몇째 재판관이라고 불렀습니까?",
+    "a": "아홉째 재판관"
+   },
+   {
+    "key": "j11-1",
+    "q": "스코필드가 입다 곁에 적은 신약 구절은 무엇입니까?",
+    "a": "히브리서 11장 32절"
+   },
+   {
+    "verse": "11:5",
+    "q": "입다를 데려오려고 톱 지역에 간 사람들은 누구입니까?",
+    "a": "길르앗의 장로들"
+   },
+   {
+    "verse": "11:6",
+    "q": "장로들은 입다에게 무엇이 되어 달라고 했습니까?",
+    "a": "우리의 대장"
+   },
+   {
+    "verse": "11:10",
+    "q": "장로들은 누가 자기들 사이에 증인이 되시기를 바랐습니까?",
+    "a": "주"
+   },
+   {
+    "verse": "11:11",
+    "q": "입다는 어디에서 주 앞에 그의 모든 말들을 발설했습니까?",
+    "a": "미즈페"
+   },
+   {
+    "verse": "11:13",
+    "q": "암몬 왕은 이스라엘이 어디에서 어디까지 자기 땅을 빼앗았다고 했습니까?",
+    "a": "아르논, 얍복, 요르단"
+   },
+   {
+    "verse": "11:16",
+    "q": "이스라엘은 이집트에서 올라와 홍해를 지나 어디에 이르렀습니까?",
+    "a": "카데시"
+   },
+   {
+    "verse": "11:17",
+    "q": "이스라엘이 지나가게 해 달라고 전령을 보냈으나 거절한 두 왕은 누구입니까?",
+    "a": "에돔 왕, 모압 왕"
+   },
+   {
+    "verse": "11:18",
+    "q": "모압의 경계는 무엇이었습니까?",
+    "a": "아르논"
+   },
+   {
+    "verse": "11:19",
+    "q": "아모리족들의 왕이자 헤슈본 왕의 이름은 무엇입니까?",
+    "a": "시혼"
+   },
+   {
+    "verse": "11:20",
+    "q": "시혼은 어디에 진을 치고 이스라엘과 싸웠습니까?",
+    "a": "야하즈"
+   },
+   {
+    "verse": "11:24",
+    "q": "입다는 암몬 왕의 신의 이름을 무엇이라고 했습니까?",
+    "a": "크모시"
+   },
+   {
+    "verse": "11:25",
+    "q": "입다가 암몬 왕과 견준 모압 왕은 누구입니까?",
+    "a": "발락"
+   },
+   {
+    "verse": "11:26",
+    "q": "입다는 이스라엘이 헤슈본과 아로엘에 거한 지 몇 년이라고 했습니까?",
+    "a": "삼백 년"
+   },
+   {
+    "verse": "11:27",
+    "q": "입다는 주를 무엇이라고 불렀습니까?",
+    "a": "심판자"
+   },
+   {
+    "verse": "11:29",
+    "q": "입다에게 임하신 것은 무엇입니까?",
+    "a": "주의 영"
+   },
+   {
+    "verse": "11:31",
+    "q": "입다는 집 문에서 맞으러 나오는 것을 무엇으로 바치겠다고 서원했습니까?",
+    "a": "번제물"
+   },
+   {
+    "key": "j11-2",
+    "q": "스코필드가 30절 앞에 붙인 소제목은 무엇입니까?",
+    "a": "입다의 끔찍한 서원"
+   },
+   {
+    "key": "j11-2",
+    "q": "스코필드는 입다가 어디만 재판한 것으로 보았습니까?",
+    "a": "이스라엘의 북동부"
+   },
+   {
+    "verse": "11:33",
+    "q": "입다는 아로엘에서 민닛까지 도시 몇 개를 쳤습니까?",
+    "a": "이십 개"
+   },
+   {
+    "verse": "11:34",
+    "q": "입다의 딸은 무엇을 가지고 아버지를 맞으러 나왔습니까?",
+    "a": "탬버린들, 춤들"
+   },
+   {
+    "verse": "11:35",
+    "q": "딸을 본 입다는 자기 무엇을 찢었습니까?",
+    "a": "옷"
+   },
+   {
+    "verse": "11:37",
+    "q": "딸은 몇 달 동안 내버려 두기를 청했습니까?",
+    "a": "두 달"
+   },
+   {
+    "key": "j11-3",
+    "q": "강의는 결혼의 맹세를 누구에게 하는 것이라고 가르칩니까?",
+    "a": "하나님께"
+   },
+   {
+    "key": "j11-3",
+    "q": "강의는 맹세를 지키지 않는 것과 맹세하지 않는 것 가운데 무엇이 낫다고 말합니까?",
+    "a": "맹세하지 않는 것"
+   },
+   {
+    "verse": "11:40",
+    "q": "이스라엘의 딸들은 일 년에 며칠 동안 입다의 딸을 애도했습니까?",
+    "a": "사 일"
+   }
+  ],
+  "faq": [
+   {
+    "q": "입다는 어떤 사람으로 기록됩니까?",
+    "key": "j11-1"
+   },
+   {
+    "q": "창녀의 아들 입다가 신약에도 나옵니까?",
+    "key": "j11-1"
+   },
+   {
+    "q": "입다는 온 이스라엘의 재판관이었습니까?",
+    "key": "j11-2"
+   },
+   {
+    "q": "스코필드는 입다의 서원을 어떻게 불렀습니까?",
+    "key": "j11-2"
+   },
+   {
+    "q": "입다가 서원한 내용은 무엇입니까?",
+    "key": "j11-2"
+   },
+   {
+    "q": "입다는 왜 서원을 되돌릴 수 없다고 했습니까?",
+    "key": "j11-3"
+   },
+   {
+    "q": "하나님께 한 맹세는 사람에게 한 약속과 어떻게 다릅니까?",
+    "key": "j11-3"
+   },
+   {
+    "q": "지킬 자신이 없으면 어떻게 해야 합니까?",
+    "key": "j11-3"
+   },
+   {
+    "q": "맹세를 깨는 것은 왜 어마어마한 일입니까?",
+    "key": "j11-3"
+   },
+   {
+    "q": "결혼 서약도 맹세입니까?",
+    "key": "j11-3"
+   },
+   {
+    "q": "입다의 서원에서 오늘 우리가 조심할 점은 무엇입니까?",
+    "key": "j11-3"
+   },
+   {
+    "q": "입다의 승리는 누가 주신 것입니까?",
+    "key": "j11-2"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "서원",
+    "verse": "11:30",
+    "text": "주께 무엇을 하겠다고 약속하는 것. 입다는 암몬을 넘겨주시면 맞으러 나오는 것을 번제물로 바치겠다고 서원했습니다."
+   },
+   {
+    "term": "번제물",
+    "verse": "11:31",
+    "text": "불에 태워 바치는 제물. 입다가 서원에서 말한 제물입니다."
+   },
+   {
+    "term": "크모시",
+    "verse": "11:24",
+    "text": "입다가 암몬 왕에게 ‘너의 신’이라고 말한 신의 이름입니다."
+   },
+   {
+    "term": "맹세",
+    "key": "j11-3",
+    "text": "하나님 앞에서 하는 굳은 약속. 강의는 맹세하고 안 지키느니 맹세하지 않는 게 낫다고 가르칩니다."
+   }
+  ]
+ }
+}

@@ -1,0 +1,1340 @@
+{
+ "chapter": 1,
+ "subtitle": "쫓아내지 못한 가나안 족속들",
+ "motto": "이스라엘의 철저한 실패와 주의 끈질긴 은혜",
+ "motto_comment": "j01-4",
+ "cover": [
+  {
+   "m": "mountain",
+   "x": 110,
+   "y": 250,
+   "s": 0.95
+  },
+  {
+   "m": "sword",
+   "x": 236,
+   "y": 150,
+   "s": 0.85
+  },
+  {
+   "m": "city",
+   "x": 230,
+   "y": 280,
+   "s": 0.85
+  },
+  {
+   "m": "well",
+   "x": 100,
+   "y": 300,
+   "s": 0.7
+  }
+ ],
+ "people": [
+  {
+   "id": "lord",
+   "name": "주",
+   "role": "god",
+   "gen": 0,
+   "desc": "누가 먼저 가나안족들과 싸우러 올라갈지 묻는 이스라엘 자녀들에게 유다가 올라가라고 답하시고, 그 지역을 유다의 손에 넘기셨다고 말씀하신 분입니다. 유다와 요셉의 집과 함께하셨습니다.",
+   "refs": [
+    "1:2",
+    "1:19",
+    "1:22"
+   ],
+   "part": "유다를 먼저 보내신 분",
+   "intro": "유다를 먼저 보내신 분 · 함께하신 분"
+  },
+  {
+   "id": "judah",
+   "name": "유다",
+   "en": "Judah",
+   "gen": 1,
+   "desc": "주의 말씀대로 먼저 올라간 지파입니다. 형제 시므온과 함께 싸워 베젝, 예루살렘, 헤브론, 가자 등을 쳤지만 철 병거를 가진 골짜기의 거주자들은 내쫓지 못했습니다.",
+   "refs": [
+    "1:2",
+    "1:4",
+    "1:19"
+   ],
+   "part": "먼저 올라간 지파",
+   "look": "group",
+   "intro": "먼저 올라간 지파 · 골짜기는 못 쫓아냄"
+  },
+  {
+   "id": "simeon",
+   "name": "시므온",
+   "en": "Simeon",
+   "gen": 1,
+   "desc": "유다의 형제 지파입니다. 유다의 부탁을 받고 함께 가서 즈팟의 가나안족들을 쳤습니다.",
+   "refs": [
+    "1:3",
+    "1:17"
+   ],
+   "part": "유다와 함께 간 형제",
+   "look": "group",
+   "intro": "유다의 형제 지파 · 함께 싸움"
+  },
+  {
+   "id": "adonibezek",
+   "name": "아도니베젝",
+   "en": "Adonibezek",
+   "role": "enemy",
+   "gen": 1,
+   "desc": "베젝의 왕입니다. 도망하다 잡혀 엄지손가락과 엄지발가락이 잘렸고, 자기가 칠십 명의 왕들에게 행한 대로 하나님께서 되갚으셨다고 말했습니다. 예루살렘에서 죽었습니다.",
+   "refs": [
+    "1:5",
+    "1:7"
+   ],
+   "part": "되갚음을 받은 베젝 왕",
+   "look": "king",
+   "intro": "베젝의 왕 · 행한 대로 되갚음 받음"
+  },
+  {
+   "id": "kenaz",
+   "name": "크나즈",
+   "en": "Kenaz",
+   "gen": 1,
+   "desc": "칼렙의 아우이며 옷니엘의 아버지입니다.",
+   "refs": [
+    "1:13"
+   ],
+   "part": "옷니엘의 아버지",
+   "look": "man",
+   "intro": "칼렙의 아우 · 옷니엘의 아버지"
+  },
+  {
+   "id": "caleb",
+   "name": "칼렙",
+   "en": "Caleb",
+   "gen": 1,
+   "desc": "키럇세펠을 치고 점령하는 사람에게 딸 악사를 아내로 주겠다고 한 사람입니다. 모세가 말한 대로 헤브론을 받았고, 거기서 아낙의 세 아들을 추방했습니다.",
+   "refs": [
+    "1:12",
+    "1:15",
+    "1:20"
+   ],
+   "part": "헤브론을 받은 사람",
+   "look": "old",
+   "intro": "악사의 아버지 · 헤브론을 받음"
+  },
+  {
+   "id": "othniel",
+   "name": "옷니엘",
+   "en": "Othniel",
+   "gen": 2,
+   "desc": "크나즈의 아들로 칼렙의 조카입니다. 키럇세펠을 점령하고 칼렙의 딸 악사를 아내로 얻었습니다.",
+   "refs": [
+    "1:13"
+   ],
+   "part": "키럇세펠을 점령한 사람",
+   "look": "man",
+   "intro": "칼렙의 조카 · 키럇세펠을 점령"
+  },
+  {
+   "id": "achsah",
+   "name": "악사",
+   "en": "Achsah",
+   "gen": 2,
+   "desc": "칼렙의 딸이며 옷니엘의 아내입니다. 아버지에게 물이 솟는 샘들을 구해 위쪽 샘들과 아래쪽 샘들을 받았습니다.",
+   "refs": [
+    "1:13",
+    "1:15"
+   ],
+   "part": "샘들을 구한 칼렙의 딸",
+   "look": "woman",
+   "intro": "칼렙의 딸 · 샘들을 구함"
+  },
+  {
+   "id": "josephhouse",
+   "name": "요셉의 집",
+   "gen": 1,
+   "desc": "벧엘을 대적하여 올라간 지파들입니다. 주께서 그들과 함께하셨고, 정탐꾼들이 성 입구를 알아내어 그 도시를 쳤습니다.",
+   "refs": [
+    "1:22",
+    "1:25"
+   ],
+   "part": "벧엘을 친 지파들",
+   "look": "group",
+   "intro": "벧엘을 친 지파들 · 주께서 함께하심"
+  },
+  {
+   "id": "luzman",
+   "name": "도시에서 나온 남자",
+   "gen": 1,
+   "desc": "벧엘에서 나오다가 정탐꾼들에게 성 입구를 보여 준 사람입니다. 가족과 함께 놓여나 히타이트족들의 지역으로 가서 루즈라는 도시를 세웠습니다.",
+   "refs": [
+    "1:24",
+    "1:26"
+   ],
+   "part": "입구를 알려 준 남자",
+   "look": "man",
+   "intro": "입구를 보여 준 남자 · 루즈를 세움"
+  }
+ ],
+ "relations": [
+  {
+   "from": "lord",
+   "to": "judah",
+   "type": "god",
+   "label": "지역을 넘기심",
+   "ref": "1:2",
+   "directed": true
+  },
+  {
+   "from": "judah",
+   "to": "simeon",
+   "type": "sibling",
+   "label": "형제",
+   "ref": "1:3"
+  },
+  {
+   "from": "judah",
+   "to": "adonibezek",
+   "type": "enemy",
+   "label": "잡음",
+   "ref": "1:6"
+  },
+  {
+   "from": "kenaz",
+   "to": "caleb",
+   "type": "sibling",
+   "label": "아우",
+   "ref": "1:13"
+  },
+  {
+   "from": "kenaz",
+   "to": "othniel",
+   "type": "parent",
+   "label": "아들",
+   "ref": "1:13"
+  },
+  {
+   "from": "caleb",
+   "to": "achsah",
+   "type": "parent",
+   "label": "딸",
+   "ref": "1:12"
+  },
+  {
+   "from": "othniel",
+   "to": "achsah",
+   "type": "spouse",
+   "label": "아내",
+   "ref": "1:13"
+  },
+  {
+   "from": "josephhouse",
+   "to": "luzman",
+   "type": "other",
+   "label": "자비를 보임",
+   "ref": "1:25"
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "jerusalem",
+    "ref": "1:7"
+   },
+   {
+    "key": "hebron",
+    "ref": "1:10"
+   },
+   {
+    "key": "arad",
+    "name": "아랏",
+    "at": [
+     35.13,
+     31.28
+    ],
+    "ref": "1:16"
+   },
+   {
+    "key": "gaza",
+    "ref": "1:18"
+   },
+   {
+    "key": "ashkelon",
+    "name": "아스클론",
+    "ref": "1:18"
+   },
+   {
+    "key": "ekron",
+    "ref": "1:18"
+   },
+   {
+    "key": "bethel",
+    "ref": "1:22"
+   },
+   {
+    "key": "gezer",
+    "name": "게젤",
+    "at": [
+     34.92,
+     31.86
+    ],
+    "ref": "1:29"
+   },
+   {
+    "key": "aijalon",
+    "name": "아이얄론",
+    "at": [
+     35.02,
+     31.84
+    ],
+    "ref": "1:35"
+   },
+   {
+    "key": "beth-shan",
+    "name": "벧셰안",
+    "ref": "1:27"
+   },
+   {
+    "key": "megiddo",
+    "name": "메기도",
+    "at": [
+     35.18,
+     32.585
+    ],
+    "ref": "1:27"
+   },
+   {
+    "key": "dor",
+    "name": "도르",
+    "at": [
+     34.92,
+     32.62
+    ],
+    "ref": "1:27"
+   },
+   {
+    "key": "accho",
+    "name": "악코",
+    "at": [
+     35.07,
+     32.92
+    ],
+    "ref": "1:31"
+   },
+   {
+    "key": "sidon",
+    "name": "지돈",
+    "ref": "1:31"
+   }
+  ],
+  "routes": [],
+  "views": [
+   {
+    "title": "① 유다와 남쪽 — 유다·베냐민·요셉의 집이 친 곳",
+    "keys": [
+     "jerusalem",
+     "hebron",
+     "arad",
+     "gaza",
+     "ashkelon",
+     "ekron",
+     "bethel",
+     "gezer",
+     "aijalon"
+    ]
+   },
+   {
+    "title": "② 북쪽 — 므낫세·아셸이 내쫓지 못한 곳",
+    "keys": [
+     "beth-shan",
+     "megiddo",
+     "dor",
+     "accho",
+     "sidon"
+    ]
+   }
+  ],
+  "unknown": [
+   {
+    "name": "베젝",
+    "ref": "1:4",
+    "note": "위치에 여러 설이 있어 지도에 찍지 않았습니다."
+   },
+   {
+    "name": "드빌(키럇세펠)",
+    "ref": "1:11",
+    "note": "위치에 여러 설이 있어 지도에 찍지 않았습니다."
+   },
+   {
+    "name": "즈팟(호르마)",
+    "ref": "1:17",
+    "note": "위치에 여러 설이 있어 지도에 찍지 않았습니다."
+   },
+   {
+    "name": "히타이트족들의 지역에 세운 루즈",
+    "ref": "1:26",
+    "note": "본문은 히타이트족들의 지역이라고만 말합니다."
+   },
+   {
+    "name": "타아낙·이블르암",
+    "ref": "1:27",
+    "note": "메기도 가까이에 있던 성읍들로, 지도에는 메기도만 찍었습니다."
+   },
+   {
+    "name": "키트론·나할롤",
+    "ref": "1:30",
+    "note": "스불룬 지역의 성읍들로, 정확한 자리는 표시하지 않았습니다."
+   },
+   {
+    "name": "악집·알랍·헬바·아픽·르홉",
+    "ref": "1:31",
+    "note": "아셸 지역의 성읍들로, 정확한 자리는 표시하지 않았습니다."
+   },
+   {
+    "name": "벧셰메시·벧아낫",
+    "ref": "1:33",
+    "note": "납탈리 지역의 성읍들로, 정확한 자리는 표시하지 않았습니다."
+   },
+   {
+    "name": "헤레스산·샤알빔",
+    "ref": "1:35",
+    "note": "아이얄론 가까이라고만 나옵니다."
+   },
+   {
+    "name": "아크랍빔",
+    "ref": "1:36",
+    "note": "아모리족들의 경계가 시작되는 오르막으로, 정확한 자리는 표시하지 않았습니다."
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "1:1-3",
+   "title": "누가 먼저 올라가리이까",
+   "marks": [
+    {
+     "v": "1:1",
+     "t": "u",
+     "ko": "누가 먼저 가나안족들을 대적하여 올라가서",
+     "en": "Who shall go up for us against the Canaanites first"
+    },
+    {
+     "v": "1:2",
+     "t": "y",
+     "ko": "유다가 올라갈지니라",
+     "en": "Judah shall go up"
+    },
+    {
+     "v": "1:2",
+     "t": "y",
+     "ko": "내가 그 지역을 그의 손안에 넘겼노라",
+     "en": "I have delivered the land into his hand"
+    },
+    {
+     "v": "1:3",
+     "t": "u",
+     "ko": "나와 함께 올라가서",
+     "en": "Come up with me into my lot"
+    }
+   ],
+   "english": [
+    {
+     "ref": "1:1",
+     "phrase": "Who shall go up for us against the Canaanites first",
+     "grammar": "의문사 주어 + shall",
+     "text": "Who가 문장의 주어이고 shall go up이 동사입니다. ‘누가 먼저 올라가겠습니까’ 하고 앞으로 할 일을 묻는 말입니다. for us는 ‘우리를 위하여’입니다."
+    },
+    {
+     "ref": "1:2",
+     "phrase": "I have delivered the land into his hand",
+     "grammar": "현재완료(확정된 약속)",
+     "text": "아직 싸우기 전인데도 have delivered(이미 넘겼다)라고 말합니다. 앞으로 일어날 일을 이미 끝난 일처럼 말해 약속이 확실하다는 것을 보여 줍니다."
+    },
+    {
+     "ref": "1:3",
+     "phrase": "that we may fight against the Canaanites",
+     "grammar": "목적의 that ~ may",
+     "text": "that ~ may는 ‘~하기 위하여, ~하도록’이라는 목적을 나타냅니다. 현대 영어라면 so that we can fight로 씁니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "delivered",
+     "ko": "넘겨주었다",
+     "ref": "1:2"
+    },
+    {
+     "w": "behold",
+     "ko": "보라",
+     "ref": "1:2"
+    },
+    {
+     "w": "lot",
+     "ko": "할당된 몫(제비로 나눈 땅)",
+     "ref": "1:3"
+    },
+    {
+     "w": "likewise",
+     "ko": "마찬가지로",
+     "ref": "1:3"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j01-1",
+     "basis": "external",
+     "text": "스코필드는 사사기라는 책 이름이 여호수아가 죽은 뒤 이어진 타락과 분열 속에서 이스라엘을 구출하도록 일으켜진 열세 사람에게서 왔다고 설명합니다. 사사, 곧 판관은 바로 그렇게 일으켜진 사람들입니다. 스코필드는 이 사람들을 통해 주께서 이스라엘을 몸소 다스리시는 일을 이어 가셨다고 말합니다.",
+     "spans": [
+      {
+       "text": "주께서 이스라엘을 몸소 다스리시는 일을 이어 가셨다",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 머리말",
+       "where": "사사기 머리말",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "This book takes its name from the thirteen men raised up to deliver Israel in the declension and disunion which followed the death of Joshua. Through these men Jehovah continued His personal government of Israel.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "1:4-8",
+   "title": "베젝의 아도니베젝과 예루살렘",
+   "marks": [
+    {
+     "v": "1:4",
+     "t": "u",
+     "ko": "주께서 가나안족들과 프리즈족들을 그들의 손안에 넘기셨더라",
+     "en": "the LORD delivered the Canaanites and the Perizzites into their hand"
+    },
+    {
+     "v": "1:6",
+     "t": "u",
+     "ko": "그의 엄지손가락들과 그의 엄지발가락들을 잘라 내었더라",
+     "en": "cut off his thumbs and his great toes"
+    },
+    {
+     "v": "1:7",
+     "t": "p",
+     "ko": "하나님께서 내가 행한 대로 나에게 되갚으셨도다",
+     "en": "as I have done, so God hath requited me"
+    },
+    {
+     "v": "1:8",
+     "t": "u",
+     "ko": "그곳을 점령하였으며",
+     "en": "had taken it"
+    }
+   ],
+   "english": [
+    {
+     "ref": "1:7",
+     "phrase": "as I have done, so God hath requited me",
+     "grammar": "as ~ so 구문, 옛 3인칭 hath",
+     "text": "as ~ so는 ‘~한 대로 그렇게’라는 뜻입니다. hath는 has의 옛 형태입니다. 내가 한 그대로 하나님께서 갚으셨다는 말이 한 문장에 맞물려 있습니다."
+    },
+    {
+     "ref": "1:8",
+     "phrase": "had fought against Jerusalem, and had taken it",
+     "grammar": "과거완료 had + p.p.",
+     "text": "had fought, had taken은 앞 절의 일보다 먼저 이미 일어난 일을 말할 때 씁니다. 그래서 아도니베젝을 예루살렘으로 데려갈 수 있었던 배경이 됩니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "slew",
+     "ko": "죽였다(slay의 과거)",
+     "ref": "1:4"
+    },
+    {
+     "w": "fled",
+     "ko": "도망했다(flee의 과거)",
+     "ref": "1:6"
+    },
+    {
+     "w": "pursued",
+     "ko": "뒤쫓았다",
+     "ref": "1:6"
+    },
+    {
+     "w": "thumbs",
+     "ko": "엄지손가락들",
+     "ref": "1:6"
+    },
+    {
+     "w": "requited",
+     "ko": "되갚았다",
+     "ref": "1:7"
+    },
+    {
+     "w": "smitten",
+     "ko": "치다(smite)의 과거분사",
+     "ref": "1:8"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "1:9-15",
+   "title": "헤브론과 키럇세펠, 옷니엘과 악사",
+   "marks": [
+    {
+     "v": "1:10",
+     "t": "u",
+     "ko": "헤브론의 이전 이름은 키럇아르바였더라",
+     "en": "the name of Hebron before was Kirjatharba"
+    },
+    {
+     "v": "1:12",
+     "t": "u",
+     "ko": "내 딸 악사를 아내로 주겠노라",
+     "en": "to him will I give Achsah my daughter to wife"
+    },
+    {
+     "v": "1:13",
+     "t": "u",
+     "ko": "옷니엘이 그곳을 점령하였더라",
+     "en": "Othniel the son of Kenaz, Caleb's younger brother, took it"
+    },
+    {
+     "v": "1:15",
+     "t": "u",
+     "ko": "물이 솟는 샘들도 제게 주소서",
+     "en": "give me also springs of water"
+    }
+   ],
+   "english": [
+    {
+     "ref": "1:12",
+     "phrase": "to him will I give Achsah my daughter to wife",
+     "grammar": "도치 구문",
+     "text": "보통 순서는 I will give Achsah my daughter to him to wife입니다. to him(그에게)을 앞에 두어 ‘점령하는 바로 그 사람에게’를 강조했습니다. to wife는 ‘아내로’입니다."
+    },
+    {
+     "ref": "1:14",
+     "phrase": "she lighted from off her ass",
+     "grammar": "옛 낱말 light(내리다)",
+     "text": "여기서 lighted는 ‘불을 켰다’가 아니라 ‘(타고 있던 것에서) 내렸다’는 옛 뜻입니다. 현대 영어(WEB)는 got off로 옮겼습니다."
+    },
+    {
+     "ref": "1:14",
+     "phrase": "What wilt thou?",
+     "grammar": "옛 2인칭 wilt",
+     "text": "wilt는 thou와 함께 쓰는 will의 옛 형태입니다. ‘네가 무엇을 원하느냐?’라는 뜻이며, 현대 영어로는 What do you want?입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "inhabitants",
+     "ko": "거주민들",
+     "ref": "1:11"
+    },
+    {
+     "w": "smiteth",
+     "ko": "치다(smite)의 옛 3인칭",
+     "ref": "1:12"
+    },
+    {
+     "w": "lighted",
+     "ko": "내렸다(옛 뜻)",
+     "ref": "1:14"
+    },
+    {
+     "w": "springs",
+     "ko": "샘들",
+     "ref": "1:15"
+    },
+    {
+     "w": "nether",
+     "ko": "아래쪽의",
+     "ref": "1:15"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "1:16-21",
+   "title": "철 병거 앞에서 멈춘 유다, 예루살렘에 남은 여부스족",
+   "marks": [
+    {
+     "v": "1:16",
+     "t": "u",
+     "ko": "모세의 장인인 켄족의 후손들이",
+     "en": "the children of the Kenite, Moses' father in law"
+    },
+    {
+     "v": "1:17",
+     "t": "p",
+     "ko": "그곳을 모조리 멸하였더라",
+     "en": "utterly destroyed it"
+    },
+    {
+     "v": "1:19",
+     "t": "g",
+     "ko": "주께서 유다와 함께하셨으니",
+     "en": "the LORD was with Judah"
+    },
+    {
+     "v": "1:19",
+     "t": "p",
+     "ko": "골짜기의 거주자들은 내쫓을 수 없었으니",
+     "en": "could not drive out the inhabitants of the valley"
+    },
+    {
+     "v": "1:21",
+     "t": "p",
+     "ko": "여부스족들을 내쫓지 아니하였더라",
+     "en": "did not drive out the Jebusites"
+    }
+   ],
+   "english": [
+    {
+     "ref": "1:19",
+     "phrase": "he drave out the inhabitants of the mountain",
+     "grammar": "drive의 옛 과거형 drave",
+     "text": "drave는 drove의 옛 형태입니다. drive out은 ‘몰아내다, 쫓아내다’라는 뜻이며 이 장 전체에 되풀이되는 낱말입니다."
+    },
+    {
+     "ref": "1:19",
+     "phrase": "because they had chariots of iron",
+     "grammar": "이유의 because",
+     "text": "because가 골짜기의 거주자들을 내쫓지 못한 이유를 밝힙니다. 한글 본문도 ‘그들이 철 병거들을 가지고 있던 까닭이라’고 옮겼습니다."
+    },
+    {
+     "ref": "1:21",
+     "phrase": "unto this day",
+     "grammar": "때의 표현",
+     "text": "unto this day는 ‘오늘날까지’입니다. 이 책을 쓰던 때까지 그 상태가 이어졌다는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "wilderness",
+     "ko": "광야",
+     "ref": "1:16"
+    },
+    {
+     "w": "utterly",
+     "ko": "완전히, 모조리",
+     "ref": "1:17"
+    },
+    {
+     "w": "drave",
+     "ko": "몰아냈다(drive의 옛 과거)",
+     "ref": "1:19"
+    },
+    {
+     "w": "chariots",
+     "ko": "병거들",
+     "ref": "1:19"
+    },
+    {
+     "w": "expelled",
+     "ko": "추방했다",
+     "ref": "1:20"
+    },
+    {
+     "w": "inhabited",
+     "ko": "거주했다",
+     "ref": "1:21"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j01-2",
+     "basis": "external",
+     "text": "스코필드 관주 성경은 21절 앞에 「베냐민의 불완전한 승리」라는 소제목을 달았습니다. 그 소제목 아래 본문은 베냐민 자녀들이 예루살렘에 거주하던 여부스족들을 내쫓지 않았다고 기록합니다. 그래서 여부스족들은 베냐민 자녀들과 함께 예루살렘에서 오늘날까지 살게 되었습니다.",
+     "spans": [
+      {
+       "text": "「베냐민의 불완전한 승리」",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 사사기 1장 소제목",
+       "where": "Judg. 1:21 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "The incomplete victory of Benjamin.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "1:22-26",
+   "title": "요셉의 집과 벧엘의 입구",
+   "marks": [
+    {
+     "v": "1:22",
+     "t": "g",
+     "ko": "주께서 그들과 함께하셨더라",
+     "en": "the LORD was with them"
+    },
+    {
+     "v": "1:24",
+     "t": "u",
+     "ko": "도시 안으로 들어가는 입구를 우리에게 보여 달라",
+     "en": "Shew us, we pray thee, the entrance into the city"
+    },
+    {
+     "v": "1:25",
+     "t": "u",
+     "ko": "그 남자와 그의 모든 가족은 놓아주었더라",
+     "en": "they let go the man and all his family"
+    },
+    {
+     "v": "1:26",
+     "t": "u",
+     "ko": "한 도시를 건설하여 그곳의 이름을 루즈라 불렀더라",
+     "en": "built a city, and called the name thereof Luz"
+    }
+   ],
+   "english": [
+    {
+     "ref": "1:23",
+     "phrase": "sent to descry Bethel",
+     "grammar": "목적의 to 부정사, 옛 낱말 descry",
+     "text": "descry는 ‘멀리서 살펴보다, 정탐하다’라는 옛 낱말입니다. sent to descry는 ‘정탐하라고 보냈다’입니다. 현대 영어(WEB)는 spy out으로 옮겼습니다."
+    },
+    {
+     "ref": "1:24",
+     "phrase": "Shew us, we pray thee, the entrance into the city",
+     "grammar": "명령문 + 삽입구 we pray thee",
+     "text": "shew는 show의 옛 철자입니다. we pray thee는 ‘우리가 너에게 간구한다’는 정중한 부탁의 말로, 오늘날의 please에 해당합니다."
+    },
+    {
+     "ref": "1:26",
+     "phrase": "called the name thereof Luz",
+     "grammar": "옛 부사 thereof",
+     "text": "thereof는 ‘그것의’라는 뜻으로 of it과 같습니다. called the name thereof Luz는 ‘그 이름을 루즈라 불렀다’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "descry",
+     "ko": "정탐하다",
+     "ref": "1:23"
+    },
+    {
+     "w": "spies",
+     "ko": "정탐꾼들",
+     "ref": "1:24"
+    },
+    {
+     "w": "entrance",
+     "ko": "입구",
+     "ref": "1:24"
+    },
+    {
+     "w": "mercy",
+     "ko": "자비",
+     "ref": "1:24"
+    },
+    {
+     "w": "thereof",
+     "ko": "그것의",
+     "ref": "1:26"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "1:27-36",
+   "title": "내쫓지 아니하였더라 — 므낫세부터 단까지",
+   "marks": [
+    {
+     "v": "1:27",
+     "t": "p",
+     "ko": "내쫓지 아니하였더라",
+     "en": "Neither did Manasseh drive out"
+    },
+    {
+     "v": "1:27",
+     "t": "u",
+     "ko": "가나안족들이 그 지역 가운데 거하려 하였더라",
+     "en": "the Canaanites would dwell in that land"
+    },
+    {
+     "v": "1:28",
+     "t": "u",
+     "ko": "가나안족들에게 조공을 바치게 하였으나",
+     "en": "put the Canaanites to tribute"
+    },
+    {
+     "v": "1:28",
+     "t": "p",
+     "ko": "그들을 모조리 내쫓지는 아니하였더라",
+     "en": "did not utterly drive them out"
+    },
+    {
+     "v": "1:32",
+     "t": "p",
+     "ko": "이는 그들이 저들을 내쫓지 아니하였기 때문이라",
+     "en": "for they did not drive them out"
+    },
+    {
+     "v": "1:34",
+     "t": "u",
+     "ko": "아모리족들이 단 자녀들을 산속에 강제로 밀어 넣었더라",
+     "en": "the Amorites forced the children of Dan into the mountain"
+    }
+   ],
+   "english": [
+    {
+     "ref": "1:27",
+     "phrase": "Neither did Manasseh drive out",
+     "grammar": "부정어 도치 neither did + 주어",
+     "text": "neither를 문장 맨 앞에 두면 did + 주어 + 동사 순서로 바뀝니다. ‘므낫세도 쫓아내지 않았다’는 뜻이며, 29·30·31·33절이 모두 같은 꼴로 시작해 실패가 되풀이되는 것을 보여 줍니다."
+    },
+    {
+     "ref": "1:28",
+     "phrase": "when Israel was strong, that they put the Canaanites to tribute",
+     "grammar": "it came to pass, when ~, that ~",
+     "text": "it came to pass(이러한 일이 있었다) 다음에 when절로 때를 말하고 that절로 일어난 일을 말하는 성경 영어의 틀입니다. put ~ to tribute는 ‘~에게 조공을 바치게 하다’입니다."
+    },
+    {
+     "ref": "1:34",
+     "phrase": "they would not suffer them to come down to the valley",
+     "grammar": "옛 뜻 suffer(허락하다)",
+     "text": "suffer는 여기서 ‘고통받다’가 아니라 ‘허락하다, 그냥 두다’라는 옛 뜻입니다. would not suffer는 ‘용납하지 아니하였다’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "tribute",
+     "ko": "조공",
+     "ref": "1:28"
+    },
+    {
+     "w": "tributaries",
+     "ko": "조공을 바치는 자들",
+     "ref": "1:30"
+    },
+    {
+     "w": "nevertheless",
+     "ko": "그럼에도 불구하고",
+     "ref": "1:33"
+    },
+    {
+     "w": "forced",
+     "ko": "강제로 밀어 넣었다",
+     "ref": "1:34"
+    },
+    {
+     "w": "suffer",
+     "ko": "허락하다(옛 뜻)",
+     "ref": "1:34"
+    },
+    {
+     "w": "prevailed",
+     "ko": "우세하였다",
+     "ref": "1:35"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j01-3",
+     "basis": "external",
+     "text": "스코필드 관주 성경은 27절 앞에 「므낫세의 불완전한 승리」라는 소제목을 달았습니다. 이 단락은 므낫세에 이어 에프라임, 스불룬, 아셸, 납탈리가 차례로 가나안족들을 내쫓지 않았다고 기록합니다. 단 자녀들은 오히려 아모리족들에게 밀려 산속에 갇혔습니다.",
+     "spans": [
+      {
+       "text": "「므낫세의 불완전한 승리」",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 사사기 1장 소제목",
+       "where": "Judg. 1:27 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "The incomplete victory of Manasseh.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    },
+    {
+     "id": "j01-4",
+     "basis": "external",
+     "text": "스코필드는 사사기 전체에서 두 가지 사실이 두드러진다고 말합니다. 바로 이스라엘의 철저한 실패와 주의 끈질긴 은혜입니다.",
+     "spans": [
+      {
+       "text": "이스라엘의 철저한 실패와 주의 끈질긴 은혜",
+       "level": 3
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 머리말",
+       "where": "사사기 머리말",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Two facts stand out — the utter failure of Israel; the persistent grace of Jehovah.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "여호수아가 죽은 뒤 이스라엘 자녀들이 누가 먼저 가나안족들과 싸우러 올라갈지 주께 여쭈었습니다.",
+    "verse": "1:1",
+    "u": [
+     "누가 먼저 가나안족들과 싸우러 올라갈지"
+    ]
+   },
+   {
+    "text": "주께서는 유다가 올라가라고 하시며 그 지역을 이미 유다의 손에 넘겼다고 말씀하셨습니다.",
+    "verse": "1:2",
+    "u": [
+     "유다가 올라가라고"
+    ]
+   },
+   {
+    "text": "스코필드는 사사기라는 이름이 여호수아가 죽은 뒤 이스라엘을 구출하도록 일으켜진 열세 사람에게서 왔다고 설명합니다.",
+    "key": "j01-1",
+    "u": [
+     "열세 사람"
+    ]
+   },
+   {
+    "text": "스코필드에 따르면 주께서는 이 사람들을 통해 이스라엘을 몸소 다스리시는 일을 이어 가셨습니다.",
+    "key": "j01-1",
+    "u": [
+     "몸소 다스리시는 일"
+    ]
+   },
+   {
+    "text": "유다와 시므온은 베젝에서 일만 명을 죽이고 도망한 아도니베젝을 잡아 엄지손가락과 엄지발가락을 잘랐습니다.",
+    "verse": "1:6",
+    "u": [
+     "엄지손가락과 엄지발가락"
+    ]
+   },
+   {
+    "text": "아도니베젝은 자기가 칠십 명의 왕들에게 행한 대로 하나님께서 되갚으셨다고 고백했습니다.",
+    "verse": "1:7",
+    "u": [
+     "행한 대로 하나님께서 되갚으셨다"
+    ]
+   },
+   {
+    "text": "칼렙은 키럇세펠을 점령하는 사람에게 딸 악사를 주겠다고 했고, 크나즈의 아들 옷니엘이 그곳을 점령했습니다.",
+    "verse": "1:13",
+    "u": [
+     "옷니엘이 그곳을 점령"
+    ]
+   },
+   {
+    "text": "악사는 아버지 칼렙에게 물이 솟는 샘들을 구해 위쪽 샘들과 아래쪽 샘들을 받았습니다.",
+    "verse": "1:15",
+    "u": [
+     "위쪽 샘들과 아래쪽 샘들"
+    ]
+   },
+   {
+    "text": "주께서 유다와 함께하셨지만 유다는 철 병거를 가진 골짜기의 거주자들을 내쫓지 못했습니다.",
+    "verse": "1:19",
+    "u": [
+     "골짜기의 거주자들을 내쫓지 못했습니다"
+    ]
+   },
+   {
+    "text": "스코필드 관주 성경은 21절 앞에 「베냐민의 불완전한 승리」라는 소제목을 달았습니다.",
+    "key": "j01-2",
+    "u": [
+     "베냐민의 불완전한 승리"
+    ]
+   },
+   {
+    "text": "베냐민 자녀들은 예루살렘의 여부스족들을 내쫓지 않아 오늘날까지 함께 살게 되었습니다.",
+    "verse": "1:21",
+    "u": [
+     "여부스족들을 내쫓지 않아"
+    ]
+   },
+   {
+    "text": "요셉의 집은 정탐꾼들이 알아낸 입구로 벧엘을 쳤고, 입구를 보여 준 남자와 그의 가족은 놓아주었습니다.",
+    "verse": "1:25",
+    "u": [
+     "입구를 보여 준 남자"
+    ]
+   },
+   {
+    "text": "므낫세, 에프라임, 스불룬, 아셸, 납탈리는 가나안족들을 내쫓지 않고 조공을 받거나 그들 사이에 살았습니다.",
+    "verse": "1:28",
+    "u": [
+     "내쫓지 않고"
+    ]
+   },
+   {
+    "text": "스코필드 관주 성경은 27절 앞에 「므낫세의 불완전한 승리」라는 소제목을 달았습니다.",
+    "key": "j01-3",
+    "u": [
+     "므낫세의 불완전한 승리"
+    ]
+   },
+   {
+    "text": "단 자녀들은 오히려 아모리족들에게 밀려 산속에 갇혔습니다.",
+    "verse": "1:34",
+    "u": [
+     "산속에 갇혔습니다"
+    ]
+   },
+   {
+    "text": "스코필드는 사사기 전체에서 이스라엘의 철저한 실패와 주의 끈질긴 은혜가 두드러진다고 말합니다.",
+    "key": "j01-4",
+    "u": [
+     "철저한 실패",
+     "끈질긴 은혜"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "1:1",
+    "q": "사사기 1장은 누구의 죽음 이후의 일로 시작합니까?",
+    "a": "여호수아"
+   },
+   {
+    "verse": "1:1",
+    "q": "이스라엘 자녀들은 주께 무엇을 여쭈었습니까?",
+    "a": "누가 먼저 가나안족들을 대적하여 올라가서"
+   },
+   {
+    "verse": "1:2",
+    "q": "주께서 먼저 올라가라고 하신 지파는 누구입니까?",
+    "a": "유다"
+   },
+   {
+    "verse": "1:3",
+    "q": "유다가 함께 올라가자고 부탁한 형제는 누구입니까?",
+    "a": "시므온"
+   },
+   {
+    "verse": "1:4",
+    "q": "유다가 베젝에서 죽인 사람은 몇 명입니까?",
+    "a": "일만 명"
+   },
+   {
+    "verse": "1:6",
+    "q": "유다 자손이 아도니베젝을 잡아 잘라 낸 것은 무엇입니까?",
+    "a": "엄지손가락들, 엄지발가락들"
+   },
+   {
+    "verse": "1:7",
+    "q": "아도니베젝의 식탁 아래에서 음식을 주워 모은 왕들은 몇 명이었습니까?",
+    "a": "칠십 명"
+   },
+   {
+    "verse": "1:7",
+    "q": "아도니베젝은 어디로 끌려가 죽었습니까?",
+    "a": "예루살렘"
+   },
+   {
+    "verse": "1:10",
+    "q": "헤브론의 이전 이름은 무엇입니까?",
+    "a": "키럇아르바"
+   },
+   {
+    "verse": "1:11",
+    "q": "드빌의 이전 이름은 무엇입니까?",
+    "a": "키럇세펠"
+   },
+   {
+    "verse": "1:12",
+    "q": "칼렙은 키럇세펠을 점령하는 사람에게 누구를 아내로 주겠다고 했습니까?",
+    "a": "악사"
+   },
+   {
+    "verse": "1:13",
+    "q": "키럇세펠을 점령한 사람은 누구의 아들입니까?",
+    "a": "크나즈"
+   },
+   {
+    "verse": "1:15",
+    "q": "악사가 아버지에게 더 달라고 한 것은 무엇입니까?",
+    "a": "물이 솟는 샘들"
+   },
+   {
+    "verse": "1:16",
+    "q": "유다 자녀들과 함께 종려나무들의 도시에서 올라간 사람들은 누구의 후손입니까?",
+    "a": "켄족"
+   },
+   {
+    "verse": "1:17",
+    "q": "즈팟을 멸한 뒤 그 도시는 무엇이라 불렸습니까?",
+    "a": "호르마"
+   },
+   {
+    "verse": "1:18",
+    "q": "유다가 점령한 세 도시는 어디입니까?",
+    "a": "가자, 아스클론, 에크론"
+   },
+   {
+    "verse": "1:19",
+    "q": "유다가 골짜기의 거주자들을 내쫓지 못한 이유는 무엇입니까?",
+    "a": "철 병거들"
+   },
+   {
+    "verse": "1:20",
+    "q": "칼렙이 헤브론에서 추방한 사람들은 누구입니까?",
+    "a": "아낙의 세 아들들"
+   },
+   {
+    "verse": "1:21",
+    "q": "베냐민 자녀들이 예루살렘에서 내쫓지 않은 족속은 누구입니까?",
+    "a": "여부스족들"
+   },
+   {
+    "verse": "1:23",
+    "q": "벧엘의 이전 이름은 무엇입니까?",
+    "a": "루즈"
+   },
+   {
+    "verse": "1:24",
+    "q": "정탐꾼들이 도시에서 나온 남자에게 보여 달라고 한 것은 무엇입니까?",
+    "a": "도시 안으로 들어가는 입구"
+   },
+   {
+    "verse": "1:26",
+    "q": "놓여난 남자는 어느 지역으로 가서 도시를 세웠습니까?",
+    "a": "히타이트족들의 지역"
+   },
+   {
+    "verse": "1:28",
+    "q": "이스라엘이 강해졌을 때 가나안족들에게 시킨 일은 무엇입니까?",
+    "a": "조공을 바치게"
+   },
+   {
+    "verse": "1:29",
+    "q": "에프라임이 내쫓지 않은 가나안족들은 어디에 살았습니까?",
+    "a": "게젤"
+   },
+   {
+    "verse": "1:34",
+    "q": "단 자녀들을 산속에 밀어 넣은 족속은 누구입니까?",
+    "a": "아모리족들"
+   },
+   {
+    "key": "j01-1",
+    "q": "스코필드는 사사기라는 책 이름이 어디에서 왔다고 설명합니까?",
+    "a": "여호수아가 죽은 뒤 이스라엘을 구출하도록 일으켜진 열세 사람에게서 왔다고 설명합니다."
+   },
+   {
+    "key": "j01-1",
+    "q": "스코필드에 따르면 주께서는 사사들을 통해 무엇을 이어 가셨습니까?",
+    "a": "이스라엘을 몸소 다스리시는 일"
+   },
+   {
+    "key": "j01-2",
+    "q": "스코필드 관주 성경이 21절 앞에 단 소제목은 무엇입니까?",
+    "a": "베냐민의 불완전한 승리"
+   },
+   {
+    "key": "j01-3",
+    "q": "스코필드 관주 성경이 27절 앞에 단 소제목은 무엇입니까?",
+    "a": "므낫세의 불완전한 승리"
+   },
+   {
+    "key": "j01-4",
+    "q": "스코필드가 사사기 전체에서 두드러진다고 한 두 가지 사실은 무엇입니까?",
+    "a": "이스라엘의 철저한 실패와 주의 끈질긴 은혜"
+   }
+  ],
+  "faq": [
+   {
+    "q": "사사기라는 이름은 어디에서 왔습니까?",
+    "key": "j01-1"
+   },
+   {
+    "q": "사사(판관)는 어떤 사람들입니까?",
+    "key": "j01-1"
+   },
+   {
+    "q": "왕이 없던 시대에 이스라엘은 누가 다스렸습니까?",
+    "key": "j01-1"
+   },
+   {
+    "q": "예루살렘의 여부스족들은 왜 계속 남아 있었습니까?",
+    "key": "j01-2"
+   },
+   {
+    "q": "베냐민 지파의 승리는 왜 ‘불완전한 승리’라고 불립니까?",
+    "key": "j01-2"
+   },
+   {
+    "q": "1장 끝에 ‘내쫓지 아니하였더라’가 왜 되풀이됩니까?",
+    "key": "j01-3"
+   },
+   {
+    "q": "어느 지파들이 가나안족들을 내쫓지 못했습니까?",
+    "key": "j01-3"
+   },
+   {
+    "q": "단 지파는 어떤 형편에 놓였습니까?",
+    "key": "j01-3"
+   },
+   {
+    "q": "사사기 전체에서 두드러지는 두 가지 사실은 무엇입니까?",
+    "key": "j01-4"
+   },
+   {
+    "q": "스코필드는 사사기에서 이스라엘의 모습을 어떻게 요약합니까?",
+    "key": "j01-4"
+   },
+   {
+    "q": "이스라엘이 실패하는데도 주께서는 어떻게 하셨습니까?",
+    "key": "j01-4"
+   },
+   {
+    "q": "사사기는 주의 은혜에 대해 무엇을 보여 줍니까?",
+    "key": "j01-4"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "사사(판관)",
+    "key": "j01-1",
+    "text": "여호수아가 죽은 뒤 이스라엘을 구출하도록 주께서 일으키신 사람들. 스코필드는 열세 사람이라고 말합니다."
+   },
+   {
+    "term": "키럇세펠",
+    "verse": "1:11",
+    "text": "드빌의 이전 이름. 옷니엘이 이곳을 점령하고 악사를 아내로 얻었습니다."
+   },
+   {
+    "term": "호르마",
+    "verse": "1:17",
+    "text": "유다와 시므온이 즈팟의 가나안족들을 모조리 멸한 뒤 그 도시에 붙은 이름입니다."
+   },
+   {
+    "term": "철 병거",
+    "verse": "1:19",
+    "text": "쇠로 만든 전쟁 수레. 골짜기의 거주자들이 이것을 가지고 있어 유다가 그들을 내쫓지 못했습니다."
+   },
+   {
+    "term": "조공",
+    "verse": "1:28",
+    "text": "다스림을 받는 쪽이 다스리는 쪽에 바치는 재물. 이스라엘은 가나안족들을 내쫓는 대신 조공을 바치게 했습니다."
+   }
+  ]
+ }
+}

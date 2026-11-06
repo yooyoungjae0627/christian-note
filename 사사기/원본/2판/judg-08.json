@@ -1,0 +1,1268 @@
+{
+ "chapter": 8,
+ "subtitle": "미디안 왕들을 쫓은 기드온과 에봇",
+ "motto": "주께서 너희를 다스리시리라",
+ "motto_comment": "j08-2",
+ "cover": [
+  {
+   "m": "crown",
+   "x": 170,
+   "y": 95,
+   "s": 0.9
+  },
+  {
+   "m": "path",
+   "x": 160,
+   "y": 250,
+   "s": 1
+  },
+  {
+   "m": "coat",
+   "x": 250,
+   "y": 270,
+   "s": 0.85
+  },
+  {
+   "m": "tent",
+   "x": 90,
+   "y": 275,
+   "s": 0.8
+  }
+ ],
+ "people": [
+  {
+   "id": "joash",
+   "name": "요아시",
+   "en": "Joash",
+   "gen": 0,
+   "desc": "기드온의 아버지입니다. 기드온은 죽은 뒤 아비에젤족들의 오프라에 있는 요아시의 돌무덤에 장사되었습니다.",
+   "refs": [
+    "8:13",
+    "8:32"
+   ],
+   "part": "기드온의 아버지",
+   "look": "old",
+   "intro": "기드온의 아버지 · 오프라의 돌무덤"
+  },
+  {
+   "id": "gideon",
+   "name": "기드온",
+   "en": "Gideon",
+   "gen": 1,
+   "desc": "요아시의 아들로 여룹바알이라고도 불립니다. 기진한 삼백 명과 함께 미디안의 두 왕을 쫓아 붙잡았습니다. 왕이 되어 달라는 요청은 거절했지만, 금귀고리로 에봇을 만들어 오프라에 두었고 그것이 그와 그의 집에 올무가 되었습니다.",
+   "refs": [
+    "8:4",
+    "8:23",
+    "8:27"
+   ],
+   "part": "미디안을 쫓은 사사",
+   "look": "man",
+   "intro": "요아시의 아들 · 왕은 거절, 에봇은 만듦"
+  },
+  {
+   "id": "brothers",
+   "name": "기드온의 형제들",
+   "gen": 1,
+   "desc": "기드온의 어머니의 아들들입니다. 타볼에서 제바와 잘문나에게 죽임을 당했습니다.",
+   "refs": [
+    "8:18",
+    "8:19"
+   ],
+   "part": "타볼에서 죽은 형제들",
+   "look": "group",
+   "intro": "어머니의 아들들 · 타볼에서 죽임 당함"
+  },
+  {
+   "id": "concubine",
+   "name": "셰켐의 첩",
+   "gen": 1,
+   "desc": "셰켐에 있던 기드온의 첩입니다. 아비멜렉을 낳았습니다.",
+   "refs": [
+    "8:31"
+   ],
+   "part": "아비멜렉의 어머니",
+   "look": "woman",
+   "intro": "기드온의 첩 · 아비멜렉의 어머니"
+  },
+  {
+   "id": "jether",
+   "name": "예델",
+   "en": "Jether",
+   "gen": 2,
+   "desc": "기드온의 첫 태생입니다. 두 왕을 죽이라는 아버지의 말에 아직 어려 두려워서 칼을 빼지 못했습니다.",
+   "refs": [
+    "8:20"
+   ],
+   "part": "기드온의 맏아들",
+   "look": "child",
+   "intro": "기드온의 맏아들 · 칼을 빼지 못함"
+  },
+  {
+   "id": "abimelech",
+   "name": "아비멜렉",
+   "en": "Abimelech",
+   "gen": 2,
+   "desc": "셰켐에 있던 첩이 낳은 기드온의 아들입니다. 기드온이 그의 이름을 아비멜렉이라 불렀습니다.",
+   "refs": [
+    "8:31"
+   ],
+   "part": "첩이 낳은 아들",
+   "look": "man",
+   "intro": "첩이 낳은 아들 · 다음 장의 주인공"
+  },
+  {
+   "id": "zebah",
+   "name": "제바",
+   "en": "Zebah",
+   "role": "enemy",
+   "gen": 0,
+   "desc": "미디안의 왕입니다. 잘문나와 함께 콸콜에 있다가 붙잡혔고, 타볼에서 기드온의 형제들을 죽인 일로 기드온에게 죽임을 당했습니다.",
+   "refs": [
+    "8:10",
+    "8:12",
+    "8:21"
+   ],
+   "part": "미디안의 왕",
+   "look": "king",
+   "intro": "미디안의 왕 · 기드온의 형제를 죽임"
+  },
+  {
+   "id": "zalmunna",
+   "name": "잘문나",
+   "en": "Zalmunna",
+   "role": "enemy",
+   "gen": 0,
+   "desc": "제바와 함께한 미디안의 왕입니다. 붙잡힌 뒤 ‘네가 일어나서 우리를 처리하라’고 말했고, 기드온에게 죽임을 당했습니다.",
+   "refs": [
+    "8:12",
+    "8:21"
+   ],
+   "part": "미디안의 왕",
+   "look": "king",
+   "intro": "미디안의 왕 · 제바와 함께 붙잡힘"
+  },
+  {
+   "id": "ephraimmen",
+   "name": "에프라임의 남자들",
+   "gen": 0,
+   "desc": "자기들을 부르지 않았다며 기드온을 매섭게 힐책했다가, 기드온의 대답을 듣고 분노가 수그러들었습니다.",
+   "refs": [
+    "8:1",
+    "8:3"
+   ],
+   "part": "기드온을 나무란 지파",
+   "look": "group",
+   "intro": "에프라임 사람들 · 기드온을 힐책함"
+  },
+  {
+   "id": "succoth",
+   "name": "숙콧의 통치자들",
+   "gen": 0,
+   "desc": "지친 기드온의 군사에게 빵을 주지 않았습니다. 기드온이 돌아와 광야의 가시와 찔레로 그들을 가르쳤습니다.",
+   "refs": [
+    "8:6",
+    "8:16"
+   ],
+   "part": "빵을 거절한 사람들",
+   "look": "group",
+   "intro": "숙콧의 통치자들 · 빵을 주지 않음"
+  }
+ ],
+ "relations": [
+  {
+   "from": "joash",
+   "to": "gideon",
+   "type": "parent",
+   "label": "아들",
+   "ref": "8:13"
+  },
+  {
+   "from": "gideon",
+   "to": "brothers",
+   "type": "sibling",
+   "label": "형제",
+   "ref": "8:19"
+  },
+  {
+   "from": "gideon",
+   "to": "concubine",
+   "type": "spouse",
+   "label": "첩",
+   "ref": "8:31"
+  },
+  {
+   "from": "gideon",
+   "to": "jether",
+   "type": "parent",
+   "label": "맏아들",
+   "ref": "8:20"
+  },
+  {
+   "from": "concubine",
+   "to": "abimelech",
+   "type": "parent",
+   "label": "아들",
+   "ref": "8:31"
+  },
+  {
+   "from": "zebah",
+   "to": "zalmunna",
+   "type": "other",
+   "label": "미디안 두 왕",
+   "ref": "8:12"
+  },
+  {
+   "from": "gideon",
+   "to": "zebah",
+   "type": "enemy",
+   "label": "죽임",
+   "ref": "8:21",
+   "directed": true
+  },
+  {
+   "from": "ephraimmen",
+   "to": "gideon",
+   "type": "other",
+   "label": "힐책",
+   "ref": "8:1",
+   "directed": true
+  },
+  {
+   "from": "succoth",
+   "to": "gideon",
+   "type": "enemy",
+   "label": "빵을 거절",
+   "ref": "8:6",
+   "directed": true
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "jordanriver",
+    "name": "요르단",
+    "at": [
+     35.57,
+     32.3
+    ],
+    "ref": "8:4"
+   },
+   {
+    "key": "succoth",
+    "name": "숙콧",
+    "ref": "8:5"
+   },
+   {
+    "key": "penuel",
+    "name": "프누엘",
+    "at": [
+     35.69,
+     32.17
+    ],
+    "ref": "8:8"
+   },
+   {
+    "key": "tabor",
+    "name": "타볼",
+    "at": [
+     35.39,
+     32.69
+    ],
+    "ref": "8:18"
+   },
+   {
+    "key": "shechem",
+    "name": "셰켐",
+    "ref": "8:31"
+   }
+  ],
+  "unknown": [
+   {
+    "name": "콸콜",
+    "ref": "8:10",
+    "note": "제바와 잘문나가 군대와 함께 있던 곳입니다. 자리가 알려지지 않았습니다."
+   },
+   {
+    "name": "노바와 욕브하",
+    "ref": "8:11",
+    "note": "기드온이 그 동쪽 길로 올라간 곳들입니다. 자리가 분명하지 않아 찍지 않았습니다."
+   },
+   {
+    "name": "오프라",
+    "ref": "8:27",
+    "note": "기드온이 에봇을 둔 그의 도시입니다. 자리를 두고 의견이 갈려 찍지 않았습니다."
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "8:1-3",
+   "title": "에프라임의 힐책과 기드온의 대답",
+   "marks": [
+    {
+     "v": "8:1",
+     "t": "p",
+     "ko": "그들이 그를 매섭게 힐책하였더라",
+     "en": "they did chide with him sharply"
+    },
+    {
+     "v": "8:2",
+     "t": "u",
+     "ko": "에프라임의 포도들을 이삭줍기하는 일이 아비에젤의 포도 수확보다 낫지 아니하냐?",
+     "en": "Is not the gleaning of the grapes of Ephraim better than the vintage of Abiezer?"
+    },
+    {
+     "v": "8:3",
+     "t": "u",
+     "ko": "그를 향한 그들의 분노가 수그러들었더라",
+     "en": "Then their anger was abated toward him"
+    }
+   ],
+   "english": [
+    {
+     "ref": "8:1",
+     "phrase": "Why hast thou served us thus",
+     "grammar": "옛 2인칭 현재완료 hast",
+     "text": "hast는 thou와 함께 쓰는 have입니다. served us thus는 ‘우리를 이렇게 대우했다’는 뜻으로, 에프라임 사람들의 서운함이 담긴 따짐입니다.",
+     "key": "j08-1"
+    },
+    {
+     "ref": "8:2",
+     "phrase": "What have I done now in comparison of you?",
+     "grammar": "관용구 in comparison of",
+     "text": "in comparison of는 지금의 in comparison with(~와 비교하여)입니다. 기드온은 자기가 한 일을 낮추어 말합니다."
+    },
+    {
+     "ref": "8:3",
+     "phrase": "Then their anger was abated toward him",
+     "grammar": "수동태 was abated",
+     "text": "abate는 ‘누그러뜨리다’입니다. was abated는 ‘누그러졌다’로, 기드온의 부드러운 대답에 분노가 가라앉았음을 말합니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "chide",
+     "ko": "꾸짖다, 힐책하다",
+     "ref": "8:1"
+    },
+    {
+     "w": "sharply",
+     "ko": "매섭게",
+     "ref": "8:1"
+    },
+    {
+     "w": "comparison",
+     "ko": "비교",
+     "ref": "8:2"
+    },
+    {
+     "w": "gleaning",
+     "ko": "이삭줍기",
+     "ref": "8:2"
+    },
+    {
+     "w": "vintage",
+     "ko": "포도 수확",
+     "ref": "8:2"
+    },
+    {
+     "w": "abated",
+     "ko": "누그러졌다",
+     "ref": "8:3"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j08-1",
+     "basis": "external",
+     "text": "에프라임 사람들은 미디안과 싸우러 갈 때 왜 자기들을 부르지 않았느냐며 기드온을 매섭게 힐책했습니다. 스코필드는 이 대목에 짧은 주석을 달았습니다. 여기서부터 이스라엘 안의 뿌리 깊은 분열이 시작되며, 그 분열이 마침내 여로보암과 르호보암 때 솔로몬의 왕국이 나뉘는 데까지 이르렀다는 것입니다. 그는 사사기 12장 1절, 사무엘하 2장 8절, 열왕기상 12장 16절을 함께 보라고 합니다.",
+     "spans": [
+      {
+       "text": "이스라엘 안의 뿌리 깊은 분열",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 사사기 8장 1절 주석",
+       "where": "Judg. 8:1 주석",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Cf.Jud.12. 1; 2 Sam.2. 8; 1 Ki.12. 16. Here begins that deep-rooted division in Israel which culminated in the divi¬ sion of Solo¬ mon’s king¬ dom under Jeroboam and Reho- boam.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "8:4-9",
+   "title": "빵을 거절한 숙콧과 프누엘",
+   "marks": [
+    {
+     "v": "8:4",
+     "t": "g",
+     "ko": "기진하였음에도 그들을 추격하였더라",
+     "en": "faint, yet pursuing them"
+    },
+    {
+     "v": "8:6",
+     "t": "p",
+     "ko": "우리가 너의 군사에게 빵을 주어야 하겠느냐?",
+     "en": "that we should give bread unto thine army?"
+    },
+    {
+     "v": "8:7",
+     "t": "u",
+     "ko": "광야의 가시들과, 찔레들로 너희 살을 찢겠노라",
+     "en": "I will tear your flesh with the thorns of the wilderness and with briers"
+    },
+    {
+     "v": "8:9",
+     "t": "u",
+     "ko": "나는 이 망대를 헐어 버리겠노라",
+     "en": "I will break down this tower"
+    }
+   ],
+   "english": [
+    {
+     "ref": "8:4",
+     "phrase": "faint, yet pursuing them",
+     "grammar": "분사구문 · 접속사 yet",
+     "text": "faint(기진한)와 pursuing(추격하는)을 yet(그런데도)으로 이었습니다. 지쳤는데도 멈추지 않고 쫓았다는 모습을 짧게 보여 줍니다."
+    },
+    {
+     "ref": "8:5",
+     "phrase": "Give, I pray you, loaves of bread",
+     "grammar": "삽입구 I pray you",
+     "text": "I pray you는 ‘부탁하노니’라는 정중한 삽입구입니다. 지금의 please에 가깝습니다."
+    },
+    {
+     "ref": "8:6",
+     "phrase": "Are the hands of Zebah and Zalmunna now in thine hand",
+     "grammar": "수사 의문문",
+     "text": "‘두 왕을 벌써 붙잡기라도 했느냐?’는 비웃음이 담긴 물음입니다. 아직 이기지 못했으니 도울 수 없다는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "faint",
+     "ko": "기진한, 지친",
+     "ref": "8:4"
+    },
+    {
+     "w": "pursuing",
+     "ko": "추격하는",
+     "ref": "8:4"
+    },
+    {
+     "w": "loaves",
+     "ko": "빵 덩이들",
+     "ref": "8:5"
+    },
+    {
+     "w": "thorns",
+     "ko": "가시들",
+     "ref": "8:7"
+    },
+    {
+     "w": "briers",
+     "ko": "찔레들",
+     "ref": "8:7"
+    },
+    {
+     "w": "tower",
+     "ko": "망대",
+     "ref": "8:9"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "8:10-17",
+   "title": "붙잡힌 두 왕과 숙콧·프누엘의 벌",
+   "marks": [
+    {
+     "v": "8:10",
+     "t": "u",
+     "ko": "칼을 뺀 십이만 명의 남자들이 쓰러졌기 때문이라",
+     "en": "there fell an hundred and twenty thousand men that drew sword"
+    },
+    {
+     "v": "8:11",
+     "t": "u",
+     "ko": "이는 군대가 방심하고 있었기 때문이라",
+     "en": "for the host was secure"
+    },
+    {
+     "v": "8:12",
+     "t": "u",
+     "ko": "미디안의 두 왕들인 제바와 잘문나를 붙잡았으며",
+     "en": "took the two kings of Midian, Zebah and Zalmunna"
+    },
+    {
+     "v": "8:16",
+     "t": "p",
+     "ko": "그가 그것들로 숙콧의 사람들을 가르쳤더라",
+     "en": "with them he taught the men of Succoth"
+    },
+    {
+     "v": "8:17",
+     "t": "p",
+     "ko": "프누엘의 망대를 헐어 버렸고",
+     "en": "he beat down the tower of Penuel"
+    }
+   ],
+   "english": [
+    {
+     "ref": "8:11",
+     "phrase": "for the host was secure",
+     "grammar": "옛 뜻 secure(방심한)",
+     "text": "secure는 지금 ‘안전한’이라는 뜻이지만 KJV에서는 ‘걱정 없이 마음을 놓은, 방심한’이라는 뜻입니다. 한글 본문도 ‘방심하고 있었기’로 옮겼습니다."
+    },
+    {
+     "ref": "8:12",
+     "phrase": "discomfited all the host",
+     "grammar": "옛 뜻 discomfit(패주시키다)",
+     "text": "discomfit은 지금 ‘당황하게 하다’로 쓰지만, 옛 영어에서는 ‘무찌르다, 패주시키다’라는 뜻입니다."
+    },
+    {
+     "ref": "8:15",
+     "phrase": "with whom ye did upbraid me",
+     "grammar": "강조 조동사 did · 전치사 + whom",
+     "text": "did upbraid는 upbraided(꾸짖었다)를 힘주어 말한 꼴입니다. with whom은 ‘그들 때문에’라는 뜻으로 앞의 두 왕을 가리킵니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "secure",
+     "ko": "방심한(옛 뜻)",
+     "ref": "8:11"
+    },
+    {
+     "w": "discomfited",
+     "ko": "패주시켰다",
+     "ref": "8:12"
+    },
+    {
+     "w": "enquired",
+     "ko": "물어보았다",
+     "ref": "8:14"
+    },
+    {
+     "w": "elders",
+     "ko": "장로들",
+     "ref": "8:14"
+    },
+    {
+     "w": "upbraid",
+     "ko": "꾸짖다, 질책하다",
+     "ref": "8:15"
+    },
+    {
+     "w": "weary",
+     "ko": "지친",
+     "ref": "8:15"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "8:18-21",
+   "title": "타볼에서 죽은 형제들",
+   "marks": [
+    {
+     "v": "8:19",
+     "t": "u",
+     "ko": "그들은 나의 형제들이었으니, 곧 나의 어머니의 아들들이었도다",
+     "en": "They were my brethren, even the sons of my mother"
+    },
+    {
+     "v": "8:20",
+     "t": "u",
+     "ko": "그 어린 청년이 자기 칼을 빼지 못하였더라",
+     "en": "But the youth drew not his sword"
+    },
+    {
+     "v": "8:21",
+     "t": "u",
+     "ko": "기드온이 일어나 제바와 잘문나를 살해하였으며",
+     "en": "Gideon arose, and slew Zebah and Zalmunna"
+    }
+   ],
+   "english": [
+    {
+     "ref": "8:18",
+     "phrase": "What manner of men were they",
+     "grammar": "관용구 what manner of",
+     "text": "what manner of는 ‘어떤 부류의, 어떤 종류의’라는 뜻입니다. 지금은 what kind of를 씁니다."
+    },
+    {
+     "ref": "8:19",
+     "phrase": "if ye had saved them alive, I would not slay you",
+     "grammar": "가정법 과거완료",
+     "text": "had saved … would not slay는 과거 사실과 반대되는 가정입니다. ‘살려 두었더라면 죽이지 않았을 것이다’, 곧 실제로는 살려 두지 않았다는 뜻입니다."
+    },
+    {
+     "ref": "8:21",
+     "phrase": "for as the man is, so is his strength",
+     "grammar": "상관 구문 as … so",
+     "text": "as … so는 ‘~한 만큼 그렇게’입니다. ‘사람이 어떠하면 그 힘도 그러하다’는 말입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "manner",
+     "ko": "부류, 종류",
+     "ref": "8:18"
+    },
+    {
+     "w": "resembled",
+     "ko": "닮았다",
+     "ref": "8:18"
+    },
+    {
+     "w": "brethren",
+     "ko": "형제들",
+     "ref": "8:19"
+    },
+    {
+     "w": "firstborn",
+     "ko": "첫 태생, 맏아들",
+     "ref": "8:20"
+    },
+    {
+     "w": "youth",
+     "ko": "어린 청년",
+     "ref": "8:20"
+    },
+    {
+     "w": "ornaments",
+     "ko": "장식품들",
+     "ref": "8:21"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "8:22-27",
+   "title": "왕을 거절한 기드온, 올무가 된 에봇",
+   "marks": [
+    {
+     "v": "8:22",
+     "t": "u",
+     "ko": "당신께서 저희를 다스리시어",
+     "en": "Rule thou over us"
+    },
+    {
+     "v": "8:23",
+     "t": "y",
+     "ko": "주께서 너희를 다스리시리라",
+     "en": "the LORD shall rule over you"
+    },
+    {
+     "v": "8:27",
+     "t": "p",
+     "ko": "온 이스라엘이 그것을 좇아 그리로 행음하러 다녔더라",
+     "en": "all Israel went thither a whoring after it"
+    },
+    {
+     "v": "8:27",
+     "t": "p",
+     "ko": "그것이 기드온에게 올무가 되었으며",
+     "en": "which thing became a snare unto Gideon"
+    }
+   ],
+   "english": [
+    {
+     "ref": "8:22",
+     "phrase": "Rule thou over us, both thou, and thy son, and thy son's son also",
+     "grammar": "명령문 + both … and",
+     "text": "Rule thou는 주어를 넣어 힘준 명령입니다. both thou, and thy son, and thy son's son은 ‘당신과 아들과 손자까지 모두’라는 뜻으로 대를 이은 다스림을 청합니다.",
+     "key": "j08-2"
+    },
+    {
+     "ref": "8:24",
+     "phrase": "I would desire a request of you",
+     "grammar": "공손한 would",
+     "text": "would desire는 ‘청하고 싶다’는 공손한 말투입니다. 지금의 I would like to ask와 비슷합니다."
+    },
+    {
+     "ref": "8:27",
+     "phrase": "went thither a whoring after it",
+     "grammar": "부사 thither · a + 동명사",
+     "text": "thither는 ‘그리로’입니다. a whoring은 옛 영어에서 ‘행음하러’라는 뜻의 표현으로, 에봇을 좇아 우상처럼 섬긴 일을 가리킵니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "earrings",
+     "ko": "귀고리들",
+     "ref": "8:24"
+    },
+    {
+     "w": "Ishmaelites",
+     "ko": "이스마엘족들",
+     "ref": "8:24"
+    },
+    {
+     "w": "shekels",
+     "ko": "셰켈(무게 단위)",
+     "ref": "8:26"
+    },
+    {
+     "w": "collars",
+     "ko": "목에 두르는 장식",
+     "ref": "8:26"
+    },
+    {
+     "w": "raiment",
+     "ko": "의상, 옷",
+     "ref": "8:26"
+    },
+    {
+     "w": "ephod",
+     "ko": "에봇",
+     "ref": "8:27"
+    },
+    {
+     "w": "thither",
+     "ko": "그리로",
+     "ref": "8:27"
+    },
+    {
+     "w": "snare",
+     "ko": "올무, 덫",
+     "ref": "8:27"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j08-2",
+     "basis": "external",
+     "text": "이스라엘 사람들은 기드온에게 아들과 손자까지 대를 이어 자기들을 다스려 달라고 했습니다. 기드온은 ‘나는 너희를 다스리지 아니하겠으며, 나의 아들도 너희를 다스리지 아니하리라. 주께서 너희를 다스리시리라.’ 하고 거절했습니다. 스코필드 관주 성경은 이 ‘주께서’ 옆에 사무엘상 8장 7절, 10장 19절, 이사야 33장 22절을 관주로 달아 두었습니다. 스코필드는 사사들을 신정의 왕(하나님께서 직접 다스리시는 나라의 왕)이신 하나님께서 일으키셔서 나라 안에서 그분을 대리하게 하신 사람들이라고 설명합니다.",
+     "spans": [
+      {
+       "text": "그분을 대리하게 하신 사람들",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 사사기 8장 23절 관주",
+       "where": "Judg. 8:23 관주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "c 1 Sam.8.7; 10.19; Isa. 33.22.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      },
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 2장 「judges」 주석",
+       "where": "Judg. 2:16 주석",
+       "file": "memory-bank/세대주의_해설/scofield/judges-02.md",
+       "excerpt": "men raised up of God, the theocratic King, to represent Him in the nation.",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/judges/judges-2.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "8:28-35",
+   "title": "사십 년의 평강, 그리고 다시 바알에게",
+   "marks": [
+    {
+     "v": "8:28",
+     "t": "u",
+     "ko": "그 나라가 기드온의 날들에 사십 년 동안 평강 가운데 있었더라",
+     "en": "the country was in quietness forty years in the days of Gideon"
+    },
+    {
+     "v": "8:33",
+     "t": "p",
+     "ko": "바알브릿을 그들의 신으로 삼았더라",
+     "en": "made Baalberith their god"
+    },
+    {
+     "v": "8:34",
+     "t": "p",
+     "ko": "이스라엘 자녀들이 주 그들의 하나님을 기억하지 아니하였으니",
+     "en": "the children of Israel remembered not the LORD their God"
+    }
+   ],
+   "english": [
+    {
+     "ref": "8:28",
+     "phrase": "they lifted up their heads no more",
+     "grammar": "관용구 lift up one's head",
+     "text": "lift up one's head는 ‘다시 기운을 차리다, 고개를 들다’입니다. no more가 붙어 미디안이 다시는 일어서지 못했음을 말합니다."
+    },
+    {
+     "ref": "8:30",
+     "phrase": "threescore and ten sons of his body begotten",
+     "grammar": "옛 수 표현 threescore",
+     "text": "score는 20입니다. threescore and ten은 3×20+10, 곧 70입니다. of his body begotten은 ‘그의 몸에서 난’이라는 뜻입니다."
+    },
+    {
+     "ref": "8:33",
+     "phrase": "as soon as Gideon was dead",
+     "grammar": "접속사 as soon as",
+     "text": "as soon as는 ‘~하자마자’입니다. 기드온이 죽자 곧바로 이스라엘이 돌아섰음을 보여 줍니다.",
+     "key": "j08-3"
+    }
+   ],
+   "vocab": [
+    {
+     "w": "subdued",
+     "ko": "굴복한",
+     "ref": "8:28"
+    },
+    {
+     "w": "quietness",
+     "ko": "평강, 고요함",
+     "ref": "8:28"
+    },
+    {
+     "w": "threescore",
+     "ko": "60(3×20)",
+     "ref": "8:30"
+    },
+    {
+     "w": "begotten",
+     "ko": "낳은",
+     "ref": "8:30"
+    },
+    {
+     "w": "concubine",
+     "ko": "첩",
+     "ref": "8:31"
+    },
+    {
+     "w": "sepulchre",
+     "ko": "돌무덤",
+     "ref": "8:32"
+    },
+    {
+     "w": "kindness",
+     "ko": "친절",
+     "ref": "8:35"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j08-3",
+     "basis": "external",
+     "text": "스코필드 관주 성경은 33절 앞에 ‘다섯째 배교: 혼란의 때’라는 제목을 붙였습니다. 배교는 믿음을 저버리는 것입니다. 기드온이 죽자마자 이스라엘 자녀들이 다시 바알들을 좇아 행음하러 다니고 바알브릿을 신으로 삼은 일을, 사사기에서 다섯 번째로 되풀이된 배교로 본 것입니다.",
+     "spans": [
+      {
+       "text": "다섯째 배교: 혼란의 때",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 사사기 8장 33절 단락 제목",
+       "where": "Judg. 8:33 단락 제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "The fifth apostasy : the time of confusion.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "에프라임 사람들은 자기들을 부르지 않았다며 기드온을 매섭게 힐책했습니다.",
+    "verse": "8:1",
+    "u": [
+     "매섭게 힐책했습니다"
+    ]
+   },
+   {
+    "text": "기드온이 에프라임의 이삭줍기가 아비에젤의 수확보다 낫지 않으냐고 대답하자 그들의 분노가 수그러들었습니다.",
+    "verse": "8:3",
+    "u": [
+     "분노가 수그러들었습니다"
+    ]
+   },
+   {
+    "text": "스코필드는 에프라임의 힐책에서 이스라엘 안의 뿌리 깊은 분열이 시작된다고 봅니다.",
+    "key": "j08-1",
+    "u": [
+     "뿌리 깊은 분열"
+    ]
+   },
+   {
+    "text": "기드온과 삼백 명은 기진했는데도 요르단을 건너 계속 추격했습니다.",
+    "verse": "8:4",
+    "u": [
+     "기진했는데도"
+    ]
+   },
+   {
+    "text": "숙콧과 프누엘 사람들은 지친 군사에게 빵을 주지 않았습니다.",
+    "verse": "8:8",
+    "u": [
+     "빵을 주지 않았습니다"
+    ]
+   },
+   {
+    "text": "동방의 군대 가운데 칼을 뺀 십이만 명이 이미 쓰러졌고, 일만 오천 명이 남아 있었습니다.",
+    "verse": "8:10",
+    "u": [
+     "십이만 명"
+    ]
+   },
+   {
+    "text": "기드온은 방심한 군대를 치고 미디안의 두 왕 제바와 잘문나를 붙잡았습니다.",
+    "verse": "8:12",
+    "u": [
+     "제바와 잘문나를 붙잡았습니다"
+    ]
+   },
+   {
+    "text": "기드온은 광야의 가시와 찔레로 숙콧 사람들을 가르치고 프누엘의 망대를 헐었습니다.",
+    "verse": "8:17",
+    "u": [
+     "프누엘의 망대"
+    ]
+   },
+   {
+    "text": "두 왕이 타볼에서 죽인 사람들은 기드온의 어머니의 아들들, 곧 그의 형제들이었습니다.",
+    "verse": "8:19",
+    "u": [
+     "어머니의 아들들"
+    ]
+   },
+   {
+    "text": "맏아들 예델은 어려서 두려워 칼을 빼지 못했고, 기드온이 직접 두 왕을 죽였습니다.",
+    "verse": "8:20",
+    "u": [
+     "칼을 빼지 못했고"
+    ]
+   },
+   {
+    "text": "이스라엘 사람들이 대를 이어 다스려 달라고 하자 기드온은 주께서 다스리실 것이라고 거절했습니다.",
+    "verse": "8:23",
+    "u": [
+     "주께서 다스리실 것이라고"
+    ]
+   },
+   {
+    "text": "스코필드는 사사들이 신정의 왕이신 하나님을 대리한 사람들이었다고 설명합니다.",
+    "key": "j08-2",
+    "u": [
+     "신정의 왕"
+    ]
+   },
+   {
+    "text": "기드온은 전리품 금귀고리 일천칠백 셰켈을 받았습니다.",
+    "verse": "8:26",
+    "u": [
+     "일천칠백 셰켈"
+    ]
+   },
+   {
+    "text": "기드온은 그것으로 에봇을 만들어 오프라에 두었고, 그것이 기드온과 그의 집에 올무가 되었습니다.",
+    "verse": "8:27",
+    "u": [
+     "올무가 되었습니다"
+    ]
+   },
+   {
+    "text": "기드온의 날들에 그 나라는 사십 년 동안 평강 가운데 있었습니다.",
+    "verse": "8:28",
+    "u": [
+     "사십 년 동안 평강"
+    ]
+   },
+   {
+    "text": "기드온에게는 칠십 명의 아들이 있었고, 셰켐의 첩이 아비멜렉을 낳았습니다.",
+    "verse": "8:31",
+    "u": [
+     "아비멜렉"
+    ]
+   },
+   {
+    "text": "기드온이 죽자마자 이스라엘은 다시 바알들을 좇았고 바알브릿을 신으로 삼았습니다.",
+    "verse": "8:33",
+    "u": [
+     "바알브릿을 신으로"
+    ]
+   },
+   {
+    "text": "스코필드는 이 일을 ‘다섯째 배교: 혼란의 때’라고 부릅니다.",
+    "key": "j08-3",
+    "u": [
+     "다섯째 배교"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "8:1",
+    "q": "에프라임의 남자들은 기드온에게 무엇을 따졌습니까?",
+    "a": "어찌하여 우리를 부르지 아니하여"
+   },
+   {
+    "verse": "8:2",
+    "q": "기드온은 에프라임의 무엇이 아비에젤의 포도 수확보다 낫다고 했습니까?",
+    "a": "포도들을 이삭줍기하는 일"
+   },
+   {
+    "verse": "8:3",
+    "q": "기드온은 하나님께서 누구를 에프라임의 손에 넘기셨다고 했습니까?",
+    "a": "오렙, 즈엡"
+   },
+   {
+    "key": "j08-1",
+    "q": "스코필드는 에프라임의 힐책에서 무엇이 시작된다고 합니까?",
+    "a": "이스라엘 안의 뿌리 깊은 분열"
+   },
+   {
+    "key": "j08-1",
+    "q": "스코필드에 따르면 그 분열은 마침내 무엇에까지 이르렀습니까?",
+    "a": "솔로몬의 왕국이 나뉘는 데까지"
+   },
+   {
+    "verse": "8:4",
+    "q": "요르단을 넘어간 기드온과 삼백 명은 어떤 상태였습니까?",
+    "a": "기진하였음에도 그들을 추격하였더라"
+   },
+   {
+    "verse": "8:5",
+    "q": "기드온이 숙콧 사람들에게 달라고 한 것은 무엇입니까?",
+    "a": "빵 덩이들"
+   },
+   {
+    "verse": "8:5",
+    "q": "기드온이 추격하던 미디안의 왕들은 누구입니까?",
+    "a": "제바, 잘문나"
+   },
+   {
+    "verse": "8:7",
+    "q": "기드온은 숙콧 사람들의 살을 무엇으로 찢겠다고 했습니까?",
+    "a": "광야의 가시들, 찔레들"
+   },
+   {
+    "verse": "8:9",
+    "q": "기드온은 프누엘의 무엇을 헐어 버리겠다고 했습니까?",
+    "a": "망대"
+   },
+   {
+    "verse": "8:10",
+    "q": "제바와 잘문나는 어디에 있었습니까?",
+    "a": "콸콜"
+   },
+   {
+    "verse": "8:10",
+    "q": "그때 남아 있던 군대는 약 몇 명이었습니까?",
+    "a": "일만 오천 명"
+   },
+   {
+    "verse": "8:11",
+    "q": "기드온이 군대를 칠 수 있었던 까닭은 무엇입니까?",
+    "a": "군대가 방심하고 있었기 때문"
+   },
+   {
+    "verse": "8:14",
+    "q": "숙콧의 통치자들과 장로들은 모두 몇 명이었습니까?",
+    "a": "칠십칠 인"
+   },
+   {
+    "verse": "8:18",
+    "q": "제바와 잘문나가 사람들을 죽인 곳은 어디입니까?",
+    "a": "타볼"
+   },
+   {
+    "verse": "8:18",
+    "q": "두 왕은 죽은 사람들이 누구를 닮았다고 했습니까?",
+    "a": "왕의 자식들"
+   },
+   {
+    "verse": "8:19",
+    "q": "타볼에서 죽은 사람들은 기드온과 어떤 사이였습니까?",
+    "a": "나의 형제들, 나의 어머니의 아들들"
+   },
+   {
+    "verse": "8:20",
+    "q": "두 왕을 죽이라는 말을 들은 기드온의 첫 태생은 누구입니까?",
+    "a": "예델"
+   },
+   {
+    "verse": "8:20",
+    "q": "예델이 칼을 빼지 못한 까닭은 무엇입니까?",
+    "a": "두려워하였기 때문, 아직 어렸던 까닭"
+   },
+   {
+    "verse": "8:21",
+    "q": "기드온이 두 왕의 낙타들의 목에서 떼어 낸 것은 무엇입니까?",
+    "a": "장식품들"
+   },
+   {
+    "verse": "8:22",
+    "q": "이스라엘의 남자들은 기드온에게 무엇을 청했습니까?",
+    "a": "저희를 다스리시어"
+   },
+   {
+    "verse": "8:23",
+    "q": "기드온은 누가 이스라엘을 다스리실 것이라고 했습니까?",
+    "a": "주께서"
+   },
+   {
+    "key": "j08-2",
+    "q": "스코필드 관주 성경은 8장 23절의 ‘주께서’ 옆에 어떤 구절들을 달았습니까?",
+    "a": "사무엘상 8장 7절, 10장 19절, 이사야 33장 22절"
+   },
+   {
+    "key": "j08-2",
+    "q": "스코필드는 사사들을 누구를 대리한 사람들이라고 합니까?",
+    "a": "신정의 왕이신 하나님"
+   },
+   {
+    "verse": "8:24",
+    "q": "기드온이 저마다 달라고 한 전리품은 무엇입니까?",
+    "a": "귀고리들"
+   },
+   {
+    "verse": "8:24",
+    "q": "그들이 금귀고리를 가지고 있었던 까닭은 무엇입니까?",
+    "a": "이스마엘족들이었기에"
+   },
+   {
+    "verse": "8:26",
+    "q": "금귀고리의 무게는 얼마였습니까?",
+    "a": "금 일천칠백 셰켈"
+   },
+   {
+    "verse": "8:27",
+    "q": "기드온이 금으로 만든 것은 무엇이며, 어디에 두었습니까?",
+    "a": "에봇, 오프라"
+   },
+   {
+    "verse": "8:27",
+    "q": "에봇은 기드온과 그의 집에 무엇이 되었습니까?",
+    "a": "올무"
+   },
+   {
+    "verse": "8:28",
+    "q": "기드온의 날들에 그 나라는 몇 년 동안 평강 가운데 있었습니까?",
+    "a": "사십 년"
+   },
+   {
+    "verse": "8:30",
+    "q": "기드온에게는 아들이 몇 명 있었습니까?",
+    "a": "칠십 명"
+   },
+   {
+    "verse": "8:31",
+    "q": "셰켐에 있던 첩이 낳은 아들의 이름은 무엇입니까?",
+    "a": "아비멜렉"
+   },
+   {
+    "verse": "8:33",
+    "q": "기드온이 죽자 이스라엘 자녀들이 신으로 삼은 것은 무엇입니까?",
+    "a": "바알브릿"
+   },
+   {
+    "key": "j08-3",
+    "q": "스코필드 관주 성경은 8장 33절 앞에 어떤 제목을 붙였습니까?",
+    "a": "다섯째 배교: 혼란의 때"
+   }
+  ],
+  "faq": [
+   {
+    "q": "에프라임 사람들은 왜 기드온에게 화를 냈습니까?",
+    "key": "j08-1"
+   },
+   {
+    "q": "에프라임과의 다툼이 이스라엘 역사에서 왜 중요합니까?",
+    "key": "j08-1"
+   },
+   {
+    "q": "이스라엘의 분열은 어디까지 이어졌습니까?",
+    "key": "j08-1"
+   },
+   {
+    "q": "기드온은 왜 왕이 되기를 거절했습니까?",
+    "key": "j08-2"
+   },
+   {
+    "q": "‘주께서 너희를 다스리시리라’는 말은 무슨 뜻입니까?",
+    "key": "j08-2"
+   },
+   {
+    "q": "사사와 왕은 어떻게 다릅니까?",
+    "key": "j08-2"
+   },
+   {
+    "q": "스코필드는 8장 23절을 어떤 구절과 연결합니까?",
+    "key": "j08-2"
+   },
+   {
+    "q": "기드온이 죽은 뒤 이스라엘은 어떻게 되었습니까?",
+    "key": "j08-3"
+   },
+   {
+    "q": "‘배교’란 무엇입니까?",
+    "key": "j08-3"
+   },
+   {
+    "q": "왜 ‘다섯째’ 배교라고 합니까?",
+    "key": "j08-3"
+   },
+   {
+    "q": "이스라엘은 왜 이렇게 금세 바알에게 돌아섰습니까?",
+    "key": "j08-3"
+   },
+   {
+    "q": "‘혼란의 때’라는 제목은 무엇을 가리킵니까?",
+    "key": "j08-3"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "에봇",
+    "verse": "8:27",
+    "text": "기드온이 전리품 금으로 만들어 오프라에 둔 것. 온 이스라엘이 그것을 좇아 행음했고, 기드온과 그의 집에 올무가 되었습니다."
+   },
+   {
+    "term": "셰켈",
+    "verse": "8:26",
+    "text": "무게 단위. 기드온이 받은 금귀고리는 금 일천칠백 셰켈이었습니다."
+   },
+   {
+    "term": "신정의 왕",
+    "key": "j08-2",
+    "text": "하나님께서 직접 다스리시는 나라의 왕. 스코필드는 사사들을 일으키신 하나님을 이렇게 부릅니다."
+   },
+   {
+    "term": "배교",
+    "key": "j08-3",
+    "text": "믿음을 저버리는 것. 스코필드는 8장 33절부터를 ‘다섯째 배교’라고 부릅니다."
+   },
+   {
+    "term": "바알브릿",
+    "verse": "8:33",
+    "text": "기드온이 죽은 뒤 이스라엘 자녀들이 신으로 삼은 우상입니다."
+   },
+   {
+    "term": "여룹바알",
+    "verse": "8:29",
+    "text": "요아시의 아들 기드온의 다른 이름입니다."
+   }
+  ]
+ }
+}

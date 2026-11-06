@@ -1,0 +1,1038 @@
+{
+ "chapter": 12,
+ "subtitle": "십볼렛과 입잔·엘론·압돈",
+ "motto": "이번이 에프라임의 두 번째 시기입니다",
+ "motto_comment": "j12-1",
+ "cover": [
+  {
+   "m": "water",
+   "x": 170,
+   "y": 250,
+   "s": 1
+  },
+  {
+   "m": "sword",
+   "x": 110,
+   "y": 140,
+   "s": 0.8
+  },
+  {
+   "m": "path",
+   "x": 240,
+   "y": 150,
+   "s": 0.8
+  },
+  {
+   "m": "tent",
+   "x": 250,
+   "y": 290,
+   "s": 0.75
+  }
+ ],
+ "people": [
+  {
+   "id": "ephraim",
+   "name": "에프라임 남자들",
+   "gen": 1,
+   "role": "enemy",
+   "desc": "함께 가자고 부르지 않았다며 입다의 집을 불로 태우겠다고 했습니다. 길르앗 남자들에게 져서 요르단의 통행로에서 사만 이천 명이 쓰러졌습니다.",
+   "refs": [
+    "12:1",
+    "12:4",
+    "12:6"
+   ],
+   "part": "입다에게 따진 지파",
+   "look": "group",
+   "intro": "입다에게 따진 이들 · 사만 이천이 쓰러짐"
+  },
+  {
+   "id": "jephthah",
+   "name": "입다",
+   "en": "Jephthah",
+   "gen": 1,
+   "desc": "길르앗족 사람입니다. 에프라임에게, 부를 때 구해 주지 않아 목숨을 걸고 암몬과 싸웠다고 답했습니다. 길르앗 남자들을 모아 에프라임과 싸웠고, 육 년 동안 이스라엘을 재판한 뒤 죽었습니다.",
+   "refs": [
+    "12:2",
+    "12:3",
+    "12:4",
+    "12:7"
+   ],
+   "part": "육 년 재판관",
+   "look": "man",
+   "intro": "목숨 걸고 싸운 용사 · 육 년 재판함"
+  },
+  {
+   "id": "gileadites",
+   "name": "길르앗 남자들",
+   "gen": 2,
+   "desc": "입다와 함께 에프라임을 쳤고, 요르단의 통행로를 먼저 차지해 ‘쉽볼렛’을 말하게 하여 에프라임 사람을 가려냈습니다.",
+   "refs": [
+    "12:4",
+    "12:5",
+    "12:6"
+   ],
+   "part": "통행로를 지킨 이들",
+   "look": "group",
+   "intro": "입다의 사람들 · 쉽볼렛으로 가려냄"
+  },
+  {
+   "id": "ibzan",
+   "name": "입잔",
+   "en": "Ibzan",
+   "gen": 1,
+   "desc": "베들레헴 사람으로 입다의 뒤를 이어 칠 년 동안 이스라엘을 재판했습니다. 아들 삼십 명과 딸 삼십 명이 있었고, 베들레헴에 장사되었습니다.",
+   "refs": [
+    "12:8",
+    "12:9",
+    "12:10"
+   ],
+   "part": "칠 년 재판관",
+   "look": "man",
+   "intro": "베들레헴 사람 · 칠 년 재판함"
+  },
+  {
+   "id": "ibzankids",
+   "name": "입잔의 아들딸",
+   "gen": 2,
+   "desc": "아들 삼십 명과 딸 삼십 명입니다. 입잔은 딸들을 외국으로 보내고, 아들들을 위해 외국에서 딸 삼십 명을 데려왔습니다.",
+   "refs": [
+    "12:9"
+   ],
+   "part": "아들딸 육십 명",
+   "look": "group",
+   "intro": "아들 삼십·딸 삼십 · 외국과 혼인"
+  },
+  {
+   "id": "elon",
+   "name": "엘론",
+   "en": "Elon",
+   "gen": 1,
+   "desc": "스불론족으로 십 년 동안 이스라엘을 재판했고, 스불룬 지방의 아이얄론에 장사되었습니다.",
+   "refs": [
+    "12:11",
+    "12:12"
+   ],
+   "part": "십 년 재판관",
+   "look": "man",
+   "intro": "스불론 사람 · 십 년 재판함"
+  },
+  {
+   "id": "hillel",
+   "name": "힐렐",
+   "en": "Hillel",
+   "gen": 0,
+   "desc": "피라돈족이며 압돈의 아버지입니다.",
+   "refs": [
+    "12:13"
+   ],
+   "part": "압돈의 아버지",
+   "look": "man",
+   "intro": "피라돈 사람 · 압돈의 아버지"
+  },
+  {
+   "id": "abdon",
+   "name": "압돈",
+   "en": "Abdon",
+   "gen": 1,
+   "desc": "피라돈족 힐렐의 아들로 팔 년 동안 이스라엘을 재판했습니다. 에프라임 지역의 피라돈, 곧 아말렉족들의 산속에 장사되었습니다.",
+   "refs": [
+    "12:13",
+    "12:14",
+    "12:15"
+   ],
+   "part": "팔 년 재판관",
+   "look": "man",
+   "intro": "힐렐의 아들 · 팔 년 재판함"
+  },
+  {
+   "id": "abdonkids",
+   "name": "압돈의 아들·손자들",
+   "gen": 2,
+   "desc": "아들 사십 명과 손자 삼십 명이며, 새끼 수나귀 칠십 마리를 탔습니다.",
+   "refs": [
+    "12:14"
+   ],
+   "part": "나귀 칠십 마리를 탄",
+   "look": "group",
+   "intro": "아들 사십·손자 삼십 · 나귀 칠십"
+  }
+ ],
+ "relations": [
+  {
+   "from": "ephraim",
+   "to": "jephthah",
+   "type": "enemy",
+   "label": "불태우겠다",
+   "ref": "12:1",
+   "directed": true
+  },
+  {
+   "from": "jephthah",
+   "to": "gileadites",
+   "type": "ruler",
+   "label": "모아 싸움",
+   "ref": "12:4",
+   "directed": true
+  },
+  {
+   "from": "gileadites",
+   "to": "ephraim",
+   "type": "enemy",
+   "label": "쳤음",
+   "ref": "12:4",
+   "directed": true
+  },
+  {
+   "from": "ibzan",
+   "to": "ibzankids",
+   "type": "parent",
+   "label": "아들딸",
+   "ref": "12:9"
+  },
+  {
+   "from": "hillel",
+   "to": "abdon",
+   "type": "parent",
+   "label": "아들",
+   "ref": "12:13"
+  },
+  {
+   "from": "abdon",
+   "to": "abdonkids",
+   "type": "parent",
+   "label": "아들·손자",
+   "ref": "12:14"
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "gilead",
+    "name": "길르앗",
+    "at": [
+     35.8,
+     32.25
+    ],
+    "ref": "12:4"
+   },
+   {
+    "key": "ephraim",
+    "name": "에프라임",
+    "at": [
+     35.25,
+     32.1
+    ],
+    "ref": "12:15"
+   }
+  ],
+  "minSpan": 0.9,
+  "unknown": [
+   {
+    "name": "요르단의 통행로들",
+    "ref": "12:5",
+    "note": "길르앗 사람들이 먼저 차지한 요르단 강의 건너는 곳으로, 정확한 자리는 표시하지 않았습니다."
+   },
+   {
+    "name": "베들레헴",
+    "ref": "12:8",
+    "note": "입잔의 고향으로, 본문은 ‘베들레헴’이라고만 말해 지도에 찍지 않았습니다."
+   },
+   {
+    "name": "아이얄론",
+    "ref": "12:12",
+    "note": "스불룬 지방 가운데 있다고만 나옵니다."
+   },
+   {
+    "name": "피라돈",
+    "ref": "12:15",
+    "note": "에프라임 지역 가운데, 아말렉족들의 산속에 있다고만 나옵니다."
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "12:1-3",
+   "title": "입다에게 따진 에프라임 남자들",
+   "marks": [
+    {
+     "v": "12:1",
+     "t": "u",
+     "ko": "너와 함께 가도록 우리를 부르지 아니하였느냐",
+     "en": "didst not call us to go with thee"
+    },
+    {
+     "v": "12:1",
+     "t": "p",
+     "ko": "우리가 너에게 불을 놓아 너의 집을 태우겠노라",
+     "en": "we will burn thine house upon thee with fire"
+    },
+    {
+     "v": "12:3",
+     "t": "u",
+     "ko": "나는 내 생명을 내 두 손안에 쥐고",
+     "en": "I put my life in my hands"
+    },
+    {
+     "v": "12:3",
+     "t": "g",
+     "ko": "주께서는 나의 손안에 그들을 넘기셨도다",
+     "en": "the LORD delivered them into my hand"
+    }
+   ],
+   "english": [
+    {
+     "ref": "12:1",
+     "phrase": "Wherefore passedst thou over to fight against the children of Ammon",
+     "grammar": "wherefore(왜) · 옛 2인칭 과거 -edst",
+     "text": "여기서 wherefore는 ‘왜’입니다. passedst는 passed의 옛 2인칭 꼴로, 주어 thou에 맞춘 것입니다."
+    },
+    {
+     "ref": "12:3",
+     "phrase": "I put my life in my hands",
+     "grammar": "관용 표현 put one’s life in one’s hands",
+     "text": "‘내 생명을 내 손에 쥐었다’는 ‘목숨을 걸었다’는 뜻의 관용 표현입니다. 한글 본문도 글자 그대로 옮겼습니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "northward",
+     "ko": "북쪽으로",
+     "ref": "12:1"
+    },
+    {
+     "w": "passedst",
+     "ko": "건너갔다(옛 2인칭)",
+     "ref": "12:1"
+    },
+    {
+     "w": "burn",
+     "ko": "태우다",
+     "ref": "12:1"
+    },
+    {
+     "w": "strife",
+     "ko": "다툼, 분쟁",
+     "ref": "12:2"
+    },
+    {
+     "w": "delivered",
+     "ko": "구출했다, 넘겼다",
+     "ref": "12:2"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j12-1",
+     "basis": "external",
+     "text": "스코필드는 12장에 ‘에프라임의 두 번째 시기’라는 제목을 붙였습니다. 그리고 1절의 에프라임 곁에 8장 1절의 주석을 보라고 적었습니다. 8장에서 에프라임 사람들은 미디안과 싸우러 갈 때 자기들을 부르지 않았다며 기드온에게 따졌고, 스코필드는 그 장에 ‘에프라임의 시기’라는 제목을 붙였습니다. 스코필드의 눈으로 보면, 이번이 에프라임의 두 번째 시기입니다.",
+     "spans": [
+      {
+       "text": "이번이 에프라임의 두 번째 시기입니다",
+       "level": 3
+      },
+      {
+       "text": "8장 1절의 주석",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 12:1 소제목·난외주 · 8장 소제목",
+       "where": "Jud. 12:1 · 8:1 소제목·난외주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "CHAPTER 12. The second jealousy of Ephraim.\n…\nh Jud.8.1, note.\n…\nCHAPTER 8. The jealousy of Ephraim.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "12:4-7",
+   "title": "요르단 통행로의 쉽볼렛",
+   "marks": [
+    {
+     "v": "12:4",
+     "t": "p",
+     "ko": "너희 길르앗족들은 에프라임족들 사이와 므낫세족들 사이에 있는 에프라임의 도망자들이로다",
+     "en": "Ye Gileadites are fugitives of Ephraim among the Ephraimites, and among the Manassites"
+    },
+    {
+     "v": "12:6",
+     "t": "u",
+     "ko": "지금 쉽볼렛을 말하여 보라",
+     "en": "Say now Shibboleth"
+    },
+    {
+     "v": "12:6",
+     "t": "p",
+     "ko": "에프라임족들 중 사만 이천 명이 쓰러졌더라",
+     "en": "there fell at that time of the Ephraimites forty and two thousand"
+    },
+    {
+     "v": "12:7",
+     "t": "u",
+     "ko": "입다가 이스라엘을 육 년 동안 재판하였더라",
+     "en": "Jephthah judged Israel six years"
+    }
+   ],
+   "english": [
+    {
+     "ref": "12:5",
+     "phrase": "Let me go over",
+     "grammar": "let me + 동사원형",
+     "text": "Let me go over는 ‘내가 건너가게 해 달라’입니다. let 뒤에는 to 없는 동사원형이 옵니다."
+    },
+    {
+     "ref": "12:6",
+     "phrase": "for he could not frame to pronounce it right",
+     "grammar": "옛 표현 frame to + 동사원형",
+     "text": "frame to pronounce는 ‘발음해 내다’입니다. could not과 함께 ‘올바로 발음해 낼 수 없었다’가 됩니다.",
+     "key": "j12-2"
+    },
+    {
+     "ref": "12:6",
+     "phrase": "there fell at that time of the Ephraimites forty and two thousand",
+     "grammar": "there + 자동사 도치",
+     "text": "there fell … forty and two thousand는 ‘사만 이천 명이 쓰러졌다’입니다. 주어(사만 이천)를 문장 끝에 두어 그 수를 두드러지게 합니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "fugitives",
+     "ko": "도망자들",
+     "ref": "12:4"
+    },
+    {
+     "w": "passages",
+     "ko": "통행로들, 건너는 곳",
+     "ref": "12:5"
+    },
+    {
+     "w": "escaped",
+     "ko": "탈출한",
+     "ref": "12:5"
+    },
+    {
+     "w": "Nay",
+     "ko": "아니라",
+     "ref": "12:5"
+    },
+    {
+     "w": "frame",
+     "ko": "(frame to) …해 내다",
+     "ref": "12:6"
+    },
+    {
+     "w": "pronounce",
+     "ko": "발음하다",
+     "ref": "12:6"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j12-2",
+     "basis": "external",
+     "text": "스코필드는 6절의 ‘쉽볼렛’에 ‘시내 또는 물결(홍수)을 뜻한다’는 풀이를 달았습니다. 길르앗 사람들은 요르단의 통행로를 먼저 차지하고, 건너가려는 사람에게 이 낱말을 말하게 했습니다. 에프라임 사람은 이것을 올바로 발음하지 못하고 ‘십볼렛’이라고 했기 때문에 붙잡혔습니다.",
+     "spans": [
+      {
+       "text": "시내 또는 물결(홍수)을 뜻한다",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 12:6 난외주",
+       "where": "Jud. 12:6 난외주",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "a Signifying a stream or flood.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "12:8-10",
+   "title": "베들레헴의 입잔",
+   "marks": [
+    {
+     "v": "12:9",
+     "t": "u",
+     "ko": "그가 딸들을 외국으로 보냈고",
+     "en": "thirty daughters, whom he sent abroad"
+    },
+    {
+     "v": "12:9",
+     "t": "u",
+     "ko": "외국에서 삼십 명의 딸들을 데려왔더라",
+     "en": "took in thirty daughters from abroad for his sons"
+    }
+   ],
+   "english": [
+    {
+     "ref": "12:9",
+     "phrase": "thirty daughters, whom he sent abroad",
+     "grammar": "관계대명사 whom(목적격)",
+     "text": "whom은 앞의 thirty daughters를 받는 목적격 관계대명사입니다. ‘그가 외국으로 보낸 딸 삼십 명’입니다."
+    },
+    {
+     "ref": "12:9",
+     "phrase": "took in thirty daughters from abroad for his sons",
+     "grammar": "구동사 take in",
+     "text": "take in은 ‘들이다, 받아들이다’입니다. 아들들을 위해 외국에서 딸 삼십 명을 들였다는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "judged",
+     "ko": "재판했다",
+     "ref": "12:8"
+    },
+    {
+     "w": "abroad",
+     "ko": "외국으로, 밖으로",
+     "ref": "12:9"
+    },
+    {
+     "w": "buried",
+     "ko": "장사되었다",
+     "ref": "12:10"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j12-3",
+     "basis": "external",
+     "text": "스코필드는 입잔에게 ‘열째 재판관’이라는 소제목을 붙였습니다. 그리고 입잔에 대해 ‘그는 이스라엘 북동부에서 민사 재판만 맡은 재판관이었던 것으로 보인다’고 적었습니다.",
+     "spans": [
+      {
+       "text": "열째 재판관",
+       "level": 1
+      },
+      {
+       "text": "민사 재판만 맡은 재판관",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 12:8 소제목",
+       "where": "Jud. 12:8 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Ibzan, the tenth Judge.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      },
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 12장 주석 1",
+       "where": "Jud. 12:8 주석",
+       "file": "memory-bank/세대주의_해설/scofield/judges-12.md",
+       "excerpt": "He seems to have been only a civil judge in northeast Israel.",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/judges/judges-12.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "12:11-12",
+   "title": "스불론족 엘론",
+   "marks": [
+    {
+     "v": "12:11",
+     "t": "u",
+     "ko": "그가 십 년 동안 이스라엘을 재판하였더라",
+     "en": "he judged Israel ten years"
+    },
+    {
+     "v": "12:12",
+     "t": "u",
+     "ko": "스불룬 지방 가운데 있는 아이얄론에 장사되었더라",
+     "en": "was buried in Aijalon in the country of Zebulun"
+    }
+   ],
+   "english": [
+    {
+     "ref": "12:11",
+     "phrase": "And after him Elon, a Zebulonite, judged Israel",
+     "grammar": "동격 콤마",
+     "text": "a Zebulonite는 앞의 Elon을 설명하는 동격입니다. ‘스불론족인 엘론’입니다. after him은 ‘그의 뒤를 이어’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "Zebulonite",
+     "ko": "스불론 사람",
+     "ref": "12:11"
+    },
+    {
+     "w": "judged",
+     "ko": "재판했다",
+     "ref": "12:11"
+    },
+    {
+     "w": "country",
+     "ko": "지방",
+     "ref": "12:12"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j12-4",
+     "basis": "external",
+     "text": "스코필드는 엘론에게 ‘열한째 재판관’이라는 소제목을 붙였습니다. 엘론은 스불론족 사람으로 십 년 동안 이스라엘을 재판하고, 스불룬 지방의 아이얄론에 장사되었습니다.",
+     "spans": [
+      {
+       "text": "열한째 재판관",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 12:11 소제목",
+       "where": "Jud. 12:11 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Elon, the eleventh Judge.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "12:13-15",
+   "title": "피라돈족 압돈",
+   "marks": [
+    {
+     "v": "12:14",
+     "t": "u",
+     "ko": "사십 명의 아들들과 삼십 명의 손자들이 있었으니",
+     "en": "he had forty sons and thirty nephews"
+    },
+    {
+     "v": "12:14",
+     "t": "u",
+     "ko": "칠십 마리의 새끼 수나귀들을 탔더라",
+     "en": "rode on threescore and ten ass colts"
+    },
+    {
+     "v": "12:15",
+     "t": "u",
+     "ko": "아말렉족들의 산속에 장사되었더라",
+     "en": "in the mount of the Amalekites"
+    }
+   ],
+   "english": [
+    {
+     "ref": "12:14",
+     "phrase": "he had forty sons and thirty nephews",
+     "grammar": "낱말 뜻 nephews",
+     "text": "nephews를 한글 본문은 ‘손자들’로 옮겼습니다. 오늘 영어의 nephew(조카)와 뜻이 다르게 쓰였으니 한글 본문과 함께 읽습니다."
+    },
+    {
+     "ref": "12:14",
+     "phrase": "threescore and ten ass colts",
+     "grammar": "옛 수 표현 score(=20)",
+     "text": "score는 20입니다. threescore and ten은 3×20+10, 곧 70입니다. 한글 본문은 ‘칠십 마리’라고 옮겼습니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "Pirathonite",
+     "ko": "피라돈 사람",
+     "ref": "12:13"
+    },
+    {
+     "w": "nephews",
+     "ko": "(한글 본문) 손자들",
+     "ref": "12:14"
+    },
+    {
+     "w": "threescore",
+     "ko": "육십(score=20)",
+     "ref": "12:14"
+    },
+    {
+     "w": "colts",
+     "ko": "새끼 (나귀)",
+     "ref": "12:14"
+    },
+    {
+     "w": "Amalekites",
+     "ko": "아말렉족들",
+     "ref": "12:15"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j12-5",
+     "basis": "external",
+     "text": "스코필드는 압돈에게 ‘열두째 재판관’이라는 소제목을 붙였습니다. 압돈은 피라돈족 힐렐의 아들로, 아들 사십 명과 손자 삼십 명을 두었고 팔 년 동안 이스라엘을 재판했습니다.",
+     "spans": [
+      {
+       "text": "열두째 재판관",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 12:13 소제목",
+       "where": "Jud. 12:13 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "the twelfth Judge. 13 And after him Abdon the son of Hillel, a Pirathonite, judged Israel.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "에프라임 남자들은 입다가 암몬과 싸우러 갈 때 자기들을 부르지 않았다며 그의 집을 불로 태우겠다고 했습니다.",
+    "verse": "12:1",
+    "u": [
+     "불로 태우겠다고"
+    ]
+   },
+   {
+    "text": "스코필드는 12장에 ‘에프라임의 두 번째 시기’라는 제목을 붙였습니다.",
+    "key": "j12-1",
+    "u": [
+     "두 번째 시기"
+    ]
+   },
+   {
+    "text": "입다는 불렀을 때 그들이 구해 주지 않아 목숨을 걸고 암몬과 싸웠다고 답했습니다.",
+    "verse": "12:3",
+    "u": [
+     "목숨을 걸고"
+    ]
+   },
+   {
+    "text": "주께서 암몬을 입다의 손에 넘기셨습니다.",
+    "verse": "12:3",
+    "u": [
+     "입다의 손에"
+    ]
+   },
+   {
+    "text": "에프라임은 길르앗족들을 ‘에프라임의 도망자들’이라 불렀고, 길르앗 남자들은 에프라임을 쳤습니다.",
+    "verse": "12:4",
+    "u": [
+     "에프라임의 도망자들"
+    ]
+   },
+   {
+    "text": "길르앗족들은 요르단의 통행로들을 에프라임족들보다 먼저 차지했습니다.",
+    "verse": "12:5",
+    "u": [
+     "요르단의 통행로들"
+    ]
+   },
+   {
+    "text": "건너려는 사람에게 ‘쉽볼렛’을 말하게 했고, ‘십볼렛’이라고 하면 붙잡아 죽였습니다.",
+    "verse": "12:6",
+    "u": [
+     "십볼렛"
+    ]
+   },
+   {
+    "text": "스코필드는 ‘쉽볼렛’이 시내 또는 물결(홍수)을 뜻한다고 풀었습니다.",
+    "key": "j12-2",
+    "u": [
+     "시내 또는 물결"
+    ]
+   },
+   {
+    "text": "그때 에프라임족들 가운데 사만 이천 명이 쓰러졌습니다.",
+    "verse": "12:6",
+    "u": [
+     "사만 이천 명"
+    ]
+   },
+   {
+    "text": "입다는 육 년 동안 이스라엘을 재판하고 죽어 길르앗의 한 도시에 장사되었습니다.",
+    "verse": "12:7",
+    "u": [
+     "육 년"
+    ]
+   },
+   {
+    "text": "베들레헴의 입잔은 아들딸 삼십 명씩을 두었고 칠 년 동안 재판했습니다.",
+    "verse": "12:9",
+    "u": [
+     "칠 년"
+    ]
+   },
+   {
+    "text": "스코필드는 입잔을 열째 재판관이라 부르고, 북동부의 민사 재판관이었던 것으로 보았습니다.",
+    "key": "j12-3",
+    "u": [
+     "민사 재판관"
+    ]
+   },
+   {
+    "text": "스불론족 엘론은 십 년 동안 이스라엘을 재판하고 아이얄론에 장사되었습니다.",
+    "verse": "12:11",
+    "u": [
+     "십 년"
+    ]
+   },
+   {
+    "text": "스코필드는 엘론을 열한째, 압돈을 열두째 재판관이라 불렀습니다.",
+    "key": "j12-4",
+    "u": [
+     "열한째",
+     "열두째"
+    ]
+   },
+   {
+    "text": "피라돈족 힐렐의 아들 압돈은 아들 사십 명과 손자 삼십 명을 두었고 팔 년 동안 재판했습니다.",
+    "verse": "12:14",
+    "u": [
+     "팔 년"
+    ]
+   },
+   {
+    "text": "압돈은 에프라임 지역의 피라돈, 곧 아말렉족들의 산속에 장사되었습니다.",
+    "verse": "12:15",
+    "u": [
+     "아말렉족들의 산속"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "12:1",
+    "q": "에프라임 남자들은 함께 모여 어느 쪽으로 갔습니까?",
+    "a": "북쪽"
+   },
+   {
+    "verse": "12:1",
+    "q": "에프라임 남자들은 입다의 집을 어떻게 하겠다고 했습니까?",
+    "a": "불을 놓아 너의 집을 태우겠노라"
+   },
+   {
+    "key": "j12-1",
+    "q": "스코필드가 12장에 붙인 제목은 무엇입니까?",
+    "a": "에프라임의 두 번째 시기"
+   },
+   {
+    "key": "j12-1",
+    "q": "스코필드는 1절의 에프라임 곁에 어느 곳의 주석을 보라고 적었습니까?",
+    "a": "8장 1절"
+   },
+   {
+    "key": "j12-1",
+    "q": "스코필드가 8장에 붙인 제목은 무엇입니까?",
+    "a": "에프라임의 시기"
+   },
+   {
+    "verse": "12:2",
+    "q": "입다는 자기와 자기 백성이 누구와 심한 분쟁이 있었다고 했습니까?",
+    "a": "암몬의 후손들"
+   },
+   {
+    "verse": "12:3",
+    "q": "입다는 자기 생명을 어디에 쥐고 넘어갔다고 했습니까?",
+    "a": "내 두 손안"
+   },
+   {
+    "verse": "12:3",
+    "q": "암몬 후손들을 입다의 손에 넘기신 분은 누구입니까?",
+    "a": "주"
+   },
+   {
+    "verse": "12:4",
+    "q": "에프라임은 길르앗족들을 무엇이라고 불렀습니까?",
+    "a": "에프라임의 도망자들"
+   },
+   {
+    "verse": "12:5",
+    "q": "길르앗족들이 에프라임족들보다 먼저 점거한 곳은 어디입니까?",
+    "a": "요르단의 통행로들"
+   },
+   {
+    "verse": "12:5",
+    "q": "‘네가 에프라임족이냐?’는 물음에 에프라임 사람은 무엇이라고 했습니까?",
+    "a": "아니라"
+   },
+   {
+    "verse": "12:6",
+    "q": "길르앗 남자들이 말해 보라고 한 낱말은 무엇입니까?",
+    "a": "쉽볼렛"
+   },
+   {
+    "verse": "12:6",
+    "q": "에프라임 사람은 그 낱말을 무엇이라고 발음했습니까?",
+    "a": "십볼렛"
+   },
+   {
+    "key": "j12-2",
+    "q": "스코필드는 ‘쉽볼렛’이 무엇을 뜻한다고 풀었습니까?",
+    "a": "시내 또는 물결(홍수)"
+   },
+   {
+    "verse": "12:6",
+    "q": "그때 에프라임족들 가운데 몇 명이 쓰러졌습니까?",
+    "a": "사만 이천 명"
+   },
+   {
+    "verse": "12:7",
+    "q": "입다는 몇 년 동안 이스라엘을 재판했습니까?",
+    "a": "육 년"
+   },
+   {
+    "verse": "12:7",
+    "q": "입다는 어디에 장사되었습니까?",
+    "a": "길르앗의 도시들 중 한곳"
+   },
+   {
+    "verse": "12:8",
+    "q": "입다의 뒤를 이은 베들레헴 사람은 누구입니까?",
+    "a": "입잔"
+   },
+   {
+    "verse": "12:9",
+    "q": "입잔에게는 아들과 딸이 각각 몇 명 있었습니까?",
+    "a": "삼십 명의 아들들, 삼십 명의 딸들"
+   },
+   {
+    "verse": "12:9",
+    "q": "입잔은 몇 년 동안 이스라엘을 재판했습니까?",
+    "a": "칠 년"
+   },
+   {
+    "key": "j12-3",
+    "q": "스코필드는 입잔을 어떤 재판관으로 보았습니까?",
+    "a": "이스라엘 북동부에서 민사 재판만 맡은 재판관"
+   },
+   {
+    "verse": "12:11",
+    "q": "엘론은 어느 족속 사람입니까?",
+    "a": "스불론족"
+   },
+   {
+    "verse": "12:11",
+    "q": "엘론은 몇 년 동안 이스라엘을 재판했습니까?",
+    "a": "십 년"
+   },
+   {
+    "verse": "12:12",
+    "q": "엘론은 어디에 장사되었습니까?",
+    "a": "아이얄론"
+   },
+   {
+    "verse": "12:13",
+    "q": "압돈의 아버지는 누구입니까?",
+    "a": "힐렐"
+   },
+   {
+    "verse": "12:14",
+    "q": "압돈에게는 아들과 손자가 각각 몇 명 있었습니까?",
+    "a": "사십 명의 아들들, 삼십 명의 손자들"
+   },
+   {
+    "verse": "12:14",
+    "q": "압돈의 아들과 손자들은 새끼 수나귀 몇 마리를 탔습니까?",
+    "a": "칠십 마리"
+   },
+   {
+    "verse": "12:14",
+    "q": "압돈은 몇 년 동안 이스라엘을 재판했습니까?",
+    "a": "팔 년"
+   },
+   {
+    "key": "j12-5",
+    "q": "스코필드는 압돈을 몇째 재판관이라고 불렀습니까?",
+    "a": "열두째 재판관"
+   },
+   {
+    "verse": "12:15",
+    "q": "피라돈은 누구의 산속에 있다고 했습니까?",
+    "a": "아말렉족들"
+   }
+  ],
+  "faq": [
+   {
+    "q": "에프라임은 왜 입다에게 화를 냈습니까?",
+    "key": "j12-1"
+   },
+   {
+    "q": "‘에프라임의 두 번째 시기’라는 말은 무슨 뜻입니까?",
+    "key": "j12-1"
+   },
+   {
+    "q": "에프라임의 첫 번째 시기는 언제였습니까?",
+    "key": "j12-1"
+   },
+   {
+    "q": "‘쉽볼렛’은 무슨 뜻입니까?",
+    "key": "j12-2"
+   },
+   {
+    "q": "길르앗 사람들은 에프라임 사람을 어떻게 가려냈습니까?",
+    "key": "j12-2"
+   },
+   {
+    "q": "에프라임 사람은 왜 붙잡혔습니까?",
+    "key": "j12-2"
+   },
+   {
+    "q": "입잔은 몇째 재판관입니까?",
+    "key": "j12-3"
+   },
+   {
+    "q": "입잔은 어떤 재판을 맡았습니까?",
+    "key": "j12-3"
+   },
+   {
+    "q": "엘론은 몇째 재판관입니까?",
+    "key": "j12-4"
+   },
+   {
+    "q": "압돈은 몇째 재판관입니까?",
+    "key": "j12-5"
+   },
+   {
+    "q": "압돈의 집안은 어떠했습니까?",
+    "key": "j12-5"
+   },
+   {
+    "q": "압돈은 누구의 아들입니까?",
+    "key": "j12-5"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "쉽볼렛",
+    "key": "j12-2",
+    "text": "길르앗 사람들이 에프라임 사람을 가려낸 낱말. 스코필드는 ‘시내 또는 물결(홍수)’을 뜻한다고 풀었습니다."
+   },
+   {
+    "term": "요르단의 통행로",
+    "verse": "12:5",
+    "text": "요르단을 건너는 곳. 길르앗족들이 에프라임족들보다 먼저 점거했습니다."
+   },
+   {
+    "term": "민사 재판관",
+    "key": "j12-3",
+    "text": "사람들 사이의 다툼을 재판하는 사람. 스코필드는 입잔이 이스라엘 북동부의 민사 재판관이었던 것으로 보았습니다."
+   }
+  ]
+ }
+}

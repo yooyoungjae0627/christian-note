@@ -1,0 +1,1275 @@
+{
+ "chapter": 4,
+ "subtitle": "드보라와 바락, 시스라의 최후",
+ "motto": "힘으로도 아니요, 능력으로도 아니요, 오직 나의 영에 의해서니라",
+ "motto_comment": "j04-3",
+ "cover": [
+  {
+   "m": "tree",
+   "x": 100,
+   "y": 270,
+   "s": 0.85
+  },
+  {
+   "m": "mountain",
+   "x": 230,
+   "y": 230,
+   "s": 0.95
+  },
+  {
+   "m": "tent",
+   "x": 160,
+   "y": 300,
+   "s": 0.75
+  },
+  {
+   "m": "water",
+   "x": 260,
+   "y": 310,
+   "s": 0.7
+  }
+ ],
+ "people": [
+  {
+   "id": "lord",
+   "name": "주",
+   "role": "god",
+   "gen": 0,
+   "desc": "이스라엘을 가나안 왕 야빈의 손에 파셨다가, 부르짖음을 들으시고 시스라와 그의 모든 병거와 군대를 바락 앞에서 패주시키셨습니다.",
+   "refs": [
+    "4:2",
+    "4:15",
+    "4:23"
+   ],
+   "part": "시스라를 패주시키신 분",
+   "intro": "야빈에게 파신 분 · 시스라를 패주시키심"
+  },
+  {
+   "id": "lapidoth",
+   "name": "라피돗",
+   "en": "Lapidoth",
+   "gen": 1,
+   "desc": "드보라의 남편입니다.",
+   "refs": [
+    "4:4"
+   ],
+   "part": "드보라의 남편",
+   "look": "man",
+   "intro": "본문에 이름만 · 드보라의 남편"
+  },
+  {
+   "id": "deborah",
+   "name": "드보라",
+   "en": "Deborah",
+   "gen": 1,
+   "desc": "여예언자이며 라피돗의 아내로, 그때 이스라엘을 재판했습니다. 바락을 불러 주의 명령을 전했고, 그와 함께 케데시로 올라갔습니다.",
+   "refs": [
+    "4:4",
+    "4:6",
+    "4:9"
+   ],
+   "part": "이스라엘을 재판한 여예언자",
+   "look": "woman",
+   "intro": "라피돗의 아내 · 바락을 불러 명령을 전함"
+  },
+  {
+   "id": "abinoam",
+   "name": "아비노암",
+   "en": "Abinoam",
+   "gen": 1,
+   "desc": "바락의 아버지입니다.",
+   "refs": [
+    "4:6"
+   ],
+   "part": "바락의 아버지",
+   "look": "man",
+   "intro": "본문에 이름만 · 바락의 아버지"
+  },
+  {
+   "id": "heber",
+   "name": "헤벨",
+   "en": "Heber",
+   "gen": 1,
+   "desc": "모세의 장인 호밥의 후손인 켄족입니다. 켄족들에게서 갈라져 나와 케데시 옆 자아나임 평야에 천막을 쳤고, 하졸 왕 야빈과 화평한 사이였습니다.",
+   "refs": [
+    "4:11",
+    "4:17"
+   ],
+   "part": "야빈과 화평한 켄족",
+   "look": "man",
+   "intro": "켄족 사람 · 야빈과 화평한 집안"
+  },
+  {
+   "id": "jael",
+   "name": "야엘",
+   "en": "Jael",
+   "gen": 1,
+   "desc": "헤벨의 아내입니다. 도망쳐 온 시스라를 천막에 들이고 젖을 먹여 덮어 준 뒤, 잠든 그의 관자놀이에 천막 못을 박아 죽였습니다.",
+   "refs": [
+    "4:17",
+    "4:21",
+    "4:22"
+   ],
+   "part": "시스라를 죽인 헤벨의 아내",
+   "look": "woman",
+   "intro": "헤벨의 아내 · 천막 못으로 시스라를 침"
+  },
+  {
+   "id": "jabin",
+   "name": "야빈",
+   "en": "Jabin",
+   "role": "enemy",
+   "gen": 1,
+   "desc": "하졸에서 통치한 가나안 왕입니다. 철 병거 구백 대를 가지고 이십 년 동안 이스라엘을 강력하게 압제했으나, 마침내 이스라엘 자녀들에게 멸망했습니다.",
+   "refs": [
+    "4:2",
+    "4:3",
+    "4:24"
+   ],
+   "part": "하졸의 가나안 왕",
+   "look": "king",
+   "intro": "하졸의 왕 · 이십 년 동안 압제함"
+  },
+  {
+   "id": "barak",
+   "name": "바락",
+   "en": "Barak",
+   "gen": 2,
+   "desc": "아비노암의 아들로 케데시납탈리 사람입니다. 드보라가 함께 가야만 가겠다고 했고, 일만 명을 거느리고 타볼산에서 내려가 시스라의 군대를 쫓았습니다.",
+   "refs": [
+    "4:6",
+    "4:8",
+    "4:14"
+   ],
+   "part": "일만 명을 이끈 사람",
+   "look": "man",
+   "intro": "아비노암의 아들 · 타볼산에서 내려감"
+  },
+  {
+   "id": "sisera",
+   "name": "시스라",
+   "en": "Sisera",
+   "role": "enemy",
+   "gen": 2,
+   "desc": "야빈의 군대 대장으로 이방인들의 하로솃에 살았습니다. 패하여 병거에서 내려 두 발로 도망쳤고, 야엘의 천막에서 죽었습니다.",
+   "refs": [
+    "4:2",
+    "4:15",
+    "4:21"
+   ],
+   "part": "야빈의 군대 대장",
+   "look": "man",
+   "intro": "야빈의 군대 대장 · 야엘의 천막에서 죽음"
+  }
+ ],
+ "relations": [
+  {
+   "from": "lord",
+   "to": "sisera",
+   "type": "god",
+   "label": "패주시키심",
+   "ref": "4:15",
+   "directed": true
+  },
+  {
+   "from": "lapidoth",
+   "to": "deborah",
+   "type": "spouse",
+   "label": "아내",
+   "ref": "4:4"
+  },
+  {
+   "from": "deborah",
+   "to": "barak",
+   "type": "other",
+   "label": "불러 명령을 전함",
+   "ref": "4:6"
+  },
+  {
+   "from": "abinoam",
+   "to": "barak",
+   "type": "parent",
+   "label": "아들",
+   "ref": "4:6"
+  },
+  {
+   "from": "heber",
+   "to": "jael",
+   "type": "spouse",
+   "label": "아내",
+   "ref": "4:17"
+  },
+  {
+   "from": "jabin",
+   "to": "heber",
+   "type": "other",
+   "label": "화평",
+   "ref": "4:17"
+  },
+  {
+   "from": "jabin",
+   "to": "sisera",
+   "type": "ruler",
+   "label": "군대 대장",
+   "ref": "4:2"
+  },
+  {
+   "from": "jael",
+   "to": "sisera",
+   "type": "enemy",
+   "label": "못을 박음",
+   "ref": "4:21"
+  },
+  {
+   "from": "barak",
+   "to": "sisera",
+   "type": "enemy",
+   "label": "추격함",
+   "ref": "4:16"
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "hazor",
+    "name": "하졸",
+    "at": [
+     35.57,
+     33.02
+    ],
+    "ref": "4:2"
+   },
+   {
+    "key": "kedesh",
+    "name": "케데시납탈리",
+    "at": [
+     35.53,
+     33.11
+    ],
+    "ref": "4:6"
+   },
+   {
+    "key": "tabor",
+    "name": "타볼산",
+    "at": [
+     35.39,
+     32.687
+    ],
+    "ref": "4:6"
+   },
+   {
+    "key": "kishon",
+    "name": "키숀강",
+    "at": [
+     35.13,
+     32.68
+    ],
+    "ref": "4:7"
+   },
+   {
+    "key": "ramah",
+    "ref": "4:5"
+   },
+   {
+    "key": "bethel",
+    "ref": "4:5"
+   }
+  ],
+  "routes": [
+   {
+    "path": [
+     "kedesh",
+     "tabor"
+    ],
+    "ref": "4:10-12"
+   }
+  ],
+  "unknown": [
+   {
+    "name": "이방인들의 하로솃",
+    "ref": "4:2",
+    "note": "시스라가 살던 곳으로, 위치에 여러 설이 있어 지도에 찍지 않았습니다."
+   },
+   {
+    "name": "자아나임 평야",
+    "ref": "4:11",
+    "note": "케데시 옆이라고만 나옵니다."
+   },
+   {
+    "name": "드보라의 종려나무",
+    "ref": "4:5",
+    "note": "에프라임산 속 라마흐와 벧엘 사이라고만 나옵니다."
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "4:1-3",
+   "title": "하졸의 야빈과 철 병거 구백 대",
+   "marks": [
+    {
+     "v": "4:1",
+     "t": "p",
+     "ko": "다시 주의 목전에 악을 행하였더라",
+     "en": "again did evil in the sight of the LORD"
+    },
+    {
+     "v": "4:2",
+     "t": "p",
+     "ko": "가나안 왕 야빈의 손안에 그들을 파셨으니",
+     "en": "the LORD sold them into the hand of Jabin king of Canaan"
+    },
+    {
+     "v": "4:3",
+     "t": "u",
+     "ko": "구백 대의 철 병거들을 보유하였기 때문이라",
+     "en": "he had nine hundred chariots of iron"
+    },
+    {
+     "v": "4:3",
+     "t": "p",
+     "ko": "이십 년 동안 이스라엘 자녀들을 강력하게 압제하였더라",
+     "en": "twenty years he mightily oppressed the children of Israel"
+    }
+   ],
+   "english": [
+    {
+     "ref": "4:1",
+     "phrase": "when Ehud was dead",
+     "grammar": "때의 when절",
+     "text": "when Ehud was dead는 ‘에훗이 죽자’입니다. 판관이 죽으면 다시 악을 행한다는 2장 19절의 말씀이 그대로 되풀이됩니다."
+    },
+    {
+     "ref": "4:2",
+     "phrase": "the captain of whose host was Sisera",
+     "grammar": "소유격 관계대명사 whose",
+     "text": "whose는 앞의 Jabin을 받아 ‘그의’라는 뜻입니다. ‘그의 군대의 대장은 시스라였다’로 읽습니다. host는 ‘군대’입니다."
+    },
+    {
+     "ref": "4:3",
+     "phrase": "twenty years he mightily oppressed the children of Israel",
+     "grammar": "시간 표현 앞세우기",
+     "text": "twenty years를 문장 앞에 두어 압제가 길었다는 것을 강조했습니다. mightily는 ‘강력하게, 심하게’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "reigned",
+     "ko": "통치했다",
+     "ref": "4:2"
+    },
+    {
+     "w": "captain",
+     "ko": "대장",
+     "ref": "4:2"
+    },
+    {
+     "w": "host",
+     "ko": "군대",
+     "ref": "4:2"
+    },
+    {
+     "w": "Gentiles",
+     "ko": "이방인들",
+     "ref": "4:2"
+    },
+    {
+     "w": "chariots",
+     "ko": "병거들",
+     "ref": "4:3"
+    },
+    {
+     "w": "mightily",
+     "ko": "강력하게",
+     "ref": "4:3"
+    },
+    {
+     "w": "oppressed",
+     "ko": "압제했다",
+     "ref": "4:3"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j04-1",
+     "basis": "external",
+     "text": "스코필드 관주 성경은 4장 머리에 「세 번째 배교와 종살이」라는 소제목을 달았습니다. 옷니엘 때와 에훗 때에 이어, 에훗이 죽자 이스라엘이 다시 주의 목전에 악을 행하고 가나안 왕 야빈에게 팔린 것이 세 번째라는 것입니다.",
+     "spans": [
+      {
+       "text": "「세 번째 배교와 종살이」",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 사사기 4장 소제목",
+       "where": "Judg. 4:1 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "The third apostasy and servitude.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "4:4-9",
+   "title": "종려나무 아래의 드보라와 바락",
+   "marks": [
+    {
+     "v": "4:4",
+     "t": "u",
+     "ko": "여예언자이자 라피돗의 아내인 드보라",
+     "en": "Deborah, a prophetess, the wife of Lapidoth"
+    },
+    {
+     "v": "4:6",
+     "t": "y",
+     "ko": "가서 타볼산을 향하여 이동하고",
+     "en": "Go and draw toward mount Tabor"
+    },
+    {
+     "v": "4:7",
+     "t": "y",
+     "ko": "내가 너의 손안에 그를 넘기겠노라",
+     "en": "I will deliver him into thine hand"
+    },
+    {
+     "v": "4:8",
+     "t": "u",
+     "ko": "만일 당신이 나와 함께 가지 아니하려 한다면 그때는 내가 가지 아니하겠나이다",
+     "en": "if thou wilt not go with me, then I will not go"
+    },
+    {
+     "v": "4:9",
+     "t": "y",
+     "ko": "주께서 한 여자의 손안에 시스라를 파실 것이기 때문이니이다",
+     "en": "the LORD shall sell Sisera into the hand of a woman"
+    }
+   ],
+   "english": [
+    {
+     "ref": "4:6",
+     "phrase": "Hath not the LORD God of Israel commanded",
+     "grammar": "부정 의문문(강한 긍정)",
+     "text": "‘명령하지 아니하셨나이까?’는 묻는 말이 아니라 ‘분명히 명령하셨다’는 강한 확인입니다. hath는 has의 옛 형태입니다."
+    },
+    {
+     "ref": "4:8",
+     "phrase": "If thou wilt go with me, then I will go",
+     "grammar": "조건문 if ~ then",
+     "text": "if ~ then은 ‘만일 ~하면 그때는 ~하겠다’입니다. 바락은 드보라가 함께 가는 것을 조건으로 내걸었습니다."
+    },
+    {
+     "ref": "4:9",
+     "phrase": "notwithstanding the journey that thou takest shall not be for thine honour",
+     "grammar": "옛 접속사 notwithstanding",
+     "text": "notwithstanding은 ‘그럼에도 불구하고’입니다. for thine honour는 ‘너의 영예가 되도록’이며, 시스라를 넘기는 영예가 바락이 아니라 한 여자에게 간다는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "prophetess",
+     "ko": "여예언자",
+     "ref": "4:4"
+    },
+    {
+     "w": "judgment",
+     "ko": "재판",
+     "ref": "4:5"
+    },
+    {
+     "w": "draw",
+     "ko": "이동하다, 나아가다",
+     "ref": "4:6"
+    },
+    {
+     "w": "multitude",
+     "ko": "무리",
+     "ref": "4:7"
+    },
+    {
+     "w": "notwithstanding",
+     "ko": "그럼에도 불구하고",
+     "ref": "4:9"
+    },
+    {
+     "w": "honour",
+     "ko": "영예",
+     "ref": "4:9"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j04-2",
+     "basis": "external",
+     "text": "스코필드 관주 성경은 4절 앞에 「네 번째와 다섯 번째 판관, 드보라와 바락」이라는 소제목을 달았습니다. 스코필드는 주께서 고르신 구출자들 가운데 육체로 자랑할 것을 가진 사람이 한 사람도 없었다고 말하며, 그 예 가운데 하나로 ‘드보라, 한 여자’를 듭니다.",
+     "spans": [
+      {
+       "text": "‘드보라, 한 여자’",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 사사기 4장 소제목",
+       "where": "Judg. 4:4 소제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Deborah and Barak, the fourth and fifth Judges.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      },
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 2:16 주석",
+       "where": "Judg. 2:16 주석",
+       "file": "memory-bank/세대주의_해설/scofield/judges-02.md",
+       "excerpt": "Not one of the chosen deliverers had anything whereof to glory in the flesh.\n…\nDeborah, a woman;",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/judges/judges-2.html"
+      }
+     ]
+    },
+    {
+     "id": "j04-3",
+     "basis": "external",
+     "text": "스코필드는 판관들을 고르신 일에서 스가랴의 큰 말씀이 드러난다고 말합니다. ‘힘으로도 아니요, 능력으로도 아니요, 오직 나의 영에 의해서니라’(스가랴 4:6 · 표준킹제임스성경)라는 말씀입니다. 또 바울의 말도 드러난다고 합니다. ‘부르심을 받은 자들은 육체를 따라 지혜로운 사람들이 많지 아니하고, 막강한 자들도 많지 아니하며, 고귀한 자들도 많지 아니하니라’(고린도전서 1:26 · 표준킹제임스성경)라는 말씀입니다.",
+     "spans": [
+      {
+       "text": "힘으로도 아니요, 능력으로도 아니요, 오직 나의 영에 의해서니라",
+       "level": 3
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 머리말",
+       "where": "사사기 머리말",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "In the choice of the Judges is illustrated Zechariah’s great word (4. 6), “not by might, nor by power, but by My Spirit, saith the Lord”; and Paul’s word (1 Cor. 1. 26), “not many wise men after the flesh, not many mighty, not many noble, are called.”",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "4:10-13",
+   "title": "케데시의 일만 명과 하로솃의 병거들",
+   "marks": [
+    {
+     "v": "4:10",
+     "t": "u",
+     "ko": "자신의 두 발 아래에 일만 명의 장정들을 거느리고 올라갔더라",
+     "en": "he went up with ten thousand men at his feet"
+    },
+    {
+     "v": "4:11",
+     "t": "u",
+     "ko": "켄족들로부터 스스로 갈라져 나와서",
+     "en": "had severed himself from the Kenites"
+    },
+    {
+     "v": "4:13",
+     "t": "u",
+     "ko": "그의 모든 병거들, 곧 철 병거들 구백 대를 함께 모았고",
+     "en": "gathered together all his chariots, even nine hundred chariots of iron"
+    }
+   ],
+   "english": [
+    {
+     "ref": "4:10",
+     "phrase": "he went up with ten thousand men at his feet",
+     "grammar": "관용 표현 at one's feet",
+     "text": "at his feet는 ‘그의 발 아래’, 곧 그를 따르는 사람들이라는 뜻입니다. 바락이 일만 명을 거느리고 올라갔다는 말입니다."
+    },
+    {
+     "ref": "4:11",
+     "phrase": "had severed himself from the Kenites",
+     "grammar": "재귀대명사 + 과거완료",
+     "text": "sever oneself from은 ‘~에게서 스스로 떨어져 나오다’입니다. had severed는 이 이야기보다 앞서 이미 갈라져 나와 있었다는 배경을 알려 줍니다."
+    },
+    {
+     "ref": "4:12",
+     "phrase": "Barak the son of Abinoam was gone up to mount Tabor",
+     "grammar": "be + gone(완료의 옛 형태)",
+     "text": "was gone up은 had gone up과 같은 뜻으로, ‘이미 올라가 있었다’입니다. 옛 영어는 이동 동사의 완료에 be를 쓰기도 했습니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "severed",
+     "ko": "갈라져 나왔다",
+     "ref": "4:11"
+    },
+    {
+     "w": "pitched",
+     "ko": "(천막을) 쳤다",
+     "ref": "4:11"
+    },
+    {
+     "w": "shewed",
+     "ko": "알렸다(show의 옛 형태)",
+     "ref": "4:12"
+    },
+    {
+     "w": "gathered",
+     "ko": "모았다",
+     "ref": "4:13"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j04-4",
+     "basis": "external",
+     "text": "스코필드는 13절에서 시스라가 병거들과 백성을 ‘모았다’는 말에 「외침으로, 곧 선포로 모았다」는 주석을 달았습니다. 시스라가 소리쳐 알려서 그의 모든 병거와 백성을 이방인들의 하로솃부터 키숀강까지 불러 모았다는 뜻입니다.",
+     "spans": [
+      {
+       "text": "「외침으로, 곧 선포로 모았다」",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 4:13 주석",
+       "where": "Judg. 4:13 주석",
+       "file": "memory-bank/세대주의_해설/scofield/judges-04.md",
+       "excerpt": "gathered by cry, or, proclamation.",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/judges/judges-4.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "4:14-16",
+   "title": "주께서 네 앞에 가지 아니하셨느냐",
+   "marks": [
+    {
+     "v": "4:14",
+     "t": "y",
+     "ko": "이날이 주께서 시스라를 너의 손안에 넘기신 날이기 때문이라",
+     "en": "this is the day in which the LORD hath delivered Sisera into thine hand"
+    },
+    {
+     "v": "4:14",
+     "t": "g",
+     "ko": "주께서 네 앞에 가지 아니하셨느냐",
+     "en": "is not the LORD gone out before thee"
+    },
+    {
+     "v": "4:15",
+     "t": "p",
+     "ko": "그의 두 발로 도망쳤더라",
+     "en": "fled away on his feet"
+    },
+    {
+     "v": "4:16",
+     "t": "p",
+     "ko": "거기에는 한 사람도 남지 아니하였더라",
+     "en": "there was not a man left"
+    }
+   ],
+   "english": [
+    {
+     "ref": "4:14",
+     "phrase": "Up; for this is the day",
+     "grammar": "한 낱말 명령 + 이유의 for",
+     "text": "Up은 ‘일어나라, 올라가라’는 짧은 명령입니다. 이어지는 for가 그 이유, 곧 오늘이 주께서 시스라를 넘기신 날이라는 것을 밝힙니다."
+    },
+    {
+     "ref": "4:14",
+     "phrase": "is not the LORD gone out before thee?",
+     "grammar": "be + gone 완료, 부정 의문문",
+     "text": "is gone out은 has gone out, 곧 ‘이미 나가셨다’입니다. 부정 의문문으로 물어 ‘주께서 분명히 네 앞에 나가셨다’는 확신을 줍니다.",
+     "key": "j04-5"
+    },
+    {
+     "ref": "4:15",
+     "phrase": "the LORD discomfited Sisera",
+     "grammar": "옛 낱말 discomfit",
+     "text": "discomfit은 ‘패주시키다, 혼란에 빠뜨려 무너뜨리다’입니다. 싸움의 주어가 바락이 아니라 the LORD인 것에 주목합니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "discomfited",
+     "ko": "패주시켰다",
+     "ref": "4:15"
+    },
+    {
+     "w": "lighted",
+     "ko": "내렸다(옛 뜻)",
+     "ref": "4:15"
+    },
+    {
+     "w": "pursued",
+     "ko": "추격했다",
+     "ref": "4:16"
+    },
+    {
+     "w": "host",
+     "ko": "군대",
+     "ref": "4:16"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j04-5",
+     "basis": "sbc",
+     "text": "이이레 목사는 사무엘상 26장을 강의하며 하나님께서 앞서 가시는 분이심을 기억하자고 말하고, 그 예로 이 구절을 읽습니다. 시스라와의 전쟁 때 드보라가 바락에게 일어나라고 하며, 이날은 주께서 시스라를 그의 손에 넘기신 날이고 주께서 그보다 앞서 나가셨다고 말했습니다. 이에 바락이 자기를 따르는 만 명을 거느리고 타볼산에서 내려갔다는 것입니다.",
+     "spans": [
+      {
+       "text": "하나님께서 앞서 가시는 분",
+       "level": 2
+      }
+     ],
+     "quote": false,
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "이이레 목사 「다윗의 삶」 17편 「앞서 가시는 하나님」(사무엘상 26장 강의)",
+       "file": "사무엘상·하/강의스크립트/17_사무엘상26장_앞서_가시는_하나님.md",
+       "time": "20:15",
+       "to": "20:32",
+       "excerpt": "그래서 하나님께서 앞서 가시는 분이 기억해습니다. 사사기 4장 14절 보면 시스라와의 전쟁 때도 하나님께서 이렇게 말씀하셨죠. 드보라가 바락에게 이르되 일어나라.이 날은 주께서 시스라를 너의 손에 넘겨 주신 날이니라. 주께서 너보다 앞서 나가지 아니하셨느냐 하니 이에 바락이 자기를 따르는 만 명을 거느리고 다볼산에서 내려가멘 아 역대기상 14장 15절",
+       "url": "https://youtu.be/gNPZPMPONtk?t=1215"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "4:17-21",
+   "title": "야엘의 천막",
+   "marks": [
+    {
+     "v": "4:17",
+     "t": "u",
+     "ko": "하졸 왕 야빈과 켄족 헤벨의 집 사이에 화평이 있었기 때문이라",
+     "en": "there was peace between Jabin the king of Hazor and the house of Heber the Kenite"
+    },
+    {
+     "v": "4:18",
+     "t": "u",
+     "ko": "두려워하지 마소서",
+     "en": "fear not"
+    },
+    {
+     "v": "4:19",
+     "t": "u",
+     "ko": "그녀가 젖 부대를 열어서 그에게 음료를 주고",
+     "en": "she opened a bottle of milk, and gave him drink"
+    },
+    {
+     "v": "4:21",
+     "t": "p",
+     "ko": "못을 쳐서 그의 두 관자놀이를 관통하여 박았고",
+     "en": "smote the nail into his temples"
+    }
+   ],
+   "english": [
+    {
+     "ref": "4:18",
+     "phrase": "Turn in, my lord, turn in to me; fear not",
+     "grammar": "명령문의 되풀이, 옛 부정 명령",
+     "text": "turn in은 ‘(안으로) 들어오다’입니다. 두 번 되풀이해 간곡하게 권합니다. fear not은 do not fear의 옛 형태입니다."
+    },
+    {
+     "ref": "4:20",
+     "phrase": "when any man doth come and enquire of thee",
+     "grammar": "옛 조동사 doth",
+     "text": "doth는 does의 옛 형태로 come을 꾸며 줍니다. enquire of는 ‘~에게 묻다’입니다."
+    },
+    {
+     "ref": "4:21",
+     "phrase": "for he was fast asleep and weary",
+     "grammar": "이유의 for, fast asleep",
+     "text": "fast asleep은 ‘깊이 잠든’입니다. 여기서 fast는 ‘빠른’이 아니라 ‘단단히, 깊이’라는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "mantle",
+     "ko": "덧옷, 겉옷",
+     "ref": "4:18"
+    },
+    {
+     "w": "bottle",
+     "ko": "가죽 부대",
+     "ref": "4:19"
+    },
+    {
+     "w": "enquire",
+     "ko": "묻다, 조사하다",
+     "ref": "4:20"
+    },
+    {
+     "w": "nail",
+     "ko": "못(천막 말뚝)",
+     "ref": "4:21"
+    },
+    {
+     "w": "softly",
+     "ko": "조용히",
+     "ref": "4:21"
+    },
+    {
+     "w": "temples",
+     "ko": "관자놀이",
+     "ref": "4:21"
+    },
+    {
+     "w": "weary",
+     "ko": "지친",
+     "ref": "4:21"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "4:22-24",
+   "title": "야빈을 굴복시키신 하나님",
+   "marks": [
+    {
+     "v": "4:22",
+     "t": "u",
+     "ko": "당신께서 찾고 계신 남자를 제가 당신께 보여 드리겠나이다",
+     "en": "I will shew thee the man whom thou seekest"
+    },
+    {
+     "v": "4:22",
+     "t": "p",
+     "ko": "시스라가 죽은 채 누워 있었고",
+     "en": "Sisera lay dead"
+    },
+    {
+     "v": "4:23",
+     "t": "g",
+     "ko": "하나님께서 그날에 가나안 왕 야빈을 이스라엘 자녀들 앞에서 굴복하게 하셨더라",
+     "en": "God subdued on that day Jabin the king of Canaan before the children of Israel"
+    },
+    {
+     "v": "4:24",
+     "t": "u",
+     "ko": "마침내 그들이 가나안 왕 야빈을 멸하였더라",
+     "en": "until they had destroyed Jabin king of Canaan"
+    }
+   ],
+   "english": [
+    {
+     "ref": "4:22",
+     "phrase": "I will shew thee the man whom thou seekest",
+     "grammar": "목적격 관계대명사 whom",
+     "text": "whom thou seekest는 ‘네가 찾는’이라는 뜻으로 the man을 꾸밉니다. seekest는 seek의 옛 2인칭 형태입니다."
+    },
+    {
+     "ref": "4:23",
+     "phrase": "So God subdued on that day Jabin the king of Canaan",
+     "grammar": "결과의 so",
+     "text": "So는 ‘그렇게 하여’라는 뜻으로 앞의 일들을 묶어 결론을 냅니다. 이긴 주어가 바락도 야엘도 아닌 God으로 적혀 있습니다."
+    },
+    {
+     "ref": "4:24",
+     "phrase": "prospered, and prevailed against Jabin",
+     "grammar": "동사의 나열",
+     "text": "prospered(번영하였다)와 prevailed against(~에게 이겼다)를 나란히 두어 이스라엘의 손이 점점 강해진 것을 보여 줍니다. until절이 그 끝을 밝힙니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "seekest",
+     "ko": "찾는(seek의 옛 2인칭)",
+     "ref": "4:22"
+    },
+    {
+     "w": "subdued",
+     "ko": "굴복하게 했다",
+     "ref": "4:23"
+    },
+    {
+     "w": "prospered",
+     "ko": "번영했다",
+     "ref": "4:24"
+    },
+    {
+     "w": "prevailed",
+     "ko": "이겼다",
+     "ref": "4:24"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "에훗이 죽자 이스라엘 자녀들이 다시 주의 목전에 악을 행했습니다.",
+    "verse": "4:1",
+    "u": [
+     "다시 주의 목전에 악을 행했습니다"
+    ]
+   },
+   {
+    "text": "주께서는 그들을 하졸에서 통치한 가나안 왕 야빈의 손에 파셨고, 그의 군대 대장은 시스라였습니다.",
+    "verse": "4:2",
+    "u": [
+     "야빈의 손에 파셨고"
+    ]
+   },
+   {
+    "text": "야빈은 철 병거 구백 대를 가지고 이십 년 동안 이스라엘을 강력하게 압제했습니다.",
+    "verse": "4:3",
+    "u": [
+     "철 병거 구백 대"
+    ]
+   },
+   {
+    "text": "스코필드 관주 성경은 4장 머리에 「세 번째 배교와 종살이」라는 소제목을 달았습니다.",
+    "key": "j04-1",
+    "u": [
+     "세 번째 배교와 종살이"
+    ]
+   },
+   {
+    "text": "여예언자이자 라피돗의 아내인 드보라가 그때 이스라엘을 재판했습니다.",
+    "verse": "4:4",
+    "u": [
+     "여예언자"
+    ]
+   },
+   {
+    "text": "드보라는 바락을 불러 타볼산으로 가서 납탈리와 스불룬 자손 일만 명을 데려가라는 주의 명령을 전했습니다.",
+    "verse": "4:6",
+    "u": [
+     "주의 명령"
+    ]
+   },
+   {
+    "text": "바락은 드보라가 함께 가지 않으면 자기도 가지 않겠다고 했습니다.",
+    "verse": "4:8",
+    "u": [
+     "함께 가지 않으면"
+    ]
+   },
+   {
+    "text": "드보라는 함께 가겠지만 그 영예는 바락의 것이 되지 않고 주께서 시스라를 한 여자의 손에 파실 것이라고 말했습니다.",
+    "verse": "4:9",
+    "u": [
+     "한 여자의 손"
+    ]
+   },
+   {
+    "text": "스코필드는 구출자들 가운데 육체로 자랑할 것이 없는 사람의 예로 ‘드보라, 한 여자’를 듭니다.",
+    "key": "j04-2",
+    "u": [
+     "드보라, 한 여자"
+    ]
+   },
+   {
+    "text": "스코필드는 판관들을 고르신 일에서 ‘힘으로도 아니요, 능력으로도 아니요, 오직 나의 영에 의해서니라’는 말씀이 드러난다고 말합니다.",
+    "key": "j04-3",
+    "u": [
+     "오직 나의 영에 의해서니라"
+    ]
+   },
+   {
+    "text": "켄족 헤벨은 켄족들에게서 갈라져 나와 케데시 옆 자아나임 평야에 천막을 쳤습니다.",
+    "verse": "4:11",
+    "u": [
+     "자아나임 평야"
+    ]
+   },
+   {
+    "text": "스코필드는 시스라가 병거와 백성을 외침, 곧 선포로 모았다고 풉니다.",
+    "key": "j04-4",
+    "u": [
+     "선포로 모았다"
+    ]
+   },
+   {
+    "text": "드보라는 바락에게 오늘이 주께서 시스라를 넘기신 날이며 주께서 그 앞에 가셨다고 말했습니다.",
+    "verse": "4:14",
+    "u": [
+     "주께서 그 앞에 가셨다"
+    ]
+   },
+   {
+    "text": "이이레 목사는 이 구절로 하나님께서 앞서 가시는 분이심을 기억하자고 말합니다.",
+    "key": "j04-5",
+    "u": [
+     "앞서 가시는 분"
+    ]
+   },
+   {
+    "text": "주께서 시스라의 군대를 패주시키시자 시스라는 병거에서 내려 두 발로 도망쳤고, 그의 군대는 한 사람도 남지 않았습니다.",
+    "verse": "4:16",
+    "u": [
+     "한 사람도 남지 않았습니다"
+    ]
+   },
+   {
+    "text": "시스라는 야빈과 화평한 사이였던 헤벨의 아내 야엘의 천막으로 도망쳤습니다.",
+    "verse": "4:17",
+    "u": [
+     "야엘의 천막"
+    ]
+   },
+   {
+    "text": "야엘은 물을 청한 시스라에게 젖을 주고 덮어 준 뒤, 깊이 잠든 그의 관자놀이에 천막 못을 박았습니다.",
+    "verse": "4:21",
+    "u": [
+     "천막 못을 박았습니다"
+    ]
+   },
+   {
+    "text": "그날 하나님께서 가나안 왕 야빈을 이스라엘 앞에서 굴복하게 하셨고, 마침내 이스라엘은 야빈을 멸했습니다.",
+    "verse": "4:23",
+    "u": [
+     "하나님께서 가나안 왕 야빈을"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "4:1",
+    "q": "이스라엘 자녀들이 다시 악을 행한 것은 누가 죽은 뒤였습니까?",
+    "a": "에훗"
+   },
+   {
+    "verse": "4:2",
+    "q": "야빈은 어디에서 통치했습니까?",
+    "a": "하졸"
+   },
+   {
+    "verse": "4:2",
+    "q": "야빈의 군대 대장은 누구입니까?",
+    "a": "시스라"
+   },
+   {
+    "verse": "4:2",
+    "q": "시스라가 거한 곳은 어디입니까?",
+    "a": "이방인들의 하로솃"
+   },
+   {
+    "verse": "4:3",
+    "q": "야빈이 보유한 철 병거는 몇 대입니까?",
+    "a": "구백 대"
+   },
+   {
+    "verse": "4:3",
+    "q": "야빈은 몇 년 동안 이스라엘을 압제했습니까?",
+    "a": "이십 년"
+   },
+   {
+    "verse": "4:4",
+    "q": "드보라는 누구의 아내입니까?",
+    "a": "라피돗"
+   },
+   {
+    "verse": "4:5",
+    "q": "드보라는 어느 나무 아래에 거했습니까?",
+    "a": "드보라의 종려나무"
+   },
+   {
+    "verse": "4:5",
+    "q": "드보라의 종려나무는 어느 두 곳 사이에 있었습니까?",
+    "a": "라마흐, 벧엘"
+   },
+   {
+    "verse": "4:6",
+    "q": "바락은 누구의 아들입니까?",
+    "a": "아비노암"
+   },
+   {
+    "verse": "4:6",
+    "q": "바락이 데려갈 사람들은 어느 두 지파의 자녀들이었습니까?",
+    "a": "납탈리, 스불룬"
+   },
+   {
+    "verse": "4:7",
+    "q": "주께서 시스라를 어디까지 끌어오겠다고 하셨습니까?",
+    "a": "키숀강"
+   },
+   {
+    "verse": "4:9",
+    "q": "드보라는 주께서 시스라를 누구의 손에 파실 것이라고 했습니까?",
+    "a": "한 여자"
+   },
+   {
+    "verse": "4:11",
+    "q": "헤벨은 누구의 후손에 속한 켄족입니까?",
+    "a": "호밥"
+   },
+   {
+    "verse": "4:11",
+    "q": "헤벨이 천막을 친 곳은 어디입니까?",
+    "a": "자아나임 평야"
+   },
+   {
+    "verse": "4:12",
+    "q": "시스라에게 바락이 어디에 올라갔다는 소식이 전해졌습니까?",
+    "a": "타볼산"
+   },
+   {
+    "verse": "4:14",
+    "q": "드보라는 바락에게 누가 그 앞에 가셨다고 말했습니까?",
+    "a": "주"
+   },
+   {
+    "verse": "4:15",
+    "q": "시스라는 병거에서 내려 어떻게 도망쳤습니까?",
+    "a": "그의 두 발로"
+   },
+   {
+    "verse": "4:17",
+    "q": "시스라가 야엘의 천막으로 간 까닭은 무엇입니까?",
+    "a": "화평"
+   },
+   {
+    "verse": "4:18",
+    "q": "야엘은 시스라를 무엇으로 덮어 주었습니까?",
+    "a": "덧옷"
+   },
+   {
+    "verse": "4:19",
+    "q": "물을 달라는 시스라에게 야엘은 무엇을 열어 주었습니까?",
+    "a": "젖 부대"
+   },
+   {
+    "verse": "4:21",
+    "q": "야엘이 손에 든 두 가지는 무엇입니까?",
+    "a": "천막의 못, 망치"
+   },
+   {
+    "verse": "4:22",
+    "q": "바락이 천막에 들어갔을 때 못은 시스라의 어디에 박혀 있었습니까?",
+    "a": "두 관자놀이"
+   },
+   {
+    "verse": "4:23",
+    "q": "그날 야빈을 굴복하게 하신 분은 누구입니까?",
+    "a": "하나님"
+   },
+   {
+    "key": "j04-1",
+    "q": "스코필드 관주 성경이 4장 머리에 단 소제목은 무엇입니까?",
+    "a": "세 번째 배교와 종살이"
+   },
+   {
+    "key": "j04-2",
+    "q": "스코필드 관주 성경은 드보라와 바락을 몇 번째 판관이라고 했습니까?",
+    "a": "네 번째와 다섯 번째 판관"
+   },
+   {
+    "key": "j04-2",
+    "q": "스코필드는 육체로 자랑할 것이 없는 구출자의 예로 드보라를 어떻게 적었습니까?",
+    "a": "드보라, 한 여자"
+   },
+   {
+    "key": "j04-3",
+    "q": "스코필드가 판관들을 고르신 일에서 드러난다고 한 스가랴의 말씀은 무엇입니까?",
+    "a": "힘으로도 아니요, 능력으로도 아니요, 오직 나의 영에 의해서니라"
+   },
+   {
+    "key": "j04-3",
+    "q": "스코필드가 함께 든 바울의 말씀은 어디에 있습니까?",
+    "a": "고린도전서 1:26"
+   },
+   {
+    "key": "j04-4",
+    "q": "스코필드는 시스라가 병거와 백성을 어떻게 모았다고 풉니까?",
+    "a": "외침으로, 곧 선포로 모았다"
+   },
+   {
+    "key": "j04-5",
+    "q": "이이레 목사는 4장 14절로 무엇을 기억하자고 말합니까?",
+    "a": "하나님께서 앞서 가시는 분이심"
+   }
+  ],
+  "faq": [
+   {
+    "q": "4장은 사사기의 몇 번째 배교입니까?",
+    "key": "j04-1"
+   },
+   {
+    "q": "드보라와 바락은 어떤 판관들입니까?",
+    "key": "j04-2"
+   },
+   {
+    "q": "주께서는 왜 여자인 드보라를 쓰셨습니까?",
+    "key": "j04-2"
+   },
+   {
+    "q": "판관들은 힘과 능력으로 이겼습니까?",
+    "key": "j04-3"
+   },
+   {
+    "q": "주께서 판관을 고르시는 방식은 바울의 말과 어떻게 이어집니까?",
+    "key": "j04-3"
+   },
+   {
+    "q": "4장의 승리는 누구의 힘으로 이루어졌습니까?",
+    "key": "j04-3"
+   },
+   {
+    "q": "시스라는 어떻게 그 많은 병거와 군대를 모았습니까?",
+    "key": "j04-4"
+   },
+   {
+    "q": "‘주께서 네 앞에 가지 아니하셨느냐’는 무슨 뜻입니까?",
+    "key": "j04-5"
+   },
+   {
+    "q": "이이레 목사는 이 구절을 어느 강의에서 읽습니까?",
+    "key": "j04-5"
+   },
+   {
+    "q": "바락은 왜 타볼산에서 내려갈 수 있었습니까?",
+    "key": "j04-5"
+   },
+   {
+    "q": "드보라는 바락에게 무엇이라고 말하며 내려가게 했습니까?",
+    "key": "j04-5"
+   },
+   {
+    "q": "스가랴 4장 6절은 어떤 말씀입니까?",
+    "key": "j04-3"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "여예언자",
+    "verse": "4:4",
+    "text": "하나님의 말씀을 전하는 여자. 드보라는 여예언자이며 그때 이스라엘을 재판했습니다."
+   },
+   {
+    "term": "배교",
+    "key": "j04-1",
+    "text": "하나님을 떠나 등을 돌리는 것. 스코필드는 4장을 세 번째 배교와 종살이로 봅니다."
+   },
+   {
+    "term": "켄족",
+    "verse": "4:11",
+    "text": "모세의 장인 호밥의 후손. 헤벨은 켄족들에게서 갈라져 나와 케데시 옆에 천막을 쳤습니다."
+   },
+   {
+    "term": "관자놀이",
+    "verse": "4:21",
+    "text": "눈과 귀 사이의 머리 옆부분. 야엘은 이곳에 천막 못을 박았습니다."
+   }
+  ]
+ }
+}

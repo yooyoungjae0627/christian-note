@@ -1,0 +1,1214 @@
+{
+ "chapter": 5,
+ "subtitle": "드보라와 바락의 노래",
+ "motto": "구원자들 가운데 육체로 자랑할 것이 있는 사람은 하나도 없었습니다",
+ "motto_comment": "j05-2",
+ "cover": [
+  {
+   "m": "stars",
+   "x": 170,
+   "y": 80,
+   "s": 1
+  },
+  {
+   "m": "harp",
+   "x": 110,
+   "y": 250,
+   "s": 0.95
+  },
+  {
+   "m": "water",
+   "x": 230,
+   "y": 285,
+   "s": 0.9
+  },
+  {
+   "m": "tent",
+   "x": 250,
+   "y": 210,
+   "s": 0.7
+  }
+ ],
+ "people": [
+  {
+   "id": "lord",
+   "name": "주",
+   "role": "god",
+   "gen": 0,
+   "desc": "세일에서 나와 행군하실 때 땅이 진동하고 산들이 녹았다고 노래하는 이스라엘의 주 하나님이십니다. 드보라에게 막강한 자를 지배하게 하셨습니다.",
+   "refs": [
+    "5:4",
+    "5:5",
+    "5:13"
+   ],
+   "part": "원수를 갚으신 분",
+   "intro": "이스라엘의 주 하나님 · 노래를 받으신 분"
+  },
+  {
+   "id": "abinoam",
+   "name": "아비노암",
+   "en": "Abinoam",
+   "gen": 0,
+   "desc": "바락의 아버지입니다.",
+   "refs": [
+    "5:1",
+    "5:12"
+   ],
+   "part": "바락의 아버지",
+   "look": "old",
+   "intro": "바락의 아버지 · 이름만 나오는 사람"
+  },
+  {
+   "id": "deborah",
+   "name": "드보라",
+   "en": "Deborah",
+   "gen": 1,
+   "desc": "바락과 함께 승리의 노래를 불렀습니다. 자신이 이스라엘 안에서 한 어머니로 일어날 때까지 촌락들의 거주자들이 그쳤다고 노래합니다.",
+   "refs": [
+    "5:1",
+    "5:7",
+    "5:12"
+   ],
+   "part": "노래한 여선지자",
+   "look": "woman",
+   "intro": "이스라엘의 어머니 · 승리를 노래한 여자"
+  },
+  {
+   "id": "barak",
+   "name": "바락",
+   "en": "Barak",
+   "gen": 1,
+   "desc": "아비노암의 아들입니다. 드보라와 함께 노래했고, 도보로 골짜기 가운데로 보내졌습니다.",
+   "refs": [
+    "5:1",
+    "5:12",
+    "5:15"
+   ],
+   "part": "함께 노래한 장수",
+   "look": "man",
+   "intro": "아비노암의 아들 · 골짜기로 내려간 장수"
+  },
+  {
+   "id": "heber",
+   "name": "헤벨",
+   "en": "Heber",
+   "gen": 1,
+   "desc": "켄족 사람으로 야엘의 남편입니다.",
+   "refs": [
+    "5:24"
+   ],
+   "part": "야엘의 남편",
+   "look": "man",
+   "intro": "켄족 사람 · 야엘의 남편"
+  },
+  {
+   "id": "jael",
+   "name": "야엘",
+   "en": "Jael",
+   "gen": 1,
+   "desc": "켄족 헤벨의 아내입니다. 물을 구한 시스라에게 젖을 주고, 망치로 그의 관자놀이를 내리쳤습니다. 노래는 그녀가 천막 안의 여자들보다 훨씬 더 복을 받으리라고 합니다.",
+   "refs": [
+    "5:24",
+    "5:25",
+    "5:26"
+   ],
+   "part": "시스라를 친 여자",
+   "look": "woman",
+   "intro": "헤벨의 아내 · 망치로 시스라를 친 여자"
+  },
+  {
+   "id": "sismother",
+   "name": "시스라의 어머니",
+   "gen": 0,
+   "desc": "창문에서 내다보며 아들의 병거가 왜 이리 늦느냐고 부르짖었습니다. 귀부인들과 함께 아들이 전리품을 나누고 있으리라고 여겼습니다.",
+   "refs": [
+    "5:28",
+    "5:29",
+    "5:30"
+   ],
+   "part": "아들을 기다린 어머니",
+   "look": "woman",
+   "intro": "시스라의 어머니 · 창가에서 기다린 여자"
+  },
+  {
+   "id": "sisera",
+   "name": "시스라",
+   "en": "Sisera",
+   "role": "enemy",
+   "gen": 1,
+   "desc": "가나안 쪽의 장수입니다. 하늘의 별들이 그를 대적하여 싸웠고, 야엘의 발 앞에 쓰러져 죽었습니다.",
+   "refs": [
+    "5:20",
+    "5:26",
+    "5:27"
+   ],
+   "part": "쓰러진 적의 장수",
+   "look": "man",
+   "intro": "가나안의 장수 · 야엘 앞에서 쓰러짐"
+  }
+ ],
+ "relations": [
+  {
+   "from": "lord",
+   "to": "deborah",
+   "type": "god",
+   "label": "다스리게 하심",
+   "ref": "5:13",
+   "directed": true
+  },
+  {
+   "from": "abinoam",
+   "to": "barak",
+   "type": "parent",
+   "label": "아들",
+   "ref": "5:1"
+  },
+  {
+   "from": "deborah",
+   "to": "barak",
+   "type": "other",
+   "label": "함께 노래",
+   "ref": "5:1"
+  },
+  {
+   "from": "heber",
+   "to": "jael",
+   "type": "spouse",
+   "label": "아내",
+   "ref": "5:24"
+  },
+  {
+   "from": "sismother",
+   "to": "sisera",
+   "type": "parent",
+   "label": "아들",
+   "ref": "5:28"
+  },
+  {
+   "from": "jael",
+   "to": "sisera",
+   "type": "enemy",
+   "label": "망치로 침",
+   "ref": "5:26",
+   "directed": true
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "seir",
+    "ref": "5:4"
+   },
+   {
+    "key": "edom",
+    "ref": "5:4"
+   },
+   {
+    "key": "sinai",
+    "name": "시나이산",
+    "at": [
+     33.97,
+     28.54
+    ],
+    "ref": "5:5"
+   },
+   {
+    "key": "taanach",
+    "name": "타아낙",
+    "at": [
+     35.22,
+     32.52
+    ],
+    "ref": "5:19"
+   },
+   {
+    "key": "megiddo",
+    "name": "메기도",
+    "at": [
+     35.18,
+     32.585
+    ],
+    "ref": "5:19"
+   },
+   {
+    "key": "kishon",
+    "name": "키숀강",
+    "at": [
+     35.08,
+     32.7
+    ],
+    "ref": "5:21"
+   }
+  ],
+  "views": [
+   {
+    "title": "① 세일과 시나이산에서 메기도까지",
+    "keys": [
+     "seir",
+     "edom",
+     "sinai",
+     "megiddo"
+    ]
+   },
+   {
+    "title": "② 싸움터 확대 — 타아낙·메기도·키숀강",
+    "keys": [
+     "taanach",
+     "megiddo",
+     "kishon"
+    ],
+    "minSpan": 0.5
+   }
+  ],
+  "unknown": [
+   {
+    "name": "메로즈",
+    "ref": "5:23",
+    "note": "주의 천사가 저주하라고 한 곳입니다. 자리가 알려지지 않아 지도에 찍지 않았습니다."
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "5:1-5",
+   "title": "주를 찬송하라 — 세일에서 나오신 주",
+   "marks": [
+    {
+     "v": "5:2",
+     "t": "g",
+     "ko": "백성이 기꺼이 자신들을 바쳤을 때",
+     "en": "when the people willingly offered themselves"
+    },
+    {
+     "v": "5:3",
+     "t": "u",
+     "ko": "내가 이스라엘의 주 하나님께 찬송을 노래하겠노라",
+     "en": "I will sing praise to the LORD God of Israel"
+    },
+    {
+     "v": "5:5",
+     "t": "u",
+     "ko": "바로 저 시나이산도 이스라엘의 주 하나님 앞에서 녹았나이다",
+     "en": "even that Sinai from before the LORD God of Israel"
+    }
+   ],
+   "english": [
+    {
+     "ref": "5:2",
+     "phrase": "Praise ye the LORD for the avenging of Israel",
+     "grammar": "옛 2인칭 복수 ye · 명령문",
+     "text": "ye는 ‘너희’입니다. 명령문에 주어 ye를 넣어 ‘너희는 찬송하라’고 힘주어 말합니다. for the avenging of Israel은 ‘이스라엘의 원수를 갚으신 일로 인하여’라는 뜻입니다."
+    },
+    {
+     "ref": "5:3",
+     "phrase": "I, even I, will sing unto the LORD",
+     "grammar": "강조 반복 even",
+     "text": "I를 한 번 더 말하면서 even(바로)을 붙여 ‘나, 바로 내가’라고 노래하는 사람을 강조합니다. 한글 본문도 ‘나, 바로 내가’로 옮겼습니다."
+    },
+    {
+     "ref": "5:4",
+     "phrase": "when thou wentest out of Seir",
+     "grammar": "옛 2인칭 동사 어미 -est",
+     "text": "thou(당신)와 함께 쓰는 동사에는 -est가 붙습니다. wentest는 went, marchedst는 marched의 옛 꼴입니다. 현대 영어라면 when you went out of Seir입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "avenging",
+     "ko": "원수를 갚음",
+     "ref": "5:2"
+    },
+    {
+     "w": "willingly",
+     "ko": "기꺼이",
+     "ref": "5:2"
+    },
+    {
+     "w": "princes",
+     "ko": "통치자들",
+     "ref": "5:3"
+    },
+    {
+     "w": "marchedst",
+     "ko": "행군하셨다(옛 2인칭)",
+     "ref": "5:4"
+    },
+    {
+     "w": "trembled",
+     "ko": "진동했다, 떨었다",
+     "ref": "5:4"
+    },
+    {
+     "w": "melted",
+     "ko": "녹았다",
+     "ref": "5:5"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "5:6-11",
+   "title": "이스라엘의 어머니로 일어난 드보라",
+   "marks": [
+    {
+     "v": "5:6",
+     "t": "u",
+     "ko": "대로들이 텅 비어 있었고",
+     "en": "the highways were unoccupied"
+    },
+    {
+     "v": "5:7",
+     "t": "u",
+     "ko": "내가 이스라엘 안에서 한 어머니로 일어날 때까지",
+     "en": "that I arose a mother in Israel"
+    },
+    {
+     "v": "5:8",
+     "t": "p",
+     "ko": "그들이 새로운 신들을 선택하였도다",
+     "en": "They chose new gods"
+    },
+    {
+     "v": "5:11",
+     "t": "u",
+     "ko": "주의 의로운 행적들",
+     "en": "the righteous acts of the LORD"
+    }
+   ],
+   "english": [
+    {
+     "ref": "5:7",
+     "phrase": "until that I Deborah arose",
+     "grammar": "옛 접속사 until that",
+     "text": "until that은 지금의 until과 같습니다. ‘나 드보라가 일어날 때까지’라는 뜻으로, 그 앞의 어려운 때가 드보라가 일어나면서 끝났음을 보여 줍니다.",
+     "key": "j05-1"
+    },
+    {
+     "ref": "5:8",
+     "phrase": "was there a shield or spear seen among forty thousand in Israel?",
+     "grammar": "수사 의문문",
+     "text": "답을 바라고 묻는 질문이 아니라 ‘하나도 보이지 않았다’는 뜻을 강하게 말하는 물음입니다."
+    },
+    {
+     "ref": "5:10",
+     "phrase": "ye that ride on white asses",
+     "grammar": "관계대명사 that(사람)",
+     "text": "that ride는 ‘타고 있는’이라는 뜻으로 ye(너희)를 꾸밉니다. 지금은 사람에게 who를 더 많이 쓰지만 KJV는 that도 씁니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "highways",
+     "ko": "대로, 큰길",
+     "ref": "5:6"
+    },
+    {
+     "w": "unoccupied",
+     "ko": "비어 있는",
+     "ref": "5:6"
+    },
+    {
+     "w": "travellers",
+     "ko": "여행자들",
+     "ref": "5:6"
+    },
+    {
+     "w": "byways",
+     "ko": "샛길들",
+     "ref": "5:6"
+    },
+    {
+     "w": "governors",
+     "ko": "지배자들",
+     "ref": "5:9"
+    },
+    {
+     "w": "archers",
+     "ko": "활 쏘는 자들",
+     "ref": "5:11"
+    },
+    {
+     "w": "rehearse",
+     "ko": "되풀이해 말하다",
+     "ref": "5:11"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j05-1",
+     "basis": "external",
+     "text": "스코필드는 사사(재판관)들을 이렇게 설명합니다. 사사들은 이스라엘이 하나님을 떠나 억눌림을 당하던 때에, 주께서 그 짐을 지우신 이스라엘 지파 사람들이었습니다. 그들은 예언자들의 영적 조상이었습니다. 곧 신정의 왕(하나님께서 직접 다스리시는 나라의 왕)이신 하나님께서 일으키셔서, 나라 안에서 그분을 대리하게 하신 사람들이었습니다.",
+     "spans": [
+      {
+       "text": "예언자들의 영적 조상",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 2장 「judges」 주석",
+       "where": "Judg. 2:16 주석",
+       "file": "memory-bank/세대주의_해설/scofield/judges-02.md",
+       "excerpt": "The judges were tribesmen in Israel upon whom the Lord laid the burden of Israel's apostate and oppressed state. They were the spiritual ancestors of the prophets; that is to say, men raised up of God, the theocratic King, to represent Him in the nation.",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/judges/judges-2.html"
+      }
+     ]
+    },
+    {
+     "id": "j05-2",
+     "basis": "external",
+     "text": "스코필드는 또 이렇게 말합니다. 구원자들 가운데 육체로 자랑할 것이 있는 사람은 하나도 없었습니다. 그는 그 예로 드보라를 들며 그녀가 여자였다는 점을 짚습니다. 고린도전서 1장 27–28절이 말하는 사람의 부류가 사사들 가운데 하나하나 드러난다는 것입니다. 드보라도 노래에서 자신을 ‘이스라엘 안에서 한 어머니’로 일어난 사람이라고 부릅니다.",
+     "spans": [
+      {
+       "text": "그녀가 여자였다는 점",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 사사기 2장 「judges」 주석",
+       "where": "Judg. 2:16 주석",
+       "file": "memory-bank/세대주의_해설/scofield/judges-02.md",
+       "excerpt": "Not one of the chosen deliverers had anything whereof to glory in the flesh.\n…\nDeborah, a woman;\n…\nEach of the classes mentioned in 1 Corinthians 1:27 1 Corinthians 1:28 is illustrated among the judges.",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/judges/judges-2.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "5:12-18",
+   "title": "함께 싸운 지파와 머뭇거린 지파",
+   "marks": [
+    {
+     "v": "5:12",
+     "t": "u",
+     "ko": "깨어라, 깨어라, 드보라여",
+     "en": "Awake, awake, Deborah"
+    },
+    {
+     "v": "5:16",
+     "t": "p",
+     "ko": "어찌하여 너는 양 떼들의 울음소리들을 들으려고 양 우리들 사이에 거하느냐?",
+     "en": "Why abodest thou among the sheepfolds, to hear the bleatings of the flocks?"
+    },
+    {
+     "v": "5:18",
+     "t": "g",
+     "ko": "죽기까지 자신들의 생명들을 위태롭게 하는 백성이었도다",
+     "en": "a people that jeoparded their lives unto the death"
+    }
+   ],
+   "english": [
+    {
+     "ref": "5:12",
+     "phrase": "lead thy captivity captive",
+     "grammar": "동족 표현(captivity … captive)",
+     "text": "같은 뿌리의 낱말 captivity(포로들)와 captive(사로잡힌)를 나란히 써서 ‘너의 포로들을 사로잡아 가라’는 승리의 명령을 힘 있게 말합니다."
+    },
+    {
+     "ref": "5:16",
+     "phrase": "Why abodest thou among the sheepfolds",
+     "grammar": "옛 2인칭 과거 abodest",
+     "text": "abodest는 abide(머물다)의 과거 abode에 thou에 맞춘 -est가 붙은 꼴입니다. ‘너는 어찌하여 양 우리들 사이에 머물렀느냐?’라는 꾸짖음입니다."
+    },
+    {
+     "ref": "5:18",
+     "phrase": "jeoparded their lives unto the death",
+     "grammar": "옛 동사 jeopard",
+     "text": "jeopard는 ‘위태롭게 하다’라는 옛 동사입니다. 지금은 jeopardize를 씁니다. unto the death는 ‘죽기까지’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "captivity",
+     "ko": "포로들, 사로잡힘",
+     "ref": "5:12"
+    },
+    {
+     "w": "dominion",
+     "ko": "지배, 다스림",
+     "ref": "5:13"
+    },
+    {
+     "w": "nobles",
+     "ko": "귀족들",
+     "ref": "5:13"
+    },
+    {
+     "w": "divisions",
+     "ko": "분열들",
+     "ref": "5:15"
+    },
+    {
+     "w": "sheepfolds",
+     "ko": "양 우리들",
+     "ref": "5:16"
+    },
+    {
+     "w": "bleatings",
+     "ko": "(양의) 울음소리들",
+     "ref": "5:16"
+    },
+    {
+     "w": "breaches",
+     "ko": "항만들, 갈라진 곳",
+     "ref": "5:17"
+    },
+    {
+     "w": "jeoparded",
+     "ko": "위태롭게 했다",
+     "ref": "5:18"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "5:19-23",
+   "title": "하늘의 별들과 키숀강, 그리고 메로즈",
+   "marks": [
+    {
+     "v": "5:20",
+     "t": "u",
+     "ko": "그들의 궤도들 가운데 있는 별들이 시스라를 대적하여 싸웠도다",
+     "en": "the stars in their courses fought against Sisera"
+    },
+    {
+     "v": "5:21",
+     "t": "u",
+     "ko": "키숀강이 그들을 소탕하였으니",
+     "en": "The river of Kishon swept them away"
+    },
+    {
+     "v": "5:23",
+     "t": "p",
+     "ko": "너희는 메로즈를 저주하라",
+     "en": "Curse ye Meroz"
+    },
+    {
+     "v": "5:23",
+     "t": "u",
+     "ko": "이는 그들이 주를 도우러 오지 않았기 때문이니",
+     "en": "because they came not to the help of the LORD"
+    }
+   ],
+   "english": [
+    {
+     "ref": "5:20",
+     "phrase": "the stars in their courses fought against Sisera",
+     "grammar": "전치사구 in their courses",
+     "text": "course는 ‘정해진 길, 궤도’입니다. in their courses는 ‘자기 궤도 가운데 있는’이라는 뜻으로 stars를 꾸밉니다."
+    },
+    {
+     "ref": "5:23",
+     "phrase": "Curse ye Meroz, said the angel of the LORD",
+     "grammar": "인용 뒤 도치 said + 주어",
+     "text": "말한 내용을 먼저 두고 said the angel of the LORD처럼 동사를 주어 앞에 둡니다. ‘…라고 주의 천사가 말했다’는 뜻입니다.",
+     "key": "j05-3"
+    },
+    {
+     "ref": "5:19",
+     "phrase": "they took no gain of money",
+     "grammar": "no + 명사 부정",
+     "text": "no gain은 ‘이득을 하나도’라는 강한 부정입니다. 가나안 왕들이 싸웠지만 돈 될 것을 전혀 얻지 못했다는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "courses",
+     "ko": "궤도들, 정해진 길",
+     "ref": "5:20"
+    },
+    {
+     "w": "swept",
+     "ko": "쓸어 갔다, 소탕했다",
+     "ref": "5:21"
+    },
+    {
+     "w": "ancient",
+     "ko": "고대의, 오래된",
+     "ref": "5:21"
+    },
+    {
+     "w": "trodden",
+     "ko": "짓밟았다(tread의 과거분사)",
+     "ref": "5:21"
+    },
+    {
+     "w": "horsehoofs",
+     "ko": "말발굽들",
+     "ref": "5:22"
+    },
+    {
+     "w": "pransings",
+     "ko": "(말이) 뛰어오름, 도약들",
+     "ref": "5:22"
+    },
+    {
+     "w": "bitterly",
+     "ko": "독하게, 몹시",
+     "ref": "5:23"
+    },
+    {
+     "w": "inhabitants",
+     "ko": "거주자들",
+     "ref": "5:23"
+    }
+   ],
+   "comments": [
+    {
+     "id": "j05-3",
+     "basis": "external",
+     "text": "23절에서 메로즈를 저주하라고 말한 이는 ‘주의 천사’입니다. 스코필드는 구약에서 ‘주의 천사’(때로는 ‘하나님의 천사’)라는 표현이 대개 천사의 모습으로 계신 하나님의 임재를 뜻한다고 설명합니다.",
+     "spans": [
+      {
+       "text": "천사의 모습으로 계신 하나님의 임재",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 히브리서 1장 4절 「Angel」 요약 주석",
+       "where": "Heb. 1:4 주석",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "In the O.T. the expression “the angel of the Lord” (sometimes “of God”) usually implies the presence of Deity in angelic form",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    },
+    {
+     "id": "j05-4",
+     "basis": "external",
+     "text": "스코필드는 ‘천사’라는 말이 본래 ‘사자(使者)’, 곧 소식을 전하는 이라는 뜻이라고 풀이합니다. 이 말은 하나님께도, 사람에게도, 그리고 힘과 지혜를 지닌 피조된 영적 존재들에게도 쓰인다는 것입니다.",
+     "spans": [
+      {
+       "text": "소식을 전하는 이",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 성경(1917) 히브리서 1장 4절 「Angel」 요약 주석",
+       "where": "Heb. 1:4 주석",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Angel, “messenger,” is used of God, of men, and of an order of created spiritual beings whose chief attributes are strength and wisdom",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "5:24-27",
+   "title": "천막 안의 야엘",
+   "marks": [
+    {
+     "v": "5:24",
+     "t": "u",
+     "ko": "켄족 헤벨의 아내 야엘은 다른 여자들보다 훨씬 더 복을 받으리니",
+     "en": "Blessed above women shall Jael the wife of Heber the Kenite be"
+    },
+    {
+     "v": "5:26",
+     "t": "u",
+     "ko": "그녀가 망치로 시스라를 쳤고",
+     "en": "with the hammer she smote Sisera"
+    },
+    {
+     "v": "5:27",
+     "t": "p",
+     "ko": "그가 수그린 곳에서 그는 죽은 채 쓰러져 버렸도다",
+     "en": "where he bowed, there he fell down dead"
+    }
+   ],
+   "english": [
+    {
+     "ref": "5:24",
+     "phrase": "Blessed above women shall Jael the wife of Heber the Kenite be",
+     "grammar": "도치(보어 강조)",
+     "text": "보통 순서는 Jael … shall be blessed above women입니다. Blessed(복을 받은)를 맨 앞에 두어 야엘이 받을 복을 강조합니다."
+    },
+    {
+     "ref": "5:25",
+     "phrase": "He asked water, and she gave him milk",
+     "grammar": "대조 구문",
+     "text": "water(물)와 milk(젖)를 맞세워, 물을 구한 시스라에게 야엘이 그보다 나은 것을 주었다는 장면을 짧게 보여 줍니다."
+    },
+    {
+     "ref": "5:27",
+     "phrase": "he bowed, he fell, he lay down",
+     "grammar": "접속사 없는 나열",
+     "text": "and 없이 동사를 이어 붙여, 시스라가 무너지는 모습을 한 동작씩 끊어 보여 줍니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "lordly",
+     "ko": "귀한, 기품 있는",
+     "ref": "5:25"
+    },
+    {
+     "w": "butter",
+     "ko": "버터, 엉긴 젖",
+     "ref": "5:25"
+    },
+    {
+     "w": "nail",
+     "ko": "못",
+     "ref": "5:26"
+    },
+    {
+     "w": "hammer",
+     "ko": "망치",
+     "ref": "5:26"
+    },
+    {
+     "w": "smote",
+     "ko": "쳤다(smite의 과거)",
+     "ref": "5:26"
+    },
+    {
+     "w": "pierced",
+     "ko": "꿰뚫었다",
+     "ref": "5:26"
+    },
+    {
+     "w": "temples",
+     "ko": "관자놀이",
+     "ref": "5:26"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  },
+  {
+   "ref": "5:28-31",
+   "title": "창가에서 기다린 시스라의 어머니",
+   "marks": [
+    {
+     "v": "5:28",
+     "t": "u",
+     "ko": "어찌하여 그의 병거가 오는 것이 이리도 오래 걸리느냐?",
+     "en": "Why is his chariot so long in coming?"
+    },
+    {
+     "v": "5:31",
+     "t": "p",
+     "ko": "당신의 모든 원수들이 이처럼 멸망하게 하소서",
+     "en": "So let all thine enemies perish, O LORD"
+    },
+    {
+     "v": "5:31",
+     "t": "g",
+     "ko": "그분을 사랑하는 자들은 해가 그의 강력함으로 전진할 때와 같게 하소서",
+     "en": "let them that love him be as the sun when he goeth forth in his might"
+    }
+   ],
+   "english": [
+    {
+     "ref": "5:28",
+     "phrase": "why tarry the wheels of his chariots?",
+     "grammar": "옛 의문문 어순(동사 + 주어)",
+     "text": "지금은 why do the wheels … tarry?라고 하지만, KJV는 조동사 do 없이 동사 tarry를 주어 앞에 둡니다. tarry는 ‘지체하다’입니다."
+    },
+    {
+     "ref": "5:30",
+     "phrase": "Have they not sped?",
+     "grammar": "부정 의문문",
+     "text": "‘그들이 이루지 않았겠느냐?’는 뜻으로, 당연히 이겼으리라는 기대를 담은 물음입니다. sped는 speed(성공하다)의 과거분사입니다."
+    },
+    {
+     "ref": "5:31",
+     "phrase": "let them that love him be as the sun",
+     "grammar": "let + 목적어 + 동사원형(기원)",
+     "text": "let은 여기서 ‘~하게 하소서’라는 바람을 나타냅니다. them that love him은 ‘그분을 사랑하는 자들’입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "lattice",
+     "ko": "격자창",
+     "ref": "5:28"
+    },
+    {
+     "w": "tarry",
+     "ko": "지체하다",
+     "ref": "5:28"
+    },
+    {
+     "w": "sped",
+     "ko": "이루었다, 성공했다",
+     "ref": "5:30"
+    },
+    {
+     "w": "damsel",
+     "ko": "젊은 여인",
+     "ref": "5:30"
+    },
+    {
+     "w": "divers",
+     "ko": "여러 가지의",
+     "ref": "5:30"
+    },
+    {
+     "w": "needlework",
+     "ko": "바느질 수",
+     "ref": "5:30"
+    },
+    {
+     "w": "perish",
+     "ko": "멸망하다",
+     "ref": "5:31"
+    }
+   ],
+   "comments": [],
+   "plain": true
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "드보라와 아비노암의 아들 바락이 그날에 노래했습니다.",
+    "verse": "5:1",
+    "u": [
+     "그날에 노래했습니다"
+    ]
+   },
+   {
+    "text": "노래는 백성이 기꺼이 자신들을 바쳤을 때 이스라엘의 원수를 갚으신 주를 찬송하라는 말로 시작합니다.",
+    "verse": "5:2",
+    "u": [
+     "기꺼이 자신들을 바쳤을 때"
+    ]
+   },
+   {
+    "text": "주께서 세일에서 나오셨을 때 땅이 진동하고 시나이산도 주 앞에서 녹았습니다.",
+    "verse": "5:5",
+    "u": [
+     "시나이산도 주 앞에서 녹았습니다"
+    ]
+   },
+   {
+    "text": "샴갈과 야엘의 날들에 대로들이 텅 비고 여행자들이 샛길로 다녔습니다.",
+    "verse": "5:6",
+    "u": [
+     "대로들이 텅 비고"
+    ]
+   },
+   {
+    "text": "드보라는 자신이 이스라엘 안에서 한 어머니로 일어났다고 노래합니다.",
+    "verse": "5:7",
+    "u": [
+     "한 어머니로 일어났다고"
+    ]
+   },
+   {
+    "text": "스코필드는 사사들을 신정의 왕이신 하나님께서 일으키셔서 그분을 대리하게 하신 사람들이라고 설명합니다.",
+    "key": "j05-1",
+    "u": [
+     "그분을 대리하게 하신 사람들"
+    ]
+   },
+   {
+    "text": "스코필드는 구원자들 가운데 육체로 자랑할 것이 있는 사람은 하나도 없었다고 하며 드보라를 예로 듭니다.",
+    "key": "j05-2",
+    "u": [
+     "육체로 자랑할 것이 있는 사람은 하나도 없었다고"
+    ]
+   },
+   {
+    "text": "스불룬과 납탈리는 죽기까지 생명을 위태롭게 했지만, 르우벤은 양 우리들 사이에 머물렀습니다.",
+    "verse": "5:18",
+    "u": [
+     "죽기까지 생명을 위태롭게"
+    ]
+   },
+   {
+    "text": "하늘의 별들이 시스라를 대적하여 싸웠고 키숀강이 적들을 쓸어 갔습니다.",
+    "verse": "5:21",
+    "u": [
+     "키숀강이 적들을 쓸어 갔습니다"
+    ]
+   },
+   {
+    "text": "주의 천사는 주를 도우러 오지 않은 메로즈를 저주하라고 했습니다.",
+    "verse": "5:23",
+    "u": [
+     "메로즈를 저주하라고"
+    ]
+   },
+   {
+    "text": "스코필드는 구약의 ‘주의 천사’가 대개 천사의 모습으로 계신 하나님의 임재를 뜻한다고 설명합니다.",
+    "key": "j05-3",
+    "u": [
+     "하나님의 임재"
+    ]
+   },
+   {
+    "text": "야엘은 물을 구한 시스라에게 젖을 주고 망치로 그를 쳤습니다.",
+    "verse": "5:26",
+    "u": [
+     "망치로 그를 쳤습니다"
+    ]
+   },
+   {
+    "text": "시스라의 어머니는 창가에서 아들의 병거가 왜 이리 늦느냐고 부르짖었습니다.",
+    "verse": "5:28",
+    "u": [
+     "병거가 왜 이리 늦느냐고"
+    ]
+   },
+   {
+    "text": "노래는 주의 원수들은 멸망하고 그분을 사랑하는 자들은 해와 같게 해 달라고 끝맺고, 그 지역은 사십 년 동안 안식을 얻었습니다.",
+    "verse": "5:31",
+    "u": [
+     "사십 년 동안 안식을"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "5:1",
+    "q": "이 노래를 부른 두 사람은 누구입니까?",
+    "a": "드보라, 바락"
+   },
+   {
+    "verse": "5:1",
+    "q": "바락은 누구의 아들입니까?",
+    "a": "아비노암"
+   },
+   {
+    "verse": "5:2",
+    "q": "백성이 어떻게 했을 때 주를 찬송하라고 합니까?",
+    "a": "기꺼이 자신들을 바쳤을 때"
+   },
+   {
+    "verse": "5:4",
+    "q": "주께서 어디에서 나오셨을 때 땅이 진동했습니까?",
+    "a": "세일, 에돔의 들판"
+   },
+   {
+    "verse": "5:5",
+    "q": "주 앞에서 녹았다고 노래한 산의 이름은 무엇입니까?",
+    "a": "시나이산"
+   },
+   {
+    "verse": "5:6",
+    "q": "누구의 날들에 대로들이 텅 비어 있었습니까?",
+    "a": "샴갈, 야엘"
+   },
+   {
+    "verse": "5:7",
+    "q": "드보라는 이스라엘 안에서 무엇으로 일어났다고 노래합니까?",
+    "a": "한 어머니"
+   },
+   {
+    "verse": "5:8",
+    "q": "그들이 선택한 것은 무엇이었습니까?",
+    "a": "새로운 신들"
+   },
+   {
+    "verse": "5:8",
+    "q": "이스라엘의 몇 명 가운데 방패나 창이 보였느냐고 묻습니까?",
+    "a": "사만 명"
+   },
+   {
+    "key": "j05-1",
+    "q": "스코필드는 사사들을 누구의 영적 조상이라고 합니까?",
+    "a": "예언자들"
+   },
+   {
+    "key": "j05-1",
+    "q": "스코필드는 사사들을 일으키신 하나님을 무엇이라고 부릅니까?",
+    "a": "신정의 왕"
+   },
+   {
+    "key": "j05-2",
+    "q": "스코필드에 따르면 하나님이 고르신 구원자들 가운데 육체로 자랑할 것이 있는 사람은 몇이나 있었습니까?",
+    "a": "하나도 없었습니다."
+   },
+   {
+    "key": "j05-2",
+    "q": "스코필드가 드보라를 예로 들며 짚은 점은 무엇입니까?",
+    "a": "그녀가 여자였다는 점"
+   },
+   {
+    "verse": "5:12",
+    "q": "바락에게 일어나서 무엇을 하라고 합니까?",
+    "a": "너의 포로들을 사로잡아 가라"
+   },
+   {
+    "verse": "5:14",
+    "q": "스불룬에서 내려온 자들은 무엇을 다루는 자들이었습니까?",
+    "a": "저술가의 펜"
+   },
+   {
+    "verse": "5:15",
+    "q": "잇사칼의 통치자들은 누구와 함께 있었습니까?",
+    "a": "드보라"
+   },
+   {
+    "verse": "5:16",
+    "q": "르우벤은 무엇을 들으려고 양 우리들 사이에 머물렀습니까?",
+    "a": "양 떼들의 울음소리들"
+   },
+   {
+    "verse": "5:17",
+    "q": "단은 어디에 남아 있었습니까?",
+    "a": "선박들"
+   },
+   {
+    "verse": "5:18",
+    "q": "죽기까지 생명을 위태롭게 한 두 지파는 어디입니까?",
+    "a": "스불룬, 납탈리"
+   },
+   {
+    "verse": "5:19",
+    "q": "가나안의 왕들은 메기도의 물들 옆 어디에서 싸웠습니까?",
+    "a": "타아낙"
+   },
+   {
+    "verse": "5:20",
+    "q": "하늘에서 시스라를 대적하여 싸운 것은 무엇입니까?",
+    "a": "별들"
+   },
+   {
+    "verse": "5:21",
+    "q": "그들을 소탕한 강의 이름은 무엇입니까?",
+    "a": "키숀강"
+   },
+   {
+    "verse": "5:23",
+    "q": "주의 천사가 저주하라고 한 곳은 어디입니까?",
+    "a": "메로즈"
+   },
+   {
+    "key": "j05-3",
+    "q": "스코필드는 구약에서 ‘주의 천사’라는 표현이 대개 무엇을 뜻한다고 합니까?",
+    "a": "천사의 모습으로 계신 하나님의 임재"
+   },
+   {
+    "key": "j05-4",
+    "q": "스코필드가 풀이한 ‘천사’라는 말의 본래 뜻은 무엇입니까?",
+    "a": "사자(使者), 곧 소식을 전하는 이"
+   },
+   {
+    "verse": "5:24",
+    "q": "야엘은 누구의 아내입니까?",
+    "a": "헤벨"
+   },
+   {
+    "verse": "5:25",
+    "q": "시스라가 물을 구하자 야엘은 무엇을 주었습니까?",
+    "a": "동물의 젖"
+   },
+   {
+    "verse": "5:26",
+    "q": "야엘이 오른손에 댄 것은 무엇입니까?",
+    "a": "기술자들의 망치"
+   },
+   {
+    "verse": "5:28",
+    "q": "시스라의 어머니는 어디에서 내다보았습니까?",
+    "a": "창문"
+   },
+   {
+    "verse": "5:31",
+    "q": "그 뒤 그 지역은 몇 년 동안 안식을 얻었습니까?",
+    "a": "사십 년"
+   }
+  ],
+  "faq": [
+   {
+    "q": "사사(재판관)는 어떤 사람들입니까?",
+    "key": "j05-1"
+   },
+   {
+    "q": "사사들은 예언자들과 어떤 관계가 있습니까?",
+    "key": "j05-1"
+   },
+   {
+    "q": "‘신정의 왕’이란 무슨 뜻입니까?",
+    "key": "j05-1"
+   },
+   {
+    "q": "하나님은 왜 드보라 같은 사람을 구원자로 세우셨습니까?",
+    "key": "j05-2"
+   },
+   {
+    "q": "사사들 가운데 자랑할 만한 사람이 있었습니까?",
+    "key": "j05-2"
+   },
+   {
+    "q": "드보라가 자신을 ‘이스라엘의 어머니’라고 한 것은 무슨 뜻입니까?",
+    "key": "j05-2"
+   },
+   {
+    "q": "고린도전서 1장 27–28절이 사사기와 무슨 관계가 있습니까?",
+    "key": "j05-2"
+   },
+   {
+    "q": "메로즈를 저주하라고 말한 이는 누구입니까?",
+    "key": "j05-3"
+   },
+   {
+    "q": "구약의 ‘주의 천사’는 보통의 천사입니까?",
+    "key": "j05-3"
+   },
+   {
+    "q": "‘천사’라는 말은 본래 무슨 뜻입니까?",
+    "key": "j05-4"
+   },
+   {
+    "q": "‘천사’라는 말은 누구에게 쓰입니까?",
+    "key": "j05-4"
+   },
+   {
+    "q": "피조된 천사들은 어떤 특징을 지녔습니까?",
+    "key": "j05-4"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "사사(재판관)",
+    "key": "j05-1",
+    "text": "이스라엘이 하나님을 떠나 억눌릴 때 주께서 일으키신 지파 사람들. 스코필드는 예언자들의 영적 조상이라고 설명합니다."
+   },
+   {
+    "term": "신정의 왕",
+    "key": "j05-1",
+    "text": "하나님께서 직접 다스리시는 나라의 왕이라는 뜻. 스코필드는 사사들을 일으키신 하나님을 이렇게 부릅니다."
+   },
+   {
+    "term": "주의 천사",
+    "key": "j05-3",
+    "text": "스코필드는 구약의 이 표현이 대개 천사의 모습으로 계신 하나님의 임재를 뜻한다고 설명합니다."
+   },
+   {
+    "term": "메로즈",
+    "verse": "5:23",
+    "text": "주를 도우러 오지 않아 주의 천사가 저주하라고 한 곳입니다."
+   },
+   {
+    "term": "키숀강",
+    "verse": "5:21",
+    "text": "시스라의 군대를 쓸어 간 고대의 강입니다."
+   },
+   {
+    "term": "켄족",
+    "verse": "5:24",
+    "text": "야엘의 남편 헤벨이 속한 족속입니다."
+   }
+  ]
+ }
+}
