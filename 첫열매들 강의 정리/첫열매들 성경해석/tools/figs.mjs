@@ -7,6 +7,7 @@ import os from "os";
 import { fileURLToPath } from "url";
 import sharp from "sharp";
 import { edgeShot } from "./edge.mjs";
+import { storyDirs } from "./parse.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = process.argv[2];
@@ -15,7 +16,7 @@ let made = 0, kept = 0;
 const overflow = [], scaled = [];
 // 셋째 인자부터: 찍을 이야기 번호(예: 02 05). 없으면 전부
 const only = process.argv.slice(3);
-for (const d of fs.readdirSync(root).filter((d) => /^\d\d_/.test(d) && (!only.length || only.includes(d.slice(0, 2)))).sort()) {
+for (const { d } of storyDirs(root).filter((x) => !only.length || only.map(Number).includes(x.n))) {
   const figDir = path.join(root, d, "figs");
   if (!fs.existsSync(figDir)) continue;
   const outDir = path.join(root, d, "slides");

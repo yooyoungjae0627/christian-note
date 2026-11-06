@@ -1,5 +1,6 @@
 // 원고 읽기 + 검사. PDF·EPUB 빌드와 검사 프로그램이 함께 쓴다.
-// 책 = book.json + 이야기 폴더들(NN_이름/story.txt, transcript_raw.txt, slides/*.jpg)
+// 책 = book.json + 이야기 폴더들(이름/story.txt, transcript_raw.txt, slides/*.jpg)
+// 폴더 이름에 번호를 넣지 않는다(사용자 지시 2026-11-07). 책 번호는 story.txt의 @story 첫 칸.
 import fs from "fs";
 import path from "path";
 
@@ -26,19 +27,28 @@ export function inline(s) {
   return out;
 }
 
+// 이야기 폴더 = story.txt가 있는 하위 폴더, 책 번호 = @story 첫 칸 (번호 순으로)
+export function storyDirs(root) {
+  return fs.readdirSync(root).filter((d) => fs.existsSync(path.join(root, d, "story.txt"))).map((d) => {
+    const line = fs.readFileSync(path.join(root, d, "story.txt"), "utf8").split(/\r?\n/).find((l) => l.startsWith("@story|"));
+    if (!line) throw new Error(`[${d}] @story 줄 없음`);
+    return { d, n: Number(line.split("|")[1]) };
+  }).sort((a, b) => a.n - b.n);
+}
+
 export function loadBook(root) {
   const book = JSON.parse(fs.readFileSync(path.join(root, "book.json"), "utf8"));
-  const dirs = fs.readdirSync(root).filter((d) => /^\d\d_/.test(d) && fs.statSync(path.join(root, d)).isDirectory()).sort();
+  const all = storyDirs(root);
+  const dirs = all.map((x) => x.d);
   // 강의 1개 = 책 1권(사용자 지시 2026-10-09). 책 번호는 명령의 세 번째 인자(build_pdf.mjs <원본> out NN) 또는 ONLY=NN
   const arg = process.argv[4];
   const only = /^\d+$/.test(arg || "") ? Number(arg) : process.env.ONLY ? Number(process.env.ONLY) : 0;
-  const nums = dirs.map((d) => parseInt(d, 10));
-  nums.forEach((n, i) => { if (n !== i + 1) throw new Error(`이야기 폴더 번호가 이어지지 않음: ${dirs[i]} (기대 ${i + 1})`); });
+  const nums = all.map((x) => x.n);
+  nums.forEach((n, i) => { if (n !== i + 1) throw new Error(`책 번호(@story)가 이어지지 않거나 겹침: ${dirs[i]} = ${n} (기대 ${i + 1})`); });
   if (!only) throw new Error("책 번호(NN)가 필요합니다: 강의 하나가 책 한 권입니다 — node build_pdf.mjs <원본> out NN");
   const d = dirs[nums.indexOf(only)];
   if (!d) throw new Error(`${only}번 이야기 폴더 없음`);
   const S = parseStory(path.join(root, d));
-  if (S.n !== only) throw new Error(`[${d}] @story 번호 ${S.n} ≠ 폴더 번호 ${only}`);
   book.stories = [S];
   const nn = String(only).padStart(2, "0");
   book.series = book.title;
@@ -51,7 +61,7 @@ export function loadBook(root) {
   if (!S.coverText || !S.coverText.length) throw new Error(`[${d}] @cover(표지 핵심 문장) 없음`);
   book.coverArt = fs.readFileSync(art, "utf8").replace(/<\?xml[^>]*>\s*/, "").replace(/<svg\b/, '<svg width="78mm" height="78mm"');
   book.coverMotto = S.coverText;
-  const fileBase = d.replace(/^\d+_/, ""); // 완성본 파일 이름에는 번호를 붙이지 않는다(2026-11-04)
+  const fileBase = d; // 완성본 파일 이름 = 폴더 이름(번호 없음 — 파일 2026-11-04, 폴더 2026-11-07)
   book.pdfName = `${fileBase}.pdf`;
   book.epubName = `${fileBase}.epub`;
   book.uid = book.uid.replace(/.{3}$/, "b" + nn); // 책마다 다른 uid(같은 책은 다시 빌드해도 같은 uid)

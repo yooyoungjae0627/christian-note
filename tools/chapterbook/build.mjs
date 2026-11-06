@@ -11,7 +11,7 @@ import { R, TMP, BOOKS, TOPIC, mod, loadChapter, esc } from "./lib.mjs";
 import { chapterParts, relationsHtml, learning, sourcesTable, toc, page, howto, cover, qrFile } from "./html.mjs";
 import { coverSvg } from "./art.mjs";
 import * as comic from "./comic.mjs";
-import { edgePrint } from "../../첫열매들 강의 정리/원본/tools/edge.mjs";
+import { edgePrint } from "../../첫열매들 강의 정리/첫열매들 성경해석/tools/edge.mjs";
 
 const args = process.argv.slice(2);
 const oi = args.indexOf("--out"); const OUTDIR = oi >= 0 ? path.resolve(args.splice(oi, 2)[1]) : null;
