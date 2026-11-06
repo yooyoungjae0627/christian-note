@@ -1,0 +1,880 @@
+{
+ "chapter": 27,
+ "subtitle": "번제단과 성막 뜰",
+ "motto": "죄가 얼마나 무서운 것인지 보여 주시려고 이것을 하게 하셨습니다",
+ "motto_comment": "x27-1",
+ "cover": [
+  {
+   "m": "glow",
+   "x": 170,
+   "y": 88,
+   "s": 0.8
+  },
+  {
+   "m": "altar",
+   "x": 120,
+   "y": 262,
+   "s": 1
+  },
+  {
+   "m": "tent",
+   "x": 240,
+   "y": 250,
+   "s": 0.9
+  }
+ ],
+ "people": [
+  {
+   "id": "lord",
+   "name": "주",
+   "role": "god",
+   "gen": 0,
+   "desc": "모세에게 놋 제단과 성막 뜰을 만드는 법을 일러 주시고, 등불이 항상 타오르게 할 기름을 가져오게 하신 분입니다.",
+   "refs": [
+    "27:1",
+    "27:8",
+    "27:20"
+   ],
+   "part": "제단과 뜰을 명하신 분",
+   "intro": "제단과 뜰을 명하신 · 등불을 맡기신 분"
+  },
+  {
+   "id": "aaron",
+   "name": "아론",
+   "en": "Aaron",
+   "gen": 1,
+   "desc": "아들들과 함께 회중의 성막 안 휘장 밖에서 저녁부터 아침까지 등불을 주 앞에 정돈해야 하는 사람입니다.",
+   "refs": [
+    "27:21"
+   ],
+   "part": "등불을 정돈할 사람",
+   "look": "old",
+   "intro": "아들들과 함께 · 등불을 정돈할 사람"
+  },
+  {
+   "id": "moses",
+   "name": "모세",
+   "en": "Moses",
+   "gen": 1,
+   "desc": "산속에서 제단의 모양을 보았고, 이스라엘 자녀들에게 순수한 올리브기름을 가져오도록 명령해야 하는 사람입니다.",
+   "refs": [
+    "27:8",
+    "27:20"
+   ],
+   "part": "명령을 전할 지도자",
+   "look": "old",
+   "intro": "산에서 제단을 본 · 기름을 명할 지도자"
+  },
+  {
+   "id": "israel",
+   "name": "이스라엘 자녀들",
+   "gen": 1,
+   "desc": "빛을 내기 위해 압착된 순수한 올리브기름을 가져와야 하는 백성입니다.",
+   "refs": [
+    "27:20",
+    "27:21"
+   ],
+   "part": "기름을 가져올 백성",
+   "look": "group",
+   "intro": "순수한 기름을 · 가져올 백성"
+  },
+  {
+   "id": "sons",
+   "name": "아론의 아들들",
+   "gen": 2,
+   "desc": "아론과 함께 등불을 주 앞에서 정돈해야 하는 사람들입니다. 이 일은 대대로 이어지는 규례였습니다.",
+   "refs": [
+    "27:21"
+   ],
+   "part": "함께 섬길 아들들",
+   "look": "group",
+   "intro": "아론의 아들들 · 대대로 등불을 지킬 사람"
+  }
+ ],
+ "relations": [
+  {
+   "from": "lord",
+   "to": "moses",
+   "type": "god",
+   "label": "보여 주심",
+   "ref": "27:8",
+   "directed": true
+  },
+  {
+   "from": "moses",
+   "to": "israel",
+   "type": "other",
+   "label": "명령함",
+   "ref": "27:20"
+  },
+  {
+   "from": "aaron",
+   "to": "sons",
+   "type": "parent",
+   "label": "아들들",
+   "ref": "27:21"
+  }
+ ],
+ "sections": [
+  {
+   "ref": "27:1-8",
+   "title": "놋으로 입힌 번제단",
+   "marks": [
+    {
+     "v": "27:1",
+     "t": "u",
+     "ko": "싯팀 목재로 제단을 만들지니",
+     "en": "make an altar of shittim wood"
+    },
+    {
+     "v": "27:2",
+     "t": "u",
+     "ko": "그것의 모서리들 네 개 위에 그것의 뿔들을 만들지니라",
+     "en": "make the horns of it upon the four corners thereof"
+    },
+    {
+     "v": "27:2",
+     "t": "u",
+     "ko": "놋으로 입힐지니라",
+     "en": "overlay it with brass"
+    },
+    {
+     "v": "27:8",
+     "t": "y",
+     "ko": "산속에서 너에게 보여진 것처럼",
+     "en": "as it was shewed thee in the mount"
+    }
+   ],
+   "english": [
+    {
+     "ref": "27:2",
+     "phrase": "his horns shall be of the same",
+     "grammar": "옛 소유격 his + be of",
+     "text": "his는 제단을 가리키는 옛 소유격(=its)입니다. be of the same은 ‘같은 것으로 이루어지다’라는 뜻입니다. 뿔을 따로 붙이지 않고 제단과 한 몸으로 만들라는 말입니다."
+    },
+    {
+     "ref": "27:8",
+     "phrase": "Hollow with boards shalt thou make it",
+     "grammar": "도치 구문",
+     "text": "Hollow with boards(판자들로 속이 비게)를 앞에 두어 shalt가 thou 앞으로 나왔습니다. 보통 순서는 thou shalt make it hollow with boards입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "altar",
+     "ko": "제단",
+     "ref": "27:1"
+    },
+    {
+     "w": "foursquare",
+     "ko": "정사각형의",
+     "ref": "27:1"
+    },
+    {
+     "w": "horns",
+     "ko": "뿔들",
+     "ref": "27:2"
+    },
+    {
+     "w": "ashes",
+     "ko": "재",
+     "ref": "27:3"
+    },
+    {
+     "w": "fleshhooks",
+     "ko": "고기 갈고리",
+     "ref": "27:3"
+    },
+    {
+     "w": "firepans",
+     "ko": "불판",
+     "ref": "27:3"
+    },
+    {
+     "w": "grate",
+     "ko": "격자망, 쇠살",
+     "ref": "27:4"
+    },
+    {
+     "w": "hollow",
+     "ko": "속이 빈",
+     "ref": "27:8"
+    }
+   ],
+   "comments": [
+    {
+     "id": "x27-1",
+     "basis": "linked",
+     "text": "강의는 레위기 4장의 속죄제를 읽으며 이 제단에서 일어난 일을 보여 줍니다. 죄를 지은 사람은 양을 가지고 성막으로 가서 그 제물의 머리 위에 자기 손을 얹고 죄를 고백합니다. 그러면 그 죄가 손을 타고 팔을 타고 양에게 넘어갑니다. 그 양은 죽어야 하고, 각자 자기가 직접 죽여야 합니다. 하나님께서는 죄가 얼마나 무서운 것인지 보여 주시려고 이것을 하게 하셨습니다. 제사장은 그 피를 번제물의 제단의 뿔들 위에 바르고, 그 피를 전부 제단 바닥에 쏟아부었습니다.",
+     "spans": [
+      {
+       "text": "죄가 얼마나 무서운 것인지 보여 주시려고 이것을 하게 하셨습니다",
+       "level": 3
+      },
+      {
+       "text": "번제물의 제단의 뿔들 위에",
+       "level": 1
+      }
+     ],
+     "evidence": [
+      {
+       "type": "pdf",
+       "source": "밀크 교재 6강 「할례자들에 대한 복음」",
+       "file": "Milk/할례자들에대한복음_밀크6강.pdf",
+       "pages": [
+        25,
+        26
+       ],
+       "excerpt": "양을 가지고 옵니다. 그다음이 제일 중요합니다. 여러분, 여기를 보세요. '그 제물의 머리 위에 자기 손을 얹고', 이것이 중요합니다. 양 머리 위에 손을 얹은 다음 \"하나님, 제가 아까 당황해서 거짓말을 했습니다\" 하고 고백합니다. 그러면 거짓말한 그 죄가 저를 떠나서, 손을 타고 팔을 타고 양에게 넘어갑니다.\n…\n그런데 여러분, 이 양은 각자 자기가 직접 죽여야 합니다.\n…\n하나님께서는 죄가 얼마나 무서운 것인지 보여 주시려고 이것을 하게 하신 것입니다.\n…\n그리고 제사장은 자기 손가락으로 그것의 피를 취하여 번제물의 제단의 뿔들 위에 그것을 바르고 그것의 피를 전부 제단 바닥에 쏟아부을지니라…",
+       "url": "https://youtu.be/GlcfFvbXGPk?t=1004",
+       "video": {
+        "how": "그 쪽에 실린 구간 주소"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "27:9-15",
+   "title": "아마포를 두른 성막의 뜰",
+   "marks": [
+    {
+     "v": "27:9",
+     "t": "u",
+     "ko": "성막의 뜰을 만들지니라",
+     "en": "make the court of the tabernacle"
+    },
+    {
+     "v": "27:9",
+     "t": "u",
+     "ko": "가늘게 꼬아진 아마로",
+     "en": "of fine twined linen"
+    },
+    {
+     "v": "27:10",
+     "t": "u",
+     "ko": "그 기둥들의 갈고리들과 그것들의 쇠시리들은 은으로",
+     "en": "the hooks of the pillars and their fillets shall be of silver"
+    }
+   ],
+   "english": [
+    {
+     "ref": "27:9",
+     "phrase": "an hundred cubits long for one side",
+     "grammar": "옛 관사 an hundred",
+     "text": "KJV는 hundred 앞에도 an을 씁니다. 현대 영어로는 a hundred cubits long입니다. 뜰의 남쪽 한 면이 일백 큐빗이라는 뜻입니다."
+    },
+    {
+     "ref": "27:10",
+     "phrase": "their fillets shall be of silver",
+     "grammar": "be of + 재료",
+     "text": "be of silver는 ‘은으로 되어 있다’는 뜻입니다. fillets는 기둥을 두르는 띠(쇠시리)입니다.",
+     "key": "x27-3"
+    }
+   ],
+   "vocab": [
+    {
+     "w": "court",
+     "ko": "뜰",
+     "ref": "27:9"
+    },
+    {
+     "w": "hangings",
+     "ko": "거는 천들",
+     "ref": "27:9"
+    },
+    {
+     "w": "fillets",
+     "ko": "쇠시리(기둥을 두르는 띠)",
+     "ref": "27:10"
+    },
+    {
+     "w": "breadth",
+     "ko": "너비",
+     "ref": "27:12"
+    },
+    {
+     "w": "eastward",
+     "ko": "동쪽으로",
+     "ref": "27:13"
+    }
+   ],
+   "comments": [
+    {
+     "id": "x27-2",
+     "basis": "external",
+     "text": "스코필드는 고운 아마포가 흔히 사람 자신의 의를 나타낸다고 보았습니다. 뜰을 두른 아마포 천은 자기 의로 하나님께 나아오려는 사람에게 하나님께서 요구하시는 의의 기준을 뜻한다고 풀었습니다.",
+     "spans": [
+      {
+       "text": "하나님께서 요구하시는 의의 기준",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917)",
+       "where": "Exod. 27:9 주석",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "The fine linen commonly typifies personal righteousness (Ex. 26. 1, ref. d), and in the hangings of the court stands for that measure of righteousness which God demands of any who would, in his own righteousness, approach.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    },
+    {
+     "id": "x27-3",
+     "basis": "external",
+     "text": "스코필드는 아마포 천을 받쳐 주는 쇠시리와 갈고리가 은으로 된 데에도 뜻을 두었습니다. 그리스도께서 우리가 나아가는 길이 되시는 것은 그분의 의로운 삶(아마포가 상징) 때문이 아니라 그분의 구속하시는 일 때문이라는 것입니다. 또 뜰의 기둥은 판자처럼 은이 아니라 놋 받침 위에 서 있는데, 놋은 심판하시는 하나님의 의를 상징한다고 했습니다.",
+     "spans": [
+      {
+       "text": "그분의 구속하시는 일 때문",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917)",
+       "where": "Exod. 27:17 주석",
+       "file": "memory-bank/세대주의_해설/scofield/exodus-27.md",
+       "excerpt": "The fillets and hooks upholding the linen hangings are of silver\n…\nfor it is in virtue of His redemptive work that Christ is our way of access, and not by virtue of His righteous life (symbolized by the fine linen)\n…\nbut the pillars of the court rest upon brass sockets, not silver as in the case of the boards\n…\nbrass symbolizes divine righteousness in judgment",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/exodus/exodus-27.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "27:16-19",
+   "title": "뜰의 대문과 놋 받침",
+   "marks": [
+    {
+     "v": "27:16",
+     "t": "b",
+     "ko": "뜰의 대문",
+     "en": "the gate of the court"
+    },
+    {
+     "v": "27:16",
+     "t": "u",
+     "ko": "청색 실과 자주색 실과 주홍색 실",
+     "en": "of blue, and purple, and scarlet"
+    },
+    {
+     "v": "27:18",
+     "t": "u",
+     "ko": "뜰의 길이는 일백 큐빗이 되게 하고",
+     "en": "The length of the court shall be an hundred cubits"
+    }
+   ],
+   "english": [
+    {
+     "ref": "27:17",
+     "phrase": "shall be filleted with silver",
+     "grammar": "수동태 be filleted",
+     "text": "fillet(띠)을 동사로 써서 ‘띠를 두르다’라는 뜻이 되었습니다. shall be filleted with silver는 ‘은으로 띠가 둘러질 것이다’라는 수동태입니다."
+    },
+    {
+     "ref": "27:16",
+     "phrase": "wrought with needlework",
+     "grammar": "옛 과거분사 wrought",
+     "text": "wrought는 work의 옛 과거분사로 ‘만들어진, 짜인’이라는 뜻입니다. wrought with needlework는 ‘바느질(수)로 짜인’입니다.",
+     "key": "x27-4"
+    }
+   ],
+   "vocab": [
+    {
+     "w": "wrought",
+     "ko": "만들어진(work의 옛 과거분사)",
+     "ref": "27:16"
+    },
+    {
+     "w": "needlework",
+     "ko": "바느질, 수놓은 것",
+     "ref": "27:16"
+    },
+    {
+     "w": "filleted",
+     "ko": "띠를 두른",
+     "ref": "27:17"
+    },
+    {
+     "w": "pins",
+     "ko": "말뚝들",
+     "ref": "27:19"
+    },
+    {
+     "w": "vessels",
+     "ko": "기물들, 그릇들",
+     "ref": "27:19"
+    }
+   ],
+   "comments": [
+    {
+     "id": "x27-4",
+     "basis": "external",
+     "text": "스코필드는 뜰을 두른 아마포 천이 율법에서 하나님께서 요구하시는 실제의 의를 나타내며, 그래서 모든 사람을 막아선다고 보았습니다. 그 천에는 색깔이 짜여 들어가 있지 않습니다. 그러나 대문은 그리스도이시므로, 휘장에서처럼 대문에는 다시 색깔들이 나타난다고 풀었습니다.",
+     "spans": [
+      {
+       "text": "대문은 그리스도이시므로",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917)",
+       "where": "Exod. 27:16 주석",
+       "file": "memory-bank/세대주의_해설/scofield/exodus-27.md",
+       "excerpt": "In the hangings of the court ( Exodus 27:9 ), representing that practical righteousness which God demands in the law, and which, therefore, bars out all men\n…\nNo colours are inwrought. But the \"gate\" is Christ John 10:9 and so the colours reappear as in the veil Exodus 26:31 .",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/exodus/exodus-27.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ref": "27:20-21",
+   "title": "항상 타오르는 등불",
+   "marks": [
+    {
+     "v": "27:20",
+     "t": "y",
+     "ko": "압착된 순수한 올리브기름을 너에게 가져오게 하여",
+     "en": "bring thee pure oil olive beaten for the light"
+    },
+    {
+     "v": "27:20",
+     "t": "u",
+     "ko": "등불이 항상 타오르게 할지니라",
+     "en": "to cause the lamp to burn always"
+    },
+    {
+     "v": "27:21",
+     "t": "y",
+     "ko": "영원토록 그들의 세대들로 이어지는 규례",
+     "en": "a statute for ever unto their generations"
+    }
+   ],
+   "english": [
+    {
+     "ref": "27:20",
+     "phrase": "pure oil olive beaten for the light",
+     "grammar": "옛 어순(형용사 뒤에 두기)",
+     "text": "oil olive는 지금의 olive oil입니다. beaten은 ‘찧은, 압착된’이라는 과거분사로 뒤에서 꾸밉니다. 현대 영어(WEB)는 pure olive oil beaten으로 옮겼습니다."
+    },
+    {
+     "ref": "27:21",
+     "phrase": "Aaron and his sons shall order it from evening to morning",
+     "grammar": "동사 order",
+     "text": "order는 여기서 ‘명령하다’가 아니라 ‘정돈하다, 손질하다’라는 뜻입니다. 저녁부터 아침까지 등불을 돌보라는 말입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "olive",
+     "ko": "올리브",
+     "ref": "27:20"
+    },
+    {
+     "w": "beaten",
+     "ko": "찧은, 압착된",
+     "ref": "27:20"
+    },
+    {
+     "w": "congregation",
+     "ko": "회중",
+     "ref": "27:21"
+    },
+    {
+     "w": "statute",
+     "ko": "규례",
+     "ref": "27:21"
+    },
+    {
+     "w": "generations",
+     "ko": "세대들, 대대",
+     "ref": "27:21"
+    },
+    {
+     "w": "behalf",
+     "ko": "대표, 위함(on the behalf of)",
+     "ref": "27:21"
+    }
+   ],
+   "comments": [
+    {
+     "id": "x27-5",
+     "basis": "external",
+     "text": "스코필드는 기름을 성령의 상징으로 보았습니다. 그리스도 안에서 기름으로 밝히는 빛, 곧 세상의 빛이 늘 타오른다고 했습니다. 또 성막에는 두 칸과 두 빛이 있었다고 짚었습니다. 성소에는 등잔대의 빛이 있었고, 지성소에는 셰키나, 곧 드러난 하나님의 영광이 있었다는 것입니다.",
+     "spans": [
+      {
+       "text": "기름을 성령의 상징으로",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917)",
+       "where": "Exod. 27:20 주석",
+       "file": "memory-bank/세대주의_해설/scofield/exodus-27.md",
+       "excerpt": "Oil is a symbol of the Holy Spirit\n…\nIn Christ the oil- fed Light ever burns, the Light of the world\n…\nIn the Tabernacle there were two compartments, two lights: the holy place with the candlestick\n…\nthe holy of holies with the shekinah, or manifested glory of God.",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/exodus/exodus-27.html"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "제단은 싯팀 목재로 길이와 너비 오 큐빗의 정사각형, 높이 삼 큐빗으로 만들었습니다.",
+    "verse": "27:1",
+    "u": [
+     "정사각형"
+    ]
+   },
+   {
+    "text": "제단의 네 모서리에는 제단과 한 몸인 뿔들을 만들고 놋으로 입혔습니다.",
+    "verse": "27:2",
+    "u": [
+     "네 모서리에는"
+    ]
+   },
+   {
+    "text": "재받이 판, 부삽, 대야, 고기 갈고리, 불판 등 제단의 모든 기물은 놋으로 만들었습니다.",
+    "verse": "27:3",
+    "u": [
+     "모든 기물은 놋으로"
+    ]
+   },
+   {
+    "text": "제단은 판자들로 속이 비게, 산에서 보여 주신 그대로 만들어야 했습니다.",
+    "verse": "27:8",
+    "u": [
+     "산에서 보여 주신 그대로"
+    ]
+   },
+   {
+    "text": "강의는 속죄제 때 제물의 머리에 손을 얹으면 죄가 양에게 넘어간다고 설명합니다.",
+    "key": "x27-1",
+    "u": [
+     "죄가 양에게 넘어간다고"
+    ]
+   },
+   {
+    "text": "하나님께서는 죄가 얼마나 무서운 것인지 보여 주시려고 각자 양을 직접 죽이게 하셨습니다.",
+    "key": "x27-1",
+    "u": [
+     "죄가 얼마나 무서운 것인지"
+    ]
+   },
+   {
+    "text": "성막의 뜰은 남쪽과 북쪽이 일백 큐빗, 서쪽과 동쪽이 오십 큐빗이었습니다.",
+    "verse": "27:18",
+    "u": [
+     "일백 큐빗"
+    ]
+   },
+   {
+    "text": "뜰의 기둥 갈고리와 쇠시리는 은으로, 받침은 놋으로 만들었습니다.",
+    "verse": "27:10",
+    "u": [
+     "받침은 놋으로"
+    ]
+   },
+   {
+    "text": "스코필드는 뜰의 아마포가 하나님께서 요구하시는 의의 기준을 뜻한다고 보았습니다.",
+    "key": "x27-2",
+    "u": [
+     "의의 기준"
+    ]
+   },
+   {
+    "text": "스코필드는 은 갈고리가 그리스도의 구속하시는 일을, 놋 받침이 심판하시는 하나님의 의를 보여 준다고 풀었습니다.",
+    "key": "x27-3",
+    "u": [
+     "구속하시는 일"
+    ]
+   },
+   {
+    "text": "뜰의 대문에는 청색·자주색·주홍색 실과 아마로 수놓은 이십 큐빗의 거는 천을 달았습니다.",
+    "verse": "27:16",
+    "u": [
+     "이십 큐빗"
+    ]
+   },
+   {
+    "text": "스코필드는 뜰의 대문을 그리스도로 보았습니다.",
+    "key": "x27-4",
+    "u": [
+     "대문을 그리스도로"
+    ]
+   },
+   {
+    "text": "성막의 모든 기물과 말뚝, 뜰의 말뚝은 놋으로 만들었습니다.",
+    "verse": "27:19",
+    "u": [
+     "놋으로"
+    ]
+   },
+   {
+    "text": "이스라엘 자녀들은 등불이 항상 타오르도록 압착된 순수한 올리브기름을 가져와야 했습니다.",
+    "verse": "27:20",
+    "u": [
+     "항상 타오르도록"
+    ]
+   },
+   {
+    "text": "아론과 아들들은 휘장 밖에서 저녁부터 아침까지 등불을 정돈해야 했습니다.",
+    "verse": "27:21",
+    "u": [
+     "저녁부터 아침까지"
+    ]
+   },
+   {
+    "text": "스코필드는 기름을 성령의 상징으로 보았습니다.",
+    "key": "x27-5",
+    "u": [
+     "성령의 상징"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "27:1",
+    "q": "제단은 무엇으로 만들었습니까?",
+    "a": "싯팀 목재"
+   },
+   {
+    "verse": "27:1",
+    "q": "제단의 길이와 너비는 각각 얼마입니까?",
+    "a": "오 큐빗"
+   },
+   {
+    "verse": "27:1",
+    "q": "제단의 높이는 얼마입니까?",
+    "a": "삼 큐빗"
+   },
+   {
+    "verse": "27:2",
+    "q": "제단의 뿔들은 어디에 만들었습니까?",
+    "a": "모서리들 네 개 위"
+   },
+   {
+    "verse": "27:2",
+    "q": "제단은 무엇으로 입혔습니까?",
+    "a": "놋"
+   },
+   {
+    "verse": "27:4",
+    "q": "제단을 위한 격자망은 무엇으로 만들었습니까?",
+    "a": "놋"
+   },
+   {
+    "verse": "27:6",
+    "q": "제단의 막대들은 무엇으로 만들고 무엇으로 입혔습니까?",
+    "a": "싯팀 목재, 놋"
+   },
+   {
+    "verse": "27:8",
+    "q": "제단은 누구에게 어디서 보여진 대로 만들어야 했습니까?",
+    "a": "너에게, 산속에서"
+   },
+   {
+    "key": "x27-1",
+    "q": "강의에 따르면 속죄제에서 죄는 어떻게 짐승에게 넘어갑니까?",
+    "a": "제물의 머리 위에 손을 얹고 죄를 고백하면 손을 타고 넘어갑니다"
+   },
+   {
+    "key": "x27-1",
+    "q": "강의는 하나님께서 각자 양을 직접 죽이게 하신 까닭을 무엇이라고 말합니까?",
+    "a": "죄가 얼마나 무서운 것인지 보여 주시려고"
+   },
+   {
+    "key": "x27-1",
+    "q": "레위기 4장에서 제사장은 제물의 피를 어디에 발랐습니까?",
+    "a": "번제물의 제단의 뿔들 위"
+   },
+   {
+    "verse": "27:9",
+    "q": "뜰의 거는 천은 무엇으로 만들었습니까?",
+    "a": "가늘게 꼬아진 아마"
+   },
+   {
+    "verse": "27:10",
+    "q": "남쪽 면의 기둥은 몇 개입니까?",
+    "a": "이십 개"
+   },
+   {
+    "verse": "27:10",
+    "q": "기둥들의 갈고리들과 쇠시리들은 무엇으로 만들었습니까?",
+    "a": "은"
+   },
+   {
+    "verse": "27:12",
+    "q": "서쪽 측면 뜰의 너비는 얼마입니까?",
+    "a": "오십 큐빗"
+   },
+   {
+    "verse": "27:14",
+    "q": "대문 한쪽 면에 거는 천은 몇 큐빗입니까?",
+    "a": "십오 큐빗"
+   },
+   {
+    "key": "x27-2",
+    "q": "스코필드는 뜰을 두른 아마포가 무엇을 뜻한다고 보았습니까?",
+    "a": "하나님께서 요구하시는 의의 기준"
+   },
+   {
+    "key": "x27-3",
+    "q": "스코필드는 놋이 무엇을 상징한다고 했습니까?",
+    "a": "심판하시는 하나님의 의"
+   },
+   {
+    "verse": "27:16",
+    "q": "뜰의 대문에 거는 천은 몇 큐빗입니까?",
+    "a": "이십 큐빗"
+   },
+   {
+    "verse": "27:16",
+    "q": "뜰의 대문 기둥은 몇 개입니까?",
+    "a": "네 개"
+   },
+   {
+    "key": "x27-4",
+    "q": "스코필드는 뜰의 대문을 누구로 보았습니까?",
+    "a": "그리스도"
+   },
+   {
+    "key": "x27-4",
+    "q": "스코필드는 뜰을 두른 천과 대문의 천이 어떻게 다르다고 했습니까?",
+    "a": "뜰의 천에는 색깔이 없고 대문에는 휘장처럼 색깔이 다시 나타납니다"
+   },
+   {
+    "verse": "27:18",
+    "q": "뜰의 높이는 얼마입니까?",
+    "a": "오 큐빗"
+   },
+   {
+    "verse": "27:19",
+    "q": "성막의 모든 말뚝과 뜰의 모든 말뚝은 무엇으로 만들었습니까?",
+    "a": "놋"
+   },
+   {
+    "verse": "27:20",
+    "q": "이스라엘 자녀들이 가져와야 할 기름은 무엇입니까?",
+    "a": "압착된 순수한 올리브기름"
+   },
+   {
+    "verse": "27:20",
+    "q": "그 기름은 무엇을 위한 것입니까?",
+    "a": "등불이 항상 타오르게"
+   },
+   {
+    "verse": "27:21",
+    "q": "등불을 정돈하는 사람은 누구입니까?",
+    "a": "아론과 그의 아들들"
+   },
+   {
+    "verse": "27:21",
+    "q": "등불은 언제부터 언제까지 정돈해야 했습니까?",
+    "a": "저녁부터 아침까지"
+   },
+   {
+    "key": "x27-5",
+    "q": "스코필드는 성막의 두 빛을 무엇과 무엇이라고 했습니까?",
+    "a": "성소의 등잔대 빛과 지성소의 셰키나"
+   }
+  ],
+  "faq": [
+   {
+    "q": "번제단에서는 무슨 일이 일어났습니까?",
+    "key": "x27-1"
+   },
+   {
+    "q": "죄를 지은 사람은 왜 자기 손으로 양을 죽여야 했습니까?",
+    "key": "x27-1"
+   },
+   {
+    "q": "제단의 뿔에는 무엇을 발랐습니까?",
+    "key": "x27-1"
+   },
+   {
+    "q": "뜰을 두른 흰 아마포 천에는 어떤 뜻이 있습니까?",
+    "key": "x27-2"
+   },
+   {
+    "q": "기둥의 갈고리는 은, 받침은 놋으로 만든 데에 뜻이 있습니까?",
+    "key": "x27-3"
+   },
+   {
+    "q": "놋은 무엇을 상징합니까?",
+    "key": "x27-3"
+   },
+   {
+    "q": "뜰의 대문만 색깔 있는 천으로 만든 까닭은 무엇입니까?",
+    "key": "x27-4"
+   },
+   {
+    "q": "율법의 의로 하나님께 나아갈 수 있습니까?",
+    "key": "x27-4"
+   },
+   {
+    "q": "등불에 쓰는 기름은 무엇을 상징합니까?",
+    "key": "x27-5"
+   },
+   {
+    "q": "성막 안에는 어떤 빛들이 있었습니까?",
+    "key": "x27-5"
+   },
+   {
+    "q": "속죄제에서 죄는 어디로 갑니까?",
+    "key": "x27-1"
+   },
+   {
+    "q": "그리스도께서 우리가 나아가는 길이 되시는 것은 무엇 때문입니까?",
+    "key": "x27-3"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "번제단",
+    "verse": "27:1",
+    "text": "싯팀 목재에 놋을 입혀 만든 정사각형 제단. 네 모서리에 뿔이 있습니다."
+   },
+   {
+    "term": "속죄제",
+    "key": "x27-1",
+    "text": "죄를 용서받기 위해 드리는 제사. 제물의 머리에 손을 얹어 죄를 넘기고 그 짐승을 죽였습니다."
+   },
+   {
+    "term": "뜰",
+    "verse": "27:18",
+    "text": "성막을 둘러싼 마당. 길이 일백 큐빗, 너비 오십 큐빗, 높이 오 큐빗의 아마포 천으로 둘렀습니다."
+   },
+   {
+    "term": "쇠시리",
+    "verse": "27:10",
+    "text": "기둥을 두르는 띠(fillets). 뜰의 기둥에는 은으로 만들었습니다."
+   },
+   {
+    "term": "셰키나",
+    "key": "x27-5",
+    "text": "지성소에 드러난 하나님의 영광을 스코필드가 부른 말."
+   },
+   {
+    "term": "규례",
+    "verse": "27:21",
+    "text": "대대로 지켜야 할 정해진 법(statute)."
+   }
+  ]
+ }
+}

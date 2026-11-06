@@ -1,0 +1,1367 @@
+{
+ "chapter": 16,
+ "subtitle": "광야에서 내린 만나와 메추라기",
+ "motto": "자기 백성에게 일간 패턴을 만들어 주시는 거예요",
+ "motto_comment": "x16-4",
+ "cover": [
+  {
+   "m": "rain",
+   "x": 170,
+   "y": 110,
+   "s": 1
+  },
+  {
+   "m": "glow",
+   "x": 255,
+   "y": 90,
+   "s": 0.7
+  },
+  {
+   "m": "tent",
+   "x": 110,
+   "y": 280,
+   "s": 0.85
+  },
+  {
+   "m": "sheaf",
+   "x": 240,
+   "y": 285,
+   "s": 0.8
+  }
+ ],
+ "people": [
+  {
+   "id": "lord",
+   "name": "주",
+   "role": "god",
+   "gen": 0,
+   "desc": "백성의 불평을 들으시고 저녁에는 메추라기를, 아침에는 하늘에서 빵을 비처럼 내리신 분이며, 백성에게 안식일을 주신 분입니다.",
+   "refs": [
+    "16:4",
+    "16:12",
+    "16:29"
+   ],
+   "part": "빵을 내려 주신 분",
+   "intro": "만나를 내리신 분 · 안식일을 주신 분"
+  },
+  {
+   "id": "moses",
+   "name": "모세",
+   "en": "Moses",
+   "gen": 1,
+   "desc": "주의 말씀대로 만나를 거두는 법과 안식일을 백성에게 알렸고, 아침까지 남겨 둔 자들에게 격노했습니다.",
+   "refs": [
+    "16:15",
+    "16:20",
+    "16:23"
+   ],
+   "part": "말씀을 알린 지도자",
+   "look": "man",
+   "intro": "말씀을 전한 지도자 · 남긴 자들에게 격노"
+  },
+  {
+   "id": "aaron",
+   "name": "아론",
+   "en": "Aaron",
+   "gen": 1,
+   "desc": "모세와 함께 백성에게 말했고, 모세의 말대로 만나 한 오멜을 항아리에 담아 증언 판 앞에 간직했습니다.",
+   "refs": [
+    "16:6",
+    "16:10",
+    "16:34"
+   ],
+   "part": "만나 항아리를 둔 사람",
+   "look": "man",
+   "intro": "모세와 함께 말함 · 만나를 간직함"
+  },
+  {
+   "id": "israel",
+   "name": "이스라엘 자녀들의 온 회중",
+   "gen": 2,
+   "desc": "신 광야에서 고기 솥과 빵을 그리워하며 모세와 아론을 대적하여 불평했고, 사십 년 동안 만나를 먹었습니다.",
+   "refs": [
+    "16:2",
+    "16:3",
+    "16:35"
+   ],
+   "part": "만나를 먹은 백성",
+   "look": "group",
+   "intro": "불평한 회중 · 사십 년 만나를 먹음"
+  },
+  {
+   "id": "rulers",
+   "name": "회중의 치리자들",
+   "gen": 2,
+   "desc": "여섯째 날에 백성이 두 배를 거두자 모세에게 와서 알린 사람들입니다.",
+   "refs": [
+    "16:22"
+   ],
+   "part": "모세에게 알린 지도자들",
+   "look": "group",
+   "intro": "회중의 지도자들 · 두 배를 알림"
+  }
+ ],
+ "relations": [
+  {
+   "from": "lord",
+   "to": "moses",
+   "type": "god",
+   "label": "말씀하심",
+   "ref": "16:4",
+   "directed": true
+  },
+  {
+   "from": "lord",
+   "to": "israel",
+   "type": "god",
+   "label": "만나를 주심",
+   "ref": "16:15",
+   "directed": true
+  },
+  {
+   "from": "moses",
+   "to": "aaron",
+   "type": "other",
+   "label": "말을 맡김",
+   "ref": "16:9",
+   "directed": true
+  },
+  {
+   "from": "israel",
+   "to": "moses",
+   "type": "other",
+   "label": "불평",
+   "ref": "16:2",
+   "directed": true
+  },
+  {
+   "from": "rulers",
+   "to": "moses",
+   "type": "other",
+   "label": "알림",
+   "ref": "16:22",
+   "directed": true
+  }
+ ],
+ "map": {
+  "places": [
+   {
+    "key": "egypt",
+    "ref": "16:1"
+   },
+   {
+    "key": "canaan",
+    "ref": "16:35"
+   }
+  ],
+  "routes": [],
+  "unknown": [
+   {
+    "name": "엘림",
+    "ref": "16:1",
+    "note": "이스라엘이 여정을 떠난 곳으로 나오며 자리는 표시하지 않았습니다."
+   },
+   {
+    "name": "신 광야",
+    "ref": "16:1",
+    "note": "엘림과 시나이산 사이에 있다고만 나오며 자리는 표시하지 않았습니다."
+   },
+   {
+    "name": "시나이산",
+    "ref": "16:1",
+    "note": "신 광야의 위치를 알려 주는 기준으로 이름만 나옵니다. 자리는 표시하지 않았습니다."
+   }
+  ]
+ },
+ "sections": [
+  {
+   "ref": "16:1-3",
+   "title": "신 광야에서의 불평",
+   "marks": [
+    {
+     "v": "16:1",
+     "t": "u",
+     "ko": "둘째 달 십오 일째 되는 날",
+     "en": "on the fifteenth day of the second month"
+    },
+    {
+     "v": "16:2",
+     "t": "p",
+     "ko": "모세와 아론을 대적하여 불평하였더라",
+     "en": "murmured against Moses and Aaron in the wilderness"
+    },
+    {
+     "v": "16:3",
+     "t": "u",
+     "ko": "우리가 고기 솥들 곁에 앉아 있었을 때",
+     "en": "when we sat by the flesh pots"
+    },
+    {
+     "v": "16:3",
+     "t": "p",
+     "ko": "이 집회 전체를 배고픔으로 죽게 하려고",
+     "en": "to kill this whole assembly with hunger"
+    }
+   ],
+   "comments": [
+    {
+     "id": "x16-1",
+     "basis": "external",
+     "text": "스코필드 관주 해설은 엘림을 떠나 신 광야에 이른 이 장을 ‘경험을 통한 구속’의 일곱째 여정 단계로 나누고, 이 단계에 ‘배고픔’이라는 제목을 붙였습니다.",
+     "spans": [
+      {
+       "text": "‘배고픔’이라는 제목",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 출애굽기 16장 단락 제목",
+       "where": "Exod. 16:1 단락 제목",
+       "file": "memory-bank/세대주의_해설/scofield_1917_archive_ocr.txt",
+       "excerpt": "Redemption: (3) experience; seventh stage of the journey; hunger.",
+       "url": "https://archive.org/details/scofieldreferenc00unse"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "16:1",
+     "phrase": "on the fifteenth day of the second month after their departing out of the land of Egypt",
+     "grammar": "날짜 표현 · 동명사 departing",
+     "text": "on + 날짜로 때를 밝힙니다. their departing은 ‘그들이 떠난 것’이라는 동명사로, after의 목적어입니다."
+    },
+    {
+     "ref": "16:3",
+     "phrase": "Would to God we had died by the hand of the LORD",
+     "grammar": "소망의 가정법 과거완료",
+     "text": "Would to God ~는 ‘~였더라면 좋았을 것을’이라는 옛 소망 표현입니다. had died는 이미 지난 일을 거꾸로 바라는 가정법 과거완료입니다."
+    },
+    {
+     "ref": "16:3",
+     "phrase": "to kill this whole assembly with hunger",
+     "grammar": "to부정사(목적)",
+     "text": "to kill은 ‘죽이려고’라는 목적입니다. 백성은 모세와 아론이 자기들을 굶겨 죽이려고 광야로 데려왔다고 원망했습니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "congregation",
+     "ko": "회중",
+     "ref": "16:1"
+    },
+    {
+     "w": "departing",
+     "ko": "떠남, 출발",
+     "ref": "16:1"
+    },
+    {
+     "w": "murmured",
+     "ko": "불평했다",
+     "ref": "16:2"
+    },
+    {
+     "w": "flesh",
+     "ko": "고기",
+     "ref": "16:3"
+    },
+    {
+     "w": "pots",
+     "ko": "솥들",
+     "ref": "16:3"
+    },
+    {
+     "w": "assembly",
+     "ko": "집회, 모임",
+     "ref": "16:3"
+    },
+    {
+     "w": "hunger",
+     "ko": "배고픔",
+     "ref": "16:3"
+    }
+   ]
+  },
+  {
+   "ref": "16:4-8",
+   "title": "하늘에서 빵을 비처럼",
+   "marks": [
+    {
+     "v": "16:4",
+     "t": "y",
+     "ko": "내가 너희를 위하여 하늘에서 빵을 비처럼 내리겠노라",
+     "en": "I will rain bread from heaven for you"
+    },
+    {
+     "v": "16:4",
+     "t": "u",
+     "ko": "매일 일정 비율을 거둘지니",
+     "en": "gather a certain rate every day"
+    },
+    {
+     "v": "16:5",
+     "t": "y",
+     "ko": "그것은 그들이 매일 거두는 양의 두 배가 되리라",
+     "en": "it shall be twice as much as they gather daily"
+    },
+    {
+     "v": "16:7",
+     "t": "u",
+     "ko": "아침에 비로소 너희가 주의 영광을 목격하리라",
+     "en": "in the morning, then ye shall see the glory of the LORD"
+    },
+    {
+     "v": "16:8",
+     "t": "p",
+     "ko": "너희의 불평들은 우리를 대적하는 것이 아니요, 주를 대적하는 것이라",
+     "en": "your murmurings are not against us, but against the LORD"
+    }
+   ],
+   "comments": [
+    {
+     "id": "x16-2",
+     "basis": "linked",
+     "text": "강의는 광야의 만나를 하나님의 ‘루틴’으로 설명합니다. 하나님께서는 유대인들에게 광야에서 만나를 주실 때 ‘한 번에 3일 치씩, 5일 치씩, 10일 치씩 줄게’ 하지 않으셨습니다. 안식일 전날만 이틀 분이고, 매일 하루 분씩 주셨습니다. 왜 그러셨을까요? 패턴을 만들어 주시려고 그러셨다는 것입니다.",
+     "spans": [
+      {
+       "text": "패턴을 만들어 주시려고",
+       "level": 3
+      }
+     ],
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「성공을 위한 루틴」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/15_성공을_위한_루틴.md",
+       "time": "16:14",
+       "to": "16:29",
+       "excerpt": "유대인들에게 광야에서 만나 주실 때 '내가 한 번에 3일치 씩 줄게 5일치 씩 줄게, 10일치 씩 줄게' 이렇게 안 하시죠? 물론 안식일 전날만 이틀 분이고 매일 1일분씩 주세요, 하루 분 왜? 패턴 만들어 주시려고",
+       "url": "https://youtu.be/MKE420S3O2c?t=974"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "16:4",
+     "phrase": "I will rain bread from heaven for you",
+     "grammar": "명사 rain을 동사로",
+     "text": "rain은 보통 명사(비)지만 여기서는 ‘비처럼 내리다’라는 동사입니다. 빵이 비 오듯 쏟아진다는 그림입니다.",
+     "key": "x16-2"
+    },
+    {
+     "ref": "16:4",
+     "phrase": "that I may prove them, whether they will walk in my law, or no",
+     "grammar": "목적의 that ~ may · whether A or no",
+     "text": "that I may prove them은 ‘그들을 시험하려고’입니다. whether ~ or no는 ‘~인지 아닌지’입니다(현대 영어 or not)."
+    },
+    {
+     "ref": "16:5",
+     "phrase": "it shall be twice as much as they gather daily",
+     "grammar": "배수 비교 twice as much as",
+     "text": "twice as much as ~는 ‘~의 두 배’입니다. 여섯째 날에는 매일 거두는 양의 두 배를 거두게 하신다는 뜻입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "rate",
+     "ko": "정해진 양, 비율",
+     "ref": "16:4"
+    },
+    {
+     "w": "prove",
+     "ko": "시험하다, 확인하다",
+     "ref": "16:4"
+    },
+    {
+     "w": "prepare",
+     "ko": "준비하다, 예비하다",
+     "ref": "16:5"
+    },
+    {
+     "w": "twice",
+     "ko": "두 배",
+     "ref": "16:5"
+    },
+    {
+     "w": "glory",
+     "ko": "영광",
+     "ref": "16:7"
+    },
+    {
+     "w": "murmurings",
+     "ko": "불평들",
+     "ref": "16:7"
+    }
+   ]
+  },
+  {
+   "ref": "16:9-15",
+   "title": "메추라기와 하늘의 빵",
+   "marks": [
+    {
+     "v": "16:10",
+     "t": "u",
+     "ko": "주의 영광이 구름 속에서 나타났더라",
+     "en": "the glory of the LORD appeared in the cloud"
+    },
+    {
+     "v": "16:12",
+     "t": "y",
+     "ko": "너희는 내가 주 너희 하나님이라는 것을 알리라",
+     "en": "ye shall know that I am the LORD your God"
+    },
+    {
+     "v": "16:13",
+     "t": "u",
+     "ko": "메추라기들이 올라와서 진영을 덮었고",
+     "en": "the quails came up, and covered the camp"
+    },
+    {
+     "v": "16:14",
+     "t": "u",
+     "ko": "어떤 작고 둥근 것이 깔려 있었는데",
+     "en": "there lay a small round thing"
+    },
+    {
+     "v": "16:15",
+     "t": "u",
+     "ko": "그것은 만나다",
+     "en": "It is manna"
+    },
+    {
+     "v": "16:15",
+     "t": "b",
+     "ko": "이것이 주께서 너희에게 먹으라고 주신 빵이라",
+     "en": "This is the bread which the LORD hath given you to eat"
+    }
+   ],
+   "comments": [
+    {
+     "id": "x16-3",
+     "basis": "external",
+     "text": "스코필드는 만나를 하늘에서 내려와 ‘세상의 생명을 위하여’ 죽으신 ‘생명의 빵’, 곧 그리스도의 모형이라고 봅니다(요한복음 6:35, 48-51). 그리고 16:14이 말하는 ‘작은’ 것이라는 점에 주목합니다.",
+     "spans": [
+      {
+       "text": "그리스도의 모형",
+       "level": 3
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 출애굽기 16장",
+       "where": "Exod. 16:15 주석 manna",
+       "file": "memory-bank/세대주의_해설/scofield/exodus-16.md",
+       "excerpt": "Manna, type of Christ as the \"bread of life,\" come down from heaven to die \"for the life of the world.\" John 6:35 John 6:48-51 . A \"small\" thing Exodus 16:14",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/exodus/exodus-16.html"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "16:14",
+     "phrase": "there lay a small round thing, as small as the hoar frost on the ground",
+     "grammar": "there + 자동사 도치 · as ~ as",
+     "text": "there lay ~는 ‘~이 놓여 있었다’입니다. as small as the hoar frost는 ‘흰 서리만큼 작은’이라는 비교입니다."
+    },
+    {
+     "ref": "16:15",
+     "phrase": "for they wist not what it was",
+     "grammar": "옛 동사 wist · 간접 의문문",
+     "text": "wist는 ‘알았다’(knew)의 옛 형태입니다. what it was는 ‘그것이 무엇인지’라는 간접 의문문입니다."
+    },
+    {
+     "ref": "16:15",
+     "phrase": "This is the bread which the LORD hath given you to eat",
+     "grammar": "관계대명사 which · to부정사",
+     "text": "which ~ hath given you가 the bread를 꾸미고, to eat은 ‘먹으라고’라는 목적을 더합니다.",
+     "key": "x16-3"
+    }
+   ],
+   "vocab": [
+    {
+     "w": "appeared",
+     "ko": "나타났다",
+     "ref": "16:10"
+    },
+    {
+     "w": "quails",
+     "ko": "메추라기들",
+     "ref": "16:13"
+    },
+    {
+     "w": "dew",
+     "ko": "이슬",
+     "ref": "16:13"
+    },
+    {
+     "w": "round",
+     "ko": "둥근",
+     "ref": "16:14"
+    },
+    {
+     "w": "hoar",
+     "ko": "흰(서리)",
+     "ref": "16:14"
+    },
+    {
+     "w": "frost",
+     "ko": "서리",
+     "ref": "16:14"
+    },
+    {
+     "w": "manna",
+     "ko": "만나",
+     "ref": "16:15"
+    },
+    {
+     "w": "wist",
+     "ko": "알았다(knew의 옛 형태)",
+     "ref": "16:15"
+    }
+   ]
+  },
+  {
+   "ref": "16:16-21",
+   "title": "먹을 만큼, 매일 아침",
+   "marks": [
+    {
+     "v": "16:16",
+     "t": "y",
+     "ko": "각인은 자신이 먹을 만큼",
+     "en": "Gather of it every man according to his eating"
+    },
+    {
+     "v": "16:18",
+     "t": "g",
+     "ko": "많이 거둔 자도 초과된 것이 없었으며 조금 거둔 자도 모자란 것이 없었더라",
+     "en": "he that gathered much had nothing over, and he that gathered little had no lack"
+    },
+    {
+     "v": "16:19",
+     "t": "y",
+     "ko": "아무도 그것을 아침까지 남겨 두지 말라",
+     "en": "Let no man leave of it till the morning"
+    },
+    {
+     "v": "16:20",
+     "t": "p",
+     "ko": "그들이 모세에게 경청하지 아니하였더라",
+     "en": "they hearkened not unto Moses"
+    },
+    {
+     "v": "16:20",
+     "t": "u",
+     "ko": "그것에서 벌레들이 번식하고 악취가 났더라",
+     "en": "it bred worms, and stank"
+    },
+    {
+     "v": "16:21",
+     "t": "u",
+     "ko": "그것을 매일 아침에 거두되",
+     "en": "they gathered it every morning"
+    }
+   ],
+   "comments": [
+    {
+     "id": "x16-4",
+     "basis": "linked",
+     "text": "강의는 매일 가서 하루 치를 받아 먹고, 또 가서 받아 먹는 이 모습을 이렇게 풀이합니다. 하나님께서 자기 백성에게 일간 패턴을 만들어 주시는 거예요. 그래서 하루 치씩만 딱 주시고, 다음 날 같은 시각에 똑같이 와서 또 받게 하셨습니다. 똑같은 루틴을 만들어 주시려는 것입니다. 강의는 여기서 천년왕국에도 일간 루틴이 있다는 것을 함께 짚습니다.",
+     "spans": [
+      {
+       "text": "하나님께서 자기 백성에게 일간 패턴을 만들어 주시는 거예요",
+       "level": 3
+      }
+     ],
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「성공을 위한 루틴」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/15_성공을_위한_루틴.md",
+       "time": "16:39",
+       "to": "17:04",
+       "excerpt": "매일 가서 하루치 받아서 그거 먹고 또 가서 받아서 먹고 유대인들에게, 자기 백성에게 일간 패턴을 만들어 주시는 거예요 하나님께서 그래서 하루치씩만 딱 주시는 거에요 다음날 같은 시각에 똑같이 와서 또 받고 똑같은 루틴을 만들어주려고 '천년왕국에서도 루틴이 있구나 일간 루틴이라는 게 있구나'",
+       "url": "https://youtu.be/MKE420S3O2c?t=999"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "16:16",
+     "phrase": "Gather of it every man according to his eating",
+     "grammar": "according to(~에 따라)",
+     "text": "according to his eating은 ‘자기가 먹을 만큼’입니다. Gather of it의 of는 ‘그중에서’라는 옛 용법입니다.",
+     "key": "x16-4"
+    },
+    {
+     "ref": "16:18",
+     "phrase": "he that gathered much had nothing over, and he that gathered little had no lack",
+     "grammar": "he that ~(~하는 자) · 대구",
+     "text": "he that gathered much는 ‘많이 거둔 자’입니다. much와 little, nothing over와 no lack이 짝을 이루어 모두 꼭 맞게 거두었다는 것을 보여 줍니다."
+    },
+    {
+     "ref": "16:20",
+     "phrase": "Notwithstanding they hearkened not unto Moses",
+     "grammar": "접속 부사 notwithstanding · 옛 부정",
+     "text": "Notwithstanding은 ‘그럼에도 불구하고’입니다. hearkened not은 현대 영어 did not listen입니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "omer",
+     "ko": "오멜(곡식을 재는 단위)",
+     "ref": "16:16"
+    },
+    {
+     "w": "mete",
+     "ko": "재다",
+     "ref": "16:18"
+    },
+    {
+     "w": "lack",
+     "ko": "모자람",
+     "ref": "16:18"
+    },
+    {
+     "w": "notwithstanding",
+     "ko": "그럼에도 불구하고",
+     "ref": "16:20"
+    },
+    {
+     "w": "worms",
+     "ko": "벌레들",
+     "ref": "16:20"
+    },
+    {
+     "w": "stank",
+     "ko": "악취가 났다",
+     "ref": "16:20"
+    },
+    {
+     "w": "wroth",
+     "ko": "격노한",
+     "ref": "16:20"
+    },
+    {
+     "w": "melted",
+     "ko": "녹았다",
+     "ref": "16:21"
+    }
+   ]
+  },
+  {
+   "ref": "16:22-30",
+   "title": "여섯째 날의 두 배와 안식일",
+   "marks": [
+    {
+     "v": "16:22",
+     "t": "u",
+     "ko": "한 사람당 두 배 분량인 이 오멜을 거두었더라",
+     "en": "two omers for one man"
+    },
+    {
+     "v": "16:23",
+     "t": "y",
+     "ko": "내일은 주께 거룩한 안식일에 속한 안식이라",
+     "en": "To morrow is the rest of the holy sabbath unto the LORD"
+    },
+    {
+     "v": "16:24",
+     "t": "u",
+     "ko": "그것에서 악취가 나지 아니하였고 그 안에 어떤 벌레도 없었더라",
+     "en": "it did not stink, neither was there any worm therein"
+    },
+    {
+     "v": "16:27",
+     "t": "p",
+     "ko": "일곱째 날에 백성 중 일부가 거두기 위하여 나갔다가",
+     "en": "there went out some of the people on the seventh day for to gather"
+    },
+    {
+     "v": "16:28",
+     "t": "p",
+     "ko": "언제까지 너희는 나의 명령들과 나의 법들을 지키는 것을 거부하느냐?",
+     "en": "How long refuse ye to keep my commandments and my laws?"
+    },
+    {
+     "v": "16:29",
+     "t": "y",
+     "ko": "주가 너희에게 안식일을 주었기 때문이라",
+     "en": "the LORD hath given you the sabbath"
+    },
+    {
+     "v": "16:30",
+     "t": "u",
+     "ko": "백성이 일곱째 날에 안식하였더라",
+     "en": "the people rested on the seventh day"
+    }
+   ],
+   "comments": [
+    {
+     "id": "x16-5",
+     "basis": "linked",
+     "text": "출애굽기에서 안식일이라는 말은 여기서 처음 나옵니다. 강의는 안식일을 이렇게 가르칩니다. 안식일은 그림자이고, 그것은 천년왕국의 그림자입니다. 왜냐하면 하나님께서 안식하시는 것이 안식일이기 때문입니다. 하나님께서 일을 하지 않으시는 것이 안식일이며, 사람이 일을 하지 않는 것과는 아무 상관이 없다는 것입니다.",
+     "spans": [
+      {
+       "text": "천년왕국의 그림자",
+       "level": 3
+      },
+      {
+       "text": "하나님께서 안식하시는 것이 안식일이기 때문입니다",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「십계명, 안식일 지켜야 해요?」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/03_십계명_안식일_지켜야해요.md",
+       "time": "55:42",
+       "to": "56:04",
+       "excerpt": "정확하게 나와 있잖아요 '안식일 그거 그냥 그림자야' 뭐의 그림자일까요? 천년왕국 그림자예요 왜? 하나님이 안식하시는 게 안식일이니까 다시 한 번 말씀드릴게요 하나님이 일을 안 하시는 게 안식일이라고요 인간이 일을 안 하는 거랑 아무 상관이 없어요",
+       "url": "https://youtu.be/3HPV0WxeE9c?t=3342"
+      }
+     ]
+    },
+    {
+     "id": "x16-6",
+     "basis": "linked",
+     "text": "강의는 하나님과 예수님께서 아담부터 7년 환란까지 약 6000년 동안 열심히 일하시고, 천년왕국 1000년 동안 쉬신다고 말합니다. 하나님께는 하루가 1000년 같고 1000년이 하루 같습니다. 6일 일하시다가 하루 쉬신 것이 6000년 동안 우리를 살리시다가, 마지막 1000년은 사람들이 스스로 살 수 있으니 통치만 하시는 것입니다. 안식일은 바로 그것의 그림자였습니다.",
+     "spans": [
+      {
+       "text": "안식일은 바로 그것의 그림자였습니다",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「십계명, 안식일 지켜야 해요?」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/03_십계명_안식일_지켜야해요.md",
+       "time": "1:01:29",
+       "to": "1:02:00",
+       "excerpt": "그때까지 하나님과 예수님이 열심히 일하셔야 되는 거예요 얼마 동안? 아담부터 7년 환란까지 약 6000년 동안 그리고 천년왕국 1000년 쉬시네 하루가 1000년 같고 1000년이 하루 같다고 하셨지 하나님께서 6일 일하시다가 하루 쉰 게 6000년 동안 우리 막 살리시다가 마지막 1000년은 인간들이 알아서 살 수 있으니까 이렇게 통치만 하시는 그거구나 안식일은 그거의 그림자였구나 그때까지는 쉬시는 게 아니구나",
+       "url": "https://youtu.be/3HPV0WxeE9c?t=3689"
+      }
+     ]
+    },
+    {
+     "id": "x16-7",
+     "basis": "linked",
+     "text": "다른 강의도 같은 것을 말합니다. 하나님께서 6천 년 동안 사람을 구원하시다가 천 년 동안 쉬신다는 것, 이것이 안식일의 실체입니다. 6일 동안 하나님께서 일하시고 하루 쉬시는데, 베드로가 베드로후서에서 ‘하루가 천 년 같고 천 년이 하루 같다’고 말했습니다. 그래서 숫자 7은 천년왕국의 상징이 됩니다.",
+     "spans": [
+      {
+       "text": "이것이 안식일의 실체입니다",
+       "level": 3
+      },
+      {
+       "text": "숫자 7은 천년왕국의 상징",
+       "level": 2
+      }
+     ],
+     "evidence": [
+      {
+       "type": "transcript",
+       "source": "첫열매들 예배 「성경 속 첫째와 둘째」",
+       "file": "memory-bank/첫열매들_강의스크립트/1_일반예배/24_성경_속_첫째와_둘째.md",
+       "time": "51:53",
+       "to": "52:10",
+       "excerpt": "그래서 6천 년간 인간을 구원하시다가 천 년 쉬신다 이게 안식일의 실체입니다 6일 동안 하나님이 일하시고 하루 쉬신다 베드로가 베드로후서에서 말했죠 '하루가 천 년 같고 천 년이 하루 같은 거 잊지마' 따라서 숫자 7은 천년왕국의 상징이 되는 것입니다",
+       "url": "https://youtu.be/iwZi6bfj5oc?t=3113"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "16:23",
+     "phrase": "To morrow is the rest of the holy sabbath unto the LORD",
+     "grammar": "옛 철자 To morrow",
+     "text": "To morrow는 현대 영어 tomorrow를 띄어 쓴 옛 철자입니다. the rest of the holy sabbath는 ‘거룩한 안식일의 안식’입니다.",
+     "key": "x16-5"
+    },
+    {
+     "ref": "16:28",
+     "phrase": "How long refuse ye to keep my commandments and my laws?",
+     "grammar": "옛 의문문 어순(동사 + 주어)",
+     "text": "옛 영어는 do 없이 동사를 주어 앞에 두어 의문문을 만듭니다. 현대 영어로는 How long do you refuse to keep ~?입니다."
+    },
+    {
+     "ref": "16:29",
+     "phrase": "he giveth you on the sixth day the bread of two days",
+     "grammar": "3인칭 단수 -eth · 이중 목적어",
+     "text": "giveth는 gives의 옛 형태입니다. you와 the bread of two days, 두 목적어를 받아 ‘너희에게 이틀 분의 빵을 준다’가 됩니다."
+    }
+   ],
+   "vocab": [
+    {
+     "w": "rulers",
+     "ko": "치리자들",
+     "ref": "16:22"
+    },
+    {
+     "w": "sabbath",
+     "ko": "안식일",
+     "ref": "16:23"
+    },
+    {
+     "w": "bake",
+     "ko": "굽다",
+     "ref": "16:23"
+    },
+    {
+     "w": "seethe",
+     "ko": "끓이다",
+     "ref": "16:23"
+    },
+    {
+     "w": "remaineth",
+     "ko": "남다(remains의 옛 형태)",
+     "ref": "16:23"
+    },
+    {
+     "w": "therein",
+     "ko": "그 안에",
+     "ref": "16:24"
+    },
+    {
+     "w": "refuse",
+     "ko": "거부하다",
+     "ref": "16:28"
+    },
+    {
+     "w": "abide",
+     "ko": "머물다",
+     "ref": "16:29"
+    }
+   ]
+  },
+  {
+   "ref": "16:31-36",
+   "title": "대대로 간직한 만나 한 오멜",
+   "marks": [
+    {
+     "v": "16:31",
+     "t": "u",
+     "ko": "그것의 맛은 꿀로 만들어진 전병들 같았더라",
+     "en": "the taste of it was like wafers made with honey"
+    },
+    {
+     "v": "16:32",
+     "t": "y",
+     "ko": "그것으로 일 오멜을 채워 너희의 세대들을 위하여 간직되게 할지니",
+     "en": "Fill an omer of it to be kept for your generations"
+    },
+    {
+     "v": "16:34",
+     "t": "u",
+     "ko": "증언 판 앞에 올려놓고",
+     "en": "laid it up before the Testimony"
+    },
+    {
+     "v": "16:35",
+     "t": "g",
+     "ko": "그들은 사십 년 간 만나를 먹었으니",
+     "en": "the children of Israel did eat manna forty years"
+    }
+   ],
+   "comments": [
+    {
+     "id": "x16-8",
+     "basis": "external",
+     "text": "스코필드는 16:31의 ‘꿀로 만들어진 전병들’ 같은 맛을 짚으며, 만나가 낮아지신 그리스도를 나타낸다고 봅니다. 이사야서가 말한 대로 ‘모양도 없고 우아함도 없으며 … 우리가 그를 원할 만한 아름다움도 없는’ 분의 모습이라는 것입니다(이사야서 53:2).",
+     "spans": [
+      {
+       "text": "낮아지신 그리스도",
+       "level": 3
+      }
+     ],
+     "evidence": [
+      {
+       "type": "external",
+       "author": "C. I. 스코필드",
+       "source": "스코필드 관주 해설(1917) 출애굽기 16장",
+       "where": "Exod. 16:31 주석 manna",
+       "file": "memory-bank/세대주의_해설/scofield/exodus-16.md",
+       "excerpt": "\"wafers with honey\" Exodus 16:31, it typifies Christ in humiliation as presented in Matthew, Mark, and Luke; \"having no form nor comeliness; . . . no beauty that we should desire him\" Isaiah 53:2 .",
+       "url": "https://www.biblestudytools.com/commentaries/scofield-reference-notes/exodus/exodus-16.html"
+      }
+     ]
+    }
+   ],
+   "english": [
+    {
+     "ref": "16:31",
+     "phrase": "it was like coriander seed, white",
+     "grammar": "비교 like · 보충 형용사",
+     "text": "like coriander seed는 ‘고수풀 씨 같은’이고, 뒤의 white가 색을 덧붙입니다. 한글 본문은 ‘고수풀 씨같이 하얗고’로 옮겼습니다."
+    },
+    {
+     "ref": "16:32",
+     "phrase": "Fill an omer of it to be kept for your generations",
+     "grammar": "수동 to부정사 to be kept",
+     "text": "to be kept는 ‘간직되도록’이라는 수동의 목적입니다. for your generations는 ‘너희 대대로’입니다."
+    },
+    {
+     "ref": "16:35",
+     "phrase": "the children of Israel did eat manna forty years",
+     "grammar": "강조의 did",
+     "text": "did eat은 단순한 ate보다 ‘정말로 먹었다’는 느낌을 줍니다. 옛 영어에서 흔한 강조 표현입니다.",
+     "key": "x16-8"
+    }
+   ],
+   "vocab": [
+    {
+     "w": "coriander",
+     "ko": "고수풀",
+     "ref": "16:31"
+    },
+    {
+     "w": "taste",
+     "ko": "맛",
+     "ref": "16:31"
+    },
+    {
+     "w": "wafers",
+     "ko": "전병들(얇은 과자)",
+     "ref": "16:31"
+    },
+    {
+     "w": "generations",
+     "ko": "세대들",
+     "ref": "16:32"
+    },
+    {
+     "w": "wilderness",
+     "ko": "광야",
+     "ref": "16:32"
+    },
+    {
+     "w": "Testimony",
+     "ko": "증언 (판)",
+     "ref": "16:34"
+    },
+    {
+     "w": "inhabited",
+     "ko": "사람이 사는",
+     "ref": "16:35"
+    },
+    {
+     "w": "ephah",
+     "ko": "에파(곡식을 재는 단위)",
+     "ref": "16:36"
+    }
+   ]
+  }
+ ],
+ "learning": {
+  "summary": [
+   {
+    "text": "이스라엘의 온 회중은 이집트를 떠난 지 둘째 달 십오 일에 엘림과 시나이산 사이의 신 광야에 이르렀습니다.",
+    "verse": "16:1",
+    "u": [
+     "신 광야"
+    ]
+   },
+   {
+    "text": "회중은 이집트의 고기 솥과 빵을 그리워하며 모세와 아론을 대적하여 불평했습니다.",
+    "verse": "16:3",
+    "u": [
+     "고기 솥"
+    ]
+   },
+   {
+    "text": "스코필드는 이 단계에 ‘배고픔’이라는 제목을 붙였습니다.",
+    "key": "x16-1",
+    "u": [
+     "배고픔"
+    ]
+   },
+   {
+    "text": "주께서는 하늘에서 빵을 비처럼 내리고, 백성이 매일 일정한 양을 거두게 하여 그들을 확인해 보겠다고 하셨습니다.",
+    "verse": "16:4",
+    "u": [
+     "빵을 비처럼 내리고"
+    ]
+   },
+   {
+    "text": "강의는 하나님께서 만나를 매일 하루 분씩, 안식일 전날만 이틀 분씩 주신 것을 패턴을 만들어 주시려는 것이라고 말합니다.",
+    "key": "x16-2",
+    "u": [
+     "패턴을 만들어 주시려는 것"
+    ]
+   },
+   {
+    "text": "모세는 백성의 불평이 우리를 대적하는 것이 아니라 주를 대적하는 것이라고 했습니다.",
+    "verse": "16:8",
+    "u": [
+     "주를 대적하는 것"
+    ]
+   },
+   {
+    "text": "아론이 회중에게 말할 때 주의 영광이 구름 속에서 나타났습니다.",
+    "verse": "16:10",
+    "u": [
+     "주의 영광"
+    ]
+   },
+   {
+    "text": "저녁에는 메추라기가 진영을 덮었고, 아침 이슬이 걷히자 작고 둥근 것이 땅에 깔려 있었습니다.",
+    "verse": "16:13",
+    "u": [
+     "메추라기"
+    ]
+   },
+   {
+    "text": "백성은 그것이 무엇인지 몰라 ‘만나’라 했고, 모세는 주께서 먹으라고 주신 빵이라고 했습니다.",
+    "verse": "16:15",
+    "u": [
+     "주께서 먹으라고 주신 빵"
+    ]
+   },
+   {
+    "text": "스코필드는 만나를 하늘에서 내려온 생명의 빵, 곧 그리스도의 모형으로 봅니다.",
+    "key": "x16-3",
+    "u": [
+     "그리스도의 모형"
+    ]
+   },
+   {
+    "text": "각 사람이 먹을 만큼 한 오멜씩 거두었더니 많이 거둔 자도 남지 않고 적게 거둔 자도 모자라지 않았습니다.",
+    "verse": "16:18",
+    "u": [
+     "모자라지 않았습니다"
+    ]
+   },
+   {
+    "text": "아침까지 남겨 두지 말라는 말을 듣지 않고 남긴 것에는 벌레가 생기고 악취가 났습니다.",
+    "verse": "16:20",
+    "u": [
+     "벌레가 생기고 악취"
+    ]
+   },
+   {
+    "text": "강의는 하루 치씩 받게 하신 것이 하나님께서 자기 백성에게 일간 패턴, 곧 루틴을 만들어 주신 것이라고 말합니다.",
+    "key": "x16-4",
+    "u": [
+     "일간 패턴"
+    ]
+   },
+   {
+    "text": "여섯째 날에는 두 배를 거두었고, 모세는 내일이 주께 거룩한 안식일이라고 알렸습니다.",
+    "verse": "16:23",
+    "u": [
+     "거룩한 안식일"
+    ]
+   },
+   {
+    "text": "일곱째 날에 거두러 나간 사람들은 아무것도 찾지 못했고, 주께서는 언제까지 명령을 거부하느냐고 하셨습니다.",
+    "verse": "16:28",
+    "u": [
+     "언제까지 명령을 거부하느냐"
+    ]
+   },
+   {
+    "text": "강의는 안식일이 하나님께서 안식하시는 날이며 천년왕국의 그림자라고 가르칩니다.",
+    "key": "x16-5",
+    "u": [
+     "천년왕국의 그림자"
+    ]
+   },
+   {
+    "text": "하나님께서 6000년 동안 사람을 살리시다가 천년왕국 1000년 동안 쉬시는 것이 안식일의 실체라고 강의는 말합니다.",
+    "key": "x16-7",
+    "u": [
+     "안식일의 실체"
+    ]
+   },
+   {
+    "text": "이스라엘 집은 그것을 만나라 불렀고, 고수풀 씨같이 하얗고 꿀 섞은 전병 같은 맛이었습니다.",
+    "verse": "16:31",
+    "u": [
+     "꿀 섞은 전병"
+    ]
+   },
+   {
+    "text": "아론은 만나 한 오멜을 항아리에 담아 대대로 간직하도록 증언 판 앞에 두었습니다.",
+    "verse": "16:34",
+    "u": [
+     "증언 판 앞"
+    ]
+   },
+   {
+    "text": "이스라엘 자녀들은 가나안 지역의 경계에 이를 때까지 사십 년 동안 만나를 먹었습니다.",
+    "verse": "16:35",
+    "u": [
+     "사십 년 동안 만나"
+    ]
+   }
+  ],
+  "questions": [
+   {
+    "verse": "16:1",
+    "q": "엘림을 떠난 이스라엘이 이른 광야는 어디입니까?",
+    "a": "신 광야"
+   },
+   {
+    "verse": "16:1",
+    "q": "신 광야는 어느 두 곳 사이에 있었습니까?",
+    "a": "엘림, 시나이산"
+   },
+   {
+    "verse": "16:2",
+    "q": "회중은 광야에서 누구를 대적하여 불평했습니까?",
+    "a": "모세, 아론"
+   },
+   {
+    "verse": "16:3",
+    "q": "백성은 이집트에서 무엇 곁에 앉아 있었다고 말했습니까?",
+    "a": "고기 솥들"
+   },
+   {
+    "key": "x16-1",
+    "q": "스코필드는 16장의 여정 단계에 어떤 제목을 붙였습니까?",
+    "a": "배고픔"
+   },
+   {
+    "verse": "16:4",
+    "q": "주께서는 하늘에서 무엇을 비처럼 내리겠다고 하셨습니까?",
+    "a": "빵"
+   },
+   {
+    "verse": "16:5",
+    "q": "여섯째 날에는 매일 거두는 양의 몇 배가 된다고 하셨습니까?",
+    "a": "두 배"
+   },
+   {
+    "key": "x16-2",
+    "q": "강의는 하나님께서 만나를 한꺼번에 며칠 치씩 주지 않으신 까닭을 무엇이라고 말합니까?",
+    "a": "패턴(일간 루틴)을 만들어 주시려고"
+   },
+   {
+    "verse": "16:8",
+    "q": "모세는 저녁과 아침에 주께서 각각 무엇을 주실 것이라고 했습니까?",
+    "a": "고기, 빵"
+   },
+   {
+    "verse": "16:8",
+    "q": "모세는 백성의 불평이 누구를 대적하는 것이라고 했습니까?",
+    "a": "주를 대적하는 것"
+   },
+   {
+    "verse": "16:10",
+    "q": "백성이 광야 쪽을 바라보았을 때 주의 영광은 어디에서 나타났습니까?",
+    "a": "구름 속"
+   },
+   {
+    "verse": "16:13",
+    "q": "저녁때 올라와서 진영을 덮은 것은 무엇입니까?",
+    "a": "메추라기들"
+   },
+   {
+    "verse": "16:14",
+    "q": "이슬이 걷힌 뒤 광야에 깔려 있던 것은 무엇만큼 작았습니까?",
+    "a": "흰 서리"
+   },
+   {
+    "verse": "16:15",
+    "q": "이스라엘 자녀들은 그것을 보고 서로 무엇이라고 말했습니까?",
+    "a": "그것은 만나다"
+   },
+   {
+    "key": "x16-3",
+    "q": "스코필드는 만나를 무엇의 모형으로 봅니까?",
+    "a": "그리스도(생명의 빵)"
+   },
+   {
+    "verse": "16:16",
+    "q": "각 사람은 얼마씩 거두어야 했습니까?",
+    "a": "일 오멜씩"
+   },
+   {
+    "verse": "16:19",
+    "q": "모세는 그것을 언제까지 남겨 두지 말라고 했습니까?",
+    "a": "아침까지"
+   },
+   {
+    "verse": "16:20",
+    "q": "아침까지 남겨 둔 것에서 무엇이 번식했습니까?",
+    "a": "벌레들"
+   },
+   {
+    "verse": "16:21",
+    "q": "해가 뜨거워지자 그것은 어떻게 되었습니까?",
+    "a": "녹았더라"
+   },
+   {
+    "key": "x16-4",
+    "q": "강의는 하루 치씩만 주신 것이 무엇을 만들어 주시려는 것이라고 말합니까?",
+    "a": "일간 패턴, 곧 똑같은 루틴"
+   },
+   {
+    "verse": "16:22",
+    "q": "여섯째 날에 거둔 것을 모세에게 와서 알린 이들은 누구입니까?",
+    "a": "회중의 모든 치리자들"
+   },
+   {
+    "verse": "16:23",
+    "q": "모세는 내일이 무엇이라고 했습니까?",
+    "a": "거룩한 안식일"
+   },
+   {
+    "verse": "16:24",
+    "q": "안식일을 위해 아침까지 쌓아 둔 것에는 무엇이 없었습니까?",
+    "a": "악취, 벌레"
+   },
+   {
+    "verse": "16:27",
+    "q": "일곱째 날에 거두러 나간 사람들은 무엇을 발견했습니까?",
+    "a": "아무것도 발견하지 못하였더라"
+   },
+   {
+    "key": "x16-5",
+    "q": "강의는 안식일이 무엇의 그림자라고 말합니까?",
+    "a": "천년왕국"
+   },
+   {
+    "key": "x16-5",
+    "q": "강의에 따르면 안식일은 누가 일하지 않는 날입니까?",
+    "a": "하나님"
+   },
+   {
+    "key": "x16-6",
+    "q": "강의는 하나님께서 얼마 동안 일하시고 얼마 동안 쉬신다고 말합니까?",
+    "a": "약 6000년 일하시고 천년왕국 1000년 쉬신다"
+   },
+   {
+    "key": "x16-7",
+    "q": "강의는 숫자 7이 무엇의 상징이라고 말합니까?",
+    "a": "천년왕국"
+   },
+   {
+    "verse": "16:29",
+    "q": "여섯째 날에는 며칠 분의 빵을 주셨습니까?",
+    "a": "이틀 분"
+   },
+   {
+    "verse": "16:31",
+    "q": "이스라엘 집은 그것의 이름을 무엇이라 불렀습니까?",
+    "a": "만나"
+   },
+   {
+    "verse": "16:31",
+    "q": "만나의 맛은 무엇 같았습니까?",
+    "a": "꿀로 만들어진 전병들"
+   },
+   {
+    "key": "x16-8",
+    "q": "스코필드는 만나가 그리스도의 어떤 모습을 나타낸다고 봅니까?",
+    "a": "낮아지신 그리스도"
+   },
+   {
+    "verse": "16:33",
+    "q": "모세는 아론에게 만나 일 오멜을 무엇에 담으라고 했습니까?",
+    "a": "항아리"
+   },
+   {
+    "verse": "16:34",
+    "q": "아론은 만나 항아리를 무엇 앞에 올려놓았습니까?",
+    "a": "증언 판"
+   },
+   {
+    "verse": "16:35",
+    "q": "이스라엘 자녀들은 몇 년 동안 만나를 먹었습니까?",
+    "a": "사십 년"
+   },
+   {
+    "verse": "16:36",
+    "q": "일 오멜은 일 에파의 얼마입니까?",
+    "a": "십분의 일"
+   }
+  ],
+  "faq": [
+   {
+    "q": "광야에서 배고픔을 겪게 하신 것은 어떤 단계입니까?",
+    "key": "x16-1"
+   },
+   {
+    "q": "하나님은 왜 만나를 한꺼번에 많이 주지 않으셨습니까?",
+    "key": "x16-2"
+   },
+   {
+    "q": "만나는 무엇을 미리 보여 줍니까?",
+    "key": "x16-3"
+   },
+   {
+    "q": "매일 아침 만나를 거두게 하신 것은 오늘 우리에게 무슨 뜻이 있습니까?",
+    "key": "x16-4"
+   },
+   {
+    "q": "천년왕국에도 반복되는 일상이 있습니까?",
+    "key": "x16-4"
+   },
+   {
+    "q": "안식일은 무엇의 그림자입니까?",
+    "key": "x16-5"
+   },
+   {
+    "q": "안식일에는 사람이 쉬어야 한다는 뜻입니까?",
+    "key": "x16-5"
+   },
+   {
+    "q": "하나님은 지금 쉬고 계십니까?",
+    "key": "x16-6"
+   },
+   {
+    "q": "6일 일하고 하루 쉬는 것은 무엇과 연결됩니까?",
+    "key": "x16-6"
+   },
+   {
+    "q": "안식일의 실체는 무엇입니까?",
+    "key": "x16-7"
+   },
+   {
+    "q": "숫자 7은 성경에서 무엇을 상징합니까?",
+    "key": "x16-7"
+   },
+   {
+    "q": "꿀 섞은 전병 같은 만나의 맛에도 뜻이 있습니까?",
+    "key": "x16-8"
+   }
+  ],
+  "glossary": [
+   {
+    "term": "만나",
+    "verse": "16:15",
+    "text": "주께서 광야에서 하늘에서 비처럼 내리신 빵. 백성이 무엇인지 몰라 ‘만나’라 불렀습니다."
+   },
+   {
+    "term": "오멜",
+    "verse": "16:36",
+    "text": "곡식을 재는 단위. 일 오멜은 일 에파의 십분의 일입니다."
+   },
+   {
+    "term": "안식일",
+    "key": "x16-5",
+    "text": "하나님께서 안식하시는 날. 강의는 천년왕국의 그림자라고 가르칩니다."
+   },
+   {
+    "term": "증언 판",
+    "verse": "16:34",
+    "text": "아론이 만나 항아리를 그 앞에 올려놓아 간직한 것."
+   },
+   {
+    "term": "메추라기",
+    "verse": "16:13",
+    "text": "저녁때 올라와 진영을 덮은 새. 주께서 저녁에 고기를 먹게 하겠다고 하신 약속대로 내렸습니다."
+   }
+  ]
+ }
+}
