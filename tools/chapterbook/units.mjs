@@ -19,6 +19,8 @@ const SPEC = {
   exod: { dir: "출애굽기/원본/단원", list: "units-exod.json", file: (n) => `exod-unit${n}.json` },
   judg: { dir: "사사기/원본/단원", list: "units-judg.json", file: (n) => `judg-unit${n}.json` },
   job: { dir: "욥기/원본/단원", list: "units-job.json", file: (n) => `job-unit${n}.json` },
+  ezek: { dir: "에스겔/원본/단원", list: "units-ezek.json", file: (n) => `ezek-unit${n}.json` },
+  esth: { dir: "에스더/원본/단원", list: "units-esth.json", file: (n) => `esth-unit${n}.json` },
 };
 let BOOK = "genesis";
 export let UNITS;

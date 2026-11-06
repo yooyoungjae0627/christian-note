@@ -20,6 +20,8 @@ export const BOOKS = {
   exod: { ko: "출애굽기", en: "EXODUS", chapters: 40, dir: "출애굽기", src: "출애굽기/원본/2판", verses: "출애굽기/원본/2판/verses-exod.json", json: (n) => `exod-${String(n).padStart(2, "0")}.json`, out: (n) => `출애굽기_${String(n).padStart(2, "0")}장_교재`, all: "출애굽기_합본_교재", scofield: "exodus" },
   judg: { ko: "사사기", en: "JUDGES", chapters: 21, dir: "사사기", src: "사사기/원본/2판", verses: "사사기/원본/2판/verses-judg.json", json: (n) => `judg-${String(n).padStart(2, "0")}.json`, out: (n) => `사사기_${String(n).padStart(2, "0")}장_교재`, all: "사사기_합본_교재", scofield: "judges" },
   job: { ko: "욥기", en: "JOB", chapters: 42, dir: "욥기", src: "욥기/원본/2판", verses: "욥기/원본/2판/verses-job.json", json: (n) => `job-${String(n).padStart(2, "0")}.json`, out: (n) => `욥기_${String(n).padStart(2, "0")}장_교재`, all: "욥기_합본_교재", scofield: "job" },
+  ezek: { ko: "에스겔", en: "EZEKIEL", chapters: 48, dir: "에스겔", src: "에스겔/원본/2판", verses: "에스겔/원본/2판/verses-ezek.json", json: (n) => `ezek-${String(n).padStart(2, "0")}.json`, out: (n) => `에스겔_${String(n).padStart(2, "0")}장_교재`, all: "에스겔_합본_교재", scofield: "ezekiel" },
+  esth: { ko: "에스더", en: "ESTHER", chapters: 10, dir: "에스더", src: "에스더/원본/2판", verses: "에스더/원본/2판/verses-esth.json", json: (n) => `esth-${String(n).padStart(2, "0")}.json`, out: (n) => `에스더_${String(n).padStart(2, "0")}장_교재`, all: "에스더_합본_교재", scofield: "esther" },
 };
 
 // 외부 모듈은 저장소 밖 %TEMP%/topicbook/node_modules에서 읽는다(README 빌드 환경 메모)

@@ -98,7 +98,7 @@ for (const ch of chs) {
     if (ranks.has(3) && (ranks.has(1) || ranks.has(2))) E(`${s.ref} 높은 순위 근거가 있는 단락에 3순위 해설`);
     if (!(s.comments || []).length && !(s.notes || []).length && !s.plain) E(`${s.ref} 해설도 본문만 표시(plain)도 없음`);
     // 「찾지 못했다」는 책에 쓰지 않는다(지침 §1, 2026-11-03) — 창세기부터. 사무엘·열왕기는 옛 원고라 아직 뺌
-    if (book === "genesis" || book === "exod" || book === "judg" || book === "job") {
+    if (book === "genesis" || book === "exod" || book === "judg" || book === "job" || book === "ezek" || book === "esth") {
       if ((s.notes || []).length) E(`${s.ref} 해설 미수록 안내 대신 "plain": true`);
       for (const c of s.comments || []) if (/찾지 ?못/.test(c.text) && /(강의|교재|해설|근거)/.test(c.text)) E(`${c.id} 해설에 「찾지 못했다」 안내`);
     }

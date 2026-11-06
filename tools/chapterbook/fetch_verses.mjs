@@ -2,7 +2,7 @@
 //   node tools/chapterbook/fetch_verses.mjs   → 창세기/원본/2판/verses-genesis.json, 사무엘상·하/원본/2판/verses-1sam.json·verses-2sam.json, 열왕기상·하/원본/2판/verses-1ki.json·verses-2ki.json
 import fs from "fs";
 import { chapter } from "../kjv.mjs";
-const BOOKS = [["창세기", 50, "창세기/원본/2판/verses-genesis.json"], ["사무엘상", 31, "사무엘상·하/원본/2판/verses-1sam.json"], ["사무엘하", 24, "사무엘상·하/원본/2판/verses-2sam.json"], ["열왕기상", 22, "열왕기상·하/원본/2판/verses-1ki.json"], ["열왕기하", 25, "열왕기상·하/원본/2판/verses-2ki.json"], ["출애굽기", 40, "출애굽기/원본/2판/verses-exod.json"], ["사사기", 21, "사사기/원본/2판/verses-judg.json"], ["욥기", 42, "욥기/원본/2판/verses-job.json"]];
+const BOOKS = [["창세기", 50, "창세기/원본/2판/verses-genesis.json"], ["사무엘상", 31, "사무엘상·하/원본/2판/verses-1sam.json"], ["사무엘하", 24, "사무엘상·하/원본/2판/verses-2sam.json"], ["열왕기상", 22, "열왕기상·하/원본/2판/verses-1ki.json"], ["열왕기하", 25, "열왕기상·하/원본/2판/verses-2ki.json"], ["출애굽기", 40, "출애굽기/원본/2판/verses-exod.json"], ["사사기", 21, "사사기/원본/2판/verses-judg.json"], ["욥기", 42, "욥기/원본/2판/verses-job.json"], ["에스겔", 48, "에스겔/원본/2판/verses-ezek.json"], ["에스더", 10, "에스더/원본/2판/verses-esth.json"]];
 for (const [book, n, out] of BOOKS) {
   if (fs.existsSync(out)) continue; // 이미 받은 책은 다시 받지 않는다(본문 고치지 않음)
   const all = [];
