@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # 클라우드 세션(리눅스) 준비: 한글 글꼴, 빌드 의존성, 받아쓰기 엔진. Windows 기기에서는 쓰지 않는다.
 # 사용: bash tools/cloud_setup.sh   (다 되면 /tmp/topicbook/.ready 생김, 1~2분)
-# 빌드: /tmp/topicbook에 도구를 복사해 실행(cp "첫열매들 강의 정리/첫열매들 성경해석/tools/"* /tmp/topicbook/).
+# 빌드: /tmp/topicbook에 도구를 복사해 실행(cp "첫열매들 성경해석/원본/tools/"* /tmp/topicbook/).
 #       Edge 대신 headless Chromium을 쓴다(edge.mjs가 알아서 고름).
 set -u
 [ "$(uname -s)" = "Linux" ] || { echo "리눅스 전용"; exit 0; }

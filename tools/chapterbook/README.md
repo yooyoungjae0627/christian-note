@@ -53,7 +53,7 @@
      "evidence": [
        {"type": "transcript", "source": "첫열매들 예배 「강의 제목」", "file": "memory-bank/첫열매들_강의스크립트/…md", "time": "22:42", "to": "23:34"},
        {"type": "transcript", "source": "이이레 목사 「다윗의 삶」 N편 「제목」(사무엘상 N장 강의)", "file": "사무엘상·하/강의스크립트/…md", "time": "…", "to": "…"},
-       {"type": "pdf", "source": "예배 강의 「제목」", "file": "첫열매들 강의 정리/겁쟁이들의_하나님.pdf", "pages": [19], "excerpt": "그 쪽 글자 그대로(조각은 \n…\n 으로)", "url": null},
+       {"type": "pdf", "source": "예배 강의 「제목」", "file": "첫열매들 성경해석/겁쟁이들의_하나님.pdf", "pages": [19], "excerpt": "그 쪽 글자 그대로(조각은 \n…\n 으로)", "url": null},
        {"type": "external", "author": "C. I. 스코필드", "source": "스코필드 관주 해설(1917) …", "where": "Gen. 12:10 주석", "file": "memory-bank/세대주의_해설/scofield/genesis-12.md 또는 scofield_1917_archive_ocr.txt", "excerpt": "영어 원문 그대로(조각은 \n…\n)", "url": "확인한 주소"}
      ]}],
    "plain": true                      // 근거가 없을 때 — 본문만 싣는다(옛 원고의 notes 「해설 미수록」 대신)

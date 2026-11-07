@@ -112,7 +112,7 @@ export function pdfPage(file, page) {
 }
 // 원고·PDF 색인에는 폴더 이름을 바꾸기 전 경로(Theme/, Milk/, Samuel/)가 남아 있다 — 디스크에서는 새 폴더로 찾는다(2026-11-02)
 // 주제별 교재 완성본은 2026-11-04부터 파일 이름에 번호(NN_)가 없다 — 옛 이름(Theme/08_사탄_정확히_알기.pdf)이면 번호를 떼어 찾는다
-export const diskPath = (f) => { for (const [a, b] of [["Theme/", "첫열매들 강의 정리/"], ["Milk/", "밀크(첫열매들)/"], ["Samuel/", "사무엘상·하/"]]) if (f.startsWith(a)) { const p = b + f.slice(a.length); if (a === "Theme/" && !fs.existsSync(path.join(R, p))) { const q = p.replace(/\/\d{2}_([^/]+)$/, "/$1"); if (fs.existsSync(path.join(R, q))) return q; } return p; } return f; };
+export const diskPath = (f) => { for (const [a, b] of [["Theme/", "첫열매들 성경해석/"], ["Milk/", "밀크(첫열매들)/"], ["Samuel/", "사무엘상·하/"]]) if (f.startsWith(a)) { const p = b + f.slice(a.length); if (a === "Theme/" && !fs.existsSync(path.join(R, p))) { const q = p.replace(/\/\d{2}_([^/]+)$/, "/$1"); if (fs.existsSync(path.join(R, q))) return q; } return p; } return f; };
 export const squash = (s) => String(s).replace(/\s+/g, " ").trim();
 export const ffFile = (f) => f.startsWith("memory-bank/첫열매들_강의스크립트/");
 // 원고에는 폴더 이름을 바꾸기 전 경로(Samuel/강의스크립트/)가 남아 있다 — 둘 다 3순위로 본다(2026-10-31)
