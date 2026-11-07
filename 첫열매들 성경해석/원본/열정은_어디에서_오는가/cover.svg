@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 천막(바울의 천직) 위로 타오르는 불(안에서 타는 말씀) — 금빛 왕관(상) -->
+  <g fill="none" stroke="#e8c870" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M40 160 L100 92 L160 160" stroke="#f4ecd8"/>
+    <path d="M100 92 L100 160" stroke="#f4ecd8" stroke-opacity=".7"/>
+    <path d="M70 126 L82 160 M130 126 L118 160" stroke="#f4ecd8" stroke-opacity=".55" stroke-dasharray="3 4"/>
+    <path d="M100 160 L88 132 L112 132 Z" stroke="#f4ecd8" stroke-opacity=".8"/>
+    <path d="M24 162 H176" stroke="#9fc3ff" stroke-opacity=".6"/>
+    <path d="M100 80 C86 66 92 52 100 40 C102 50 112 54 110 66 C116 62 116 56 115 52 C124 64 116 78 100 80 Z"/>
+    <path d="M100 74 C94 68 97 60 100 54 C102 60 106 64 104 70 Z" stroke="#f4ecd8" stroke-opacity=".8"/>
+    <path d="M78 36 L84 24 L92 32 L100 20 L108 32 L116 24 L122 36 Z" stroke-opacity=".9"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="44" cy="62" r="1.6"/><circle cx="156" cy="70" r="1.8"/><circle cx="148" cy="44" r="1.2"/>
+    <circle cx="52" cy="96" r="1.2"/><circle cx="150" cy="104" r="1.4"/>
+  </g>
+</svg>
