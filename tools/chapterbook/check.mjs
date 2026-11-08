@@ -2,7 +2,7 @@
 //   node tools/chapterbook/check.mjs genesis 12 [13 …]   또는  genesis all
 import fs from "node:fs";
 import path from "node:path";
-import { R, BOOKS, chapterFile, chapterVerses, rangeVerses, markRanges, transcript, pdfPage, squash, ffFile, sbcFile, MARK, diskPath } from "./lib.mjs";
+import { R, BOOKS, chapterFile, chapterVerses, rangeVerses, markRanges, transcript, pdfPage, squash, ffFile, sbcFile, MARK, diskPath, LECTURE_TALK } from "./lib.mjs";
 import { PLACES, MOTIFS, mapViews, mapSvg, mapIssues } from "./art.mjs";
 import { familyIssues } from "./famtree.mjs";
 import { THINGS, BG, PANELS, bubble, says } from "./comic.mjs";
@@ -169,15 +169,20 @@ for (const ch of chs) {
   // 학습 자료
   const L = d.learning || {};
   const cnt = (a, lo, hi, n) => { if (!a || a.length < lo || a.length > hi) E(`${n} ${a?.length ?? 0}개(${lo}–${hi})`); };
-  cnt(L.summary, 12, 22, "요약"); cnt(L.questions, 25, 41, "문제"); cnt(L.faq, 12, 14, "예상 질문");
+  cnt(L.summary, 12, 22, "요약");
+  if (L.questions || L.faq) E("개념 문제·예상 질문은 두지 않는다(지침 §2, 2026-11-09)");
+  // 「강의는 …라고 합니다」식 서술 금지(지침 §2-1, 2026-11-09)
+  const talk = (w, s) => { if (s && LECTURE_TALK.test(s)) E(`${w}에 강의 출처 서술: ${s.match(LECTURE_TALK)[0]} — ${s.slice(0, 40)}`); };
+  for (const s of d.sections || []) { for (const c of s.comments || []) talk(c.id, c.text); for (const e of s.english || []) talk(`${s.ref} 영어 강의`, e.text); }
+  for (const p of d.people || []) talk(`인물 ${p.id}`, p.desc);
+  for (const x of L.summary || []) talk("요약", x.text);
+  for (const x of L.glossary || []) talk(`용어 ${x.term}`, x.text);
   const verseOk = (x, ans) => {
     const v = chapterVerses(book, ch).find((y) => y.ref === x.verse);
     if (!v) return E(`본문 근거 절 없음 ${x.verse}`);
     if (ans) for (const w of ans.split(/[,·]\s*/).map((s) => s.trim()).filter(Boolean)) if (!v.ko.includes(w)) E(`본문 확인 답 "${w}"이 ${x.verse} 본문에 없음`);
   };
   for (const x of [...(L.summary || []), ...(L.glossary || [])]) { if (x.key) { if (!has(x.key)) E(`없는 해설 key ${x.key}`); } else if (x.verse) verseOk(x); else E("요약·용어에 근거(key/verse) 없음"); }
-  for (const x of L.questions || []) { if (x.key) { if (!has(x.key)) E(`문제 key 없음 ${x.key}`); } else if (x.verse) verseOk(x, x.a); else E(`문제 근거 없음: ${x.q}`); }
-  for (const x of L.faq || []) if (!has(x.key)) E(`예상 질문 key 없음 ${x.key}`);
   for (const x of L.glossary || []) if (!x.term || !x.text) E("용어 풀이 빈칸");
   total += errs.length;
   summary.push({ ch, errors: errs.length, ...stat, people: (d.people || []).length, places: (d.map?.places || []).length, english: stat.english || 0 });

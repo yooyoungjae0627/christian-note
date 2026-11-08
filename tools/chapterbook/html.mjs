@@ -158,10 +158,8 @@ export function learning(book, ch, d, comments, { p = "", mk = () => "", inBook 
   const B = BOOKS[book], L = d.learning, nav = [];
   const sec = (label, en, key) => { nav.push([p + key, (inBook ? `${ch}장 ` : "") + label, inBook ? 1 : 0]); return header(label, en, p + key, mk); };
   let o = sec("한눈에 보는 이야기", "SUMMARY", "summary") + `<ol class="summary">` + L.summary.map((x) => `<li>${captionHtml({ cap: x.text, u: x.u })}</li>`).join("") + `</ol>${TOTOC}</section>`;
-  o += sec("개념 문제", "QUESTIONS", "questions") + `<ol class="questions">` + L.questions.map((x) => `<li>${esc(x.q)}</li>`).join("") + `</ol>${TOTOC}</section>`;
-  o += sec("답안과 근거", "ANSWERS", "answers") + L.questions.map((x, i) => `<div class="qa"><p class="q">${String(i + 1).padStart(2, "0")}. ${esc(x.q)}</p><p class="answer">${esc(x.a)}</p><div class="source-text">${basisOf(B, d, x)}</div>${x.key ? sourceRows(comments[x.key]) : ""}</div>`).join("") + TOTOC + `</section>`;
-  o += sec("예상 질문과 답변", "QUESTIONS & ANSWERS", "faq") + `<div class="note">${scope}의 해설에서 확인한 설명으로 답합니다.</div>` + L.faq.map((x, i) => { const c = comments[x.key]; return `<p class="q">Q${i + 1}. ${esc(x.q)}</p><p>${esc(c.text)}</p>${sourceRows(c, false)}`; }).join("") + TOTOC + `</section>`;
   o += sec("용어 풀이", "GLOSSARY", "glossary") + L.glossary.map((x) => `<div class="gl"><div class="gt">${esc(x.term)}</div><p>${esc(x.text)}</p><div class="source-text">${basisOf(B, d, x)}</div></div>`).join("") + TOTOC + `</section>`;
+  // 개념 문제·답안과 근거·예상 질문과 답변은 싣지 않는다(지침 §2, 2026-11-09)
   return { html: o, nav };
 }
 export function sourcesTable(list, mk, key = "sources") {

@@ -6,6 +6,8 @@ import path from "node:path";
 import { createRequire } from "node:module";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
+// 「강의는 …라고 합니다」식 출처 서술(지침 §2-1, 2026-11-09) — 해설·요약·용어·인물 설명에 쓰지 않는다
+export const LECTURE_TALK = /강의(는|에서|에 따르면|가 말하|의 말|도 |를 |의 표현)|(같은|다른|앞|뒤|이|그) 강의|강사/;
 export const R = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 export const HERE = path.join(R, "tools/chapterbook");
 export const TMP = path.join(os.tmpdir(), "chapterbook2");

@@ -6,7 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { R, BOOKS, loadChapter, chapterVerses } from "./lib.mjs";
+import { R, BOOKS, loadChapter, chapterVerses, LECTURE_TALK } from "./lib.mjs";
 import { MOTIFS } from "./art.mjs";
 
 // 책마다 단원 목록 위치와 원고 이름
@@ -30,7 +30,7 @@ export const unitFile = (n) => path.join(R, SPEC[BOOK].dir, SPEC[BOOK].file(Stri
 export const unitOut = (u) => `${BOOKS[BOOK].ko}_${String(u.unit).padStart(2, "0")}_${u.title.replace(/\s+/g, "_")}`;
 export const unitDir = () => path.join(R, SPEC[BOOK].dir);
 export const isUnitBook = (b) => !!SPEC[b];
-const LIMIT = { summary: [12, 22], questions: [25, 41], faq: [12, 14], glossary: [4, 12] };
+const LIMIT = { summary: [12, 22], glossary: [4, 12] }; // 개념 문제·예상 질문은 두지 않는다(지침 §2, 2026-11-09)
 
 const pv = (r) => { const [c, v] = r.split(":").map(Number); return [c, v]; };
 // "12:4" · "12:4-10" · "12:4, 12:6" → 첫 절 [장, 절]
@@ -83,8 +83,6 @@ function make(u) {
   const pool = (k) => parts.flatMap((p) => (loadChapter(BOOK, p.ch).learning[k] || []).filter(ok));
   const learning = {
     summary: spread(uniq(pool("summary"), (x) => x.text), LIMIT.summary[1]),
-    questions: spread(uniq(pool("questions"), (x) => x.q), LIMIT.questions[1]),
-    faq: spread(uniq(pool("faq"), (x) => x.q), LIMIT.faq[1]),
     glossary: spread(uniq(pool("glossary"), (x) => x.term), LIMIT.glossary[1]),
   };
   // 표어·표지: 단원에 해설 문단이 다 들어간 장의 것을, 앞 장부터
@@ -108,6 +106,8 @@ export function check(n) {
   for (const c of u.cover || []) if (!MOTIFS[c.m]) E.push("없는 표지 그림 " + c.m);
   if (!u.cover?.length) E.push("표지 그림 없음");
   const vIn = (r) => { const x = firstRef(r); return cmp(x, pv(u.from)) >= 0 && cmp(x, pv(u.to)) <= 0; };
+  if (u.learning?.questions || u.learning?.faq) E.push("개념 문제·예상 질문은 두지 않는다(지침 §2, 2026-11-09)");
+  for (const x of [...(u.learning?.summary || []), ...(u.learning?.glossary || [])]) if (LECTURE_TALK.test(x.text)) E.push(`학습 자료에 강의 출처 서술: ${x.text.slice(0, 40)}`);
   for (const [k, [lo, hi]] of Object.entries(LIMIT)) {
     const a = u.learning?.[k] || [];
     if (a.length < lo || a.length > hi) E.push(`${k} ${a.length}개(지침 ${lo}–${hi})`);
@@ -144,7 +144,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     } else {
       const e = check(n); if (e.length) bad++;
       const x = loadUnit(n), L = x.learning || {};
-      console.log(`단원 ${n} ${u.title} (${u.from}–${u.to}): ${e.length ? "실패" : "통과"} · 장 ${x.parts.map(label).join(", ")} · 해설 ${x.parts.reduce((a, p) => a + p.d.sections.reduce((b, s) => b + s.comments.length, 0), 0)} · 요약 ${L.summary?.length} 문제 ${L.questions?.length} 예상 질문 ${L.faq?.length} 용어 ${L.glossary?.length}`);
+      console.log(`단원 ${n} ${u.title} (${u.from}–${u.to}): ${e.length ? "실패" : "통과"} · 장 ${x.parts.map(label).join(", ")} · 해설 ${x.parts.reduce((a, p) => a + p.d.sections.reduce((b, s) => b + s.comments.length, 0), 0)} · 요약 ${L.summary?.length} 용어 ${L.glossary?.length}`);
       for (const m of e) console.log("   - " + m);
     }
   }
