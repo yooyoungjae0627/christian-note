@@ -40,6 +40,6 @@ await page.setContent(html, { waitUntil: "load" });
 await page.evaluate(() => document.fonts.ready);
 await page.pdf({ path: out, format: "A4", printBackground: true, preferCSSPageSize: true,
   displayHeaderFooter: true, headerTemplate: "<span></span>",
-  footerTemplate: `<div style="width:100%;text-align:center;font:8px 'Noto Sans KR';color:#8a7442;">강의 필기 노트 — 자신을 속임 · <span class="pageNumber"></span> / <span class="totalPages"></span></div>` });
+  footerTemplate: `<div style="width:100%;text-align:center;font:8px 'Noto Sans KR';color:#8a7442;">강의 필기 노트 — 속이지 마세요 자신을 · <span class="pageNumber"></span> / <span class="totalPages"></span></div>` });
 await browser.close();
 console.log(out);

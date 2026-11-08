@@ -64,11 +64,11 @@ const browser = await chromium.launch();
 const page = await browser.newPage({ deviceScaleFactor: 2, viewport: { width: 860, height: 1200 } });
 for (const c of COMICS) {
   const cells = c.panels.map((p, i) => `<div class="panel">${panelSvg(p, c.key + "_" + i)}<div class="cap"><span class="pnum">${i + 1}</span>${captionHtml(p)}</div></div>`).join("");
-  const html = `<!doctype html><meta charset="utf-8"><style>${CSS}</style><div class="page"><div class="head"><span class="t">${esc(c.title)}</span><span class="n">만화 6컷 · 자신을 속임</span></div><div class="grid">${cells}</div><div class="note">말풍선은 필기 노트의 말을 옮긴 것이며 성경 본문 인용이 아닙니다. 하나님·예수님은 사람 모양으로 그리지 않고 빛으로만 나타냈습니다.</div></div>`;
+  const html = `<!doctype html><meta charset="utf-8"><style>${CSS}</style><div class="page"><div class="head"><span class="t">${esc(c.title)}</span><span class="n">만화 6컷 · 속이지 마세요 자신을</span></div><div class="grid">${cells}</div><div class="note">말풍선은 필기 노트의 말을 옮긴 것이며 성경 본문 인용이 아닙니다. 하나님·예수님은 사람 모양으로 그리지 않고 빛으로만 나타냈습니다.</div></div>`;
   await page.setContent(html);
   await page.evaluate(() => document.fonts.ready);
   const el = await page.$(".page");
-  const f = path.join(out, `자신을_속임_만화_${c.key}.png`);
+  const f = path.join(out, `속이지_마세요_자신을_만화_${c.key}.png`);
   await el.screenshot({ path: f });
   console.log(f);
 }
