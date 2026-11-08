@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import * as mupdf from "mupdf";
 import { loadBook, esc, ordinal, tocId, sid } from "./parse.mjs";
-import { chapterHtml, storyTitleHtml, summaryHtml, quizHtml, answersHtml, faqHtml, glossHtml, tocItems, videoMark } from "./html.mjs";
+import { keysHtml, talkHtml, backList, structure, chapterHtml, storyTitleHtml, summaryHtml, quizHtml, answersHtml, faqHtml, glossHtml, tocItems, videoMark } from "./html.mjs";
 import { coverHtml } from "./common.mjs";
 import { edgePrint } from "./edge.mjs";
 
@@ -16,7 +16,7 @@ const book = loadBook(root);
 async function howto() {
   const vid = book.stories[0].vid, sample = vid ? await videoMark(vid, "0:00") : "";
   return `<section class="front" id="howto"><h1>이 책을 읽는 법</h1><div class="gold"></div>
-  <p class="bp">이 책은 「${book.series}」 시리즈의 한 권으로, 첫열매들(FIRSTFRUITS) 예배 강의 <b>하나를 한 권</b>으로 엮은 교재입니다. 강의를 녹취하여 내용과 예화와 순서는 하나도 빼지 않고 문장만 읽기 좋게 다듬었습니다. 장 제목과 소제목, 그림 캡션, 용어 상자, 뒷부분(한눈에 보는 이야기, 개념 문제, 예상 질문과 답변, 용어·인물 풀이)은 정리한 사람이 덧붙였습니다.</p>
+  <p class="bp">이 책은 「${book.series}」 시리즈의 한 권으로, 첫열매들(FIRSTFRUITS) 예배 강의 <b>하나를 한 권</b>으로 엮은 교재입니다. 강의를 녹취하여 내용과 예화와 순서는 하나도 빼지 않고 문장만 읽기 좋게 다듬었습니다. 장 제목과 소제목, 그림 캡션, 용어 상자, ${book.stories[0].keys.length ? "앞의 핵심 정리와 이야기로 먼저 읽는 핵심, " : ""}뒷부분(${backList(book.stories[0])})은 정리한 사람이 덧붙였습니다.</p>
   <div class="lab">세 단계 강조</div>
   <table class="legend"><tr><td><span class="h1">노란 바탕</span></td><td>중요한 문장</td></tr>
   <tr><td><span class="h2">노란 바탕 + 굵게</span></td><td>더 중요한 문장</td></tr>
@@ -29,7 +29,7 @@ async function howto() {
   <div class="lab">이야기 표제 쪽</div>
   <p class="bp">이야기마다 첫 쪽에 원 강의 정보와 <b>그 이야기의 강의 그림 색깔 표</b>가 있습니다. 왼쪽 아래의 <span class="totoc demo"><span class="arr">◀</span> 목차로 이동</span> 단추를 누르면 차례에서 그 이야기 항목으로 돌아갑니다. 각 장과 뒷부분 제목 아래에도 같은 단추가 있어, 누르면 차례의 그 장 항목으로 갑니다.</p>
   <div class="lab">책의 구성</div>
-  <p class="bp">이 책을 읽는 법 → 차례 → [이야기 표제 → 시작하며 → 본문 장들 → 마치며 → 한눈에 보는 이야기 → 개념 문제 → 답안 → 예상 질문과 답변 → 용어·인물 풀이]</p></section>`;
+  <p class="bp">${structure(book.stories[0])}</p></section>`;
 }
 
 function toc(pages) {
@@ -53,7 +53,7 @@ async function fullHtml(pages, withMarkers) {
   const marker = withMarkers ? (id) => `<span class="mk">@@${id}@@</span>` : () => "";
   let body = coverHtml(book) + (await howto()) + toc(pages);
   for (const S of book.stories) {
-    body += await storyTitleHtml(book, S, marker);
+    body += (await storyTitleHtml(book, S, marker)) + keysHtml(S, marker) + talkHtml(S, marker);
     for (let i = 0; i < S.chapters.length; i++) body += await chapterHtml(S, S.chapters[i], i, marker);
     body += summaryHtml(S, marker) + quizHtml(S, marker) + (await answersHtml(S, marker)) + (await faqHtml(book, S, marker)) + glossHtml(S, marker);
   }

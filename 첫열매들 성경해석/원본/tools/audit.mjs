@@ -6,7 +6,7 @@ import * as mupdf from "mupdf";
 const [pdf, tocJson] = process.argv.slice(2);
 const pages = JSON.parse(fs.readFileSync(tocJson, "utf8"));
 // 새 쪽에서 시작하는 섹션(이야기 표제·뒷부분)
-const starts = new Set(Object.entries(pages).filter(([id]) => /^S\d+(sum|quiz|ans|faq|gl)?$/.test(id)).map(([, p]) => p));
+const starts = new Set(Object.entries(pages).filter(([id]) => /^S\d+(key|talk|sum|quiz|ans|faq|gl)?$/.test(id)).map(([, p]) => p));
 const doc = mupdf.Document.openDocument(fs.readFileSync(pdf), "application/pdf");
 const MM = 72 / 25.4, TOP = 16 * MM, BOTTOM = (210 - 19) * MM, H = BOTTOM - TOP;
 const first = Math.min(...[...starts]);

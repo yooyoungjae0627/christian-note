@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 import JSZip from "jszip";
 import sharp from "sharp";
 import { loadBook, esc, ytUrl, ordinal, tocId, sid } from "./parse.mjs";
-import { chapterHtml, storyTitleHtml, summaryHtml, quizHtml, answersHtml, faqHtml, glossHtml, tocItems, setMode, setImgResolver, setTocResolver } from "./html.mjs";
+import { keysHtml, talkHtml, backList, structure, chapterHtml, storyTitleHtml, summaryHtml, quizHtml, answersHtml, faqHtml, glossHtml, tocItems, setMode, setImgResolver, setTocResolver } from "./html.mjs";
 import { coverHtml } from "./common.mjs";
 import { edgeShot } from "./edge.mjs";
 setMode("epub");
@@ -34,7 +34,7 @@ for (const S of book.stories) for (const [, id] of tocItems(S)) where[id] = sfil
 function frontXhtml() {
   const S0 = book.stories[0];
   return xhtml("이 책을 읽는 법", `<section id="howto"><h1>이 책을 읽는 법</h1><div class="gold"></div>
-  <p>이 책은 「${book.series}」 시리즈의 한 권으로, 첫열매들(FIRSTFRUITS) 예배 강의 <b>하나를 한 권</b>으로 엮은 교재입니다. 강의를 녹취하여 내용과 예화와 순서는 하나도 빼지 않고 문장만 읽기 좋게 다듬었습니다. 장 제목과 소제목, 그림 캡션, 용어 상자, 뒷부분(한눈에 보는 이야기, 개념 문제, 예상 질문과 답변, 용어·인물 풀이)은 정리한 사람이 덧붙였습니다.</p>
+  <p>이 책은 「${book.series}」 시리즈의 한 권으로, 첫열매들(FIRSTFRUITS) 예배 강의 <b>하나를 한 권</b>으로 엮은 교재입니다. 강의를 녹취하여 내용과 예화와 순서는 하나도 빼지 않고 문장만 읽기 좋게 다듬었습니다. 장 제목과 소제목, 그림 캡션, 용어 상자, ${book.stories[0].keys.length ? "앞의 핵심 정리와 이야기로 먼저 읽는 핵심, " : ""}뒷부분(${backList(book.stories[0])})은 정리한 사람이 덧붙였습니다.</p>
   <div class="lab">세 단계 강조</div>
   <table class="legend"><tr><td><span class="h1">노란 바탕</span></td><td>중요한 문장</td></tr>
   <tr><td><span class="h2">노란 바탕 + 굵게</span></td><td>더 중요한 문장</td></tr>
@@ -48,7 +48,7 @@ function frontXhtml() {
   <div class="lab">전자책으로 읽을 때</div>
   <p>글자 크기를 키우거나 줄이면 줄이 화면에 맞게 다시 흐릅니다. 어두운 화면으로 읽어도 됩니다. 쪽 번호는 기기와 글자 크기에 따라 달라지고, 상자 모양은 앱마다 조금씩 다르게 보일 수 있습니다.</p>
   <div class="lab">책의 구성</div>
-  <p>이 책을 읽는 법 → 차례 → [이야기 표제 → 시작하며 → 본문 장들 → 마치며 → 한눈에 보는 이야기 → 개념 문제 → 답안 → 예상 질문과 답변 → 용어·인물 풀이]</p></section>`);
+  <p>${structure(book.stories[0])}</p></section>`);
 }
 
 function contentsXhtml() {
@@ -66,7 +66,7 @@ function contentsXhtml() {
 }
 
 async function storyXhtml(S) {
-  let h = await storyTitleHtml(book, S);
+  let h = (await storyTitleHtml(book, S)) + keysHtml(S) + talkHtml(S);
   for (let i = 0; i < S.chapters.length; i++) h += await chapterHtml(S, S.chapters[i], i);
   h += summaryHtml(S) + quizHtml(S) + (await answersHtml(S)) + (await faqHtml(book, S)) + glossHtml(S);
   return xhtml(S.title, h);

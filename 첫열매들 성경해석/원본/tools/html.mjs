@@ -97,11 +97,25 @@ export async function storyTitleHtml(book, S, marker = () => "") {
   ${back(sid(S))}</section>`;
 }
 
+// 핵심 정리(사용자 지시 2026-11-09): 이야기 표제 다음, 강의 본문 앞
+export function keysHtml(S, marker = () => "") {
+  if (!S.keys.length) return "";
+  return `<section class="front" id="${sid(S, "key")}">${marker(sid(S, "key"))}<div class="sk">${esc(S.title)}</div><h1>핵심 정리</h1><div class="gold"></div>${back(sid(S, "key"), " sm")}<div class="added">강의에 들어가기 전에 먼저 읽는 요점 — 정리한 사람이 강의 내용으로만 정리한 글</div><ol class="keys">${S.keys.map((s) => `<li>${inline(s)}</li>`).join("")}</ol></section>`;
+}
+
+// 이야기로 먼저 읽는 핵심: 핵심 정리를 중학생도 이해할 수 있게 대본으로
+export function talkHtml(S, marker = () => "") {
+  if (!S.talk.length) return "";
+  const line = (t) => t.who === "장면" ? `<p class="tk-scene">${inline(t.text)}</p>` : `<div class="tk"><span class="tk-who">${esc(t.who)}</span><p class="tk-say">${inline(t.text)}</p></div>`;
+  return `<section class="front" id="${sid(S, "talk")}">${marker(sid(S, "talk"))}<div class="sk">${esc(S.title)}</div><h1>이야기로 먼저 읽는 핵심</h1><div class="gold"></div>${back(sid(S, "talk"), " sm")}<div class="added">핵심 정리를 중학생도 이해할 수 있게 대본으로 풀었습니다. 인물과 장면은 정리한 사람이 지었고, 내용은 강의에서만 가져왔습니다.</div>${S.talk.map(line).join("")}</section>`;
+}
+
 export function summaryHtml(S, marker = () => "") {
   return `<section class="front" id="${sid(S, "sum")}">${marker(sid(S, "sum"))}<div class="sk">${esc(S.title)}</div><h1>한눈에 보는 이야기</h1><div class="gold"></div>${back(sid(S, "sum"), " sm")}<div class="added">정리한 사람이 덧붙인 글</div><ol class="sum">${S.summary.map((s) => `<li>${inline(s)}</li>`).join("")}</ol></section>`;
 }
 
 export function quizHtml(S, marker = () => "") {
+  if (!S.quiz.length) return "";
   return `<section class="front" id="${sid(S, "quiz")}">${marker(sid(S, "quiz"))}<div class="sk">${esc(S.title)}</div><h1>개념 문제</h1><div class="gold"></div>${back(sid(S, "quiz"), " sm")}<div class="added">강의 내용으로만 냈습니다. 답은 다음 쪽부터 있습니다.</div>
   ${S.quiz.map((q, i) => `<div class="qz"><span class="num">${i + 1}</span><p>${esc(q.q)}</p></div>`).join("")}</section>`;
 }
@@ -110,6 +124,7 @@ const qaNote = (S) => !S.vid ? "" : `<div class="added">${MODE === "epub" ? "▶
 const qaRight = async (S, ts) => (S.vid ? `<div class="anr">${await videoMark(S.vid, ts)}</div>` : "");
 
 export async function answersHtml(S, marker = () => "") {
+  if (!S.quiz.length) return "";
   let h = `<section class="front" id="${sid(S, "ans")}">${marker(sid(S, "ans"))}<div class="sk">${esc(S.title)}</div><h1>개념 문제 답안</h1><div class="gold"></div>${back(sid(S, "ans"), " sm")}${qaNote(S)}`;
   for (const [i, q] of S.quiz.entries()) {
     h += `<div class="an${S.vid ? "" : " novid"}"><div class="anb"><div class="anq"><span class="num gold">${i + 1}</span>${esc(q.q)}</div><div class="ana">${esc(q.a)}</div><div class="anw"><b>근거:</b> ${esc(q.why)}</div></div>${await qaRight(S, q.ts)}</div>`;
@@ -134,10 +149,18 @@ export function glossHtml(S, marker = () => "") {
 // 이야기 하나의 차례 항목: [제목, id, 깊이(0=이야기 1=장 2=소제목), 부제]
 export function tocItems(S) {
   const it = [[S.title, sid(S), 0, S.sub]];
+  if (S.keys.length) it.push(["핵심 정리", sid(S, "key"), 1]);
+  if (S.talk.length) it.push(["이야기로 먼저 읽는 핵심", sid(S, "talk"), 1]);
   S.chapters.forEach((c, i) => {
     it.push([`${chLabel(c) ? chLabel(c) + " " : ""}${c.title}`, chId(S, i), 1, c.sub]);
     c.secs.forEach((s, j) => it.push([s.title, secId(S, i, j), 2]));
   });
-  it.push(["한눈에 보는 이야기", sid(S, "sum"), 1], ["개념 문제", sid(S, "quiz"), 1], ["개념 문제 답안", sid(S, "ans"), 1], ["예상 질문과 답변", sid(S, "faq"), 1], ["용어·인물 풀이", sid(S, "gl"), 1]);
+  it.push(["한눈에 보는 이야기", sid(S, "sum"), 1]);
+  if (S.quiz.length) it.push(["개념 문제", sid(S, "quiz"), 1], ["개념 문제 답안", sid(S, "ans"), 1]); // 0개면 싣지 않음(2026-11-09)
+  it.push(["예상 질문과 답변", sid(S, "faq"), 1], ["용어·인물 풀이", sid(S, "gl"), 1]);
   return it;
 }
+
+// 「이 책을 읽는 법」의 책의 구성·뒷부분 목록(책마다 실린 섹션대로)
+export const backList = (S) => ["한눈에 보는 이야기", ...(S.quiz.length ? ["개념 문제"] : []), "예상 질문과 답변", "용어·인물 풀이"].join(", ");
+export const structure = (S) => ["이 책을 읽는 법", "차례", `[이야기 표제`, ...(S.keys.length ? ["핵심 정리"] : []), ...(S.talk.length ? ["이야기로 먼저 읽는 핵심"] : []), "시작하며", "본문 장들", "마치며", "한눈에 보는 이야기", ...(S.quiz.length ? ["개념 문제", "답안"] : []), "예상 질문과 답변", "용어·인물 풀이]"].join(" → ");

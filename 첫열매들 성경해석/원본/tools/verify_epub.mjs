@@ -48,9 +48,11 @@ for (const S of book.stories) {
   const want = { 문단: blocks.filter((b) => b.t === "p").length, 그림: blocks.filter((b) => b.t === "img").length, 구절상자: blocks.filter((b) => b.t === "img" && b.verse).length, 용어상자: blocks.filter((b) => b.t === "note").length, 문제: S.quiz.length, 답안: S.quiz.length, 예상질문: S.faq.length,
     강조: blocks.filter((b) => b.t === "p").reduce((a, b) => a + count(b.text, /\{[123]:/g), 0) };
   want.구절상자 += blocks.filter((b) => b.t === "verse").length;
-  want.강조 = blocks.reduce((a, b) => a + count([b.text, b.verse].filter(Boolean).join(" "), /\{[123]:/g), 0);
+  want.강조 = blocks.reduce((a, b) => a + count([b.text, b.verse].filter(Boolean).join(" "), /\{[123]:/g), 0) + [...S.keys, ...S.talk.map((t) => t.text)].reduce((a, t) => a + count(t, /\{[123]:/g), 0);
+  want.핵심정리 = S.keys.length; want.대사 = S.talk.length;
   const got = { 문단: count(s, /<p class="bp">/g), 그림: count(s, /<figure class="slide[ "]/g), 구절상자: count(s, /<div class="verse[ "]/g), 용어상자: count(s, /<div class="note">/g), 문제: count(s, /<div class="qz">/g), 답안: count(s, /<div class="an[ "]/g), 예상질문: count(s, /<div class="fq[ "]/g),
-    강조: count(s.split('id="' + `S${S.n}sum`)[0], /<span class="h[123]">/g) };
+    강조: count(s.split('id="' + `S${S.n}sum`)[0], /<span class="h[123]">/g),
+    핵심정리: count((s.split(`id="S${S.n}key"`)[1] || "").split("</ol>")[0], /<li>/g), 대사: count(s, /<div class="tk">|<p class="tk-scene">/g) };
   for (const k of Object.keys(want)) if (want[k] !== got[k]) problems.push(`${S.n}번째 이야기 ${k}: 원고 ${want[k]} / EPUB ${got[k]}`);
   console.log(`  ${S.n}번째 이야기: ` + Object.entries(got).map(([k, v]) => `${k} ${v}`).join(", "));
   // 영상 링크

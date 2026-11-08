@@ -82,7 +82,7 @@ export function transcriptTimes(dir) {
 
 export function parseStory(dir) {
   const src = fs.readFileSync(path.join(dir, "story.txt"), "utf8").split(/\r?\n/);
-  const S = { dir, chapters: [], legend: [], storynotes: [], summary: [], quiz: [], faq: [], notes: [], gloss: [], images: [], lectures: [] };
+  const S = { dir, chapters: [], legend: [], storynotes: [], summary: [], keys: [], talk: [], quiz: [], faq: [], notes: [], gloss: [], images: [], lectures: [] };
   let ch = null, sec = null;
   const lastTs = {};
   const push = (blk) => { if (!ch) throw new Error("@ch 앞에 내용이 있음"); (sec ? sec.blocks : ch.blocks).push(blk); };
@@ -125,6 +125,10 @@ export function parseStory(dir) {
       // @verse|머리|구절(//)|출처|읽음 또는 언급 — 그림 없는 말씀 상자(표준킹제임스성경 본문, 옛 책은 한글KJV)
       case "@verse": f[1].split("//").forEach(inline); push({ t: "verse", head: f[0], text: f[1], src: f[2], kind: f[3] || "읽음" }); break;
       case "@note": inline(f[1]); push({ t: "note", term: f[0], text: f[1] }); S.notes.push({ term: f[0], text: f[1] }); break;
+      // 핵심 정리(사용자 지시 2026-11-09): 강의 본문에 들어가기 전에 서두에 둔다
+      case "@key": inline(f.join("|")); S.keys.push(f.join("|")); break;
+      // 이야기로 먼저 읽는 핵심: 핵심 정리를 중학생도 이해할 수 있게 대본(화자|대사)으로. 화자 "장면" = 지문
+      case "@talk": inline(f.slice(1).join("|")); S.talk.push({ who: f[0], text: f.slice(1).join("|") }); break;
       case "@summary": inline(f.join("|")); S.summary.push(f.join("|")); break;
       case "@quiz": S.quiz.push({ q: f[0], a: f[1], why: f[2], ts: f[3] }); tsSec(f[3]); break;
       case "@faq": S.faq.push({ q: f[0], a: f[1], why: f[2], ts: f[3] }); tsSec(f[3]); break;
@@ -160,7 +164,10 @@ export function parseStory(dir) {
   for (const x of files) { const k = S.images.filter((y) => y === x).length; if (k !== 1) problems.push(`슬라이드 ${x} 사용 ${k}번`); }
   // 3) 뒷부분 분량(지침 ① §5)
   if (S.summary.length < 12 || S.summary.length > 22) problems.push(`한눈에 보는 이야기 ${S.summary.length}줄(12~22)`);
-  if (S.quiz.length < 25 || S.quiz.length > 41) problems.push(`개념 문제 ${S.quiz.length}개(25~41)`);
+  // 개념 문제는 밀크 강의 밖에서는 내지 않는다(사용자 지시 2026-11-09). 0개 = 새 정책, 25~41 = 그 전에 만든 책
+  if (S.quiz.length && (S.quiz.length < 25 || S.quiz.length > 41)) problems.push(`개념 문제 ${S.quiz.length}개(0, 또는 옛 책 25~41)`);
+  if (S.keys.length && (S.keys.length < 5 || S.keys.length > 12)) problems.push(`핵심 정리 ${S.keys.length}개(5~12)`);
+  if (S.keys.length && S.talk.length < 12) problems.push(`이야기로 먼저 읽는 핵심 대사 ${S.talk.length}개(12 이상) — 핵심 정리 뒤에 둔다`);
   if (S.faq.length < 12 || S.faq.length > 14) problems.push(`예상 질문 ${S.faq.length}개(12~14)`);
   if (problems.length) throw new Error(`[${path.basename(dir)}] 원고 검사 실패\n  ` + problems.join("\n  "));
   S.transcriptLines = times.length;

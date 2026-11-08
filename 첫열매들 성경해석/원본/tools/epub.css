@@ -100,3 +100,9 @@ figcaption .made { background: #eef3f8; color: #2b3a67; border-radius: .2em; pad
 .verse .vh { font-weight: bold; color: #18233f; }
 .verse.vref { border-left-style: dashed; }
 .snote { text-align: left; font-size: .85em; color: #555; background: #f6f3ea; border-radius: .3em; padding: .5em .8em; margin: 1em 0; }
+/* 핵심 정리 · 이야기로 먼저 읽는 핵심 (2026-11-09) */
+ol.keys li { margin-bottom: 1.1em; line-height: 1.75; }
+.tk { margin: 0 0 .8em; }
+.tk-who { font-weight: bold; color: #18233f; display: block; }
+.tk-say { margin: .1em 0 0 1em; }
+.tk-scene { margin: 1.2em 0 1em; font-style: italic; color: #6b6249; background: #f7f1e3; padding: .4em .8em; border-radius: .3em; }

@@ -177,3 +177,9 @@ figcaption .made { display: inline-block; background: #eef3f8; color: #2b3a67; b
 .an.novid, .fq.novid { min-height: 0; }
 .snote { margin: 3mm auto 0; width: 100mm; font-size: 8pt; line-height: 1.6; color: #555; text-align: left; background: #f6f3ea; border-radius: 1.6mm; padding: 2mm 3mm; }
 .snote p { margin: 0 0 .8mm; }
+/* 핵심 정리 · 이야기로 먼저 읽는 핵심 (2026-11-09) */
+ol.keys { padding-left: 5mm; margin: 0; } ol.keys li { margin-bottom: 4mm; font-size: 10pt; line-height: 1.75; } ol.keys li::marker { color: #b8862b; font-weight: 700; }
+.tk { display: flex; gap: 3mm; align-items: flex-start; margin: 0 0 2.6mm; break-inside: avoid; }
+.tk-who { flex: 0 0 15mm; font: 700 8.8pt/1.75 "Noto Sans KR", sans-serif; color: #18233f; border-right: .5mm solid #e0c58a; padding-right: 2mm; text-align: right; }
+.tk-say { margin: 0; font-size: 9.8pt; line-height: 1.75; }
+.tk-scene { margin: 3.5mm 0 3mm; font: italic 8.6pt/1.7 "Noto Sans KR", sans-serif; color: #6b6249; background: #f7f1e3; border-radius: 1.5mm; padding: 1.6mm 3mm; break-inside: avoid; }
