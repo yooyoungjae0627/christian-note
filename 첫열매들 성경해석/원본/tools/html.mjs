@@ -91,7 +91,7 @@ export async function storyTitleHtml(book, S, marker = () => "") {
   const vm = await videoMark(S.vid, "0:00");
   const video = S.vid ? `<div class="sq0">${MODE === "epub" ? `<p>${vm} 강의 영상 처음부터 보기</p>` : vm}</div>` : "";
   const notes = S.storynotes.length ? `<div class="snote">${S.storynotes.map((n) => `<p>${inline(n)}</p>`).join("")}</div>` : "";
-  return `<section class="story" id="${sid(S)}">${marker(sid(S))}<div class="sn">첫열매들 예배 강의</div><h1>${esc(S.title)}</h1><div class="ss">${esc(S.sub)}</div><div class="gold"></div>
+  return `<section class="story" id="${sid(S)}">${marker(sid(S))}<div class="sn">${esc(book.lectureLabel || "첫열매들 예배 강의")}</div><h1>${esc(S.title)}</h1><div class="ss">${esc(S.sub)}</div><div class="gold"></div>
   <table class="meta">${rows.map(([k, v]) => `<tr><td>${k}</td><td>${esc(v)}</td></tr>`).join("")}</table>
   ${video}${notes}${legend}
   ${back(sid(S))}</section>`;
