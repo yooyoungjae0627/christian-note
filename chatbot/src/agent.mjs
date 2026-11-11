@@ -1,11 +1,11 @@
 // 질문 하나에 답한다: Claude가 search·get_verse 도구로 저장소 자료를 찾아보고 답을 쓴다.
-// 도구 호출 루프를 직접 돌리는 이유: 카카오톡 응답 시한이 있어 전체 시간·횟수를 서버가 끊어야 한다.
+// 도구 호출 루프를 직접 돌리는 이유: 웹 요청 하나가 붙잡고 기다리므로 전체 시간·횟수를 서버가 끊어야 한다.
 import Anthropic from "@anthropic-ai/sdk";
 import { TIERS } from "./corpus.mjs";
 import { search, formatHits } from "./search.mjs";
 
 export const MODEL = process.env.CHATBOT_MODEL || "claude-opus-5-5";
-// 답이 늦으면 카카오톡 콜백 시한(1분)을 넘긴다. 자료 찾아 요약하는 일이라 낮은 effort로 충분하다.
+// 성도가 화면 앞에서 기다린다. 자료를 찾아 요약하는 일이라 낮은 effort로 충분하다.
 const EFFORT = process.env.CHATBOT_EFFORT || "low";
 const MAX_TURNS = 8;
 
@@ -60,7 +60,7 @@ const textOf = (content) => content.filter((b) => b.type === "text").map((b) => 
 
 // history: 이전 문답 [{ role: "user"|"assistant", content: "글" }, …] — 글만 넘긴다.
 // 돌려주는 값: { text, usage, turns }
-export async function answer({ question, history = [], system, index, getVerse, client = new Anthropic({ maxRetries: 1 }), deadline = Date.now() + 110_000 }) {
+export async function answer({ question, history = [], system, index, getVerse, client = new Anthropic({ maxRetries: 1 }), deadline = Date.now() + 150_000 }) {
   const messages = [...history, { role: "user", content: question }];
   const usage = { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 };
 
@@ -70,7 +70,7 @@ export async function answer({ question, history = [], system, index, getVerse, 
     const res = await client.beta.messages.create(
       {
         model: MODEL,
-        max_tokens: 4000, // 카카오톡 말풍선 세 개(3,000자)가 답의 상한
+        max_tokens: 4000, // 답은 1,500자 안쪽(프롬프트의 답 형식)
         betas: ["server-side-fallback-2026-07-01"],
         fallbacks: "default", // 안전 분류기가 거절하면 API가 같은 요청을 대체 모델로 다시 돌린다
         output_config: { effort: EFFORT },

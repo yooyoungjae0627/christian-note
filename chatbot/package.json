@@ -1,7 +1,7 @@
 {
   "name": "christian-note-chatbot",
   "private": true,
-  "description": "첫열매들 성경 해석 챗봇 — 카카오톡 스킬 서버. 설명: README.md",
+  "description": "첫열매들 성경 해석 챗봇 — 웹 채팅 서버. 설명: README.md",
   "type": "module",
   "engines": { "node": ">=20" },
   "scripts": {

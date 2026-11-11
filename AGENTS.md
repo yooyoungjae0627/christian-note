@@ -20,7 +20,7 @@ GitHub: `yooyoungjae0627/christian-note`. 요청자(유영재)가 자료를 고�
 | **실시간 강의 받아쓰기** (「받아쓰기 시작·반영·끝」, `/live-lecture`) | Theme | `docs/policy/실시간_강의받아쓰기_지침.md` (+ 주제별 지침) | `첫열매들 성경해석/` |
 | **최근 줌 녹화 교재 집필해줘** / 줌 녹화 책 (줌 강의 녹화 → 책, `/zoom-book`, `node tools/zoom/zoombook.mjs`) | Theme | `docs/policy/줌녹화_교재_지침.md` (+ 주제별 지침) — 영상 이동 없음 | `첫열매들 성경해석/` |
 | **성경 해석 질문** (구절 뜻·교리·인물 해석) | 해석 | `docs/policy/성경해석_지침.md` — 1순위 첫열매들 영상(분:초 링크), 2순위 세대주의 해설(출처 필수), 3순위 이이레 목사 강의 | `memory-bank/첫열매들_강의스크립트/` |
-| **성경 해석 챗봇** (카카오톡으로 성도 질문에 답하는 서버) | 해석 | `chatbot/README.md` — 답의 규칙은 `docs/policy/성경해석_지침.md` + `docs/doctrine/00_교리_총정리.md`를 그대로 읽어 씀 | `chatbot/` |
+| **성경 해석 챗봇** (웹 채팅 화면으로 성도 질문에 답하는 서버) | 해석 | `chatbot/README.md` — 답의 규칙은 `docs/policy/성경해석_지침.md` + `docs/doctrine/00_교리_총정리.md`를 그대로 읽어 씀 | `chatbot/` |
 | 빌드 파이프라인 세부(옛 스킬) | — | `docs/policy/참고_lecture-to-family-book_스킬_구버전.md` — 위 지침과 어긋나면 위 지침 우선 | — |
 
 강별 상세 교리: `docs/doctrine/milk01.md` … `milk10.md` (9강은 `milk09-1.md`, `milk09-2.md`). 밀크 교재 글자(검색용): `source_text/*.txt`.

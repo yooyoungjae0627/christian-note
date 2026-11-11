@@ -1,4 +1,4 @@
-// node --test chatbot/test/*.test.mjs     (API 키·네트워크 없이 돈다 — Claude와 카카오는 가짜로 대신한다)
+// node --test chatbot/test/*.test.mjs     (API 키·네트워크 없이 돈다 — Claude API와 claude 명령은 가짜로 대신한다)
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "fs";
@@ -7,9 +7,10 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { loadCorpus, TIERS } from "../src/corpus.mjs";
 import { buildIndex, search, tokenize } from "../src/search.mjs";
-import { buildSystem } from "../src/prompt.mjs";
+import { buildSystem, buildClaudeCodePrompt } from "../src/prompt.mjs";
 import { answer, TOOLS, REFUSAL_TEXT } from "../src/agent.mjs";
-import { plain, splitBubbles, skillResponse, parseRequest, BUBBLE_MAX } from "../src/kakao.mjs";
+import { answerWithClaudeCode } from "../src/claudecode.mjs";
+import { plain } from "../src/format.mjs";
 import { createApp } from "../src/app.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -50,19 +51,8 @@ test("프롬프트: 지침·교리 문서를 그대로 싣고, 요청마다 글�
   assert.equal(a.at(-1).cache_control.type, "ephemeral");
 });
 
-test("카카오 형식: 마크다운을 걷고, 말풍선은 950자·세 개를 넘지 않고, 주소가 끊기지 않는다", () => {
-  assert.equal(plain("## 제목\n**굵게** [12:34](https://youtu.be/abc?t=754)"), "제목\n굵게 12:34 https://youtu.be/abc?t=754");
-  const url = "https://youtu.be/K2oLTyo0zN8?t=1234";
-  const long = Array.from({ length: 120 }, (_, i) => `${i}번째 줄입니다. 징계와 가시의 차이를 설명합니다. ${url}`).join("\n");
-  const bubbles = splitBubbles(long);
-  assert.equal(bubbles.length, 3);
-  for (const b of bubbles) assert.ok(b.length <= BUBBLE_MAX, `${b.length}자`);
-  for (const b of bubbles.slice(0, 2)) for (const m of b.matchAll(/https:\S+/g)) assert.equal(m[0], url);
-  assert.match(bubbles[2], /질문을 나누어/);
-  assert.ok(splitBubbles("가".repeat(2500)).every((b) => b.length <= BUBBLE_MAX));
-  const r = skillResponse("짧은 답", ["답 보기"]);
-  assert.deepEqual(r, { version: "2.0", template: { outputs: [{ simpleText: { text: "짧은 답" } }], quickReplies: [{ label: "답 보기", action: "message", messageText: "답 보기" }] } });
-  assert.deepEqual(parseRequest({ userRequest: { utterance: " 질문 ", user: { id: "u1" }, callbackUrl: "http://evil" } }), { utterance: "질문", userId: "u1", callbackUrl: null });
+test("답 글 다듬기: 마크다운 표시를 걷고 주소는 그대로 둔다", () => {
+  assert.equal(plain("## 제목\n**굵게** [12:34](https://youtu.be/abc?t=754)\n\n\n\n* 항목"), "제목\n굵게 12:34 https://youtu.be/abc?t=754\n\n- 항목");
 });
 
 // 가짜 Claude: 미리 정한 응답을 차례로 돌려주고 받은 요청을 기록한다.
@@ -101,59 +91,92 @@ test("도구 루프: 검색·구절 도구를 실행해 결과를 한 메시지�
   await assert.rejects(answer({ question: "x", system: [], index, getVerse, client: fakeClient([]), deadline: Date.now() }), /시간 초과/);
 });
 
-const req = (utterance, userId = "u1", callbackUrl = null) => ({ utterance, userId, callbackUrl });
-const texts = (r) => r.template.outputs.map((o) => o.simpleText.text).join("\n");
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const SID = "session-0001";
 
-test("서버 흐름: 인증 → 질문 → 늦은 답은 「답 보기」, 하루 횟수 제한, 이어지는 대화", async () => {
-  const dataDir = fs.mkdtempSync(path.join(os.tmpdir(), "chatbot-test-"));
+test("웹 흐름: 인증 번호 → 질문 → 이어지는 대화, 겹친 질문·하루 횟수 제한, 실패 안내", async () => {
   const seen = [];
   let delay = 0;
   const app = createApp({
-    index, accessCode: "1234", dailyLimit: 3, dataDir, waitMs: 50,
-    answerFn: async ({ question, history }) => { seen.push({ question, history }); await sleep(delay); return { text: `답: ${question}` }; },
+    index, accessCode: "1234", dailyLimit: 3,
+    answerFn: async ({ question, session }) => { seen.push({ question, history: session.history }); await sleep(delay); return { text: `**답**: ${question}` }; },
   });
-  assert.match(texts(await app(req("징계란?"))), /인증 번호/);
-  assert.match(texts(await app(req("인증 9999"))), /맞지 않습니다/);
-  assert.match(texts(await app(req("인증 1234"))), /인증되었습니다/);
-  assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dataDir, "users.json"), "utf8")), ["u1"]);
+  const ask = (message, extra = {}) => app({ message, sessionId: SID, code: "1234", ip: "1.1.1.1", ...extra });
+
+  assert.deepEqual(await ask("징계란?", { code: "" }), { status: 401, body: { text: "인증 번호가 필요합니다.", needCode: true } });
+  assert.equal((await ask("징계란?", { code: "9999" })).status, 401);
+  assert.equal((await ask("  ")).status, 400);
+  assert.equal((await ask("가".repeat(1001))).status, 400);
+  assert.equal((await ask("징계란?", { sessionId: "x" })).status, 400);
   assert.equal(seen.length, 0);
 
-  assert.equal(texts(await app(req("징계란?"))), "답: 징계란?");
+  assert.deepEqual(await ask("징계란?"), { status: 200, body: { text: "답: 징계란?" } }); // 마크다운 표시는 걷힌다
 
-  delay = 150; // 4초(시험에서는 50ms) 안에 못 끝나는 답
-  const late = await app(req("가시란?"));
-  assert.match(texts(late), /답 보기/);
-  assert.equal(late.template.quickReplies[0].messageText, "답 보기");
-  assert.match(texts(await app(req("또 질문"))), /앞 질문의 답을 아직/);
-  await sleep(200);
-  assert.equal(texts(await app(req("답 보기"))), "답: 가시란?");
+  delay = 80;
+  const slow = ask("가시란?");
+  await sleep(10);
+  assert.equal((await ask("또 질문")).status, 429); // 앞 답을 만드는 중
+  assert.equal((await slow).body.text, "답: 가시란?");
   assert.deepEqual(seen[1].history, [{ role: "user", content: "징계란?" }, { role: "assistant", content: "답: 징계란?" }]);
 
   delay = 0;
-  assert.equal(texts(await app(req("셋째"))), "답: 셋째");
-  assert.match(texts(await app(req("넷째"))), /3번 모두/);
+  assert.equal((await ask("셋째")).status, 200);
+  const over = await ask("넷째");
+  assert.equal(over.status, 429);
+  assert.match(over.body.text, /오늘은 질문을 모두/);
   assert.equal(seen.length, 3);
-  assert.match(texts(await app(req("질문", "u2"))), /인증 번호/); // 다른 사용자는 인증부터
-  fs.rmSync(dataDir, { recursive: true });
+
+  const failing = createApp({ index, answerFn: async () => { throw new Error("API 오류"); } });
+  const f = await failing({ message: "징계란?", sessionId: SID });
+  assert.equal(f.status, 502);
+  assert.match(f.body.text, /답을 만들지 못했습니다/);
+  assert.equal((await failing({ message: "다시", sessionId: SID })).status, 502); // 실패 뒤에도 다음 질문을 받는다(busy가 풀림)
 });
 
-test("서버 흐름: 콜백이 있으면 먼저 접수 응답, 답은 callbackUrl로 보낸다 · 키가 없으면 검색 결과만", async () => {
-  const posts = [];
-  const fetchFn = async (url, init) => { posts.push({ url, body: JSON.parse(init.body) }); return { ok: true, status: 200 }; };
-  const app = createApp({ index, waitMs: 50, fetchFn, answerFn: async ({ question }) => { await sleep(30); return { text: `**답**: ${question}` }; } });
-  const ack = await app(req("징계란?", "u1", "https://bot-api.kakao.com/callback/abc"));
-  assert.equal(ack.useCallback, true);
-  assert.equal(posts.length, 0);
-  await sleep(80);
-  assert.equal(posts[0].url, "https://bot-api.kakao.com/callback/abc");
-  assert.equal(texts(posts[0].body), "답: 징계란?");
+test("웹 흐름: AI가 꺼져 있으면 강의 대목과 시각 링크만 · 서버 전체 하루 횟수", async () => {
+  const noAI = createApp({ index, answerFn: null, dailyTotal: 1 });
+  const r = await noAI({ message: "징계와 가시의 차이", sessionId: SID, ip: "1.1.1.1" });
+  assert.equal(r.status, 200);
+  assert.match(r.body.text, /AI 답변이 꺼져/);
+  assert.match(r.body.text, /https:\/\/youtu\.be\/[\w-]{11}\?t=\d+/);
+  const r2 = await noAI({ message: "다른 사람", sessionId: "session-0002", ip: "2.2.2.2" });
+  assert.equal(r2.status, 429);
+  assert.match(r2.body.text, /하루 질문 수가 다 찼습니다/);
+});
 
-  const failing = createApp({ index, waitMs: 50, answerFn: async () => { throw new Error("API 오류"); } });
-  assert.match(texts(await failing(req("징계란?"))), /답을 만들지 못했습니다/);
+test("Claude Code 방식: 읽기 전용 도구로 claude -p 를 부르고, 질문은 표준 입력으로, 이어지는 질문은 --resume", async () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "chatbot-cc-"));
+  const bin = path.join(dir, "fake-claude.mjs");
+  // 가짜 claude: 받은 인자·표준 입력·환경을 그대로 답에 실어 돌려준다.
+  fs.writeFileSync(bin, `#!/usr/bin/env node
+let input = ""; process.stdin.on("data", (d) => (input += d)); process.stdin.on("end", () => {
+  if (input.includes("실패")) { console.log(JSON.stringify({ is_error: true, result: "Not logged in" })); process.exit(1); }
+  console.log(JSON.stringify({ is_error: false, session_id: "cc-123", num_turns: 4, duration_ms: 9,
+    result: JSON.stringify({ args: process.argv.slice(2), input, cwd: process.cwd(), key: process.env.ANTHROPIC_API_KEY ?? null }) }));
+});`);
+  fs.chmodSync(bin, 0o755);
+  process.env.ANTHROPIC_API_KEY = "sk-test-should-not-leak";
+  const session = {};
+  const r = await answerWithClaudeCode({ question: "--help 징계란?", session, root: ROOT, bin });
+  const got = JSON.parse(r.text);
+  assert.equal(got.input, "성도의 질문:\n--help 징계란?");
+  assert.equal(got.cwd, ROOT);
+  assert.equal(got.key, null); // API 키는 넘기지 않는다(구독 로그인만)
+  const flag = (name) => got.args[got.args.indexOf(name) + 1];
+  assert.equal(got.args[0], "-p");
+  assert.equal(flag("--output-format"), "json");
+  assert.equal(flag("--tools"), "Read,Grep,Glob,Bash");
+  assert.equal(flag("--permission-mode"), "dontAsk");
+  assert.deepEqual(got.args.slice(got.args.indexOf("--allowedTools") + 1, got.args.indexOf("--permission-mode")), ["Read", "Grep", "Glob", "Bash(node tools/kjv.mjs *)"]);
+  assert.equal(flag("--append-system-prompt"), buildClaudeCodePrompt());
+  assert.ok(!got.args.includes("--resume"));
+  assert.equal(session.ccSessionId, "cc-123");
+  assert.equal(r.turns, 4);
 
-  const noKey = createApp({ index, answerFn: null, waitMs: 500 });
-  const out = texts(await noKey(req("징계와 가시의 차이")));
-  assert.match(out, /AI 답변이 꺼져/);
-  assert.match(out, /https:\/\/youtu\.be\/[\w-]{11}\?t=\d+/);
+  const again = JSON.parse((await answerWithClaudeCode({ question: "이어서", session, root: ROOT, bin })).text);
+  assert.equal(again.args[again.args.indexOf("--resume") + 1], "cc-123");
+  await assert.rejects(answerWithClaudeCode({ question: "실패", session: {}, root: ROOT, bin }), /claude 오류 \(exit 1\): Not logged in/);
+  await assert.rejects(answerWithClaudeCode({ question: "x", session: {}, root: ROOT, bin: path.join(dir, "none") }), /claude 실행 실패/);
+  delete process.env.ANTHROPIC_API_KEY;
+  fs.rmSync(dir, { recursive: true });
 });
