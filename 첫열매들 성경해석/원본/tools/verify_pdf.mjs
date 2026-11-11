@@ -4,18 +4,19 @@
 import fs from "fs";
 import * as mupdf from "mupdf";
 import jsQR from "jsqr";
-import { loadBook, ytUrl, ordinal, tocId } from "./parse.mjs";
+import { loadBook, ytUrl, vidFor, ordinal, tocId } from "./parse.mjs";
 import { tocItems } from "./html.mjs";
 
 const [root, pdf] = process.argv.slice(2);
 const book = loadBook(root);
-const vids = new Set(book.stories.map((S) => S.vid).filter(Boolean));
+const vids = new Set(book.stories.flatMap((S) => [S.vid, ...S.lecVids]).filter(Boolean));
 const expected = new Set();
 for (const S of book.stories) {
   if (!S.vid) continue; // 링크를 받지 않은 강의: 영상 링크가 없어야 정상(아래에서 영상ID 집합으로 검사)
-  expected.add(ytUrl(S.vid, "0:00"));
-  for (const c of S.chapters) { if (c.ts) expected.add(ytUrl(S.vid, c.ts)); c.secs.forEach((s) => s.ts && expected.add(ytUrl(S.vid, s.ts))); }
-  [...S.quiz, ...S.faq].forEach((q) => expected.add(ytUrl(S.vid, q.ts)));
+  const u = (t) => ytUrl(vidFor(S, t), t);
+  (S.lecVids.some(Boolean) ? S.lectures.map((_, i) => (i ? `${i + 1}/0:00` : "0:00")) : ["0:00"]).forEach((t) => expected.add(u(t)));
+  for (const c of S.chapters) { if (c.ts) expected.add(u(c.ts)); c.secs.forEach((s) => s.ts && expected.add(u(s.ts))); }
+  [...S.quiz, ...S.faq].forEach((q) => expected.add(u(q.ts)));
 }
 const doc = mupdf.Document.openDocument(fs.readFileSync(pdf), "application/pdf");
 const N = doc.countPages(), S300 = 300 / 72;

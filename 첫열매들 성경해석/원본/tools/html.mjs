@@ -2,7 +2,7 @@ import path from "path";
 // 본문 HTML 조각. mode = "pdf"(QR) | "epub"(▶ 시각 링크만)
 // 유튜브 링크를 받지 않은 이야기(S.vid === "")는 QR·▶ 시각을 하나도 넣지 않는다(사용자 지시 2026-10-03)
 import QRCode from "qrcode";
-import { esc, inline, ytUrl, ordinal, sid, chId, secId, tocId, chLabel } from "./parse.mjs";
+import { esc, inline, ytUrl, vidFor, tsLabel, ordinal, sid, chId, secId, tocId, chLabel } from "./parse.mjs";
 
 let MODE = "pdf";
 export const setMode = (m) => { MODE = m; };
@@ -22,13 +22,16 @@ export async function qrSvg(url) {
   return QRCode.toString(url, { type: "svg", errorCorrectionLevel: "M", margin: 2, color: { dark: "#18233f", light: "#ffffff" } });
 }
 
-export async function videoMark(vid, ts) {
+export async function videoMark(vid, ts, label = ts) {
   if (!vid) return ""; // 링크를 받지 않은 강의: 구간 이동 없음
   const url = ytUrl(vid, ts);
-  if (MODE === "epub") return `<a class="yt" href="${url}">▶ ${ts}</a>`;
+  if (MODE === "epub") return `<a class="yt" href="${url}">▶ ${esc(label)}</a>`;
   const svg = (await qrSvg(url)).replace("<svg", '<svg class="qrimg"');
-  return `<a class="qr" href="${url}">${svg}<span class="qt">${YT}<b>${ts}</b></span><span class="qc"><b>클릭</b>하면 해당 구간으로<br>이동합니다</span></a>`;
+  return `<a class="qr" href="${url}">${svg}<span class="qt">${YT}<b>${esc(label)}</b></span><span class="qc"><b>클릭</b>하면 해당 구간으로<br>이동합니다</span></a>`;
 }
+
+// 이야기의 시각 → 그 강의 영상(합본은 강의마다 영상이 다르다)
+const vmS = (S, ts) => videoMark(vidFor(S, ts), ts, tsLabel(S, ts));
 
 export function slideHtml(S, b) {
   // 머리글은 출처로 정한다: 정리한 사람이 그린 그림이라도 슬라이드 글자를 옮긴 것(33권)은 「강의 슬라이드에서」, 설교 인용은 「인용」
@@ -65,14 +68,14 @@ function blocksHtml(S, blocks, head = "") {
 
 export async function chapterHtml(S, c, i, marker = () => "") {
   const lab = chLabel(c);
-  const qr = c.ts ? await videoMark(S.vid, c.ts) : "";
+  const qr = c.ts ? await vmS(S, c.ts) : "";
   const head = `<div class="chh" id="${chId(S, i)}">${marker(chId(S, i))}<div class="chl">${lab ? `<div class="chn">${lab}</div>` : ""}<h2>${esc(c.title)}</h2>${c.sub ? `<div class="chs">${esc(c.sub)}</div>` : ""}<div class="gold"></div>${back(chId(S, i), " sm")}</div>${qr ? `<div class="chq">${qr}</div>` : ""}</div>`;
   let html = "";
   if (c.blocks.length || !c.secs.length) html += blocksHtml(S, c.blocks, head);
   for (let j = 0; j < c.secs.length; j++) {
     const s = c.secs[j];
     const showQr = S.vid && s.ts && !(j === 0 && !c.blocks.length && s.ts === c.ts);
-    const sq = showQr ? `<div class="sq">${await videoMark(S.vid, s.ts)}</div>` : "";
+    const sq = showQr ? `<div class="sq">${await vmS(S, s.ts)}</div>` : "";
     let sh = `<div class="sech" id="${secId(S, i, j)}">${marker(secId(S, i, j))}<h3>${esc(s.title)}</h3>${sq}</div>`;
     if (j === 0 && !c.blocks.length) sh = head + sh;
     html += blocksHtml(S, s.blocks, sh);
@@ -88,8 +91,10 @@ export async function storyTitleHtml(book, S, marker = () => "") {
   // 통합 이야기: 원 강의를 모두 적는다(원 강의 1, 2 …)
   const lec = S.lectures.length > 1 ? S.lectures.map((t, i) => [`원 강의 ${i + 1}`, t]) : [["원 강의", S.lectures[0] || S.orig]];
   const rows = [...lec, ["강의 날짜", S.date], ["강사", S.speaker], ["출처", book.source]].filter(([, v]) => v && v !== "-");
-  const vm = await videoMark(S.vid, "0:00");
-  const video = S.vid ? `<div class="sq0">${MODE === "epub" ? `<p>${vm} 강의 영상 처음부터 보기</p>` : vm}</div>` : "";
+  // 합본: 강의마다 영상 처음(「1부 0:00」 …)
+  const starts = S.lecVids.some(Boolean) ? S.lectures.map((_, i) => (i ? `${i + 1}/0:00` : "0:00")) : ["0:00"];
+  const vms = await Promise.all(starts.map((t) => vmS(S, t)));
+  const video = S.vid ? `<div class="sq0${vms.length > 1 ? " multi" : ""}">${MODE === "epub" ? vms.map((vm) => `<p>${vm} 강의 영상 처음부터 보기</p>`).join("") : vms.join("")}</div>` : "";
   const notes = S.storynotes.length ? `<div class="snote">${S.storynotes.map((n) => `<p>${inline(n)}</p>`).join("")}</div>` : "";
   return `<section class="story" id="${sid(S)}">${marker(sid(S))}<div class="sn">${esc(book.lectureLabel || "첫열매들 예배 강의")}</div><h1>${esc(S.title)}</h1><div class="ss">${esc(S.sub)}</div><div class="gold"></div>
   <table class="meta">${rows.map(([k, v]) => `<tr><td>${k}</td><td>${esc(v)}</td></tr>`).join("")}</table>
@@ -121,7 +126,7 @@ export function quizHtml(S, marker = () => "") {
 }
 
 const qaNote = (S) => !S.vid ? "" : `<div class="added">${MODE === "epub" ? "▶ 시각을 누르면 근거가 나오는 강의 구간이 열립니다." : "오른쪽 QR이나 ▶ 시각을 누르면 근거가 나오는 강의 구간이 열립니다."}</div>`;
-const qaRight = async (S, ts) => (S.vid ? `<div class="anr">${await videoMark(S.vid, ts)}</div>` : "");
+const qaRight = async (S, ts) => (S.vid ? `<div class="anr">${await vmS(S, ts)}</div>` : "");
 
 export async function answersHtml(S, marker = () => "") {
   if (!S.quiz.length) return "";

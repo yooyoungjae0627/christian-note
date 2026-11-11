@@ -4,7 +4,7 @@ import fs from "fs";
 import JSZip from "jszip";
 import { XMLValidator } from "fast-xml-parser";
 import * as mupdf from "mupdf";
-import { loadBook, ytUrl, tocId } from "./parse.mjs";
+import { loadBook, ytUrl, vidFor, tocId } from "./parse.mjs";
 import { tocItems } from "./html.mjs";
 
 const [root, epub] = process.argv.slice(2);
@@ -59,7 +59,8 @@ for (const S of book.stories) {
   if (!S.vid) { // 링크를 받지 않은 강의: 영상 링크가 하나도 없어야 한다
     if (/href="https:\/\/youtu\.be\//.test(s)) problems.push(`${S.n}번째 이야기: 링크를 받지 않았는데 영상 링크가 있음`);
   } else {
-  const exp = new Set([ytUrl(S.vid, "0:00"), ...S.chapters.flatMap((c) => [c.ts, ...c.secs.map((x) => x.ts)]).filter(Boolean).map((t) => ytUrl(S.vid, t)), ...[...S.quiz, ...S.faq].map((q) => ytUrl(S.vid, q.ts))]);
+  const u = (t) => ytUrl(vidFor(S, t), t);
+  const exp = new Set([...(S.lecVids.some(Boolean) ? S.lectures.map((_, i) => (i ? `${i + 1}/0:00` : "0:00")) : ["0:00"]).map(u), ...S.chapters.flatMap((c) => [c.ts, ...c.secs.map((x) => x.ts)]).filter(Boolean).map(u), ...[...S.quiz, ...S.faq].map((q) => u(q.ts))]);
   for (const u of exp) if (!yt.has(u)) problems.push("빠진 영상 링크: " + u);
   }
   // 목차로 이동

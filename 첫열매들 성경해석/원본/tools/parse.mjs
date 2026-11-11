@@ -7,7 +7,12 @@ import path from "path";
 // 시각 "m:ss" 또는 통합 이야기의 둘째 강의부터 "k/m:ss"(k번째 강의). 정렬값 = (k-1)×10⁶ + 초
 export const lecOf = (ts) => (/^\d+\//.test(ts) ? Number(ts.split("/")[0]) : 1);
 export const tsSec = (ts) => (lecOf(ts) - 1) * 1e6 + ts.replace(/^\d+\//, "").split(":").map(Number).reduce((a, b) => a * 60 + b, 0);
-export const ytUrl = (vid, ts) => `https://youtu.be/${vid}?t=${Math.max(0, tsSec(ts) - 3)}`;
+// 영상 주소의 초는 그 강의 영상 안의 시각(앞의 "k/"를 뗀다)
+export const bareTs = (ts) => ts.replace(/^\d+\//, "");
+export const ytUrl = (vid, ts) => `https://youtu.be/${vid}?t=${Math.max(0, tsSec(bareTs(ts)) - 3)}`;
+// 여러 강의 합본(사용자 지시 2026-11-12 복음세미나): 강의마다 영상이 따로 — 시각의 강의 번호로 영상ID를 고른다
+export const vidFor = (S, ts) => (S.lecVids && S.lecVids.some(Boolean) ? S.lecVids[lecOf(ts) - 1] : S.vid);
+export const tsLabel = (S, ts) => (S.lecLabels && S.lecLabels.some(Boolean) ? `${S.lecLabels[lecOf(ts) - 1]} ${bareTs(ts)}` : ts);
 
 const ORD = ["첫", "두", "세", "네", "다섯", "여섯", "일곱", "여덟", "아홉", "열", "열한", "열두", "열세", "열네", "열다섯", "열여섯", "열일곱", "열여덟", "열아홉", "스무"];
 export const ordinal = (n) => (ORD[n - 1] ? `${ORD[n - 1]} 번째` : `${n}번째`);
@@ -82,7 +87,7 @@ export function transcriptTimes(dir) {
 
 export function parseStory(dir) {
   const src = fs.readFileSync(path.join(dir, "story.txt"), "utf8").split(/\r?\n/);
-  const S = { dir, chapters: [], legend: [], storynotes: [], summary: [], keys: [], talk: [], quiz: [], faq: [], notes: [], gloss: [], images: [], lectures: [] };
+  const S = { dir, chapters: [], legend: [], storynotes: [], summary: [], keys: [], talk: [], quiz: [], faq: [], notes: [], gloss: [], images: [], lectures: [], lecVids: [], lecLabels: [] };
   let ch = null, sec = null;
   const lastTs = {};
   const push = (blk) => { if (!ch) throw new Error("@ch 앞에 내용이 있음"); (sec ? sec.blocks : ch.blocks).push(blk); };
@@ -96,8 +101,9 @@ export function parseStory(dir) {
     switch (tag) {
       // 영상ID가 "-"이거나 비면 유튜브 링크를 받지 않은 강의 → 영상 구간 이동(QR·▶)을 넣지 않는다(사용자 지시 2026-10-03)
       case "@story": [S.n, S.title, S.sub, S.vid, S.date, S.speaker, S.orig] = f; S.n = Number(S.n); if (!S.vid || S.vid === "-") S.vid = ""; break;
-      // @lecture|원 강의 제목 — 통합 이야기의 강의들(순서 = transcript_raw.txt, _2, _3 …)
-      case "@lecture": S.lectures.push(f[0]); break;
+      // @lecture|원 강의 제목|유튜브ID|짧은 이름 — 여러 강의의 순서 = transcript_raw.txt, _2, _3 …
+      // 유튜브ID·짧은 이름은 강의마다 영상이 따로인 합본(2026-11-12)에서만: QR·▶이 그 강의 영상으로, 시각 앞에 짧은 이름(예: 「2부 12:34」)
+      case "@lecture": S.lectures.push(f[0]); S.lecVids.push(f[1] && f[1] !== "-" ? f[1] : ""); S.lecLabels.push(f[2] || ""); break;
       case "@storynote": inline(f[0]); S.storynotes.push(f[0]); break;
       // @cover|줄1|줄2 — 표지에 넣는 그 강의의 핵심 문장(강의 문장 그대로, 2026-10-09 표지는 강의 주제로)
       case "@cover": S.coverText = f.filter(Boolean); break;
@@ -137,7 +143,12 @@ export function parseStory(dir) {
     }
   }
   if (S.vid && !/^[\w-]{11}$/.test(S.vid)) throw new Error("영상ID 이상: " + S.vid);
-  if (S.lectures.length > 1 && S.vid) throw new Error("통합 이야기에 영상ID 하나를 둘 수 없음(강의마다 영상이 다름)");
+  if (S.lectures.length > 1 && S.vid) throw new Error("통합 이야기에 영상ID 하나를 둘 수 없음(강의마다 영상이 다름) — @lecture 셋째 칸에 강의마다 적는다");
+  if (S.lecVids.some(Boolean)) {
+    if (!S.lecVids.every((v) => /^[\w-]{11}$/.test(v))) throw new Error("합본의 @lecture마다 영상ID가 있어야 함: " + S.lecVids.join(","));
+    if (!S.lecLabels.every(Boolean)) throw new Error("합본의 @lecture마다 짧은 이름(넷째 칸)이 있어야 함");
+    S.vid = S.lecVids[0]; // 영상 구간 이동이 있는 책으로 다룬다(QR·▶)
+  }
   // 쪽 공란 맞춤(fit.mjs가 씀): 그림을 같은 소제목 안에서 앞뒤 문단 단위로 옮긴다. {"06.jpg": 1} = 다음 문단 뒤로
   S.layout = fs.existsSync(path.join(dir, "layout.json")) ? JSON.parse(fs.readFileSync(path.join(dir, "layout.json"), "utf8")) : {};
   for (const [file, shift] of Object.entries(S.layout)) applyShift(S, file, shift);
