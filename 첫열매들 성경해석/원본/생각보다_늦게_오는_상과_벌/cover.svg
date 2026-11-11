@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 모래시계(늦게 오는 때) 왼쪽에 왕관(상), 오른쪽에 막대기(벌) — 아래는 광야 길과 만나 -->
+  <g fill="none" stroke="#e8c870" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M76 44 H124 M76 136 H124" stroke="#f4ecd8"/>
+    <path d="M80 44 C80 72 96 82 100 90 C104 82 120 72 120 44" stroke="#f4ecd8"/>
+    <path d="M80 136 C80 108 96 98 100 90 C104 98 120 108 120 136" stroke="#f4ecd8"/>
+    <path d="M88 60 C92 70 98 76 100 82 C102 76 108 70 112 60 Z" stroke-opacity=".8"/>
+    <path d="M100 92 V118" stroke-dasharray="2 4" stroke-opacity=".8"/>
+    <path d="M86 134 C90 124 110 124 114 134" stroke-opacity=".8"/>
+    <path d="M36 82 L42 68 L50 78 L56 64 L62 78 L70 68 L64 88 H42 Z" stroke-opacity=".9"/>
+    <path d="M150 62 L140 112" stroke="#9fc3ff" stroke-opacity=".85"/>
+    <path d="M148 58 C156 54 160 62 152 66" stroke="#9fc3ff" stroke-opacity=".85"/>
+    <path d="M30 156 C60 146 80 162 100 152 C120 142 140 160 170 150" stroke="#9fc3ff" stroke-opacity=".6"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="52" cy="140" r="1.6"/><circle cx="64" cy="134" r="1.3"/><circle cx="140" cy="136" r="1.5"/>
+    <circle cx="152" cy="128" r="1.2"/><circle cx="46" cy="118" r="1.2"/><circle cx="158" cy="98" r="1.4"/>
+    <circle cx="100" cy="128" r="1.4"/><circle cx="94" cy="131" r="1.1"/><circle cx="106" cy="131" r="1.1"/>
+  </g>
+</svg>
