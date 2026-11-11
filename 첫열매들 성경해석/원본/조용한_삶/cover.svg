@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 잔잔한 호수(조용한 삶) 위의 작은 선박(교회) — 떠오르는 해, 양쪽 숲, 잔물결 -->
+  <g fill="none" stroke="#e8c870" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <circle cx="100" cy="92" r="16" stroke="#f4ecd8"/>
+    <path d="M78 92 H62 M138 92 H122 M100 70 V60 M84 76 L77 69 M116 76 L123 69" stroke="#f4ecd8" stroke-opacity=".6"/>
+    <path d="M24 112 C34 84 46 76 56 70 C60 82 66 92 70 112" stroke="#9fc3ff" stroke-opacity=".75"/>
+    <path d="M176 112 C166 84 154 76 144 70 C140 82 134 92 130 112" stroke="#9fc3ff" stroke-opacity=".75"/>
+    <path d="M18 112 H182"/>
+    <path d="M86 128 H114 L110 136 H90 Z" stroke="#f4ecd8"/>
+    <path d="M100 128 V104" stroke="#f4ecd8"/>
+    <path d="M100 106 L112 122 H100" stroke="#f4ecd8" stroke-opacity=".8"/>
+    <path d="M40 146 H76 M124 146 H160 M60 160 H140 M80 172 H120" stroke="#9fc3ff" stroke-opacity=".55"/>
+    <path d="M92 140 H108" stroke="#f4ecd8" stroke-opacity=".5"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="44" cy="52" r="1.4"/><circle cx="156" cy="56" r="1.6"/><circle cx="146" cy="38" r="1.2"/>
+  </g>
+</svg>
