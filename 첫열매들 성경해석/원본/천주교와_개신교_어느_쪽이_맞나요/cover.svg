@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 좁은 문(아주 적은 비율의 올바른 복음) — 양옆 두 건물(두 교파), 문 위의 두 물음표(두 질문), 문으로 이어진 좁은 길 -->
+  <g fill="none" stroke="#e8c870" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M30 160 V96 L52 78 L74 96 V160" stroke="#f4ecd8" stroke-opacity=".75"/>
+    <path d="M126 160 V96 L148 78 L170 96 V160" stroke="#f4ecd8" stroke-opacity=".75"/>
+    <path d="M44 160 V128 Q52 118 60 128 V160 M140 160 V128 Q148 118 156 128 V160" stroke="#f4ecd8" stroke-opacity=".45"/>
+    <path d="M90 160 V92 Q100 78 110 92 V160"/>
+    <path d="M94 160 V95 Q100 86 106 95 V160" stroke="#f4ecd8" stroke-opacity=".8"/>
+    <path d="M100 74 V62 M88 78 L82 70 M112 78 L118 70" stroke="#f4ecd8" stroke-opacity=".7"/>
+    <path d="M78 48 C78 40 90 40 90 48 C90 53 84 54 84 58 M84 63 V64"/>
+    <path d="M110 48 C110 40 122 40 122 48 C122 53 116 54 116 58 M116 63 V64"/>
+    <path d="M96 182 L98 160 M104 182 L102 160" stroke="#9fc3ff" stroke-opacity=".7"/>
+    <path d="M22 160 H178" stroke="#9fc3ff" stroke-opacity=".6"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="40" cy="58" r="1.4"/><circle cx="160" cy="60" r="1.6"/><circle cx="150" cy="42" r="1.2"/>
+    <circle cx="54" cy="40" r="1.2"/><circle cx="100" cy="30" r="1.8"/>
+  </g>
+</svg>
