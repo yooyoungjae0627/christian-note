@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 죄를 덜 짓는 방법: 계단처럼 조금씩 자라는 새싹(성장), 아래에 '안' 대신 '덜' — 완벽이 아니라 성장 -->
+  <g fill="none" stroke="#e8c870" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M34 150 H70 V128 H106 V106 H142 V84 H166" stroke="#f4ecd8" stroke-opacity=".85"/>
+    <path d="M52 150 V138" stroke="#9fd77a"/>
+    <path d="M52 140 C46 138 43 133 44 129 C49 130 52 134 52 140 Z" stroke="#9fd77a"/>
+    <path d="M52 142 C57 140 60 136 59 132 C55 133 52 137 52 142 Z" stroke="#9fd77a"/>
+    <path d="M88 128 V108" stroke="#9fd77a"/>
+    <path d="M88 116 C80 114 76 107 77 101 C84 102 88 108 88 116 Z" stroke="#9fd77a"/>
+    <path d="M88 119 C95 116 99 110 98 104 C92 105 88 111 88 119 Z" stroke="#9fd77a"/>
+    <path d="M124 106 V74" stroke="#9fd77a"/>
+    <path d="M124 92 C114 89 109 80 110 72 C119 73 124 82 124 92 Z" stroke="#9fd77a"/>
+    <path d="M124 96 C133 92 139 84 138 76 C130 77 124 86 124 96 Z" stroke="#9fd77a"/>
+    <path d="M124 80 C120 74 120 66 124 60 C128 66 128 74 124 80 Z" stroke="#9fd77a"/>
+    <path d="M150 74 L158 62 M158 62 L160 70 M158 62 L150 64" stroke="#f4ecd8" stroke-opacity=".7"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="44" cy="58" r="1.4"/><circle cx="60" cy="44" r="1.2"/><circle cx="160" cy="44" r="1.6"/>
+  </g>
+</svg>
