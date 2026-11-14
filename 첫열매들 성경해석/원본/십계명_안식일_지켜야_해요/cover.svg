@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 십계명 / 안식일: 강의 첫 화면의 두 돌판과, 강의가 말한 '율법이라는 낚싯바늘' — 율법은 지키라는 것이 아니라 예수님께로 끌고 가는 바늘 -->
+  <g fill="none" stroke="#e8c870" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M40 150 V92 C40 74 70 74 70 92 V150 Z" stroke="#f4ecd8" stroke-opacity=".9"/>
+    <path d="M74 150 V92 C74 74 104 74 104 92 V150 Z" stroke="#f4ecd8" stroke-opacity=".9"/>
+    <path d="M47 98 H63 M47 108 H63 M47 118 H60 M47 128 H63 M47 138 H58" stroke="#e8c870" stroke-opacity=".7"/>
+    <path d="M81 98 H97 M81 108 H95 M81 118 H97 M81 128 H93 M81 138 H97" stroke="#e8c870" stroke-opacity=".7"/>
+    <path d="M30 154 H118" stroke="#f4ecd8" stroke-opacity=".6"/>
+    <path d="M150 40 V118" stroke="#9fc4e8"/>
+    <path d="M150 118 V136 C150 150 132 150 132 136 L132 130 M132 130 L127 136" stroke="#e8c870" stroke-width="2.4"/>
+    <path d="M150 40 C150 34 156 30 162 32" stroke="#9fc4e8" stroke-opacity=".7"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="128" cy="58" r="1.4"/><circle cx="170" cy="70" r="1.2"/><circle cx="60" cy="54" r="1.6"/>
+  </g>
+</svg>
