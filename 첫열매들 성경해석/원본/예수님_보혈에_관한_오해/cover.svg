@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 출애굽의 문: 문기둥과 문 윗기둥에 바른 피(‘죽었어요’의 표시) — 문 안에 진노의 잔(겟세마네의 잔). 피의 성분이 아니라 죽음의 선택 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <circle cx="100" cy="100" r="86" stroke="#c9973b" stroke-opacity=".5"/>
+    <!-- 땅 -->
+    <path d="M32 160 H168" stroke="#c9973b" stroke-opacity=".8"/>
+    <!-- 문틀: 양쪽 문기둥과 문 윗기둥 -->
+    <path d="M60 160 V56 H140 V160" stroke="#f3e7c9"/>
+    <path d="M54 56 H146" stroke="#f3e7c9"/>
+    <path d="M68 160 V64 H132 V160" stroke="#f3e7c9" stroke-opacity=".35"/>
+    <!-- 바른 피의 표시: 윗기둥 가운데와 양쪽 기둥 -->
+    <path d="M100 42 C96 48 95 51 95 53 A5 5 0 0 0 105 53 C105 51 104 48 100 42 Z" stroke="#c9973b"/>
+    <path d="M44 92 C40 98 39 101 39 103 A5 5 0 0 0 49 103 C49 101 48 98 44 92 Z" stroke="#c9973b"/>
+    <path d="M156 92 C152 98 151 101 151 103 A5 5 0 0 0 161 103 C161 101 160 98 156 92 Z" stroke="#c9973b"/>
+    <!-- 문 안의 잔 -->
+    <path d="M84 100 H116 C116 116 110 126 100 128 C90 126 84 116 84 100 Z" stroke="#c9973b"/>
+    <path d="M100 128 V142 M88 146 H112 M92 142 H108" stroke="#c9973b"/>
+    <path d="M90 106 H110" stroke="#f3e7c9" stroke-opacity=".5"/>
+    <!-- 잔에서 오르는 빛 -->
+    <path d="M100 92 V84 M90 94 L86 88 M110 94 L114 88" stroke="#f3e7c9" stroke-opacity=".7"/>
+  </g>
+  <g fill="#f3e7c9">
+    <circle cx="40" cy="58" r="1.4"/><circle cx="160" cy="60" r="1.6"/><circle cx="150" cy="40" r="1.2"/><circle cx="52" cy="140" r="1.2"/>
+  </g>
+</svg>
