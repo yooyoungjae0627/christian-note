@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 받는 화살표와 바치는 화살표: 위의 빛에서 내려오는 금빛 화살표(자비)가 어린아이의 두 손에 담기고, 양옆의 희미한 점선 화살표(제사·율법)는 위로 올라가다 닿지 못한다 -->
+  <circle cx="100" cy="100" r="88" stroke="#e8c983" stroke-width="1.6" stroke-opacity=".45"/>
+  <path d="M76 52 A24 24 0 0 1 124 52" stroke="#f4ecd8" stroke-width="2.6"/>
+  <path d="M100 22 V16 M121 31 L125 27 M79 31 L75 27 M128 41 L133 39 M72 41 L67 39" stroke="#f4ecd8" stroke-width="2.2" stroke-opacity=".7"/>
+  <path d="M100 62 V124" stroke="#e8c983" stroke-width="4.5"/>
+  <path d="M88 110 L100 126 L112 110" stroke="#e8c983" stroke-width="4.5"/>
+  <path d="M46 150 V90 M154 150 V90" stroke="#9fb6e8" stroke-width="2.4" stroke-dasharray="5 7" stroke-opacity=".75"/>
+  <path d="M38 98 L46 86 L54 98 M146 98 L154 86 L162 98" stroke="#9fb6e8" stroke-width="2.4" stroke-opacity=".75"/>
+  <path d="M66 138 C66 160 80 172 100 172 C120 172 134 160 134 138" stroke="#f4ecd8" stroke-width="3"/>
+  <path d="M66 138 C70 132 78 132 82 138 C86 132 92 132 96 138 M104 138 C108 132 114 132 118 138 C122 132 130 132 134 138" stroke="#f4ecd8" stroke-width="2.4"/>
+  <g fill="#e8c983">
+    <circle cx="100" cy="150" r="3.2"/><circle cx="90" cy="156" r="2.4"/><circle cx="110" cy="156" r="2.4"/>
+  </g>
+</svg>
