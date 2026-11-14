@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 대화의 기술: 작게 말하는 말풍선과 크게 듣는 말풍선(듣는 시간 > 말하는 시간), 준비된 작가의 펜(시편 45:1), 생명의 샘(요한복음 4:14) -->
+  <circle cx="100" cy="100" r="92" stroke="#c9973b" stroke-width="1.5" opacity="0.55"/>
+  <!-- 듣는 말풍선(큼) -->
+  <path d="M38 52 h86 a12 12 0 0 1 12 12 v38 a12 12 0 0 1 -12 12 h-54 l-16 14 v-14 h-16 a12 12 0 0 1 -12 -12 v-38 a12 12 0 0 1 12 -12 z" stroke="#c9973b" stroke-width="3"/>
+  <!-- 듣는 말풍선 안의 귀 기울임 물결 -->
+  <path d="M56 74 q8 -8 16 0 t16 0 t16 0 t16 0" stroke="#f3e6c4" stroke-width="2.4"/>
+  <path d="M56 90 q8 -8 16 0 t16 0 t16 0" stroke="#f3e6c4" stroke-width="2.4" opacity="0.8"/>
+  <!-- 말하는 말풍선(작음) -->
+  <path d="M132 36 h28 a8 8 0 0 1 8 8 v14 a8 8 0 0 1 -8 8 h-6 v9 l-10 -9 h-12 a8 8 0 0 1 -8 -8 v-14 a8 8 0 0 1 8 -8 z" stroke="#f3e6c4" stroke-width="2.4"/>
+  <circle cx="139" cy="51" r="1.8" fill="#f3e6c4" stroke="none"/>
+  <circle cx="146" cy="51" r="1.8" fill="#f3e6c4" stroke="none"/>
+  <circle cx="153" cy="51" r="1.8" fill="#f3e6c4" stroke="none"/>
+  <!-- 준비된 작가의 펜 -->
+  <path d="M168 92 L128 150 l-6 12 l10 -8 L172 96 z" stroke="#c9973b" stroke-width="2.6" fill="#18233f"/>
+  <path d="M128 150 l4 4" stroke="#c9973b" stroke-width="2"/>
+  <path d="M160 104 l6 5" stroke="#c9973b" stroke-width="1.8"/>
+  <!-- 생명의 샘: 솟아오르는 물 -->
+  <path d="M62 176 q14 -10 28 0 t28 0" stroke="#c9973b" stroke-width="2.6"/>
+  <path d="M84 170 q-4 -14 -16 -16" stroke="#f3e6c4" stroke-width="2.2"/>
+  <path d="M96 170 q4 -14 16 -16" stroke="#f3e6c4" stroke-width="2.2"/>
+  <path d="M88 168 q-2 -12 -8 -22" stroke="#f3e6c4" stroke-width="2" opacity="0.85"/>
+  <path d="M92 168 q2 -12 8 -22" stroke="#f3e6c4" stroke-width="2" opacity="0.85"/>
+  <circle cx="66" cy="152" r="2" fill="#f3e6c4" stroke="none"/>
+  <circle cx="114" cy="152" r="2" fill="#f3e6c4" stroke="none"/>
+  <circle cx="79" cy="142" r="2" fill="#f3e6c4" stroke="none"/>
+  <circle cx="101" cy="142" r="2" fill="#f3e6c4" stroke="none"/>
+</svg>
