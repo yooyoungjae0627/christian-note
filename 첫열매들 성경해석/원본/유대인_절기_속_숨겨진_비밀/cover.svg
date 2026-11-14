@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 유대인의 일곱 절기 + 안식일: 위의 활 모양 달력에 봄 절기 넷(금)과 가을 절기 넷(크림), 가운데 흔드는 첫열매들의 단, 오른쪽 오순절의 빵 두 덩어리 -->
+  <defs>
+    <radialGradient id="g66" cx="50%" cy="55%" r="50%">
+      <stop offset="0" stop-color="#f3d999" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#f3d999" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="108" r="86" fill="url(#g66)"/>
+  <!-- 절기 달력 활 -->
+  <path d="M22 78 Q100 6 178 78" fill="none" stroke="#f4ecd8" stroke-width="1.4" stroke-opacity="0.55" stroke-dasharray="3 3"/>
+  <g stroke="#1b2a4a" stroke-width="1.2">
+    <circle cx="30" cy="70" r="4.6" fill="#e8c46a"/>
+    <circle cx="47" cy="55" r="4.6" fill="#e8c46a"/>
+    <circle cx="65" cy="45" r="4.6" fill="#e8c46a"/>
+    <circle cx="84" cy="39" r="4.6" fill="#e8c46a"/>
+    <circle cx="116" cy="39" r="4.6" fill="#f4ecd8"/>
+    <circle cx="135" cy="45" r="4.6" fill="#f4ecd8"/>
+    <circle cx="153" cy="55" r="4.6" fill="#f4ecd8"/>
+    <circle cx="170" cy="70" r="4.6" fill="#f4ecd8"/>
+  </g>
+  <!-- 흔드는 첫열매들의 단 (가운데) -->
+  <g fill="none" stroke="#e8c46a" stroke-width="2.4" stroke-linecap="round">
+    <path d="M100 168 L100 92"/>
+    <path d="M100 168 Q94 130 84 96"/>
+    <path d="M100 168 Q106 130 116 96"/>
+    <path d="M100 168 Q88 136 72 104"/>
+    <path d="M100 168 Q112 136 128 104"/>
+    <path d="M90 140 Q100 133 110 140"/>
+  </g>
+  <g fill="#e8c46a">
+    <ellipse cx="100" cy="86" rx="4" ry="9"/>
+    <ellipse cx="83" cy="90" rx="3.6" ry="8.4" transform="rotate(-16 83 90)"/>
+    <ellipse cx="117" cy="90" rx="3.6" ry="8.4" transform="rotate(16 117 90)"/>
+    <ellipse cx="70" cy="98" rx="3.4" ry="8" transform="rotate(-28 70 98)"/>
+    <ellipse cx="130" cy="98" rx="3.4" ry="8" transform="rotate(28 130 98)"/>
+  </g>
+  <!-- 흔드는 움직임 -->
+  <g fill="none" stroke="#f4ecd8" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.75">
+    <path d="M56 86 Q50 96 56 106"/>
+    <path d="M144 86 Q150 96 144 106"/>
+  </g>
+  <!-- 오순절의 빵 두 덩어리 (오른쪽 아래) -->
+  <g fill="#f4ecd8" fill-opacity="0.2" stroke="#f4ecd8" stroke-width="2">
+    <path d="M140 172 Q140 156 156 156 Q172 156 172 172 Z"/>
+    <path d="M156 180 Q156 164 172 164 Q188 164 188 180 Z"/>
+  </g>
+  <!-- 유월절 어린양의 표: 문설주 (왼쪽 아래) -->
+  <g fill="none" stroke="#f4ecd8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 182 L18 146 L52 146 L52 182"/>
+  </g>
+  <path d="M22 150 L48 150" stroke="#e8c46a" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#f4ecd8">
+    <circle cx="36" cy="22" r="1.4"/><circle cx="164" cy="24" r="1.4"/><circle cx="100" cy="16" r="1.6"/><circle cx="186" cy="120" r="1.2"/><circle cx="14" cy="118" r="1.2"/>
+  </g>
+</svg>
