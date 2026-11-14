@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 죽음·부활·심판의 터널 — 앞에 선 사람(53권: 아직 터널 앞)과 터널을 지나 빛 속에 앉은 사람(13통: 이미 끝남), 얼굴 없음 -->
+  <path d="M90 140 V108 A10 10 0 0 1 110 108 V140 Z" fill="#18233f" fill-opacity=".6"/>
+  <g fill="none" stroke="#c9973b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M22 140 H178"/>
+    <path d="M70 140 V100 A30 30 0 0 1 130 100 V140"/>
+    <path d="M80 140 V104 A20 20 0 0 1 120 104 V140" stroke-opacity=".6"/>
+    <path d="M90 140 V108 A10 10 0 0 1 110 108 V140" stroke-opacity=".35"/>
+    <path d="M30 152 H62 M138 152 H170 M56 164 H144" stroke-opacity=".45"/>
+  </g>
+  <g fill="none" stroke="#f3e7c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="46" cy="104" r="5"/>
+    <path d="M46 110 V126 M46 126 L40 140 M46 126 L52 140 M38 116 L54 116"/>
+    <circle cx="156" cy="72" r="16" stroke-opacity=".55"/>
+    <path d="M156 50 V44 M156 100 V94 M134 72 H128 M184 72 H178 M141 57 L137 53 M171 57 L175 53" stroke-opacity=".45"/>
+    <circle cx="156" cy="104" r="5"/>
+    <path d="M156 110 V124 H166 V140 M156 124 L147 124 M148 116 L164 116"/>
+    <path d="M142 124 H170" stroke-opacity=".6"/>
+  </g>
+</svg>
