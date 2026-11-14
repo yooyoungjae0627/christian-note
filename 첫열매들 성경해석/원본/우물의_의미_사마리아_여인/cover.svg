@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 우물의 의미② 사마리아 여인: 야곱의 우물에서 솟아오르는 샘물, 그 곁에 내려놓은 물 항아리 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <circle cx="100" cy="100" r="86" stroke="#e8c46a" stroke-opacity=".5"/>
+    <!-- 우물 지붕과 기둥 -->
+    <path d="M52 62 L100 40 L148 62" stroke="#e8c46a"/>
+    <path d="M62 60 V108 M138 60 V108" stroke="#e8c46a"/>
+    <path d="M62 74 H138" stroke="#e8c46a" stroke-opacity=".7"/>
+    <path d="M100 74 V96" stroke="#f4ecd8" stroke-opacity=".7"/>
+    <!-- 우물 돌 테두리 -->
+    <ellipse cx="100" cy="110" rx="44" ry="9" stroke="#f4ecd8"/>
+    <path d="M56 110 V146 C56 152 144 152 144 146 V110" stroke="#f4ecd8"/>
+    <path d="M56 124 C70 129 130 129 144 124 M56 136 C70 141 130 141 144 136" stroke="#f4ecd8" stroke-opacity=".45"/>
+    <!-- 솟아오르는 샘물 -->
+    <path d="M100 108 C94 96 92 88 100 80 C108 88 106 96 100 108 Z" stroke="#9fc3ff"/>
+    <path d="M88 104 C82 96 84 90 88 86 M112 104 C118 96 116 90 112 86" stroke="#9fc3ff" stroke-opacity=".75"/>
+    <!-- 내려놓은 물 항아리 -->
+    <path d="M154 120 C150 126 148 134 150 142 C152 150 158 154 164 154 C170 154 176 150 178 142 C180 134 178 126 174 120 Z" stroke="#e8c46a"/>
+    <path d="M156 120 H172 M158 120 V114 H170 V120" stroke="#e8c46a"/>
+    <path d="M150 132 C146 130 144 126 148 122" stroke="#e8c46a" stroke-opacity=".7"/>
+    <!-- 땅 -->
+    <path d="M30 156 H178" stroke="#e8c46a" stroke-opacity=".55"/>
+  </g>
+  <g fill="#9fc3ff" fill-opacity=".85">
+    <circle cx="100" cy="70" r="2.4"/><circle cx="92" cy="74" r="1.8"/><circle cx="108" cy="74" r="1.8"/>
+  </g>
+</svg>
