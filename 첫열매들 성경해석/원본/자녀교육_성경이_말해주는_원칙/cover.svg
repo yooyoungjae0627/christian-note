@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 자녀 양육: 위에서 내려온 부모의 큰 손이 아이의 작은 손을 잡고, 그 위로 빛, 아래로 펼친 말씀 -->
+  <g fill="none" stroke="#c9973b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <circle cx="58" cy="56" r="11" stroke="#f3e7c9"/>
+    <path d="M58 38 V32 M58 74 V80 M40 56 H34 M76 56 H82 M45 43 L41 39 M71 43 L75 39 M45 69 L41 73 M71 69 L75 73" stroke="#f3e7c9" stroke-opacity=".6"/>
+    <path d="M150 22 C146 46 132 72 114 92"/>
+    <path d="M168 34 C160 60 146 84 126 100"/>
+    <path d="M114 92 C106 96 104 104 110 108 C116 112 124 108 126 100"/>
+    <path d="M110 108 C112 112 118 114 122 110" stroke-opacity=".7"/>
+    <path d="M50 160 C64 142 82 124 100 110" stroke="#f3e7c9"/>
+    <path d="M60 168 C74 150 90 134 108 118" stroke="#f3e7c9"/>
+    <path d="M100 110 C104 106 110 108 112 112 C114 116 112 118 108 118" stroke="#f3e7c9"/>
+    <path d="M124 150 Q138 144 152 150 V172 Q138 166 124 172 Z" stroke="#f3e7c9"/>
+    <path d="M152 150 Q166 144 180 150 V172 Q166 166 152 172 Z" stroke="#f3e7c9"/>
+    <path d="M130 156 H146 M130 162 H146 M158 156 H174 M158 162 H174" stroke-opacity=".6"/>
+  </g>
+  <g fill="#f3e7c9">
+    <circle cx="150" cy="122" r="1.4"/><circle cx="36" cy="110" r="1.2"/><circle cx="90" cy="34" r="1.5"/>
+  </g>
+</svg>
