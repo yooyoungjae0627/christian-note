@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 마음에서 '나오는 고백': 울타리(내부자와 외부자를 나누는 경계) 안쪽에 마음이 있고, 그 마음 한가운데 주인 주(主) 자, 마음에서 위로 퍼져 나오는 빛줄기 -->
+  <circle cx="100" cy="100" r="86" stroke="#e8c983" stroke-width="1.6" stroke-opacity=".45"/>
+  <path d="M100 52 V40 M84 55 L77 45 M116 55 L123 45 M70 63 L60 56 M130 63 L140 56" stroke="#f4ecd8" stroke-width="2.2" stroke-opacity=".7"/>
+  <path d="M100 130 C62 106 56 74 78 66 C90 62 98 70 100 79 C102 70 110 62 122 66 C144 74 138 106 100 130 Z" stroke="#f4ecd8" stroke-width="3"/>
+  <path d="M98 80 L102 85" stroke="#e8c983" stroke-width="3.4"/>
+  <path d="M88 90 H112 M90 101 H110 M86 112 H114 M100 90 V112" stroke="#e8c983" stroke-width="3.4"/>
+  <g stroke="#9fb6e8" stroke-width="2.2" stroke-opacity=".8">
+    <path d="M50 151 H150 M50 161 H150"/>
+    <path d="M54 168 V146 L58 140 L62 146 V168 M66 168 V146 L70 140 L74 146 V168 M78 168 V146 L82 140 L86 146 V168 M90 168 V146 L94 140 L98 146 V168"/>
+    <path d="M102 168 V146 L106 140 L110 146 V168 M114 168 V146 L118 140 L122 146 V168 M126 168 V146 L130 140 L134 146 V168 M138 168 V146 L142 140 L146 146 V168"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="46" cy="60" r="1.4"/><circle cx="154" cy="64" r="1.6"/><circle cx="142" cy="40" r="1.2"/><circle cx="58" cy="40" r="1.2"/>
+  </g>
+</svg>
