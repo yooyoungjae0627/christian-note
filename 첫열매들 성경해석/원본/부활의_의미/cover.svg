@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 부활의 의미: 아치 안에 모여 있는 '부활의 자식들'(부활의 약속을 받은 사람들) 무리, 그곳으로부터(ἐξ, from) 밖으로 나오는 화살표, 위로 빛나는 하늘의 몸(빛 무리) -->
+  <g fill="none" stroke="#e8c870" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M36 150 V104 C36 72 60 54 84 54 C108 54 126 72 126 104 V150" stroke="#f4ecd8" stroke-opacity=".85"/>
+    <path d="M28 150 H172" stroke="#f4ecd8" stroke-opacity=".6"/>
+    <path d="M118 118 C136 112 148 102 156 86" stroke="#e8c870"/>
+    <path d="M156 86 L146 90 M156 86 L157 97" stroke="#e8c870"/>
+    <circle cx="160" cy="66" r="9" stroke="#f6e7a8"/>
+    <path d="M160 50 V44 M160 88 V82 M144 66 H138 M182 66 H176 M149 55 L145 51 M171 55 L175 51" stroke="#f6e7a8" stroke-opacity=".8"/>
+  </g>
+  <g fill="#f4ecd8" fill-opacity=".85">
+    <circle cx="56" cy="122" r="4"/><circle cx="70" cy="114" r="4"/><circle cx="84" cy="124" r="4"/>
+    <circle cx="98" cy="112" r="4"/><circle cx="62" cy="138" r="4"/><circle cx="78" cy="140" r="4"/>
+    <circle cx="94" cy="136" r="4"/><circle cx="108" cy="128" r="4"/><circle cx="50" cy="104" r="3.4"/>
+    <circle cx="66" cy="94" r="3.4"/><circle cx="84" cy="96" r="3.4"/><circle cx="102" cy="94" r="3.4"/>
+  </g>
+  <text x="84" y="80" text-anchor="middle" font-family="serif" font-size="18" font-style="italic" fill="#e8c870">ἐξ</text>
+  <g fill="#f4ecd8"><circle cx="40" cy="48" r="1.4"/><circle cx="150" cy="140" r="1.2"/><circle cx="132" cy="40" r="1.4"/></g>
+</svg>
