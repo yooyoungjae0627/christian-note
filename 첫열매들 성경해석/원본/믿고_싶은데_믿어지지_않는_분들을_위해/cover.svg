@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 한 걸음 한 걸음 이어지는 발자국 -->
+    <g fill="#f3ead2" opacity="0.85" stroke="none">
+      <ellipse cx="40" cy="176" rx="6" ry="9" transform="rotate(-20 40 176)"/>
+      <ellipse cx="58" cy="164" rx="6" ry="9" transform="rotate(-10 58 164)"/>
+      <ellipse cx="70" cy="146" rx="5.5" ry="8.5" transform="rotate(-25 70 146)"/>
+      <ellipse cx="88" cy="136" rx="5.5" ry="8.5" transform="rotate(-12 88 136)"/>
+      <ellipse cx="96" cy="118" rx="5" ry="8" transform="rotate(-20 96 118)"/>
+    </g>
+    <!-- 선물 상자: 선물로 주시는 믿음 -->
+    <rect x="104" y="92" width="64" height="48" rx="3" stroke="#c9973b" stroke-width="3"/>
+    <rect x="100" y="80" width="72" height="14" rx="3" stroke="#c9973b" stroke-width="3"/>
+    <line x1="136" y1="80" x2="136" y2="140" stroke="#e7c27a" stroke-width="3"/>
+    <path d="M136 80 C124 64 108 70 118 80 M136 80 C148 64 164 70 154 80" stroke="#e7c27a" stroke-width="3"/>
+    <!-- 반지: 약속하셨기 때문에 껴 주시는 반지 -->
+    <circle cx="136" cy="44" r="15" stroke="#c9973b" stroke-width="4"/>
+    <path d="M128 30 L136 22 L144 30 Z" stroke="#f3ead2" stroke-width="2.5" fill="#f3ead2"/>
+    <g stroke="#f3ead2" stroke-width="2" opacity="0.8">
+      <line x1="110" y1="38" x2="102" y2="34"/>
+      <line x1="162" y1="38" x2="170" y2="34"/>
+      <line x1="136" y1="12" x2="136" y2="6"/>
+    </g>
+  </g>
+</svg>
