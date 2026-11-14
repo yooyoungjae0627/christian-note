@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 에덴동산 가운데 두 나무(생명 나무 · 선과 악의 지식의 나무)와, 동산을 적시며 넷으로 갈라지는 강(생명수) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <circle cx="100" cy="100" r="86" stroke="#c9973b" stroke-opacity=".55"/>
+    <rect x="44" y="44" width="112" height="112" rx="10" stroke="#c9973b" stroke-opacity=".35"/>
+    <!-- 강: 가로·세로로 흘러 넷으로 갈라짐 -->
+    <path d="M18 128 C32 120 44 136 58 128 S84 120 100 128 S128 136 142 128 S168 120 182 128" stroke="#f3e6c4" stroke-opacity=".75"/>
+    <path d="M100 14 C108 28 92 40 100 54 M100 152 C92 164 108 176 100 186" stroke="#f3e6c4" stroke-opacity=".6"/>
+    <!-- 왼쪽 나무 -->
+    <path d="M70 128 V96" stroke="#c9973b"/>
+    <path d="M70 108 L60 98 M70 102 L80 92" stroke="#c9973b"/>
+    <path d="M70 62 C52 62 46 76 52 86 C44 94 54 106 66 100 C70 108 84 104 84 94 C96 90 92 72 82 70 C80 62 74 60 70 62 Z" stroke="#c9973b"/>
+    <!-- 오른쪽 나무 -->
+    <path d="M130 128 V96" stroke="#c9973b"/>
+    <path d="M130 108 L120 98 M130 102 L140 92" stroke="#c9973b"/>
+    <path d="M130 62 C112 62 106 76 112 86 C104 94 114 106 126 100 C130 108 144 104 144 94 C156 90 152 72 142 70 C140 62 134 60 130 62 Z" stroke="#c9973b"/>
+  </g>
+  <!-- 열매 -->
+  <g fill="#f3e6c4">
+    <circle cx="62" cy="78" r="2.6"/><circle cx="76" cy="86" r="2.6"/><circle cx="68" cy="70" r="2.2"/><circle cx="58" cy="92" r="2.2"/>
+    <circle cx="122" cy="78" r="2.6"/><circle cx="136" cy="86" r="2.6"/><circle cx="128" cy="70" r="2.2"/><circle cx="142" cy="78" r="2.2"/>
+  </g>
+  <g fill="#c9973b">
+    <circle cx="48" cy="40" r="1.4"/><circle cx="156" cy="44" r="1.6"/><circle cx="150" cy="30" r="1.2"/>
+  </g>
+</svg>
