@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 바람에 기울어지는 갈대(보이지 않지만 하신 일이 보이는 성령)와, 흩어져 사라지는 빽빽한 구름(이사야 44:22 도말) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke="#c9973b" stroke-width="2" stroke-opacity=".5"/>
+    <!-- 사라지는 구름: 왼쪽은 또렷하고 오른쪽으로 갈수록 흐려짐 -->
+    <path d="M44 66 C40 56 52 48 60 54 C64 42 82 42 86 54 C96 50 104 58 100 66 Z" stroke="#f3e6c4" stroke-width="2"/>
+    <path d="M108 60 C110 54 118 52 122 56 C126 50 136 52 136 60" stroke="#f3e6c4" stroke-width="2" stroke-opacity=".55" stroke-dasharray="6 4"/>
+    <path d="M144 54 C146 50 152 50 154 54" stroke="#f3e6c4" stroke-width="2" stroke-opacity=".3" stroke-dasharray="3 5"/>
+    <circle cx="164" cy="56" r="1.2" fill="#f3e6c4" fill-opacity=".3" stroke="none"/>
+    <!-- 바람의 흐름 -->
+    <path d="M30 92 C54 84 76 96 100 90 C118 86 128 80 140 82" stroke="#c9973b" stroke-width="2"/>
+    <path d="M40 106 C64 100 86 110 110 104 C126 100 138 96 152 98" stroke="#c9973b" stroke-width="2" stroke-opacity=".7"/>
+    <path d="M140 82 C150 84 152 92 144 94" stroke="#c9973b" stroke-width="2"/>
+    <!-- 바람에 기울어진 갈대들 -->
+    <path d="M62 172 C64 152 72 136 86 122" stroke="#f3e6c4" stroke-width="2"/>
+    <path d="M86 122 C80 118 78 112 82 108 C88 112 90 118 86 122 Z" stroke="#c9973b" stroke-width="2"/>
+    <path d="M82 172 C84 150 94 134 110 120" stroke="#f3e6c4" stroke-width="2"/>
+    <path d="M110 120 C104 116 102 110 106 106 C112 110 114 116 110 120 Z" stroke="#c9973b" stroke-width="2"/>
+    <path d="M102 172 C104 154 114 140 130 130" stroke="#f3e6c4" stroke-width="2"/>
+    <path d="M130 130 C124 127 122 121 126 117 C132 121 134 127 130 130 Z" stroke="#c9973b" stroke-width="2"/>
+    <path d="M122 172 C126 158 136 148 150 142" stroke="#f3e6c4" stroke-width="2" stroke-opacity=".8"/>
+    <path d="M72 150 C78 146 84 146 90 148 M92 152 C98 148 104 148 110 150" stroke="#f3e6c4" stroke-width="1.6" stroke-opacity=".6"/>
+    <path d="M48 172 H152" stroke="#c9973b" stroke-width="2"/>
+  </g>
+</svg>
