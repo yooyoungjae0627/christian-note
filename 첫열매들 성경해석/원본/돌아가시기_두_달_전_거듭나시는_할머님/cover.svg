@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 천국 문: "천국 문 앞에서 뺑뺑 돌았어" → "이제는 활짝 열려 있으니까" — 활짝 열린 두 문짝, 안에서 비치는 빛, 문 앞을 맴돌던 둥근 길과 곧장 들어가는 길 -->
+  <defs>
+    <radialGradient id="glow91" cx="0.5" cy="0.62" r="0.62">
+      <stop offset="0" stop-color="#f3e6c4" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#e8c983" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#c9973b" stop-opacity="0.08"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#c9973b" stroke-width="2" stroke-opacity=".6"/>
+  <!-- 문 안의 빛 -->
+  <path d="M68 146 V88 A32 32 0 0 1 132 88 V146 Z" fill="url(#glow91)"/>
+  <g stroke="#f3e6c4" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".75" fill="none">
+    <path d="M100 104 L100 76"/>
+    <path d="M100 104 L84 82"/>
+    <path d="M100 104 L116 82"/>
+    <path d="M100 104 L76 96"/>
+    <path d="M100 104 L124 96"/>
+  </g>
+  <circle cx="100" cy="112" r="7" fill="#f3e6c4" fill-opacity=".9"/>
+  <!-- 문틀(아치) -->
+  <path d="M60 148 V86 A40 40 0 0 1 140 86 V148" fill="none" stroke="#f3e6c4" stroke-width="2.6" stroke-linejoin="round"/>
+  <path d="M68 146 V88 A32 32 0 0 1 132 88 V146" fill="none" stroke="#c9973b" stroke-width="1.6"/>
+  <!-- 활짝 열린 두 문짝 -->
+  <g stroke="#c9973b" stroke-width="2" stroke-linejoin="round">
+    <path d="M60 90 L40 82 L40 156 L60 150 Z" fill="#18233f" fill-opacity=".85"/>
+    <path d="M140 90 L160 82 L160 156 L140 150 Z" fill="#18233f" fill-opacity=".85"/>
+  </g>
+  <g stroke="#f3e6c4" stroke-width="1.2" stroke-linecap="round" stroke-opacity=".7" fill="none">
+    <path d="M47 92 V146 M53 94 V146"/>
+    <path d="M153 92 V146 M147 94 V146"/>
+  </g>
+  <circle cx="56" cy="122" r="1.8" fill="#f3e6c4"/>
+  <circle cx="144" cy="122" r="1.8" fill="#f3e6c4"/>
+  <!-- 땅, 문 앞을 맴돌던 둥근 길, 곧장 들어가는 길 -->
+  <path d="M22 150 H178" stroke="#c9973b" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="100" cy="166" rx="40" ry="8" fill="none" stroke="#c9973b" stroke-width="1.6" stroke-opacity=".7" stroke-dasharray="3 4"/>
+  <path d="M86 184 L95 151 M114 184 L105 151" stroke="#f3e6c4" stroke-width="2" stroke-linecap="round" stroke-opacity=".85"/>
+  <g fill="#f3e6c4">
+    <circle cx="44" cy="58" r="1.5"/><circle cx="158" cy="54" r="1.7"/><circle cx="148" cy="36" r="1.2"/><circle cx="56" cy="40" r="1.1"/>
+  </g>
+</svg>
