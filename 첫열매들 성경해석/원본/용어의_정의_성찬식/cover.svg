@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 성찬의 잔과 둘로 찢긴 빵 — 잔 위로 머리(큰 형상)와 손잡은 작은 형상들(한 육체), 저주의 몸에서 빛나는 몸으로 -->
+  <g fill="none" stroke="#c9973b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <!-- 잔 -->
+    <path d="M74 92 H126 C126 112 116 124 100 126 C84 124 74 112 74 92 Z" stroke="#f3e7c9"/>
+    <path d="M79 100 H121" stroke="#c9973b" stroke-opacity=".8"/>
+    <path d="M100 126 V146 M86 152 H114 M90 146 H110" stroke="#f3e7c9"/>
+    <!-- 찢긴 빵 두 조각 -->
+    <path d="M34 150 C34 136 50 130 62 136 L58 142 L64 147 L60 154 C52 160 34 160 34 150 Z" stroke="#f3e7c9" stroke-opacity=".9"/>
+    <path d="M166 150 C166 136 150 130 138 136 L142 142 L136 147 L140 154 C148 160 166 160 166 150 Z" stroke="#f3e7c9" stroke-opacity=".9"/>
+    <!-- 한 육체: 큰 형상과 손잡은 작은 형상들 -->
+    <circle cx="92" cy="44" r="7" stroke="#f3e7c9"/>
+    <path d="M92 52 V74 M84 68 L92 58 L110 68 M88 74 L86 84 M96 74 L98 84" stroke="#f3e7c9"/>
+    <circle cx="114" cy="58" r="4.5" stroke="#c9973b"/>
+    <path d="M114 63 V76 M110 84 L114 76 L118 84" stroke="#c9973b"/>
+    <circle cx="126" cy="52" r="4.5" stroke="#c9973b"/>
+    <path d="M126 57 V72 M122 80 L126 72 L130 80 M118 70 L126 62 L134 70" stroke="#c9973b"/>
+    <!-- 빛 -->
+    <path d="M60 40 L66 44 M140 36 L134 41 M56 64 H64 M144 62 H136" stroke="#f3e7c9" stroke-opacity=".6"/>
+  </g>
+  <g fill="#f3e7c9">
+    <circle cx="44" cy="96" r="1.4"/><circle cx="158" cy="98" r="1.6"/><circle cx="150" cy="116" r="1.2"/>
+  </g>
+</svg>
