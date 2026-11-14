@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 강의의 비유: 성경 지식은 구슬, 원리라는 실에 꿰어져야 목걸이가 된다. 펼친 성경 위에 꿰어진 목걸이와 아직 꿰지 않은 구슬들 -->
+  <!-- 목걸이 실과 고리 -->
+  <path d="M45 40 L92 15" stroke="#e8c983" stroke-width="2"/>
+  <path d="M155 40 L108 15" stroke="#e8c983" stroke-width="2"/>
+  <circle cx="100" cy="13" r="5" stroke="#e8c983" stroke-width="2.4"/>
+  <path d="M45 40 A55 55 0 0 0 155 40" stroke="#e8c983" stroke-width="2"/>
+  <!-- 꿰어진 구슬(반원 위 15도 간격) -->
+  <g stroke="#e8c983" stroke-width="2.2" fill="rgba(232,201,131,.28)">
+    <circle cx="153.1" cy="54.2" r="6"/>
+    <circle cx="147.6" cy="67.5" r="6"/>
+    <circle cx="138.9" cy="78.9" r="6"/>
+    <circle cx="127.5" cy="87.6" r="6"/>
+    <circle cx="114.2" cy="93.1" r="6"/>
+    <circle cx="100" cy="95" r="6.6"/>
+    <circle cx="85.8" cy="93.1" r="6"/>
+    <circle cx="72.5" cy="87.6" r="6"/>
+    <circle cx="61.1" cy="78.9" r="6"/>
+    <circle cx="52.4" cy="67.5" r="6"/>
+    <circle cx="46.9" cy="54.2" r="6"/>
+  </g>
+  <g fill="#f3e3b8">
+    <circle cx="151.6" cy="52.4" r="1.4"/><circle cx="146" cy="65.8" r="1.4"/><circle cx="137.3" cy="77.2" r="1.4"/>
+    <circle cx="125.9" cy="85.9" r="1.4"/><circle cx="112.6" cy="91.4" r="1.4"/><circle cx="98.2" cy="93" r="1.6"/>
+    <circle cx="84.2" cy="91.4" r="1.4"/><circle cx="70.9" cy="85.9" r="1.4"/><circle cx="59.5" cy="77.2" r="1.4"/>
+    <circle cx="50.8" cy="65.8" r="1.4"/><circle cx="45.3" cy="52.4" r="1.4"/>
+  </g>
+  <!-- 아직 꿰지 않은 구슬들 -->
+  <g stroke="#f3e3b8" stroke-width="2" fill="rgba(243,227,184,.14)">
+    <circle cx="30" cy="118" r="5.4"/>
+    <circle cx="45" cy="126" r="5.4"/>
+    <circle cx="28" cy="134" r="5.4"/>
+    <circle cx="160" cy="122" r="5.4"/>
+    <circle cx="174" cy="131" r="5.4"/>
+  </g>
+  <!-- 펼친 성경 -->
+  <path d="M100 152 Q66 138 26 148 L26 184 Q66 174 100 188 Z" stroke="#e8c983" stroke-width="2.6" fill="rgba(232,201,131,.12)"/>
+  <path d="M100 152 Q134 138 174 148 L174 184 Q134 174 100 188 Z" stroke="#e8c983" stroke-width="2.6" fill="rgba(232,201,131,.12)"/>
+  <line x1="100" y1="152" x2="100" y2="188" stroke="#e8c983" stroke-width="2"/>
+  <g stroke="#f3e3b8" stroke-width="1.5">
+    <path d="M36 158 Q64 151 90 160"/><path d="M36 166 Q64 159 90 168"/><path d="M36 174 Q64 167 90 176"/>
+    <path d="M110 160 Q136 151 164 158"/><path d="M110 168 Q136 159 164 166"/><path d="M110 176 Q136 167 164 174"/>
+  </g>
+</svg>
