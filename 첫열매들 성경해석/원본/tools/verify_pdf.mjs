@@ -135,7 +135,20 @@ if (/들어가며/.test(tocTxt)) problems.push("「들어가며」가 남아 있
 
 // 슬라이드 그림 수(표지 배경 그림은 제외)
 let imgCount = 0;
-for (let i = 1; i < N; i++) { const pg = doc.loadPage(i), st = pg.toStructuredText("preserve-images"); st.walk({ onImageBlock(bb) { if (bb[2] - bb[0] > 1 && bb[3] - bb[1] > 1) imgCount++; } }); /* 넓이 없는 조각(2026-10-09 27권 읽는 법 쪽에서 높이 0·음수 5개)은 그림이 아니다 */ st.destroy(); pg.destroy(); }
+// 그림이 본문 폭 가운데에 놓였는지(사용자 지시 2026-11-14 「pdf 파일에 넣는 이미지는 … 중앙을 기준으로 딱 아구가 맞아야」):
+// 본문 그림(QR 같은 작은 그림 제외)은 모두 본문 폭을 꽉 채워 본문 가운데에 놓여야 한다. 쪽마다 안쪽·바깥 여백이 달라(제본)
+// 본문 칸 위치가 홀수·짝수 쪽 두 가지이므로, 그림 좌우 끝이 가장 흔한 두 위치 중 하나와 1pt 안에서 맞지 않으면 실패.
+const bigImgs = [];
+for (let i = 1; i < N; i++) {
+  const pg = doc.loadPage(i), st = pg.toStructuredText("preserve-images");
+  st.walk({ onImageBlock(bb) { if (bb[2] - bb[0] > 1 && bb[3] - bb[1] > 1) { imgCount++; if (bb[2] - bb[0] > 120) bigImgs.push([i + 1, bb[0], bb[2]]); } } }); /* 넓이 없는 조각(2026-10-09 27권 읽는 법 쪽에서 높이 0·음수 5개)은 그림이 아니다 */
+  st.destroy(); pg.destroy();
+}
+const posCount = {};
+bigImgs.forEach(([, x0, x1]) => { const k = `${Math.round(x0)}|${Math.round(x1)}`; posCount[k] = (posCount[k] || 0) + 1; });
+const cols = Object.entries(posCount).sort((p, q) => q[1] - p[1]).slice(0, 2).map(([k]) => k.split("|").map(Number));
+const offCenter = bigImgs.filter(([, x0, x1]) => !cols.some(([a, b]) => Math.abs(x0 - a) <= 1 && Math.abs(x1 - b) <= 1));
+if (offCenter.length) problems.push(`본문 폭 가운데에 꽉 차게 놓이지 않은 그림 ${offCenter.length}장: ${offCenter.slice(0, 8).map(([p, a, b]) => `${p}쪽(${a.toFixed(1)}~${b.toFixed(1)}pt)`).join(", ")}`);
 const slides = book.stories.reduce((a, S) => a + S.images.length, 0);
 if (imgCount !== slides) problems.push(`본문 그림 ${imgCount}장 ≠ 슬라이드 ${slides}장`);
 if (/@@[\w-]+@@/.test(text.join(""))) problems.push("쪽 번호용 표식이 남아 있음");

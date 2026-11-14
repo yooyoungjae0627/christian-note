@@ -40,8 +40,12 @@ if (check) {
     if (r.x0 < 0) { console.log(`? ${f}: 내용 없음`); continue; }
     const L = r.x0, R = r.W - 1 - r.x1, T = r.y0, B = r.H - 1 - r.y1;
     const msgs = [];
-    if (Math.abs(L - R) > r.W * 0.03) msgs.push(`좌우 여백 ${L}/${R}px`);
-    if (Math.abs(T - B) > r.H * 0.03 && r.H < 900) msgs.push(`위아래 여백 ${T}/${B}px`);
+    // 영상 스크린을 편 슬라이드(정확히 1920×1080)는 슬라이드 디자인·배경 그러데이션 그대로라 여기서 판단하지 않는다
+    // (스크린 테두리 맞춤·글자 잘림은 screen_crop.mjs --check와 눈 확인으로)
+    const slide = Math.abs(r.W / r.H - 16 / 9) < 0.01 && r.W >= 1280;
+    if (slide) { console.log(`· ${f} ${r.W}×${r.H} 16:9 영상 슬라이드 — screen_crop --check·눈 확인 대상`); continue; }
+    if (!slide && Math.abs(L - R) > r.W * 0.03) msgs.push(`좌우 여백 ${L}/${R}px`);
+    if (!slide && Math.abs(T - B) > r.H * 0.03) msgs.push(`위아래 여백 ${T}/${B}px`);
     if (L <= 1 || R <= 1 || T <= 1 || B <= 1) msgs.push('내용이 가장자리에 닿음(잘림 의심)');
     console.log(`${msgs.length ? '✗' : '✓'} ${f} ${r.W}×${r.H} 여백 좌${L} 우${R} 위${T} 아래${B}${msgs.length ? ' — ' + msgs.join(', ') : ''}`);
     if (msgs.length) bad = true;
