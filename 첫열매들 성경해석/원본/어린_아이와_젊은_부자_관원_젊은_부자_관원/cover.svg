@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 낙타가 바늘귀로 들어가는 것이 부자가 하나님의 왕국에 들어가는 것보다 더 쉽다(마가복음 10:25) — 큰 낙타와 가느다란 바늘 하나 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke="#e8c870" stroke-width="2" stroke-opacity=".45"/>
+    <!-- 바늘 -->
+    <path d="M140 36 Q146 26 152 36 L150.5 140 L146 172 L141.5 140 Z" stroke="#f4ecd8" stroke-width="2.2"/>
+    <path d="M146 40 V62" stroke="#f4ecd8" stroke-width="3.2"/>
+    <path d="M146 40 V62" stroke="#18233f" stroke-width="1.2"/>
+    <!-- 낙타 -->
+    <path d="M30 120 C31 106 40 98 50 101 C55 86 70 86 74 101 C80 103 85 109 88 115 C92 108 94 98 96 90 C98 83 105 80 110 84 L113 90 C109 90 105 92 103 97 C101 108 99 120 95 130 L37 130 C33 128 30 125 30 120 Z" stroke="#e8c870" stroke-width="2.4"/>
+    <path d="M42 130 V164 M52 130 V164 M82 130 V164 M91 129 V164" stroke="#e8c870" stroke-width="2.4"/>
+    <path d="M30 120 C26 124 25 130 26 136" stroke="#e8c870" stroke-width="1.8"/>
+    <circle cx="106" cy="87" r="1.2" fill="#e8c870" stroke="none"/>
+    <!-- 땅 -->
+    <path d="M20 166 H124 M162 166 H180" stroke="#9fc3ff" stroke-width="2" stroke-opacity=".7"/>
+    <path d="M44 176 H100" stroke="#9fc3ff" stroke-width="1.6" stroke-opacity=".45"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="60" cy="48" r="1.5"/><circle cx="84" cy="36" r="1.2"/><circle cx="112" cy="56" r="1.4"/><circle cx="168" cy="72" r="1.2"/>
+  </g>
+</svg>
