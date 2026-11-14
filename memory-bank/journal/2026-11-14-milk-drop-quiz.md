@@ -29,4 +29,4 @@
 - 3강 39장·4강 크롭 끝(받기 실패 구간 있어 프레임이 적은 그림 있음 — 검토 전). 4강 53쪽은 가까운 카메라 그림이라 따로.
 - 5강: 360p 매칭·창 고르기까지. 1080p 받기 0개.
 - **막힘: 2026-11-15 05:50쯤부터 YouTube가 yt-dlp에 「Sign in to confirm you're not a bot」.** 우회하지 않고 풀릴 때까지 기다림.
-- 작업 파일: `%TEMP%milkredo`(scan·hd·out·seg/pick/reg/win json), 옛 그림 `%TEMP%milkimg`.
+- 작업 파일: `%TEMP%\milkredo`(scan·hd·out·seg/pick/reg/win json), 옛 그림 `%TEMP%\milkimg`.
