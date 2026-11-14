@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 24시간 연결된 전화(기도의 형식) — 하루를 도는 시계 눈금 안에 늘 열려 있는 핸드폰, 위로 끊임없이 이어지는 대화의 물결과 빛 -->
+  <g fill="none" stroke="#c9973b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="104" r="84" stroke-opacity=".55"/>
+    <path d="M100 22 V30 M100 178 V186 M18 104 H26 M174 104 H182 M42 46 L48 52 M158 46 L152 52 M42 162 L48 156 M158 162 L152 156" stroke="#f3e7c9" stroke-opacity=".7"/>
+    <path d="M70 34 L72 41 M130 34 L128 41 M30 74 L37 76 M170 74 L163 76 M30 134 L37 132 M170 134 L163 132 M70 174 L72 167 M130 174 L128 167" stroke-opacity=".6"/>
+    <rect x="78" y="88" width="44" height="78" rx="8" stroke="#f3e7c9"/>
+    <rect x="84" y="98" width="32" height="54" rx="2" stroke="#f3e7c9" stroke-opacity=".6"/>
+    <path d="M94 160 H106" stroke="#f3e7c9"/>
+    <path d="M91 118 C95 112 105 112 109 118 M95 124 C98 120 102 120 105 124" stroke="#c9973b"/>
+    <circle cx="100" cy="129" r="1.8" fill="#c9973b"/>
+    <path d="M86 78 C92 70 108 70 114 78" stroke="#f3e7c9"/>
+    <path d="M78 68 C88 56 112 56 122 68" stroke="#f3e7c9" stroke-opacity=".75"/>
+    <path d="M70 58 C84 42 116 42 130 58" stroke="#f3e7c9" stroke-opacity=".5"/>
+    <circle cx="100" cy="40" r="7" stroke="#f3e7c9"/>
+    <path d="M100 26 V22 M88 32 L85 29 M112 32 L115 29" stroke="#f3e7c9" stroke-opacity=".6"/>
+  </g>
+  <g fill="#f3e7c9">
+    <circle cx="48" cy="100" r="1.4"/><circle cx="152" cy="96" r="1.6"/><circle cx="144" cy="128" r="1.2"/><circle cx="56" cy="132" r="1.2"/>
+  </g>
+</svg>
