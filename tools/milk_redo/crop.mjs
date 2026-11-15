@@ -26,7 +26,7 @@ for (const [name, p] of Object.entries(pick)) {
   const fdir = path.join(hd, "fr_" + name.replace(".png", "")); fs.rmSync(fdir, { recursive: true, force: true }); fs.mkdirSync(fdir);
   const full = path.join(hd, "full.mp4");
   for (const t of p.times) {
-    if (fs.existsSync(full)) { execFileSync(FF, ["-loglevel", "error", "-ss", String(t - 1), "-t", "4", "-i", full, "-vf", "fps=1", "-q:v", "2", path.join(fdir, `${t}_%02d.jpg`)]); continue; }
+    if (fs.existsSync(full)) { execFileSync(FF, ["-loglevel", "error", "-ss", String(t - 1), "-t", "4", "-i", full, "-vf", "fps=1,scale=1920:1080:flags=lanczos", "-q:v", "2", path.join(fdir, `${t}_%02d.jpg`)]); continue; }
     const f = files.find((x) => Math.abs(startOf(x) - (t - 1)) < 0.01); if (!f) { console.log(name, "구간 파일 없음", t); continue; }
     execFileSync(FF, ["-loglevel", "error", "-i", path.join(hd, f), "-vf", "fps=1", "-q:v", "2", path.join(fdir, `${t}_%02d.jpg`)]); }
   const frames = fs.readdirSync(fdir).filter((f) => f.endsWith(".jpg"));
