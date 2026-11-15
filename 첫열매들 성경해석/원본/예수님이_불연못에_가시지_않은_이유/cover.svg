@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 예수님이 불연못에 가시지 않은 이유: 재판 전에 죗값이 치러져(값표에 '다 치름' 표시) 재판봉 아래 불연못 길은 ✕, 위로 새 하늘 새 땅 길 -->
+  <g fill="none" stroke="#e8c870" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <!-- 값표(죄의 대가) -->
+    <path d="M38 70 L62 62 L74 74 L66 98 L42 106 L30 94 Z" stroke="#f4ecd8" stroke-opacity=".9"/>
+    <circle cx="61" cy="72" r="3" stroke="#f4ecd8" stroke-opacity=".9"/>
+    <path d="M40 88 L47 95 L60 80" stroke="#e8c870"/>
+    <!-- 재판봉 -->
+    <path d="M100 96 L122 74" stroke="#f4ecd8" stroke-opacity=".85"/>
+    <path d="M114 62 L134 82 M120 56 L140 76 M114 62 L120 56 M134 82 L140 76" stroke="#f4ecd8" stroke-opacity=".85"/>
+    <path d="M92 108 H126" stroke="#f4ecd8" stroke-opacity=".6"/>
+    <!-- 위로 가는 길: 새 하늘 새 땅 -->
+    <path d="M70 140 C96 128 128 112 156 70" stroke="#e8c870"/>
+    <path d="M156 70 L146 74 M156 70 L157 81"/>
+    <path d="M152 46 L155 54 L163 55 L157 60 L159 68 L152 64 L145 68 L147 60 L141 55 L149 54 Z" stroke="#f2e2a0"/>
+    <!-- 불연못(아래, ✕) -->
+    <path d="M128 160 C122 152 126 146 130 140 C131 147 136 147 136 142 C142 150 140 158 134 162 Z" stroke="#e98a7a" stroke-opacity=".8"/>
+    <path d="M118 164 H150" stroke="#e98a7a" stroke-opacity=".6"/>
+    <path d="M120 138 L148 166 M148 138 L120 166" stroke="#f4ecd8" stroke-width="2.6"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="44" cy="46" r="1.4"/><circle cx="172" cy="104" r="1.2"/><circle cx="132" cy="38" r="1.5"/>
+  </g>
+</svg>
