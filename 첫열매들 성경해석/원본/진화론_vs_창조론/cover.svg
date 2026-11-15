@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 진화론 vs 창조론: 한 피(one blood) — 가운데 핏방울, 왼쪽은 갈라지는 계통수 가지, 오른쪽은 처음부터 따로 선 새싹 -->
+  <g fill="none" stroke="#e8c870" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M100 52 C112 70 124 86 124 104 C124 118 113 128 100 128 C87 128 76 118 76 104 C76 86 88 70 100 52 Z" stroke="#f4ecd8"/>
+    <path d="M90 104 C90 112 95 117 102 118" stroke="#f4ecd8" stroke-opacity=".6"/>
+    <path d="M58 156 V136 M58 136 L44 118 M58 136 L66 120 M44 118 L36 104 M44 118 L50 102 M66 120 L62 104 M66 120 L74 108" stroke="#e8c870" stroke-opacity=".75"/>
+    <circle cx="36" cy="102" r="2" stroke-opacity=".75"/><circle cx="50" cy="100" r="2" stroke-opacity=".75"/>
+    <circle cx="62" cy="102" r="2" stroke-opacity=".75"/><circle cx="74" cy="106" r="2" stroke-opacity=".75"/>
+    <path d="M142 156 V124" stroke="#9fd77a"/>
+    <path d="M142 138 C134 136 130 129 131 123 C138 124 142 131 142 138 Z" stroke="#9fd77a"/>
+    <path d="M142 132 C150 129 154 122 153 116 C146 117 142 124 142 132 Z" stroke="#9fd77a"/>
+    <path d="M154 156 V132 M154 142 C160 140 163 135 162 130 C157 131 154 136 154 142 Z" stroke="#9fd77a" stroke-opacity=".8"/>
+    <path d="M30 158 H170" stroke="#f4ecd8" stroke-opacity=".5"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="48" cy="56" r="1.4"/><circle cx="152" cy="52" r="1.6"/><circle cx="164" cy="74" r="1.2"/>
+  </g>
+</svg>
