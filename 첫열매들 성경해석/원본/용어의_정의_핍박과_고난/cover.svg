@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 그분의 발자취를 따라가는 길(베드로전서 2:21) 끝에 놓인 상(면류관) — 길가의 거친 돌(핍박과 고난), 위의 별빛 -->
+  <g fill="none" stroke="#c9973b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M70 62 L76 44 L88 56 L100 38 L112 56 L124 44 L130 62 Z" stroke="#e8c870"/>
+    <path d="M70 62 H130 M72 70 H128" stroke="#e8c870"/>
+    <circle cx="100" cy="50" r="2.2" stroke="#f4ecd8"/>
+    <path d="M62 66 C52 58 50 46 56 38 M138 66 C148 58 150 46 144 38" stroke="#f4ecd8" stroke-opacity=".7"/>
+    <path d="M58 52 L52 50 M56 44 L50 40 M142 52 L148 50 M144 44 L150 40" stroke="#f4ecd8" stroke-opacity=".6"/>
+    <path d="M60 182 C76 150 92 120 100 86 C108 120 124 150 140 182" stroke="#9fb4d8" stroke-opacity=".6"/>
+  </g>
+  <g fill="#c9973b" fill-opacity=".85">
+    <ellipse cx="92" cy="166" rx="4.2" ry="7" transform="rotate(-8 92 166)"/>
+    <ellipse cx="108" cy="150" rx="4" ry="6.6" transform="rotate(8 108 150)"/>
+    <ellipse cx="94" cy="134" rx="3.6" ry="6" transform="rotate(-8 94 134)"/>
+    <ellipse cx="106" cy="120" rx="3.3" ry="5.4" transform="rotate(8 106 120)"/>
+    <ellipse cx="97" cy="107" rx="2.9" ry="4.8" transform="rotate(-8 97 107)"/>
+  </g>
+  <g fill="none" stroke="#9fb4d8" stroke-width="1.6" stroke-opacity=".7" stroke-linejoin="round">
+    <path d="M40 150 L50 142 L60 148 L56 156 L44 157 Z"/>
+    <path d="M146 160 L156 152 L166 158 L162 166 L150 166 Z"/>
+    <path d="M150 128 L158 123 L164 128 L160 134 L152 134 Z"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="44" cy="96" r="1.4"/><circle cx="160" cy="92" r="1.6"/><circle cx="150" cy="104" r="1.1"/><circle cx="34" cy="78" r="1.1"/>
+  </g>
+</svg>
