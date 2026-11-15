@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 용어의 정의_가시: 질그릇 안의 보물(빛)과 그 둘레를 감은 가시 줄기 — 약할 때 강함, 나의 은혜가 너에게 충분하도다 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke="#e8c870" stroke-width="2" stroke-opacity=".5"/>
+    <path d="M78 70 H122 M80 70 C80 78 74 82 66 92 C56 106 58 132 72 144 C82 152 118 152 128 144 C142 132 144 106 134 92 C126 82 120 78 120 70" stroke="#f4ecd8" stroke-width="2" stroke-opacity=".9"/>
+    <path d="M76 64 H124" stroke="#f4ecd8" stroke-width="2" stroke-opacity=".9"/>
+    <path d="M70 120 C88 126 112 126 130 120" stroke="#f4ecd8" stroke-width="1.2" stroke-opacity=".5"/>
+    <circle cx="100" cy="104" r="9" stroke="#e8c870" stroke-width="2"/>
+    <path d="M100 86 V78 M100 122 V130 M82 104 H74 M118 104 H126 M88 92 L83 87 M112 92 L117 87 M88 116 L83 121 M112 116 L117 121" stroke="#e8c870" stroke-width="1.6" stroke-opacity=".85"/>
+    <path d="M40 150 C52 128 46 108 58 90 C68 74 62 56 76 44 C90 34 112 34 124 44 C138 56 132 74 142 90 C154 108 148 128 160 150" stroke="#c9a7d8" stroke-width="2" stroke-opacity=".85"/>
+    <path d="M47 136 L40 132 M51 116 L44 114 M55 98 L48 92 M64 80 L58 74 M68 60 L61 56 M82 40 L80 33 M100 36 V29 M118 40 L120 33 M132 60 L139 56 M136 80 L142 74 M145 98 L152 92 M149 116 L156 114 M153 136 L160 132" stroke="#c9a7d8" stroke-width="1.6" stroke-opacity=".85"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="38" cy="60" r="1.4"/><circle cx="164" cy="56" r="1.4"/><circle cx="158" cy="168" r="1.2"/><circle cx="44" cy="170" r="1.2"/>
+  </g>
+</svg>
