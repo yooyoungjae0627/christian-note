@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 싹이 난 막대기(민수기 17:5)와 그 둘레를 지나가는 바람(요한복음 3:8) — 안 보이는 성령이 한 일이 보이는 증거 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke="#c9973b" stroke-width="2" stroke-opacity=".5"/>
+    <!-- 막대기 -->
+    <path d="M100 168 L100 66" stroke="#f3e6c4" stroke-width="4"/>
+    <path d="M92 168 H108" stroke="#f3e6c4" stroke-width="2" stroke-opacity=".7"/>
+    <!-- 싹과 잎 -->
+    <path d="M100 66 C96 56 98 48 104 42" stroke="#c9973b" stroke-width="2.4"/>
+    <path d="M104 42 C112 40 116 46 112 52 C108 56 102 52 104 42 Z" stroke="#c9973b" stroke-width="2"/>
+    <path d="M100 70 C90 66 84 58 86 50 C94 50 100 58 100 70 Z" stroke="#c9973b" stroke-width="2"/>
+    <path d="M100 82 C110 80 118 72 118 64 C110 64 102 72 100 82 Z" stroke="#c9973b" stroke-width="2"/>
+    <path d="M100 96 C92 94 86 88 86 82 C93 82 99 88 100 96 Z" stroke="#c9973b" stroke-width="1.8" stroke-opacity=".85"/>
+    <!-- 꽃봉오리 -->
+    <circle cx="96" cy="44" r="3" stroke="#f3e6c4" stroke-width="1.6"/>
+    <circle cx="114" cy="72" r="2.4" stroke="#f3e6c4" stroke-width="1.4"/>
+    <!-- 바람 -->
+    <path d="M30 110 C50 100 66 112 82 104 C90 100 90 92 84 92" stroke="#f3e6c4" stroke-width="2" stroke-opacity=".8"/>
+    <path d="M118 120 C136 112 152 124 170 114" stroke="#f3e6c4" stroke-width="2" stroke-opacity=".8"/>
+    <path d="M36 132 C56 126 70 136 86 130" stroke="#c9973b" stroke-width="1.8" stroke-opacity=".7"/>
+    <path d="M116 142 C130 136 146 146 164 138 C172 134 172 126 166 126" stroke="#c9973b" stroke-width="1.8" stroke-opacity=".7"/>
+    <path d="M44 88 C56 82 66 90 74 84" stroke="#f3e6c4" stroke-width="1.6" stroke-opacity=".55"/>
+    <path d="M126 94 C138 88 150 96 160 90" stroke="#f3e6c4" stroke-width="1.6" stroke-opacity=".55"/>
+  </g>
+  <g fill="#f3e6c4" fill-opacity=".8">
+    <circle cx="58" cy="60" r="1.4"/><circle cx="146" cy="58" r="1.6"/><circle cx="154" cy="150" r="1.2"/><circle cx="48" cy="150" r="1.3"/>
+  </g>
+</svg>
