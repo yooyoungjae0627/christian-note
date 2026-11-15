@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 요단강을 가운데 두고 서쪽(약속의 성문)과 동쪽(활 쏘는 자의 활) — 둘째와 첫째 -->
+  <g fill="none" stroke="#e8c46a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M100 22 C92 50 110 74 98 100 C88 124 108 150 100 178" stroke="#9fc3ff" stroke-opacity=".8"/>
+    <path d="M106 24 C98 52 116 76 104 100 C94 126 114 152 106 176" stroke="#9fc3ff" stroke-opacity=".45"/>
+    <path d="M34 140 H82" stroke="#f4ecd8"/>
+    <path d="M40 140 V98 H76 V140" stroke="#f4ecd8"/>
+    <path d="M50 140 V116 C50 106 66 106 66 116 V140" stroke="#f4ecd8"/>
+    <path d="M40 98 L58 80 L76 98" stroke="#f4ecd8"/>
+    <circle cx="58" cy="58" r="9" stroke="#f4ecd8"/>
+    <path d="M58 42 V38 M44 58 H40 M72 58 H76 M48 48 L45 45 M68 48 L71 45" stroke="#f4ecd8" stroke-opacity=".6"/>
+    <path d="M138 70 C162 86 162 122 138 138"/>
+    <path d="M138 70 L138 138" stroke-opacity=".7"/>
+    <path d="M168 104 H124 M124 104 L131 99 M124 104 L131 109 M168 104 L173 99 M168 104 L173 109"/>
+    <path d="M122 156 H170" stroke-opacity=".6"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="30" cy="70" r="1.4"/><circle cx="168" cy="50" r="1.6"/><circle cx="150" cy="36" r="1.2"/>
+  </g>
+</svg>
