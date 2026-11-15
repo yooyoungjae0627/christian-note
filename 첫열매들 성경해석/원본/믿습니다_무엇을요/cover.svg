@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 표지판(사인)이 가리키는 곳: 다음 세상의 영생 / 아래에 빵 다섯 개와 물고기 두 마리 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 멀리 가리키는 곳: 떠오르는 빛 -->
+    <circle cx="158" cy="58" r="17" stroke="#f3e3b5" stroke-width="2.2"/>
+    <g stroke="#c9973b" stroke-width="1.8">
+      <line x1="158" y1="30" x2="158" y2="22"/>
+      <line x1="178" y1="38" x2="184" y2="32"/>
+      <line x1="186" y1="58" x2="194" y2="58"/>
+      <line x1="138" y1="38" x2="132" y2="32"/>
+      <line x1="178" y1="78" x2="184" y2="84"/>
+    </g>
+    <path d="M118 86 Q158 76 198 86" stroke="#f3e3b5" stroke-width="1.6"/>
+    <!-- 표지판 기둥 -->
+    <line x1="62" y1="44" x2="62" y2="150" stroke="#c9973b" stroke-width="4"/>
+    <!-- 화살표 판 -->
+    <path d="M38 52 H104 L120 64 L104 76 H38 Z" stroke="#c9973b" stroke-width="3" fill="#1b2a4a"/>
+    <line x1="48" y1="64" x2="100" y2="64" stroke="#f3e3b5" stroke-width="2"/>
+    <path d="M92 58 L100 64 L92 70" stroke="#f3e3b5" stroke-width="2"/>
+    <!-- 바구니 -->
+    <path d="M34 152 H138 L128 182 H44 Z" stroke="#c9973b" stroke-width="2.6" fill="#1b2a4a"/>
+    <line x1="40" y1="162" x2="132" y2="162" stroke="#c9973b" stroke-width="1.4"/>
+    <line x1="42" y1="172" x2="130" y2="172" stroke="#c9973b" stroke-width="1.4"/>
+    <!-- 빵 다섯 개 -->
+    <g stroke="#f3e3b5" stroke-width="2.2" fill="#1b2a4a">
+      <ellipse cx="50" cy="146" rx="11" ry="7"/>
+      <ellipse cx="70" cy="142" rx="11" ry="7"/>
+      <ellipse cx="90" cy="146" rx="11" ry="7"/>
+      <ellipse cx="60" cy="134" rx="10" ry="6"/>
+      <ellipse cx="80" cy="134" rx="10" ry="6"/>
+    </g>
+    <!-- 물고기 두 마리 -->
+    <g stroke="#c9973b" stroke-width="2.2" fill="#1b2a4a">
+      <path d="M104 140 Q116 130 128 140 Q116 150 104 140 Z"/>
+      <path d="M128 140 L136 134 L136 146 Z"/>
+      <path d="M106 128 Q118 118 130 128 Q118 138 106 128 Z"/>
+      <path d="M130 128 L138 122 L138 134 Z"/>
+    </g>
+    <circle cx="110" cy="139" r="1.2" fill="#f3e3b5" stroke="none"/>
+    <circle cx="112" cy="127" r="1.2" fill="#f3e3b5" stroke="none"/>
+  </g>
+</svg>
