@@ -17,14 +17,17 @@ async function desc(file, s, ox = 0, oy = 0) {
   let m = 0; for (const v of out) m += v; m /= out.length; let sd = 0; for (let i = 0; i < out.length; i++) { out[i] -= m; sd += out[i] * out[i]; } sd = Math.sqrt(sd) || 1; for (let i = 0; i < out.length; i++) out[i] /= sd; return out; }
 const corr = (a, b) => { let s = 0; for (let i = 0; i < a.length; i++) s += a[i] * b[i]; return s; };
 fs.mkdirSync(outDir, { recursive: true });
-const files = fs.readdirSync(hd).filter((f) => f.endsWith(".mp4"));
+const files = fs.readdirSync(hd).filter((f) => f.endsWith(".mp4") && f !== "full.mp4");
 const startOf = (f) => parseFloat(f);
 const report = [];
 for (const [name, p] of Object.entries(pick)) {
   if (only && !name.includes(only)) continue;
   const r = REG[name]; const od = await desc(path.join(oldDir, name), r.s, r.ox, r.oy);
   const fdir = path.join(hd, "fr_" + name.replace(".png", "")); fs.rmSync(fdir, { recursive: true, force: true }); fs.mkdirSync(fdir);
-  for (const t of p.times) { const f = files.find((x) => Math.abs(startOf(x) - (t - 1)) < 0.01); if (!f) { console.log(name, "구간 파일 없음", t); continue; }
+  const full = path.join(hd, "full.mp4");
+  for (const t of p.times) {
+    if (fs.existsSync(full)) { execFileSync(FF, ["-loglevel", "error", "-ss", String(t - 1), "-t", "4", "-i", full, "-vf", "fps=1", "-q:v", "2", path.join(fdir, `${t}_%02d.jpg`)]); continue; }
+    const f = files.find((x) => Math.abs(startOf(x) - (t - 1)) < 0.01); if (!f) { console.log(name, "구간 파일 없음", t); continue; }
     execFileSync(FF, ["-loglevel", "error", "-i", path.join(hd, f), "-vf", "fps=1", "-q:v", "2", path.join(fdir, `${t}_%02d.jpg`)]); }
   const frames = fs.readdirSync(fdir).filter((f) => f.endsWith(".jpg"));
   const sc = []; for (const f of frames) sc.push([f, corr(od, await desc(path.join(fdir, f), 1))]);
