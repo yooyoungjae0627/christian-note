@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 안 보이는 에덴동산(교회): 생명수 강이 흐르는 동산 안의 두 나무(선과 악의 지식의 나무 · 생명나무), 위에서 내려오는 복 -->
+  <g fill="none" stroke="#c9973b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".55"/>
+    <rect x="44" y="70" width="112" height="84" rx="6" stroke="#f3e7c9" stroke-opacity=".7" stroke-dasharray="5 4"/>
+    <path d="M100 24 V40 M86 30 L92 40 M114 30 L108 40" stroke="#f3e7c9" stroke-opacity=".8"/>
+    <path d="M100 46 L104 54 L112 55 L106 60 L108 68 L100 64 L92 68 L94 60 L88 55 L96 54 Z" stroke="#f3e7c9"/>
+    <circle cx="74" cy="100" r="15" stroke="#f3e7c9"/>
+    <path d="M74 115 V136 M68 136 H80" stroke="#f3e7c9"/>
+    <circle cx="69" cy="96" r="2.2"/><circle cx="79" cy="98" r="2.2"/><circle cx="73" cy="106" r="2.2"/>
+    <circle cx="126" cy="100" r="15" stroke="#f3e7c9"/>
+    <path d="M126 115 V136 M120 136 H132" stroke="#f3e7c9"/>
+    <circle cx="121" cy="97" r="2.2"/><circle cx="131" cy="99" r="2.2"/><circle cx="125" cy="106" r="2.2"/>
+    <path d="M22 146 C40 140 52 152 70 146 C88 140 100 152 118 146 C136 140 150 152 178 146"/>
+    <path d="M100 74 C94 86 106 96 100 108 C94 120 106 132 100 146" stroke-opacity=".8"/>
+    <path d="M40 164 H76 M124 164 H160 M70 176 H130" stroke="#f3e7c9" stroke-opacity=".45"/>
+  </g>
+  <g fill="#f3e7c9">
+    <circle cx="48" cy="48" r="1.4"/><circle cx="154" cy="52" r="1.6"/><circle cx="142" cy="36" r="1.2"/><circle cx="60" cy="34" r="1.1"/>
+  </g>
+</svg>
