@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 다윗 · 돌이키라!: 내가 원하는 것(From)에서 하나님이 원하시는 것(To)으로 휘어 돌아오는 화살표(판서), 딴 데로 가던 길(점선), 슬금슬금 딴 데로 가는 양(목자 비유), 미세한 음성의 물결(열왕기상 19:12) -->
+  <circle cx="100" cy="100" r="92" stroke="#c9973b" stroke-width="1.5" opacity="0.55"/>
+  <!-- 잘못 가는 길(점선) -->
+  <path d="M40 150 C 60 120, 90 100, 150 72" stroke="#f3e6c4" stroke-width="2" stroke-dasharray="4 6" opacity="0.7"/>
+  <!-- From → To 휘어 돌아오는 화살표 -->
+  <path d="M150 72 C 178 92, 172 140, 128 150 C 108 154, 90 152, 74 146" stroke="#c9973b" stroke-width="4"/>
+  <path d="M86 136 L72 146 L88 156" stroke="#c9973b" stroke-width="4"/>
+  <!-- 돌아선 자리(돌이킨 순간) -->
+  <circle cx="150" cy="72" r="5" fill="#f3e6c4" stroke="none"/>
+  <circle cx="150" cy="72" r="10" stroke="#f3e6c4" stroke-width="1.4" opacity="0.6"/>
+  <!-- 딴 데로 가려는 양 한 마리(옆모습: 털 몸통 · 머리 · 귀 · 다리, 얼굴 그림 없음) -->
+  <path d="M50 76 q-6 -8 2 -14 q0 -10 10 -10 q6 -8 14 -2 q8 -4 13 4 q9 2 7 12 q4 8 -4 12 q-2 8 -12 6 q-6 6 -14 1 q-10 3 -13 -4 q-8 -1 -3 -5 z" stroke="#f3e6c4" stroke-width="2.4"/>
+  <ellipse cx="42" cy="62" rx="7" ry="9" transform="rotate(-25 42 62)" stroke="#f3e6c4" stroke-width="2.4" fill="#18233f"/>
+  <path d="M44 53 l8 -5" stroke="#f3e6c4" stroke-width="2.2"/>
+  <path d="M60 86 v10 M68 87 v10 M80 87 v10 M88 85 v10" stroke="#f3e6c4" stroke-width="2.2"/>
+  <!-- 미세한 음성: 작은 물결 -->
+  <path d="M110 40 q6 -6 12 0 t12 0" stroke="#c9973b" stroke-width="2" opacity="0.85"/>
+  <path d="M116 30 q5 -5 10 0" stroke="#c9973b" stroke-width="1.8" opacity="0.6"/>
+  <!-- 곧은 길(To) -->
+  <path d="M40 176 h120" stroke="#c9973b" stroke-width="2" opacity="0.6"/>
+</svg>
