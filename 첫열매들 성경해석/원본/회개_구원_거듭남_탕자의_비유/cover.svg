@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 탕자의 비유: 아버지 집으로 이어진 길 위의 발자국(회개), 아버지 집, 하늘에 걸린 가락지(거듭남의 약속), 길가의 옷(혼의 구원) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke="#c9973b" stroke-width="2" stroke-opacity=".55"/>
+    <!-- 먼 산과 지평선 -->
+    <path d="M22 108 C40 92 52 90 66 98 C80 86 96 84 110 96 C126 86 146 88 178 106" stroke="#f3e7c9" stroke-width="1.6" stroke-opacity=".6"/>
+    <path d="M16 112 H184" stroke="#c9973b" stroke-width="1.8"/>
+    <!-- 아버지 집 -->
+    <path d="M118 112 V98 H140 V112" stroke="#f3e7c9" stroke-width="2"/>
+    <path d="M114 99 L129 88 L144 99" stroke="#f3e7c9" stroke-width="2"/>
+    <path d="M126 112 V104 H132 V112" stroke="#c9973b" stroke-width="1.6"/>
+    <!-- 굽은 길 -->
+    <path d="M70 186 C78 160 112 150 104 136 C98 126 118 120 124 112" stroke="#c9973b" stroke-width="2"/>
+    <path d="M104 186 C108 164 132 152 122 136 C116 126 128 118 132 112" stroke="#c9973b" stroke-width="2"/>
+    <!-- 가락지 -->
+    <circle cx="72" cy="58" r="15" stroke="#c9973b" stroke-width="3"/>
+    <path d="M66 42 L72 34 L78 42 L72 46 Z" stroke="#f3e7c9" stroke-width="1.8"/>
+    <path d="M52 40 L48 36 M92 40 L96 36 M72 26 V20" stroke="#f3e7c9" stroke-width="1.4" stroke-opacity=".7"/>
+    <!-- 가장 좋은 옷 -->
+    <path d="M150 130 L160 124 H168 L178 130 L172 140 L168 137 V162 H160 V137 L156 140 Z" stroke="#f3e7c9" stroke-width="1.8"/>
+  </g>
+  <!-- 아버지께 걸어가는 발자국 -->
+  <g fill="#f3e7c9" fill-opacity=".85">
+    <ellipse cx="88" cy="174" rx="2.6" ry="4" transform="rotate(-20 88 174)"/>
+    <ellipse cx="96" cy="164" rx="2.6" ry="4" transform="rotate(-25 96 164)"/>
+    <ellipse cx="104" cy="156" rx="2.4" ry="3.6" transform="rotate(-30 104 156)"/>
+    <ellipse cx="112" cy="146" rx="2.2" ry="3.2" transform="rotate(-10 112 146)"/>
+    <ellipse cx="113" cy="136" rx="2" ry="3"/>
+    <ellipse cx="119" cy="127" rx="1.8" ry="2.6" transform="rotate(20 119 127)"/>
+  </g>
+  <g fill="#c9973b">
+    <circle cx="150" cy="44" r="1.4"/><circle cx="164" cy="60" r="1.2"/><circle cx="40" cy="78" r="1.2"/>
+  </g>
+</svg>
