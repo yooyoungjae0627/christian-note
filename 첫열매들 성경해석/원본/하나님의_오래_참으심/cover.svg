@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 갈림길(강의: 갈림길마다 또 가 계시며 "서쪽으로, 태양을 따라, 빛을 따라 가라" 속삭이심) — 한쪽 길 끝에 떠오르는 빛, 다른 쪽 길은 어둠으로 -->
+  <circle cx="100" cy="100" r="86" fill="#18233f" fill-opacity=".35" stroke="#c9973b" stroke-width="2" stroke-opacity=".6"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 빛(왼쪽 길 끝의 해) -->
+    <circle cx="58" cy="66" r="13" stroke="#f3e6c4" stroke-width="2"/>
+    <path d="M58 44 V38 M58 94 V88 M36 66 H30 M86 66 H80 M42 50 L38 46 M74 50 L78 46 M42 82 L38 86 M74 82 L78 86" stroke="#f3e6c4" stroke-width="1.8" stroke-opacity=".7"/>
+    <!-- 지평선 -->
+    <path d="M22 104 H178" stroke="#c9973b" stroke-width="1.6" stroke-opacity=".7"/>
+    <!-- 아래에서 올라오는 한 길 -->
+    <path d="M78 180 C86 160 94 146 100 134" stroke="#c9973b" stroke-width="2.2"/>
+    <path d="M122 180 C114 160 106 146 100 134" stroke="#c9973b" stroke-width="2.2"/>
+    <!-- 갈림길: 왼쪽(빛 쪽) 길 -->
+    <path d="M100 134 C90 124 76 114 62 106" stroke="#f3e6c4" stroke-width="2"/>
+    <path d="M100 134 C92 126 84 118 74 106" stroke="#f3e6c4" stroke-width="1.4" stroke-opacity=".7"/>
+    <!-- 갈림길: 오른쪽(어둠 쪽) 길, 끝이 흐려짐 -->
+    <path d="M100 134 C112 126 126 116 140 106" stroke="#c9973b" stroke-width="2" stroke-opacity=".55" stroke-dasharray="4 4"/>
+    <path d="M100 134 C108 126 116 118 126 106" stroke="#c9973b" stroke-width="1.4" stroke-opacity=".4" stroke-dasharray="3 4"/>
+    <!-- 어둠 쪽 하늘의 그늘 -->
+    <path d="M128 92 C136 80 152 78 162 86 C166 74 150 62 136 70 C128 74 124 84 128 92 Z" stroke="#c9973b" stroke-width="1.4" stroke-opacity=".45"/>
+    <!-- 길 가장자리 풀 -->
+    <path d="M64 168 l-4 -8 M70 172 l-2 -9 M136 168 l4 -8 M130 172 l2 -9" stroke="#c9973b" stroke-width="1.4" stroke-opacity=".6"/>
+  </g>
+  <g fill="#f3e6c4">
+    <circle cx="150" cy="44" r="1.4"/><circle cx="160" cy="58" r="1.2"/><circle cx="136" cy="40" r="1"/>
+  </g>
+</svg>
