@@ -1,0 +1,30 @@
+{
+  "id": "O06",
+  "seconds": 431.9,
+  "requestedSeconds": 431.9126,
+  "file": "O06_07m11s.jpg",
+  "rawFile": "raw/O06_07m11s.jpg",
+  "description": "대기 메탄을 지구의 담요에 비유한 설명",
+  "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+  "stream": [
+    1920,
+    1080
+  ],
+  "captured": [
+    1797,
+    1011
+  ],
+  "muted": true,
+  "paused": true,
+  "crop": [
+    0,
+    0,
+    1797,
+    900
+  ],
+  "renderedPixels": [
+    1797,
+    900
+  ],
+  "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+}

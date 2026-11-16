@@ -1,0 +1,30 @@
+{
+  "id": "O04",
+  "seconds": 299.6,
+  "requestedSeconds": 299.60839999999996,
+  "file": "O04_04m59s.jpg",
+  "rawFile": "raw/O04_04m59s.jpg",
+  "description": "산소 생산 속도의 증가를 캐릭터로 표현한 영상의 비유 그림",
+  "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+  "stream": [
+    1920,
+    1080
+  ],
+  "captured": [
+    1812,
+    1019
+  ],
+  "muted": true,
+  "paused": true,
+  "crop": [
+    0,
+    0,
+    1812,
+    907
+  ],
+  "renderedPixels": [
+    1812,
+    907
+  ],
+  "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+}

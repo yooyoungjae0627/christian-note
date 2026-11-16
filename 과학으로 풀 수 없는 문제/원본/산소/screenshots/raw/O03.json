@@ -1,0 +1,30 @@
+{
+  "id": "O03",
+  "seconds": 263.45,
+  "requestedSeconds": 263.4563,
+  "file": "O03_04m23s.jpg",
+  "rawFile": "raw/O03_04m23s.jpg",
+  "description": "철광석 퇴적층을 설명하는 자료 화면",
+  "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+  "stream": [
+    1920,
+    1080
+  ],
+  "captured": [
+    1812,
+    1019
+  ],
+  "muted": true,
+  "paused": true,
+  "crop": [
+    0,
+    0,
+    1812,
+    907
+  ],
+  "renderedPixels": [
+    1812,
+    907
+  ],
+  "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+}

@@ -1,0 +1,30 @@
+{
+  "id": "O02",
+  "seconds": 172.3,
+  "requestedSeconds": 172.30419999999998,
+  "file": "O02_02m52s.jpg",
+  "rawFile": "raw/O02_02m52s.jpg",
+  "description": "황과 수소의 공급 환경을 설명할 때 쓰인 열수분출구 자료 화면",
+  "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+  "stream": [
+    1920,
+    1080
+  ],
+  "captured": [
+    1812,
+    1019
+  ],
+  "muted": true,
+  "paused": true,
+  "crop": [
+    0,
+    0,
+    1812,
+    907
+  ],
+  "renderedPixels": [
+    1812,
+    907
+  ],
+  "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+}

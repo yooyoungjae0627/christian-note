@@ -1,0 +1,30 @@
+{
+  "id": "O05",
+  "seconds": 365.75,
+  "requestedSeconds": 365.7605,
+  "file": "O05_06m05s.jpg",
+  "rawFile": "raw/O05_06m05s.jpg",
+  "description": "활성산소와 세포 손상을 설명하는 화면",
+  "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+  "stream": [
+    1920,
+    1080
+  ],
+  "captured": [
+    1801,
+    1013
+  ],
+  "muted": true,
+  "paused": true,
+  "crop": [
+    0,
+    0,
+    1801,
+    902
+  ],
+  "renderedPixels": [
+    1801,
+    902
+  ],
+  "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+}

@@ -1,0 +1,636 @@
+{
+  "pdf": "과학적으로 풀 수가 없는 난제.pdf",
+  "portrait_pages": 93,
+  "captures": 20,
+  "identical_embedded_assets": 20,
+  "quizzes": 35,
+  "faqs": 14,
+  "original_texts_checked": 598,
+  "body_font_checks": 463,
+  "body_font_min": 15,
+  "diagram_font_min": 12,
+  "links": 260,
+  "outline_entries": 12,
+  "missing_texts": [],
+  "body_font_failures": [],
+  "diagram_font_failures": [],
+  "clipped_spans": [],
+  "text_overlap_candidates": [],
+  "preserved_data": [
+    {
+      "file": "book_data.py",
+      "identical": true,
+      "sha256": "d57a472d0bbbf460d12fef3d53f9d618d6f2497754aac0fa6f0346fc47577d88"
+    },
+    {
+      "file": "oxygen_data.py",
+      "identical": true,
+      "sha256": "9b369f8c1e479f8d303968dcd26c4ca92a27c902a473223d736194d4b0269b1f"
+    }
+  ],
+  "errors": [],
+  "per_page": [
+    {
+      "page": 1,
+      "characters": 299,
+      "images": 0,
+      "links": 0
+    },
+    {
+      "page": 2,
+      "characters": 575,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 3,
+      "characters": 280,
+      "images": 0,
+      "links": 21
+    },
+    {
+      "page": 4,
+      "characters": 583,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 5,
+      "characters": 122,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 6,
+      "characters": 188,
+      "images": 1,
+      "links": 1
+    },
+    {
+      "page": 7,
+      "characters": 546,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 8,
+      "characters": 486,
+      "images": 1,
+      "links": 4
+    },
+    {
+      "page": 9,
+      "characters": 433,
+      "images": 0,
+      "links": 4
+    },
+    {
+      "page": 10,
+      "characters": 465,
+      "images": 1,
+      "links": 4
+    },
+    {
+      "page": 11,
+      "characters": 370,
+      "images": 0,
+      "links": 4
+    },
+    {
+      "page": 12,
+      "characters": 192,
+      "images": 1,
+      "links": 1
+    },
+    {
+      "page": 13,
+      "characters": 445,
+      "images": 0,
+      "links": 2
+    },
+    {
+      "page": 14,
+      "characters": 444,
+      "images": 1,
+      "links": 2
+    },
+    {
+      "page": 15,
+      "characters": 347,
+      "images": 0,
+      "links": 2
+    },
+    {
+      "page": 16,
+      "characters": 455,
+      "images": 1,
+      "links": 3
+    },
+    {
+      "page": 17,
+      "characters": 358,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 18,
+      "characters": 474,
+      "images": 1,
+      "links": 2
+    },
+    {
+      "page": 19,
+      "characters": 300,
+      "images": 0,
+      "links": 2
+    },
+    {
+      "page": 20,
+      "characters": 435,
+      "images": 1,
+      "links": 3
+    },
+    {
+      "page": 21,
+      "characters": 337,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 22,
+      "characters": 208,
+      "images": 1,
+      "links": 1
+    },
+    {
+      "page": 23,
+      "characters": 218,
+      "images": 1,
+      "links": 1
+    },
+    {
+      "page": 24,
+      "characters": 551,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 25,
+      "characters": 221,
+      "images": 1,
+      "links": 1
+    },
+    {
+      "page": 26,
+      "characters": 568,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 27,
+      "characters": 146,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 28,
+      "characters": 569,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 29,
+      "characters": 585,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 30,
+      "characters": 598,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 31,
+      "characters": 596,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 32,
+      "characters": 573,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 33,
+      "characters": 572,
+      "images": 0,
+      "links": 2
+    },
+    {
+      "page": 34,
+      "characters": 511,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 35,
+      "characters": 592,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 36,
+      "characters": 591,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 37,
+      "characters": 610,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 38,
+      "characters": 597,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 39,
+      "characters": 154,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 40,
+      "characters": 504,
+      "images": 1,
+      "links": 3
+    },
+    {
+      "page": 41,
+      "characters": 354,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 42,
+      "characters": 491,
+      "images": 1,
+      "links": 2
+    },
+    {
+      "page": 43,
+      "characters": 366,
+      "images": 0,
+      "links": 2
+    },
+    {
+      "page": 44,
+      "characters": 228,
+      "images": 1,
+      "links": 1
+    },
+    {
+      "page": 45,
+      "characters": 496,
+      "images": 0,
+      "links": 4
+    },
+    {
+      "page": 46,
+      "characters": 485,
+      "images": 1,
+      "links": 3
+    },
+    {
+      "page": 47,
+      "characters": 397,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 48,
+      "characters": 227,
+      "images": 1,
+      "links": 1
+    },
+    {
+      "page": 49,
+      "characters": 597,
+      "images": 0,
+      "links": 4
+    },
+    {
+      "page": 50,
+      "characters": 227,
+      "images": 1,
+      "links": 1
+    },
+    {
+      "page": 51,
+      "characters": 562,
+      "images": 0,
+      "links": 2
+    },
+    {
+      "page": 52,
+      "characters": 539,
+      "images": 1,
+      "links": 3
+    },
+    {
+      "page": 53,
+      "characters": 394,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 54,
+      "characters": 212,
+      "images": 1,
+      "links": 1
+    },
+    {
+      "page": 55,
+      "characters": 526,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 56,
+      "characters": 574,
+      "images": 0,
+      "links": 4
+    },
+    {
+      "page": 57,
+      "characters": 213,
+      "images": 1,
+      "links": 1
+    },
+    {
+      "page": 58,
+      "characters": 481,
+      "images": 0,
+      "links": 2
+    },
+    {
+      "page": 59,
+      "characters": 563,
+      "images": 0,
+      "links": 2
+    },
+    {
+      "page": 60,
+      "characters": 566,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 61,
+      "characters": 587,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 62,
+      "characters": 306,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 63,
+      "characters": 299,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 64,
+      "characters": 318,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 65,
+      "characters": 306,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 66,
+      "characters": 337,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 67,
+      "characters": 296,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 68,
+      "characters": 296,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 69,
+      "characters": 339,
+      "images": 0,
+      "links": 6
+    },
+    {
+      "page": 70,
+      "characters": 344,
+      "images": 0,
+      "links": 6
+    },
+    {
+      "page": 71,
+      "characters": 345,
+      "images": 0,
+      "links": 6
+    },
+    {
+      "page": 72,
+      "characters": 373,
+      "images": 0,
+      "links": 6
+    },
+    {
+      "page": 73,
+      "characters": 355,
+      "images": 0,
+      "links": 6
+    },
+    {
+      "page": 74,
+      "characters": 392,
+      "images": 0,
+      "links": 6
+    },
+    {
+      "page": 75,
+      "characters": 398,
+      "images": 0,
+      "links": 6
+    },
+    {
+      "page": 76,
+      "characters": 399,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 77,
+      "characters": 378,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 78,
+      "characters": 375,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 79,
+      "characters": 368,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 80,
+      "characters": 383,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 81,
+      "characters": 395,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 82,
+      "characters": 438,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 83,
+      "characters": 492,
+      "images": 0,
+      "links": 7
+    },
+    {
+      "page": 84,
+      "characters": 382,
+      "images": 0,
+      "links": 6
+    },
+    {
+      "page": 85,
+      "characters": 404,
+      "images": 0,
+      "links": 6
+    },
+    {
+      "page": 86,
+      "characters": 453,
+      "images": 0,
+      "links": 6
+    },
+    {
+      "page": 87,
+      "characters": 436,
+      "images": 0,
+      "links": 6
+    },
+    {
+      "page": 88,
+      "characters": 482,
+      "images": 0,
+      "links": 6
+    },
+    {
+      "page": 89,
+      "characters": 327,
+      "images": 0,
+      "links": 3
+    },
+    {
+      "page": 90,
+      "characters": 469,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 91,
+      "characters": 474,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 92,
+      "characters": 435,
+      "images": 0,
+      "links": 1
+    },
+    {
+      "page": 93,
+      "characters": 508,
+      "images": 0,
+      "links": 1
+    }
+  ],
+  "bytes": 9160502,
+  "sha256": "f95012fdb3a54187b11cd0c7ab91859d10f9d74bbe67748662c845f7013e09f2",
+  "format": "A4 portrait",
+  "page_size_points": [
+    595.2755905511812,
+    841.8897637795277
+  ],
+  "build_exit": 0,
+  "verify_exit": 0,
+  "independent_verify_exit": 0,
+  "categories": 3,
+  "section_start_pages": {
+    "part1": 5,
+    "part2": 27,
+    "part3": 39,
+    "quiz1": 62,
+    "answers1": 69,
+    "faq1": 76,
+    "sources1": 83
+  },
+  "independent_review": "PASS: portrait geometry, 598 content items, 463 body-font checks, 20 exact JPEGs, 20 TOC targets and 49 answer/FAQ reference targets verified",
+  "independent_visual_review": {
+    "contact_pages": 93,
+    "detailed_pages": [
+      1,
+      7,
+      28,
+      32,
+      34,
+      35,
+      39,
+      45,
+      55,
+      58,
+      88
+    ],
+    "status": "PASS"
+  },
+  "local_epub_count": 0,
+  "source_transcript_hashes": {
+    "해왕성": "eb7b4bff5ed907c96ef1c9274876335ecb04f7d781e6e1d4963fb789ef6e7fd8",
+    "신의 존재": "c83cc681b8e56433fb95f6d62d4d55df701c3d3b6e580e0f1797fa0af4660a09",
+    "산소": "10fdb4280dc8a5c91b0f026bc0d00d4a53247a5b6dabf29e289acfa809a0e9d3"
+  }
+}

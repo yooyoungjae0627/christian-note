@@ -1,0 +1,2 @@
+# Preserve the byte-exact source transcripts used by the provenance hashes.
+**/transcript_raw.txt -text

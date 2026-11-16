@@ -1,0 +1,30 @@
+{
+  "id": "O09",
+  "seconds": 599.2,
+  "requestedSeconds": 599.2167999999999,
+  "file": "O09_09m59s.jpg",
+  "rawFile": "raw/O09_09m59s.jpg",
+  "description": "O2와 산소 원자로부터 O3가 생성되는 설명",
+  "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+  "stream": [
+    1920,
+    1080
+  ],
+  "captured": [
+    1812,
+    1019
+  ],
+  "muted": true,
+  "paused": true,
+  "crop": [
+    0,
+    0,
+    1812,
+    759
+  ],
+  "renderedPixels": [
+    1812,
+    759
+  ],
+  "processing": "Crop only: bottom 260px removes source commentary/player band; image content not redrawn."
+}

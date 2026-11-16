@@ -1,0 +1,294 @@
+{
+  "method": "Codex hidden in-app browser; visible:false; muted; 1080p chosen in YouTube UI; direct screenshot of video area. Screenshot pixel size is browser display size, not original 1920x1080 frame export.",
+  "source": "https://www.youtube.com/watch?v=U5eVzn6bx2I",
+  "channel": "리뷰엉이: Owl’s Review",
+  "capturedDate": "2026-11-16",
+  "images": [
+    {
+      "id": "S01",
+      "seconds": 15,
+      "file": "S01_00m15s.jpg",
+      "description": "원시 원반과 형성 시간 문제",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1812,
+        1019
+      ],
+      "rawFile": "raw/S01_00m15s.jpg",
+      "crop": [
+        0,
+        0,
+        1812,
+        907
+      ],
+      "renderedPixels": [
+        1812,
+        907
+      ],
+      "processing": "Crop only: bottom 11 percent removes player controls and source subtitle band. No redraw or retouch; original saved in raw/."
+    },
+    {
+      "id": "S02",
+      "seconds": 80,
+      "file": "S02_01m20s.jpg",
+      "description": "거대행성의 이동을 설명하는 도식",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1812,
+        1019
+      ],
+      "rawFile": "raw/S02_01m20s.jpg",
+      "crop": [
+        0,
+        0,
+        1812,
+        907
+      ],
+      "renderedPixels": [
+        1812,
+        907
+      ],
+      "processing": "Crop only: bottom 11 percent removes player controls and source subtitle band. No redraw or retouch; original saved in raw/."
+    },
+    {
+      "id": "S03",
+      "seconds": 120.915839,
+      "file": "S03_02m00s.jpg",
+      "description": "해왕성 대흑점",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1801,
+        1013
+      ],
+      "rawFile": "raw/S03_02m00s.jpg",
+      "crop": [
+        0,
+        0,
+        1801,
+        902
+      ],
+      "renderedPixels": [
+        1801,
+        902
+      ],
+      "processing": "Crop only: bottom 11 percent removes player controls and source subtitle band. No redraw or retouch; original saved in raw/."
+    },
+    {
+      "id": "S04",
+      "seconds": 241.377524,
+      "file": "S04_04m00s.jpg",
+      "description": "뜨거운 내부를 설명하는 연출 화면",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1801,
+        1013
+      ],
+      "rawFile": "raw/S04_04m00s.jpg",
+      "crop": [
+        0,
+        0,
+        1801,
+        902
+      ],
+      "renderedPixels": [
+        1801,
+        902
+      ],
+      "processing": "Crop only: bottom 11 percent removes player controls and source subtitle band. No redraw or retouch; original saved in raw/."
+    },
+    {
+      "id": "S05",
+      "seconds": 330.77509,
+      "file": "S05_05m30s.jpg",
+      "description": "천왕성과 해왕성의 색 비교",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1801,
+        1013
+      ],
+      "rawFile": "raw/S05_05m30s.jpg",
+      "crop": [
+        0,
+        0,
+        1801,
+        902
+      ],
+      "renderedPixels": [
+        1801,
+        902
+      ],
+      "processing": "Crop only: bottom 11 percent removes player controls and source subtitle band. No redraw or retouch; original saved in raw/."
+    },
+    {
+      "id": "S06",
+      "seconds": 366.52616,
+      "file": "S06_06m05s.jpg",
+      "description": "해왕성 고리 관측 이미지",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1801,
+        1013
+      ],
+      "rawFile": "raw/S06_06m05s.jpg",
+      "crop": [
+        0,
+        0,
+        1801,
+        902
+      ],
+      "renderedPixels": [
+        1801,
+        902
+      ],
+      "processing": "Crop only: bottom 11 percent removes player controls and source subtitle band. No redraw or retouch; original saved in raw/."
+    },
+    {
+      "id": "S07",
+      "seconds": 441.231623,
+      "file": "S07_07m20s.jpg",
+      "description": "고압 실험을 설명하는 영상의 실험실 자료 화면",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1801,
+        1013
+      ],
+      "rawFile": "raw/S07_07m20s.jpg",
+      "crop": [
+        0,
+        0,
+        1801,
+        902
+      ],
+      "renderedPixels": [
+        1801,
+        902
+      ],
+      "processing": "Crop only: bottom 11 percent removes player controls and source subtitle band. No redraw or retouch; original saved in raw/."
+    },
+    {
+      "id": "S08",
+      "seconds": 490.888687,
+      "file": "S08_08m10s.jpg",
+      "description": "해왕성과 역행 위성 트리톤을 설명하는 도식",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1801,
+        1013
+      ],
+      "rawFile": "raw/S08_08m10s.jpg",
+      "crop": [
+        0,
+        0,
+        1801,
+        902
+      ],
+      "renderedPixels": [
+        1801,
+        902
+      ],
+      "processing": "Crop only: bottom 11 percent removes player controls and source subtitle band. No redraw or retouch; original saved in raw/."
+    },
+    {
+      "id": "S09",
+      "seconds": 565.028211,
+      "file": "S09_09m25s.jpg",
+      "description": "비대칭 자기장 도식",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1801,
+        1013
+      ],
+      "rawFile": "raw/S09_09m25s.jpg",
+      "crop": [
+        0,
+        0,
+        1801,
+        902
+      ],
+      "renderedPixels": [
+        1801,
+        902
+      ],
+      "processing": "Crop only: bottom 11 percent removes player controls and source subtitle band. No redraw or retouch; original saved in raw/."
+    },
+    {
+      "id": "S10",
+      "seconds": 611.370702,
+      "file": "S10_10m10s.jpg",
+      "description": "초이온 얼음의 내부 위치를 설명하는 도식",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1801,
+        1013
+      ],
+      "rawFile": "raw/S10_10m10s.jpg",
+      "crop": [
+        0,
+        0,
+        1801,
+        902
+      ],
+      "renderedPixels": [
+        1801,
+        902
+      ],
+      "processing": "Crop only: bottom 11 percent removes player controls and source subtitle band. No redraw or retouch; original saved in raw/."
+    },
+    {
+      "id": "S11",
+      "seconds": 666.171978,
+      "file": "S11_11m05s.jpg",
+      "description": "거리와 탐사 난도를 설명하는 태양계 도식",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1801,
+        1013
+      ],
+      "rawFile": "raw/S11_11m05s.jpg",
+      "crop": [
+        0,
+        0,
+        1801,
+        902
+      ],
+      "renderedPixels": [
+        1801,
+        902
+      ],
+      "processing": "Crop only: bottom 11 percent removes player controls and source subtitle band. No redraw or retouch; original saved in raw/."
+    }
+  ]
+}

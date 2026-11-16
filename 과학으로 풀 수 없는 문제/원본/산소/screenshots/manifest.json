@@ -1,0 +1,279 @@
+{
+  "method": "Codex hidden in-app browser; visible:false; muted playback; 1920x1080 video stream observed; native UI timeline seeking; direct video-area screenshots. Cropped print copies preserve composition without redraw.",
+  "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+  "title": "지구에 '산소'가 있다는 게 기적과도 같은 이유",
+  "channel": "리뷰엉이: Owl’s Review",
+  "capturedDate": "2026-11-16",
+  "images": [
+    {
+      "id": "O01",
+      "seconds": 71.15,
+      "requestedSeconds": 71.15,
+      "file": "O01_01m11s.jpg",
+      "rawFile": "raw/O01_01m11s.jpg",
+      "description": "물에 포함된 산소 원소와 공기 중 자유산소를 구분하는 자료 화면",
+      "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1801,
+        1013
+      ],
+      "muted": true,
+      "paused": true,
+      "crop": [
+        0,
+        0,
+        1801,
+        902
+      ],
+      "renderedPixels": [
+        1801,
+        902
+      ],
+      "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+    },
+    {
+      "id": "O02",
+      "seconds": 172.3,
+      "requestedSeconds": 172.30419999999998,
+      "file": "O02_02m52s.jpg",
+      "rawFile": "raw/O02_02m52s.jpg",
+      "description": "황과 수소의 공급 환경을 설명할 때 쓰인 열수분출구 자료 화면",
+      "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1812,
+        1019
+      ],
+      "muted": true,
+      "paused": true,
+      "crop": [
+        0,
+        0,
+        1812,
+        907
+      ],
+      "renderedPixels": [
+        1812,
+        907
+      ],
+      "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+    },
+    {
+      "id": "O03",
+      "seconds": 263.45,
+      "requestedSeconds": 263.4563,
+      "file": "O03_04m23s.jpg",
+      "rawFile": "raw/O03_04m23s.jpg",
+      "description": "철광석 퇴적층을 설명하는 자료 화면",
+      "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1812,
+        1019
+      ],
+      "muted": true,
+      "paused": true,
+      "crop": [
+        0,
+        0,
+        1812,
+        907
+      ],
+      "renderedPixels": [
+        1812,
+        907
+      ],
+      "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+    },
+    {
+      "id": "O04",
+      "seconds": 299.6,
+      "requestedSeconds": 299.60839999999996,
+      "file": "O04_04m59s.jpg",
+      "rawFile": "raw/O04_04m59s.jpg",
+      "description": "산소 생산 속도의 증가를 캐릭터로 표현한 영상의 비유 그림",
+      "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1812,
+        1019
+      ],
+      "muted": true,
+      "paused": true,
+      "crop": [
+        0,
+        0,
+        1812,
+        907
+      ],
+      "renderedPixels": [
+        1812,
+        907
+      ],
+      "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+    },
+    {
+      "id": "O05",
+      "seconds": 365.75,
+      "requestedSeconds": 365.7605,
+      "file": "O05_06m05s.jpg",
+      "rawFile": "raw/O05_06m05s.jpg",
+      "description": "활성산소와 세포 손상을 설명하는 화면",
+      "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1801,
+        1013
+      ],
+      "muted": true,
+      "paused": true,
+      "crop": [
+        0,
+        0,
+        1801,
+        902
+      ],
+      "renderedPixels": [
+        1801,
+        902
+      ],
+      "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+    },
+    {
+      "id": "O06",
+      "seconds": 431.9,
+      "requestedSeconds": 431.9126,
+      "file": "O06_07m11s.jpg",
+      "rawFile": "raw/O06_07m11s.jpg",
+      "description": "대기 메탄을 지구의 담요에 비유한 설명",
+      "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1797,
+        1011
+      ],
+      "muted": true,
+      "paused": true,
+      "crop": [
+        0,
+        0,
+        1797,
+        900
+      ],
+      "renderedPixels": [
+        1797,
+        900
+      ],
+      "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+    },
+    {
+      "id": "O07",
+      "seconds": 456.9,
+      "requestedSeconds": 456.9126,
+      "file": "O07_07m36s.jpg",
+      "rawFile": "raw/O07_07m36s.jpg",
+      "description": "휴로니안 빙하기를 설명하는 지구 도식",
+      "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1812,
+        1019
+      ],
+      "muted": true,
+      "paused": true,
+      "crop": [
+        0,
+        0,
+        1812,
+        907
+      ],
+      "renderedPixels": [
+        1812,
+        907
+      ],
+      "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+    },
+    {
+      "id": "O08",
+      "seconds": 553.049993,
+      "requestedSeconds": 553.0647,
+      "file": "O08_09m13s.jpg",
+      "rawFile": "raw/O08_09m13s.jpg",
+      "description": "발효와 산소 호흡의 ATP 수율 비교",
+      "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1812,
+        1019
+      ],
+      "muted": true,
+      "paused": true,
+      "crop": [
+        0,
+        0,
+        1812,
+        907
+      ],
+      "renderedPixels": [
+        1812,
+        907
+      ],
+      "processing": "Crop only: bottom 11 percent removes subtitle/player band; image content not redrawn."
+    },
+    {
+      "id": "O09",
+      "seconds": 599.2,
+      "requestedSeconds": 599.2167999999999,
+      "file": "O09_09m59s.jpg",
+      "rawFile": "raw/O09_09m59s.jpg",
+      "description": "O2와 산소 원자로부터 O3가 생성되는 설명",
+      "source": "https://www.youtube.com/watch?v=whHsl0w9abw",
+      "stream": [
+        1920,
+        1080
+      ],
+      "captured": [
+        1812,
+        1019
+      ],
+      "muted": true,
+      "paused": true,
+      "crop": [
+        0,
+        0,
+        1812,
+        759
+      ],
+      "renderedPixels": [
+        1812,
+        759
+      ],
+      "processing": "Crop only: bottom 260px removes source commentary/player band; image content not redrawn."
+    }
+  ]
+}
