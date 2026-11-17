@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 할례: 혼(동그라미)을 덮고 있던 저주받은 몸(톱니 껍질)이 뜯겨 나감 — 위에는 결혼(두 반지, 피의 남편), 아래로 떨어지는 핏방울 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="88" stroke="#c9973b" stroke-opacity=".45" stroke-width="1.5"/>
+    <circle cx="89" cy="46" r="13" stroke="#c9973b" stroke-width="2.4"/>
+    <circle cx="111" cy="46" r="13" stroke="#c9973b" stroke-width="2.4"/>
+    <path d="M89 33 A13 13 0 0 1 102 46" stroke="#f3e7c9" stroke-width="1" stroke-opacity=".7"/>
+    <circle cx="92" cy="122" r="22" fill="#f3e7c9" fill-opacity=".12" stroke="#f3e7c9" stroke-width="2.2"/>
+    <circle cx="92" cy="122" r="9" fill="#18233f" stroke="#f3e7c9" stroke-width="1.2" stroke-opacity=".6"/>
+    <path d="M86.3 154.5 L79.0 157.7 L75.5 150.6 L67.6 151.1 L66.7 143.2 L59.1 141.0 L61.0 133.3 L54.6 128.6 L59.0 122.0 L54.6 115.4 L61.0 110.7 L59.1 103.0 L66.7 100.8 L67.6 92.9 L75.5 93.4 L79.0 86.3 L86.3 89.5 L92.0 84.0 L97.7 89.5" stroke="#c9973b" stroke-width="2.2"/>
+    <path d="M119.3 83.0 L127.0 81.1 L129.2 88.7 L137.1 89.6 L136.6 97.5 L143.7 101.0 L140.5 108.3 L146.0 114.0 L140.5 119.7 L143.7 127.0 L136.6 130.5 L137.1 138.4 L129.2 139.3 L127.0 146.9 L119.3 145.0" stroke="#c9973b" stroke-width="2.2" stroke-opacity=".75"/>
+    <path d="M112 100 L118 96 M114 122 L121 122 M112 144 L118 148" stroke="#f3e7c9" stroke-width="1.2" stroke-opacity=".55" stroke-dasharray="2 3"/>
+  </g>
+  <g fill="#c9973b">
+    <path d="M150 156 C147 161 146 164 150 166 C154 164 153 161 150 156 Z"/>
+    <path d="M160 168 C158 171 157.5 173 160 174.5 C162.5 173 162 171 160 168 Z" fill-opacity=".7"/>
+  </g>
+  <g fill="#f3e7c9">
+    <circle cx="40" cy="60" r="1.3"/><circle cx="160" cy="62" r="1.5"/><circle cx="48" cy="170" r="1.1"/>
+  </g>
+</svg>
