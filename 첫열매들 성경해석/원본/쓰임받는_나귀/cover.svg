@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 포도나무에 매인 나귀 새끼 — 길에 깐 겉옷과 나뭇가지, 멀리 예루살렘 언덕 -->
+  <g fill="none" stroke="#c9973b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <!-- 먼 언덕(예루살렘) -->
+    <path d="M118 92 C130 80 142 78 152 84 C160 78 170 80 178 90" stroke-opacity=".55"/>
+    <path d="M136 82 V74 H146 V82 M150 84 V77 H158 V86" stroke-opacity=".55"/>
+    <!-- 포도나무 -->
+    <path d="M44 150 C42 128 48 112 40 96 C34 84 40 70 52 64" stroke="#f3e6c4"/>
+    <path d="M44 112 C54 106 62 104 70 108 M42 92 C32 88 26 80 28 70" stroke="#f3e6c4" stroke-opacity=".85"/>
+    <path d="M52 64 C58 58 66 58 70 64 C64 66 58 68 52 64 Z M28 70 C24 64 26 58 32 56 C34 62 32 66 28 70 Z M70 108 C76 104 82 106 84 112 C78 114 74 112 70 108 Z"/>
+    <g stroke-width="1.6">
+      <circle cx="60" cy="72" r="3"/><circle cx="66" cy="72" r="3"/><circle cx="63" cy="77" r="3"/><circle cx="57" cy="77" r="3"/><circle cx="60" cy="82" r="3"/>
+    </g>
+    <!-- 매어 둔 줄 -->
+    <path d="M45 124 C62 132 76 128 90 118" stroke="#f3e6c4" stroke-dasharray="3 3"/>
+    <!-- 나귀 새끼 -->
+    <path d="M100 116 C110 110 132 110 146 116 C152 120 152 130 146 134 C132 138 112 138 102 134 C96 130 96 120 100 116 Z" stroke="#f3e6c4"/>
+    <path d="M100 118 C96 110 92 102 90 96 C88 92 84 92 82 96 L84 104 C86 110 90 116 94 120" stroke="#f3e6c4"/>
+    <path d="M90 96 L86 82 M90 96 L94 83" stroke="#f3e6c4"/>
+    <path d="M106 134 V152 M116 136 V152 M136 136 V152 M144 133 V152" stroke="#f3e6c4"/>
+    <path d="M150 120 C156 124 158 130 156 138" stroke="#f3e6c4" stroke-opacity=".8"/>
+    <!-- 등에 편 겉옷 -->
+    <path d="M114 112 C120 120 130 122 138 112" />
+    <!-- 길과 깐 겉옷·나뭇가지 -->
+    <path d="M24 156 H176" stroke-opacity=".8"/>
+    <path d="M60 162 L84 158 L90 164 L64 168 Z" stroke-opacity=".8"/>
+    <path d="M100 166 C120 160 140 160 158 164" stroke-opacity=".8"/>
+    <path d="M110 164 l-4 -5 M120 162 l-4 -5 M130 161 l-4 -5 M140 161 l-4 -5 M150 162 l-4 -5 M110 164 l3 5 M120 162 l3 5 M130 161 l3 5 M140 161 l3 5 M150 162 l3 5" stroke-width="1.4" stroke-opacity=".8"/>
+  </g>
+  <g fill="#f3e6c4">
+    <circle cx="86" cy="100" r="1.2"/>
+    <circle cx="150" cy="40" r="1.4"/><circle cx="162" cy="54" r="1.1"/><circle cx="40" cy="44" r="1.2"/>
+  </g>
+</svg>
