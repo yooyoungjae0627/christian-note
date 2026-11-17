@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 감옥에서 온 편지: 창살 창 아래 펼쳐진 편지, 편지에서 돋아나는 한 알의 밀(요한복음 12:24) — 담장 안에서 시작된 생명 -->
+  <g fill="none" stroke="#e8c870" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <rect x="70" y="30" width="60" height="38" rx="3" stroke="#f4ecd8" stroke-opacity=".75"/>
+    <path d="M82 30 V68 M94 30 V68 M106 30 V68 M118 30 V68" stroke="#f4ecd8" stroke-opacity=".55"/>
+    <path d="M44 96 L100 126 L156 96" stroke-opacity=".9"/>
+    <rect x="44" y="96" width="112" height="64" rx="4"/>
+    <path d="M44 160 L88 128 M156 160 L112 128" stroke-opacity=".6"/>
+    <path d="M60 86 H140 V112" stroke="#f4ecd8" stroke-opacity=".8"/>
+    <path d="M60 86 V104" stroke="#f4ecd8" stroke-opacity=".8"/>
+    <path d="M70 94 H128 M70 100 H118" stroke="#f4ecd8" stroke-opacity=".5"/>
+    <path d="M100 126 C100 112 100 98 100 80" stroke="#9fd77a"/>
+    <path d="M100 96 C93 92 90 85 92 79 C98 81 100 88 100 96 Z" stroke="#9fd77a"/>
+    <path d="M100 90 C107 86 110 79 108 73 C102 75 100 82 100 90 Z" stroke="#9fd77a"/>
+    <ellipse cx="100" cy="132" rx="4" ry="6.5" stroke="#e8c870"/>
+    <path d="M100 126 V138" stroke="#e8c870" stroke-opacity=".6"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="40" cy="60" r="1.4"/><circle cx="160" cy="58" r="1.6"/><circle cx="150" cy="40" r="1.1"/>
+  </g>
+</svg>
