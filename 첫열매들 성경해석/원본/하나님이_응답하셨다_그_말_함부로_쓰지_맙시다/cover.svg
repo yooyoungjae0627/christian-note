@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 모든 죄를 깊은 바다에 던지셨나이다(미가 7:19) — 할머님과 함께 읽은 말씀. 물결 아래로 가라앉아 보이지 않게 되는 죄의 돌 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke="#c9973b" stroke-width="2" stroke-opacity=".5"/>
+    <!-- 바다 수면 -->
+    <path d="M24 74 C36 66 48 66 60 74 C72 82 84 82 96 74 C108 66 120 66 132 74 C144 82 156 82 168 74 C172 71 176 70 178 70" stroke="#f3e6c4" stroke-width="2.6"/>
+    <path d="M28 88 C40 81 52 81 64 88 C76 95 88 95 100 88 C112 81 124 81 136 88 C148 95 160 95 172 88" stroke="#c9973b" stroke-width="1.8" stroke-opacity=".8"/>
+    <!-- 깊은 물결 -->
+    <path d="M30 116 C46 110 60 120 76 114" stroke="#f3e6c4" stroke-width="1.4" stroke-opacity=".45"/>
+    <path d="M126 122 C142 116 156 126 170 120" stroke="#f3e6c4" stroke-width="1.4" stroke-opacity=".45"/>
+    <path d="M40 146 C56 140 70 150 84 144" stroke="#c9973b" stroke-width="1.4" stroke-opacity=".45"/>
+    <path d="M118 152 C132 146 146 156 160 150" stroke="#c9973b" stroke-width="1.4" stroke-opacity=".45"/>
+    <!-- 가라앉는 돌(죄) -->
+    <path d="M90 150 C86 140 92 130 102 130 C112 130 118 138 115 148 C112 158 96 160 90 150 Z" stroke="#c9973b" stroke-width="2.4"/>
+    <!-- 가라앉은 자취 -->
+    <path d="M102 92 L102 122" stroke="#c9973b" stroke-width="1.4" stroke-opacity=".6" stroke-dasharray="3 5"/>
+    <path d="M96 166 L102 174 L108 166" stroke="#c9973b" stroke-width="1.6" stroke-opacity=".7"/>
+    <!-- 거품 -->
+    <circle cx="94" cy="118" r="2.6" stroke="#f3e6c4" stroke-width="1.4"/>
+    <circle cx="110" cy="108" r="2" stroke="#f3e6c4" stroke-width="1.3"/>
+    <circle cx="98" cy="100" r="1.6" stroke="#f3e6c4" stroke-width="1.2"/>
+  </g>
+  <g fill="#f3e6c4" fill-opacity=".8">
+    <circle cx="60" cy="42" r="1.4"/><circle cx="142" cy="40" r="1.6"/><circle cx="100" cy="30" r="1.8"/><circle cx="122" cy="52" r="1.1"/><circle cx="78" cy="54" r="1.2"/>
+  </g>
+</svg>
