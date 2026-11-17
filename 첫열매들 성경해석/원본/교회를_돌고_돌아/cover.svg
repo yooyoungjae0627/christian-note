@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 교회를 돌고 돌아: 두 제단 사이를 왔다 갔다 하는 발걸음(두 의견 사이의 방황), 한쪽 제단의 짐승 살덩어리에 불이 붙음(엘리야, 성령이 임하는 증거) -->
+  <g fill="none" stroke="#e8c870" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <!-- 왼쪽 제단: 불이 붙지 않음 -->
+    <path d="M30 150 H74 M34 150 V134 H70 V150 M34 142 H70 M46 134 V150 M58 142 V150" stroke="#f4ecd8" stroke-opacity=".6"/>
+    <path d="M40 134 C44 128 60 128 64 134" stroke="#d58cff" stroke-opacity=".7"/>
+    <!-- 오른쪽 제단: 불이 붙음 -->
+    <path d="M126 150 H170 M130 150 V134 H166 V150 M130 142 H166 M142 134 V150 M154 142 V150" stroke="#f4ecd8" stroke-opacity=".9"/>
+    <path d="M136 134 C140 128 156 128 160 134" stroke="#d58cff"/>
+    <path d="M148 128 C138 116 146 104 142 92 C152 98 154 88 152 78 C164 92 166 108 158 120 C156 114 154 112 150 110 C152 118 152 124 148 128 Z" stroke="#ffb35a"/>
+    <path d="M150 124 C146 118 150 112 148 106 C154 110 156 116 150 124 Z" stroke="#f2e94e"/>
+    <!-- 위에서 내려오는 불 -->
+    <path d="M150 44 V62 M144 52 L150 62 L156 52" stroke="#f2e94e" stroke-opacity=".8"/>
+    <!-- 두 제단 사이를 왔다 갔다 하는 발걸음 -->
+    <path d="M58 118 C78 92 106 92 126 112 M126 104 C104 80 78 82 60 106" stroke="#f4ecd8" stroke-dasharray="3 6" stroke-opacity=".75"/>
+    <path d="M120 108 L127 113 L125 104" stroke="#f4ecd8" stroke-opacity=".75"/>
+    <path d="M66 103 L59 107 L61 98" stroke="#f4ecd8" stroke-opacity=".75"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="48" cy="58" r="1.4"/><circle cx="70" cy="44" r="1.2"/><circle cx="100" cy="36" r="1.6"/><circle cx="170" cy="70" r="1.2"/>
+  </g>
+</svg>
