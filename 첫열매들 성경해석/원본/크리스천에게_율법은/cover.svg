@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 바다(세상) 위 물결 -->
+  <g fill="none" stroke="#c9973b" stroke-width="2" stroke-linecap="round" opacity="0.75">
+    <path d="M18 172 q12 -8 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0"/>
+    <path d="M30 184 q12 -7 24 0 t24 0 t24 0 t24 0 t24 0 t24 0"/>
+  </g>
+  <!-- 끊어진 쇠사슬(율법) — 왼쪽 -->
+  <g fill="none" stroke="#c9973b" stroke-width="4" stroke-linejoin="round">
+    <rect x="14" y="58" width="30" height="16" rx="8" transform="rotate(-18 29 66)"/>
+    <rect x="36" y="66" width="30" height="16" rx="8" transform="rotate(-18 51 74)"/>
+    <path d="M60 84 q8 -4 12 2" stroke-linecap="round"/>
+  </g>
+  <!-- 끊어진 쇠사슬 — 오른쪽 -->
+  <g fill="none" stroke="#c9973b" stroke-width="4" stroke-linejoin="round">
+    <rect x="156" y="58" width="30" height="16" rx="8" transform="rotate(18 171 66)"/>
+    <rect x="134" y="66" width="30" height="16" rx="8" transform="rotate(18 149 74)"/>
+    <path d="M140 84 q-8 -4 -12 2" stroke-linecap="round"/>
+  </g>
+  <!-- 끊어진 자리의 작은 조각들 -->
+  <g stroke="#f3e6c8" stroke-width="2.5" stroke-linecap="round">
+    <line x1="80" y1="80" x2="86" y2="74"/>
+    <line x1="120" y1="80" x2="114" y2="74"/>
+    <line x1="100" y1="66" x2="100" y2="58"/>
+  </g>
+  <!-- 입혀 주신 옷(그리스도로 옷 입음) -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <path d="M100 88 l-22 10 l-20 18 l12 12 l12 -10 l0 46 l36 0 l0 -46 l12 10 l12 -12 l-20 -18 l-22 -10 q0 10 0 10 q0 -10 0 -10 z"
+          fill="#1f2d5c" stroke="#c9973b" stroke-width="3"/>
+    <path d="M90 92 q10 12 20 0" fill="none" stroke="#f3e6c8" stroke-width="2.5"/>
+    <line x1="100" y1="104" x2="100" y2="160" stroke="#f3e6c8" stroke-width="1.6" opacity="0.7"/>
+    <path d="M84 150 h32" stroke="#c9973b" stroke-width="2"/>
+  </g>
+  <!-- 위에서 비추는 빛 -->
+  <g stroke="#f3e6c8" stroke-width="1.8" stroke-linecap="round" opacity="0.85">
+    <line x1="100" y1="22" x2="100" y2="40"/>
+    <line x1="78" y1="28" x2="86" y2="42"/>
+    <line x1="122" y1="28" x2="114" y2="42"/>
+    <line x1="62" y1="40" x2="74" y2="50"/>
+    <line x1="138" y1="40" x2="126" y2="50"/>
+  </g>
+</svg>
