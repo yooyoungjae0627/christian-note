@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 조금씩 성장하고 있으면 된 겁니다: 벽의 키 재는 눈금자와 조금씩 높아지는 키 표시, 그 옆에서 자라는 새싹 — 변신이 아니라 성장 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke="#e8c870" stroke-width="2" stroke-opacity=".5"/>
+    <path d="M70 42 V160" stroke="#f4ecd8" stroke-width="2" stroke-opacity=".85"/>
+    <path d="M70 150 H78 M70 140 H76 M70 130 H78 M70 120 H76 M70 110 H78 M70 100 H76 M70 90 H78 M70 80 H76 M70 70 H78 M70 60 H76 M70 50 H78" stroke="#f4ecd8" stroke-width="1.4" stroke-opacity=".7"/>
+    <path d="M84 132 H100 M84 121 H104 M84 109 H108" stroke="#e8c870" stroke-width="2.2"/>
+    <path d="M84 96 H114" stroke="#e8c870" stroke-width="2.6"/>
+    <path d="M118 96 l6 -4 M118 96 l6 4" stroke="#e8c870" stroke-width="1.6" stroke-opacity=".7"/>
+    <path d="M140 160 V104" stroke="#9fd77a" stroke-width="2"/>
+    <path d="M140 140 C130 137 125 129 126 121 C135 122 140 130 140 140 Z" stroke="#9fd77a" stroke-width="2"/>
+    <path d="M140 128 C150 125 155 117 154 109 C145 110 140 118 140 128 Z" stroke="#9fd77a" stroke-width="2"/>
+    <path d="M140 112 C136 106 136 98 140 92 C144 98 144 106 140 112 Z" stroke="#9fd77a" stroke-width="2"/>
+    <path d="M118 160 H164" stroke="#f4ecd8" stroke-width="2" stroke-opacity=".6"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="48" cy="62" r="1.4"/><circle cx="156" cy="56" r="1.6"/><circle cx="166" cy="78" r="1.1"/>
+  </g>
+</svg>
