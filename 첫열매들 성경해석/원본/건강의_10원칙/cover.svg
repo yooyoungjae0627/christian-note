@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 피를 중심으로 보는 몸: 가운데 핏방울에서 온몸으로 뻗는 혈관(순환), 위의 햇살(배출을 돕는 빛), 아래 씨앗과 물(섭취) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <circle cx="100" cy="100" r="86" stroke="#e8c46a" stroke-opacity=".5"/>
+    <path d="M100 70 C88 88 82 98 82 108 A18 18 0 0 0 118 108 C118 98 112 88 100 70 Z" stroke="#e8c46a"/>
+    <path d="M92 110 A8 8 0 0 0 100 118" stroke="#e8c46a" stroke-opacity=".6"/>
+    <g stroke="#f4ecd8" stroke-opacity=".85">
+      <path d="M82 112 C66 116 56 112 44 102 M60 112 C54 120 50 128 42 132 M52 106 C46 100 40 98 34 100"/>
+      <path d="M118 112 C134 116 144 112 156 102 M140 112 C146 120 150 128 158 132 M148 106 C154 100 160 98 166 100"/>
+      <path d="M100 126 C100 140 96 150 90 160 M100 140 C106 148 112 154 118 158"/>
+    </g>
+    <g stroke="#9fc3ff" stroke-opacity=".8">
+      <path d="M62 150 C70 146 78 154 86 150"/>
+      <path d="M114 150 C122 146 130 154 138 150"/>
+    </g>
+    <circle cx="100" cy="38" r="10" stroke="#e8c46a"/>
+    <path d="M100 22 V18 M100 54 V58 M84 38 H80 M116 38 H120 M89 27 L86 24 M111 27 L114 24 M89 49 L86 52 M111 49 L114 52" stroke="#e8c46a" stroke-opacity=".7"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="44" cy="102" r="2"/><circle cx="156" cy="102" r="2"/><circle cx="42" cy="132" r="1.6"/><circle cx="158" cy="132" r="1.6"/><circle cx="90" cy="160" r="1.6"/><circle cx="118" cy="158" r="1.6"/>
+  </g>
+</svg>
