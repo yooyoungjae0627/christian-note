@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- "다시 설명드릴게요" — 펼친 성경 위 한 줄을 지우고 고쳐 쓰는 펜. 설교자도 틀릴 수 있어 수정해서 다시 강의하는 특강 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke="#c9973b" stroke-width="2" stroke-opacity=".5"/>
+    <!-- 펼친 책 -->
+    <path d="M100 66 C84 58 62 56 40 60 L40 138 C62 134 84 136 100 144 Z" stroke="#f3e6c4" stroke-width="2.4"/>
+    <path d="M100 66 C116 58 138 56 160 60 L160 138 C138 134 116 136 100 144 Z" stroke="#f3e6c4" stroke-width="2.4"/>
+    <path d="M100 66 L100 144" stroke="#c9973b" stroke-width="1.6"/>
+    <!-- 왼쪽 쪽 글줄 -->
+    <path d="M50 76 L90 78" stroke="#f3e6c4" stroke-width="1.3" stroke-opacity=".55"/>
+    <path d="M50 88 L90 90" stroke="#f3e6c4" stroke-width="1.3" stroke-opacity=".55"/>
+    <path d="M50 100 L90 102" stroke="#f3e6c4" stroke-width="1.3" stroke-opacity=".55"/>
+    <path d="M50 112 L90 114" stroke="#f3e6c4" stroke-width="1.3" stroke-opacity=".55"/>
+    <path d="M50 124 L80 125" stroke="#f3e6c4" stroke-width="1.3" stroke-opacity=".55"/>
+    <!-- 오른쪽 쪽 글줄: 한 줄은 지우고 그 위에 고쳐 씀 -->
+    <path d="M110 78 L150 76" stroke="#f3e6c4" stroke-width="1.3" stroke-opacity=".55"/>
+    <path d="M110 92 L146 90" stroke="#f3e6c4" stroke-width="1.3" stroke-opacity=".45"/>
+    <path d="M108 91 L148 91" stroke="#c9973b" stroke-width="2"/>
+    <path d="M112 84 C118 80 122 86 128 82 C134 78 138 84 144 81" stroke="#c9973b" stroke-width="1.6"/>
+    <path d="M110 104 L150 102" stroke="#f3e6c4" stroke-width="1.3" stroke-opacity=".55"/>
+    <path d="M110 116 L150 114" stroke="#f3e6c4" stroke-width="1.3" stroke-opacity=".55"/>
+    <path d="M110 128 L140 127" stroke="#f3e6c4" stroke-width="1.3" stroke-opacity=".55"/>
+    <!-- 펜 -->
+    <path d="M150 84 L172 50 L178 54 L156 88 Z" stroke="#c9973b" stroke-width="2"/>
+    <path d="M150 84 L148 92 L156 88" stroke="#c9973b" stroke-width="1.8"/>
+    <path d="M168 56 L174 60" stroke="#c9973b" stroke-width="1.4"/>
+  </g>
+  <g fill="#f3e6c4" fill-opacity=".8">
+    <circle cx="62" cy="40" r="1.4"/><circle cx="100" cy="30" r="1.8"/><circle cx="136" cy="38" r="1.2"/><circle cx="78" cy="164" r="1.2"/><circle cx="124" cy="166" r="1.5"/>
+  </g>
+</svg>
