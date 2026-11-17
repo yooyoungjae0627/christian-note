@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 판서 「전부 VS. 일부」: 온전히 채운 원(전부, 밑줄 물결)과 한 조각만 남은 원(일부), 그 아래 저마다 채울 괄호와 꺼지지 않는 내비게이션 길 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke="#c9973b" stroke-width="2" stroke-opacity=".5"/>
+    <!-- 전부: 꽉 찬 원 -->
+    <circle cx="64" cy="76" r="24" stroke="#c9973b" stroke-width="2.6"/>
+    <circle cx="64" cy="76" r="16" stroke="#c9973b" stroke-width="1.4" stroke-opacity=".7"/>
+    <circle cx="64" cy="76" r="8" stroke="#f3e6c4" stroke-width="1.6"/>
+    <!-- 전부 밑 물결선 -->
+    <path d="M40 110 C46 105 52 115 58 110 C64 105 70 115 76 110 C82 105 86 113 90 110" stroke="#f3e6c4" stroke-width="2"/>
+    <!-- VS. -->
+    <path d="M94 70 L99 82 L104 70" stroke="#f3e6c4" stroke-width="1.6" stroke-opacity=".8"/>
+    <circle cx="107" cy="82" r="1" stroke="#f3e6c4" stroke-width="1.4" stroke-opacity=".8"/>
+    <!-- 일부: 점선 원과 작은 조각 -->
+    <circle cx="140" cy="76" r="24" stroke="#f3e6c4" stroke-width="1.4" stroke-dasharray="4 5" stroke-opacity=".6"/>
+    <path d="M140 76 L140 52 A24 24 0 0 1 157 59 Z" stroke="#c9973b" stroke-width="2"/>
+    <!-- 괄호를 채우는 인생 -->
+    <path d="M70 128 C62 136 62 150 70 158" stroke="#c9973b" stroke-width="2.4"/>
+    <path d="M130 128 C138 136 138 150 130 158" stroke="#c9973b" stroke-width="2.4"/>
+    <circle cx="100" cy="143" r="9" stroke="#f3e6c4" stroke-width="2"/>
+    <path d="M95 143 L99 147 L106 139" stroke="#c9973b" stroke-width="2"/>
+    <!-- 내비게이션 길: 잘못 들어도 다시 이어지는 길 -->
+    <path d="M30 170 C48 160 60 178 78 168" stroke="#f3e6c4" stroke-width="1.6" stroke-dasharray="3 4" stroke-opacity=".7"/>
+    <path d="M122 168 C140 158 152 176 170 166" stroke="#c9973b" stroke-width="1.8"/>
+    <path d="M170 166 L162 165 M170 166 L166 159" stroke="#c9973b" stroke-width="1.8"/>
+  </g>
+  <g fill="#f3e6c4" fill-opacity=".8">
+    <circle cx="100" cy="40" r="1.4"/><circle cx="172" cy="112" r="1.5"/><circle cx="30" cy="128" r="1.3"/>
+  </g>
+</svg>
