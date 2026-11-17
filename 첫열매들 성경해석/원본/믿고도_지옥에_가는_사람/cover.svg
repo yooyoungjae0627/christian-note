@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 어느 날 선물로 배달되는 믿음 — 리본 묶은 선물 상자, 위에는 흐릿한 눈(점선)이 또렷한 눈(실선)으로 -->
+  <g fill="none" stroke="#e8c46a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M58 112 H142 V164 H58 Z"/>
+    <path d="M52 98 H148 V112 H52 Z"/>
+    <path d="M100 98 V164"/>
+    <path d="M100 98 C88 84 70 86 76 96 C80 102 92 100 100 98 C108 100 120 102 124 96 C130 86 112 84 100 98"/>
+  </g>
+  <g fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M44 56 C56 42 76 42 88 56 C76 70 56 70 44 56 Z" stroke="#f4ecd8" stroke-opacity=".55" stroke-dasharray="3 4"/>
+    <circle cx="66" cy="56" r="5" stroke="#f4ecd8" stroke-opacity=".55" stroke-dasharray="2 3"/>
+    <path d="M94 56 H106" stroke="#9fc3ff" stroke-opacity=".7"/>
+    <path d="M102 52 L106 56 L102 60" stroke="#9fc3ff" stroke-opacity=".7"/>
+    <path d="M112 56 C124 42 144 42 156 56 C144 70 124 70 112 56 Z" stroke="#f4ecd8"/>
+    <circle cx="134" cy="56" r="6" stroke="#e8c46a"/>
+    <path d="M100 30 V22 M86 34 L81 28 M114 34 L119 28" stroke="#e8c46a" stroke-opacity=".6"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="40" cy="132" r="1.4"/><circle cx="162" cy="128" r="1.6"/><circle cx="154" cy="150" r="1.2"/>
+  </g>
+</svg>
