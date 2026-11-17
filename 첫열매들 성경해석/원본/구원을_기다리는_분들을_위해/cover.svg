@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 흐릿하게 보이는 아버지 집을 향해 함께 걸어가는 길 — 발자국, 흐린 시야(점선 빛), 약속의 반지, 접붙인 가지 -->
+  <g fill="none" stroke="#c9973b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M22 112 H178" stroke-opacity=".7"/>
+    <path d="M86 112 L74 176 M114 112 L126 176" stroke="#f3e7c9" stroke-opacity=".8"/>
+    <path d="M86 92 L100 80 L114 92 V112 H86 Z" stroke="#f3e7c9" stroke-dasharray="3 3"/>
+    <path d="M96 112 V102 H104 V112" stroke="#f3e7c9" stroke-dasharray="2 2" stroke-opacity=".8"/>
+    <path d="M100 66 V58 M84 72 L78 66 M116 72 L122 66 M72 86 H64 M128 86 H136" stroke="#f3e7c9" stroke-opacity=".45" stroke-dasharray="2 3"/>
+    <circle cx="100" cy="88" r="30" stroke="#f3e7c9" stroke-opacity=".25" stroke-dasharray="4 5"/>
+    <path d="M94 168 l-3 -5 M106 168 l3 -5 M96 152 l-2 -4 M104 152 l2 -4 M98 138 l-1.5 -3 M102 138 l1.5 -3" stroke="#f3e7c9" stroke-width="2.4"/>
+    <circle cx="150" cy="146" r="9"/>
+    <circle cx="150" cy="135" r="3" stroke="#f3e7c9"/>
+    <path d="M36 140 C46 136 54 136 62 130" />
+    <path d="M62 130 L70 124" stroke="#f3e7c9"/>
+    <path d="M58 126 L66 134" stroke-width="2.6" stroke-opacity=".8"/>
+    <path d="M44 138 C46 132 50 130 54 130 M70 124 C74 122 76 118 76 114" stroke-opacity=".7"/>
+  </g>
+  <g fill="#f3e7c9">
+    <circle cx="48" cy="54" r="1.4"/><circle cx="156" cy="58" r="1.6"/><circle cx="142" cy="40" r="1.2"/>
+  </g>
+</svg>
