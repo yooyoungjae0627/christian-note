@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 하늘 예루살렘(살렘)의 성문 위 왕관, 그 아래 빵 한 덩이와 포도주 잔(멜키세덱의 빵과 포도주), 위에서 내려오는 일곱 불꽃(일곱 영, 다시 오는 오순절) -->
+  <g fill="none" stroke="#e8c46a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M56 98 V70 H72 V62 H86 V70 H114 V62 H128 V70 H144 V98" stroke-opacity=".75"/>
+    <path d="M88 98 V84 C88 76 112 76 112 84 V98" stroke-opacity=".75"/>
+    <path d="M84 56 L84 44 L92 50 L100 40 L108 50 L116 44 L116 56 Z" stroke="#f4ecd8"/>
+    <path d="M50 100 H150" stroke-opacity=".6"/>
+    <path d="M112 112 H140 C140 128 132 136 126 136 C120 136 112 128 112 112 Z"/>
+    <path d="M126 136 V152 M116 154 H136"/>
+    <path d="M114 118 H138" stroke="#c86b8a" stroke-opacity=".9"/>
+    <path d="M58 150 C56 132 70 124 82 124 C94 124 104 132 102 150 Z" stroke="#f4ecd8"/>
+    <path d="M68 132 L74 140 M80 128 L86 138 M92 132 L96 140" stroke="#f4ecd8" stroke-opacity=".6"/>
+    <path d="M48 160 H152" stroke-opacity=".5"/>
+  </g>
+  <g fill="#e8c46a" fill-opacity=".85">
+    <path d="M40 30 C37 35 37 38 40 40 C43 38 43 35 40 30 Z"/>
+    <path d="M60 22 C57 27 57 30 60 32 C63 30 63 27 60 22 Z"/>
+    <path d="M80 17 C77 22 77 25 80 27 C83 25 83 22 80 17 Z"/>
+    <path d="M100 15 C97 20 97 23 100 25 C103 23 103 20 100 15 Z"/>
+    <path d="M120 17 C117 22 117 25 120 27 C123 25 123 22 120 17 Z"/>
+    <path d="M140 22 C137 27 137 30 140 32 C143 30 143 27 140 22 Z"/>
+    <path d="M160 30 C157 35 157 38 160 40 C163 38 163 35 160 30 Z"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="30" cy="80" r="1.4"/><circle cx="172" cy="76" r="1.6"/><circle cx="166" cy="120" r="1.2"/>
+  </g>
+</svg>
