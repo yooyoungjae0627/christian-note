@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 강의 그림: 예루살렘(높은 산)에서 여리고(낮은 골짜기)로 내려가는 길, 길가에 쓰러진 자리, 기름병과 포도주 가죽부대, 길 끝의 주막(교회) -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke="#c9973b" stroke-width="2" stroke-opacity=".5"/>
+    <!-- 산등성이: 예루살렘 봉우리에서 여리고 골짜기로 -->
+    <path d="M24 112 C34 104 44 86 56 62 C62 52 66 50 70 56 C80 74 92 100 108 118 C114 124 120 126 126 124 C134 120 142 104 152 92 C158 86 164 90 172 104" stroke="#c9973b" stroke-width="2.6"/>
+    <!-- 내려가는 길(점선) -->
+    <path d="M60 64 C70 80 82 98 96 110 C104 117 110 121 118 122" stroke="#f3e6c4" stroke-width="1.6" stroke-dasharray="3 4" stroke-opacity=".85"/>
+    <!-- 길가에 쓰러진 자리: 작은 상처 표시 -->
+    <path d="M100 113 L104 109 M104 113 L100 109" stroke="#f3e6c4" stroke-width="1.6" stroke-opacity=".8"/>
+    <!-- 기름병 -->
+    <path d="M58 140 L58 134 L64 134 L64 140 C70 142 72 148 72 154 C72 162 66 166 61 166 C56 166 50 162 50 154 C50 148 52 142 58 140 Z" stroke="#c9973b" stroke-width="2.2"/>
+    <path d="M56 131 L66 131" stroke="#c9973b" stroke-width="2"/>
+    <path d="M55 154 C57 150 59 150 61 152" stroke="#f3e6c4" stroke-width="1.4" stroke-opacity=".8"/>
+    <!-- 포도주 가죽부대 -->
+    <path d="M84 138 C80 136 80 132 84 131 C88 130 90 133 90 136 C98 138 104 146 104 154 C104 162 96 167 88 166 C80 165 76 158 77 151 C78 144 80 140 84 138 Z" stroke="#f3e6c4" stroke-width="2"/>
+    <path d="M86 150 C88 154 92 155 95 153" stroke="#c9973b" stroke-width="1.4"/>
+    <!-- 주막(교회): 길 끝의 집 -->
+    <path d="M122 166 L122 144 L141 128 L160 144 L160 166 Z" stroke="#c9973b" stroke-width="2.4"/>
+    <path d="M134 150 L148 150 L148 162 L134 162 Z M141 150 L141 162 M134 156 L148 156" stroke="#f3e6c4" stroke-width="1.5"/>
+    <!-- 받는 쪽으로 향하는 화살표 -->
+    <path d="M110 176 L146 176" stroke="#f3e6c4" stroke-width="1.6" stroke-opacity=".8"/>
+    <path d="M146 176 L140 172 M146 176 L140 180" stroke="#f3e6c4" stroke-width="1.6" stroke-opacity=".8"/>
+  </g>
+  <g fill="#f3e6c4" fill-opacity=".8">
+    <circle cx="100" cy="36" r="1.4"/><circle cx="160" cy="58" r="1.5"/><circle cx="34" cy="80" r="1.3"/>
+  </g>
+</svg>
