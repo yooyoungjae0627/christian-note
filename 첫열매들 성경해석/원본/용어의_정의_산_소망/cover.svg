@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 판서 〈산 소망〉: 성령의 보증(도장) ⇒ 인생길 위로 멀리 뻗는 긴 시야, 흐릿한 점선의 짧은 시야, 그 끝의 새 하늘과 새 땅 -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke="#c9973b" stroke-width="2" stroke-opacity=".5"/>
+    <!-- 성령의 보증: 도장(인침) -->
+    <circle cx="50" cy="56" r="15" stroke="#c9973b" stroke-width="2.2"/>
+    <circle cx="50" cy="56" r="10" stroke="#c9973b" stroke-width="1.2" stroke-opacity=".7"/>
+    <path d="M45 56 L49 60 L56 51" stroke="#f3e6c4" stroke-width="2"/>
+    <path d="M62 66 L70 74 M70 74 L64 73 M70 74 L69 68" stroke="#c9973b" stroke-width="1.6" stroke-opacity=".8"/>
+    <!-- 긴 시야(산 소망) -->
+    <path d="M40 118 C70 76 130 70 156 100" stroke="#c9973b" stroke-width="2.8"/>
+    <path d="M156 100 L146 98 M156 100 L153 90" stroke="#c9973b" stroke-width="2.6"/>
+    <!-- 흐릿한 소망(점선) -->
+    <path d="M40 122 C72 92 126 90 152 108" stroke="#f3e6c4" stroke-width="1.6" stroke-dasharray="5 5" stroke-opacity=".75"/>
+    <!-- 짧은 시야(점선) -->
+    <path d="M40 126 C56 118 72 120 86 128" stroke="#f3e6c4" stroke-width="1.6" stroke-dasharray="4 4" stroke-opacity=".6"/>
+    <!-- 인생길: 좋을 때와 나쁠 때 -->
+    <path d="M36 146 C50 136 60 156 74 146 C88 136 96 156 110 146" stroke="#f3e6c4" stroke-width="2" stroke-opacity=".85"/>
+    <circle cx="118" cy="146" r="4" stroke="#f3e6c4" stroke-width="1.8" stroke-opacity=".85"/>
+    <!-- 새 하늘과 새 땅: 지평선 위로 떠오르는 빛 -->
+    <path d="M140 122 H182" stroke="#c9973b" stroke-width="2"/>
+    <path d="M150 122 A12 12 0 0 1 174 122" stroke="#f3e6c4" stroke-width="2.2"/>
+    <path d="M162 104 V98 M150 108 L146 103 M174 108 L178 103 M142 116 L136 114 M182 116 L188 114" stroke="#f3e6c4" stroke-width="1.6" stroke-opacity=".85"/>
+  </g>
+  <g fill="#f3e6c4" fill-opacity=".8">
+    <circle cx="120" cy="50" r="1.4"/><circle cx="150" cy="62" r="1.6"/><circle cx="160" cy="150" r="1.2"/><circle cx="88" cy="58" r="1.3"/>
+  </g>
+</svg>
