@@ -113,6 +113,30 @@ for (const S of book.stories) {
   else { backOk++; console.log(`  「목차로 이동」 ${titlePage}쪽 → ${d.page + 1}쪽, 도착 높이 ${d.y.toFixed(1)}pt / 항목 막대 위 ${top}pt`); }
 }
 
+// 「목차로 이동」 단추는 어떤 글자·그림과도 겹치면 안 된다(사용자 지시 2026-11-21 「버튼과 절대로 겹치면 안된다 정책으로 삼아」).
+// 단추 링크 영역(+0.5pt)과 그 쪽의 다른 글줄·그림 상자가 조금이라도 겹치면 실패. 단추 자신의 글자(◀ 목차로 이동)는 뺀다.
+let btnChecked = 0;
+for (const l of internal.filter((x) => /^#nameddest=toc-/.test(x.uri))) {
+  const [bx0, by0, bx1, by1] = l.b, m = 0.5;
+  const hit = (b) => b[0] < bx1 + m && b[2] > bx0 - m && b[1] < by1 + m && b[3] > by0 - m;
+  const pg = doc.loadPage(l.page - 1), st = pg.toStructuredText("preserve-images");
+  const j = JSON.parse(st.asJSON(1));
+  const boxes = [];
+  for (const blk of j.blocks) {
+    if (blk.type === "image") boxes.push(["그림", [blk.bbox.x, blk.bbox.y, blk.bbox.x + blk.bbox.w, blk.bbox.y + blk.bbox.h]]);
+    for (const ln of blk.lines || []) {
+      const t = ln.text.trim();
+      if (!t || /^◀?\s*목차로 이동$|^◀$/.test(t)) continue;
+      boxes.push([t.slice(0, 20), [ln.bbox.x, ln.bbox.y, ln.bbox.x + ln.bbox.w, ln.bbox.y + ln.bbox.h]]);
+    }
+  }
+  st.destroy(); pg.destroy();
+  const over = boxes.filter(([, b]) => hit(b));
+  if (over.length) problems.push(`${l.page}쪽 「목차로 이동」 단추가 다른 내용과 겹침: ${over.map(([t]) => `「${t}」`).join(", ")}`);
+  btnChecked++;
+}
+console.log(`  「목차로 이동」 단추 겹침 검사 ${btnChecked}개`);
+
 // 각 장·뒷부분 제목 아래 「목차로 이동」: 그 제목이 있는 쪽에 있고, 누르면 차례의 그 장 항목 줄 바로 위(0~8pt)에 도착
 let chBackOk = 0, chBackWant = 0;
 for (const S of book.stories) for (const [t, id, d] of tocItems(S)) {

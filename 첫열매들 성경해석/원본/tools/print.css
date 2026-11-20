@@ -75,6 +75,12 @@ table.legend td:first-child { width: 40%; }
 
 /* 이야기 표제 쪽(한 쪽 꽉): 왼쪽 아래 「목차로 이동」 */
 .story { break-before: page; break-after: page; height: 174mm; position: relative; text-align: center; padding-top: 14mm; font-family: "Noto Sans KR", sans-serif; }
+/* 「목차로 이동」 단추는 어떤 내용과도 겹치지 않는다(사용자 지시 2026-11-21): 표제 쪽을 세로 흐름으로 두고 단추를 내용 맨 아래(왼쪽)에 놓는다.
+   내용이 짧으면 쪽 바닥에, 길면 내용 바로 아래 4mm 띄워. 겹침은 verify_pdf가 검사한다. */
+.story { display: flex; flex-direction: column; align-items: center; }
+.story > * { flex-shrink: 0; }
+.story > a.totoc { position: static; align-self: flex-start; margin-top: auto; }
+.story > .lgd { margin-bottom: 4mm; }
 .story .sn { display: inline-block; font-size: 10pt; letter-spacing: .3em; color: #c9973b; font-weight: 700; }
 .story h1 { font-size: 21pt; line-height: 1.35; color: #18233f; margin: 4mm 4mm 2.5mm; }
 .story .ss { color: #555; font-size: 9.6pt; line-height: 1.6; }
