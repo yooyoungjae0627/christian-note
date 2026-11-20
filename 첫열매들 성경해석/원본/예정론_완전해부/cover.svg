@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 출생에서 새 하늘 새 땅까지 오르는 계단(예정된 단계), 중간에 갈라지는 두 갈래 길(인간의 선택), 위에서 앞을 미리 비추는 펼친 책(주의 책·선견) -->
+  <g fill="none" stroke="#e8c46a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="86" stroke-opacity=".5"/>
+    <path d="M34 160 H62 V140 H90 V120 H118 V100 H146 V80 H168"/>
+    <path d="M34 166 H168" stroke-opacity=".35"/>
+    <path d="M76 140 C80 128 70 122 60 116 M76 140 C74 128 82 120 92 112" stroke="#f4ecd8" stroke-opacity=".8" stroke-dasharray="3 4"/>
+    <path d="M132 100 C136 88 126 82 116 76 M132 100 C130 88 138 80 148 72" stroke="#f4ecd8" stroke-opacity=".8" stroke-dasharray="3 4"/>
+    <path d="M70 48 C82 42 94 42 100 48 C106 42 118 42 130 48 V72 C118 66 106 66 100 72 C94 66 82 66 70 72 Z" stroke="#f4ecd8"/>
+    <path d="M100 48 V72" stroke="#f4ecd8" stroke-opacity=".8"/>
+    <path d="M78 54 H94 M78 60 H94 M106 54 H122 M106 60 H122" stroke="#f4ecd8" stroke-opacity=".5"/>
+    <path d="M100 76 L60 112 M100 76 L100 96 M100 76 L140 108" stroke="#9fc3ff" stroke-opacity=".55" stroke-dasharray="2 5"/>
+  </g>
+  <g fill="#e8c46a">
+    <circle cx="168" cy="80" r="3"/>
+    <circle cx="34" cy="160" r="2.4" fill-opacity=".8"/>
+  </g>
+  <g fill="#f4ecd8">
+    <circle cx="40" cy="70" r="1.4"/><circle cx="160" cy="46" r="1.6"/><circle cx="150" cy="34" r="1.2"/>
+  </g>
+</svg>
