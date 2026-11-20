@@ -81,6 +81,11 @@ table.legend td:first-child { width: 40%; }
 .story > * { flex-shrink: 0; }
 .story > a.totoc { position: static; align-self: flex-start; margin-top: auto; }
 .story > .lgd { margin-bottom: 4mm; }
+/* 한 쪽에 넘치면 build_pdf가 fit1→fit2→fit3으로 촘촘하게 다시 찍는다(단추가 표제 쪽 안 내용 아래에 들어올 때까지) */
+.story.fit1 { padding-top: 8mm; } .story.fit1 .gold { margin: 3mm auto; } .story.fit1 table.meta { margin-bottom: 3mm; }
+.story.fit1 .snote { font-size: 7.4pt; line-height: 1.5; width: 112mm; } .story.fit1 .lgd { width: 112mm; columns: 2; column-gap: 4mm; margin-top: 3mm; } .story.fit1 .lgh { column-span: all; }
+.story.fit2 { padding-top: 3mm; } .story.fit2 h1 { margin: 2mm 4mm 1.5mm; } .story.fit2 .snote { font-size: 6.9pt; line-height: 1.42; padding: 1.5mm 2.5mm; } .story.fit2 .lgd { font-size: 7.2pt; line-height: 1.45; }
+.story.fit3 table.meta { font-size: 7.4pt; } .story.fit3 table.meta td { padding: .5mm 2mm; } .story.fit3 .snote { font-size: 6.4pt; line-height: 1.35; } .story.fit3 .lgd { font-size: 6.8pt; line-height: 1.35; columns: 3; width: 120mm; }
 .story .sn { display: inline-block; font-size: 10pt; letter-spacing: .3em; color: #c9973b; font-weight: 700; }
 .story h1 { font-size: 21pt; line-height: 1.35; color: #18233f; margin: 4mm 4mm 2.5mm; }
 .story .ss { color: #555; font-size: 9.6pt; line-height: 1.6; }

@@ -89,13 +89,22 @@ if (process.env.FAST) {
   fs.writeFileSync(path.join(outDir, "toc_pages_fast.json"), JSON.stringify(findMarkers(tmp).pages));
   process.exit(0);
 }
-for (let pass = 1; pass <= 5; pass++) {
-  render(await fullHtml(pages, true), tmp);
-  const r = findMarkers(tmp);
-  const same = JSON.stringify(r.pages) === JSON.stringify(pages);
-  console.log(`pass ${pass}: ${r.count}쪽, 이동점 ${Object.keys(r.pages).length}개${same ? " (변화 없음)" : ""}`);
-  pages = r.pages;
-  if (same) break;
+// 「목차로 이동」 단추는 어떤 내용과도 겹치면 안 된다(사용자 지시 2026-11-21). 표제 쪽 내용이 한 쪽을 넘어 단추(끝 표식 @@S…end@@)가
+// 다음 쪽으로 밀리면 그 이야기 표제 쪽을 fit1→fit2→fit3(print.css)으로 촘촘하게 하고 처음부터 다시 찍는다.
+for (let tries = 0; tries <= 3; tries++) {
+  pages = {};
+  for (let pass = 1; pass <= 5; pass++) {
+    render(await fullHtml(pages, true), tmp);
+    const r = findMarkers(tmp);
+    const same = JSON.stringify(r.pages) === JSON.stringify(pages);
+    console.log(`pass ${pass}: ${r.count}쪽, 이동점 ${Object.keys(r.pages).length}개${same ? " (변화 없음)" : ""}`);
+    pages = r.pages;
+    if (same) break;
+  }
+  const over = book.stories.filter((S) => pages[sid(S) + "end"] !== pages[sid(S)]);
+  if (!over.length) break;
+  if (tries === 3) { console.error("표제 쪽이 fit3으로도 한 쪽에 들어가지 않음 — @storynote를 줄이세요: " + over.map((S) => S.title).join(", ")); process.exit(1); }
+  for (const S of over) { S.fit = (S.fit || 0) + 1; console.log(`  표제 쪽 넘침 → ${S.title}: fit${S.fit}`); }
 }
 // Edge(Chromium)는 이동점(named destination)의 높이를 쪽 위 여백(16mm)만큼 덜 내려 적는다.
 // 그대로 두면 「목차로 이동」을 눌렀을 때 차례 항목이 화면 맨 위가 아니라 16mm 아래에 온다 → 여백만큼 바로잡는다.

@@ -96,10 +96,10 @@ export async function storyTitleHtml(book, S, marker = () => "") {
   const vms = await Promise.all(starts.map((t) => vmS(S, t)));
   const video = S.vid ? `<div class="sq0${vms.length > 1 ? " multi" : ""}">${MODE === "epub" ? vms.map((vm) => `<p>${vm} 강의 영상 처음부터 보기</p>`).join("") : vms.join("")}</div>` : "";
   const notes = S.storynotes.length ? `<div class="snote">${S.storynotes.map((n) => `<p>${inline(n)}</p>`).join("")}</div>` : "";
-  return `<section class="story" id="${sid(S)}">${marker(sid(S))}<div class="sn">${esc(book.lectureLabel || "첫열매들 예배 강의")}</div><h1>${esc(S.title)}</h1><div class="ss">${esc(S.sub)}</div><div class="gold"></div>
+  return `<section class="story${Array.from({ length: S.fit || 0 }, (_, i) => " fit" + (i + 1)).join("")}" id="${sid(S)}">${marker(sid(S))}<div class="sn">${esc(book.lectureLabel || "첫열매들 예배 강의")}</div><h1>${esc(S.title)}</h1><div class="ss">${esc(S.sub)}</div><div class="gold"></div>
   <table class="meta">${rows.map(([k, v]) => `<tr><td>${k}</td><td>${esc(v)}</td></tr>`).join("")}</table>
   ${video}${notes}${legend}
-  ${back(sid(S))}</section>`;
+  ${back(sid(S)).replace("</a>", marker(sid(S) + "end") + "</a>")}</section>`;
 }
 
 // 핵심 정리(사용자 지시 2026-11-09): 이야기 표제 다음, 강의 본문 앞
