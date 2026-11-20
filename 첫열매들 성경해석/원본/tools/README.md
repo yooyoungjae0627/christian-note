@@ -57,7 +57,7 @@ node build_pdf.mjs "<원본>" out NN  && node verify_pdf.mjs  "<원본>" out\이
 node build_epub.mjs "<원본>" out NN && node verify_epub.mjs "<원본>" out\이름.epub NN
 node audit.mjs out\이름.pdf out\toc_pages.json   (남은 공란 보고)
 ```
-- 저장소 위치에서 바로 돌리는 검사(가 부르는 , 저장소 )는 옆에 node_modules가 없으면 (경로 구분자로 여러 개) → 임시 폴더의  순서로 모듈을 찾는다(2026-11-21). 위처럼 임시 폴더에 한 번 설치해 두면 된다.
+- 저장소 위치에서 바로 돌리는 검사(`check_story.mjs`가 부르는 `center_fit.mjs`, 저장소 `tools/check_epub.mjs`)는 옆에 node_modules가 없으면 `TOPICBOOK_NODE_MODULES`(경로 구분자로 여러 개) → 임시 폴더의 `topicbook*/node_modules` 순서로 모듈을 찾는다(2026-11-21). 위처럼 임시 폴더에 한 번 설치해 두면 된다.
 - 책 번호 없이 돌리면 멈춘다(강의를 한 권에 묶지 않도록). 여러 권은 책마다 위 순서를 돌린다.
 - Edge는 Claude Code 샌드박스 안에서 바로 종료되므로 **샌드박스 밖에서** 실행한다.
 - **클라우드 세션(리눅스)**(2026-11-01): `bash tools/cloud_setup.sh`(저장소 루트 tools) 뒤 `/tmp/topicbook`에 이 폴더를 복사해 같은 순서로 돌린다. `edge.mjs`가 Edge 대신 headless Chromium(Playwright 내장 `chrome-headless-shell`)을 고른다(`BROWSER` 환경 변수로 바꿀 수 있음). 일반 `chromium`은 `--user-data-dir`를 주면 멈춰서 쓰지 않는다. 그림 주소는 절대 경로로(`html.mjs`). 글줄 높이가 Windows와 0.1~0.9pt 달라 `build_pdf.mjs`가 리눅스에서만 이동점을 1pt 덜 내린다. 36권 시험: Windows 완성본과 쪽수 같음(91), verify 둘 다 exit 0.
