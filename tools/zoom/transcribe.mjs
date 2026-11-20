@@ -2,14 +2,17 @@
 // 사용: node transcribe.mjs <16kHz 모노 wav> <출력.srt> [모델=onnx-community/whisper-large-v3-turbo]
 // 모델은 처음 쓸 때 huggingface.co에서 받는다. 글은 고치지 않는다(오인식 그대로).
 import fs from "node:fs";
+import path from "node:path";
 import { createRequire } from "node:module";
+import { pathToFileURL } from "node:url";
 const require = createRequire(import.meta.url);
 const [, , wavFile, out, model = "onnx-community/whisper-large-v3-turbo"] = process.argv;
 if (!wavFile || !out) { console.error("사용: node transcribe.mjs <wav> <출력.srt> [모델]"); process.exit(2); }
 
-// NODE_PATH(zoombook의 임시 설치 폴더)에서 찾는다
+// NODE_PATH(zoombook의 임시 설치 폴더)에서 찾는다. 구분자는 path.delimiter(Windows는 ; — 드라이브 경로의 콜론으로 자르면 경로가 깨진다),
+// 찾은 절대 경로는 file:// URL로 바꿔 import한다(Windows에서 드라이브 경로를 그대로 import하면 ERR_UNSUPPORTED_ESM_URL_SCHEME).
 let tf;
-try { tf = await import(require.resolve("@huggingface/transformers", { paths: (process.env.NODE_PATH || "").split(/[;:]/).filter(Boolean) })); }
+try { tf = await import(pathToFileURL(require.resolve("@huggingface/transformers", { paths: (process.env.NODE_PATH || "").split(path.delimiter).filter(Boolean) })).href); }
 catch (e) { console.error("transformers.js 없음: " + e.message); process.exit(3); }
 
 // 16bit PCM wav → Float32

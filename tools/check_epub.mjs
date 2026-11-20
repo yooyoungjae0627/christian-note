@@ -1,9 +1,28 @@
 // EPUB 기본 검사(어느 교재든): node check_epub.mjs <파일.epub> [더 …]
 // mimetype 첫 항목·무압축, XML 문법, 내부 링크·그림 연결, nav·ncx 있음, mupdf로 열림. 하나라도 어긋나면 exit 1
 import fs from "fs";
-import JSZip from "jszip";
-import { XMLValidator } from "fast-xml-parser";
-import * as mupdf from "mupdf";
+import os from "node:os";
+import path from "node:path";
+import { pathToFileURL } from "node:url";
+// 의존 모듈 찾기(2026-11-21): 저장소에는 node_modules를 두지 않으므로(README·package.json), 이 파일 옆에서 못 찾으면
+// TOPICBOOK_NODE_MODULES(경로 구분자로 여러 개) → 임시 폴더의 topicbook*/node_modules 순서로 찾는다.
+// 그래서 저장소 위치에서 바로 돌려도(check_story가 부르는 center_fit 포함) 임시 폴더에 설치해 둔 모듈을 쓴다.
+async function dep(name) {
+  try { return await import(name); } catch (e) { if (e.code !== "ERR_MODULE_NOT_FOUND") throw e; }
+  const dirs = (process.env.TOPICBOOK_NODE_MODULES || "").split(path.delimiter).filter(Boolean);
+  for (const base of new Set([os.tmpdir(), "/tmp"])) { try { for (const d of fs.readdirSync(base)) if (/^topicbook/i.test(d)) dirs.push(path.join(base, d, "node_modules")); } catch {} }
+  const pick = (x) => typeof x === "string" ? x : x && typeof x === "object" ? pick(x["."] ?? x.import ?? x.node ?? x.default) : null;
+  for (const nm of dirs) {
+    const pd = path.join(nm, name), pj = path.join(pd, "package.json");
+    if (!fs.existsSync(pj)) continue;
+    const j = JSON.parse(fs.readFileSync(pj, "utf8")), f = path.join(pd, pick(j.exports) || j.module || j.main || "index.js");
+    for (const c of [f, f + ".js", path.join(f, "index.js")]) if (fs.existsSync(c) && fs.statSync(c).isFile()) return import(pathToFileURL(c).href);
+  }
+  throw new Error(`모듈 '${name}'을 찾지 못함 — 임시 폴더(예: %TEMP%\topicbook)에 tools/package.json으로 npm i 하거나 TOPICBOOK_NODE_MODULES에 node_modules 경로를 지정`);
+}
+const JSZip = (await dep("jszip")).default;
+const { XMLValidator } = await dep("fast-xml-parser");
+const mupdf = await dep("mupdf");
 
 let bad = 0;
 for (const f of process.argv.slice(2)) {

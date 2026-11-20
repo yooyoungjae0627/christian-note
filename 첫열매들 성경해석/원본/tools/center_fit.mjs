@@ -8,13 +8,33 @@
 //   node center_fit.mjs --check 그림.jpg …
 //     내용의 왼쪽·오른쪽 여백 차이, 위·아래 여백 차이가 그림 폭·높이의 3%를 넘거나, 내용이 가장자리에 닿으면(잘림 의심) ✗, exit 2.
 //     영상 슬라이드(1920×1080)는 슬라이드 디자인 자체가 비대칭일 수 있으니 눈 확인을 함께 한다.
-import sharp from 'sharp';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+// 의존 모듈 찾기(2026-11-21): 저장소에는 node_modules를 두지 않으므로(README·package.json), 이 파일 옆에서 못 찾으면
+// TOPICBOOK_NODE_MODULES(경로 구분자로 여러 개) → 임시 폴더의 topicbook*/node_modules 순서로 찾는다.
+// 그래서 저장소 위치에서 바로 돌려도(check_story가 부르는 center_fit 포함) 임시 폴더에 설치해 둔 모듈을 쓴다.
+async function dep(name) {
+  try { return await import(name); } catch (e) { if (e.code !== "ERR_MODULE_NOT_FOUND") throw e; }
+  const dirs = (process.env.TOPICBOOK_NODE_MODULES || "").split(path.delimiter).filter(Boolean);
+  for (const base of new Set([os.tmpdir(), "/tmp"])) { try { for (const d of fs.readdirSync(base)) if (/^topicbook/i.test(d)) dirs.push(path.join(base, d, "node_modules")); } catch {} }
+  const pick = (x) => typeof x === "string" ? x : x && typeof x === "object" ? pick(x["."] ?? x.import ?? x.node ?? x.default) : null;
+  for (const nm of dirs) {
+    const pd = path.join(nm, name), pj = path.join(pd, "package.json");
+    if (!fs.existsSync(pj)) continue;
+    const j = JSON.parse(fs.readFileSync(pj, "utf8")), f = path.join(pd, pick(j.exports) || j.module || j.main || "index.js");
+    for (const c of [f, f + ".js", path.join(f, "index.js")]) if (fs.existsSync(c) && fs.statSync(c).isFile()) return import(pathToFileURL(c).href);
+  }
+  throw new Error(`모듈 '${name}'을 찾지 못함 — 임시 폴더(예: %TEMP%\topicbook)에 tools/package.json으로 npm i 하거나 TOPICBOOK_NODE_MODULES에 node_modules 경로를 지정`);
+}
+const sharp = (await dep('sharp')).default;
 
 const a = process.argv.slice(2);
 const check = a.includes('--check');
 const num = (k, d) => { const i = a.indexOf(k); return i >= 0 ? +a[i + 1] : d; };
 const pad = num('--pad', 0.06), thr = num('--thr', 45);
-const files = a.filter((x, i) => !x.startsWith('--') && !['--pad', '--thr'].includes(a[i - 1]));
+const files = a.filter((x, i) => !x.startsWith('--') && !['--pad', '--thr', '--lum'].includes(a[i - 1]));
 
 async function analyze(f) {
   const { data, info } = await sharp(f).removeAlpha().raw().toBuffer({ resolveWithObject: true });
