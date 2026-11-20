@@ -1,5 +1,7 @@
 # Christian Note
 
+> **EPUB 제작 중단(사용자 지시 2026-11-21):** 이 문서의 EPUB 관련 서술(PDF + EPUB, build_epub·verify_epub·check_epub 등)은 효력이 없다. 완성본은 PDF 하나만 만든다 — 단일 원본 `docs/policy/로컬_EPUB_보관정책.md`.
+
 첫열매들(FIRSTFRUITS) 교회의 강의를 바탕으로 **성도 유영재**가 성경 공부 교재를 집필·관리하는 저장소입니다.
 교재는 **강의 하나 = 책 한 권**이고, 책마다 **PDF와 EPUB을 항상 함께** 냅니다.
 

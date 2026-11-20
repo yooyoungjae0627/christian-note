@@ -61,6 +61,8 @@ function finish(raw, final, title, nav, pages) {
 const wait = (ms) => Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 function retryFs(fn) { for (let i = 0; ; i++) { try { return fn(); } catch (e) { if (i >= 20 || !/UNKNOWN|EBUSY|EPERM|EACCES/.test(e.code || e.message)) throw e; wait(1500); } } }
 async function epub(final) {
+  // EPUB 제작 중단(2026-11-21) — docs/policy/로컬_EPUB_보관정책.md
+  if (process.env.ALLOW_EPUB !== "1") return null;
   const tool = path.join(TOPIC, "pdf2epub-chapterbook.mjs");
   fs.writeFileSync(tool, fs.readFileSync(path.join(R, "tools/pdf2epub.mjs")));
   const out = final.replace(/\.pdf$/, ".epub");

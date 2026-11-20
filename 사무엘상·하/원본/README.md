@@ -1,5 +1,7 @@
 # 사무엘상 1–15장 교재 원본
 
+> **EPUB 제작 중단(사용자 지시 2026-11-21):** 이 문서의 EPUB 관련 서술(PDF + EPUB, build_epub·verify_epub·check_epub 등)은 효력이 없다. 완성본은 PDF 하나만 만든다 — 단일 원본 `docs/policy/로컬_EPUB_보관정책.md`.
+
 규칙 원본: [docs/policy/사무엘상_교재_제작지침.md](../../docs/policy/사무엘상_교재_제작지침.md) (형식·디자인은 창세기 지침을 따름).
 
 | 파일 | 내용 |

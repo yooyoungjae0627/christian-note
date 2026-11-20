@@ -1,5 +1,7 @@
 # Theme — 성경 주제별 교재
 
+> **EPUB 제작 중단(사용자 지시 2026-11-21):** 이 문서의 EPUB 관련 서술(PDF + EPUB, build_epub·verify_epub·check_epub 등)은 효력이 없다. 완성본은 PDF 하나만 만든다 — 단일 원본 `docs/policy/로컬_EPUB_보관정책.md`.
+
 - **지침(단일 원본):** `docs/policy/성경주제별_교재_제작지침.md` + 바탕 `docs/policy/밀크교재_제작지침_1_전체판.md`
 - **근간:** `docs/core/`(밀크 교리 정리 · 교재 집필 정책). 없으면 `docs/doctrine/00_교리_총정리.md`
 - **책 단위:** 첫열매들 예배 강의 1개 = 책 1권. 파일 `이름.pdf` + `이름.epub` (이 폴더, 번호 없이 — 2026-11-04)

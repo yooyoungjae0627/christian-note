@@ -1,9 +1,11 @@
 ---
 name: zoom-book
-description: 줌(Zoom) 강의 녹화를 받아쓰기·슬라이드 추출해 성경 주제별 교재(PDF+EPUB)로 만든다. 사용자가 「최근 줌 녹화 교재 집필해줘」「줌 녹화 교재 집필」「줌 녹화 책」이라고 하거나, 줌 녹화 영상·자막으로 책을 만들라고 하거나, /zoom-book 을 쓰면 사용.
+description: 줌(Zoom) 강의 녹화를 받아쓰기·슬라이드 추출해 성경 주제별 교재(PDF)로 만든다. 사용자가 「최근 줌 녹화 교재 집필해줘」「줌 녹화 교재 집필」「줌 녹화 책」이라고 하거나, 줌 녹화 영상·자막으로 책을 만들라고 하거나, /zoom-book 을 쓰면 사용.
 ---
 
 # 줌 녹화 교재
+
+> **EPUB 제작 중단(사용자 지시 2026-11-21):** 이 문서의 EPUB 관련 서술(PDF + EPUB, build_epub·verify_epub·check_epub 등)은 효력이 없다. 완성본은 PDF 하나만 만든다 — 단일 원본 `docs/policy/로컬_EPUB_보관정책.md`.
 
 1. `git pull`로 최신 지침을 받는다.
 2. 클라우드 세션이면 `bash tools/cloud_setup.sh`. 영상은 채팅 첨부(`/mnt/user-data/uploads`)에서, 삼성 음성 녹음 글(.txt)·슬라이드 캡처는 첨부 또는 Google Drive 「줌 녹화」 폴더에서 받는다(Drive는 작은 파일만 — 영상 불가). 흩어져 있으면 한 폴더로 모아 그 폴더를 인자로 준다.

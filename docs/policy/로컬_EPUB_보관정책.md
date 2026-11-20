@@ -1,23 +1,32 @@
-# 로컬 EPUB 보관 정책
+# EPUB 정책 — 제작 중단 (2026-11-21부터)
 
-이 프로젝트의 로컬 작업 폴더에는 PDF와 원고를 보관한다. GitHub에는 검증한 PDF와 EPUB을 모두 보관한다. 이 정책은 모든 시리즈와 샘플, Codex와 Claude Code 작업에 적용한다.
+> **이 문서가 EPUB에 관한 규칙의 유일한 원본이다.** 다른 지침·POLICY·README·스킬에 남아 있는 「PDF + EPUB」 「verify_epub」 「check_epub」 같은 서술은 2026-11-21부터 효력이 없고, 이 문서가 우선한다. Codex(`AGENTS.md`, `.agents/skills/`)와 Claude Code(`CLAUDE.md`, `.claude/skills/`) 모두에 똑같이 적용한다.
 
-## 작업 시작
+## 1. 새로 만들지 않는다
+- **사용자 지시 2026-11-21 「현시간 부로 epub 파일은 제작하지 않는다」**: 모든 시리즈(밀크·다윗·주제별·이이레·창세기·사무엘·열왕기·출애굽기·사사기·욥기·에스겔·에스더·줌 녹화·실시간 받아쓰기 등)에서 교재 완성본은 **PDF 하나만** 만든다.
+- `build_epub.mjs`·`verify_epub.mjs`·`check_epub.mjs`·`pdf2epub.mjs`는 돌리지 않는다. 검사·보고는 PDF 쪽(check_story, verify_pdf, audit, QR 판독 등)만 한다.
+- 「강의 1개 = 책 1권, PDF + EPUB」은 「강의 1개 = 책 1권, PDF」로 읽는다. 표지·본문 디자인, 영상 구간 이동(QR) 등 PDF 규칙은 그대로다.
+- 사용자가 어떤 책의 EPUB을 다시 직접 요청하면 그때만 만든다(그 책 한정).
 
-새 로컬 복제본에서 아래 명령을 한 번 실행한다. 이 설정은 해당 작업 트리에 유지되며 이후 pull과 브랜치 전환에도 적용된다.
+## 2. 이미 있는 EPUB
+- GitHub에 이미 올라간 EPUB은 지우지 않는다(지우라는 지시가 없음). 다시 빌드하지도 않는다.
+- 로컬 작업 트리에는 EPUB을 두지 않는다. 새 복제본에서 한 번:
 
 ```powershell
 git sparse-checkout set --no-cone '/*' '!*.[eE][pP][uU][bB]'
 ```
 
-교재 작업 전에는 `git sparse-checkout list`로 위 두 패턴을 확인한다. 다른 sparse 설정이 있는 작업 트리에서는 기존 범위를 유지하면서 EPUB 제외 패턴을 마지막에 추가한다. 로컬 정리를 위해 추적 중인 EPUB을 git rm 하거나 삭제 변경을 커밋하지 않는다.
+- 교재 작업 전 `git sparse-checkout list`로 위 두 패턴을 확인한다. 로컬 정리를 위해 추적 중인 EPUB을 `git rm` 하거나 삭제 변경을 커밋하지 않는다.
 
-## 교재 빌드와 작업 종료
-
-시리즈 지침대로 두 형식을 제작하고 검사한다. EPUB 배포 시 해당 파일만 명시해 `git add --sparse -- "경로/교재.epub"`로 스테이징하고 커밋한 뒤 `git sparse-checkout reapply`를 실행한다. 미커밋 원고나 수정된 EPUB이 있으면 먼저 변경 상태를 확인한다.
-
-추적되지 않는 임시 EPUB과 샘플 EPUB은 검수·배포가 끝나면 정리한다. 별도 임시 빌드 폴더에 이번 작업이 생성한 EPUB도 정리한다. 저장소 루트에서 다음 명령의 결과가 0이고 `git status --short`에 EPUB 삭제가 없는지 확인한다.
+## 3. 작업 종료
+저장소 루트에서 다음 결과가 0이고 `git status --short`에 EPUB 변경이 없어야 한다.
 
 ```powershell
 (Get-ChildItem -LiteralPath . -Recurse -Force -File -Filter '*.epub' -ErrorAction Stop | Measure-Object).Count
 ```
+
+## 바뀐 내력
+| 날짜 | 지시 | 결과 |
+|---|---|---|
+| 2026-11-21 | 「현시간 부로 epub 파일은 제작하지 않는다는 것이 정책 업데이트 해서 코덱스, 클로드 코드 전부 적용시켜」 | EPUB 제작 중단. 이 문서를 EPUB 규칙의 단일 원본으로 바꾸고, CLAUDE.md·AGENTS.md·README·각 시리즈 지침·POLICY·스킬 머리에 이 문서를 가리키는 줄을 넣음 |
+| (이전) | 로컬 EPUB 보관 정책 | 로컬에는 EPUB을 두지 않고 GitHub에만 보관 — §2·§3으로 남김 |

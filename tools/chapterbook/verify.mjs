@@ -57,10 +57,10 @@ const targets = units ? rest.slice(1).map(Number).map((n) => { const u = units.l
 function urlsOf(d) { return [...new Set(d.sections.flatMap((s) => s.comments.flatMap((c) => c.evidence.filter((e) => e.url && e.type === "transcript").map((e) => e.url))))]; }
 for (const t of targets) {
   const pdf = path.join(R, B.dir, t.name + ".pdf"), epub = pdf.replace(/\.pdf$/, ".epub");
-  if (!fs.existsSync(pdf) || !fs.existsSync(epub)) { console.log(`${t.name}: 파일 없음`); bad++; continue; }
+  if (!fs.existsSync(pdf) || (process.env.ALLOW_EPUB === "1" && !fs.existsSync(epub))) { console.log(`${t.name}: 파일 없음`); bad++; continue; }
   const r = checkPdf(pdf, t.urls);
   let ep = "통과";
-  try { execFileSync(process.execPath, [checker, epub], { stdio: "pipe" }); } catch (e) { ep = "실패 " + String(e.stdout || e.message).slice(0, 300); r.errors.push("EPUB " + ep); }
+  if (process.env.ALLOW_EPUB !== "1") ep = "만들지 않음(2026-11-21 정책)"; else try { execFileSync(process.execPath, [checker, epub], { stdio: "pipe" }); } catch (e) { ep = "실패 " + String(e.stdout || e.message).slice(0, 300); r.errors.push("EPUB " + ep); }
   if (r.errors.length) bad++;
   results.push({ file: t.name, ...r, epub: ep });
   console.log(`${t.name}: ${r.errors.length ? "실패" : "통과"} · ${r.pages}쪽 · 내부 링크 ${r.internal}(차례로 ${r.toToc}) · 유튜브 링크 ${r.youtube} · QR 판독 ${r.qr} · 책갈피 ${r.outline} · EPUB ${ep}`);

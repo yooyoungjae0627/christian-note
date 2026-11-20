@@ -1,5 +1,7 @@
 # 사무엘기 — 사무엘상 교재와 강의 스크립트
 
+> **EPUB 제작 중단(사용자 지시 2026-11-21):** 이 문서의 EPUB 관련 서술(PDF + EPUB, build_epub·verify_epub·check_epub 등)은 효력이 없다. 완성본은 PDF 하나만 만든다 — 단일 원본 `docs/policy/로컬_EPUB_보관정책.md`.
+
 서울침례교회 「다윗의 삶」 재생목록([YouTube](https://www.youtube.com/playlist?list=PLORD0HswpChCFTWTPwO-GZryn9hB617FY), 강사 이이레) **59편 전체 스크립트**를 사무엘상·하 교재 집필 자료로 보관한다. 2026-10-11 수집.
 
 - 강의별 파일: [강의스크립트/](강의스크립트/) — 한 편 = Markdown 한 파일. 본문·날짜·영상 주소, 줄마다 **시각 링크**(`https://youtu.be/<영상ID>?t=<초>`)가 붙어 있다.

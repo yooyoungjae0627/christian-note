@@ -9,6 +9,9 @@ import { loadBook, esc, ytUrl, ordinal, tocId, sid } from "./parse.mjs";
 import { keysHtml, talkHtml, backList, structure, chapterHtml, storyTitleHtml, summaryHtml, quizHtml, answersHtml, faqHtml, glossHtml, tocItems, setMode, setImgResolver, setTocResolver } from "./html.mjs";
 import { coverHtml } from "./common.mjs";
 import { edgeShot } from "./edge.mjs";
+// EPUB 제작 중단(사용자 지시 2026-11-21 「현시간 부로 epub 파일은 제작하지 않는다」) — docs/policy/로컬_EPUB_보관정책.md.
+// 사용자가 특정 책의 EPUB을 직접 요청했을 때만 ALLOW_EPUB=1 로 돌린다.
+if (process.env.ALLOW_EPUB !== "1") { console.error("EPUB은 만들지 않습니다(2026-11-21 정책). 사용자가 직접 요청한 책만 ALLOW_EPUB=1 로 실행."); process.exit(3); }
 setMode("epub");
 
 const here = path.dirname(fileURLToPath(import.meta.url));
