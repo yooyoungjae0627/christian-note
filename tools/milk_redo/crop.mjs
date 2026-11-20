@@ -3,7 +3,7 @@
 // node crop.mjs <hd폴더> <pick.json> <seg.json> <reg.json> <옛그림폴더> <quad> <out폴더> [이름 일부만]
 import fs from "fs"; import path from "path"; import { execFileSync } from "child_process"; import sharp from "sharp";
 const [hd, pickJ, segJ, regJ, oldDir, quadS, outDir, only] = process.argv.slice(2);
-const FF = process.env.TEMP + "/books_e/bin/ffmpeg.exe";
+const FF = process.env.FFMPEG || (process.env.TEMP + "/books_e/bin/ffmpeg.exe");
 const pick = JSON.parse(fs.readFileSync(pickJ)), seg = Object.fromEntries(JSON.parse(fs.readFileSync(segJ)).map((s) => [s.file, s])), REG = JSON.parse(fs.readFileSync(regJ));
 const Q = quadS.split(",").map(Number); const DW = 128, DH = 72;
 function homo(src, dst) { const A = [], b = []; for (let i = 0; i < 4; i++) { const [x, y] = src[i], [u, v] = dst[i]; A.push([x, y, 1, 0, 0, 0, -u * x, -u * y]); b.push(u); A.push([0, 0, 0, x, y, 1, -v * x, -v * y]); b.push(v); }
