@@ -13,6 +13,15 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const [root, outDir] = process.argv.slice(2);
 const book = loadBook(root);
 
+// 「들어가며」 쪽 — book.json에 intro가 있는 시리즈만(밀크 지침 §2, 2026-11-21 밀크 8강을 이 도구로 다시 조판하며). 주제별 교재는 intro가 없어 그대로 뺀다(2026-10-03)
+function introHtml() {
+  const it = book.intro;
+  if (!it) return "";
+  return `<section class="front" id="intro"><h1>들어가며</h1><div class="gold"></div>
+  ${it.paras.map((p) => `<p class="bp">${esc(p)}</p>`).join("")}
+  <div class="verse"><div class="vl">성경 구절 — 표준킹제임스성경 본문</div><div class="vb">${it.verse.map((v) => `<p>${esc(v)}</p>`).join("")}</div><div class="vs">${esc(it.src)}</div></div></section>`;
+}
+
 async function howto() {
   const vid = book.stories[0].vid, sample = vid ? await videoMark(vid, "0:00") : "";
   return `<section class="front" id="howto"><h1>이 책을 읽는 법</h1><div class="gold"></div>
@@ -51,7 +60,7 @@ function toc(pages) {
 
 async function fullHtml(pages, withMarkers) {
   const marker = withMarkers ? (id) => `<span class="mk">@@${id}@@</span>` : () => "";
-  let body = coverHtml(book) + (await howto()) + toc(pages);
+  let body = coverHtml(book) + introHtml() + (await howto()) + toc(pages);
   for (const S of book.stories) {
     body += (await storyTitleHtml(book, S, marker)) + keysHtml(S, marker) + talkHtml(S, marker);
     for (let i = 0; i < S.chapters.length; i++) body += await chapterHtml(S, S.chapters[i], i, marker);

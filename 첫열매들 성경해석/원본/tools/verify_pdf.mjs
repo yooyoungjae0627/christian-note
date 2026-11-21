@@ -155,7 +155,7 @@ for (const S of book.stories) for (const [t, id, d] of tocItems(S)) {
   else chBackOk++;
 }
 // 「들어가며」 쪽(앞부분)이 없어야 한다. 본문 문장 속 '들어가며'(동사)는 해당 없음
-if (/들어가며/.test(tocTxt)) problems.push("「들어가며」가 남아 있음(사용자 지시 2026-10-03: 뺀다)");
+if (!book.intro && /들어가며/.test(tocTxt)) problems.push("「들어가며」가 남아 있음(사용자 지시 2026-10-03: 뺀다)");
 
 // 슬라이드 그림 수(표지 배경 그림은 제외)
 let imgCount = 0;

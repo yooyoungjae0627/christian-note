@@ -48,6 +48,8 @@ a { color: inherit; text-decoration: none; }
 #howto table.legend td { padding: .45mm 1mm; }
 #howto h1 { margin: 0 0 2mm; }
 #howto .gold { margin-top: 1.5mm; }
+#intro p.bp { font-size: 10pt; line-height: 1.86; margin: 0 0 3mm; }
+#intro .verse { margin-top: 5mm; }
 .cor { border-left: 1mm solid #c9973b; background: #fbf6ea; padding: 3mm 4mm; margin-top: 6mm; font-size: 9.6pt; line-height: 1.8; }
 .cor p { margin: 0 0 1.6mm; }
 .cor .vs { text-align: right; font-size: 7.8pt; color: #6b5d3d; font-family: "Noto Sans KR", sans-serif; }
