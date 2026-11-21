@@ -121,6 +121,10 @@ if (rest[0] === "unit") {
     // 「만화로 보는 이야기」(사용자 지시 2026-11-02, 2026-11-04부터 소설 다음) — 원고가 있으면 검사를 통과해야 빌드
     const hasComic = comic.hasComic(book, n);
     if (hasComic) { const ce = comic.checkComic(book, n); if (ce.length) throw new Error("만화 원고 검사 실패: " + ce.join("; ")); }
+    // 맨 뒤 「어학 학습 부록」(2026-11-21, docs/policy/성경_어학학습_부록_지침.md) — 원고가 있으면 검사를 통과해야 빌드
+    const lang = await import("./lang.mjs");
+    const hasLang = lang.hasLang(book, n);
+    if (hasLang) { const le = lang.checkLang(book, n); if (le.length) throw new Error("어학 부록 원고 검사 실패: " + le.join("; ")); }
     await ensureQr(u.parts.flatMap((x) => urlsOf(x.d)));
     const all = { sections: u.parts.flatMap((x) => x.d.sections), learning: u.learning };
     const render = (pages, withMk) => {
@@ -139,7 +143,9 @@ if (rest[0] === "unit") {
       }
       const l = learning(book, 0, all, comments, { mk, scope: "이 책" });
       nav.push(...l.nav, ["sources", "참고한 자료", 0]);
-      const html = cover(book, `${B.ko}<br/>${esc(u.title)}`, `${u.subtitle} — 교회 강의와 교리로 풀어 읽기`, coverSvg(u.cover), u.motto) + howto(book, mk) + toc(nav, pages, mk) + body + l.html + sourcesTable(Object.values(comments), mk);
+      const lg = hasLang ? lang.langHtml(book, n, mk) : { html: "", nav: [] };
+      nav.push(...lg.nav);
+      const html = cover(book, `${B.ko}<br/>${esc(u.title)}`, `${u.subtitle} — 교회 강의와 교리로 풀어 읽기`, coverSvg(u.cover), u.motto) + howto(book, mk) + toc(nav, pages, mk) + body + l.html + sourcesTable(Object.values(comments), mk) + lg.html;
       return { html: page(`${B.ko} ${u.title} 성경 공부 교재`, html), nav };
     };
     const { raw, nav, pages } = printLoop(`${book}-unit${n}`, render);
