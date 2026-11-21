@@ -16,7 +16,9 @@ try {
   const { fileURLToPath } = await import("url");
   const sd = join(dir, "slides");
   if (existsSync(sd)) {
-    const imgs = readdirSync(sd).filter((f) => /\.(jpe?g|png)$/i.test(f)).map((f) => join(sd, f));
+    // 정리한 사람이 만든 그림(figs/NN.html → slides/NN.jpg)은 검사하지 않는다 — 제목 칩·출처 위치가 정해진 슬라이드 디자인(사용자 결정 2026-11-21 「Exempt made pictures」)
+    const madeFig = (f) => existsSync(join(dir, "figs", f.replace(/\.(jpe?g|png)$/i, ".html")));
+    const imgs = readdirSync(sd).filter((f) => /\.(jpe?g|png)$/i.test(f) && !madeFig(f)).map((f) => join(sd, f));
     if (imgs.length) {
       try { execFileSync(process.execPath, [join(dirname(fileURLToPath(import.meta.url)), "center_fit.mjs"), "--check", ...imgs], { stdio: "pipe" }); }
       catch (e) {
