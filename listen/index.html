@@ -74,11 +74,18 @@ footer{margin-top:28px;font-size:.75rem;color:var(--sub)}
     if (!synth) { alert("이 브라우저는 음성 읽기를 지원하지 않습니다. 크롬·사파리·엣지에서 열어 주세요."); return; }
     stop(); queue = list.slice(); next();
   }
+  // 크롬은 처음에 한국어 음성만 주고 영어·일본어(Google 온라인 음성)는 조금 뒤에 준다 → 읽기 직전에 목록을 다시 받고, 없으면 잠깐 기다린다
+  function refreshVoices() { if (synth) voices = synth.getVoices(); }
+  function waitVoice(lang, cb) {
+    var t = 0; (function poll() { refreshVoices(); var v = pick(lang); if (v || t >= 3000) return cb(v); t += 200; setTimeout(poll, 200); })();
+  }
   function next() {
     var it = queue.shift(); if (!it) { mark(null); return; }
-    var u = new SpeechSynthesisUtterance(it.say), v = pick(it.lang);
+    refreshVoices();
+    var v = pick(it.lang);
+    if (!v) { queue.unshift(it); waitVoice(it.lang, function (w) { if (w) next(); else { stop(); noVoice(it.lang); } }); return; }
+    var u = new SpeechSynthesisUtterance(it.say);
     // 그 언어 음성이 없으면 읽지 않는다 — 기기 기본(한국어) 음성이 영어·일본어를 한국식으로 읽어 버리기 때문(2026-11-21 사용자 지적)
-    if (!v) { stop(); noVoice(it.lang); return; }
     u.lang = v.lang; u.voice = v; u.rate = rate;
     var el = document.getElementById("i-" + it.id); mark(el);
     u.onend = function () { setTimeout(next, 350); };
@@ -96,6 +103,9 @@ footer{margin-top:28px;font-size:.75rem;color:var(--sub)}
   function byId(id) { for (var i = 0; i < data.lessons.length; i++) for (var j = 0; j < data.lessons[i].items.length; j++) if (data.lessons[i].items[j].id === id) return data.lessons[i].items[j]; return null; }
   var GROUPS = [["er", "en", "① 영어 독해"], ["et", "en", "② 영어 회화 · 연습용 대화"], ["ek", "en", "영어 핵심 표현"], ["jr", "ja", "③ 일본어 독해"], ["jw", "ja", "일본어 단어"], ["jt", "ja", "④ 일본어 회화 · 연습용 대화"], ["jk", "ja", "일본어 핵심 표현"]];
   function voiceBar() {
+    return '<div id="vbar">' + voiceBarInner() + "</div>";
+  }
+  function voiceBarInner() {
     function sel(l, label) {
       var vs = langVoices(l), cur = pick(l);
       if (!vs.length) return '<label>' + label + ' <select disabled><option>음성 없음</option></select></label>';
@@ -138,16 +148,15 @@ footer{margin-top:28px;font-size:.75rem;color:var(--sub)}
   }
   function start() {
     var target = render();
-    // 링크로 들어왔으면 바로 한 번 읽어 본다 — 막히면 「▶ 듣기」 안내
-    if (target && synth) setTimeout(function () { speakList([target]); }, 300);
+    // 음성 목록이 바뀌면(크롬은 나중에 Google 음성을 줌) 음성 고르는 칸·안내를 다시 그린다
+    if (synth) synth.onvoiceschanged = function () { refreshVoices(); var b = document.getElementById("vbar"); if (b) b.innerHTML = voiceBarInner(); };
+    // 링크로 들어왔으면 그 언어 원어민 음성이 준비된 뒤 한 번 읽어 본다 — 브라우저가 막으면 「▶ 듣기」 안내
+    if (target && synth) waitVoice(target.lang, function (v) { if (v) speakList([target]); });
   }
   if (!unit) { app.innerHTML = "<h1>성경 어학 듣기</h1><p class=\"muted\">교재 PDF의 ▶ 버튼이나 QR로 들어오세요.</p>"; return; }
   fetch("data/" + book + "-" + unit + ".json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (d) {
     data = d;
-    if (!synth) { start(); return; }
-    voices = synth.getVoices();
-    if (voices.length) start();
-    else { var done = false; synth.onvoiceschanged = function () { voices = synth.getVoices(); if (!done) { done = true; start(); } else render(); }; setTimeout(function () { if (!done) { done = true; voices = synth.getVoices(); start(); } }, 1500); }
+    refreshVoices(); start();
   }).catch(function (e) { app.innerHTML = "<h1>불러오지 못했습니다</h1><p class=\"muted\">" + esc(book) + " 단원 " + esc(unit) + " 데이터가 없습니다 (" + esc(e.message) + ").</p>"; });
 })();
 </script>
