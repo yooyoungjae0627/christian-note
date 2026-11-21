@@ -66,7 +66,7 @@ footer{margin-top:28px;font-size:.75rem;color:var(--sub)}
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function ruby(s) { return esc(s).replace(/([㐀-鿿豈-﫿々〆]+)\[([ぁ-ゖー]+)\]/g, "<ruby>$1<rt>$2</rt></ruby>"); }
   function langVoices(l) { return voices.filter(function (v) { return v.lang && v.lang.replace("_", "-").toLowerCase().indexOf(l) === 0; }); }
-  function score(v) { var n = v.name; return (/natural|neural|online|premium|enhanced|siri|google/i.test(n) ? 10 : 0) + (/kyoko|nanami|samantha|aria|jenny|ava/i.test(n) ? 5 : 0) + (v.localService ? 0 : 1) + (/en-us/i.test(v.lang) ? 2 : 0); }
+  function score(v) { var n = v.name; return (/natural|neural/i.test(n) ? 20 : 0) + (/online|premium|enhanced|siri|google/i.test(n) ? 10 : 0) +(/kyoko|nanami|samantha|aria|jenny|ava/i.test(n) ? 5 : 0) + (v.localService ? 0 : 1) + (/en-us/i.test(v.lang) ? 2 : 0); }
   function pick(l) { var vs = langVoices(l); if (!vs.length) return null; var saved = store("listen.voice." + l); for (var i = 0; i < vs.length; i++) if (vs[i].name === saved) return vs[i]; return vs.slice().sort(function (a, b) { return score(b) - score(a); })[0]; }
   function stop() { queue = []; if (synth) synth.cancel(); mark(null); }
   function mark(el) { if (playingEl) playingEl.classList.remove("on"); playingEl = el; if (el) el.classList.add("on"); }
@@ -77,11 +77,17 @@ footer{margin-top:28px;font-size:.75rem;color:var(--sub)}
   function next() {
     var it = queue.shift(); if (!it) { mark(null); return; }
     var u = new SpeechSynthesisUtterance(it.say), v = pick(it.lang);
-    u.lang = it.lang === "ja" ? "ja-JP" : "en-US"; if (v) u.voice = v; u.rate = rate;
+    // 그 언어 음성이 없으면 읽지 않는다 — 기기 기본(한국어) 음성이 영어·일본어를 한국식으로 읽어 버리기 때문(2026-11-21 사용자 지적)
+    if (!v) { stop(); noVoice(it.lang); return; }
+    u.lang = v.lang; u.voice = v; u.rate = rate;
     var el = document.getElementById("i-" + it.id); mark(el);
     u.onend = function () { setTimeout(next, 350); };
     u.onerror = function (e) { if (e.error === "not-allowed") showTapHint(); mark(null); };
     synth.speak(u);
+  }
+  function noVoice(l) {
+    var name = l === "ja" ? "일본어" : "영어";
+    alert("이 브라우저에는 " + name + " 원어민 음성이 없어 읽지 않았습니다(한국어 음성이 " + name + "를 한국식으로 읽게 되므로).\n\n• 카카오톡 등 앱 안에서 열었다면: 오른쪽 위 메뉴 → 「다른 브라우저로 열기」 → 크롬·사파리·엣지\n• 컴퓨터: 엣지(Edge)로 열면 가장 자연스러운 원어민 음성(Natural)이 나옵니다.");
   }
   function showTapHint() { var h = document.getElementById("taphint"); if (h) h.hidden = false; }
   function itemHtml(it, target) {
@@ -97,6 +103,7 @@ footer{margin-top:28px;font-size:.75rem;color:var(--sub)}
     }
     var r = [["0.7", "느리게"], ["0.85", "보통"], ["1", "빠르게"]];
     return '<div class="bar"><span class="seg" role="group" aria-label="속도">' + r.map(function (x) { return '<button data-rate="' + x[0] + '" aria-pressed="' + (Math.abs(rate - x[0]) < .01) + '">' + x[1] + "</button>"; }).join("") + "</span>" + sel("en", "영어") + sel("ja", "일본어") + "</div>" +
+      (langVoices("en").length ? "" : '<div class="warn"><b>이 브라우저에서 영어 원어민 음성을 찾지 못했습니다.</b> 카카오톡 등 앱 안에서 열었다면 메뉴 → 「다른 브라우저로 열기」(크롬·사파리·엣지)를 누르세요. 컴퓨터는 엣지(Edge)가 가장 자연스럽습니다.</div>') +
       (langVoices("ja").length ? "" : '<div class="warn"><b>이 기기에서 일본어 음성을 찾지 못했습니다.</b> 아이폰·아이패드는 기본으로 들어 있습니다. 안드로이드: 설정 → 일반 관리 → 텍스트 음성 변환 → 「Google 음성 서비스」 → 음성 데이터 설치 → 일본어. 윈도: 설정 → 시간 및 언어 → 음성 → 음성 추가 → 일본어. 설치 후 이 페이지를 다시 여세요.</div>');
   }
   function render() {
