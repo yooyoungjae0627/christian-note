@@ -49,11 +49,16 @@ export function loadBook(root) {
   const arg = process.argv[4];
   const only = /^\d+$/.test(arg || "") ? Number(arg) : process.env.ONLY ? Number(process.env.ONLY) : 0;
   const nums = all.map((x) => x.n);
-  nums.forEach((n, i) => { if (n !== i + 1) throw new Error(`책 번호(@story)가 이어지지 않거나 겹침: ${dirs[i]} = ${n} (기대 ${i + 1})`); });
+  // book.json allowGaps: 밀크처럼 책 번호 = 강 번호로 정해 두고 한 권씩 원고를 들이는 시리즈는 빈 번호를 허용한다(겹침은 여전히 오류, 2026-11-21)
+  if (book.allowGaps) nums.forEach((n, i) => { if (i && n === nums[i - 1]) throw new Error(`책 번호(@story) 겹침: ${dirs[i]} = ${n}`); });
+  else nums.forEach((n, i) => { if (n !== i + 1) throw new Error(`책 번호(@story)가 이어지지 않거나 겹침: ${dirs[i]} = ${n} (기대 ${i + 1})`); });
   if (!only) throw new Error("책 번호(NN)가 필요합니다: 강의 하나가 책 한 권입니다 — node build_pdf.mjs <원본> out NN");
   const d = dirs[nums.indexOf(only)];
   if (!d) throw new Error(`${only}번 이야기 폴더 없음`);
   const S = parseStory(path.join(root, d));
+  // 이야기 폴더의 book.json(있으면)이 공통 book.json 값을 덮는다 — 밀크처럼 표지 영문 줄·하단 문구가 강마다 다를 때(2026-11-21)
+  const own = path.join(root, d, "book.json");
+  if (fs.existsSync(own)) Object.assign(book, JSON.parse(fs.readFileSync(own, "utf8")));
   book.stories = [S];
   const nn = String(only).padStart(2, "0");
   book.series = book.title;
