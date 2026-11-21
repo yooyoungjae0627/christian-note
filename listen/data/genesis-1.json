@@ -1,0 +1,4010 @@
+{
+ "book": "genesis",
+ "unit": 1,
+ "title": "창세기 천지창조",
+ "range": "1:1–2:3",
+ "lessons": [
+  {
+   "no": 1,
+   "ref": "1:1",
+   "title": "태초에 하늘과 땅을",
+   "enRef": "1:1",
+   "jaRef": "1:1",
+   "enScene": "새 학기 첫날 아침",
+   "jaScene": "첫 출근 날 아침 인사",
+   "items": [
+    {
+     "id": "1-er",
+     "lang": "en",
+     "show": "In the beginning, God created the heavens and the earth.",
+     "say": "In the beginning, God created the heavens and the earth.",
+     "snd": "인 더 비기닝, 갓 크리에이티드 더 헤븐즈 앤 디 어-쓰.",
+     "ko": "처음에(태초에) / 하나님께서 창조하셨다 / 하늘들을 / 그리고 땅을",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "1-er-1",
+     "lang": "en",
+     "show": "In the beginning,",
+     "say": "In the beginning,",
+     "snd": "인 더 비기닝,",
+     "ko": "처음에(태초에)",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-er-2",
+     "lang": "en",
+     "show": "God created",
+     "say": "God created",
+     "snd": "갓 크리에이티드",
+     "ko": "하나님께서 창조하셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-er-3",
+     "lang": "en",
+     "show": "the heavens",
+     "say": "the heavens",
+     "snd": "더 헤븐즈",
+     "ko": "하늘들을",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-er-4",
+     "lang": "en",
+     "show": "and the earth.",
+     "say": "and the earth.",
+     "snd": "앤 디 어-쓰.",
+     "ko": "그리고 땅을",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-et-1",
+     "lang": "en",
+     "show": "How did you start your day?",
+     "say": "How did you start your day?",
+     "snd": "하우 디쥬 스타-트 유어 데이?",
+     "ko": "하루를 어떻게 시작했어요?",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "1-et-2",
+     "lang": "en",
+     "show": "In the morning, I made a plan for the week.",
+     "say": "In the morning, I made a plan for the week.",
+     "snd": "인 더 모-닝, 아이 메이드 어 플랜 포 더 위-크.",
+     "ko": "아침에 한 주 계획을 세웠어요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "1-et-3",
+     "lang": "en",
+     "show": "That's a good beginning.",
+     "say": "That's a good beginning.",
+     "snd": "댓츠 어 굿 비기닝.",
+     "ko": "좋은 시작이네요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "1-et-4",
+     "lang": "en",
+     "show": "Every beginning is important to me.",
+     "say": "Every beginning is important to me.",
+     "snd": "에브리 비기닝 이즈 임포-턴트 투 미.",
+     "ko": "모든 시작이 저에게는 중요해요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "1-ek-1",
+     "lang": "en",
+     "show": "That's a good beginning.",
+     "say": "That's a good beginning.",
+     "snd": "댓츠 어 굿 비기닝",
+     "ko": "좋은 시작이에요",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "1-ek-2",
+     "lang": "en",
+     "show": "make a plan",
+     "say": "make a plan",
+     "snd": "메이크 어 플랜",
+     "ko": "계획을 세우다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "1-jr",
+     "lang": "ja",
+     "show": "初[はじ]めに、神[かみ]は天[てん]と地[ち]を創造[そうぞう]された。",
+     "say": "初めに、神は天と地を創造された。",
+     "snd": "하지메니 카미와 텐토 치오 소-조- 사레타",
+     "ko": "처음에 / 하나님께서는 / 하늘과 / 땅을 / 창조 / 하셨다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "1-jr-1",
+     "lang": "ja",
+     "show": "初[はじ]めに、",
+     "say": "初めに、",
+     "snd": "하지메니",
+     "ko": "처음에",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-2",
+     "lang": "ja",
+     "show": "神[かみ]は",
+     "say": "神は",
+     "snd": "카미와",
+     "ko": "하나님께서는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-3",
+     "lang": "ja",
+     "show": "天[てん]と",
+     "say": "天と",
+     "snd": "텐토",
+     "ko": "하늘과",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-4",
+     "lang": "ja",
+     "show": "地[ち]を",
+     "say": "地を",
+     "snd": "치오",
+     "ko": "땅을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-5",
+     "lang": "ja",
+     "show": "創造[そうぞう]",
+     "say": "創造",
+     "snd": "소-조-",
+     "ko": "창조",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-6",
+     "lang": "ja",
+     "show": "された。",
+     "say": "された。",
+     "snd": "사레타",
+     "ko": "하셨다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jt-1",
+     "lang": "ja",
+     "show": "おはようございます。",
+     "say": "おはようございます。",
+     "snd": "오하요- 고자이마스.",
+     "ko": "안녕하세요(아침 인사).",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "1-jt-2",
+     "lang": "ja",
+     "show": "おはようございます。今日[きょう]は初[はじ]めての日[ひ]です。",
+     "say": "おはようございます。今日は初めての日です。",
+     "snd": "오하요- 고자이마스. 쿄-와 하지메테노 히데스.",
+     "ko": "안녕하세요. 오늘이 첫날이에요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "1-jt-3",
+     "lang": "ja",
+     "show": "がんばってください。",
+     "say": "がんばってください。",
+     "snd": "간밧테 쿠다사이.",
+     "ko": "힘내세요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "1-jk-1",
+     "lang": "ja",
+     "show": "おはようございます",
+     "say": "おはようございます",
+     "snd": "오하요- 고자이마스",
+     "ko": "안녕하세요(아침)",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "1-jk-2",
+     "lang": "ja",
+     "show": "がんばってください",
+     "say": "がんばってください",
+     "snd": "간밧테 쿠다사이",
+     "ko": "힘내세요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "1-ep-1",
+     "lang": "en",
+     "show": "In the evening, I read a book.",
+     "say": "In the evening, I read a book.",
+     "snd": "인 디 이-브닝, 아이 리-드 어 북.",
+     "ko": "저녁에 저는 책을 읽어요.",
+     "kind": "영어 구문 · in the + 때 (~에)"
+    },
+    {
+     "id": "1-ep-2",
+     "lang": "en",
+     "show": "Let's make a plan for the trip.",
+     "say": "Let's make a plan for the trip.",
+     "snd": "레츠 메이크 어 플랜 포 더 트립.",
+     "ko": "여행 계획을 세우자.",
+     "kind": "영어 구문 · make a plan (계획을 세우다)"
+    },
+    {
+     "id": "1-ev-1",
+     "lang": "en",
+     "show": "beginning",
+     "say": "beginning",
+     "snd": "비기닝",
+     "ko": "(명) 시작, 처음",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-ev-2",
+     "lang": "en",
+     "show": "create",
+     "say": "create",
+     "snd": "크리에이트",
+     "ko": "(동) 창조하다, 만들다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-ev-3",
+     "lang": "en",
+     "show": "heaven",
+     "say": "heaven",
+     "snd": "헤븐",
+     "ko": "(명) 하늘",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-ev-4",
+     "lang": "en",
+     "show": "earth",
+     "say": "earth",
+     "snd": "어-쓰",
+     "ko": "(명) 땅, 지구",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-ev-5",
+     "lang": "en",
+     "show": "plan",
+     "say": "plan",
+     "snd": "플랜",
+     "ko": "(명) 계획",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-ev-6",
+     "lang": "en",
+     "show": "important",
+     "say": "important",
+     "snd": "임포-턴트",
+     "ko": "(형) 중요한",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-jp-1",
+     "lang": "ja",
+     "show": "パンと牛乳[ぎゅうにゅう]を買[か]いました。",
+     "say": "パンと牛乳を買いました。",
+     "snd": "판토 규-뉴-오 카이마시타.",
+     "ko": "빵과 우유를 샀습니다.",
+     "kind": "일본어 구문 · ～と～ (~와 ~)"
+    },
+    {
+     "id": "1-jp-2",
+     "lang": "ja",
+     "show": "初[はじ]めて海[うみ]を見[み]ました。",
+     "say": "初めて海を見ました。",
+     "snd": "하지메테 우미오 미마시타.",
+     "ko": "처음으로 바다를 보았습니다.",
+     "kind": "일본어 구문 · 初めて (처음으로)"
+    },
+    {
+     "id": "1-jv-1",
+     "lang": "ja",
+     "show": "初[はじ]め",
+     "say": "初め",
+     "snd": "하지메",
+     "ko": "처음",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "1-jv-2",
+     "lang": "ja",
+     "show": "神[かみ]",
+     "say": "神",
+     "snd": "카미",
+     "ko": "하나님",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "1-jv-3",
+     "lang": "ja",
+     "show": "天[てん]",
+     "say": "天",
+     "snd": "텐",
+     "ko": "하늘",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "1-jv-4",
+     "lang": "ja",
+     "show": "地[ち]",
+     "say": "地",
+     "snd": "치",
+     "ko": "땅",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "1-jv-5",
+     "lang": "ja",
+     "show": "創造[そうぞう]",
+     "say": "創造",
+     "snd": "소-조-",
+     "ko": "창조",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "1-jv-6",
+     "lang": "ja",
+     "show": "今日[きょう]",
+     "say": "今日",
+     "snd": "쿄-",
+     "ko": "오늘",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "1-jv-7",
+     "lang": "ja",
+     "show": "日[ひ]",
+     "say": "日",
+     "snd": "히",
+     "ko": "날",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "ref": "1:2",
+   "title": "형체가 없고 공허한 땅",
+   "enRef": "1:2",
+   "jaRef": "1:2",
+   "enScene": "이사 직후 텅 빈 방",
+   "jaScene": "이사한 날 빈 방",
+   "items": [
+    {
+     "id": "2-er",
+     "lang": "en",
+     "show": "The earth was formless and empty. Darkness was on the surface of the deep and God’s Spirit was hovering over the surface of the waters.",
+     "say": "The earth was formless and empty. Darkness was on the surface of the deep and God’s Spirit was hovering over the surface of the waters.",
+     "snd": "디 어-쓰 워즈 폼-리스 앤 엠티. 다-크니스 워즈 온 더 서-피스 오브 더 디-프 앤 갓즈 스피릿 워즈 허버링 오-버 더 서-피스 오브 더 워-터즈.",
+     "ko": "땅은 형체가 없고 비어 있었다 / 어둠이 깊은 물 위에 있었다 / 그리고 하나님의 영이 감돌고 있었다 / 물들의 표면 위에",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "2-er-1",
+     "lang": "en",
+     "show": "The earth was formless and empty.",
+     "say": "The earth was formless and empty.",
+     "snd": "디 어-쓰 워즈 폼-리스 앤 엠티.",
+     "ko": "땅은 형체가 없고 비어 있었다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-er-2",
+     "lang": "en",
+     "show": "Darkness was on the surface of the deep",
+     "say": "Darkness was on the surface of the deep",
+     "snd": "다-크니스 워즈 온 더 서-피스 오브 더 디-프",
+     "ko": "어둠이 깊은 물 위에 있었다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-er-3",
+     "lang": "en",
+     "show": "and God’s Spirit was hovering",
+     "say": "and God’s Spirit was hovering",
+     "snd": "앤 갓즈 스피릿 워즈 허버링",
+     "ko": "그리고 하나님의 영이 감돌고 있었다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-er-4",
+     "lang": "en",
+     "show": "over the surface of the waters.",
+     "say": "over the surface of the waters.",
+     "snd": "오-버 더 서-피스 오브 더 워-터즈.",
+     "ko": "물들의 표면 위에",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-et-1",
+     "lang": "en",
+     "show": "Your new room looks empty.",
+     "say": "Your new room looks empty.",
+     "snd": "유어 뉴- 룸 룩스 엠티.",
+     "ko": "새 방이 텅 비어 보이네요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "2-et-2",
+     "lang": "en",
+     "show": "Yes, I haven't unpacked yet.",
+     "say": "Yes, I haven't unpacked yet.",
+     "snd": "예스, 아이 해븐ㅌ 언팩트 옛.",
+     "ko": "네, 아직 짐을 안 풀었어요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "2-et-3",
+     "lang": "en",
+     "show": "It's dark in here. Where is the switch?",
+     "say": "It's dark in here. Where is the switch?",
+     "snd": "잇츠 다-크 인 히어. 웨어 이즈 더 스위치?",
+     "ko": "여기 어둡네요. 스위치가 어디 있어요?",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "2-et-4",
+     "lang": "en",
+     "show": "It's on the wall, over the desk.",
+     "say": "It's on the wall, over the desk.",
+     "snd": "잇츠 온 더 월-, 오-버 더 데스크.",
+     "ko": "벽에 있어요, 책상 위쪽에요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "2-ek-1",
+     "lang": "en",
+     "show": "looks empty",
+     "say": "looks empty",
+     "snd": "룩스 엠티",
+     "ko": "비어 보인다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "2-ek-2",
+     "lang": "en",
+     "show": "I haven't ~ yet.",
+     "say": "I haven't  yet.",
+     "snd": "아이 해븐ㅌ ~ 옛",
+     "ko": "아직 ~ 안 했어요",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "2-jr",
+     "lang": "ja",
+     "show": "地[ち]は形[かたち]なく、むなしく、闇[やみ]が深淵[しんえん]の面[おもて]を覆[おお]っていた。神[かみ]の霊[れい]が水[みず]の面[おもて]を舞[ま]っていた。",
+     "say": "地は形なく、むなしく、闇が深淵の面を覆っていた。神の霊が水の面を舞っていた。",
+     "snd": "치와 카타치나쿠 무나시쿠 야미가 신엔노 오모테오 오옷테 이타 카미노 레-가 미즈노 오모테오 맛테 이타",
+     "ko": "땅은 / 형체가 없고 / 공허하고 / 어둠이 / 깊은 물의 / 표면을 / 덮고 있었다 / 하나님의 / 영이 / 물의 / 표면을 / 감돌고 있었다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "2-jr-1",
+     "lang": "ja",
+     "show": "地[ち]は",
+     "say": "地は",
+     "snd": "치와",
+     "ko": "땅은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-2",
+     "lang": "ja",
+     "show": "形[かたち]なく、",
+     "say": "形なく、",
+     "snd": "카타치나쿠",
+     "ko": "형체가 없고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-3",
+     "lang": "ja",
+     "show": "むなしく、",
+     "say": "むなしく、",
+     "snd": "무나시쿠",
+     "ko": "공허하고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-4",
+     "lang": "ja",
+     "show": "闇[やみ]が",
+     "say": "闇が",
+     "snd": "야미가",
+     "ko": "어둠이",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-5",
+     "lang": "ja",
+     "show": "深淵[しんえん]の",
+     "say": "深淵の",
+     "snd": "신엔노",
+     "ko": "깊은 물의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-6",
+     "lang": "ja",
+     "show": "面[おもて]を",
+     "say": "面を",
+     "snd": "오모테오",
+     "ko": "표면을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-7",
+     "lang": "ja",
+     "show": "覆[おお]っていた。",
+     "say": "覆っていた。",
+     "snd": "오옷테 이타",
+     "ko": "덮고 있었다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-8",
+     "lang": "ja",
+     "show": "神[かみ]の",
+     "say": "神の",
+     "snd": "카미노",
+     "ko": "하나님의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-9",
+     "lang": "ja",
+     "show": "霊[れい]が",
+     "say": "霊が",
+     "snd": "레-가",
+     "ko": "영이",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-10",
+     "lang": "ja",
+     "show": "水[みず]の",
+     "say": "水の",
+     "snd": "미즈노",
+     "ko": "물의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-11",
+     "lang": "ja",
+     "show": "面[おもて]を",
+     "say": "面を",
+     "snd": "오모테오",
+     "ko": "표면을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-12",
+     "lang": "ja",
+     "show": "舞[ま]っていた。",
+     "say": "舞っていた。",
+     "snd": "맛테 이타",
+     "ko": "감돌고 있었다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jt-1",
+     "lang": "ja",
+     "show": "この部屋[へや]は何[なに]もありませんね。",
+     "say": "この部屋は何もありませんね。",
+     "snd": "코노 헤야와 나니모 아리마센네.",
+     "ko": "이 방에는 아무것도 없네요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "2-jt-2",
+     "lang": "ja",
+     "show": "はい、まだ引[ひ]っ越[こ]したばかりです。",
+     "say": "はい、まだ引っ越したばかりです。",
+     "snd": "하이, 마다 힛코시타 바카리데스.",
+     "ko": "네, 아직 막 이사 왔어요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "2-jt-3",
+     "lang": "ja",
+     "show": "暗[くら]いですね。電気[でんき]をつけましょう。",
+     "say": "暗いですね。電気をつけましょう。",
+     "snd": "쿠라이데스네. 덴키오 츠케마쇼-.",
+     "ko": "어둡네요. 불을 켜요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "2-jk-1",
+     "lang": "ja",
+     "show": "何[なに]もありません",
+     "say": "何もありません",
+     "snd": "나니모 아리마센",
+     "ko": "아무것도 없습니다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "2-jk-2",
+     "lang": "ja",
+     "show": "電気[でんき]をつけましょう",
+     "say": "電気をつけましょう",
+     "snd": "덴키오 츠케마쇼-",
+     "ko": "불을 켭시다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "2-ep-1",
+     "lang": "en",
+     "show": "I was reading a book at night.",
+     "say": "I was reading a book at night.",
+     "snd": "아이 워즈 리-딩 어 북 앳 나잇.",
+     "ko": "나는 밤에 책을 읽고 있었다.",
+     "kind": "영어 구문 · was + 동사-ing (~하고 있었다)"
+    },
+    {
+     "id": "2-ep-2",
+     "lang": "en",
+     "show": "You look tired today.",
+     "say": "You look tired today.",
+     "snd": "유 룩 타이어드 투데이.",
+     "ko": "오늘 피곤해 보여요.",
+     "kind": "영어 구문 · look + 형용사 (~해 보이다)"
+    },
+    {
+     "id": "2-ev-1",
+     "lang": "en",
+     "show": "formless",
+     "say": "formless",
+     "snd": "폼-리스",
+     "ko": "(형) 형체가 없는",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-ev-2",
+     "lang": "en",
+     "show": "empty",
+     "say": "empty",
+     "snd": "엠티",
+     "ko": "(형) 빈, 텅 빈",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-ev-3",
+     "lang": "en",
+     "show": "darkness",
+     "say": "darkness",
+     "snd": "다-크니스",
+     "ko": "(명) 어둠",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-ev-4",
+     "lang": "en",
+     "show": "surface",
+     "say": "surface",
+     "snd": "서-피스",
+     "ko": "(명) 표면, 겉",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-ev-5",
+     "lang": "en",
+     "show": "hover",
+     "say": "hover",
+     "snd": "허버",
+     "ko": "(동) 맴돌다, 감돌다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-ev-6",
+     "lang": "en",
+     "show": "dark",
+     "say": "dark",
+     "snd": "다-크",
+     "ko": "(형) 어두운",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-ev-7",
+     "lang": "en",
+     "show": "switch",
+     "say": "switch",
+     "snd": "스위치",
+     "ko": "(명) 스위치",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-jp-1",
+     "lang": "ja",
+     "show": "朝[あさ]、雨[あめ]が降[ふ]っていた。",
+     "say": "朝、雨が降っていた。",
+     "snd": "아사, 아메가 훗테 이타.",
+     "ko": "아침에 비가 내리고 있었다.",
+     "kind": "일본어 구문 · ～ていた (~하고 있었다)"
+    },
+    {
+     "id": "2-jp-2",
+     "lang": "ja",
+     "show": "まだご飯[はん]を食[た]べていません。",
+     "say": "まだご飯を食べていません。",
+     "snd": "마다 고항오 타베테 이마센.",
+     "ko": "아직 밥을 안 먹었습니다.",
+     "kind": "일본어 구문 · まだ (아직)"
+    },
+    {
+     "id": "2-jv-1",
+     "lang": "ja",
+     "show": "形[かたち]",
+     "say": "形",
+     "snd": "카타치",
+     "ko": "형체, 모양",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-2",
+     "lang": "ja",
+     "show": "闇[やみ]",
+     "say": "闇",
+     "snd": "야미",
+     "ko": "어둠",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-3",
+     "lang": "ja",
+     "show": "霊[れい]",
+     "say": "霊",
+     "snd": "레-",
+     "ko": "영",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-4",
+     "lang": "ja",
+     "show": "水[みず]",
+     "say": "水",
+     "snd": "미즈",
+     "ko": "물",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-5",
+     "lang": "ja",
+     "show": "部屋[へや]",
+     "say": "部屋",
+     "snd": "헤야",
+     "ko": "방",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-6",
+     "lang": "ja",
+     "show": "暗[くら]い",
+     "say": "暗い",
+     "snd": "쿠라이",
+     "ko": "어둡다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-7",
+     "lang": "ja",
+     "show": "電気[でんき]",
+     "say": "電気",
+     "snd": "덴키",
+     "ko": "전기, 전등",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "ref": "1:3-5",
+   "title": "첫째 날 — 빛이 있으라",
+   "enRef": "1:3",
+   "jaRef": "1:3",
+   "enScene": "갑자기 정전된 집",
+   "jaScene": "정전된 밤",
+   "items": [
+    {
+     "id": "3-er",
+     "lang": "en",
+     "show": "God said, “Let there be light,” and there was light.",
+     "say": "God said, “Let there be light,” and there was light.",
+     "snd": "갓 세드, 렛 데어 비 라잇, 앤 데어 워즈 라잇.",
+     "ko": "하나님께서 말씀하셨다 / “빛이 있으라” / 그러자 빛이 있었다",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "3-er-1",
+     "lang": "en",
+     "show": "God said,",
+     "say": "God said,",
+     "snd": "갓 세드,",
+     "ko": "하나님께서 말씀하셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-er-2",
+     "lang": "en",
+     "show": "“Let there be light,”",
+     "say": "“Let there be light,”",
+     "snd": "렛 데어 비 라잇,",
+     "ko": "“빛이 있으라”",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-er-3",
+     "lang": "en",
+     "show": "and there was light.",
+     "say": "and there was light.",
+     "snd": "앤 데어 워즈 라잇.",
+     "ko": "그러자 빛이 있었다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-et-1",
+     "lang": "en",
+     "show": "The power is out. I can't see anything.",
+     "say": "The power is out. I can't see anything.",
+     "snd": "더 파워 이즈 아웃. 아이 캔ㅌ 씨- 애니띵.",
+     "ko": "정전이에요. 아무것도 안 보여요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "3-et-2",
+     "lang": "en",
+     "show": "Wait, let me find a flashlight.",
+     "say": "Wait, let me find a flashlight.",
+     "snd": "웨잇, 렛 미 파인드 어 플래시라잇.",
+     "ko": "잠깐만요, 손전등을 찾아볼게요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "3-et-3",
+     "lang": "en",
+     "show": "Good. Now there is light!",
+     "say": "Good. Now there is light!",
+     "snd": "굿. 나우 데어 이즈 라잇!",
+     "ko": "좋아요. 이제 불빛이 있네요!",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "3-et-4",
+     "lang": "en",
+     "show": "Thank you. Now I can see.",
+     "say": "Thank you. Now I can see.",
+     "snd": "땡큐. 나우 아이 캔 씨-.",
+     "ko": "고마워요. 이제 보여요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "3-ek-1",
+     "lang": "en",
+     "show": "The power is out.",
+     "say": "The power is out.",
+     "snd": "더 파워 이즈 아웃",
+     "ko": "정전이에요",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "3-ek-2",
+     "lang": "en",
+     "show": "Let me + 동사",
+     "say": "Let me + 동사",
+     "snd": "렛 미 ~",
+     "ko": "제가 ~할게요",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "3-jr",
+     "lang": "ja",
+     "show": "神[かみ]は言[い]われた。「光[ひかり]があれ。」すると、光[ひかり]があった。",
+     "say": "神は言われた。「光があれ。」すると、光があった。",
+     "snd": "카미와 이와레타 히카리가 아레 스루토 히카리가 앗타",
+     "ko": "하나님께서는 / 말씀하셨다 / “빛이 / 있으라” / 그러자 / 빛이 / 있었다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "3-jr-1",
+     "lang": "ja",
+     "show": "神[かみ]は",
+     "say": "神は",
+     "snd": "카미와",
+     "ko": "하나님께서는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-2",
+     "lang": "ja",
+     "show": "言[い]われた。",
+     "say": "言われた。",
+     "snd": "이와레타",
+     "ko": "말씀하셨다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-3",
+     "lang": "ja",
+     "show": "「光[ひかり]が",
+     "say": "「光が",
+     "snd": "히카리가",
+     "ko": "“빛이",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-4",
+     "lang": "ja",
+     "show": "あれ。」",
+     "say": "あれ。」",
+     "snd": "아레",
+     "ko": "있으라”",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-5",
+     "lang": "ja",
+     "show": "すると、",
+     "say": "すると、",
+     "snd": "스루토",
+     "ko": "그러자",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-6",
+     "lang": "ja",
+     "show": "光[ひかり]が",
+     "say": "光が",
+     "snd": "히카리가",
+     "ko": "빛이",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-7",
+     "lang": "ja",
+     "show": "あった。",
+     "say": "あった。",
+     "snd": "앗타",
+     "ko": "있었다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jt-1",
+     "lang": "ja",
+     "show": "停電[ていでん]です。何[なに]も見[み]えません。",
+     "say": "停電です。何も見えません。",
+     "snd": "테-덴데스. 나니모 미에마센.",
+     "ko": "정전이에요. 아무것도 안 보여요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "3-jt-2",
+     "lang": "ja",
+     "show": "大丈夫[だいじょうぶ]です。電気[でんき]がつきました。",
+     "say": "大丈夫です。電気がつきました。",
+     "snd": "다이죠-부데스. 덴키가 츠키마시타.",
+     "ko": "괜찮아요. 불이 들어왔어요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "3-jt-3",
+     "lang": "ja",
+     "show": "よかった。明[あか]るくなりましたね。",
+     "say": "よかった。明るくなりましたね。",
+     "snd": "요캇타. 아카루쿠 나리마시타네.",
+     "ko": "다행이다. 밝아졌네요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "3-jk-1",
+     "lang": "ja",
+     "show": "大丈夫[だいじょうぶ]です",
+     "say": "大丈夫です",
+     "snd": "다이죠-부데스",
+     "ko": "괜찮아요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "3-jk-2",
+     "lang": "ja",
+     "show": "よかった",
+     "say": "よかった",
+     "snd": "요캇타",
+     "ko": "다행이다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "3-ep-1",
+     "lang": "en",
+     "show": "There was a cat in the garden.",
+     "say": "There was a cat in the garden.",
+     "snd": "데어 워즈 어 캣 인 더 가-든.",
+     "ko": "정원에 고양이가 있었다.",
+     "kind": "영어 구문 · There was + 명사 (~이 있었다)"
+    },
+    {
+     "id": "3-ep-2",
+     "lang": "en",
+     "show": "Let me help you with that bag.",
+     "say": "Let me help you with that bag.",
+     "snd": "렛 미 헬프 유 위드 댓 백.",
+     "ko": "그 가방 제가 들어 드릴게요.",
+     "kind": "영어 구문 · Let me + 동사 (제가 ~할게요)"
+    },
+    {
+     "id": "3-ev-1",
+     "lang": "en",
+     "show": "say",
+     "say": "say",
+     "snd": "세이",
+     "ko": "(동) 말하다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "3-ev-2",
+     "lang": "en",
+     "show": "light",
+     "say": "light",
+     "snd": "라잇",
+     "ko": "(명) 빛",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "3-ev-3",
+     "lang": "en",
+     "show": "power",
+     "say": "power",
+     "snd": "파워",
+     "ko": "(명) 전기, 힘",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "3-ev-4",
+     "lang": "en",
+     "show": "find",
+     "say": "find",
+     "snd": "파인드",
+     "ko": "(동) 찾다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "3-ev-5",
+     "lang": "en",
+     "show": "flashlight",
+     "say": "flashlight",
+     "snd": "플래시라잇",
+     "ko": "(명) 손전등",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "3-ev-6",
+     "lang": "en",
+     "show": "see",
+     "say": "see",
+     "snd": "씨-",
+     "ko": "(동) 보다, 보이다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "3-jp-1",
+     "lang": "ja",
+     "show": "ボタンを押[お]した。すると、ドアが開[ひら]いた。",
+     "say": "ボタンを押した。すると、ドアが開いた。",
+     "snd": "보탄오 오시타. 스루토, 도아가 히라이타.",
+     "ko": "버튼을 눌렀다. 그러자 문이 열렸다.",
+     "kind": "일본어 구문 · すると (그러자)"
+    },
+    {
+     "id": "3-jp-2",
+     "lang": "ja",
+     "show": "空[そら]が明[あか]るくなった。",
+     "say": "空が明るくなった。",
+     "snd": "소라가 아카루쿠 낫타.",
+     "ko": "하늘이 밝아졌다.",
+     "kind": "일본어 구문 · ～くなる (~해지다)"
+    },
+    {
+     "id": "3-jv-1",
+     "lang": "ja",
+     "show": "言[い]う",
+     "say": "言う",
+     "snd": "이우",
+     "ko": "말하다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "3-jv-2",
+     "lang": "ja",
+     "show": "光[ひかり]",
+     "say": "光",
+     "snd": "히카리",
+     "ko": "빛",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "3-jv-3",
+     "lang": "ja",
+     "show": "停電[ていでん]",
+     "say": "停電",
+     "snd": "테-덴",
+     "ko": "정전",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "3-jv-4",
+     "lang": "ja",
+     "show": "見[み]える",
+     "say": "見える",
+     "snd": "미에루",
+     "ko": "보이다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "3-jv-5",
+     "lang": "ja",
+     "show": "大丈夫[だいじょうぶ]",
+     "say": "大丈夫",
+     "snd": "다이죠-부",
+     "ko": "괜찮음",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "3-jv-6",
+     "lang": "ja",
+     "show": "明[あか]るい",
+     "say": "明るい",
+     "snd": "아카루이",
+     "ko": "밝다",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "ref": "1:6-8",
+   "title": "둘째 날 — 물들 가운데 궁창",
+   "enRef": "1:8",
+   "jaRef": "1:8",
+   "enScene": "새 강아지 이름 짓기",
+   "jaScene": "이웃의 새 강아지",
+   "items": [
+    {
+     "id": "4-er",
+     "lang": "en",
+     "show": "God called the expanse “sky”. There was evening and there was morning, a second day.",
+     "say": "God called the expanse “sky”. There was evening and there was morning, a second day.",
+     "snd": "갓 콜-드 디 익스팬스 스카이. 데어 워즈 이-브닝 앤 데어 워즈 모-닝, 어 세컨드 데이.",
+     "ko": "하나님께서 궁창을 ‘하늘’이라 부르셨다 / 저녁이 있었고 / 아침이 있었다 / 둘째 날이었다",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "4-er-1",
+     "lang": "en",
+     "show": "God called the expanse “sky”.",
+     "say": "God called the expanse “sky”.",
+     "snd": "갓 콜-드 디 익스팬스 스카이.",
+     "ko": "하나님께서 궁창을 ‘하늘’이라 부르셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-er-2",
+     "lang": "en",
+     "show": "There was evening",
+     "say": "There was evening",
+     "snd": "데어 워즈 이-브닝",
+     "ko": "저녁이 있었고",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-er-3",
+     "lang": "en",
+     "show": "and there was morning,",
+     "say": "and there was morning,",
+     "snd": "앤 데어 워즈 모-닝,",
+     "ko": "아침이 있었다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-er-4",
+     "lang": "en",
+     "show": "a second day.",
+     "say": "a second day.",
+     "snd": "어 세컨드 데이.",
+     "ko": "둘째 날이었다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-et-1",
+     "lang": "en",
+     "show": "What did you call your new puppy?",
+     "say": "What did you call your new puppy?",
+     "snd": "왓 디쥬 콜- 유어 뉴- 퍼피?",
+     "ko": "새 강아지 이름을 뭐라고 지었어요?",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "4-et-2",
+     "lang": "en",
+     "show": "We called him Sky.",
+     "say": "We called him Sky.",
+     "snd": "위 콜-드 힘 스카이.",
+     "ko": "‘스카이’라고 불러요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "4-et-3",
+     "lang": "en",
+     "show": "Why Sky?",
+     "say": "Why Sky?",
+     "snd": "와이 스카이?",
+     "ko": "왜 스카이예요?",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "4-et-4",
+     "lang": "en",
+     "show": "His eyes are blue like the sky.",
+     "say": "His eyes are blue like the sky.",
+     "snd": "히즈 아이즈 아- 블루- 라이크 더 스카이.",
+     "ko": "눈이 하늘처럼 파래서요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "4-ek-1",
+     "lang": "en",
+     "show": "What did you call ~?",
+     "say": "What did you call ?",
+     "snd": "왓 디쥬 콜- ~?",
+     "ko": "~를 뭐라고 불렀어요?",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "4-ek-2",
+     "lang": "en",
+     "show": "like the sky",
+     "say": "like the sky",
+     "snd": "라이크 더 스카이",
+     "ko": "하늘처럼",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "4-jr",
+     "lang": "ja",
+     "show": "神[かみ]は大空[おおぞら]を「天[てん]」と呼[よ]ばれた。夕[ゆう]があり、朝[あさ]があった。第二日[だいににち]。",
+     "say": "神は大空を「天」と呼ばれた。夕があり、朝があった。第二日。",
+     "snd": "카미와 오-조라오 텐토 요바레타 유-가 아리 아사가 앗타 다이니니치",
+     "ko": "하나님께서는 / 궁창을 / ‘하늘’이라고 / 부르셨다 / 저녁이 있고 / 아침이 있었다 / 둘째 날",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "4-jr-1",
+     "lang": "ja",
+     "show": "神[かみ]は",
+     "say": "神は",
+     "snd": "카미와",
+     "ko": "하나님께서는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-2",
+     "lang": "ja",
+     "show": "大空[おおぞら]を",
+     "say": "大空を",
+     "snd": "오-조라오",
+     "ko": "궁창을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-3",
+     "lang": "ja",
+     "show": "「天[てん]」と",
+     "say": "「天」と",
+     "snd": "텐토",
+     "ko": "‘하늘’이라고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-4",
+     "lang": "ja",
+     "show": "呼[よ]ばれた。",
+     "say": "呼ばれた。",
+     "snd": "요바레타",
+     "ko": "부르셨다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-5",
+     "lang": "ja",
+     "show": "夕[ゆう]があり、",
+     "say": "夕があり、",
+     "snd": "유-가 아리",
+     "ko": "저녁이 있고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-6",
+     "lang": "ja",
+     "show": "朝[あさ]があった。",
+     "say": "朝があった。",
+     "snd": "아사가 앗타",
+     "ko": "아침이 있었다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-7",
+     "lang": "ja",
+     "show": "第二日[だいににち]。",
+     "say": "第二日。",
+     "snd": "다이니니치",
+     "ko": "둘째 날",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jt-1",
+     "lang": "ja",
+     "show": "犬[いぬ]の名前[なまえ]は何[なん]ですか。",
+     "say": "犬の名前は何ですか。",
+     "snd": "이누노 나마에와 난데스카.",
+     "ko": "강아지 이름이 뭐예요?",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "4-jt-2",
+     "lang": "ja",
+     "show": "「ソラ」と呼[よ]んでいます。",
+     "say": "「ソラ」と呼んでいます。",
+     "snd": "소라토 욘데 이마스.",
+     "ko": "‘소라(하늘)’라고 불러요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "4-jt-3",
+     "lang": "ja",
+     "show": "いい名前[なまえ]ですね。",
+     "say": "いい名前ですね。",
+     "snd": "이- 나마에데스네.",
+     "ko": "좋은 이름이네요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "4-jk-1",
+     "lang": "ja",
+     "show": "名前[なまえ]は何[なん]ですか",
+     "say": "名前は何ですか",
+     "snd": "나마에와 난데스카",
+     "ko": "이름이 뭐예요?",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "4-jk-2",
+     "lang": "ja",
+     "show": "～と呼[よ]んでいます",
+     "say": "と呼んでいます",
+     "snd": "토 욘데 이마스",
+     "ko": "~라고 불러요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "4-ep-1",
+     "lang": "en",
+     "show": "My friends call me Jay.",
+     "say": "My friends call me Jay.",
+     "snd": "마이 프렌즈 콜- 미 제이.",
+     "ko": "친구들은 나를 제이라고 불러.",
+     "kind": "영어 구문 · call + A + B (A를 B라고 부르다)"
+    },
+    {
+     "id": "4-ep-2",
+     "lang": "en",
+     "show": "She sings like a bird.",
+     "say": "She sings like a bird.",
+     "snd": "쉬 싱즈 라이크 어 버-드.",
+     "ko": "그녀는 새처럼 노래해.",
+     "kind": "영어 구문 · like + 명사 (~처럼)"
+    },
+    {
+     "id": "4-ev-1",
+     "lang": "en",
+     "show": "call",
+     "say": "call",
+     "snd": "콜-",
+     "ko": "(동) 부르다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-ev-2",
+     "lang": "en",
+     "show": "expanse",
+     "say": "expanse",
+     "snd": "익스팬스",
+     "ko": "(명) 넓은 공간, 궁창",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-ev-3",
+     "lang": "en",
+     "show": "sky",
+     "say": "sky",
+     "snd": "스카이",
+     "ko": "(명) 하늘",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-ev-4",
+     "lang": "en",
+     "show": "evening",
+     "say": "evening",
+     "snd": "이-브닝",
+     "ko": "(명) 저녁",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-ev-5",
+     "lang": "en",
+     "show": "morning",
+     "say": "morning",
+     "snd": "모-닝",
+     "ko": "(명) 아침",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-ev-6",
+     "lang": "en",
+     "show": "second",
+     "say": "second",
+     "snd": "세컨드",
+     "ko": "(형) 둘째의",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-ev-7",
+     "lang": "en",
+     "show": "puppy",
+     "say": "puppy",
+     "snd": "퍼피",
+     "ko": "(명) 강아지",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-jp-1",
+     "lang": "ja",
+     "show": "みんなは彼[かれ]を「タロ」と呼[よ]ぶ。",
+     "say": "みんなは彼を「タロ」と呼ぶ。",
+     "snd": "민나와 카레오 타로토 요부.",
+     "ko": "모두가 그를 ‘타로’라고 부른다.",
+     "kind": "일본어 구문 · ～と呼ぶ (~라고 부르다)"
+    },
+    {
+     "id": "4-jp-2",
+     "lang": "ja",
+     "show": "これは何[なん]ですか。",
+     "say": "これは何ですか。",
+     "snd": "코레와 난데스카.",
+     "ko": "이것은 무엇입니까?",
+     "kind": "일본어 구문 · ～は何ですか (~은 무엇입니까)"
+    },
+    {
+     "id": "4-jv-1",
+     "lang": "ja",
+     "show": "大空[おおぞら]",
+     "say": "大空",
+     "snd": "오-조라",
+     "ko": "넓은 하늘, 궁창",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "4-jv-2",
+     "lang": "ja",
+     "show": "呼[よ]ぶ",
+     "say": "呼ぶ",
+     "snd": "요부",
+     "ko": "부르다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "4-jv-3",
+     "lang": "ja",
+     "show": "夕[ゆう]",
+     "say": "夕",
+     "snd": "유-",
+     "ko": "저녁",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "4-jv-4",
+     "lang": "ja",
+     "show": "朝[あさ]",
+     "say": "朝",
+     "snd": "아사",
+     "ko": "아침",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "4-jv-5",
+     "lang": "ja",
+     "show": "犬[いぬ]",
+     "say": "犬",
+     "snd": "이누",
+     "ko": "개",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "4-jv-6",
+     "lang": "ja",
+     "show": "名前[なまえ]",
+     "say": "名前",
+     "snd": "나마에",
+     "ko": "이름",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "ref": "1:9-13",
+   "title": "셋째 날 — 드러난 땅과 식물",
+   "enRef": "1:9",
+   "jaRef": "1:9",
+   "enScene": "가족 모임 장소 정하기",
+   "jaScene": "가족 모임 약속",
+   "items": [
+    {
+     "id": "5-er",
+     "lang": "en",
+     "show": "God said, “Let the waters under the sky be gathered together to one place, and let the dry land appear;” and it was so.",
+     "say": "God said, “Let the waters under the sky be gathered together to one place, and let the dry land appear;” and it was so.",
+     "snd": "갓 세드, 렛 더 워-터즈 언더 더 스카이 비 개더드 투게더 투 원 플레이스, 앤 렛 더 드라이 랜드 어피어; 앤 잇 워즈 쏘-.",
+     "ko": "하나님께서 말씀하셨다. “하늘 아래의 물들은 / 한곳으로 함께 모이고 / 마른 땅이 드러나라” / 그러자 그대로 되었다",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "5-er-1",
+     "lang": "en",
+     "show": "God said, “Let the waters under the sky",
+     "say": "God said, “Let the waters under the sky",
+     "snd": "갓 세드, 렛 더 워-터즈 언더 더 스카이",
+     "ko": "하나님께서 말씀하셨다. “하늘 아래의 물들은",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-er-2",
+     "lang": "en",
+     "show": "be gathered together to one place,",
+     "say": "be gathered together to one place,",
+     "snd": "비 개더드 투게더 투 원 플레이스,",
+     "ko": "한곳으로 함께 모이고",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-er-3",
+     "lang": "en",
+     "show": "and let the dry land appear;”",
+     "say": "and let the dry land appear;”",
+     "snd": "앤 렛 더 드라이 랜드 어피어;",
+     "ko": "마른 땅이 드러나라”",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-er-4",
+     "lang": "en",
+     "show": "and it was so.",
+     "say": "and it was so.",
+     "snd": "앤 잇 워즈 쏘-.",
+     "ko": "그러자 그대로 되었다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-et-1",
+     "lang": "en",
+     "show": "Let's all meet in one place on Sunday.",
+     "say": "Let's all meet in one place on Sunday.",
+     "snd": "레츠 올- 미-트 인 원 플레이스 온 선데이.",
+     "ko": "일요일에 다 같이 한곳에서 만나요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "5-et-2",
+     "lang": "en",
+     "show": "Good idea. Where should we gather?",
+     "say": "Good idea. Where should we gather?",
+     "snd": "굿 아이디어. 웨어 슈드 위 개더?",
+     "ko": "좋은 생각이에요. 어디서 모일까요?",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "5-et-3",
+     "lang": "en",
+     "show": "At Grandma's house.",
+     "say": "At Grandma's house.",
+     "snd": "앳 그랜마즈 하우스.",
+     "ko": "할머니 댁에서요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "5-et-4",
+     "lang": "en",
+     "show": "Okay. I'll bring some fruit.",
+     "say": "Okay. I'll bring some fruit.",
+     "snd": "오-케이. 아일 브링 썸 프루-트.",
+     "ko": "좋아요. 제가 과일을 좀 가져갈게요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "5-ek-1",
+     "lang": "en",
+     "show": "Good idea.",
+     "say": "Good idea.",
+     "snd": "굿 아이디어",
+     "ko": "좋은 생각이에요",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "5-ek-2",
+     "lang": "en",
+     "show": "I'll bring ~.",
+     "say": "I'll bring .",
+     "snd": "아일 브링 ~",
+     "ko": "제가 ~을 가져갈게요",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "5-jr",
+     "lang": "ja",
+     "show": "「天[てん]の下[した]の水[みず]は一[ひと]つの場所[ばしょ]に集[あつ]まれ。乾[かわ]いた地[ち]が現[あらわ]れよ。」",
+     "say": "「天の下の水は一つの場所に集まれ。乾いた地が現れよ。」",
+     "snd": "텐노 시타노 미즈와 히토츠노 바쇼니 아츠마레 카와이타 치가 아라와레요",
+     "ko": "“하늘 / 아래의 / 물은 / 한 / 곳에 / 모이라 / 마른 / 땅이 / 드러나라”",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "5-jr-1",
+     "lang": "ja",
+     "show": "「天[てん]の",
+     "say": "「天の",
+     "snd": "텐노",
+     "ko": "“하늘",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-2",
+     "lang": "ja",
+     "show": "下[した]の",
+     "say": "下の",
+     "snd": "시타노",
+     "ko": "아래의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-3",
+     "lang": "ja",
+     "show": "水[みず]は",
+     "say": "水は",
+     "snd": "미즈와",
+     "ko": "물은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-4",
+     "lang": "ja",
+     "show": "一[ひと]つの",
+     "say": "一つの",
+     "snd": "히토츠노",
+     "ko": "한",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-5",
+     "lang": "ja",
+     "show": "場所[ばしょ]に",
+     "say": "場所に",
+     "snd": "바쇼니",
+     "ko": "곳에",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-6",
+     "lang": "ja",
+     "show": "集[あつ]まれ。",
+     "say": "集まれ。",
+     "snd": "아츠마레",
+     "ko": "모이라",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-7",
+     "lang": "ja",
+     "show": "乾[かわ]いた",
+     "say": "乾いた",
+     "snd": "카와이타",
+     "ko": "마른",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-8",
+     "lang": "ja",
+     "show": "地[ち]が",
+     "say": "地が",
+     "snd": "치가",
+     "ko": "땅이",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-9",
+     "lang": "ja",
+     "show": "現[あらわ]れよ。」",
+     "say": "現れよ。」",
+     "snd": "아라와레요",
+     "ko": "드러나라”",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jt-1",
+     "lang": "ja",
+     "show": "日曜日[にちようび]にみんなで集[あつ]まりましょう。",
+     "say": "日曜日にみんなで集まりましょう。",
+     "snd": "니치요-비니 민나데 아츠마리마쇼-.",
+     "ko": "일요일에 다 같이 모여요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "5-jt-2",
+     "lang": "ja",
+     "show": "いいですね。場所[ばしょ]はどこですか。",
+     "say": "いいですね。場所はどこですか。",
+     "snd": "이-데스네. 바쇼와 도코데스카.",
+     "ko": "좋아요. 장소는 어디예요?",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "5-jt-3",
+     "lang": "ja",
+     "show": "おばあさんの家[いえ]です。",
+     "say": "おばあさんの家です。",
+     "snd": "오바-산노 이에데스.",
+     "ko": "할머니 댁이에요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "5-jk-1",
+     "lang": "ja",
+     "show": "～ましょう",
+     "say": "ましょう",
+     "snd": "마쇼-",
+     "ko": "~합시다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "5-jk-2",
+     "lang": "ja",
+     "show": "どこですか",
+     "say": "どこですか",
+     "snd": "도코데스카",
+     "ko": "어디예요?",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "5-ep-1",
+     "lang": "en",
+     "show": "Let the children play outside.",
+     "say": "Let the children play outside.",
+     "snd": "렛 더 칠드런 플레이 아웃사이드.",
+     "ko": "아이들이 밖에서 놀게 해 주세요.",
+     "kind": "영어 구문 · let + 명사 + 동사원형 (~가 ~하게 하다)"
+    },
+    {
+     "id": "5-ep-2",
+     "lang": "en",
+     "show": "Where should we eat lunch?",
+     "say": "Where should we eat lunch?",
+     "snd": "웨어 슈드 위 이-트 런치?",
+     "ko": "점심은 어디서 먹을까요?",
+     "kind": "영어 구문 · Where should we + 동사? (어디서 ~할까요?)"
+    },
+    {
+     "id": "5-ev-1",
+     "lang": "en",
+     "show": "gather",
+     "say": "gather",
+     "snd": "개더",
+     "ko": "(동) 모이다, 모으다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-ev-2",
+     "lang": "en",
+     "show": "together",
+     "say": "together",
+     "snd": "투게더",
+     "ko": "(부) 함께",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-ev-3",
+     "lang": "en",
+     "show": "place",
+     "say": "place",
+     "snd": "플레이스",
+     "ko": "(명) 곳, 장소",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-ev-4",
+     "lang": "en",
+     "show": "dry",
+     "say": "dry",
+     "snd": "드라이",
+     "ko": "(형) 마른",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-ev-5",
+     "lang": "en",
+     "show": "land",
+     "say": "land",
+     "snd": "랜드",
+     "ko": "(명) 땅, 육지",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-ev-6",
+     "lang": "en",
+     "show": "appear",
+     "say": "appear",
+     "snd": "어피어",
+     "ko": "(동) 나타나다, 드러나다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-ev-7",
+     "lang": "en",
+     "show": "bring",
+     "say": "bring",
+     "snd": "브링",
+     "ko": "(동) 가져오다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-jp-1",
+     "lang": "ja",
+     "show": "一緒[いっしょ]に行[い]きましょう。",
+     "say": "一緒に行きましょう。",
+     "snd": "잇쇼니 이키마쇼-.",
+     "ko": "같이 갑시다.",
+     "kind": "일본어 구문 · ～ましょう (~합시다)"
+    },
+    {
+     "id": "5-jp-2",
+     "lang": "ja",
+     "show": "駅[えき]はどこですか。",
+     "say": "駅はどこですか。",
+     "snd": "에키와 도코데스카.",
+     "ko": "역은 어디입니까?",
+     "kind": "일본어 구문 · ～はどこですか (~은 어디입니까)"
+    },
+    {
+     "id": "5-jv-1",
+     "lang": "ja",
+     "show": "下[した]",
+     "say": "下",
+     "snd": "시타",
+     "ko": "아래",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-2",
+     "lang": "ja",
+     "show": "一[ひと]つ",
+     "say": "一つ",
+     "snd": "히토츠",
+     "ko": "하나",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-3",
+     "lang": "ja",
+     "show": "場所[ばしょ]",
+     "say": "場所",
+     "snd": "바쇼",
+     "ko": "장소, 곳",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-4",
+     "lang": "ja",
+     "show": "集[あつ]まる",
+     "say": "集まる",
+     "snd": "아츠마루",
+     "ko": "모이다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-5",
+     "lang": "ja",
+     "show": "乾[かわ]く",
+     "say": "乾く",
+     "snd": "카와쿠",
+     "ko": "마르다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-6",
+     "lang": "ja",
+     "show": "現[あらわ]れる",
+     "say": "現れる",
+     "snd": "아라와레루",
+     "ko": "나타나다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-7",
+     "lang": "ja",
+     "show": "日曜日[にちようび]",
+     "say": "日曜日",
+     "snd": "니치요-비",
+     "ko": "일요일",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "ref": "1:14-19",
+   "title": "넷째 날 — 하늘의 빛들",
+   "enRef": "1:16",
+   "jaRef": "1:16",
+   "enScene": "밤하늘 구경",
+   "jaScene": "밤 산책",
+   "items": [
+    {
+     "id": "6-er",
+     "lang": "en",
+     "show": "God made the two great lights: the greater light to rule the day, and the lesser light to rule the night. He also made the stars.",
+     "say": "God made the two great lights: the greater light to rule the day, and the lesser light to rule the night. He also made the stars.",
+     "snd": "갓 메이드 더 투- 그레잇 라이츠: 더 그레이터 라잇 투 룰- 더 데이, 앤 더 레서 라잇 투 룰- 더 나잇. 히 올-소 메이드 더 스타-즈.",
+     "ko": "하나님께서 두 큰 빛을 만드셨다 / 낮을 다스릴 더 큰 빛과 / 밤을 다스릴 더 작은 빛을 / 그분은 별들도 만드셨다",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "6-er-1",
+     "lang": "en",
+     "show": "God made the two great lights:",
+     "say": "God made the two great lights:",
+     "snd": "갓 메이드 더 투- 그레잇 라이츠:",
+     "ko": "하나님께서 두 큰 빛을 만드셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-er-2",
+     "lang": "en",
+     "show": "the greater light to rule the day,",
+     "say": "the greater light to rule the day,",
+     "snd": "더 그레이터 라잇 투 룰- 더 데이,",
+     "ko": "낮을 다스릴 더 큰 빛과",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-er-3",
+     "lang": "en",
+     "show": "and the lesser light to rule the night.",
+     "say": "and the lesser light to rule the night.",
+     "snd": "앤 더 레서 라잇 투 룰- 더 나잇.",
+     "ko": "밤을 다스릴 더 작은 빛을",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-er-4",
+     "lang": "en",
+     "show": "He also made the stars.",
+     "say": "He also made the stars.",
+     "snd": "히 올-소 메이드 더 스타-즈.",
+     "ko": "그분은 별들도 만드셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-et-1",
+     "lang": "en",
+     "show": "Look! The moon is so bright tonight.",
+     "say": "Look! The moon is so bright tonight.",
+     "snd": "룩! 더 문- 이즈 쏘- 브라잇 투나잇.",
+     "ko": "봐요! 오늘 밤 달이 정말 밝아요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "6-et-2",
+     "lang": "en",
+     "show": "I can see many stars, too.",
+     "say": "I can see many stars, too.",
+     "snd": "아이 캔 씨- 매니 스타-즈, 투-.",
+     "ko": "별도 많이 보여요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "6-et-3",
+     "lang": "en",
+     "show": "The sky is clearer than yesterday.",
+     "say": "The sky is clearer than yesterday.",
+     "snd": "더 스카이 이즈 클리어러 댄 예스터데이.",
+     "ko": "하늘이 어제보다 더 맑아요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "6-et-4",
+     "lang": "en",
+     "show": "Let's stay out a little longer.",
+     "say": "Let's stay out a little longer.",
+     "snd": "레츠 스테이 아웃 어 리틀 롱거.",
+     "ko": "조금만 더 밖에 있어요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "6-ek-1",
+     "lang": "en",
+     "show": "so bright",
+     "say": "so bright",
+     "snd": "쏘- 브라잇",
+     "ko": "정말 밝은",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "6-ek-2",
+     "lang": "en",
+     "show": "clearer than ~",
+     "say": "clearer than ",
+     "snd": "클리어러 댄 ~",
+     "ko": "~보다 더 맑은",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "6-jr",
+     "lang": "ja",
+     "show": "神[かみ]は二[ふた]つの大[おお]きな光[ひか]るものを造[つく]られた。",
+     "say": "神は二つの大きな光るものを造られた。",
+     "snd": "카미와 후타츠노 오-키나 히카루 모노오 츠쿠라레타",
+     "ko": "하나님께서는 / 두 개의 / 큰 / 빛나는 / 것을 / 만드셨다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "6-jr-1",
+     "lang": "ja",
+     "show": "神[かみ]は",
+     "say": "神は",
+     "snd": "카미와",
+     "ko": "하나님께서는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jr-2",
+     "lang": "ja",
+     "show": "二[ふた]つの",
+     "say": "二つの",
+     "snd": "후타츠노",
+     "ko": "두 개의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jr-3",
+     "lang": "ja",
+     "show": "大[おお]きな",
+     "say": "大きな",
+     "snd": "오-키나",
+     "ko": "큰",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jr-4",
+     "lang": "ja",
+     "show": "光[ひか]る",
+     "say": "光る",
+     "snd": "히카루",
+     "ko": "빛나는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jr-5",
+     "lang": "ja",
+     "show": "ものを",
+     "say": "ものを",
+     "snd": "모노오",
+     "ko": "것을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jr-6",
+     "lang": "ja",
+     "show": "造[つく]られた。",
+     "say": "造られた。",
+     "snd": "츠쿠라레타",
+     "ko": "만드셨다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jt-1",
+     "lang": "ja",
+     "show": "今夜[こんや]は月[つき]がきれいですね。",
+     "say": "今夜は月がきれいですね。",
+     "snd": "콘야와 츠키가 키레-데스네.",
+     "ko": "오늘 밤 달이 예쁘네요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "6-jt-2",
+     "lang": "ja",
+     "show": "星[ほし]もたくさん見[み]えます。",
+     "say": "星もたくさん見えます。",
+     "snd": "호시모 탁산 미에마스.",
+     "ko": "별도 많이 보여요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "6-jt-3",
+     "lang": "ja",
+     "show": "もう少[すこ]し外[そと]にいましょう。",
+     "say": "もう少し外にいましょう。",
+     "snd": "모- 스코시 소토니 이마쇼-.",
+     "ko": "조금 더 밖에 있어요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "6-jk-1",
+     "lang": "ja",
+     "show": "きれいですね",
+     "say": "きれいですね",
+     "snd": "키레-데스네",
+     "ko": "예쁘네요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "6-jk-2",
+     "lang": "ja",
+     "show": "たくさん",
+     "say": "たくさん",
+     "snd": "탁산",
+     "ko": "많이",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "6-ep-1",
+     "lang": "en",
+     "show": "This bag is lighter than that one.",
+     "say": "This bag is lighter than that one.",
+     "snd": "디스 백 이즈 라이터 댄 댓 원.",
+     "ko": "이 가방이 저것보다 더 가벼워요.",
+     "kind": "영어 구문 · 비교급 + than (~보다 더)"
+    },
+    {
+     "id": "6-ep-2",
+     "lang": "en",
+     "show": "I went out to buy some milk.",
+     "say": "I went out to buy some milk.",
+     "snd": "아이 웬트 아웃 투 바이 썸 밀크.",
+     "ko": "우유를 사려고 나갔어요.",
+     "kind": "영어 구문 · to + 동사 (~하려고)"
+    },
+    {
+     "id": "6-ev-1",
+     "lang": "en",
+     "show": "great",
+     "say": "great",
+     "snd": "그레잇",
+     "ko": "(형) 큰, 훌륭한",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-ev-2",
+     "lang": "en",
+     "show": "rule",
+     "say": "rule",
+     "snd": "룰-",
+     "ko": "(동) 다스리다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-ev-3",
+     "lang": "en",
+     "show": "lesser",
+     "say": "lesser",
+     "snd": "레서",
+     "ko": "(형) 더 작은",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-ev-4",
+     "lang": "en",
+     "show": "star",
+     "say": "star",
+     "snd": "스타-",
+     "ko": "(명) 별",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-ev-5",
+     "lang": "en",
+     "show": "moon",
+     "say": "moon",
+     "snd": "문-",
+     "ko": "(명) 달",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-ev-6",
+     "lang": "en",
+     "show": "bright",
+     "say": "bright",
+     "snd": "브라잇",
+     "ko": "(형) 밝은",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-ev-7",
+     "lang": "en",
+     "show": "clear",
+     "say": "clear",
+     "snd": "클리어",
+     "ko": "(형) 맑은",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-jp-1",
+     "lang": "ja",
+     "show": "大[おお]きな木[き]があります。",
+     "say": "大きな木があります。",
+     "snd": "오-키나 키가 아리마스.",
+     "ko": "큰 나무가 있습니다.",
+     "kind": "일본어 구문 · 大きな + 명사 (큰 ~)"
+    },
+    {
+     "id": "6-jp-2",
+     "lang": "ja",
+     "show": "私[わたし]も行[い]きます。",
+     "say": "私も行きます。",
+     "snd": "와타시모 이키마스.",
+     "ko": "저도 갑니다.",
+     "kind": "일본어 구문 · ～も (~도)"
+    },
+    {
+     "id": "6-jv-1",
+     "lang": "ja",
+     "show": "二[ふた]つ",
+     "say": "二つ",
+     "snd": "후타츠",
+     "ko": "둘",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "6-jv-2",
+     "lang": "ja",
+     "show": "大[おお]きな",
+     "say": "大きな",
+     "snd": "오-키나",
+     "ko": "큰",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "6-jv-3",
+     "lang": "ja",
+     "show": "光[ひか]る",
+     "say": "光る",
+     "snd": "히카루",
+     "ko": "빛나다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "6-jv-4",
+     "lang": "ja",
+     "show": "造[つく]る",
+     "say": "造る",
+     "snd": "츠쿠루",
+     "ko": "만들다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "6-jv-5",
+     "lang": "ja",
+     "show": "月[つき]",
+     "say": "月",
+     "snd": "츠키",
+     "ko": "달",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "6-jv-6",
+     "lang": "ja",
+     "show": "星[ほし]",
+     "say": "星",
+     "snd": "호시",
+     "ko": "별",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "6-jv-7",
+     "lang": "ja",
+     "show": "外[そと]",
+     "say": "外",
+     "snd": "소토",
+     "ko": "밖",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "ref": "1:20-25",
+   "title": "다섯째·여섯째 날 — 물고기와 새, 땅의 짐승",
+   "enRef": "1:22",
+   "jaRef": "1:22",
+   "enScene": "이웃집 텃밭 구경",
+   "jaScene": "이웃집 정원",
+   "items": [
+    {
+     "id": "7-er",
+     "lang": "en",
+     "show": "God blessed them, saying, “Be fruitful, and multiply, and fill the waters in the seas, and let birds multiply on the earth.”",
+     "say": "God blessed them, saying, “Be fruitful, and multiply, and fill the waters in the seas, and let birds multiply on the earth.”",
+     "snd": "갓 블레스트 뎀, 세잉, 비 프루-트풀, 앤 멀티플라이, 앤 필 더 워-터즈 인 더 씨-즈, 앤 렛 버-즈 멀티플라이 온 디 어-쓰.",
+     "ko": "하나님께서 그들에게 복을 주시며 말씀하셨다 / “열매를 많이 맺고 번성하라 / 바다의 물을 채우라 / 새들은 땅 위에서 번성하라”",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "7-er-1",
+     "lang": "en",
+     "show": "God blessed them, saying,",
+     "say": "God blessed them, saying,",
+     "snd": "갓 블레스트 뎀, 세잉,",
+     "ko": "하나님께서 그들에게 복을 주시며 말씀하셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-er-2",
+     "lang": "en",
+     "show": "“Be fruitful, and multiply,",
+     "say": "“Be fruitful, and multiply,",
+     "snd": "비 프루-트풀, 앤 멀티플라이,",
+     "ko": "“열매를 많이 맺고 번성하라",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-er-3",
+     "lang": "en",
+     "show": "and fill the waters in the seas,",
+     "say": "and fill the waters in the seas,",
+     "snd": "앤 필 더 워-터즈 인 더 씨-즈,",
+     "ko": "바다의 물을 채우라",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-er-4",
+     "lang": "en",
+     "show": "and let birds multiply on the earth.”",
+     "say": "and let birds multiply on the earth.”",
+     "snd": "앤 렛 버-즈 멀티플라이 온 디 어-쓰.",
+     "ko": "새들은 땅 위에서 번성하라”",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-et-1",
+     "lang": "en",
+     "show": "Your garden is full of flowers!",
+     "say": "Your garden is full of flowers!",
+     "snd": "유어 가-든 이즈 풀 오브 플라워즈!",
+     "ko": "정원에 꽃이 가득하네요!",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "7-et-2",
+     "lang": "en",
+     "show": "Thanks. I planted the seeds last spring.",
+     "say": "Thanks. I planted the seeds last spring.",
+     "snd": "땡스. 아이 플랜티드 더 씨-즈 래스트 스프링.",
+     "ko": "고마워요. 지난봄에 씨를 심었어요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "7-et-3",
+     "lang": "en",
+     "show": "The birds love it, too.",
+     "say": "The birds love it, too.",
+     "snd": "더 버-즈 러브 잇, 투-.",
+     "ko": "새들도 좋아하네요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "7-et-4",
+     "lang": "en",
+     "show": "Yes, they come every morning, singing.",
+     "say": "Yes, they come every morning, singing.",
+     "snd": "예스, 데이 컴 에브리 모-닝, 싱잉.",
+     "ko": "네, 매일 아침 노래하며 와요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "7-ek-1",
+     "lang": "en",
+     "show": "be full of ~",
+     "say": "be full of ",
+     "snd": "비 풀 오브 ~",
+     "ko": "~로 가득하다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "7-ek-2",
+     "lang": "en",
+     "show": "every morning",
+     "say": "every morning",
+     "snd": "에브리 모-닝",
+     "ko": "매일 아침",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "7-jr",
+     "lang": "ja",
+     "show": "神[かみ]はそれらを祝福[しゅくふく]して言[い]われた。「生[う]めよ。増[ふ]えよ。海[うみ]の水[みず]に満[み]ちよ。また、鳥[とり]は地[ち]の上[うえ]に増[ふ]えよ。」",
+     "say": "神はそれらを祝福して言われた。「生めよ。増えよ。海の水に満ちよ。また、鳥は地の上に増えよ。」",
+     "snd": "카미와 소레라오 슈쿠후쿠시테 이와레타 우메요 후에요 우미노 미즈니 미치요 마타 토리와 치노 우에니 후에요",
+     "ko": "하나님께서는 / 그것들을 / 축복하시고 / 말씀하셨다 / “낳아라 / 늘어나라 / 바다의 물에 / 가득하라 / 또 / 새는 / 땅 위에 / 늘어나라”",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "7-jr-1",
+     "lang": "ja",
+     "show": "神[かみ]は",
+     "say": "神は",
+     "snd": "카미와",
+     "ko": "하나님께서는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-2",
+     "lang": "ja",
+     "show": "それらを",
+     "say": "それらを",
+     "snd": "소레라오",
+     "ko": "그것들을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-3",
+     "lang": "ja",
+     "show": "祝福[しゅくふく]して",
+     "say": "祝福して",
+     "snd": "슈쿠후쿠시테",
+     "ko": "축복하시고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-4",
+     "lang": "ja",
+     "show": "言[い]われた。",
+     "say": "言われた。",
+     "snd": "이와레타",
+     "ko": "말씀하셨다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-5",
+     "lang": "ja",
+     "show": "「生[う]めよ。",
+     "say": "「生めよ。",
+     "snd": "우메요",
+     "ko": "“낳아라",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-6",
+     "lang": "ja",
+     "show": "増[ふ]えよ。",
+     "say": "増えよ。",
+     "snd": "후에요",
+     "ko": "늘어나라",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-7",
+     "lang": "ja",
+     "show": "海[うみ]の水[みず]に",
+     "say": "海の水に",
+     "snd": "우미노 미즈니",
+     "ko": "바다의 물에",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-8",
+     "lang": "ja",
+     "show": "満[み]ちよ。",
+     "say": "満ちよ。",
+     "snd": "미치요",
+     "ko": "가득하라",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-9",
+     "lang": "ja",
+     "show": "また、",
+     "say": "また、",
+     "snd": "마타",
+     "ko": "또",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-10",
+     "lang": "ja",
+     "show": "鳥[とり]は",
+     "say": "鳥は",
+     "snd": "토리와",
+     "ko": "새는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-11",
+     "lang": "ja",
+     "show": "地[ち]の上[うえ]に",
+     "say": "地の上に",
+     "snd": "치노 우에니",
+     "ko": "땅 위에",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-12",
+     "lang": "ja",
+     "show": "増[ふ]えよ。」",
+     "say": "増えよ。」",
+     "snd": "후에요",
+     "ko": "늘어나라”",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jt-1",
+     "lang": "ja",
+     "show": "庭[にわ]に花[はな]がいっぱいですね。",
+     "say": "庭に花がいっぱいですね。",
+     "snd": "니와니 하나가 잇파이데스네.",
+     "ko": "정원에 꽃이 가득하네요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "7-jt-2",
+     "lang": "ja",
+     "show": "ありがとうございます。毎朝[まいあさ]、鳥[とり]も来[き]ます。",
+     "say": "ありがとうございます。毎朝、鳥も来ます。",
+     "snd": "아리가토- 고자이마스. 마이아사, 토리모 키마스.",
+     "ko": "고맙습니다. 매일 아침 새도 와요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "7-jt-3",
+     "lang": "ja",
+     "show": "にぎやかでいいですね。",
+     "say": "にぎやかでいいですね。",
+     "snd": "니기야카데 이-데스네.",
+     "ko": "북적북적해서 좋네요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "7-jk-1",
+     "lang": "ja",
+     "show": "いっぱい",
+     "say": "いっぱい",
+     "snd": "잇파이",
+     "ko": "가득",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "7-jk-2",
+     "lang": "ja",
+     "show": "毎朝[まいあさ]",
+     "say": "毎朝",
+     "snd": "마이아사",
+     "ko": "매일 아침",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "7-ep-1",
+     "lang": "en",
+     "show": "The box is full of toys.",
+     "say": "The box is full of toys.",
+     "snd": "더 박스 이즈 풀 오브 토이즈.",
+     "ko": "상자에 장난감이 가득해요.",
+     "kind": "영어 구문 · be full of + 명사 (~로 가득하다)"
+    },
+    {
+     "id": "7-ep-2",
+     "lang": "en",
+     "show": "He came in, smiling.",
+     "say": "He came in, smiling.",
+     "snd": "히 케임 인, 스마일링.",
+     "ko": "그는 웃으면서 들어왔다.",
+     "kind": "영어 구문 · 문장, 동사-ing (~하면서)"
+    },
+    {
+     "id": "7-ev-1",
+     "lang": "en",
+     "show": "bless",
+     "say": "bless",
+     "snd": "블레스",
+     "ko": "(동) 복을 주다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-ev-2",
+     "lang": "en",
+     "show": "fruitful",
+     "say": "fruitful",
+     "snd": "프루-트풀",
+     "ko": "(형) 열매가 많은",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-ev-3",
+     "lang": "en",
+     "show": "multiply",
+     "say": "multiply",
+     "snd": "멀티플라이",
+     "ko": "(동) 번성하다, 늘어나다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-ev-4",
+     "lang": "en",
+     "show": "fill",
+     "say": "fill",
+     "snd": "필",
+     "ko": "(동) 채우다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-ev-5",
+     "lang": "en",
+     "show": "sea",
+     "say": "sea",
+     "snd": "씨-",
+     "ko": "(명) 바다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-ev-6",
+     "lang": "en",
+     "show": "garden",
+     "say": "garden",
+     "snd": "가-든",
+     "ko": "(명) 정원",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-ev-7",
+     "lang": "en",
+     "show": "plant",
+     "say": "plant",
+     "snd": "플랜트",
+     "ko": "(동) 심다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-jp-1",
+     "lang": "ja",
+     "show": "箱[はこ]におもちゃがいっぱいです。",
+     "say": "箱におもちゃがいっぱいです。",
+     "snd": "하코니 오모차가 잇파이데스.",
+     "ko": "상자에 장난감이 가득합니다.",
+     "kind": "일본어 구문 · ～に～がいっぱい (~에 ~이 가득)"
+    },
+    {
+     "id": "7-jp-2",
+     "lang": "ja",
+     "show": "顔[かお]を洗[あら]って、ご飯[はん]を食[た]べます。",
+     "say": "顔を洗って、ご飯を食べます。",
+     "snd": "카오오 아랏테, 고항오 타베마스.",
+     "ko": "세수하고 밥을 먹습니다.",
+     "kind": "일본어 구문 · ～て、～ (~하고 ~)"
+    },
+    {
+     "id": "7-jv-1",
+     "lang": "ja",
+     "show": "祝福[しゅくふく]",
+     "say": "祝福",
+     "snd": "슈쿠후쿠",
+     "ko": "축복",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "7-jv-2",
+     "lang": "ja",
+     "show": "増[ふ]える",
+     "say": "増える",
+     "snd": "후에루",
+     "ko": "늘다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "7-jv-3",
+     "lang": "ja",
+     "show": "海[うみ]",
+     "say": "海",
+     "snd": "우미",
+     "ko": "바다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "7-jv-4",
+     "lang": "ja",
+     "show": "満[み]ちる",
+     "say": "満ちる",
+     "snd": "미치루",
+     "ko": "가득 차다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "7-jv-5",
+     "lang": "ja",
+     "show": "鳥[とり]",
+     "say": "鳥",
+     "snd": "토리",
+     "ko": "새",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "7-jv-6",
+     "lang": "ja",
+     "show": "庭[にわ]",
+     "say": "庭",
+     "snd": "니와",
+     "ko": "정원, 마당",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "7-jv-7",
+     "lang": "ja",
+     "show": "花[はな]",
+     "say": "花",
+     "snd": "하나",
+     "ko": "꽃",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "ref": "1:26-28",
+   "title": "하나님의 형상대로 지으신 사람",
+   "enRef": "1:27",
+   "jaRef": "1:27",
+   "enScene": "아빠를 꼭 닮은 아이",
+   "jaScene": "아빠를 닮은 아이",
+   "items": [
+    {
+     "id": "8-er",
+     "lang": "en",
+     "show": "God created man in his own image. In God’s image he created him; male and female he created them.",
+     "say": "God created man in his own image. In God’s image he created him; male and female he created them.",
+     "snd": "갓 크리에이티드 맨 인 히즈 오운 이미지. 인 갓즈 이미지 히 크리에이티드 힘; 메일 앤 피-메일 히 크리에이티드 뎀.",
+     "ko": "하나님께서 자기 형상대로 사람을 창조하셨다 / 하나님의 형상대로 그를 창조하시고 / 남자와 여자로 그들을 창조하셨다",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "8-er-1",
+     "lang": "en",
+     "show": "God created man in his own image.",
+     "say": "God created man in his own image.",
+     "snd": "갓 크리에이티드 맨 인 히즈 오운 이미지.",
+     "ko": "하나님께서 자기 형상대로 사람을 창조하셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-er-2",
+     "lang": "en",
+     "show": "In God’s image he created him;",
+     "say": "In God’s image he created him;",
+     "snd": "인 갓즈 이미지 히 크리에이티드 힘;",
+     "ko": "하나님의 형상대로 그를 창조하시고",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-er-3",
+     "lang": "en",
+     "show": "male and female he created them.",
+     "say": "male and female he created them.",
+     "snd": "메일 앤 피-메일 히 크리에이티드 뎀.",
+     "ko": "남자와 여자로 그들을 창조하셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-et-1",
+     "lang": "en",
+     "show": "Your son looks just like you.",
+     "say": "Your son looks just like you.",
+     "snd": "유어 썬 룩스 저스트 라이크 유.",
+     "ko": "아드님이 당신을 꼭 닮았네요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "8-et-2",
+     "lang": "en",
+     "show": "Everyone says that. He has my eyes.",
+     "say": "Everyone says that. He has my eyes.",
+     "snd": "에브리원 세즈 댓. 히 해즈 마이 아이즈.",
+     "ko": "다들 그렇게 말해요. 눈이 저를 닮았어요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "8-et-3",
+     "lang": "en",
+     "show": "And he smiles like his mother.",
+     "say": "And he smiles like his mother.",
+     "snd": "앤 히 스마일즈 라이크 히즈 마더.",
+     "ko": "웃는 건 엄마를 닮았고요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "8-et-4",
+     "lang": "en",
+     "show": "He's a gift from God.",
+     "say": "He's a gift from God.",
+     "snd": "히즈 어 기프트 프럼 갓.",
+     "ko": "하나님이 주신 선물이에요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "8-ek-1",
+     "lang": "en",
+     "show": "look just like ~",
+     "say": "look just like ",
+     "snd": "룩 저스트 라이크 ~",
+     "ko": "~를 꼭 닮다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "8-ek-2",
+     "lang": "en",
+     "show": "a gift from God",
+     "say": "a gift from God",
+     "snd": "어 기프트 프럼 갓",
+     "ko": "하나님이 주신 선물",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "8-jr",
+     "lang": "ja",
+     "show": "神[かみ]はご自身[じしん]のかたちに人[ひと]を創造[そうぞう]された。神[かみ]のかたちにこれを創造[そうぞう]し、男[おとこ]と女[おんな]に彼[かれ]らを創造[そうぞう]された。",
+     "say": "神はご自身のかたちに人を創造された。神のかたちにこれを創造し、男と女に彼らを創造された。",
+     "snd": "카미와 고지신노 카타치니 히토오 소-조- 사레타 카미노 카타치니 코레오 소-조-시 오토코토 온나니 카레라오 소-조- 사레타",
+     "ko": "하나님께서는 / 자신의 / 형상대로 / 사람을 / 창조하셨다 / 하나님의 형상대로 / 이를 창조하시고 / 남자와 여자로 / 그들을 / 창조하셨다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "8-jr-1",
+     "lang": "ja",
+     "show": "神[かみ]は",
+     "say": "神は",
+     "snd": "카미와",
+     "ko": "하나님께서는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-2",
+     "lang": "ja",
+     "show": "ご自身[じしん]の",
+     "say": "ご自身の",
+     "snd": "고지신노",
+     "ko": "자신의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-3",
+     "lang": "ja",
+     "show": "かたちに",
+     "say": "かたちに",
+     "snd": "카타치니",
+     "ko": "형상대로",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-4",
+     "lang": "ja",
+     "show": "人[ひと]を",
+     "say": "人を",
+     "snd": "히토오",
+     "ko": "사람을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-5",
+     "lang": "ja",
+     "show": "創造[そうぞう]された。",
+     "say": "創造された。",
+     "snd": "소-조- 사레타",
+     "ko": "창조하셨다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-6",
+     "lang": "ja",
+     "show": "神[かみ]のかたちに",
+     "say": "神のかたちに",
+     "snd": "카미노 카타치니",
+     "ko": "하나님의 형상대로",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-7",
+     "lang": "ja",
+     "show": "これを創造[そうぞう]し、",
+     "say": "これを創造し、",
+     "snd": "코레오 소-조-시",
+     "ko": "이를 창조하시고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-8",
+     "lang": "ja",
+     "show": "男[おとこ]と女[おんな]に",
+     "say": "男と女に",
+     "snd": "오토코토 온나니",
+     "ko": "남자와 여자로",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-9",
+     "lang": "ja",
+     "show": "彼[かれ]らを",
+     "say": "彼らを",
+     "snd": "카레라오",
+     "ko": "그들을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-10",
+     "lang": "ja",
+     "show": "創造[そうぞう]された。",
+     "say": "創造された。",
+     "snd": "소-조- 사레타",
+     "ko": "창조하셨다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jt-1",
+     "lang": "ja",
+     "show": "息子[むすこ]さんはお父[とう]さんに似[に]ていますね。",
+     "say": "息子さんはお父さんに似ていますね。",
+     "snd": "무스코상와 오토-산니 니테 이마스네.",
+     "ko": "아드님이 아버지를 닮았네요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "8-jt-2",
+     "lang": "ja",
+     "show": "よく言[い]われます。",
+     "say": "よく言われます。",
+     "snd": "요쿠 이와레마스.",
+     "ko": "그런 말 자주 들어요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "8-jt-3",
+     "lang": "ja",
+     "show": "目[め]がそっくりです。",
+     "say": "目がそっくりです。",
+     "snd": "메가 속쿠리데스.",
+     "ko": "눈이 똑같아요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "8-jk-1",
+     "lang": "ja",
+     "show": "～に似[に]ています",
+     "say": "に似ています",
+     "snd": "니 니테 이마스",
+     "ko": "~를 닮았어요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "8-jk-2",
+     "lang": "ja",
+     "show": "そっくり",
+     "say": "そっくり",
+     "snd": "속쿠리",
+     "ko": "꼭 닮음, 똑같음",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "8-ep-1",
+     "lang": "en",
+     "show": "I want my own room.",
+     "say": "I want my own room.",
+     "snd": "아이 원ㅌ 마이 오운 룸.",
+     "ko": "내 방을 갖고 싶어요.",
+     "kind": "영어 구문 · one's own + 명사 (자기 자신의 ~)"
+    },
+    {
+     "id": "8-ep-2",
+     "lang": "en",
+     "show": "She looks just like her mom.",
+     "say": "She looks just like her mom.",
+     "snd": "쉬 룩스 저스트 라이크 허 맘.",
+     "ko": "그 애는 엄마를 꼭 닮았어요.",
+     "kind": "영어 구문 · look just like + 사람 (~를 꼭 닮다)"
+    },
+    {
+     "id": "8-ev-1",
+     "lang": "en",
+     "show": "image",
+     "say": "image",
+     "snd": "이미지",
+     "ko": "(명) 형상, 모습",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-ev-2",
+     "lang": "en",
+     "show": "own",
+     "say": "own",
+     "snd": "오운",
+     "ko": "(형) 자기 자신의",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-ev-3",
+     "lang": "en",
+     "show": "male",
+     "say": "male",
+     "snd": "메일",
+     "ko": "(명) 남자, 수컷",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-ev-4",
+     "lang": "en",
+     "show": "female",
+     "say": "female",
+     "snd": "피-메일",
+     "ko": "(명) 여자, 암컷",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-ev-5",
+     "lang": "en",
+     "show": "son",
+     "say": "son",
+     "snd": "썬",
+     "ko": "(명) 아들",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-ev-6",
+     "lang": "en",
+     "show": "smile",
+     "say": "smile",
+     "snd": "스마일",
+     "ko": "(동) 웃다, 미소 짓다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-ev-7",
+     "lang": "en",
+     "show": "gift",
+     "say": "gift",
+     "snd": "기프트",
+     "ko": "(명) 선물",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-jp-1",
+     "lang": "ja",
+     "show": "娘[むすめ]は母[はは]に似[に]ています。",
+     "say": "娘は母に似ています。",
+     "snd": "무스메와 하하니 니테 이마스.",
+     "ko": "딸은 엄마를 닮았습니다.",
+     "kind": "일본어 구문 · ～に似ている (~를 닮았다)"
+    },
+    {
+     "id": "8-jp-2",
+     "lang": "ja",
+     "show": "よく図書館[としょかん]に行[い]きます。",
+     "say": "よく図書館に行きます。",
+     "snd": "요쿠 토쇼칸니 이키마스.",
+     "ko": "자주 도서관에 갑니다.",
+     "kind": "일본어 구문 · よく (자주)"
+    },
+    {
+     "id": "8-jv-1",
+     "lang": "ja",
+     "show": "自身[じしん]",
+     "say": "自身",
+     "snd": "지신",
+     "ko": "자신",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "8-jv-2",
+     "lang": "ja",
+     "show": "人[ひと]",
+     "say": "人",
+     "snd": "히토",
+     "ko": "사람",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "8-jv-3",
+     "lang": "ja",
+     "show": "男[おとこ]",
+     "say": "男",
+     "snd": "오토코",
+     "ko": "남자",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "8-jv-4",
+     "lang": "ja",
+     "show": "女[おんな]",
+     "say": "女",
+     "snd": "온나",
+     "ko": "여자",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "8-jv-5",
+     "lang": "ja",
+     "show": "息子[むすこ]",
+     "say": "息子",
+     "snd": "무스코",
+     "ko": "아들",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "8-jv-6",
+     "lang": "ja",
+     "show": "似[に]る",
+     "say": "似る",
+     "snd": "니루",
+     "ko": "닮다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "8-jv-7",
+     "lang": "ja",
+     "show": "目[め]",
+     "say": "目",
+     "snd": "메",
+     "ko": "눈",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "ref": "1:29-31",
+   "title": "먹을거리를 주시고, 보시니 아주 좋았더라",
+   "enRef": "1:31",
+   "jaRef": "1:31",
+   "enScene": "직접 차린 저녁 식사",
+   "jaScene": "직접 차린 저녁",
+   "items": [
+    {
+     "id": "9-er",
+     "lang": "en",
+     "show": "God saw everything that he had made, and, behold, it was very good.",
+     "say": "God saw everything that he had made, and, behold, it was very good.",
+     "snd": "갓 쏘- 에브리띵 댓 히 해드 메이드, 앤, 비호울드, 잇 워즈 베리 굿.",
+     "ko": "하나님께서 모든 것을 보셨다 / 그분이 만드신 / 보라, 그것은 아주 좋았다",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "9-er-1",
+     "lang": "en",
+     "show": "God saw everything",
+     "say": "God saw everything",
+     "snd": "갓 쏘- 에브리띵",
+     "ko": "하나님께서 모든 것을 보셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-er-2",
+     "lang": "en",
+     "show": "that he had made,",
+     "say": "that he had made,",
+     "snd": "댓 히 해드 메이드,",
+     "ko": "그분이 만드신",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-er-3",
+     "lang": "en",
+     "show": "and, behold, it was very good.",
+     "say": "and, behold, it was very good.",
+     "snd": "앤, 비호울드, 잇 워즈 베리 굿.",
+     "ko": "보라, 그것은 아주 좋았다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-et-1",
+     "lang": "en",
+     "show": "Dinner is ready. I made everything myself.",
+     "say": "Dinner is ready. I made everything myself.",
+     "snd": "디너 이즈 레디. 아이 메이드 에브리띵 마이셀프.",
+     "ko": "저녁 준비됐어요. 전부 제가 직접 만들었어요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "9-et-2",
+     "lang": "en",
+     "show": "Wow, it looks very good!",
+     "say": "Wow, it looks very good!",
+     "snd": "와우, 잇 룩스 베리 굿!",
+     "ko": "와, 정말 맛있어 보여요!",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "9-et-3",
+     "lang": "en",
+     "show": "Please help yourself.",
+     "say": "Please help yourself.",
+     "snd": "플리-즈 헬프 유어셀프.",
+     "ko": "마음껏 드세요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "9-et-4",
+     "lang": "en",
+     "show": "Thank you. It's delicious!",
+     "say": "Thank you. It's delicious!",
+     "snd": "땡큐. 잇츠 딜리셔스!",
+     "ko": "고마워요. 맛있어요!",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "9-ek-1",
+     "lang": "en",
+     "show": "Please help yourself.",
+     "say": "Please help yourself.",
+     "snd": "플리-즈 헬프 유어셀프",
+     "ko": "마음껏 드세요",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "9-ek-2",
+     "lang": "en",
+     "show": "It's delicious!",
+     "say": "It's delicious!",
+     "snd": "잇츠 딜리셔스!",
+     "ko": "맛있어요!",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "9-jr",
+     "lang": "ja",
+     "show": "神[かみ]はご自分[じぶん]が造[つく]られたすべてのものを見[み]られた。見[み]よ、それは非常[ひじょう]に良[よ]かった。",
+     "say": "神はご自分が造られたすべてのものを見られた。見よ、それは非常に良かった。",
+     "snd": "카미와 고지분가 츠쿠라레타 스베테노 모노오 미라레타 미요 소레와 히죠-니 요캇타",
+     "ko": "하나님께서는 / 자신이 / 만드신 / 모든 것을 / 보셨다 / 보라 / 그것은 / 아주 / 좋았다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "9-jr-1",
+     "lang": "ja",
+     "show": "神[かみ]は",
+     "say": "神は",
+     "snd": "카미와",
+     "ko": "하나님께서는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-2",
+     "lang": "ja",
+     "show": "ご自分[じぶん]が",
+     "say": "ご自分が",
+     "snd": "고지분가",
+     "ko": "자신이",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-3",
+     "lang": "ja",
+     "show": "造[つく]られた",
+     "say": "造られた",
+     "snd": "츠쿠라레타",
+     "ko": "만드신",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-4",
+     "lang": "ja",
+     "show": "すべてのものを",
+     "say": "すべてのものを",
+     "snd": "스베테노 모노오",
+     "ko": "모든 것을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-5",
+     "lang": "ja",
+     "show": "見[み]られた。",
+     "say": "見られた。",
+     "snd": "미라레타",
+     "ko": "보셨다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-6",
+     "lang": "ja",
+     "show": "見[み]よ、",
+     "say": "見よ、",
+     "snd": "미요",
+     "ko": "보라",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-7",
+     "lang": "ja",
+     "show": "それは",
+     "say": "それは",
+     "snd": "소레와",
+     "ko": "그것은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-8",
+     "lang": "ja",
+     "show": "非常[ひじょう]に",
+     "say": "非常に",
+     "snd": "히죠-니",
+     "ko": "아주",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-9",
+     "lang": "ja",
+     "show": "良[よ]かった。",
+     "say": "良かった。",
+     "snd": "요캇타",
+     "ko": "좋았다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jt-1",
+     "lang": "ja",
+     "show": "晩[ばん]ご飯[はん]ができました。",
+     "say": "晩ご飯ができました。",
+     "snd": "반고항가 데키마시타.",
+     "ko": "저녁밥이 다 됐어요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "9-jt-2",
+     "lang": "ja",
+     "show": "とてもおいしそうですね。",
+     "say": "とてもおいしそうですね。",
+     "snd": "토테모 오이시소-데스네.",
+     "ko": "정말 맛있어 보이네요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "9-jt-3",
+     "lang": "ja",
+     "show": "どうぞ、召[め]し上[あ]がってください。",
+     "say": "どうぞ、召し上がってください。",
+     "snd": "도-조, 메시아갓테 쿠다사이.",
+     "ko": "어서 드세요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "9-jt-4",
+     "lang": "ja",
+     "show": "いただきます。",
+     "say": "いただきます。",
+     "snd": "이타다키마스.",
+     "ko": "잘 먹겠습니다.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "9-jk-1",
+     "lang": "ja",
+     "show": "召[め]し上[あ]がってください",
+     "say": "召し上がってください",
+     "snd": "메시아갓테 쿠다사이",
+     "ko": "드세요(높임)",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "9-jk-2",
+     "lang": "ja",
+     "show": "いただきます",
+     "say": "いただきます",
+     "snd": "이타다키마스",
+     "ko": "잘 먹겠습니다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "9-ep-1",
+     "lang": "en",
+     "show": "When I arrived, the bus had left.",
+     "say": "When I arrived, the bus had left.",
+     "snd": "웬 아이 어라이브드, 더 버스 해드 레프트.",
+     "ko": "내가 도착했을 때 버스는 이미 떠났었다.",
+     "kind": "영어 구문 · had + 과거분사 (그전에 ~했었다)"
+    },
+    {
+     "id": "9-ep-2",
+     "lang": "en",
+     "show": "Help yourself to some cookies.",
+     "say": "Help yourself to some cookies.",
+     "snd": "헬프 유어셀프 투 썸 쿠키즈.",
+     "ko": "쿠키 마음껏 드세요.",
+     "kind": "영어 구문 · help yourself (마음껏 드세요)"
+    },
+    {
+     "id": "9-ev-1",
+     "lang": "en",
+     "show": "everything",
+     "say": "everything",
+     "snd": "에브리띵",
+     "ko": "(대) 모든 것",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-ev-2",
+     "lang": "en",
+     "show": "behold",
+     "say": "behold",
+     "snd": "비호울드",
+     "ko": "(동) 보다(보라)",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-ev-3",
+     "lang": "en",
+     "show": "very",
+     "say": "very",
+     "snd": "베리",
+     "ko": "(부) 아주, 매우",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-ev-4",
+     "lang": "en",
+     "show": "ready",
+     "say": "ready",
+     "snd": "레디",
+     "ko": "(형) 준비된",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-ev-5",
+     "lang": "en",
+     "show": "myself",
+     "say": "myself",
+     "snd": "마이셀프",
+     "ko": "(대) 나 자신, 직접",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-ev-6",
+     "lang": "en",
+     "show": "delicious",
+     "say": "delicious",
+     "snd": "딜리셔스",
+     "ko": "(형) 맛있는",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-jp-1",
+     "lang": "ja",
+     "show": "昨日[きのう]は寒[さむ]かった。",
+     "say": "昨日は寒かった。",
+     "snd": "키노-와 사무캇타.",
+     "ko": "어제는 추웠다.",
+     "kind": "일본어 구문 · ～かった (~했다, 형용사 과거)"
+    },
+    {
+     "id": "9-jp-2",
+     "lang": "ja",
+     "show": "このケーキはおいしそうです。",
+     "say": "このケーキはおいしそうです。",
+     "snd": "코노 케-키와 오이시소-데스.",
+     "ko": "이 케이크는 맛있어 보입니다.",
+     "kind": "일본어 구문 · ～そうです (~해 보입니다)"
+    },
+    {
+     "id": "9-jv-1",
+     "lang": "ja",
+     "show": "自分[じぶん]",
+     "say": "自分",
+     "snd": "지분",
+     "ko": "자기, 자신",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "9-jv-2",
+     "lang": "ja",
+     "show": "すべて",
+     "say": "すべて",
+     "snd": "스베테",
+     "ko": "모두, 전부",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "9-jv-3",
+     "lang": "ja",
+     "show": "見[み]る",
+     "say": "見る",
+     "snd": "미루",
+     "ko": "보다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "9-jv-4",
+     "lang": "ja",
+     "show": "非常[ひじょう]に",
+     "say": "非常に",
+     "snd": "히죠-니",
+     "ko": "매우",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "9-jv-5",
+     "lang": "ja",
+     "show": "良[よ]い",
+     "say": "良い",
+     "snd": "요이",
+     "ko": "좋다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "9-jv-6",
+     "lang": "ja",
+     "show": "晩[ばん]ご飯[はん]",
+     "say": "晩ご飯",
+     "snd": "반고항",
+     "ko": "저녁밥",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "ref": "2:1-3",
+   "title": "일곱째 날의 안식",
+   "enRef": "2:2",
+   "jaRef": "2:3",
+   "enScene": "한 주 일을 마친 금요일",
+   "jaScene": "금요일 퇴근길",
+   "items": [
+    {
+     "id": "10-er",
+     "lang": "en",
+     "show": "On the seventh day God finished his work which he had done; and he rested on the seventh day from all his work which he had done.",
+     "say": "On the seventh day God finished his work which he had done; and he rested on the seventh day from all his work which he had done.",
+     "snd": "온 더 세븐쓰 데이 갓 피니시트 히즈 워-크 위치 히 해드 던; 앤 히 레스티드 온 더 세븐쓰 데이 프럼 올- 히즈 워-크 위치 히 해드 던.",
+     "ko": "일곱째 날에 / 하나님께서 그분의 일을 마치셨다 / 그분이 하시던 / 그리고 일곱째 날에 쉬셨다 / 그분이 하신 모든 일에서",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "10-er-1",
+     "lang": "en",
+     "show": "On the seventh day",
+     "say": "On the seventh day",
+     "snd": "온 더 세븐쓰 데이",
+     "ko": "일곱째 날에",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-er-2",
+     "lang": "en",
+     "show": "God finished his work",
+     "say": "God finished his work",
+     "snd": "갓 피니시트 히즈 워-크",
+     "ko": "하나님께서 그분의 일을 마치셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-er-3",
+     "lang": "en",
+     "show": "which he had done;",
+     "say": "which he had done;",
+     "snd": "위치 히 해드 던;",
+     "ko": "그분이 하시던",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-er-4",
+     "lang": "en",
+     "show": "and he rested on the seventh day",
+     "say": "and he rested on the seventh day",
+     "snd": "앤 히 레스티드 온 더 세븐쓰 데이",
+     "ko": "그리고 일곱째 날에 쉬셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-er-5",
+     "lang": "en",
+     "show": "from all his work which he had done.",
+     "say": "from all his work which he had done.",
+     "snd": "프럼 올- 히즈 워-크 위치 히 해드 던.",
+     "ko": "그분이 하신 모든 일에서",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-et-1",
+     "lang": "en",
+     "show": "Did you finish your work for the week?",
+     "say": "Did you finish your work for the week?",
+     "snd": "디쥬 피니시 유어 워-크 포 더 위-크?",
+     "ko": "이번 주 일 다 끝냈어요?",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "10-et-2",
+     "lang": "en",
+     "show": "Yes, I finally finished it.",
+     "say": "Yes, I finally finished it.",
+     "snd": "예스, 아이 파이널리 피니시트 잇.",
+     "ko": "네, 드디어 끝냈어요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "10-et-3",
+     "lang": "en",
+     "show": "Great. Take a good rest this weekend.",
+     "say": "Great. Take a good rest this weekend.",
+     "snd": "그레잇. 테이크 어 굿 레스트 디스 위-켄드.",
+     "ko": "잘했어요. 이번 주말엔 푹 쉬세요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "10-et-4",
+     "lang": "en",
+     "show": "I will. Sunday is a special day for my family.",
+     "say": "I will. Sunday is a special day for my family.",
+     "snd": "아이 윌. 선데이 이즈 어 스페셜 데이 포 마이 패밀리.",
+     "ko": "그럴게요. 일요일은 우리 가족에게 특별한 날이에요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "10-ek-1",
+     "lang": "en",
+     "show": "Take a good rest.",
+     "say": "Take a good rest.",
+     "snd": "테이크 어 굿 레스트",
+     "ko": "푹 쉬세요",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "10-ek-2",
+     "lang": "en",
+     "show": "I finally finished it.",
+     "say": "I finally finished it.",
+     "snd": "아이 파이널리 피니시트 잇",
+     "ko": "드디어 끝냈어요",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "10-jr",
+     "lang": "ja",
+     "show": "神[かみ]は第七日[だいしちにち]を祝福[しゅくふく]し、これを聖別[せいべつ]された。神[かみ]が創造[そうぞう]のすべてのわざを終[お]え、この日[ひ]に休[やす]まれたからである。",
+     "say": "神は第七日を祝福し、これを聖別された。神が創造のすべてのわざを終え、この日に休まれたからである。",
+     "snd": "카미와 다이시치니치오 슈쿠후쿠시 코레오 세-베츠 사레타 카미가 소-조-노 스베테노 와자오 오에 코노 히니 야스마레타 카라데 아루",
+     "ko": "하나님께서는 / 일곱째 날을 / 복되게 하시고 / 이를 / 거룩하게 구별하셨다 / 하나님께서 / 창조의 / 모든 일을 / 마치고 / 이날에 / 쉬셨기 / 때문이다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "10-jr-1",
+     "lang": "ja",
+     "show": "神[かみ]は",
+     "say": "神は",
+     "snd": "카미와",
+     "ko": "하나님께서는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-2",
+     "lang": "ja",
+     "show": "第七日[だいしちにち]を",
+     "say": "第七日を",
+     "snd": "다이시치니치오",
+     "ko": "일곱째 날을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-3",
+     "lang": "ja",
+     "show": "祝福[しゅくふく]し、",
+     "say": "祝福し、",
+     "snd": "슈쿠후쿠시",
+     "ko": "복되게 하시고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-4",
+     "lang": "ja",
+     "show": "これを",
+     "say": "これを",
+     "snd": "코레오",
+     "ko": "이를",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-5",
+     "lang": "ja",
+     "show": "聖別[せいべつ]された。",
+     "say": "聖別された。",
+     "snd": "세-베츠 사레타",
+     "ko": "거룩하게 구별하셨다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-6",
+     "lang": "ja",
+     "show": "神[かみ]が",
+     "say": "神が",
+     "snd": "카미가",
+     "ko": "하나님께서",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-7",
+     "lang": "ja",
+     "show": "創造[そうぞう]の",
+     "say": "創造の",
+     "snd": "소-조-노",
+     "ko": "창조의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-8",
+     "lang": "ja",
+     "show": "すべてのわざを",
+     "say": "すべてのわざを",
+     "snd": "스베테노 와자오",
+     "ko": "모든 일을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-9",
+     "lang": "ja",
+     "show": "終[お]え、",
+     "say": "終え、",
+     "snd": "오에",
+     "ko": "마치고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-10",
+     "lang": "ja",
+     "show": "この日[ひ]に",
+     "say": "この日に",
+     "snd": "코노 히니",
+     "ko": "이날에",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-11",
+     "lang": "ja",
+     "show": "休[やす]まれた",
+     "say": "休まれた",
+     "snd": "야스마레타",
+     "ko": "쉬셨기",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-12",
+     "lang": "ja",
+     "show": "からである。",
+     "say": "からである。",
+     "snd": "카라데 아루",
+     "ko": "때문이다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jt-1",
+     "lang": "ja",
+     "show": "今週[こんしゅう]の仕事[しごと]は終[お]わりましたか。",
+     "say": "今週の仕事は終わりましたか。",
+     "snd": "콘슈-노 시고토와 오와리마시타카.",
+     "ko": "이번 주 일은 끝났어요?",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "10-jt-2",
+     "lang": "ja",
+     "show": "はい、やっと終[お]わりました。",
+     "say": "はい、やっと終わりました。",
+     "snd": "하이, 얏토 오와리마시타.",
+     "ko": "네, 겨우 끝났어요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "10-jt-3",
+     "lang": "ja",
+     "show": "週末[しゅうまつ]はゆっくり休[やす]んでください。",
+     "say": "週末はゆっくり休んでください。",
+     "snd": "슈-마츠와 육쿠리 야슨데 쿠다사이.",
+     "ko": "주말엔 푹 쉬세요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "10-jk-1",
+     "lang": "ja",
+     "show": "やっと",
+     "say": "やっと",
+     "snd": "얏토",
+     "ko": "겨우, 드디어",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "10-jk-2",
+     "lang": "ja",
+     "show": "ゆっくり休[やす]んでください",
+     "say": "ゆっくり休んでください",
+     "snd": "육쿠리 야슨데 쿠다사이",
+     "ko": "푹 쉬세요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "10-ep-1",
+     "lang": "en",
+     "show": "Did you eat breakfast?",
+     "say": "Did you eat breakfast?",
+     "snd": "디쥬 이-트 브렉퍼스트?",
+     "ko": "아침 먹었어요?",
+     "kind": "영어 구문 · Did you + 동사원형? (~했어요?)"
+    },
+    {
+     "id": "10-ep-2",
+     "lang": "en",
+     "show": "You worked hard. Take a rest.",
+     "say": "You worked hard. Take a rest.",
+     "snd": "유 워-크트 하-드. 테이크 어 레스트.",
+     "ko": "열심히 일했네요. 좀 쉬어요.",
+     "kind": "영어 구문 · take a rest (쉬다)"
+    },
+    {
+     "id": "10-ev-1",
+     "lang": "en",
+     "show": "seventh",
+     "say": "seventh",
+     "snd": "세븐쓰",
+     "ko": "(형) 일곱째의",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-ev-2",
+     "lang": "en",
+     "show": "finish",
+     "say": "finish",
+     "snd": "피니시",
+     "ko": "(동) 끝내다, 마치다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-ev-3",
+     "lang": "en",
+     "show": "work",
+     "say": "work",
+     "snd": "워-크",
+     "ko": "(명) 일",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-ev-4",
+     "lang": "en",
+     "show": "rest",
+     "say": "rest",
+     "snd": "레스트",
+     "ko": "(동) 쉬다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-ev-5",
+     "lang": "en",
+     "show": "finally",
+     "say": "finally",
+     "snd": "파이널리",
+     "ko": "(부) 드디어, 마침내",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-ev-6",
+     "lang": "en",
+     "show": "weekend",
+     "say": "weekend",
+     "snd": "위-켄드",
+     "ko": "(명) 주말",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-ev-7",
+     "lang": "en",
+     "show": "special",
+     "say": "special",
+     "snd": "스페셜",
+     "ko": "(형) 특별한",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-jp-1",
+     "lang": "ja",
+     "show": "雨[あめ]だから、家[いえ]にいます。",
+     "say": "雨だから、家にいます。",
+     "snd": "아메다카라, 이에니 이마스.",
+     "ko": "비가 오니까 집에 있습니다.",
+     "kind": "일본어 구문 · ～から (~이기 때문에)"
+    },
+    {
+     "id": "10-jp-2",
+     "lang": "ja",
+     "show": "ここに座[すわ]ってください。",
+     "say": "ここに座ってください。",
+     "snd": "코코니 스왓테 쿠다사이.",
+     "ko": "여기에 앉아 주세요.",
+     "kind": "일본어 구문 · ～てください (~해 주세요)"
+    },
+    {
+     "id": "10-jv-1",
+     "lang": "ja",
+     "show": "聖別[せいべつ]",
+     "say": "聖別",
+     "snd": "세-베츠",
+     "ko": "거룩하게 구별함",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "10-jv-2",
+     "lang": "ja",
+     "show": "終[お]える",
+     "say": "終える",
+     "snd": "오에루",
+     "ko": "마치다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "10-jv-3",
+     "lang": "ja",
+     "show": "休[やす]む",
+     "say": "休む",
+     "snd": "야스무",
+     "ko": "쉬다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "10-jv-4",
+     "lang": "ja",
+     "show": "今週[こんしゅう]",
+     "say": "今週",
+     "snd": "콘슈-",
+     "ko": "이번 주",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "10-jv-5",
+     "lang": "ja",
+     "show": "仕事[しごと]",
+     "say": "仕事",
+     "snd": "시고토",
+     "ko": "일",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "10-jv-6",
+     "lang": "ja",
+     "show": "週末[しゅうまつ]",
+     "say": "週末",
+     "snd": "슈-마츠",
+     "ko": "주말",
+     "kind": "일본어 단어"
+    }
+   ]
+  }
+ ],
+ "sources": {
+  "en": "World English Bible (British Edition), Public Domain",
+  "ja": "フリーダム・バイブル (Japanese Freedom Bible, 2026), Public Domain"
+ }
+}

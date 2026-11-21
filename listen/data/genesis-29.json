@@ -1,0 +1,6387 @@
+{
+ "book": "genesis",
+ "unit": 29,
+ "title": "창세기 야곱의 마지막 축복",
+ "range": "48:1–49:33",
+ "lessons": [
+  {
+   "no": 1,
+   "ref": "48:1-2",
+   "title": "아버지께서 아프십니다",
+   "enRef": "48:1",
+   "jaRef": "48:1",
+   "enScene": "아버지가 편찮으시다는 소식",
+   "jaScene": "편찮으신 아버지를 찾아뵙기",
+   "items": [
+    {
+     "id": "1-er",
+     "lang": "en",
+     "show": "After these things, someone said to Joseph, “Behold, your father is sick.” He took with him his two sons, Manasseh and Ephraim.",
+     "say": "After these things, someone said to Joseph, “Behold, your father is sick.” He took with him his two sons, Manasseh and Ephraim.",
+     "snd": "애프터 디-즈 띵즈, 섬원 세드 투 조-셉, 비호울드, 유어 파-더 이즈 식. 히 툭 위드 힘 히즈 투- 선즈, 머내서 앤 이-프리엄.",
+     "ko": "이 일들 후에 / 누군가 요셉에게 말했다 / “보십시오, 당신 아버지께서 아프십니다.” / 그는 두 아들을 데리고 갔다 / 므낫세와 에프라임을",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "1-er-1",
+     "lang": "en",
+     "show": "After these things,",
+     "say": "After these things,",
+     "snd": "애프터 디-즈 띵즈,",
+     "ko": "이 일들 후에",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-er-2",
+     "lang": "en",
+     "show": "someone said to Joseph,",
+     "say": "someone said to Joseph,",
+     "snd": "섬원 세드 투 조-셉,",
+     "ko": "누군가 요셉에게 말했다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-er-3",
+     "lang": "en",
+     "show": "“Behold, your father is sick.”",
+     "say": "“Behold, your father is sick.”",
+     "snd": "비호울드, 유어 파-더 이즈 식.",
+     "ko": "“보십시오, 당신 아버지께서 아프십니다.”",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-er-4",
+     "lang": "en",
+     "show": "He took with him his two sons,",
+     "say": "He took with him his two sons,",
+     "snd": "히 툭 위드 힘 히즈 투- 선즈,",
+     "ko": "그는 두 아들을 데리고 갔다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-er-5",
+     "lang": "en",
+     "show": "Manasseh and Ephraim.",
+     "say": "Manasseh and Ephraim.",
+     "snd": "머내서 앤 이-프리엄.",
+     "ko": "므낫세와 에프라임을",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-et-1",
+     "lang": "en",
+     "show": "Your dad called. He's not feeling well.",
+     "say": "Your dad called. He's not feeling well.",
+     "snd": "유어 대드 콜-드. 히즈 낫 필-링 웰.",
+     "ko": "아버지가 전화하셨어. 몸이 안 좋으시대.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "1-et-2",
+     "lang": "en",
+     "show": "Really? Is he in the hospital?",
+     "say": "Really? Is he in the hospital?",
+     "snd": "리-얼리? 이즈 히 인 더 하스피틀?",
+     "ko": "정말? 병원에 계셔?",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "1-et-3",
+     "lang": "en",
+     "show": "No, he's resting at home.",
+     "say": "No, he's resting at home.",
+     "snd": "노우, 히즈 레스팅 앳 호움.",
+     "ko": "아니, 집에서 쉬고 계셔.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "1-et-4",
+     "lang": "en",
+     "show": "I'll visit him with the kids this weekend.",
+     "say": "I'll visit him with the kids this weekend.",
+     "snd": "아일 비짓 힘 위드 더 키즈 디스 위-켄드.",
+     "ko": "이번 주말에 애들 데리고 찾아뵐게.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "1-ek-1",
+     "lang": "en",
+     "show": "He's not feeling well.",
+     "say": "He's not feeling well.",
+     "snd": "히즈 낫 필-링 웰",
+     "ko": "몸이 안 좋으셔",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "1-ek-2",
+     "lang": "en",
+     "show": "Is he in the hospital?",
+     "say": "Is he in the hospital?",
+     "snd": "이즈 히 인 더 하스피틀?",
+     "ko": "병원에 계셔?",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "1-ek-3",
+     "lang": "en",
+     "show": "this weekend",
+     "say": "this weekend",
+     "snd": "디스 위-켄드",
+     "ko": "이번 주말",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "1-jr",
+     "lang": "ja",
+     "show": "これらのことの後[のち]、ある人[ひと]がヨセフに、「見[み]よ、あなたの父[ちち]は病気[びょうき]です」と告[つ]げた。",
+     "say": "これらのことの後、ある人がヨセフに、「見よ、あなたの父は病気です」と告げた。",
+     "snd": "코레라노 코토노 노치 아루 히토가 요세후니 미요 아나타노 치치와 뵤-키데스토 츠게타",
+     "ko": "이 / 일들의 / 후에 / 어떤 사람이 / 요셉에게 / “보십시오 / 당신 아버지께서 / 아프십니다”라고 / 알렸다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "1-jr-1",
+     "lang": "ja",
+     "show": "これらの",
+     "say": "これらの",
+     "snd": "코레라노",
+     "ko": "이",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-2",
+     "lang": "ja",
+     "show": "ことの",
+     "say": "ことの",
+     "snd": "코토노",
+     "ko": "일들의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-3",
+     "lang": "ja",
+     "show": "後[のち]、",
+     "say": "後、",
+     "snd": "노치",
+     "ko": "후에",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-4",
+     "lang": "ja",
+     "show": "ある人[ひと]が",
+     "say": "ある人が",
+     "snd": "아루 히토가",
+     "ko": "어떤 사람이",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-5",
+     "lang": "ja",
+     "show": "ヨセフに、",
+     "say": "ヨセフに、",
+     "snd": "요세후니",
+     "ko": "요셉에게",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-6",
+     "lang": "ja",
+     "show": "「見[み]よ、",
+     "say": "「見よ、",
+     "snd": "미요",
+     "ko": "“보십시오",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-7",
+     "lang": "ja",
+     "show": "あなたの父[ちち]は",
+     "say": "あなたの父は",
+     "snd": "아나타노 치치와",
+     "ko": "당신 아버지께서",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-8",
+     "lang": "ja",
+     "show": "病気[びょうき]です」と",
+     "say": "病気です」と",
+     "snd": "뵤-키데스토",
+     "ko": "아프십니다”라고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jr-9",
+     "lang": "ja",
+     "show": "告[つ]げた。",
+     "say": "告げた。",
+     "snd": "츠게타",
+     "ko": "알렸다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "1-jt-1",
+     "lang": "ja",
+     "show": "お父[とう]さん、具合[ぐあい]はどう？",
+     "say": "お父さん、具合はどう？",
+     "snd": "오토-산, 구아이와 도-?",
+     "ko": "아버지, 몸은 좀 어떠세요?",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "1-jt-2",
+     "lang": "ja",
+     "show": "少[すこ]し良[よ]くなったよ。",
+     "say": "少し良くなったよ。",
+     "snd": "스코시 요쿠 낫타요.",
+     "ko": "조금 나아졌다.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "1-jt-3",
+     "lang": "ja",
+     "show": "よかった。お大事[だいじ]に。",
+     "say": "よかった。お大事に。",
+     "snd": "요캇타. 오다이지니.",
+     "ko": "다행이에요. 몸조리 잘하세요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "1-jt-4",
+     "lang": "ja",
+     "show": "来[き]てくれてありがとう。",
+     "say": "来てくれてありがとう。",
+     "snd": "키테 쿠레테 아리가토-.",
+     "ko": "와 줘서 고맙다.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "1-jk-1",
+     "lang": "ja",
+     "show": "具合[ぐあい]はどう？",
+     "say": "具合はどう？",
+     "snd": "구아이와 도-?",
+     "ko": "몸은 어때요?",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "1-jk-2",
+     "lang": "ja",
+     "show": "お大事[だいじ]に",
+     "say": "お大事に",
+     "snd": "오다이지니",
+     "ko": "몸조리 잘하세요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "1-ep-1",
+     "lang": "en",
+     "show": "I'm not feeling well today.",
+     "say": "I'm not feeling well today.",
+     "snd": "아임 낫 필-링 웰 투데이.",
+     "ko": "오늘 몸이 좀 안 좋아.",
+     "kind": "영어 구문 · not feel well (몸이 안 좋다)"
+    },
+    {
+     "id": "1-ep-2",
+     "lang": "en",
+     "show": "Take an umbrella with you.",
+     "say": "Take an umbrella with you.",
+     "snd": "테익 언 엄브렐러 위드 유.",
+     "ko": "우산 가지고 가.",
+     "kind": "영어 구문 · take ~ with you (~을 가지고 가다)"
+    },
+    {
+     "id": "1-ev-1",
+     "lang": "en",
+     "show": "sick",
+     "say": "sick",
+     "snd": "식",
+     "ko": "(형) 아픈",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-ev-2",
+     "lang": "en",
+     "show": "someone",
+     "say": "someone",
+     "snd": "섬원",
+     "ko": "(대) 누군가",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-ev-3",
+     "lang": "en",
+     "show": "behold",
+     "say": "behold",
+     "snd": "비호울드",
+     "ko": "(동) 보라(옛말)",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-ev-4",
+     "lang": "en",
+     "show": "hospital",
+     "say": "hospital",
+     "snd": "하스피틀",
+     "ko": "(명) 병원",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-ev-5",
+     "lang": "en",
+     "show": "rest",
+     "say": "rest",
+     "snd": "레스트",
+     "ko": "(동) 쉬다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-ev-6",
+     "lang": "en",
+     "show": "visit",
+     "say": "visit",
+     "snd": "비짓",
+     "ko": "(동) 방문하다, 찾아뵙다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-ev-7",
+     "lang": "en",
+     "show": "weekend",
+     "say": "weekend",
+     "snd": "위-켄드",
+     "ko": "(명) 주말",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "1-jp-1",
+     "lang": "ja",
+     "show": "ある日[ひ]、手紙[てがみ]が来[き]ました。",
+     "say": "ある日、手紙が来ました。",
+     "snd": "아루 히, 테가미가 키마시타.",
+     "ko": "어느 날 편지가 왔습니다.",
+     "kind": "일본어 구문 · ある～ (어떤 ~)"
+    },
+    {
+     "id": "1-jp-2",
+     "lang": "ja",
+     "show": "手伝[てつだ]ってくれてありがとう。",
+     "say": "手伝ってくれてありがとう。",
+     "snd": "테츠닷테 쿠레테 아리가토-.",
+     "ko": "도와줘서 고마워.",
+     "kind": "일본어 구문 · ～てくれてありがとう (~해 줘서 고마워)"
+    },
+    {
+     "id": "1-jv-1",
+     "lang": "ja",
+     "show": "後[のち]",
+     "say": "後",
+     "snd": "노치",
+     "ko": "후, 뒤",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "1-jv-2",
+     "lang": "ja",
+     "show": "人[ひと]",
+     "say": "人",
+     "snd": "히토",
+     "ko": "사람",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "1-jv-3",
+     "lang": "ja",
+     "show": "病気[びょうき]",
+     "say": "病気",
+     "snd": "뵤-키",
+     "ko": "병",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "1-jv-4",
+     "lang": "ja",
+     "show": "告[つ]げる",
+     "say": "告げる",
+     "snd": "츠게루",
+     "ko": "알리다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "1-jv-5",
+     "lang": "ja",
+     "show": "お父[とう]さん",
+     "say": "お父さん",
+     "snd": "오토-산",
+     "ko": "아버지",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "1-jv-6",
+     "lang": "ja",
+     "show": "具合[ぐあい]",
+     "say": "具合",
+     "snd": "구아이",
+     "ko": "몸 상태, 형편",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "1-jv-7",
+     "lang": "ja",
+     "show": "大事[だいじ]",
+     "say": "大事",
+     "snd": "다이지",
+     "ko": "소중함(お大事に 몸조리 잘하세요)",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "ref": "48:3-6",
+   "title": "에프라임과 므낫세는 내 것이라",
+   "enRef": "48:3",
+   "jaRef": "48:3",
+   "enScene": "할아버지의 어린 시절 이야기",
+   "jaScene": "할아버지의 고향을 묻기",
+   "items": [
+    {
+     "id": "2-er",
+     "lang": "en",
+     "show": "Jacob said to Joseph, “God Almighty appeared to me at Luz in the land of Canaan, and blessed me,",
+     "say": "Jacob said to Joseph, “God Almighty appeared to me at Luz in the land of Canaan, and blessed me,",
+     "snd": "제이컵 세드 투 조-셉, 갓 올-마이티 어피어드 투 미 앳 루-즈 인 더 랜드 오브 케이넌, 앤 블레스트 미,",
+     "ko": "야곱이 요셉에게 말했다 / “전능하신 하나님이 내게 나타나셨다 / 가나안 땅 루즈에서 / 그리고 나를 축복하셨다",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "2-er-1",
+     "lang": "en",
+     "show": "Jacob said to Joseph,",
+     "say": "Jacob said to Joseph,",
+     "snd": "제이컵 세드 투 조-셉,",
+     "ko": "야곱이 요셉에게 말했다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-er-2",
+     "lang": "en",
+     "show": "“God Almighty appeared to me",
+     "say": "“God Almighty appeared to me",
+     "snd": "갓 올-마이티 어피어드 투 미",
+     "ko": "“전능하신 하나님이 내게 나타나셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-er-3",
+     "lang": "en",
+     "show": "at Luz in the land of Canaan,",
+     "say": "at Luz in the land of Canaan,",
+     "snd": "앳 루-즈 인 더 랜드 오브 케이넌,",
+     "ko": "가나안 땅 루즈에서",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-er-4",
+     "lang": "en",
+     "show": "and blessed me,",
+     "say": "and blessed me,",
+     "snd": "앤 블레스트 미,",
+     "ko": "그리고 나를 축복하셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-et-1",
+     "lang": "en",
+     "show": "Grandpa, where did you grow up?",
+     "say": "Grandpa, where did you grow up?",
+     "snd": "그랜파-, 웨어 디쥬 그로우 업?",
+     "ko": "할아버지, 어디서 자라셨어요?",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "2-et-2",
+     "lang": "en",
+     "show": "In a small village by the river.",
+     "say": "In a small village by the river.",
+     "snd": "인 어 스몰- 빌리지 바이 더 리버.",
+     "ko": "강가의 작은 마을에서.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "2-et-3",
+     "lang": "en",
+     "show": "Do you still remember it?",
+     "say": "Do you still remember it?",
+     "snd": "두 유 스틸 리멤버 잇?",
+     "ko": "아직 기억나세요?",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "2-et-4",
+     "lang": "en",
+     "show": "Of course. I remember it like yesterday.",
+     "say": "Of course. I remember it like yesterday.",
+     "snd": "오브 코-스. 아이 리멤버 잇 라익 예스터데이.",
+     "ko": "물론이지. 어제 일처럼 기억난단다.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "2-ek-1",
+     "lang": "en",
+     "show": "grow up",
+     "say": "grow up",
+     "snd": "그로우 업",
+     "ko": "자라다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "2-ek-2",
+     "lang": "en",
+     "show": "Of course.",
+     "say": "Of course.",
+     "snd": "오브 코-스",
+     "ko": "물론이지",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "2-ek-3",
+     "lang": "en",
+     "show": "like yesterday",
+     "say": "like yesterday",
+     "snd": "라익 예스터데이",
+     "ko": "어제 일처럼",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "2-jr",
+     "lang": "ja",
+     "show": "ヤコブはヨセフに言[い]った。「全能[ぜんのう]の神[かみ]が、カナンの地[ち]にあるルズで私[わたし]に現[あらわ]れ、私[わたし]を祝福[しゅくふく]して、",
+     "say": "ヤコブはヨセフに言った。「全能の神が、カナンの地にあるルズで私に現れ、私を祝福して、",
+     "snd": "야코부와 요세후니 잇타 젠노-노 카미가 카난노 치니 아루 루즈데 와타시니 아라와레 와타시오 슈쿠후쿠시테",
+     "ko": "야곱은 / 요셉에게 / 말했다 / “전능하신 / 하나님이 / 가나안 땅에 / 있는 / 루즈에서 / 내게 / 나타나 / 나를 / 축복하시고",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "2-jr-1",
+     "lang": "ja",
+     "show": "ヤコブは",
+     "say": "ヤコブは",
+     "snd": "야코부와",
+     "ko": "야곱은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-2",
+     "lang": "ja",
+     "show": "ヨセフに",
+     "say": "ヨセフに",
+     "snd": "요세후니",
+     "ko": "요셉에게",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-3",
+     "lang": "ja",
+     "show": "言[い]った。",
+     "say": "言った。",
+     "snd": "잇타",
+     "ko": "말했다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-4",
+     "lang": "ja",
+     "show": "「全能[ぜんのう]の",
+     "say": "「全能の",
+     "snd": "젠노-노",
+     "ko": "“전능하신",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-5",
+     "lang": "ja",
+     "show": "神[かみ]が、",
+     "say": "神が、",
+     "snd": "카미가",
+     "ko": "하나님이",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-6",
+     "lang": "ja",
+     "show": "カナンの地[ち]に",
+     "say": "カナンの地に",
+     "snd": "카난노 치니",
+     "ko": "가나안 땅에",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-7",
+     "lang": "ja",
+     "show": "ある",
+     "say": "ある",
+     "snd": "아루",
+     "ko": "있는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-8",
+     "lang": "ja",
+     "show": "ルズで",
+     "say": "ルズで",
+     "snd": "루즈데",
+     "ko": "루즈에서",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-9",
+     "lang": "ja",
+     "show": "私[わたし]に",
+     "say": "私に",
+     "snd": "와타시니",
+     "ko": "내게",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-10",
+     "lang": "ja",
+     "show": "現[あらわ]れ、",
+     "say": "現れ、",
+     "snd": "아라와레",
+     "ko": "나타나",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-11",
+     "lang": "ja",
+     "show": "私[わたし]を",
+     "say": "私を",
+     "snd": "와타시오",
+     "ko": "나를",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jr-12",
+     "lang": "ja",
+     "show": "祝福[しゅくふく]して、",
+     "say": "祝福して、",
+     "snd": "슈쿠후쿠시테",
+     "ko": "축복하시고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "2-jt-1",
+     "lang": "ja",
+     "show": "おじいさんはどこで育[そだ]ちましたか。",
+     "say": "おじいさんはどこで育ちましたか。",
+     "snd": "오지-산와 도코데 소다치마시타카?",
+     "ko": "할아버지는 어디서 자라셨어요?",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "2-jt-2",
+     "lang": "ja",
+     "show": "川[かわ]のそばの小[ちい]さな村[むら]です。",
+     "say": "川のそばの小さな村です。",
+     "snd": "카와노 소바노 치-사나 무라데스.",
+     "ko": "강가의 작은 마을이에요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "2-jt-3",
+     "lang": "ja",
+     "show": "今[いま]も覚[おぼ]えていますか。",
+     "say": "今も覚えていますか。",
+     "snd": "이마모 오보에테 이마스카?",
+     "ko": "지금도 기억하세요?",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "2-jt-4",
+     "lang": "ja",
+     "show": "はい、よく覚[おぼ]えています。",
+     "say": "はい、よく覚えています。",
+     "snd": "하이, 요쿠 오보에테 이마스.",
+     "ko": "네, 잘 기억하고 있어요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "2-jk-1",
+     "lang": "ja",
+     "show": "どこで育[そだ]ちましたか",
+     "say": "どこで育ちましたか",
+     "snd": "도코데 소다치마시타카",
+     "ko": "어디서 자랐어요?",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "2-jk-2",
+     "lang": "ja",
+     "show": "覚[おぼ]えています",
+     "say": "覚えています",
+     "snd": "오보에테 이마스",
+     "ko": "기억하고 있어요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "2-ep-1",
+     "lang": "en",
+     "show": "I grew up in Busan.",
+     "say": "I grew up in Busan.",
+     "snd": "아이 그루- 업 인 부산.",
+     "ko": "저는 부산에서 자랐어요.",
+     "kind": "영어 구문 · grow up (자라다)"
+    },
+    {
+     "id": "2-ep-2",
+     "lang": "en",
+     "show": "We met at a cafe in Seoul.",
+     "say": "We met at a cafe in Seoul.",
+     "snd": "위 멧 앳 어 카페이 인 서울.",
+     "ko": "우리는 서울의 한 카페에서 만났어.",
+     "kind": "영어 구문 · at + 장소 + in + 지역 (…의 ~에서)"
+    },
+    {
+     "id": "2-ev-1",
+     "lang": "en",
+     "show": "almighty",
+     "say": "almighty",
+     "snd": "올-마이티",
+     "ko": "(형) 전능한",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-ev-2",
+     "lang": "en",
+     "show": "appear",
+     "say": "appear",
+     "snd": "어피어",
+     "ko": "(동) 나타나다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-ev-3",
+     "lang": "en",
+     "show": "bless",
+     "say": "bless",
+     "snd": "블레스",
+     "ko": "(동) 축복하다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-ev-4",
+     "lang": "en",
+     "show": "village",
+     "say": "village",
+     "snd": "빌리지",
+     "ko": "(명) 마을",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-ev-5",
+     "lang": "en",
+     "show": "river",
+     "say": "river",
+     "snd": "리버",
+     "ko": "(명) 강",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-ev-6",
+     "lang": "en",
+     "show": "remember",
+     "say": "remember",
+     "snd": "리멤버",
+     "ko": "(동) 기억하다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-ev-7",
+     "lang": "en",
+     "show": "yesterday",
+     "say": "yesterday",
+     "snd": "예스터데이",
+     "ko": "(명) 어제",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "2-jp-1",
+     "lang": "ja",
+     "show": "本[ほん]は机[つくえ]の上[うえ]にあります。",
+     "say": "本は机の上にあります。",
+     "snd": "혼와 츠쿠에노 우에니 아리마스.",
+     "ko": "책은 책상 위에 있습니다.",
+     "kind": "일본어 구문 · ～にある (~에 있다 — 물건·장소)"
+    },
+    {
+     "id": "2-jp-2",
+     "lang": "ja",
+     "show": "図書館[としょかん]で勉強[べんきょう]します。",
+     "say": "図書館で勉強します。",
+     "snd": "토쇼칸데 벤쿄-시마스.",
+     "ko": "도서관에서 공부합니다.",
+     "kind": "일본어 구문 · ～で (~에서 — 장소)"
+    },
+    {
+     "id": "2-jv-1",
+     "lang": "ja",
+     "show": "全能[ぜんのう]",
+     "say": "全能",
+     "snd": "젠노-",
+     "ko": "전능",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-2",
+     "lang": "ja",
+     "show": "神[かみ]",
+     "say": "神",
+     "snd": "카미",
+     "ko": "하나님",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-3",
+     "lang": "ja",
+     "show": "現[あらわ]れる",
+     "say": "現れる",
+     "snd": "아라와레루",
+     "ko": "나타나다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-4",
+     "lang": "ja",
+     "show": "祝福[しゅくふく]",
+     "say": "祝福",
+     "snd": "슈쿠후쿠",
+     "ko": "축복",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-5",
+     "lang": "ja",
+     "show": "育[そだ]つ",
+     "say": "育つ",
+     "snd": "소다츠",
+     "ko": "자라다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-6",
+     "lang": "ja",
+     "show": "川[かわ]",
+     "say": "川",
+     "snd": "카와",
+     "ko": "강",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-7",
+     "lang": "ja",
+     "show": "村[むら]",
+     "say": "村",
+     "snd": "무라",
+     "ko": "마을",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "2-jv-8",
+     "lang": "ja",
+     "show": "覚[おぼ]える",
+     "say": "覚える",
+     "snd": "오보에루",
+     "ko": "기억하다, 외우다",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "ref": "48:7-12",
+   "title": "라헬의 무덤과 두 손자",
+   "enRef": "48:11",
+   "jaRef": "48:11",
+   "enScene": "할머니가 손주를 처음 안아 봄",
+   "jaScene": "할머니에게 손주를 보여 드리기",
+   "items": [
+    {
+     "id": "3-er",
+     "lang": "en",
+     "show": "Israel said to Joseph, “I didn’t think I would see your face, and behold, God has let me see your offspring also.”",
+     "say": "Israel said to Joseph, “I didn’t think I would see your face, and behold, God has let me see your offspring also.”",
+     "snd": "이즈리얼 세드 투 조-셉, 아이 디든ㅌ 띵크 아이 우드 씨- 유어 페이스, 앤 비호울드, 갓 해즈 렛 미 씨- 유어 오-프스프링 올-소우.",
+     "ko": "이스라엘이 요셉에게 말했다 / “나는 생각지 못했다 / 네 얼굴을 보게 되리라고 / 그런데 보라, 하나님이 내게 보게 하셨다 / 네 자손까지도.”",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "3-er-1",
+     "lang": "en",
+     "show": "Israel said to Joseph,",
+     "say": "Israel said to Joseph,",
+     "snd": "이즈리얼 세드 투 조-셉,",
+     "ko": "이스라엘이 요셉에게 말했다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-er-2",
+     "lang": "en",
+     "show": "“I didn’t think",
+     "say": "“I didn’t think",
+     "snd": "아이 디든ㅌ 띵크",
+     "ko": "“나는 생각지 못했다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-er-3",
+     "lang": "en",
+     "show": "I would see your face,",
+     "say": "I would see your face,",
+     "snd": "아이 우드 씨- 유어 페이스,",
+     "ko": "네 얼굴을 보게 되리라고",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-er-4",
+     "lang": "en",
+     "show": "and behold, God has let me see",
+     "say": "and behold, God has let me see",
+     "snd": "앤 비호울드, 갓 해즈 렛 미 씨-",
+     "ko": "그런데 보라, 하나님이 내게 보게 하셨다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-er-5",
+     "lang": "en",
+     "show": "your offspring also.”",
+     "say": "your offspring also.”",
+     "snd": "유어 오-프스프링 올-소우.",
+     "ko": "네 자손까지도.”",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-et-1",
+     "lang": "en",
+     "show": "Mom, this is your grandson.",
+     "say": "Mom, this is your grandson.",
+     "snd": "맘, 디스 이즈 유어 그랜선.",
+     "ko": "엄마, 손자예요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "3-et-2",
+     "lang": "en",
+     "show": "Oh my! I didn't think I would see this day.",
+     "say": "Oh my! I didn't think I would see this day.",
+     "snd": "오우 마이! 아이 디든ㅌ 띵크 아이 우드 씨- 디스 데이.",
+     "ko": "어머나! 이런 날을 보게 될 줄 몰랐다.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "3-et-3",
+     "lang": "en",
+     "show": "Do you want to hold him?",
+     "say": "Do you want to hold him?",
+     "snd": "두 유 원 투 호울드 힘?",
+     "ko": "안아 보실래요?",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "3-et-4",
+     "lang": "en",
+     "show": "Yes, please. He's so precious.",
+     "say": "Yes, please. He's so precious.",
+     "snd": "예스, 플리-즈. 히즈 쏘우 프레셔스.",
+     "ko": "그래. 정말 귀하구나.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "3-ek-1",
+     "lang": "en",
+     "show": "I didn't think I would ~",
+     "say": "I didn't think I would ",
+     "snd": "아이 디든ㅌ 띵크 아이 우드",
+     "ko": "~하게 될 줄 몰랐어",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "3-ek-2",
+     "lang": "en",
+     "show": "Do you want to ~?",
+     "say": "Do you want to ?",
+     "snd": "두 유 원 투",
+     "ko": "~하고 싶어요?",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "3-ek-3",
+     "lang": "en",
+     "show": "He's so precious.",
+     "say": "He's so precious.",
+     "snd": "히즈 쏘우 프레셔스",
+     "ko": "정말 귀하다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "3-jr",
+     "lang": "ja",
+     "show": "私[わたし]はあなたの顔[かお]を見[み]られるとは思[おも]っていなかった。見[み]よ、神[かみ]はあなたの子孫[しそん]をも私[わたし]に見[み]させてくださった。",
+     "say": "私はあなたの顔を見られるとは思っていなかった。見よ、神はあなたの子孫をも私に見させてくださった。",
+     "snd": "와타시와 아나타노 카오오 미라레루토와 오못테 이나캇타 미요 카미와 아나타노 시손오모 와타시니 미사세테 쿠다삿타",
+     "ko": "나는 / 너의 / 얼굴을 / 볼 수 있으리라고는 / 생각하지 못했다 / 보라 / 하나님은 / 너의 / 자손까지도 / 내게 / 보게 해 주셨다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "3-jr-1",
+     "lang": "ja",
+     "show": "私[わたし]は",
+     "say": "私は",
+     "snd": "와타시와",
+     "ko": "나는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-2",
+     "lang": "ja",
+     "show": "あなたの",
+     "say": "あなたの",
+     "snd": "아나타노",
+     "ko": "너의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-3",
+     "lang": "ja",
+     "show": "顔[かお]を",
+     "say": "顔を",
+     "snd": "카오오",
+     "ko": "얼굴을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-4",
+     "lang": "ja",
+     "show": "見[み]られるとは",
+     "say": "見られるとは",
+     "snd": "미라레루토와",
+     "ko": "볼 수 있으리라고는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-5",
+     "lang": "ja",
+     "show": "思[おも]っていなかった。",
+     "say": "思っていなかった。",
+     "snd": "오못테 이나캇타",
+     "ko": "생각하지 못했다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-6",
+     "lang": "ja",
+     "show": "見[み]よ、",
+     "say": "見よ、",
+     "snd": "미요",
+     "ko": "보라",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-7",
+     "lang": "ja",
+     "show": "神[かみ]は",
+     "say": "神は",
+     "snd": "카미와",
+     "ko": "하나님은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-8",
+     "lang": "ja",
+     "show": "あなたの",
+     "say": "あなたの",
+     "snd": "아나타노",
+     "ko": "너의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-9",
+     "lang": "ja",
+     "show": "子孫[しそん]をも",
+     "say": "子孫をも",
+     "snd": "시손오모",
+     "ko": "자손까지도",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-10",
+     "lang": "ja",
+     "show": "私[わたし]に",
+     "say": "私に",
+     "snd": "와타시니",
+     "ko": "내게",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jr-11",
+     "lang": "ja",
+     "show": "見[み]させてくださった。",
+     "say": "見させてくださった。",
+     "snd": "미사세테 쿠다삿타",
+     "ko": "보게 해 주셨다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "3-jt-1",
+     "lang": "ja",
+     "show": "孫[まご]の顔[かお]を見[み]てください。",
+     "say": "孫の顔を見てください。",
+     "snd": "마고노 카오오 미테 쿠다사이.",
+     "ko": "손주 얼굴 좀 보세요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "3-jt-2",
+     "lang": "ja",
+     "show": "まあ、かわいい！",
+     "say": "まあ、かわいい！",
+     "snd": "마-, 카와이-!",
+     "ko": "어머, 귀여워라!",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "3-jt-3",
+     "lang": "ja",
+     "show": "抱[だ]っこしますか。",
+     "say": "抱っこしますか。",
+     "snd": "닷코 시마스카?",
+     "ko": "안아 보실래요?",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "3-jt-4",
+     "lang": "ja",
+     "show": "ええ、ありがとう。",
+     "say": "ええ、ありがとう。",
+     "snd": "에-, 아리가토-.",
+     "ko": "그래, 고마워.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "3-jk-1",
+     "lang": "ja",
+     "show": "かわいい",
+     "say": "かわいい",
+     "snd": "카와이-",
+     "ko": "귀엽다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "3-jk-2",
+     "lang": "ja",
+     "show": "抱[だ]っこする",
+     "say": "抱っこする",
+     "snd": "닷코 스루",
+     "ko": "(아기를) 안다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "3-ep-1",
+     "lang": "en",
+     "show": "My boss let me go home early.",
+     "say": "My boss let me go home early.",
+     "snd": "마이 보스 렛 미 고우 호움 어-리.",
+     "ko": "상사가 나를 일찍 집에 보내 줬어.",
+     "kind": "영어 구문 · let + 사람 + 동사원형 (~가 …하게 해 주다)"
+    },
+    {
+     "id": "3-ep-2",
+     "lang": "en",
+     "show": "I didn't think I would win.",
+     "say": "I didn't think I would win.",
+     "snd": "아이 디든ㅌ 띵크 아이 우드 윈.",
+     "ko": "내가 이길 줄 몰랐어.",
+     "kind": "영어 구문 · I didn't think I would ~ (~할 줄 몰랐어)"
+    },
+    {
+     "id": "3-ev-1",
+     "lang": "en",
+     "show": "think",
+     "say": "think",
+     "snd": "띵크",
+     "ko": "(동) 생각하다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "3-ev-2",
+     "lang": "en",
+     "show": "offspring",
+     "say": "offspring",
+     "snd": "오-프스프링",
+     "ko": "(명) 자손",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "3-ev-3",
+     "lang": "en",
+     "show": "also",
+     "say": "also",
+     "snd": "올-소우",
+     "ko": "(부) 또한, ~도",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "3-ev-4",
+     "lang": "en",
+     "show": "grandson",
+     "say": "grandson",
+     "snd": "그랜선",
+     "ko": "(명) 손자",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "3-ev-5",
+     "lang": "en",
+     "show": "hold",
+     "say": "hold",
+     "snd": "호울드",
+     "ko": "(동) 안다, 잡다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "3-ev-6",
+     "lang": "en",
+     "show": "precious",
+     "say": "precious",
+     "snd": "프레셔스",
+     "ko": "(형) 귀한, 소중한",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "3-jp-1",
+     "lang": "ja",
+     "show": "ここで会[あ]うとは思[おも]わなかった。",
+     "say": "ここで会うとは思わなかった。",
+     "snd": "코코데 아우토와 오모와나캇타.",
+     "ko": "여기서 만날 줄은 몰랐어.",
+     "kind": "일본어 구문 · ～とは思わなかった (~할 줄은 몰랐다)"
+    },
+    {
+     "id": "3-jp-2",
+     "lang": "ja",
+     "show": "私[わたし]にやらせてください。",
+     "say": "私にやらせてください。",
+     "snd": "와타시니 야라세테 쿠다사이.",
+     "ko": "제가 하게 해 주세요.",
+     "kind": "일본어 구문 · ～させてください (~하게 해 주세요)"
+    },
+    {
+     "id": "3-jv-1",
+     "lang": "ja",
+     "show": "思[おも]う",
+     "say": "思う",
+     "snd": "오모우",
+     "ko": "생각하다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "3-jv-2",
+     "lang": "ja",
+     "show": "子孫[しそん]",
+     "say": "子孫",
+     "snd": "시손",
+     "ko": "자손",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "3-jv-3",
+     "lang": "ja",
+     "show": "孫[まご]",
+     "say": "孫",
+     "snd": "마고",
+     "ko": "손주",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "3-jv-4",
+     "lang": "ja",
+     "show": "かわいい",
+     "say": "かわいい",
+     "snd": "카와이-",
+     "ko": "귀엽다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "3-jv-5",
+     "lang": "ja",
+     "show": "抱[だ]っこ",
+     "say": "抱っこ",
+     "snd": "닷코",
+     "ko": "(아기를) 안기",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "ref": "48:13-14",
+   "title": "엇갈린 두 손",
+   "enRef": "48:14",
+   "jaRef": "48:14",
+   "enScene": "사진관에서 가족사진 찍기",
+   "jaScene": "사진 찍기",
+   "items": [
+    {
+     "id": "4-er",
+     "lang": "en",
+     "show": "Israel stretched out his right hand, and laid it on Ephraim’s head, who was the younger, and his left hand on Manasseh’s head,",
+     "say": "Israel stretched out his right hand, and laid it on Ephraim’s head, who was the younger, and his left hand on Manasseh’s head,",
+     "snd": "이즈리얼 스트레치트 아웃 히즈 라잇 핸드, 앤 레이드 잇 온 이-프리엄즈 헤드, 후 워즈 더 영거, 앤 히즈 레프트 핸드 온 머내서즈 헤드,",
+     "ko": "이스라엘은 오른손을 뻗어 / 에프라임의 머리에 얹었다 / 그는 동생이었다 / 그리고 왼손은 므낫세의 머리에",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "4-er-1",
+     "lang": "en",
+     "show": "Israel stretched out his right hand,",
+     "say": "Israel stretched out his right hand,",
+     "snd": "이즈리얼 스트레치트 아웃 히즈 라잇 핸드,",
+     "ko": "이스라엘은 오른손을 뻗어",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-er-2",
+     "lang": "en",
+     "show": "and laid it on Ephraim’s head,",
+     "say": "and laid it on Ephraim’s head,",
+     "snd": "앤 레이드 잇 온 이-프리엄즈 헤드,",
+     "ko": "에프라임의 머리에 얹었다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-er-3",
+     "lang": "en",
+     "show": "who was the younger,",
+     "say": "who was the younger,",
+     "snd": "후 워즈 더 영거,",
+     "ko": "그는 동생이었다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-er-4",
+     "lang": "en",
+     "show": "and his left hand on Manasseh’s head,",
+     "say": "and his left hand on Manasseh’s head,",
+     "snd": "앤 히즈 레프트 핸드 온 머내서즈 헤드,",
+     "ko": "그리고 왼손은 므낫세의 머리에",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-et-1",
+     "lang": "en",
+     "show": "Everyone, look at the camera.",
+     "say": "Everyone, look at the camera.",
+     "snd": "에브리원, 룩 앳 더 캐머러.",
+     "ko": "여러분, 카메라 보세요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "4-et-2",
+     "lang": "en",
+     "show": "Where should I put my hands?",
+     "say": "Where should I put my hands?",
+     "snd": "웨어 슈드 아이 풋 마이 핸즈?",
+     "ko": "손은 어디에 둘까요?",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "4-et-3",
+     "lang": "en",
+     "show": "Put your right hand on your son's shoulder.",
+     "say": "Put your right hand on your son's shoulder.",
+     "snd": "풋 유어 라잇 핸드 온 유어 선즈 쇼울더.",
+     "ko": "오른손을 아드님 어깨에 올려 주세요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "4-et-4",
+     "lang": "en",
+     "show": "Like this?",
+     "say": "Like this?",
+     "snd": "라익 디스?",
+     "ko": "이렇게요?",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "4-et-5",
+     "lang": "en",
+     "show": "Perfect! Say cheese!",
+     "say": "Perfect! Say cheese!",
+     "snd": "퍼-펙트! 세이 치-즈!",
+     "ko": "완벽해요! 김치 하세요!",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "4-ek-1",
+     "lang": "en",
+     "show": "Look at the camera.",
+     "say": "Look at the camera.",
+     "snd": "룩 앳 더 캐머러",
+     "ko": "카메라 보세요",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "4-ek-2",
+     "lang": "en",
+     "show": "Like this?",
+     "say": "Like this?",
+     "snd": "라익 디스?",
+     "ko": "이렇게요?",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "4-ek-3",
+     "lang": "en",
+     "show": "Say cheese!",
+     "say": "Say cheese!",
+     "snd": "세이 치-즈!",
+     "ko": "웃으세요!(사진 찍을 때)",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "4-jr",
+     "lang": "ja",
+     "show": "イスラエルは右手[みぎて]を伸[の]ばして弟[おとうと]エフライムの頭[あたま]に置[お]き、左手[ひだりて]をマナセの頭[あたま]に置[お]いた。",
+     "say": "イスラエルは右手を伸ばして弟エフライムの頭に置き、左手をマナセの頭に置いた。",
+     "snd": "이스라에루와 미기테오 노바시테 오토-토 에후라이무노 아타마니 오키 히다리테오 마나세노 아타마니 오이타",
+     "ko": "이스라엘은 / 오른손을 / 뻗어 / 동생 / 에프라임의 / 머리에 / 얹고 / 왼손을 / 므낫세의 / 머리에 / 얹었다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "4-jr-1",
+     "lang": "ja",
+     "show": "イスラエルは",
+     "say": "イスラエルは",
+     "snd": "이스라에루와",
+     "ko": "이스라엘은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-2",
+     "lang": "ja",
+     "show": "右手[みぎて]を",
+     "say": "右手を",
+     "snd": "미기테오",
+     "ko": "오른손을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-3",
+     "lang": "ja",
+     "show": "伸[の]ばして",
+     "say": "伸ばして",
+     "snd": "노바시테",
+     "ko": "뻗어",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-4",
+     "lang": "ja",
+     "show": "弟[おとうと]",
+     "say": "弟",
+     "snd": "오토-토",
+     "ko": "동생",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-5",
+     "lang": "ja",
+     "show": "エフライムの",
+     "say": "エフライムの",
+     "snd": "에후라이무노",
+     "ko": "에프라임의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-6",
+     "lang": "ja",
+     "show": "頭[あたま]に",
+     "say": "頭に",
+     "snd": "아타마니",
+     "ko": "머리에",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-7",
+     "lang": "ja",
+     "show": "置[お]き、",
+     "say": "置き、",
+     "snd": "오키",
+     "ko": "얹고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-8",
+     "lang": "ja",
+     "show": "左手[ひだりて]を",
+     "say": "左手を",
+     "snd": "히다리테오",
+     "ko": "왼손을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-9",
+     "lang": "ja",
+     "show": "マナセの",
+     "say": "マナセの",
+     "snd": "마나세노",
+     "ko": "므낫세의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-10",
+     "lang": "ja",
+     "show": "頭[あたま]に",
+     "say": "頭に",
+     "snd": "아타마니",
+     "ko": "머리에",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jr-11",
+     "lang": "ja",
+     "show": "置[お]いた。",
+     "say": "置いた。",
+     "snd": "오이타",
+     "ko": "얹었다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "4-jt-1",
+     "lang": "ja",
+     "show": "右手[みぎて]を上[あ]げてください。",
+     "say": "右手を上げてください。",
+     "snd": "미기테오 아게테 쿠다사이.",
+     "ko": "오른손을 들어 주세요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "4-jt-2",
+     "lang": "ja",
+     "show": "こうですか。",
+     "say": "こうですか。",
+     "snd": "코-데스카?",
+     "ko": "이렇게요?",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "4-jt-3",
+     "lang": "ja",
+     "show": "はい、いいですね。撮[と]りますよ。",
+     "say": "はい、いいですね。撮りますよ。",
+     "snd": "하이, 이-데스네. 토리마스요.",
+     "ko": "네, 좋아요. 찍습니다.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "4-jt-4",
+     "lang": "ja",
+     "show": "お願[ねが]いします。",
+     "say": "お願いします。",
+     "snd": "오네가이시마스.",
+     "ko": "부탁합니다.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "4-jk-1",
+     "lang": "ja",
+     "show": "こうですか",
+     "say": "こうですか",
+     "snd": "코-데스카",
+     "ko": "이렇게요?",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "4-jk-2",
+     "lang": "ja",
+     "show": "撮[と]りますよ",
+     "say": "撮りますよ",
+     "snd": "토리마스요",
+     "ko": "찍을게요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "4-ep-1",
+     "lang": "en",
+     "show": "Stretch out your arms.",
+     "say": "Stretch out your arms.",
+     "snd": "스트레치 아웃 유어 암-즈.",
+     "ko": "팔을 쭉 뻗으세요.",
+     "kind": "영어 구문 · stretch out ~ (~을 쭉 뻗다)"
+    },
+    {
+     "id": "4-ep-2",
+     "lang": "en",
+     "show": "Where should I park?",
+     "say": "Where should I park?",
+     "snd": "웨어 슈드 아이 파-크?",
+     "ko": "어디에 주차할까요?",
+     "kind": "영어 구문 · Where should I ~? (어디에 ~할까요?)"
+    },
+    {
+     "id": "4-ev-1",
+     "lang": "en",
+     "show": "stretch",
+     "say": "stretch",
+     "snd": "스트레치",
+     "ko": "(동) 뻗다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-ev-2",
+     "lang": "en",
+     "show": "right",
+     "say": "right",
+     "snd": "라잇",
+     "ko": "(형) 오른쪽의",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-ev-3",
+     "lang": "en",
+     "show": "lay",
+     "say": "lay",
+     "snd": "레이",
+     "ko": "(동) 놓다, 얹다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-ev-4",
+     "lang": "en",
+     "show": "head",
+     "say": "head",
+     "snd": "헤드",
+     "ko": "(명) 머리",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-ev-5",
+     "lang": "en",
+     "show": "left",
+     "say": "left",
+     "snd": "레프트",
+     "ko": "(형) 왼쪽의",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-ev-6",
+     "lang": "en",
+     "show": "shoulder",
+     "say": "shoulder",
+     "snd": "쇼울더",
+     "ko": "(명) 어깨",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-ev-7",
+     "lang": "en",
+     "show": "camera",
+     "say": "camera",
+     "snd": "캐머러",
+     "ko": "(명) 카메라",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "4-jp-1",
+     "lang": "ja",
+     "show": "鍵[かぎ]をテーブルに置[お]きました。",
+     "say": "鍵をテーブルに置きました。",
+     "snd": "카기오 테-부루니 오키마시타.",
+     "ko": "열쇠를 테이블에 두었습니다.",
+     "kind": "일본어 구문 · ～に置く (~에 두다)"
+    },
+    {
+     "id": "4-jp-2",
+     "lang": "ja",
+     "show": "手[て]を上[あ]げてください。",
+     "say": "手を上げてください。",
+     "snd": "테오 아게테 쿠다사이.",
+     "ko": "손을 들어 주세요.",
+     "kind": "일본어 구문 · ～を上げてください (~을 들어 주세요)"
+    },
+    {
+     "id": "4-jv-1",
+     "lang": "ja",
+     "show": "右手[みぎて]",
+     "say": "右手",
+     "snd": "미기테",
+     "ko": "오른손",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "4-jv-2",
+     "lang": "ja",
+     "show": "左手[ひだりて]",
+     "say": "左手",
+     "snd": "히다리테",
+     "ko": "왼손",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "4-jv-3",
+     "lang": "ja",
+     "show": "伸[の]ばす",
+     "say": "伸ばす",
+     "snd": "노바스",
+     "ko": "뻗다, 펴다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "4-jv-4",
+     "lang": "ja",
+     "show": "頭[あたま]",
+     "say": "頭",
+     "snd": "아타마",
+     "ko": "머리",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "4-jv-5",
+     "lang": "ja",
+     "show": "置[お]く",
+     "say": "置く",
+     "snd": "오쿠",
+     "ko": "두다, 얹다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "4-jv-6",
+     "lang": "ja",
+     "show": "上[あ]げる",
+     "say": "上げる",
+     "snd": "아게루",
+     "ko": "들다, 올리다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "4-jv-7",
+     "lang": "ja",
+     "show": "撮[と]る",
+     "say": "撮る",
+     "snd": "토루",
+     "ko": "(사진을) 찍다",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 5,
+   "ref": "48:15-16",
+   "title": "모든 악에서 나를 구속하신 천사",
+   "enRef": "48:15",
+   "jaRef": "48:15",
+   "enScene": "부모님 결혼기념일에 감사 인사",
+   "jaScene": "부모님께 고마움을 전하기",
+   "items": [
+    {
+     "id": "5-er",
+     "lang": "en",
+     "show": "He blessed Joseph, and said, “The God before whom my fathers Abraham and Isaac walked, the God who has fed me all my life long to this day,",
+     "say": "He blessed Joseph, and said, “The God before whom my fathers Abraham and Isaac walked, the God who has fed me all my life long to this day,",
+     "snd": "히 블레스트 조-셉, 앤 세드, 더 갓 비포- 훔- 마이 파-더즈 에이브러햄 앤 아이직 웍-트, 더 갓 후 해즈 페드 미 올- 마이 라이프 롱- 투 디스 데이,",
+     "ko": "그는 요셉을 축복하며 말했다 / “그 앞에서 / 내 조상 아브라함과 이삭이 걸었던 하나님 / 나를 먹여 주신 하나님 / 평생 오늘까지",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "5-er-1",
+     "lang": "en",
+     "show": "He blessed Joseph, and said,",
+     "say": "He blessed Joseph, and said,",
+     "snd": "히 블레스트 조-셉, 앤 세드,",
+     "ko": "그는 요셉을 축복하며 말했다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-er-2",
+     "lang": "en",
+     "show": "“The God before whom",
+     "say": "“The God before whom",
+     "snd": "더 갓 비포- 훔-",
+     "ko": "“그 앞에서",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-er-3",
+     "lang": "en",
+     "show": "my fathers Abraham and Isaac walked,",
+     "say": "my fathers Abraham and Isaac walked,",
+     "snd": "마이 파-더즈 에이브러햄 앤 아이직 웍-트,",
+     "ko": "내 조상 아브라함과 이삭이 걸었던 하나님",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-er-4",
+     "lang": "en",
+     "show": "the God who has fed me",
+     "say": "the God who has fed me",
+     "snd": "더 갓 후 해즈 페드 미",
+     "ko": "나를 먹여 주신 하나님",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-er-5",
+     "lang": "en",
+     "show": "all my life long to this day,",
+     "say": "all my life long to this day,",
+     "snd": "올- 마이 라이프 롱- 투 디스 데이,",
+     "ko": "평생 오늘까지",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-et-1",
+     "lang": "en",
+     "show": "Happy anniversary, Mom and Dad!",
+     "say": "Happy anniversary, Mom and Dad!",
+     "snd": "해피 애니버-서리, 맘 앤 대드!",
+     "ko": "결혼기념일 축하드려요!",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "5-et-2",
+     "lang": "en",
+     "show": "Thank you, sweetheart.",
+     "say": "Thank you, sweetheart.",
+     "snd": "땡큐, 스윗-하-트.",
+     "ko": "고마워, 얘야.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "5-et-3",
+     "lang": "en",
+     "show": "Thank you for raising me all these years.",
+     "say": "Thank you for raising me all these years.",
+     "snd": "땡큐 포 레이징 미 올- 디-즈 이어즈.",
+     "ko": "그동안 길러 주셔서 감사해요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "5-et-4",
+     "lang": "en",
+     "show": "It was our joy.",
+     "say": "It was our joy.",
+     "snd": "잇 워즈 아워 조이.",
+     "ko": "우리에겐 기쁨이었단다.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "5-ek-1",
+     "lang": "en",
+     "show": "Happy anniversary!",
+     "say": "Happy anniversary!",
+     "snd": "해피 애니버-서리!",
+     "ko": "기념일 축하해요!",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "5-ek-2",
+     "lang": "en",
+     "show": "all these years",
+     "say": "all these years",
+     "snd": "올- 디-즈 이어즈",
+     "ko": "그 오랜 세월 동안",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "5-ek-3",
+     "lang": "en",
+     "show": "It was our joy.",
+     "say": "It was our joy.",
+     "snd": "잇 워즈 아워 조이",
+     "ko": "우리에겐 기쁨이었어",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "5-jr",
+     "lang": "ja",
+     "show": "私[わたし]の先祖[せんぞ]アブラハムとイサクがその御前[みまえ]を歩[あゆ]んだ神[かみ]、今日[きょう]まで、生涯[しょうがい]にわたって私[わたし]を養[やしな]われた神[かみ]、",
+     "say": "私の先祖アブラハムとイサクがその御前を歩んだ神、今日まで、生涯にわたって私を養われた神、",
+     "snd": "와타시노 센조 아부라하무토 이사쿠가 소노 미마에오 아윤다 카미 쿄-마데 쇼-가이니 와탓테 와타시오 야시나와레타 카미",
+     "ko": "나의 / 조상 / 아브라함과 / 이삭이 / 그 앞을 / 걸었던 하나님 / 오늘까지 / 평생에 걸쳐 / 나를 / 먹여 살리신 하나님",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "5-jr-1",
+     "lang": "ja",
+     "show": "私[わたし]の",
+     "say": "私の",
+     "snd": "와타시노",
+     "ko": "나의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-2",
+     "lang": "ja",
+     "show": "先祖[せんぞ]",
+     "say": "先祖",
+     "snd": "센조",
+     "ko": "조상",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-3",
+     "lang": "ja",
+     "show": "アブラハムと",
+     "say": "アブラハムと",
+     "snd": "아부라하무토",
+     "ko": "아브라함과",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-4",
+     "lang": "ja",
+     "show": "イサクが",
+     "say": "イサクが",
+     "snd": "이사쿠가",
+     "ko": "이삭이",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-5",
+     "lang": "ja",
+     "show": "その御前[みまえ]を",
+     "say": "その御前を",
+     "snd": "소노 미마에오",
+     "ko": "그 앞을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-6",
+     "lang": "ja",
+     "show": "歩[あゆ]んだ神[かみ]、",
+     "say": "歩んだ神、",
+     "snd": "아윤다 카미",
+     "ko": "걸었던 하나님",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-7",
+     "lang": "ja",
+     "show": "今日[きょう]まで、",
+     "say": "今日まで、",
+     "snd": "쿄-마데",
+     "ko": "오늘까지",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-8",
+     "lang": "ja",
+     "show": "生涯[しょうがい]にわたって",
+     "say": "生涯にわたって",
+     "snd": "쇼-가이니 와탓테",
+     "ko": "평생에 걸쳐",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-9",
+     "lang": "ja",
+     "show": "私[わたし]を",
+     "say": "私を",
+     "snd": "와타시오",
+     "ko": "나를",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jr-10",
+     "lang": "ja",
+     "show": "養[やしな]われた神[かみ]、",
+     "say": "養われた神、",
+     "snd": "야시나와레타 카미",
+     "ko": "먹여 살리신 하나님",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "5-jt-1",
+     "lang": "ja",
+     "show": "今[いま]まで育[そだ]ててくれてありがとう。",
+     "say": "今まで育ててくれてありがとう。",
+     "snd": "이마마데 소다테테 쿠레테 아리가토-.",
+     "ko": "지금까지 길러 줘서 고마워요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "5-jt-2",
+     "lang": "ja",
+     "show": "どうしたの、急[きゅう]に。",
+     "say": "どうしたの、急に。",
+     "snd": "도-시타노, 큐-니.",
+     "ko": "갑자기 왜 그러니.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "5-jt-3",
+     "lang": "ja",
+     "show": "いつも感謝[かんしゃ]しています。",
+     "say": "いつも感謝しています。",
+     "snd": "이츠모 칸샤시테 이마스.",
+     "ko": "늘 감사하고 있어요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "5-jt-4",
+     "lang": "ja",
+     "show": "ありがとう。うれしいよ。",
+     "say": "ありがとう。うれしいよ。",
+     "snd": "아리가토-. 우레시-요.",
+     "ko": "고맙다. 기쁘구나.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "5-jk-1",
+     "lang": "ja",
+     "show": "感謝[かんしゃ]しています",
+     "say": "感謝しています",
+     "snd": "칸샤시테 이마스",
+     "ko": "감사하고 있어요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "5-jk-2",
+     "lang": "ja",
+     "show": "うれしい",
+     "say": "うれしい",
+     "snd": "우레시-",
+     "ko": "기쁘다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "5-ep-1",
+     "lang": "en",
+     "show": "I have lived here all my life.",
+     "say": "I have lived here all my life.",
+     "snd": "아이 해브 리브드 히어 올- 마이 라이프.",
+     "ko": "평생 여기 살았어요.",
+     "kind": "영어 구문 · all my life (평생)"
+    },
+    {
+     "id": "5-ep-2",
+     "lang": "en",
+     "show": "I remember her words to this day.",
+     "say": "I remember her words to this day.",
+     "snd": "아이 리멤버 허 워-즈 투 디스 데이.",
+     "ko": "그녀의 말을 오늘까지 기억해요.",
+     "kind": "영어 구문 · to this day (오늘까지)"
+    },
+    {
+     "id": "5-ev-1",
+     "lang": "en",
+     "show": "walk",
+     "say": "walk",
+     "snd": "웍-",
+     "ko": "(동) 걷다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-ev-2",
+     "lang": "en",
+     "show": "feed",
+     "say": "feed",
+     "snd": "피-드",
+     "ko": "(동) 먹이다, 먹여 기르다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-ev-3",
+     "lang": "en",
+     "show": "long",
+     "say": "long",
+     "snd": "롱-",
+     "ko": "(부) 오래, 내내",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-ev-4",
+     "lang": "en",
+     "show": "anniversary",
+     "say": "anniversary",
+     "snd": "애니버-서리",
+     "ko": "(명) 기념일",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-ev-5",
+     "lang": "en",
+     "show": "raise",
+     "say": "raise",
+     "snd": "레이즈",
+     "ko": "(동) 기르다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-ev-6",
+     "lang": "en",
+     "show": "joy",
+     "say": "joy",
+     "snd": "조이",
+     "ko": "(명) 기쁨",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "5-jp-1",
+     "lang": "ja",
+     "show": "駅[えき]まで歩[ある]きます。",
+     "say": "駅まで歩きます。",
+     "snd": "에키마데 아루키마스.",
+     "ko": "역까지 걷습니다.",
+     "kind": "일본어 구문 · ～まで (~까지)"
+    },
+    {
+     "id": "5-jp-2",
+     "lang": "ja",
+     "show": "三日間[みっかかん]にわたって雨[あめ]が降[ふ]った。",
+     "say": "三日間にわたって雨が降った。",
+     "snd": "믹카칸니 와탓테 아메가 훗타.",
+     "ko": "사흘에 걸쳐 비가 내렸다.",
+     "kind": "일본어 구문 · ～にわたって (~에 걸쳐)"
+    },
+    {
+     "id": "5-jv-1",
+     "lang": "ja",
+     "show": "先祖[せんぞ]",
+     "say": "先祖",
+     "snd": "센조",
+     "ko": "조상",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-2",
+     "lang": "ja",
+     "show": "御前[みまえ]",
+     "say": "御前",
+     "snd": "미마에",
+     "ko": "(높으신 분의) 앞",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-3",
+     "lang": "ja",
+     "show": "歩[あゆ]む",
+     "say": "歩む",
+     "snd": "아유무",
+     "ko": "걷다(글말)",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-4",
+     "lang": "ja",
+     "show": "今日[きょう]",
+     "say": "今日",
+     "snd": "쿄-",
+     "ko": "오늘",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-5",
+     "lang": "ja",
+     "show": "生涯[しょうがい]",
+     "say": "生涯",
+     "snd": "쇼-가이",
+     "ko": "평생",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-6",
+     "lang": "ja",
+     "show": "育[そだ]てる",
+     "say": "育てる",
+     "snd": "소다테루",
+     "ko": "기르다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-7",
+     "lang": "ja",
+     "show": "感謝[かんしゃ]",
+     "say": "感謝",
+     "snd": "칸샤",
+     "ko": "감사",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "5-jv-8",
+     "lang": "ja",
+     "show": "うれしい",
+     "say": "うれしい",
+     "snd": "우레시-",
+     "ko": "기쁘다",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "ref": "48:17-20",
+   "title": "아우가 더 창대해지리라",
+   "enRef": "48:18",
+   "jaRef": "48:18",
+   "enScene": "이름을 잘못 부른 선생님께 바로잡기",
+   "jaScene": "다른 사람으로 잘못 알았을 때",
+   "items": [
+    {
+     "id": "6-er",
+     "lang": "en",
+     "show": "Joseph said to his father, “Not so, my father, for this is the firstborn. Put your right hand on his head.”",
+     "say": "Joseph said to his father, “Not so, my father, for this is the firstborn. Put your right hand on his head.”",
+     "snd": "조-셉 세드 투 히즈 파-더, 낫 쏘우, 마이 파-더, 포 디스 이즈 더 퍼-스트본-. 풋 유어 라잇 핸드 온 히즈 헤드.",
+     "ko": "요셉이 아버지에게 말했다 / “그렇지 않습니다, 아버지 / 이 아이가 맏아들입니다 / 오른손을 이 아이 머리에 얹으십시오.”",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "6-er-1",
+     "lang": "en",
+     "show": "Joseph said to his father,",
+     "say": "Joseph said to his father,",
+     "snd": "조-셉 세드 투 히즈 파-더,",
+     "ko": "요셉이 아버지에게 말했다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-er-2",
+     "lang": "en",
+     "show": "“Not so, my father,",
+     "say": "“Not so, my father,",
+     "snd": "낫 쏘우, 마이 파-더,",
+     "ko": "“그렇지 않습니다, 아버지",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-er-3",
+     "lang": "en",
+     "show": "for this is the firstborn.",
+     "say": "for this is the firstborn.",
+     "snd": "포 디스 이즈 더 퍼-스트본-.",
+     "ko": "이 아이가 맏아들입니다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-er-4",
+     "lang": "en",
+     "show": "Put your right hand on his head.”",
+     "say": "Put your right hand on his head.”",
+     "snd": "풋 유어 라잇 핸드 온 히즈 헤드.",
+     "ko": "오른손을 이 아이 머리에 얹으십시오.”",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-et-1",
+     "lang": "en",
+     "show": "Good morning, Jisu.",
+     "say": "Good morning, Jisu.",
+     "snd": "굿 모-닝, 지수.",
+     "ko": "안녕, 지수야.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "6-et-2",
+     "lang": "en",
+     "show": "Excuse me, I'm Jimin. Jisu is my twin sister.",
+     "say": "Excuse me, I'm Jimin. Jisu is my twin sister.",
+     "snd": "익스큐-즈 미, 아임 지민. 지수 이즈 마이 트윈 시스터.",
+     "ko": "죄송한데 저는 지민이에요. 지수는 제 쌍둥이 자매예요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "6-et-3",
+     "lang": "en",
+     "show": "Oh, I'm sorry! You look so alike.",
+     "say": "Oh, I'm sorry! You look so alike.",
+     "snd": "오우, 아임 쏘리! 유 룩 쏘우 얼라익.",
+     "ko": "아, 미안해! 너무 닮았구나.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "6-et-4",
+     "lang": "en",
+     "show": "That's okay. It happens a lot.",
+     "say": "That's okay. It happens a lot.",
+     "snd": "댓츠 오우케이. 잇 해픈즈 어 랏.",
+     "ko": "괜찮아요. 자주 그래요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "6-ek-1",
+     "lang": "en",
+     "show": "Excuse me, ~",
+     "say": "Excuse me, ",
+     "snd": "익스큐-즈 미",
+     "ko": "실례지만 ~",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "6-ek-2",
+     "lang": "en",
+     "show": "You look so alike.",
+     "say": "You look so alike.",
+     "snd": "유 룩 쏘우 얼라익",
+     "ko": "정말 닮았네요",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "6-ek-3",
+     "lang": "en",
+     "show": "It happens a lot.",
+     "say": "It happens a lot.",
+     "snd": "잇 해픈즈 어 랏",
+     "ko": "자주 있는 일이에요",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "6-jr",
+     "lang": "ja",
+     "show": "ヨセフは父[ちち]に言[い]った。「そうではありません、父上[ちちうえ]。この子[こ]が長男[ちょうなん]です。",
+     "say": "ヨセフは父に言った。「そうではありません、父上。この子が長男です。",
+     "snd": "요세후와 치치니 잇타 소-데와 아리마센 치치우에 코노 코가 초-난데스",
+     "ko": "요셉은 / 아버지에게 / 말했다 / “그렇지 / 않습니다 / 아버님 / 이 아이가 / 맏아들입니다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "6-jr-1",
+     "lang": "ja",
+     "show": "ヨセフは",
+     "say": "ヨセフは",
+     "snd": "요세후와",
+     "ko": "요셉은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jr-2",
+     "lang": "ja",
+     "show": "父[ちち]に",
+     "say": "父に",
+     "snd": "치치니",
+     "ko": "아버지에게",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jr-3",
+     "lang": "ja",
+     "show": "言[い]った。",
+     "say": "言った。",
+     "snd": "잇타",
+     "ko": "말했다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jr-4",
+     "lang": "ja",
+     "show": "「そうでは",
+     "say": "「そうでは",
+     "snd": "소-데와",
+     "ko": "“그렇지",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jr-5",
+     "lang": "ja",
+     "show": "ありません、",
+     "say": "ありません、",
+     "snd": "아리마센",
+     "ko": "않습니다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jr-6",
+     "lang": "ja",
+     "show": "父上[ちちうえ]。",
+     "say": "父上。",
+     "snd": "치치우에",
+     "ko": "아버님",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jr-7",
+     "lang": "ja",
+     "show": "この子[こ]が",
+     "say": "この子が",
+     "snd": "코노 코가",
+     "ko": "이 아이가",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jr-8",
+     "lang": "ja",
+     "show": "長男[ちょうなん]です。",
+     "say": "長男です。",
+     "snd": "초-난데스",
+     "ko": "맏아들입니다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "6-jt-1",
+     "lang": "ja",
+     "show": "田中[たなか]さんですか。",
+     "say": "田中さんですか。",
+     "snd": "타나카산데스카?",
+     "ko": "다나카 씨예요?",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "6-jt-2",
+     "lang": "ja",
+     "show": "いいえ、違[ちが]います。山田[やまだ]です。",
+     "say": "いいえ、違います。山田です。",
+     "snd": "이-에, 치가이마스. 야마다데스.",
+     "ko": "아니요, 아니에요. 야마다예요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "6-jt-3",
+     "lang": "ja",
+     "show": "あ、すみません。",
+     "say": "あ、すみません。",
+     "snd": "아, 스미마센.",
+     "ko": "아, 죄송합니다.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "6-jt-4",
+     "lang": "ja",
+     "show": "いいえ、大丈夫[だいじょうぶ]です。",
+     "say": "いいえ、大丈夫です。",
+     "snd": "이-에, 다이죠-부데스.",
+     "ko": "아니에요, 괜찮아요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "6-jk-1",
+     "lang": "ja",
+     "show": "違[ちが]います",
+     "say": "違います",
+     "snd": "치가이마스",
+     "ko": "아니에요(틀려요)",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "6-jk-2",
+     "lang": "ja",
+     "show": "すみません",
+     "say": "すみません",
+     "snd": "스미마센",
+     "ko": "죄송합니다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "6-ep-1",
+     "lang": "en",
+     "show": "Excuse me, this is my seat.",
+     "say": "Excuse me, this is my seat.",
+     "snd": "익스큐-즈 미, 디스 이즈 마이 싯-.",
+     "ko": "실례지만 여기 제 자리예요.",
+     "kind": "영어 구문 · Excuse me, ~ (실례지만 ~)"
+    },
+    {
+     "id": "6-ep-2",
+     "lang": "en",
+     "show": "You and your brother look alike.",
+     "say": "You and your brother look alike.",
+     "snd": "유 앤 유어 브라더 룩 얼라익.",
+     "ko": "너랑 네 형 닮았다.",
+     "kind": "영어 구문 · look alike (닮다)"
+    },
+    {
+     "id": "6-ev-1",
+     "lang": "en",
+     "show": "so",
+     "say": "so",
+     "snd": "쏘우",
+     "ko": "(부) 그렇게, 아주",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-ev-2",
+     "lang": "en",
+     "show": "firstborn",
+     "say": "firstborn",
+     "snd": "퍼-스트본-",
+     "ko": "(명) 맏아들",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-ev-3",
+     "lang": "en",
+     "show": "put",
+     "say": "put",
+     "snd": "풋",
+     "ko": "(동) 놓다, 얹다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-ev-4",
+     "lang": "en",
+     "show": "excuse",
+     "say": "excuse",
+     "snd": "익스큐-즈",
+     "ko": "(동) 용서하다(Excuse me 실례합니다)",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-ev-5",
+     "lang": "en",
+     "show": "twin",
+     "say": "twin",
+     "snd": "트윈",
+     "ko": "(명) 쌍둥이",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-ev-6",
+     "lang": "en",
+     "show": "sorry",
+     "say": "sorry",
+     "snd": "쏘리",
+     "ko": "(형) 미안한",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-ev-7",
+     "lang": "en",
+     "show": "alike",
+     "say": "alike",
+     "snd": "얼라익",
+     "ko": "(형) 닮은, 비슷한",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "6-jp-1",
+     "lang": "ja",
+     "show": "これは私[わたし]の傘[かさ]ではありません。",
+     "say": "これは私の傘ではありません。",
+     "snd": "코레와 와타시노 카사데와 아리마센.",
+     "ko": "이건 제 우산이 아닙니다.",
+     "kind": "일본어 구문 · ～ではありません (~이 아닙니다)"
+    },
+    {
+     "id": "6-jp-2",
+     "lang": "ja",
+     "show": "失礼[しつれい]ですが、木村[きむら]さんですか。",
+     "say": "失礼ですが、木村さんですか。",
+     "snd": "시츠레-데스가, 키무라산데스카?",
+     "ko": "실례지만 기무라 씨예요?",
+     "kind": "일본어 구문 · ～さんですか (~ 씨예요?)"
+    },
+    {
+     "id": "6-jv-1",
+     "lang": "ja",
+     "show": "そう",
+     "say": "そう",
+     "snd": "소-",
+     "ko": "그렇게",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "6-jv-2",
+     "lang": "ja",
+     "show": "父上[ちちうえ]",
+     "say": "父上",
+     "snd": "치치우에",
+     "ko": "아버님(옛말)",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "6-jv-3",
+     "lang": "ja",
+     "show": "子[こ]",
+     "say": "子",
+     "snd": "코",
+     "ko": "아이",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "6-jv-4",
+     "lang": "ja",
+     "show": "長男[ちょうなん]",
+     "say": "長男",
+     "snd": "초-난",
+     "ko": "맏아들",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "6-jv-5",
+     "lang": "ja",
+     "show": "違[ちが]う",
+     "say": "違う",
+     "snd": "치가우",
+     "ko": "다르다, 틀리다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "6-jv-6",
+     "lang": "ja",
+     "show": "すみません",
+     "say": "すみません",
+     "snd": "스미마센",
+     "ko": "죄송합니다",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "ref": "48:21-22",
+   "title": "형제들보다 한 몫 더",
+   "enRef": "48:21",
+   "jaRef": "48:21",
+   "enScene": "외국으로 떠나는 친구를 배웅하기",
+   "jaScene": "떠나는 친구와 작별 인사",
+   "items": [
+    {
+     "id": "7-er",
+     "lang": "en",
+     "show": "Israel said to Joseph, “Behold, I am dying, but God will be with you, and bring you again to the land of your fathers.",
+     "say": "Israel said to Joseph, “Behold, I am dying, but God will be with you, and bring you again to the land of your fathers.",
+     "snd": "이즈리얼 세드 투 조-셉, 비호울드, 아이 앰 다잉, 벗 갓 윌 비 위드 유, 앤 브링 유 어게인 투 더 랜드 오브 유어 파-더즈.",
+     "ko": "이스라엘이 요셉에게 말했다 / “보라, 나는 죽어 간다 / 그러나 하나님이 너희와 함께하시어 / 너희를 다시 데려가실 것이다 / 너희 조상의 땅으로",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "7-er-1",
+     "lang": "en",
+     "show": "Israel said to Joseph,",
+     "say": "Israel said to Joseph,",
+     "snd": "이즈리얼 세드 투 조-셉,",
+     "ko": "이스라엘이 요셉에게 말했다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-er-2",
+     "lang": "en",
+     "show": "“Behold, I am dying,",
+     "say": "“Behold, I am dying,",
+     "snd": "비호울드, 아이 앰 다잉,",
+     "ko": "“보라, 나는 죽어 간다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-er-3",
+     "lang": "en",
+     "show": "but God will be with you,",
+     "say": "but God will be with you,",
+     "snd": "벗 갓 윌 비 위드 유,",
+     "ko": "그러나 하나님이 너희와 함께하시어",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-er-4",
+     "lang": "en",
+     "show": "and bring you again",
+     "say": "and bring you again",
+     "snd": "앤 브링 유 어게인",
+     "ko": "너희를 다시 데려가실 것이다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-er-5",
+     "lang": "en",
+     "show": "to the land of your fathers.",
+     "say": "to the land of your fathers.",
+     "snd": "투 더 랜드 오브 유어 파-더즈.",
+     "ko": "너희 조상의 땅으로",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-et-1",
+     "lang": "en",
+     "show": "I'm leaving for Canada tomorrow.",
+     "say": "I'm leaving for Canada tomorrow.",
+     "snd": "아임 리-빙 포 캐나다 터마로우.",
+     "ko": "나 내일 캐나다로 떠나.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "7-et-2",
+     "lang": "en",
+     "show": "I'll miss you. Stay in touch.",
+     "say": "I'll miss you. Stay in touch.",
+     "snd": "아일 미스 유. 스테이 인 터치.",
+     "ko": "보고 싶을 거야. 연락하고 지내.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "7-et-3",
+     "lang": "en",
+     "show": "I will. I'll come back someday.",
+     "say": "I will. I'll come back someday.",
+     "snd": "아이 윌. 아일 컴 백 섬데이.",
+     "ko": "그럴게. 언젠가 돌아올게.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "7-et-4",
+     "lang": "en",
+     "show": "Take care. God be with you.",
+     "say": "Take care. God be with you.",
+     "snd": "테익 케어. 갓 비 위드 유.",
+     "ko": "잘 지내. 하나님이 함께하시길.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "7-ek-1",
+     "lang": "en",
+     "show": "leave for ~",
+     "say": "leave for ",
+     "snd": "리-브 포",
+     "ko": "~로 떠나다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "7-ek-2",
+     "lang": "en",
+     "show": "Stay in touch.",
+     "say": "Stay in touch.",
+     "snd": "스테이 인 터치",
+     "ko": "연락하고 지내",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "7-ek-3",
+     "lang": "en",
+     "show": "come back someday",
+     "say": "come back someday",
+     "snd": "컴 백 섬데이",
+     "ko": "언젠가 돌아오다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "7-jr",
+     "lang": "ja",
+     "show": "しかし神[かみ]はあなたがたと共[とも]におられ、あなたがたを先祖[せんぞ]の地[ち]に再[ふたた]び連[つ]れ戻[もど]してくださる。",
+     "say": "しかし神はあなたがたと共におられ、あなたがたを先祖の地に再び連れ戻してくださる。",
+     "snd": "시카시 카미와 아나타가타토 토모니 오라레 아나타가타오 센조노 치니 후타타비 츠레모도시테 쿠다사루",
+     "ko": "그러나 / 하나님은 / 너희와 / 함께 계셔서 / 너희를 / 조상의 땅으로 / 다시 / 데리고 돌아가 / 주실 것이다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "7-jr-1",
+     "lang": "ja",
+     "show": "しかし",
+     "say": "しかし",
+     "snd": "시카시",
+     "ko": "그러나",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-2",
+     "lang": "ja",
+     "show": "神[かみ]は",
+     "say": "神は",
+     "snd": "카미와",
+     "ko": "하나님은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-3",
+     "lang": "ja",
+     "show": "あなたがたと",
+     "say": "あなたがたと",
+     "snd": "아나타가타토",
+     "ko": "너희와",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-4",
+     "lang": "ja",
+     "show": "共[とも]におられ、",
+     "say": "共におられ、",
+     "snd": "토모니 오라레",
+     "ko": "함께 계셔서",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-5",
+     "lang": "ja",
+     "show": "あなたがたを",
+     "say": "あなたがたを",
+     "snd": "아나타가타오",
+     "ko": "너희를",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-6",
+     "lang": "ja",
+     "show": "先祖[せんぞ]の地[ち]に",
+     "say": "先祖の地に",
+     "snd": "센조노 치니",
+     "ko": "조상의 땅으로",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-7",
+     "lang": "ja",
+     "show": "再[ふたた]び",
+     "say": "再び",
+     "snd": "후타타비",
+     "ko": "다시",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-8",
+     "lang": "ja",
+     "show": "連[つ]れ戻[もど]して",
+     "say": "連れ戻して",
+     "snd": "츠레모도시테",
+     "ko": "데리고 돌아가",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jr-9",
+     "lang": "ja",
+     "show": "くださる。",
+     "say": "くださる。",
+     "snd": "쿠다사루",
+     "ko": "주실 것이다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "7-jt-1",
+     "lang": "ja",
+     "show": "明日[あした]、カナダへ行[い]きます。",
+     "say": "明日、カナダへ行きます。",
+     "snd": "아시타, 카나다에 이키마스.",
+     "ko": "내일 캐나다에 가요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "7-jt-2",
+     "lang": "ja",
+     "show": "寂[さび]しくなりますね。",
+     "say": "寂しくなりますね。",
+     "snd": "사비시쿠 나리마스네.",
+     "ko": "쓸쓸해지겠네요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "7-jt-3",
+     "lang": "ja",
+     "show": "また会[あ]いましょう。",
+     "say": "また会いましょう。",
+     "snd": "마타 아이마쇼-.",
+     "ko": "또 만나요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "7-jt-4",
+     "lang": "ja",
+     "show": "元気[げんき]でね。",
+     "say": "元気でね。",
+     "snd": "겐키데네.",
+     "ko": "잘 지내.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "7-jk-1",
+     "lang": "ja",
+     "show": "また会[あ]いましょう",
+     "say": "また会いましょう",
+     "snd": "마타 아이마쇼-",
+     "ko": "또 만나요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "7-jk-2",
+     "lang": "ja",
+     "show": "元気[げんき]でね",
+     "say": "元気でね",
+     "snd": "겐키데네",
+     "ko": "잘 지내",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "7-ep-1",
+     "lang": "en",
+     "show": "We're leaving for Jeju next week.",
+     "say": "We're leaving for Jeju next week.",
+     "snd": "위어 리-빙 포 제주 넥스트 위-크.",
+     "ko": "다음 주에 제주로 떠나요.",
+     "kind": "영어 구문 · leave for + 장소 (~로 떠나다)"
+    },
+    {
+     "id": "7-ep-2",
+     "lang": "en",
+     "show": "Let's stay in touch after graduation.",
+     "say": "Let's stay in touch after graduation.",
+     "snd": "렛츠 스테이 인 터치 애프터 그래주에이션.",
+     "ko": "졸업 후에도 연락하고 지내자.",
+     "kind": "영어 구문 · Stay in touch. (연락하고 지내자)"
+    },
+    {
+     "id": "7-ev-1",
+     "lang": "en",
+     "show": "die",
+     "say": "die",
+     "snd": "다이",
+     "ko": "(동) 죽다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-ev-2",
+     "lang": "en",
+     "show": "bring",
+     "say": "bring",
+     "snd": "브링",
+     "ko": "(동) 데려오다, 가져오다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-ev-3",
+     "lang": "en",
+     "show": "again",
+     "say": "again",
+     "snd": "어게인",
+     "ko": "(부) 다시",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-ev-4",
+     "lang": "en",
+     "show": "leave",
+     "say": "leave",
+     "snd": "리-브",
+     "ko": "(동) 떠나다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-ev-5",
+     "lang": "en",
+     "show": "tomorrow",
+     "say": "tomorrow",
+     "snd": "터마로우",
+     "ko": "(부) 내일",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-ev-6",
+     "lang": "en",
+     "show": "touch",
+     "say": "touch",
+     "snd": "터치",
+     "ko": "(명) 연락, 접촉",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-ev-7",
+     "lang": "en",
+     "show": "someday",
+     "say": "someday",
+     "snd": "섬데이",
+     "ko": "(부) 언젠가",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "7-jp-1",
+     "lang": "ja",
+     "show": "また来[き]てください。",
+     "say": "また来てください。",
+     "snd": "마타 키테 쿠다사이.",
+     "ko": "또 오세요.",
+     "kind": "일본어 구문 · また～ (다시 ~, 또 ~)"
+    },
+    {
+     "id": "7-jp-2",
+     "lang": "ja",
+     "show": "寒[さむ]くなりました。",
+     "say": "寒くなりました。",
+     "snd": "사무쿠 나리마시타.",
+     "ko": "추워졌습니다.",
+     "kind": "일본어 구문 · ～くなる (~해지다)"
+    },
+    {
+     "id": "7-jv-1",
+     "lang": "ja",
+     "show": "あなたがた",
+     "say": "あなたがた",
+     "snd": "아나타가타",
+     "ko": "너희, 여러분",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "7-jv-2",
+     "lang": "ja",
+     "show": "共[とも]に",
+     "say": "共に",
+     "snd": "토모니",
+     "ko": "함께",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "7-jv-3",
+     "lang": "ja",
+     "show": "再[ふたた]び",
+     "say": "再び",
+     "snd": "후타타비",
+     "ko": "다시",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "7-jv-4",
+     "lang": "ja",
+     "show": "連[つ]れ戻[もど]す",
+     "say": "連れ戻す",
+     "snd": "츠레모도스",
+     "ko": "데리고 돌아오다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "7-jv-5",
+     "lang": "ja",
+     "show": "寂[さび]しい",
+     "say": "寂しい",
+     "snd": "사비시-",
+     "ko": "쓸쓸하다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "7-jv-6",
+     "lang": "ja",
+     "show": "また",
+     "say": "また",
+     "snd": "마타",
+     "ko": "또, 다시",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 8,
+   "ref": "49:1-4",
+   "title": "마지막 날들에 닥칠 일 — 첫 태생 르우벤",
+   "enRef": "49:2",
+   "jaRef": "49:2",
+   "enScene": "가족회의",
+   "jaScene": "가족을 불러 모으기",
+   "items": [
+    {
+     "id": "8-er",
+     "lang": "en",
+     "show": "Assemble yourselves, and hear, you sons of Jacob. Listen to Israel, your father.",
+     "say": "Assemble yourselves, and hear, you sons of Jacob. Listen to Israel, your father.",
+     "snd": "어셈블 유어셀브즈, 앤 히어, 유 선즈 오브 제이컵. 리슨 투 이즈리얼, 유어 파-더.",
+     "ko": "모여서 들어라 / 너희 야곱의 아들들아 / 이스라엘에게 귀를 기울여라 / 너희 아버지",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "8-er-1",
+     "lang": "en",
+     "show": "Assemble yourselves, and hear,",
+     "say": "Assemble yourselves, and hear,",
+     "snd": "어셈블 유어셀브즈, 앤 히어,",
+     "ko": "모여서 들어라",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-er-2",
+     "lang": "en",
+     "show": "you sons of Jacob.",
+     "say": "you sons of Jacob.",
+     "snd": "유 선즈 오브 제이컵.",
+     "ko": "너희 야곱의 아들들아",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-er-3",
+     "lang": "en",
+     "show": "Listen to Israel,",
+     "say": "Listen to Israel,",
+     "snd": "리슨 투 이즈리얼,",
+     "ko": "이스라엘에게 귀를 기울여라",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-er-4",
+     "lang": "en",
+     "show": "your father.",
+     "say": "your father.",
+     "snd": "유어 파-더.",
+     "ko": "너희 아버지",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-et-1",
+     "lang": "en",
+     "show": "Everyone, gather around. I have some news.",
+     "say": "Everyone, gather around. I have some news.",
+     "snd": "에브리원, 개더 어라운드. 아이 해브 섬 뉴-즈.",
+     "ko": "다들 모여 봐. 소식이 있어.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "8-et-2",
+     "lang": "en",
+     "show": "What is it, Dad?",
+     "say": "What is it, Dad?",
+     "snd": "왓 이즈 잇, 대드?",
+     "ko": "뭔데요, 아빠?",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "8-et-3",
+     "lang": "en",
+     "show": "Listen carefully. We're getting a puppy!",
+     "say": "Listen carefully. We're getting a puppy!",
+     "snd": "리슨 케어펄리. 위어 게팅 어 퍼피!",
+     "ko": "잘 들어. 우리 강아지 키울 거야!",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "8-et-4",
+     "lang": "en",
+     "show": "Really? That's great news!",
+     "say": "Really? That's great news!",
+     "snd": "리-얼리? 댓츠 그레잇 뉴-즈!",
+     "ko": "정말요? 좋은 소식이네요!",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "8-ek-1",
+     "lang": "en",
+     "show": "Gather around.",
+     "say": "Gather around.",
+     "snd": "개더 어라운드",
+     "ko": "모여 봐",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "8-ek-2",
+     "lang": "en",
+     "show": "I have some news.",
+     "say": "I have some news.",
+     "snd": "아이 해브 섬 뉴-즈",
+     "ko": "소식이 있어",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "8-ek-3",
+     "lang": "en",
+     "show": "Listen carefully.",
+     "say": "Listen carefully.",
+     "snd": "리슨 케어펄리",
+     "ko": "잘 들어",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "8-jr",
+     "lang": "ja",
+     "show": "ヤコブの息子[むすこ]たちよ、集[あつ]まって聞[き]け。あなたがたの父[ちち]イスラエルに耳[みみ]を傾[かたむ]けよ。",
+     "say": "ヤコブの息子たちよ、集まって聞け。あなたがたの父イスラエルに耳を傾けよ。",
+     "snd": "야코부노 무스코타치요 아츠맛테 키케 아나타가타노 치치 이스라에루니 미미오 카타무케요",
+     "ko": "야곱의 / 아들들아 / 모여서 / 들어라 / 너희의 / 아버지 / 이스라엘에게 / 귀를 / 기울여라",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "8-jr-1",
+     "lang": "ja",
+     "show": "ヤコブの",
+     "say": "ヤコブの",
+     "snd": "야코부노",
+     "ko": "야곱의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-2",
+     "lang": "ja",
+     "show": "息子[むすこ]たちよ、",
+     "say": "息子たちよ、",
+     "snd": "무스코타치요",
+     "ko": "아들들아",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-3",
+     "lang": "ja",
+     "show": "集[あつ]まって",
+     "say": "集まって",
+     "snd": "아츠맛테",
+     "ko": "모여서",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-4",
+     "lang": "ja",
+     "show": "聞[き]け。",
+     "say": "聞け。",
+     "snd": "키케",
+     "ko": "들어라",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-5",
+     "lang": "ja",
+     "show": "あなたがたの",
+     "say": "あなたがたの",
+     "snd": "아나타가타노",
+     "ko": "너희의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-6",
+     "lang": "ja",
+     "show": "父[ちち]",
+     "say": "父",
+     "snd": "치치",
+     "ko": "아버지",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-7",
+     "lang": "ja",
+     "show": "イスラエルに",
+     "say": "イスラエルに",
+     "snd": "이스라에루니",
+     "ko": "이스라엘에게",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-8",
+     "lang": "ja",
+     "show": "耳[みみ]を",
+     "say": "耳を",
+     "snd": "미미오",
+     "ko": "귀를",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jr-9",
+     "lang": "ja",
+     "show": "傾[かたむ]けよ。",
+     "say": "傾けよ。",
+     "snd": "카타무케요",
+     "ko": "기울여라",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "8-jt-1",
+     "lang": "ja",
+     "show": "みんな、集[あつ]まって。",
+     "say": "みんな、集まって。",
+     "snd": "민나, 아츠맛테.",
+     "ko": "다들 모여.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "8-jt-2",
+     "lang": "ja",
+     "show": "どうしたの？",
+     "say": "どうしたの？",
+     "snd": "도-시타노?",
+     "ko": "무슨 일이야?",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "8-jt-3",
+     "lang": "ja",
+     "show": "いいニュースがあるよ。",
+     "say": "いいニュースがあるよ。",
+     "snd": "이- 뉴-스가 아루요.",
+     "ko": "좋은 소식이 있어.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "8-jt-4",
+     "lang": "ja",
+     "show": "え、何[なに]？聞[き]かせて。",
+     "say": "え、何？聞かせて。",
+     "snd": "에, 나니? 키카세테.",
+     "ko": "뭔데? 들려줘.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "8-jk-1",
+     "lang": "ja",
+     "show": "みんな",
+     "say": "みんな",
+     "snd": "민나",
+     "ko": "모두, 다들",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "8-jk-2",
+     "lang": "ja",
+     "show": "聞[き]かせて",
+     "say": "聞かせて",
+     "snd": "키카세테",
+     "ko": "들려줘",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "8-ep-1",
+     "lang": "en",
+     "show": "Listen to your teacher.",
+     "say": "Listen to your teacher.",
+     "snd": "리슨 투 유어 티-처.",
+     "ko": "선생님 말씀 잘 들어.",
+     "kind": "영어 구문 · listen to ~ (~에 귀 기울이다)"
+    },
+    {
+     "id": "8-ep-2",
+     "lang": "en",
+     "show": "I have some good news for you.",
+     "say": "I have some good news for you.",
+     "snd": "아이 해브 섬 굿 뉴-즈 포 유.",
+     "ko": "너한테 좋은 소식이 있어.",
+     "kind": "영어 구문 · I have some news. (소식이 있어)"
+    },
+    {
+     "id": "8-ev-1",
+     "lang": "en",
+     "show": "assemble",
+     "say": "assemble",
+     "snd": "어셈블",
+     "ko": "(동) 모이다, 모으다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-ev-2",
+     "lang": "en",
+     "show": "hear",
+     "say": "hear",
+     "snd": "히어",
+     "ko": "(동) 듣다, 들리다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-ev-3",
+     "lang": "en",
+     "show": "listen",
+     "say": "listen",
+     "snd": "리슨",
+     "ko": "(동) 귀 기울여 듣다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-ev-4",
+     "lang": "en",
+     "show": "gather",
+     "say": "gather",
+     "snd": "개더",
+     "ko": "(동) 모이다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-ev-5",
+     "lang": "en",
+     "show": "news",
+     "say": "news",
+     "snd": "뉴-즈",
+     "ko": "(명) 소식",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-ev-6",
+     "lang": "en",
+     "show": "carefully",
+     "say": "carefully",
+     "snd": "케어펄리",
+     "ko": "(부) 주의 깊게",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-ev-7",
+     "lang": "en",
+     "show": "puppy",
+     "say": "puppy",
+     "snd": "퍼피",
+     "ko": "(명) 강아지",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "8-jp-1",
+     "lang": "ja",
+     "show": "友[とも]よ、ありがとう。",
+     "say": "友よ、ありがとう。",
+     "snd": "토모요, 아리가토-.",
+     "ko": "친구여, 고마워.",
+     "kind": "일본어 구문 · ～よ (~아/야, ~여 — 부르는 말)"
+    },
+    {
+     "id": "8-jp-2",
+     "lang": "ja",
+     "show": "ちょっと待[ま]って。",
+     "say": "ちょっと待って。",
+     "snd": "춋토 맛테.",
+     "ko": "잠깐 기다려.",
+     "kind": "일본어 구문 · ～て (~해 — 반말 부탁)"
+    },
+    {
+     "id": "8-jv-1",
+     "lang": "ja",
+     "show": "集[あつ]まる",
+     "say": "集まる",
+     "snd": "아츠마루",
+     "ko": "모이다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "8-jv-2",
+     "lang": "ja",
+     "show": "聞[き]く",
+     "say": "聞く",
+     "snd": "키쿠",
+     "ko": "듣다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "8-jv-3",
+     "lang": "ja",
+     "show": "耳[みみ]",
+     "say": "耳",
+     "snd": "미미",
+     "ko": "귀",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "8-jv-4",
+     "lang": "ja",
+     "show": "傾[かたむ]ける",
+     "say": "傾ける",
+     "snd": "카타무케루",
+     "ko": "기울이다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "8-jv-5",
+     "lang": "ja",
+     "show": "みんな",
+     "say": "みんな",
+     "snd": "민나",
+     "ko": "모두",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "8-jv-6",
+     "lang": "ja",
+     "show": "何[なに]",
+     "say": "何",
+     "snd": "나니",
+     "ko": "무엇",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 9,
+   "ref": "49:5-7",
+   "title": "시므온과 레위 — 잔인함의 도구들",
+   "enRef": "49:7",
+   "jaRef": "49:7",
+   "enScene": "다투는 두 아이를 진정시키기",
+   "jaScene": "화가 난 친구를 달래기",
+   "items": [
+    {
+     "id": "9-er",
+     "lang": "en",
+     "show": "I will divide them in Jacob, and scatter them in Israel.",
+     "say": "I will divide them in Jacob, and scatter them in Israel.",
+     "snd": "아이 윌 디바이드 뎀 인 제이컵, 앤 스캐터 뎀 인 이즈리얼.",
+     "ko": "내가 그들을 나누겠다 / 야곱 가운데서 / 이스라엘 가운데 흩겠다",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "9-er-1",
+     "lang": "en",
+     "show": "I will divide them",
+     "say": "I will divide them",
+     "snd": "아이 윌 디바이드 뎀",
+     "ko": "내가 그들을 나누겠다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-er-2",
+     "lang": "en",
+     "show": "in Jacob,",
+     "say": "in Jacob,",
+     "snd": "인 제이컵,",
+     "ko": "야곱 가운데서",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-er-3",
+     "lang": "en",
+     "show": "and scatter them in Israel.",
+     "say": "and scatter them in Israel.",
+     "snd": "앤 스캐터 뎀 인 이즈리얼.",
+     "ko": "이스라엘 가운데 흩겠다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-et-1",
+     "lang": "en",
+     "show": "Stop fighting, you two!",
+     "say": "Stop fighting, you two!",
+     "snd": "스탑 파이팅, 유 투-!",
+     "ko": "둘 다 그만 싸워!",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "9-et-2",
+     "lang": "en",
+     "show": "He took my toy first!",
+     "say": "He took my toy first!",
+     "snd": "히 툭 마이 토이 퍼-스트!",
+     "ko": "쟤가 먼저 내 장난감 가져갔어요!",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "9-et-3",
+     "lang": "en",
+     "show": "Calm down. Let's talk when you're not angry.",
+     "say": "Calm down. Let's talk when you're not angry.",
+     "snd": "캄- 다운. 렛츠 톡- 웬 유어 낫 앵그리.",
+     "ko": "진정해. 화가 가라앉으면 이야기하자.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "9-et-4",
+     "lang": "en",
+     "show": "Okay. I'm sorry I yelled.",
+     "say": "Okay. I'm sorry I yelled.",
+     "snd": "오우케이. 아임 쏘리 아이 옐드.",
+     "ko": "네. 소리 질러서 죄송해요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "9-ek-1",
+     "lang": "en",
+     "show": "Stop ~ing!",
+     "say": "Stop ing!",
+     "snd": "스탑 ~잉!",
+     "ko": "~ 그만해!",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "9-ek-2",
+     "lang": "en",
+     "show": "Calm down.",
+     "say": "Calm down.",
+     "snd": "캄- 다운",
+     "ko": "진정해",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "9-ek-3",
+     "lang": "en",
+     "show": "I'm sorry I ~.",
+     "say": "I'm sorry I .",
+     "snd": "아임 쏘리 아이",
+     "ko": "~해서 미안해",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "9-jr",
+     "lang": "ja",
+     "show": "私[わたし]は彼[かれ]らをヤコブの中[なか]で分[わ]け、イスラエルの中[なか]に散[ち]らそう。",
+     "say": "私は彼らをヤコブの中で分け、イスラエルの中に散らそう。",
+     "snd": "와타시와 카레라오 야코부노 나카데 와케 이스라에루노 나카니 치라소-",
+     "ko": "나는 / 그들을 / 야곱 / 가운데서 / 나누고 / 이스라엘 / 가운데에 / 흩으리라",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "9-jr-1",
+     "lang": "ja",
+     "show": "私[わたし]は",
+     "say": "私は",
+     "snd": "와타시와",
+     "ko": "나는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-2",
+     "lang": "ja",
+     "show": "彼[かれ]らを",
+     "say": "彼らを",
+     "snd": "카레라오",
+     "ko": "그들을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-3",
+     "lang": "ja",
+     "show": "ヤコブの",
+     "say": "ヤコブの",
+     "snd": "야코부노",
+     "ko": "야곱",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-4",
+     "lang": "ja",
+     "show": "中[なか]で",
+     "say": "中で",
+     "snd": "나카데",
+     "ko": "가운데서",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-5",
+     "lang": "ja",
+     "show": "分[わ]け、",
+     "say": "分け、",
+     "snd": "와케",
+     "ko": "나누고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-6",
+     "lang": "ja",
+     "show": "イスラエルの",
+     "say": "イスラエルの",
+     "snd": "이스라에루노",
+     "ko": "이스라엘",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-7",
+     "lang": "ja",
+     "show": "中[なか]に",
+     "say": "中に",
+     "snd": "나카니",
+     "ko": "가운데에",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jr-8",
+     "lang": "ja",
+     "show": "散[ち]らそう。",
+     "say": "散らそう。",
+     "snd": "치라소-",
+     "ko": "흩으리라",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "9-jt-1",
+     "lang": "ja",
+     "show": "落[お]ち着[つ]いて。",
+     "say": "落ち着いて。",
+     "snd": "오치츠이테.",
+     "ko": "진정해.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "9-jt-2",
+     "lang": "ja",
+     "show": "でも、腹[はら]が立[た]つ！",
+     "say": "でも、腹が立つ！",
+     "snd": "데모, 하라가 타츠!",
+     "ko": "그래도 화가 나!",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "9-jt-3",
+     "lang": "ja",
+     "show": "少[すこ]し休[やす]もう。",
+     "say": "少し休もう。",
+     "snd": "스코시 야스모-.",
+     "ko": "좀 쉬자.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "9-jt-4",
+     "lang": "ja",
+     "show": "うん、そうする。",
+     "say": "うん、そうする。",
+     "snd": "운, 소- 스루.",
+     "ko": "응, 그럴게.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "9-jk-1",
+     "lang": "ja",
+     "show": "落[お]ち着[つ]いて",
+     "say": "落ち着いて",
+     "snd": "오치츠이테",
+     "ko": "진정해",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "9-jk-2",
+     "lang": "ja",
+     "show": "腹[はら]が立[た]つ",
+     "say": "腹が立つ",
+     "snd": "하라가 타츠",
+     "ko": "화가 나다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "9-ep-1",
+     "lang": "en",
+     "show": "Stop playing games and go to bed.",
+     "say": "Stop playing games and go to bed.",
+     "snd": "스탑 플레잉 게임즈 앤 고우 투 베드.",
+     "ko": "게임 그만하고 자러 가.",
+     "kind": "영어 구문 · Stop ~ing (~하는 것을 그만해)"
+    },
+    {
+     "id": "9-ep-2",
+     "lang": "en",
+     "show": "I'm sorry I was late.",
+     "say": "I'm sorry I was late.",
+     "snd": "아임 쏘리 아이 워즈 레이트.",
+     "ko": "늦어서 미안해.",
+     "kind": "영어 구문 · I'm sorry I ~ (~해서 미안해)"
+    },
+    {
+     "id": "9-ev-1",
+     "lang": "en",
+     "show": "divide",
+     "say": "divide",
+     "snd": "디바이드",
+     "ko": "(동) 나누다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-ev-2",
+     "lang": "en",
+     "show": "scatter",
+     "say": "scatter",
+     "snd": "스캐터",
+     "ko": "(동) 흩다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-ev-3",
+     "lang": "en",
+     "show": "fight",
+     "say": "fight",
+     "snd": "파이트",
+     "ko": "(동) 싸우다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-ev-4",
+     "lang": "en",
+     "show": "toy",
+     "say": "toy",
+     "snd": "토이",
+     "ko": "(명) 장난감",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-ev-5",
+     "lang": "en",
+     "show": "calm",
+     "say": "calm",
+     "snd": "캄-",
+     "ko": "(동) 진정하다(calm down)",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-ev-6",
+     "lang": "en",
+     "show": "angry",
+     "say": "angry",
+     "snd": "앵그리",
+     "ko": "(형) 화난",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-ev-7",
+     "lang": "en",
+     "show": "yell",
+     "say": "yell",
+     "snd": "옐",
+     "ko": "(동) 소리 지르다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "9-jp-1",
+     "lang": "ja",
+     "show": "一緒[いっしょ]に帰[かえ]ろう。",
+     "say": "一緒に帰ろう。",
+     "snd": "잇쇼니 카에로-.",
+     "ko": "같이 돌아가자.",
+     "kind": "일본어 구문 · ～う・～よう (~하자 — 의지형)"
+    },
+    {
+     "id": "9-jp-2",
+     "lang": "ja",
+     "show": "果物[くだもの]の中[なか]でりんごが一番[いちばん]好[す]きです。",
+     "say": "果物の中でりんごが一番好きです。",
+     "snd": "쿠다모노노 나카데 린고가 이치반 스키데스.",
+     "ko": "과일 중에서 사과를 제일 좋아해요.",
+     "kind": "일본어 구문 · ～の中で (~ 가운데서)"
+    },
+    {
+     "id": "9-jv-1",
+     "lang": "ja",
+     "show": "中[なか]",
+     "say": "中",
+     "snd": "나카",
+     "ko": "가운데, 안",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "9-jv-2",
+     "lang": "ja",
+     "show": "分[わ]ける",
+     "say": "分ける",
+     "snd": "와케루",
+     "ko": "나누다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "9-jv-3",
+     "lang": "ja",
+     "show": "散[ち]らす",
+     "say": "散らす",
+     "snd": "치라스",
+     "ko": "흩다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "9-jv-4",
+     "lang": "ja",
+     "show": "落[お]ち着[つ]く",
+     "say": "落ち着く",
+     "snd": "오치츠쿠",
+     "ko": "진정하다, 차분해지다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "9-jv-5",
+     "lang": "ja",
+     "show": "腹[はら]",
+     "say": "腹",
+     "snd": "하라",
+     "ko": "배(腹が立つ 화가 나다)",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "9-jv-6",
+     "lang": "ja",
+     "show": "休[やす]む",
+     "say": "休む",
+     "snd": "야스무",
+     "ko": "쉬다",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 10,
+   "ref": "49:8-12",
+   "title": "유다 — 포도나무에 맨 나귀 새끼",
+   "enRef": "49:12",
+   "jaRef": "49:12",
+   "enScene": "치과 정기 검진",
+   "jaScene": "치과에서",
+   "items": [
+    {
+     "id": "10-er",
+     "lang": "en",
+     "show": "His eyes will be red with wine, his teeth white with milk.",
+     "say": "His eyes will be red with wine, his teeth white with milk.",
+     "snd": "히즈 아이즈 윌 비 레드 위드 와인, 히즈 티-뜨 와잇 위드 밀크.",
+     "ko": "그의 눈은 포도주로 붉고 / 그의 이는 / 우유로 희리라",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "10-er-1",
+     "lang": "en",
+     "show": "His eyes will be red with wine,",
+     "say": "His eyes will be red with wine,",
+     "snd": "히즈 아이즈 윌 비 레드 위드 와인,",
+     "ko": "그의 눈은 포도주로 붉고",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-er-2",
+     "lang": "en",
+     "show": "his teeth",
+     "say": "his teeth",
+     "snd": "히즈 티-뜨",
+     "ko": "그의 이는",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-er-3",
+     "lang": "en",
+     "show": "white with milk.",
+     "say": "white with milk.",
+     "snd": "와잇 위드 밀크.",
+     "ko": "우유로 희리라",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-et-1",
+     "lang": "en",
+     "show": "Your teeth look healthy and white.",
+     "say": "Your teeth look healthy and white.",
+     "snd": "유어 티-뜨 룩 헬띠 앤 와잇.",
+     "ko": "이가 건강하고 하얗네요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "10-et-2",
+     "lang": "en",
+     "show": "Thanks. I brush them three times a day.",
+     "say": "Thanks. I brush them three times a day.",
+     "snd": "땡스. 아이 브러시 뎀 뜨리- 타임즈 어 데이.",
+     "ko": "고마워요. 하루 세 번 닦아요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "10-et-3",
+     "lang": "en",
+     "show": "Good. Do you drink a lot of coffee?",
+     "say": "Good. Do you drink a lot of coffee?",
+     "snd": "굿. 두 유 드링크 어 랏 오브 커-피?",
+     "ko": "좋아요. 커피 많이 드세요?",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "10-et-4",
+     "lang": "en",
+     "show": "Just one cup in the morning.",
+     "say": "Just one cup in the morning.",
+     "snd": "저스트 원 컵 인 더 모-닝.",
+     "ko": "아침에 한 잔만요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "10-ek-1",
+     "lang": "en",
+     "show": "three times a day",
+     "say": "three times a day",
+     "snd": "뜨리- 타임즈 어 데이",
+     "ko": "하루에 세 번",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "10-ek-2",
+     "lang": "en",
+     "show": "a lot of ~",
+     "say": "a lot of ",
+     "snd": "어 랏 오브",
+     "ko": "많은 ~",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "10-ek-3",
+     "lang": "en",
+     "show": "just one cup",
+     "say": "just one cup",
+     "snd": "저스트 원 컵",
+     "ko": "딱 한 잔",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "10-jr",
+     "lang": "ja",
+     "show": "彼[かれ]の目[め]はぶどう酒[しゅ]で赤[あか]く、彼[かれ]の歯[は]は乳[ちち]で白[しろ]い。",
+     "say": "彼の目はぶどう酒で赤く、彼の歯は乳で白い。",
+     "snd": "카레노 메와 부도-슈데 아카쿠 카레노 하와 치치데 시로이",
+     "ko": "그의 / 눈은 / 포도주로 / 붉고 / 그의 / 이는 / 젖으로 / 희다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "10-jr-1",
+     "lang": "ja",
+     "show": "彼[かれ]の",
+     "say": "彼の",
+     "snd": "카레노",
+     "ko": "그의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-2",
+     "lang": "ja",
+     "show": "目[め]は",
+     "say": "目は",
+     "snd": "메와",
+     "ko": "눈은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-3",
+     "lang": "ja",
+     "show": "ぶどう酒[しゅ]で",
+     "say": "ぶどう酒で",
+     "snd": "부도-슈데",
+     "ko": "포도주로",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-4",
+     "lang": "ja",
+     "show": "赤[あか]く、",
+     "say": "赤く、",
+     "snd": "아카쿠",
+     "ko": "붉고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-5",
+     "lang": "ja",
+     "show": "彼[かれ]の",
+     "say": "彼の",
+     "snd": "카레노",
+     "ko": "그의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-6",
+     "lang": "ja",
+     "show": "歯[は]は",
+     "say": "歯は",
+     "snd": "하와",
+     "ko": "이는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-7",
+     "lang": "ja",
+     "show": "乳[ちち]で",
+     "say": "乳で",
+     "snd": "치치데",
+     "ko": "젖으로",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jr-8",
+     "lang": "ja",
+     "show": "白[しろ]い。",
+     "say": "白い。",
+     "snd": "시로이",
+     "ko": "희다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "10-jt-1",
+     "lang": "ja",
+     "show": "歯[は]を見[み]せてください。",
+     "say": "歯を見せてください。",
+     "snd": "하오 미세테 쿠다사이.",
+     "ko": "이를 보여 주세요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "10-jt-2",
+     "lang": "ja",
+     "show": "はい、どうぞ。",
+     "say": "はい、どうぞ。",
+     "snd": "하이, 도-조.",
+     "ko": "네, 여기요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "10-jt-3",
+     "lang": "ja",
+     "show": "きれいな歯[は]ですね。",
+     "say": "きれいな歯ですね。",
+     "snd": "키레-나 하데스네.",
+     "ko": "이가 깨끗하네요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "10-jt-4",
+     "lang": "ja",
+     "show": "毎日[まいにち]磨[みが]いています。",
+     "say": "毎日磨いています。",
+     "snd": "마이니치 미가이테 이마스.",
+     "ko": "매일 닦고 있어요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "10-jk-1",
+     "lang": "ja",
+     "show": "きれい",
+     "say": "きれい",
+     "snd": "키레-",
+     "ko": "깨끗하다, 예쁘다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "10-jk-2",
+     "lang": "ja",
+     "show": "磨[みが]いています",
+     "say": "磨いています",
+     "snd": "미가이테 이마스",
+     "ko": "닦고 있어요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "10-ep-1",
+     "lang": "en",
+     "show": "Take this medicine twice a day.",
+     "say": "Take this medicine twice a day.",
+     "snd": "테익 디스 메디슨 트와이스 어 데이.",
+     "ko": "이 약을 하루 두 번 드세요.",
+     "kind": "영어 구문 · ~ times a day (하루에 ~번)"
+    },
+    {
+     "id": "10-ep-2",
+     "lang": "en",
+     "show": "I have a lot of homework.",
+     "say": "I have a lot of homework.",
+     "snd": "아이 해브 어 랏 오브 호움웍-.",
+     "ko": "숙제가 많아.",
+     "kind": "영어 구문 · a lot of ~ (많은 ~)"
+    },
+    {
+     "id": "10-ev-1",
+     "lang": "en",
+     "show": "eye",
+     "say": "eye",
+     "snd": "아이",
+     "ko": "(명) 눈",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-ev-2",
+     "lang": "en",
+     "show": "red",
+     "say": "red",
+     "snd": "레드",
+     "ko": "(형) 붉은",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-ev-3",
+     "lang": "en",
+     "show": "wine",
+     "say": "wine",
+     "snd": "와인",
+     "ko": "(명) 포도주",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-ev-4",
+     "lang": "en",
+     "show": "tooth",
+     "say": "tooth",
+     "snd": "투-뜨",
+     "ko": "(명) 이(복수 teeth)",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-ev-5",
+     "lang": "en",
+     "show": "white",
+     "say": "white",
+     "snd": "와잇",
+     "ko": "(형) 흰",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-ev-6",
+     "lang": "en",
+     "show": "brush",
+     "say": "brush",
+     "snd": "브러시",
+     "ko": "(동) (솔로) 닦다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-ev-7",
+     "lang": "en",
+     "show": "coffee",
+     "say": "coffee",
+     "snd": "커-피",
+     "ko": "(명) 커피",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "10-jp-1",
+     "lang": "ja",
+     "show": "この部屋[へや]は広[ひろ]く、明[あか]るい。",
+     "say": "この部屋は広く、明るい。",
+     "snd": "코노 헤야와 히로쿠, 아카루이.",
+     "ko": "이 방은 넓고 밝다.",
+     "kind": "일본어 구문 · 형용사 ～く、～ (~하고)"
+    },
+    {
+     "id": "10-jp-2",
+     "lang": "ja",
+     "show": "メニューを見[み]せてください。",
+     "say": "メニューを見せてください。",
+     "snd": "메뉴-오 미세테 쿠다사이.",
+     "ko": "메뉴를 보여 주세요.",
+     "kind": "일본어 구문 · ～を見せてください (~을 보여 주세요)"
+    },
+    {
+     "id": "10-jv-1",
+     "lang": "ja",
+     "show": "目[め]",
+     "say": "目",
+     "snd": "메",
+     "ko": "눈",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "10-jv-2",
+     "lang": "ja",
+     "show": "ぶどう酒[しゅ]",
+     "say": "ぶどう酒",
+     "snd": "부도-슈",
+     "ko": "포도주",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "10-jv-3",
+     "lang": "ja",
+     "show": "赤[あか]い",
+     "say": "赤い",
+     "snd": "아카이",
+     "ko": "붉다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "10-jv-4",
+     "lang": "ja",
+     "show": "歯[は]",
+     "say": "歯",
+     "snd": "하",
+     "ko": "이",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "10-jv-5",
+     "lang": "ja",
+     "show": "乳[ちち]",
+     "say": "乳",
+     "snd": "치치",
+     "ko": "젖, 우유",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "10-jv-6",
+     "lang": "ja",
+     "show": "白[しろ]い",
+     "say": "白い",
+     "snd": "시로이",
+     "ko": "희다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "10-jv-7",
+     "lang": "ja",
+     "show": "磨[みが]く",
+     "say": "磨く",
+     "snd": "미가쿠",
+     "ko": "닦다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "10-jv-8",
+     "lang": "ja",
+     "show": "きれい",
+     "say": "きれい",
+     "snd": "키레-",
+     "ko": "깨끗함, 예쁨",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 11,
+   "ref": "49:13-18",
+   "title": "스불룬·잇사칼·단 — 주의 구원을 기다림",
+   "enRef": "49:18",
+   "jaRef": "49:13",
+   "enScene": "시험 결과를 기다리는 친구",
+   "jaScene": "사는 곳을 묻기",
+   "items": [
+    {
+     "id": "11-er",
+     "lang": "en",
+     "show": "I have waited for your salvation, LORD.",
+     "say": "I have waited for your salvation, LORD.",
+     "snd": "아이 해브 웨이티드 포 유어 샐베이션, 로-드.",
+     "ko": "제가 기다려 왔습니다 / 주의 구원을 / 주여",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "11-er-1",
+     "lang": "en",
+     "show": "I have waited",
+     "say": "I have waited",
+     "snd": "아이 해브 웨이티드",
+     "ko": "제가 기다려 왔습니다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-er-2",
+     "lang": "en",
+     "show": "for your salvation,",
+     "say": "for your salvation,",
+     "snd": "포 유어 샐베이션,",
+     "ko": "주의 구원을",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-er-3",
+     "lang": "en",
+     "show": "LORD.",
+     "say": "LORD.",
+     "snd": "로-드.",
+     "ko": "주여",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-et-1",
+     "lang": "en",
+     "show": "Did you get your test results?",
+     "say": "Did you get your test results?",
+     "snd": "디쥬 겟 유어 테스트 리절츠?",
+     "ko": "시험 결과 나왔어?",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "11-et-2",
+     "lang": "en",
+     "show": "Not yet. I've been waiting all week.",
+     "say": "Not yet. I've been waiting all week.",
+     "snd": "낫 옛. 아이브 빈 웨이팅 올- 위-크.",
+     "ko": "아직. 일주일 내내 기다리는 중이야.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "11-et-3",
+     "lang": "en",
+     "show": "Waiting is the hardest part.",
+     "say": "Waiting is the hardest part.",
+     "snd": "웨이팅 이즈 더 하-디스트 파-트.",
+     "ko": "기다리는 게 제일 힘들지.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "11-et-4",
+     "lang": "en",
+     "show": "I know. But I'm trying to be patient.",
+     "say": "I know. But I'm trying to be patient.",
+     "snd": "아이 노우. 벗 아임 트라잉 투 비 페이션트.",
+     "ko": "맞아. 그래도 참고 기다리려고.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "11-ek-1",
+     "lang": "en",
+     "show": "Not yet.",
+     "say": "Not yet.",
+     "snd": "낫 옛",
+     "ko": "아직이야",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "11-ek-2",
+     "lang": "en",
+     "show": "all week",
+     "say": "all week",
+     "snd": "올- 위-크",
+     "ko": "일주일 내내",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "11-ek-3",
+     "lang": "en",
+     "show": "be patient",
+     "say": "be patient",
+     "snd": "비 페이션트",
+     "ko": "참고 기다리다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "11-jr",
+     "lang": "ja",
+     "show": "ゼブルンは海辺[うみべ]に住[す]み、船[ふね]の港[みなと]となる。その境界[きょうかい]はシドンに達[たっ]するだろう。",
+     "say": "ゼブルンは海辺に住み、船の港となる。その境界はシドンに達するだろう。",
+     "snd": "제부룬와 우미베니 스미 후네노 미나토토 나루 소노 쿄-카이와 시돈니 탓스루다로-",
+     "ko": "스불룬은 / 바닷가에 / 살고 / 배의 / 항구가 / 된다 / 그 / 경계는 / 시돈에 / 이를 것이다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "11-jr-1",
+     "lang": "ja",
+     "show": "ゼブルンは",
+     "say": "ゼブルンは",
+     "snd": "제부룬와",
+     "ko": "스불룬은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-jr-2",
+     "lang": "ja",
+     "show": "海辺[うみべ]に",
+     "say": "海辺に",
+     "snd": "우미베니",
+     "ko": "바닷가에",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-jr-3",
+     "lang": "ja",
+     "show": "住[す]み、",
+     "say": "住み、",
+     "snd": "스미",
+     "ko": "살고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-jr-4",
+     "lang": "ja",
+     "show": "船[ふね]の",
+     "say": "船の",
+     "snd": "후네노",
+     "ko": "배의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-jr-5",
+     "lang": "ja",
+     "show": "港[みなと]と",
+     "say": "港と",
+     "snd": "미나토토",
+     "ko": "항구가",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-jr-6",
+     "lang": "ja",
+     "show": "なる。",
+     "say": "なる。",
+     "snd": "나루",
+     "ko": "된다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-jr-7",
+     "lang": "ja",
+     "show": "その",
+     "say": "その",
+     "snd": "소노",
+     "ko": "그",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-jr-8",
+     "lang": "ja",
+     "show": "境界[きょうかい]は",
+     "say": "境界は",
+     "snd": "쿄-카이와",
+     "ko": "경계는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-jr-9",
+     "lang": "ja",
+     "show": "シドンに",
+     "say": "シドンに",
+     "snd": "시돈니",
+     "ko": "시돈에",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-jr-10",
+     "lang": "ja",
+     "show": "達[たっ]するだろう。",
+     "say": "達するだろう。",
+     "snd": "탓스루다로-",
+     "ko": "이를 것이다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "11-jt-1",
+     "lang": "ja",
+     "show": "どこに住[す]んでいますか。",
+     "say": "どこに住んでいますか。",
+     "snd": "도코니 순데 이마스카?",
+     "ko": "어디 사세요?",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "11-jt-2",
+     "lang": "ja",
+     "show": "海[うみ]の近[ちか]くです。",
+     "say": "海の近くです。",
+     "snd": "우미노 치카쿠데스.",
+     "ko": "바다 근처예요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "11-jt-3",
+     "lang": "ja",
+     "show": "いいですね。毎日[まいにち]海[うみ]が見[み]えますか。",
+     "say": "いいですね。毎日海が見えますか。",
+     "snd": "이-데스네. 마이니치 우미가 미에마스카?",
+     "ko": "좋네요. 매일 바다가 보여요?",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "11-jt-4",
+     "lang": "ja",
+     "show": "はい、窓[まど]から見[み]えます。",
+     "say": "はい、窓から見えます。",
+     "snd": "하이, 마도카라 미에마스.",
+     "ko": "네, 창문으로 보여요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "11-jk-1",
+     "lang": "ja",
+     "show": "どこに住[す]んでいますか",
+     "say": "どこに住んでいますか",
+     "snd": "도코니 순데 이마스카",
+     "ko": "어디 사세요?",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "11-jk-2",
+     "lang": "ja",
+     "show": "見[み]えます",
+     "say": "見えます",
+     "snd": "미에마스",
+     "ko": "보여요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "11-ep-1",
+     "lang": "en",
+     "show": "I'm waiting for the bus.",
+     "say": "I'm waiting for the bus.",
+     "snd": "아임 웨이팅 포 더 버스.",
+     "ko": "버스를 기다리고 있어요.",
+     "kind": "영어 구문 · wait for ~ (~을 기다리다)"
+    },
+    {
+     "id": "11-ep-2",
+     "lang": "en",
+     "show": "Are you ready? Not yet.",
+     "say": "Are you ready? Not yet.",
+     "snd": "아- 유 레디? 낫 옛.",
+     "ko": "준비됐어? 아직.",
+     "kind": "영어 구문 · Not yet. (아직이야)"
+    },
+    {
+     "id": "11-ev-1",
+     "lang": "en",
+     "show": "wait",
+     "say": "wait",
+     "snd": "웨이트",
+     "ko": "(동) 기다리다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "11-ev-2",
+     "lang": "en",
+     "show": "salvation",
+     "say": "salvation",
+     "snd": "샐베이션",
+     "ko": "(명) 구원",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "11-ev-3",
+     "lang": "en",
+     "show": "result",
+     "say": "result",
+     "snd": "리절트",
+     "ko": "(명) 결과",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "11-ev-4",
+     "lang": "en",
+     "show": "yet",
+     "say": "yet",
+     "snd": "옛",
+     "ko": "(부) (부정문에서) 아직",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "11-ev-5",
+     "lang": "en",
+     "show": "week",
+     "say": "week",
+     "snd": "위-크",
+     "ko": "(명) 주, 일주일",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "11-ev-6",
+     "lang": "en",
+     "show": "hard",
+     "say": "hard",
+     "snd": "하-드",
+     "ko": "(형) 힘든(hardest 가장 힘든)",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "11-ev-7",
+     "lang": "en",
+     "show": "patient",
+     "say": "patient",
+     "snd": "페이션트",
+     "ko": "(형) 참을성 있는",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "11-jp-1",
+     "lang": "ja",
+     "show": "息子[むすこ]は医者[いしゃ]となった。",
+     "say": "息子は医者となった。",
+     "snd": "무스코와 이샤토 낫타.",
+     "ko": "아들은 의사가 되었다.",
+     "kind": "일본어 구문 · ～となる (~이 되다)"
+    },
+    {
+     "id": "11-jp-2",
+     "lang": "ja",
+     "show": "明日[あした]は晴[は]れるだろう。",
+     "say": "明日は晴れるだろう。",
+     "snd": "아시타와 하레루다로-.",
+     "ko": "내일은 맑을 것이다.",
+     "kind": "일본어 구문 · ～だろう (~일 것이다)"
+    },
+    {
+     "id": "11-jv-1",
+     "lang": "ja",
+     "show": "海辺[うみべ]",
+     "say": "海辺",
+     "snd": "우미베",
+     "ko": "바닷가",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "11-jv-2",
+     "lang": "ja",
+     "show": "船[ふね]",
+     "say": "船",
+     "snd": "후네",
+     "ko": "배",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "11-jv-3",
+     "lang": "ja",
+     "show": "港[みなと]",
+     "say": "港",
+     "snd": "미나토",
+     "ko": "항구",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "11-jv-4",
+     "lang": "ja",
+     "show": "境界[きょうかい]",
+     "say": "境界",
+     "snd": "쿄-카이",
+     "ko": "경계",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "11-jv-5",
+     "lang": "ja",
+     "show": "達[たっ]する",
+     "say": "達する",
+     "snd": "탓스루",
+     "ko": "이르다, 닿다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "11-jv-6",
+     "lang": "ja",
+     "show": "海[うみ]",
+     "say": "海",
+     "snd": "우미",
+     "ko": "바다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "11-jv-7",
+     "lang": "ja",
+     "show": "窓[まど]",
+     "say": "窓",
+     "snd": "마도",
+     "ko": "창문",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 12,
+   "ref": "49:19-21",
+   "title": "갓·아셸·납탈리",
+   "enRef": "49:21",
+   "jaRef": "49:21",
+   "enScene": "공원에서 사슴을 만남",
+   "jaScene": "사슴을 보고",
+   "items": [
+    {
+     "id": "12-er",
+     "lang": "en",
+     "show": "“Naphtali is a doe set free, who bears beautiful fawns.",
+     "say": "“Naphtali is a doe set free, who bears beautiful fawns.",
+     "snd": "냅털라이 이즈 어 도우 셋 프리-, 후 베어즈 뷰-티펄 폰-즈.",
+     "ko": "“납탈리는 암사슴이다 / 풀려난 / 아름다운 새끼 사슴들을 낳는",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "12-er-1",
+     "lang": "en",
+     "show": "“Naphtali is a doe",
+     "say": "“Naphtali is a doe",
+     "snd": "냅털라이 이즈 어 도우",
+     "ko": "“납탈리는 암사슴이다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "12-er-2",
+     "lang": "en",
+     "show": "set free,",
+     "say": "set free,",
+     "snd": "셋 프리-,",
+     "ko": "풀려난",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "12-er-3",
+     "lang": "en",
+     "show": "who bears beautiful fawns.",
+     "say": "who bears beautiful fawns.",
+     "snd": "후 베어즈 뷰-티펄 폰-즈.",
+     "ko": "아름다운 새끼 사슴들을 낳는",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "12-et-1",
+     "lang": "en",
+     "show": "Look! There's a deer over there.",
+     "say": "Look! There's a deer over there.",
+     "snd": "룩! 데어즈 어 디어 오우버 데어.",
+     "ko": "봐! 저기 사슴이 있어.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "12-et-2",
+     "lang": "en",
+     "show": "And two babies with her!",
+     "say": "And two babies with her!",
+     "snd": "앤 투- 베이비즈 위드 허!",
+     "ko": "새끼도 두 마리 있네!",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "12-et-3",
+     "lang": "en",
+     "show": "They're so beautiful.",
+     "say": "They're so beautiful.",
+     "snd": "데어 쏘우 뷰-티펄.",
+     "ko": "정말 예쁘다.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "12-et-4",
+     "lang": "en",
+     "show": "Let's not get too close. We might scare them.",
+     "say": "Let's not get too close. We might scare them.",
+     "snd": "렛츠 낫 겟 투- 클로우스. 위 마잇 스케어 뎀.",
+     "ko": "너무 가까이 가지 말자. 놀랄지도 몰라.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "12-ek-1",
+     "lang": "en",
+     "show": "over there",
+     "say": "over there",
+     "snd": "오우버 데어",
+     "ko": "저기에",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "12-ek-2",
+     "lang": "en",
+     "show": "Let's not ~",
+     "say": "Let's not ",
+     "snd": "렛츠 낫",
+     "ko": "~하지 말자",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "12-ek-3",
+     "lang": "en",
+     "show": "We might ~",
+     "say": "We might ",
+     "snd": "위 마잇",
+     "ko": "우리가 ~할지도 몰라",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "12-jr",
+     "lang": "ja",
+     "show": "ナフタリは解[と]き放[はな]たれた雌鹿[めじか]。美[うつく]しい子鹿[こじか]を産[う]む。",
+     "say": "ナフタリは解き放たれた雌鹿。美しい子鹿を産む。",
+     "snd": "나후타리와 토키하나타레타 메지카 우츠쿠시- 코지카오 우무",
+     "ko": "납탈리는 / 풀려난 / 암사슴 / 아름다운 / 새끼 사슴을 / 낳는다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "12-jr-1",
+     "lang": "ja",
+     "show": "ナフタリは",
+     "say": "ナフタリは",
+     "snd": "나후타리와",
+     "ko": "납탈리는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "12-jr-2",
+     "lang": "ja",
+     "show": "解[と]き放[はな]たれた",
+     "say": "解き放たれた",
+     "snd": "토키하나타레타",
+     "ko": "풀려난",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "12-jr-3",
+     "lang": "ja",
+     "show": "雌鹿[めじか]。",
+     "say": "雌鹿。",
+     "snd": "메지카",
+     "ko": "암사슴",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "12-jr-4",
+     "lang": "ja",
+     "show": "美[うつく]しい",
+     "say": "美しい",
+     "snd": "우츠쿠시-",
+     "ko": "아름다운",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "12-jr-5",
+     "lang": "ja",
+     "show": "子鹿[こじか]を",
+     "say": "子鹿を",
+     "snd": "코지카오",
+     "ko": "새끼 사슴을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "12-jr-6",
+     "lang": "ja",
+     "show": "産[う]む。",
+     "say": "産む。",
+     "snd": "우무",
+     "ko": "낳는다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "12-jt-1",
+     "lang": "ja",
+     "show": "見[み]て、鹿[しか]がいるよ。",
+     "say": "見て、鹿がいるよ。",
+     "snd": "미테, 시카가 이루요.",
+     "ko": "봐, 사슴이 있어.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "12-jt-2",
+     "lang": "ja",
+     "show": "本当[ほんとう]だ。子鹿[こじか]もいる！",
+     "say": "本当だ。子鹿もいる！",
+     "snd": "혼토-다. 코지카모 이루!",
+     "ko": "정말이네. 아기 사슴도 있어!",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "12-jt-3",
+     "lang": "ja",
+     "show": "静[しず]かに見[み]よう。",
+     "say": "静かに見よう。",
+     "snd": "시즈카니 미요-.",
+     "ko": "조용히 보자.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "12-jk-1",
+     "lang": "ja",
+     "show": "～がいる",
+     "say": "がいる",
+     "snd": "가 이루",
+     "ko": "~이 있다(동물·사람)",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "12-jk-2",
+     "lang": "ja",
+     "show": "静[しず]かに",
+     "say": "静かに",
+     "snd": "시즈카니",
+     "ko": "조용히",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "12-ep-1",
+     "lang": "en",
+     "show": "Let's not be late again.",
+     "say": "Let's not be late again.",
+     "snd": "렛츠 낫 비 레이트 어게인.",
+     "ko": "다시는 늦지 말자.",
+     "kind": "영어 구문 · Let's not ~ (~하지 말자)"
+    },
+    {
+     "id": "12-ep-2",
+     "lang": "en",
+     "show": "There's a bench over there.",
+     "say": "There's a bench over there.",
+     "snd": "데어즈 어 벤치 오우버 데어.",
+     "ko": "저기 벤치가 있어.",
+     "kind": "영어 구문 · There's a ~ over there. (저기 ~이 있어)"
+    },
+    {
+     "id": "12-ev-1",
+     "lang": "en",
+     "show": "doe",
+     "say": "doe",
+     "snd": "도우",
+     "ko": "(명) 암사슴",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "12-ev-2",
+     "lang": "en",
+     "show": "free",
+     "say": "free",
+     "snd": "프리-",
+     "ko": "(형) 자유로운, 풀려난",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "12-ev-3",
+     "lang": "en",
+     "show": "bear",
+     "say": "bear",
+     "snd": "베어",
+     "ko": "(동) 낳다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "12-ev-4",
+     "lang": "en",
+     "show": "beautiful",
+     "say": "beautiful",
+     "snd": "뷰-티펄",
+     "ko": "(형) 아름다운",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "12-ev-5",
+     "lang": "en",
+     "show": "fawn",
+     "say": "fawn",
+     "snd": "폰-",
+     "ko": "(명) 새끼 사슴",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "12-ev-6",
+     "lang": "en",
+     "show": "deer",
+     "say": "deer",
+     "snd": "디어",
+     "ko": "(명) 사슴",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "12-ev-7",
+     "lang": "en",
+     "show": "scare",
+     "say": "scare",
+     "snd": "스케어",
+     "ko": "(동) 놀라게 하다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "12-jp-1",
+     "lang": "ja",
+     "show": "公園[こうえん]に犬[いぬ]がいる。",
+     "say": "公園に犬がいる。",
+     "snd": "코-엔니 이누가 이루.",
+     "ko": "공원에 개가 있다.",
+     "kind": "일본어 구문 · ～がいる (~이 있다 — 동물·사람)"
+    },
+    {
+     "id": "12-jp-2",
+     "lang": "ja",
+     "show": "先生[せんせい]にほめられた。",
+     "say": "先生にほめられた。",
+     "snd": "센세-니 호메라레타.",
+     "ko": "선생님께 칭찬받았다.",
+     "kind": "일본어 구문 · ～られる (~받다, ~되다)"
+    },
+    {
+     "id": "12-jv-1",
+     "lang": "ja",
+     "show": "解[と]き放[はな]つ",
+     "say": "解き放つ",
+     "snd": "토키하나츠",
+     "ko": "풀어 놓다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "12-jv-2",
+     "lang": "ja",
+     "show": "雌鹿[めじか]",
+     "say": "雌鹿",
+     "snd": "메지카",
+     "ko": "암사슴",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "12-jv-3",
+     "lang": "ja",
+     "show": "美[うつく]しい",
+     "say": "美しい",
+     "snd": "우츠쿠시-",
+     "ko": "아름답다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "12-jv-4",
+     "lang": "ja",
+     "show": "子鹿[こじか]",
+     "say": "子鹿",
+     "snd": "코지카",
+     "ko": "새끼 사슴",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "12-jv-5",
+     "lang": "ja",
+     "show": "産[う]む",
+     "say": "産む",
+     "snd": "우무",
+     "ko": "낳다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "12-jv-6",
+     "lang": "ja",
+     "show": "鹿[しか]",
+     "say": "鹿",
+     "snd": "시카",
+     "ko": "사슴",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 13,
+   "ref": "49:22-26",
+   "title": "요셉 — 열매로 가득한 원가지",
+   "enRef": "49:22",
+   "jaRef": "49:22",
+   "enScene": "이웃의 텃밭 구경",
+   "jaScene": "이웃의 텃밭",
+   "items": [
+    {
+     "id": "13-er",
+     "lang": "en",
+     "show": "“Joseph is a fruitful vine, a fruitful vine by a spring. His branches run over the wall.",
+     "say": "“Joseph is a fruitful vine, a fruitful vine by a spring. His branches run over the wall.",
+     "snd": "조-셉 이즈 어 프루-트펄 바인, 어 프루-트펄 바인 바이 어 스프링. 히즈 브랜치즈 런 오우버 더 월-.",
+     "ko": "“요셉은 열매 많은 포도나무 / 샘 곁의 열매 많은 포도나무다 / 그 가지들이 담을 넘어 뻗는다",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "13-er-1",
+     "lang": "en",
+     "show": "“Joseph is a fruitful vine,",
+     "say": "“Joseph is a fruitful vine,",
+     "snd": "조-셉 이즈 어 프루-트펄 바인,",
+     "ko": "“요셉은 열매 많은 포도나무",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-er-2",
+     "lang": "en",
+     "show": "a fruitful vine by a spring.",
+     "say": "a fruitful vine by a spring.",
+     "snd": "어 프루-트펄 바인 바이 어 스프링.",
+     "ko": "샘 곁의 열매 많은 포도나무다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-er-3",
+     "lang": "en",
+     "show": "His branches run over the wall.",
+     "say": "His branches run over the wall.",
+     "snd": "히즈 브랜치즈 런 오우버 더 월-.",
+     "ko": "그 가지들이 담을 넘어 뻗는다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-et-1",
+     "lang": "en",
+     "show": "Your tomatoes are growing so well!",
+     "say": "Your tomatoes are growing so well!",
+     "snd": "유어 터메이토우즈 아- 그로우잉 쏘우 웰!",
+     "ko": "토마토가 정말 잘 자라네요!",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "13-et-2",
+     "lang": "en",
+     "show": "Thanks. I water them every morning.",
+     "say": "Thanks. I water them every morning.",
+     "snd": "땡스. 아이 워-터 뎀 에브리 모-닝.",
+     "ko": "고마워요. 매일 아침 물을 줘요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "13-et-3",
+     "lang": "en",
+     "show": "The vines are even climbing over the fence.",
+     "say": "The vines are even climbing over the fence.",
+     "snd": "더 바인즈 아- 이-븐 클라이밍 오우버 더 펜스.",
+     "ko": "덩굴이 울타리까지 넘어가네요.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "13-et-4",
+     "lang": "en",
+     "show": "I'll share some with you when they're ripe.",
+     "say": "I'll share some with you when they're ripe.",
+     "snd": "아일 셰어 섬 위드 유 웬 데어 라입.",
+     "ko": "익으면 좀 나눠 드릴게요.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "13-ek-1",
+     "lang": "en",
+     "show": "grow so well",
+     "say": "grow so well",
+     "snd": "그로우 쏘우 웰",
+     "ko": "아주 잘 자라다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "13-ek-2",
+     "lang": "en",
+     "show": "climb over ~",
+     "say": "climb over ",
+     "snd": "클라임 오우버",
+     "ko": "~을 타고 넘다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "13-ek-3",
+     "lang": "en",
+     "show": "share ~ with you",
+     "say": "share  with you",
+     "snd": "셰어 ~ 위드 유",
+     "ko": "~을 당신과 나누다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "13-jr",
+     "lang": "ja",
+     "show": "ヨセフは実[みの]り豊[ゆた]かなぶどうの木[き]、泉[いずみ]のほとりの実[みの]り豊[ゆた]かなぶどうの木[き]。その枝[えだ]は壁[かべ]を越[こ]えて伸[の]びる。",
+     "say": "ヨセフは実り豊かなぶどうの木、泉のほとりの実り豊かなぶどうの木。その枝は壁を越えて伸びる。",
+     "snd": "요세후와 미노리 유타카나 부도-노 키 이즈미노 호토리노 미노리 유타카나 부도-노 키 소노 에다와 카베오 코에테 노비루",
+     "ko": "요셉은 / 열매 풍성한 / 포도나무 / 샘의 / 곁의 / 열매 풍성한 / 포도나무 / 그 가지는 / 담을 / 넘어 / 뻗는다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "13-jr-1",
+     "lang": "ja",
+     "show": "ヨセフは",
+     "say": "ヨセフは",
+     "snd": "요세후와",
+     "ko": "요셉은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-jr-2",
+     "lang": "ja",
+     "show": "実[みの]り豊[ゆた]かな",
+     "say": "実り豊かな",
+     "snd": "미노리 유타카나",
+     "ko": "열매 풍성한",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-jr-3",
+     "lang": "ja",
+     "show": "ぶどうの木[き]、",
+     "say": "ぶどうの木、",
+     "snd": "부도-노 키",
+     "ko": "포도나무",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-jr-4",
+     "lang": "ja",
+     "show": "泉[いずみ]の",
+     "say": "泉の",
+     "snd": "이즈미노",
+     "ko": "샘의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-jr-5",
+     "lang": "ja",
+     "show": "ほとりの",
+     "say": "ほとりの",
+     "snd": "호토리노",
+     "ko": "곁의",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-jr-6",
+     "lang": "ja",
+     "show": "実[みの]り豊[ゆた]かな",
+     "say": "実り豊かな",
+     "snd": "미노리 유타카나",
+     "ko": "열매 풍성한",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-jr-7",
+     "lang": "ja",
+     "show": "ぶどうの木[き]。",
+     "say": "ぶどうの木。",
+     "snd": "부도-노 키",
+     "ko": "포도나무",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-jr-8",
+     "lang": "ja",
+     "show": "その枝[えだ]は",
+     "say": "その枝は",
+     "snd": "소노 에다와",
+     "ko": "그 가지는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-jr-9",
+     "lang": "ja",
+     "show": "壁[かべ]を",
+     "say": "壁を",
+     "snd": "카베오",
+     "ko": "담을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-jr-10",
+     "lang": "ja",
+     "show": "越[こ]えて",
+     "say": "越えて",
+     "snd": "코에테",
+     "ko": "넘어",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-jr-11",
+     "lang": "ja",
+     "show": "伸[の]びる。",
+     "say": "伸びる。",
+     "snd": "노비루",
+     "ko": "뻗는다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "13-jt-1",
+     "lang": "ja",
+     "show": "トマトがよく育[そだ]っていますね。",
+     "say": "トマトがよく育っていますね。",
+     "snd": "토마토가 요쿠 소닷테 이마스네.",
+     "ko": "토마토가 잘 자라고 있네요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "13-jt-2",
+     "lang": "ja",
+     "show": "毎朝[まいあさ]水[みず]をやっています。",
+     "say": "毎朝水をやっています。",
+     "snd": "마이아사 미즈오 얏테 이마스.",
+     "ko": "매일 아침 물을 주고 있어요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "13-jt-3",
+     "lang": "ja",
+     "show": "すごいですね。",
+     "say": "すごいですね。",
+     "snd": "스고이데스네.",
+     "ko": "대단하네요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "13-jt-4",
+     "lang": "ja",
+     "show": "今度[こんど]、少[すこ]しあげますね。",
+     "say": "今度、少しあげますね。",
+     "snd": "콘도, 스코시 아게마스네.",
+     "ko": "다음에 좀 드릴게요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "13-jk-1",
+     "lang": "ja",
+     "show": "水[みず]をやる",
+     "say": "水をやる",
+     "snd": "미즈오 야루",
+     "ko": "물을 주다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "13-jk-2",
+     "lang": "ja",
+     "show": "すごい",
+     "say": "すごい",
+     "snd": "스고이",
+     "ko": "대단하다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "13-ep-1",
+     "lang": "en",
+     "show": "She is a very helpful friend.",
+     "say": "She is a very helpful friend.",
+     "snd": "쉬 이즈 어 베리 헬프펄 프렌드.",
+     "ko": "그녀는 아주 도움이 되는 친구다.",
+     "kind": "영어 구문 · 명사 + -ful (~이 가득한)"
+    },
+    {
+     "id": "13-ep-2",
+     "lang": "en",
+     "show": "Can I share my umbrella with you?",
+     "say": "Can I share my umbrella with you?",
+     "snd": "캔 아이 셰어 마이 엄브렐러 위드 유?",
+     "ko": "우산 같이 쓸래요?",
+     "kind": "영어 구문 · share A with B (A를 B와 나누다)"
+    },
+    {
+     "id": "13-ev-1",
+     "lang": "en",
+     "show": "fruitful",
+     "say": "fruitful",
+     "snd": "프루-트펄",
+     "ko": "(형) 열매 많은",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "13-ev-2",
+     "lang": "en",
+     "show": "vine",
+     "say": "vine",
+     "snd": "바인",
+     "ko": "(명) 포도나무, 덩굴",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "13-ev-3",
+     "lang": "en",
+     "show": "spring",
+     "say": "spring",
+     "snd": "스프링",
+     "ko": "(명) 샘",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "13-ev-4",
+     "lang": "en",
+     "show": "branch",
+     "say": "branch",
+     "snd": "브랜치",
+     "ko": "(명) 가지",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "13-ev-5",
+     "lang": "en",
+     "show": "wall",
+     "say": "wall",
+     "snd": "월-",
+     "ko": "(명) 담, 벽",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "13-ev-6",
+     "lang": "en",
+     "show": "grow",
+     "say": "grow",
+     "snd": "그로우",
+     "ko": "(동) 자라다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "13-ev-7",
+     "lang": "en",
+     "show": "ripe",
+     "say": "ripe",
+     "snd": "라입",
+     "ko": "(형) 익은",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "13-jp-1",
+     "lang": "ja",
+     "show": "静[しず]かな町[まち]に住[す]んでいます。",
+     "say": "静かな町に住んでいます。",
+     "snd": "시즈카나 마치니 순데 이마스.",
+     "ko": "조용한 마을에 살고 있어요.",
+     "kind": "일본어 구문 · な형용사 ～な + 명사"
+    },
+    {
+     "id": "13-jp-2",
+     "lang": "ja",
+     "show": "山[やま]を越[こ]えて行[い]きました。",
+     "say": "山を越えて行きました。",
+     "snd": "야마오 코에테 이키마시타.",
+     "ko": "산을 넘어 갔습니다.",
+     "kind": "일본어 구문 · ～を越えて (~을 넘어)"
+    },
+    {
+     "id": "13-jv-1",
+     "lang": "ja",
+     "show": "実[みの]り",
+     "say": "実り",
+     "snd": "미노리",
+     "ko": "열매, 결실",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "13-jv-2",
+     "lang": "ja",
+     "show": "豊[ゆた]か",
+     "say": "豊か",
+     "snd": "유타카",
+     "ko": "풍성함",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "13-jv-3",
+     "lang": "ja",
+     "show": "木[き]",
+     "say": "木",
+     "snd": "키",
+     "ko": "나무",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "13-jv-4",
+     "lang": "ja",
+     "show": "泉[いずみ]",
+     "say": "泉",
+     "snd": "이즈미",
+     "ko": "샘",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "13-jv-5",
+     "lang": "ja",
+     "show": "枝[えだ]",
+     "say": "枝",
+     "snd": "에다",
+     "ko": "가지",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "13-jv-6",
+     "lang": "ja",
+     "show": "壁[かべ]",
+     "say": "壁",
+     "snd": "카베",
+     "ko": "벽, 담",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "13-jv-7",
+     "lang": "ja",
+     "show": "越[こ]える",
+     "say": "越える",
+     "snd": "코에루",
+     "ko": "넘다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "13-jv-8",
+     "lang": "ja",
+     "show": "水[みず]",
+     "say": "水",
+     "snd": "미즈",
+     "ko": "물",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 14,
+   "ref": "49:27-28",
+   "title": "베냐민, 그리고 이스라엘의 열두 지파",
+   "enRef": "49:28",
+   "jaRef": "49:28",
+   "enScene": "선생님이 학생마다 카드를 써 줌",
+   "jaScene": "선생님께 받은 카드",
+   "items": [
+    {
+     "id": "14-er",
+     "lang": "en",
+     "show": "All these are the twelve tribes of Israel, and this is what their father spoke to them, and blessed them. He blessed everyone according to his own blessing.",
+     "say": "All these are the twelve tribes of Israel, and this is what their father spoke to them, and blessed them. He blessed everyone according to his own blessing.",
+     "snd": "올- 디-즈 아- 더 트웰브 트라이브즈 오브 이즈리얼, 앤 디스 이즈 왓 데어 파-더 스포욱 투 뎀, 앤 블레스트 뎀. 히 블레스트 에브리원 어코-딩 투 히즈 오운 블레싱.",
+     "ko": "이들이 모두 이스라엘의 열두 지파다 / 이것이 그들의 아버지가 그들에게 한 말이다 / 그리고 그들을 축복했다 / 그는 한 사람 한 사람을 축복했다 / 각자에게 맞는 복을 따라",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "14-er-1",
+     "lang": "en",
+     "show": "All these are the twelve tribes of Israel,",
+     "say": "All these are the twelve tribes of Israel,",
+     "snd": "올- 디-즈 아- 더 트웰브 트라이브즈 오브 이즈리얼,",
+     "ko": "이들이 모두 이스라엘의 열두 지파다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "14-er-2",
+     "lang": "en",
+     "show": "and this is what their father spoke to them,",
+     "say": "and this is what their father spoke to them,",
+     "snd": "앤 디스 이즈 왓 데어 파-더 스포욱 투 뎀,",
+     "ko": "이것이 그들의 아버지가 그들에게 한 말이다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "14-er-3",
+     "lang": "en",
+     "show": "and blessed them.",
+     "say": "and blessed them.",
+     "snd": "앤 블레스트 뎀.",
+     "ko": "그리고 그들을 축복했다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "14-er-4",
+     "lang": "en",
+     "show": "He blessed everyone",
+     "say": "He blessed everyone",
+     "snd": "히 블레스트 에브리원",
+     "ko": "그는 한 사람 한 사람을 축복했다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "14-er-5",
+     "lang": "en",
+     "show": "according to his own blessing.",
+     "say": "according to his own blessing.",
+     "snd": "어코-딩 투 히즈 오운 블레싱.",
+     "ko": "각자에게 맞는 복을 따라",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "14-et-1",
+     "lang": "en",
+     "show": "I wrote a card for each of you.",
+     "say": "I wrote a card for each of you.",
+     "snd": "아이 로웃 어 카-드 포 이-치 오브 유.",
+     "ko": "너희 한 명 한 명에게 카드를 썼어.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "14-et-2",
+     "lang": "en",
+     "show": "Wow, mine says I'm a good listener!",
+     "say": "Wow, mine says I'm a good listener!",
+     "snd": "와우, 마인 세즈 아임 어 굿 리스너!",
+     "ko": "와, 제 건 제가 잘 들어 준대요!",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "14-et-3",
+     "lang": "en",
+     "show": "That's right. Each of you has your own gift.",
+     "say": "That's right. Each of you has your own gift.",
+     "snd": "댓츠 라잇. 이-치 오브 유 해즈 유어 오운 기프트.",
+     "ko": "맞아. 너희는 저마다 자기만의 재능이 있어.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "14-et-4",
+     "lang": "en",
+     "show": "Thank you, teacher.",
+     "say": "Thank you, teacher.",
+     "snd": "땡큐, 티-처.",
+     "ko": "고맙습니다, 선생님.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "14-ek-1",
+     "lang": "en",
+     "show": "each of you",
+     "say": "each of you",
+     "snd": "이-치 오브 유",
+     "ko": "너희 각자",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "14-ek-2",
+     "lang": "en",
+     "show": "your own ~",
+     "say": "your own ",
+     "snd": "유어 오운",
+     "ko": "너만의 ~",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "14-ek-3",
+     "lang": "en",
+     "show": "That's right.",
+     "say": "That's right.",
+     "snd": "댓츠 라잇",
+     "ko": "맞아",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "14-jr",
+     "lang": "ja",
+     "show": "父[ちち]は一人一人[ひとりひとり]を、それぞれにふさわしい祝福[しゅくふく]をもって祝福[しゅくふく]した。",
+     "say": "父は一人一人を、それぞれにふさわしい祝福をもって祝福した。",
+     "snd": "치치와 히토리 히토리오 소레조레니 후사와시- 슈쿠후쿠오 못테 슈쿠후쿠시타",
+     "ko": "아버지는 / 한 사람 한 사람을 / 각자에게 / 알맞은 / 축복을 / 가지고 / 축복했다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "14-jr-1",
+     "lang": "ja",
+     "show": "父[ちち]は",
+     "say": "父は",
+     "snd": "치치와",
+     "ko": "아버지는",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "14-jr-2",
+     "lang": "ja",
+     "show": "一人一人[ひとりひとり]を、",
+     "say": "一人一人を、",
+     "snd": "히토리 히토리오",
+     "ko": "한 사람 한 사람을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "14-jr-3",
+     "lang": "ja",
+     "show": "それぞれに",
+     "say": "それぞれに",
+     "snd": "소레조레니",
+     "ko": "각자에게",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "14-jr-4",
+     "lang": "ja",
+     "show": "ふさわしい",
+     "say": "ふさわしい",
+     "snd": "후사와시-",
+     "ko": "알맞은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "14-jr-5",
+     "lang": "ja",
+     "show": "祝福[しゅくふく]を",
+     "say": "祝福を",
+     "snd": "슈쿠후쿠오",
+     "ko": "축복을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "14-jr-6",
+     "lang": "ja",
+     "show": "もって",
+     "say": "もって",
+     "snd": "못테",
+     "ko": "가지고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "14-jr-7",
+     "lang": "ja",
+     "show": "祝福[しゅくふく]した。",
+     "say": "祝福した。",
+     "snd": "슈쿠후쿠시타",
+     "ko": "축복했다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "14-jt-1",
+     "lang": "ja",
+     "show": "一人[ひとり]ずつにカードを書[か]きました。",
+     "say": "一人ずつにカードを書きました。",
+     "snd": "히토리즈츠니 카-도오 카키마시타.",
+     "ko": "한 사람씩 카드를 썼어요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "14-jt-2",
+     "lang": "ja",
+     "show": "うれしい！読[よ]んでもいいですか。",
+     "say": "うれしい！読んでもいいですか。",
+     "snd": "우레시-! 욘데모 이-데스카?",
+     "ko": "기뻐요! 읽어도 돼요?",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "14-jt-3",
+     "lang": "ja",
+     "show": "どうぞ。",
+     "say": "どうぞ。",
+     "snd": "도-조.",
+     "ko": "그럼요.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "14-jt-4",
+     "lang": "ja",
+     "show": "大切[たいせつ]にします。",
+     "say": "大切にします。",
+     "snd": "타이세츠니 시마스.",
+     "ko": "소중히 간직할게요.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "14-jk-1",
+     "lang": "ja",
+     "show": "～てもいいですか",
+     "say": "てもいいですか",
+     "snd": "테모 이-데스카",
+     "ko": "~해도 돼요?",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "14-jk-2",
+     "lang": "ja",
+     "show": "大切[たいせつ]にします",
+     "say": "大切にします",
+     "snd": "타이세츠니 시마스",
+     "ko": "소중히 할게요",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "14-ep-1",
+     "lang": "en",
+     "show": "Each of us has a different dream.",
+     "say": "Each of us has a different dream.",
+     "snd": "이-치 오브 어스 해즈 어 디퍼런트 드림-.",
+     "ko": "우리는 각자 다른 꿈이 있다.",
+     "kind": "영어 구문 · each of ~ (~ 각자)"
+    },
+    {
+     "id": "14-ep-2",
+     "lang": "en",
+     "show": "This is what I wanted.",
+     "say": "This is what I wanted.",
+     "snd": "디스 이즈 왓 아이 원티드.",
+     "ko": "이게 내가 원하던 거야.",
+     "kind": "영어 구문 · what + 주어 + 동사 (~가 …한 것)"
+    },
+    {
+     "id": "14-ev-1",
+     "lang": "en",
+     "show": "tribe",
+     "say": "tribe",
+     "snd": "트라이브",
+     "ko": "(명) 지파, 부족",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "14-ev-2",
+     "lang": "en",
+     "show": "twelve",
+     "say": "twelve",
+     "snd": "트웰브",
+     "ko": "(명) 열둘",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "14-ev-3",
+     "lang": "en",
+     "show": "blessing",
+     "say": "blessing",
+     "snd": "블레싱",
+     "ko": "(명) 복, 축복",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "14-ev-4",
+     "lang": "en",
+     "show": "own",
+     "say": "own",
+     "snd": "오운",
+     "ko": "(형) 자기 자신의",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "14-ev-5",
+     "lang": "en",
+     "show": "card",
+     "say": "card",
+     "snd": "카-드",
+     "ko": "(명) 카드",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "14-ev-6",
+     "lang": "en",
+     "show": "each",
+     "say": "each",
+     "snd": "이-치",
+     "ko": "(대) 각자",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "14-ev-7",
+     "lang": "en",
+     "show": "gift",
+     "say": "gift",
+     "snd": "기프트",
+     "ko": "(명) 선물, 재능",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "14-jp-1",
+     "lang": "ja",
+     "show": "一[ひと]つずつ取[と]ってください。",
+     "say": "一つずつ取ってください。",
+     "snd": "히토츠즈츠 톳테 쿠다사이.",
+     "ko": "하나씩 가져가세요.",
+     "kind": "일본어 구문 · ～ずつ (~씩)"
+    },
+    {
+     "id": "14-jp-2",
+     "lang": "ja",
+     "show": "ここに座[すわ]ってもいいですか。",
+     "say": "ここに座ってもいいですか。",
+     "snd": "코코니 스왓테모 이-데스카?",
+     "ko": "여기 앉아도 돼요?",
+     "kind": "일본어 구문 · ～てもいいですか (~해도 돼요?)"
+    },
+    {
+     "id": "14-jv-1",
+     "lang": "ja",
+     "show": "一人一人[ひとりひとり]",
+     "say": "一人一人",
+     "snd": "히토리 히토리",
+     "ko": "한 사람 한 사람",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "14-jv-2",
+     "lang": "ja",
+     "show": "それぞれ",
+     "say": "それぞれ",
+     "snd": "소레조레",
+     "ko": "각자, 저마다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "14-jv-3",
+     "lang": "ja",
+     "show": "ふさわしい",
+     "say": "ふさわしい",
+     "snd": "후사와시-",
+     "ko": "알맞다, 어울리다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "14-jv-4",
+     "lang": "ja",
+     "show": "書[か]く",
+     "say": "書く",
+     "snd": "카쿠",
+     "ko": "쓰다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "14-jv-5",
+     "lang": "ja",
+     "show": "読[よ]む",
+     "say": "読む",
+     "snd": "요무",
+     "ko": "읽다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "14-jv-6",
+     "lang": "ja",
+     "show": "大切[たいせつ]",
+     "say": "大切",
+     "snd": "타이세츠",
+     "ko": "소중함",
+     "kind": "일본어 단어"
+    }
+   ]
+  },
+  {
+   "no": 15,
+   "ref": "49:29-33",
+   "title": "조상들 곁에 장사하라 — 야곱의 죽음",
+   "enRef": "49:33",
+   "jaRef": "49:33",
+   "enScene": "명절에 할아버지 산소에 가기로 함",
+   "jaScene": "성묘 가기로 약속",
+   "items": [
+    {
+     "id": "15-er",
+     "lang": "en",
+     "show": "When Jacob finished charging his sons, he gathered up his feet into the bed, breathed his last breath, and was gathered to his people.",
+     "say": "When Jacob finished charging his sons, he gathered up his feet into the bed, breathed his last breath, and was gathered to his people.",
+     "snd": "웬 제이컵 피니시트 차-징 히즈 선즈, 히 개더드 업 히즈 핏- 인투 더 베드, 브리-드드 히즈 라스트 브레뜨, 앤 워즈 개더드 투 히즈 피-플.",
+     "ko": "야곱이 아들들에게 당부하기를 마치고 / 침상에 발을 거두어들이고 / 마지막 숨을 쉬고 / 자기 백성에게로 돌아갔다",
+     "kind": "영어 독해 · 본문"
+    },
+    {
+     "id": "15-er-1",
+     "lang": "en",
+     "show": "When Jacob finished charging his sons,",
+     "say": "When Jacob finished charging his sons,",
+     "snd": "웬 제이컵 피니시트 차-징 히즈 선즈,",
+     "ko": "야곱이 아들들에게 당부하기를 마치고",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-er-2",
+     "lang": "en",
+     "show": "he gathered up his feet into the bed,",
+     "say": "he gathered up his feet into the bed,",
+     "snd": "히 개더드 업 히즈 핏- 인투 더 베드,",
+     "ko": "침상에 발을 거두어들이고",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-er-3",
+     "lang": "en",
+     "show": "breathed his last breath,",
+     "say": "breathed his last breath,",
+     "snd": "브리-드드 히즈 라스트 브레뜨,",
+     "ko": "마지막 숨을 쉬고",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-er-4",
+     "lang": "en",
+     "show": "and was gathered to his people.",
+     "say": "and was gathered to his people.",
+     "snd": "앤 워즈 개더드 투 히즈 피-플.",
+     "ko": "자기 백성에게로 돌아갔다",
+     "kind": "영어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-et-1",
+     "lang": "en",
+     "show": "We're visiting Grandpa's grave this Chuseok.",
+     "say": "We're visiting Grandpa's grave this Chuseok.",
+     "snd": "위어 비지팅 그랜파-즈 그레이브 디스 추석.",
+     "ko": "이번 추석에 할아버지 산소에 가.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "15-et-2",
+     "lang": "en",
+     "show": "I still think about him.",
+     "say": "I still think about him.",
+     "snd": "아이 스틸 띵크 어바웃 힘.",
+     "ko": "아직도 할아버지 생각이 나.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "15-et-3",
+     "lang": "en",
+     "show": "Me too. He always told us funny stories.",
+     "say": "Me too. He always told us funny stories.",
+     "snd": "미 투-. 히 올-웨이즈 토울드 어스 퍼니 스토-리즈.",
+     "ko": "나도. 늘 재미있는 이야기를 해 주셨지.",
+     "kind": "영어 회화 · A"
+    },
+    {
+     "id": "15-et-4",
+     "lang": "en",
+     "show": "Let's bring some flowers for him.",
+     "say": "Let's bring some flowers for him.",
+     "snd": "렛츠 브링 섬 플라워즈 포 힘.",
+     "ko": "꽃을 좀 가져가자.",
+     "kind": "영어 회화 · B"
+    },
+    {
+     "id": "15-ek-1",
+     "lang": "en",
+     "show": "think about ~",
+     "say": "think about ",
+     "snd": "띵크 어바웃",
+     "ko": "~을 생각하다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "15-ek-2",
+     "lang": "en",
+     "show": "Me too.",
+     "say": "Me too.",
+     "snd": "미 투-",
+     "ko": "나도",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "15-ek-3",
+     "lang": "en",
+     "show": "bring some flowers",
+     "say": "bring some flowers",
+     "snd": "브링 섬 플라워즈",
+     "ko": "꽃을 좀 가져가다",
+     "kind": "영어 회화 · 핵심 표현"
+    },
+    {
+     "id": "15-jr",
+     "lang": "ja",
+     "show": "ヤコブは息子[むすこ]たちに命[めい]じ終[お]えると、足[あし]を寝床[ねどこ]の中[なか]に引[ひ]き上[あ]げ、息[いき]を引[ひ]き取[と]って、自分[じぶん]の民[たみ]に加[くわ]えられた。",
+     "say": "ヤコブは息子たちに命じ終えると、足を寝床の中に引き上げ、息を引き取って、自分の民に加えられた。",
+     "snd": "야코부와 무스코타치니 메-지 오에루토 아시오 네도코노 나카니 히키아게 이키오 히키톳테 지분노 타미니 쿠와에라레타",
+     "ko": "야곱은 / 아들들에게 / 명하기를 마치자 / 발을 / 침상 / 안으로 / 끌어올리고 / 숨을 / 거두고 / 자기 / 백성에게 / 더해졌다",
+     "kind": "일본어 독해 · 본문"
+    },
+    {
+     "id": "15-jr-1",
+     "lang": "ja",
+     "show": "ヤコブは",
+     "say": "ヤコブは",
+     "snd": "야코부와",
+     "ko": "야곱은",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-jr-2",
+     "lang": "ja",
+     "show": "息子[むすこ]たちに",
+     "say": "息子たちに",
+     "snd": "무스코타치니",
+     "ko": "아들들에게",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-jr-3",
+     "lang": "ja",
+     "show": "命[めい]じ終[お]えると、",
+     "say": "命じ終えると、",
+     "snd": "메-지 오에루토",
+     "ko": "명하기를 마치자",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-jr-4",
+     "lang": "ja",
+     "show": "足[あし]を",
+     "say": "足を",
+     "snd": "아시오",
+     "ko": "발을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-jr-5",
+     "lang": "ja",
+     "show": "寝床[ねどこ]の",
+     "say": "寝床の",
+     "snd": "네도코노",
+     "ko": "침상",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-jr-6",
+     "lang": "ja",
+     "show": "中[なか]に",
+     "say": "中に",
+     "snd": "나카니",
+     "ko": "안으로",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-jr-7",
+     "lang": "ja",
+     "show": "引[ひ]き上[あ]げ、",
+     "say": "引き上げ、",
+     "snd": "히키아게",
+     "ko": "끌어올리고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-jr-8",
+     "lang": "ja",
+     "show": "息[いき]を",
+     "say": "息を",
+     "snd": "이키오",
+     "ko": "숨을",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-jr-9",
+     "lang": "ja",
+     "show": "引[ひ]き取[と]って、",
+     "say": "引き取って、",
+     "snd": "히키톳테",
+     "ko": "거두고",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-jr-10",
+     "lang": "ja",
+     "show": "自分[じぶん]の",
+     "say": "自分の",
+     "snd": "지분노",
+     "ko": "자기",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-jr-11",
+     "lang": "ja",
+     "show": "民[たみ]に",
+     "say": "民に",
+     "snd": "타미니",
+     "ko": "백성에게",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-jr-12",
+     "lang": "ja",
+     "show": "加[くわ]えられた。",
+     "say": "加えられた。",
+     "snd": "쿠와에라레타",
+     "ko": "더해졌다",
+     "kind": "일본어 독해 · 끊어 읽기"
+    },
+    {
+     "id": "15-jt-1",
+     "lang": "ja",
+     "show": "今度[こんど]の休[やす]み、お墓参[はかまい]りに行[い]こう。",
+     "say": "今度の休み、お墓参りに行こう。",
+     "snd": "콘도노 야스미, 오하카마이리니 이코-.",
+     "ko": "이번 휴일에 성묘 가자.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "15-jt-2",
+     "lang": "ja",
+     "show": "うん。おじいちゃんに会[あ]いたいな。",
+     "say": "うん。おじいちゃんに会いたいな。",
+     "snd": "운. 오지-찬니 아이타이나.",
+     "ko": "응. 할아버지 보고 싶다.",
+     "kind": "일본어 회화 · B"
+    },
+    {
+     "id": "15-jt-3",
+     "lang": "ja",
+     "show": "花[はな]を持[も]って行[い]こうね。",
+     "say": "花を持って行こうね。",
+     "snd": "하나오 못테 이코-네.",
+     "ko": "꽃 가지고 가자.",
+     "kind": "일본어 회화 · A"
+    },
+    {
+     "id": "15-jk-1",
+     "lang": "ja",
+     "show": "お墓参[はかまい]り",
+     "say": "お墓参り",
+     "snd": "오하카마이리",
+     "ko": "성묘",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "15-jk-2",
+     "lang": "ja",
+     "show": "持[も]って行[い]く",
+     "say": "持って行く",
+     "snd": "못테 이쿠",
+     "ko": "가지고 가다",
+     "kind": "일본어 회화 · 핵심 표현"
+    },
+    {
+     "id": "15-ep-1",
+     "lang": "en",
+     "show": "Did you finish reading the book?",
+     "say": "Did you finish reading the book?",
+     "snd": "디쥬 피니시 리-딩 더 북?",
+     "ko": "그 책 다 읽었어?",
+     "kind": "영어 구문 · finish ~ing (~하기를 마치다)"
+    },
+    {
+     "id": "15-ep-2",
+     "lang": "en",
+     "show": "I often think about my hometown.",
+     "say": "I often think about my hometown.",
+     "snd": "아이 오-픈 띵크 어바웃 마이 호움타운.",
+     "ko": "고향 생각을 자주 해요.",
+     "kind": "영어 구문 · think about ~ (~을 생각하다)"
+    },
+    {
+     "id": "15-ev-1",
+     "lang": "en",
+     "show": "finish",
+     "say": "finish",
+     "snd": "피니시",
+     "ko": "(동) 마치다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "15-ev-2",
+     "lang": "en",
+     "show": "charge",
+     "say": "charge",
+     "snd": "차-지",
+     "ko": "(동) 당부하다, 명하다",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "15-ev-3",
+     "lang": "en",
+     "show": "foot",
+     "say": "foot",
+     "snd": "풋",
+     "ko": "(명) 발(복수 feet)",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "15-ev-4",
+     "lang": "en",
+     "show": "breath",
+     "say": "breath",
+     "snd": "브레뜨",
+     "ko": "(명) 숨",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "15-ev-5",
+     "lang": "en",
+     "show": "last",
+     "say": "last",
+     "snd": "라스트",
+     "ko": "(형) 마지막의",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "15-ev-6",
+     "lang": "en",
+     "show": "grave",
+     "say": "grave",
+     "snd": "그레이브",
+     "ko": "(명) 무덤, 산소",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "15-ev-7",
+     "lang": "en",
+     "show": "flower",
+     "say": "flower",
+     "snd": "플라워",
+     "ko": "(명) 꽃",
+     "kind": "영어 단어"
+    },
+    {
+     "id": "15-jp-1",
+     "lang": "ja",
+     "show": "宿題[しゅくだい]をやり終[お]えた。",
+     "say": "宿題をやり終えた。",
+     "snd": "슈쿠다이오 야리오에타.",
+     "ko": "숙제를 다 마쳤다.",
+     "kind": "일본어 구문 · ～終える (~하기를 마치다)"
+    },
+    {
+     "id": "15-jp-2",
+     "lang": "ja",
+     "show": "春[はる]になると、花[はな]が咲[さ]く。",
+     "say": "春になると、花が咲く。",
+     "snd": "하루니 나루토, 하나가 사쿠.",
+     "ko": "봄이 되면 꽃이 핀다.",
+     "kind": "일본어 구문 · ～と、～ (~하면 곧)"
+    },
+    {
+     "id": "15-jv-1",
+     "lang": "ja",
+     "show": "命[めい]じる",
+     "say": "命じる",
+     "snd": "메-지루",
+     "ko": "명하다",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "15-jv-2",
+     "lang": "ja",
+     "show": "足[あし]",
+     "say": "足",
+     "snd": "아시",
+     "ko": "발",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "15-jv-3",
+     "lang": "ja",
+     "show": "寝床[ねどこ]",
+     "say": "寝床",
+     "snd": "네도코",
+     "ko": "잠자리, 침상",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "15-jv-4",
+     "lang": "ja",
+     "show": "息[いき]",
+     "say": "息",
+     "snd": "이키",
+     "ko": "숨",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "15-jv-5",
+     "lang": "ja",
+     "show": "自分[じぶん]",
+     "say": "自分",
+     "snd": "지분",
+     "ko": "자기, 자신",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "15-jv-6",
+     "lang": "ja",
+     "show": "民[たみ]",
+     "say": "民",
+     "snd": "타미",
+     "ko": "백성",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "15-jv-7",
+     "lang": "ja",
+     "show": "墓参[はかまい]り",
+     "say": "墓参り",
+     "snd": "하카마이리",
+     "ko": "성묘",
+     "kind": "일본어 단어"
+    },
+    {
+     "id": "15-jv-8",
+     "lang": "ja",
+     "show": "花[はな]",
+     "say": "花",
+     "snd": "하나",
+     "ko": "꽃",
+     "kind": "일본어 단어"
+    }
+   ]
+  }
+ ],
+ "sources": {
+  "en": "World English Bible (British Edition), Public Domain",
+  "ja": "フリーダム・バイブル (Japanese Freedom Bible, 2026), Public Domain"
+ }
+}
