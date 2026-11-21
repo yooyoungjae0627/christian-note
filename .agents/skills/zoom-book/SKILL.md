@@ -1,0 +1,16 @@
+---
+name: zoom-book
+description: 줌(Zoom) 강의 녹화를 받아쓰기·슬라이드 추출해 성경 주제별 교재(PDF)로 만든다. 사용자가 「최근 줌 녹화 교재 집필해줘」「줌 녹화 교재 집필」「줌 녹화 책」이라고 하거나, 줌 녹화 영상·자막으로 책을 만들라고 하거나, /zoom-book 을 쓰면 사용.
+---
+
+# 줌 녹화 교재
+
+> **EPUB 제작 중단(사용자 지시 2026-11-21):** 이 문서의 EPUB 관련 서술(PDF + EPUB, build_epub·verify_epub·check_epub 등)은 효력이 없다. 완성본은 PDF 하나만 만든다 — 단일 원본 `docs/policy/로컬_EPUB_보관정책.md`.
+
+1. `git pull`로 최신 지침을 받는다.
+2. 클라우드 세션이면 `bash tools/cloud_setup.sh`. 영상은 채팅 첨부(`/mnt/user-data/uploads`)에서, 삼성 음성 녹음 글(.txt)·슬라이드 캡처는 첨부 또는 Google Drive 「줌 녹화」 폴더에서 받는다(Drive는 작은 파일만 — 영상 불가). 흩어져 있으면 한 폴더로 모아 그 폴더를 인자로 준다.
+3. `node tools/zoom/zoombook.mjs` — 가장 최근 녹화를 찾아 받아쓰기·슬라이드 후보를 만든다. exit 0이 아니면 그 메시지를 사용자에게 그대로 알리고 멈춘다.
+4. 이후 원고·그림·빌드·메모리 뱅크는 지침대로.
+
+규칙은 이 파일에 적지 않는다. **`docs/policy/줌녹화_교재_지침.md`를 읽고 그대로 따른다.**
+책 내용·모양은 그 지침이 가리키는 `docs/policy/성경주제별_교재_제작지침.md`와 README §3을 따른다.
