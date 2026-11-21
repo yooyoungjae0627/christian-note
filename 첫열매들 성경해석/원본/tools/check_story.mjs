@@ -25,6 +25,22 @@ try {
       }
     }
   }
+  // 강의 스크립트·타임스탬프는 메모리 뱅크에도 있어야 한다(사용자 지시 2026-11-21 「책 집필 … 하면 해당 강의 스크립트와 타임스탬프
+  // 전부 메모리뱅크 업데이트」, 규칙 원본 README §3). 영상ID를 가진 책은 그 영상ID가 적힌 스크립트 파일이 있어야 통과.
+  const vids = [...new Set([S.vid, ...S.lecVids].filter(Boolean))];
+  if (vids.length) {
+    const { readFileSync, statSync } = await import("fs");
+    let repo = dir;
+    while (repo && !existsSync(join(repo, "memory-bank"))) { const up = dirname(repo); if (up === repo) { repo = ""; break; } repo = up; }
+    repo = repo || process.env.CN_REPO || "";
+    if (!repo) throw new Error("메모리 뱅크를 찾을 수 없음 — 저장소 안의 원고로 검사하거나 CN_REPO=<저장소 경로>를 준다");
+    const roots = ["memory-bank/첫열매들_강의스크립트", "memory-bank/이이레_강의스크립트", "사무엘상·하/강의스크립트"].map((r) => join(repo, r)).filter(existsSync);
+    const mds = [];
+    const walk = (d) => { for (const f of readdirSync(d)) { const p = join(d, f); if (statSync(p).isDirectory()) walk(p); else if (f.endsWith(".md") && f !== "README.md") mds.push(p); } };
+    roots.forEach(walk);
+    const missing = vids.filter((v) => !mds.some((p) => readFileSync(p, "utf8").includes(v)));
+    if (missing.length) throw new Error(`메모리 뱅크에 강의 스크립트 없음(영상 ${missing.join(", ")}) — 받은 스크립트 전부를 줄마다 시각 링크와 함께 memory-bank/첫열매들_강의스크립트/ 또는 memory-bank/이이레_강의스크립트/에 넣는다(README §3)`);
+  }
   console.log(`정상: ${S.n}번째 이야기 「${S.title}」 | 녹취록 ${S.transcriptLines}줄 | 강의 ${Math.max(1, S.lectures.length)}개 | 장 ${S.chapters.length} | 문단 ${n("p")} | 그림 ${n("img")} | 말씀 상자 ${n("verse")} | 용어 ${n("note")} | 요약 ${S.summary.length} | 문제 ${S.quiz.length} | 질문 ${S.faq.length}`);
 } catch (e) {
   console.log("실패:\n" + e.message);
