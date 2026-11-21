@@ -17,3 +17,10 @@
 ## 남은 것
 - 한글 소리는 근사치. 원어민 소리 확인은 사용자 몫(부록 첫 쪽에 안내).
 - 다른 단원에 붙이려면 `genesis-langNN.json`만 쓰면 됨(일본어 본문 파일은 39–40장만 있음 → 그 장을 받아 추가).
+
+## 추가: ▶ 듣기 버튼(같은 날)
+- 사용자: 「원어민 읽어주는 버튼」 → 「방법 1로 해, GitHub Pages 켜도 돼」. 지침 §7.
+- GitHub Pages 켬(build_type=workflow). `.github/workflows/pages.yml`이 `listen/`만 배포 → https://yooyoungjae0627.github.io/christian-note/listen/
+- PDF: 문장마다 ▶ 링크 327개, 레슨마다 QR 10개(105쪽). `verify.mjs`가 듣기 링크 수·QR 판독(10/10) 확인, 종료 코드 0.
+- 배포 실행 성공(gh run watch 종료 0), 데이터 주소 200. 앱 내장 브라우저에서 링크 위치·레슨 표시·폰 폭(가로 넘침 없음) 확인.
+- 확인 못 한 것: 실제 소리. 앱 내장 브라우저에 영어·일본어 음성이 없어서 「음성 없음」 안내만 보임 — 사용자 휴대폰에서 확인 필요.
