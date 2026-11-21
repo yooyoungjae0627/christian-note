@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>성경 어학 듣기</title>
+<meta name="description" content="교재 어학 학습 부록의 영어·일본어 문장을 기기 음성으로 읽어 주는 페이지">
+<!-- 교재 PDF 어학 부록의 ▶ 버튼·QR이 여는 페이지(docs/policy/성경_어학학습_부록_지침.md §7).
+     ?b=<책>&u=<단원>&k=<레슨>[-<칸>-<번호>]  데이터: data/<책>-<단원>.json (tools/chapterbook/lang.mjs가 만듦) -->
+<style>
+:root{--bg:#f7f4ec;--card:#fff;--ink:#1d1d1f;--sub:#5d5d63;--line:#e4dccb;--gold:#b8862e;--en:#24447a;--ja:#a8322d;--snd:#2f6b3a;--hi:#fff3c4;--btn:#d0362b;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15171c;--card:#1f232b;--ink:#ececef;--sub:#a3a6ad;--line:#343a46;--gold:#d9ad5a;--en:#6f95d6;--ja:#e0726b;--snd:#7cc48a;--hi:#4a4220;--btn:#e2483c;}}
+:root[data-theme="dark"]{--bg:#15171c;--card:#1f232b;--ink:#ececef;--sub:#a3a6ad;--line:#343a46;--gold:#d9ad5a;--en:#6f95d6;--ja:#e0726b;--snd:#7cc48a;--hi:#4a4220;--btn:#e2483c;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+main{max-width:720px;margin:0 auto;padding:16px 16px 96px}
+h1{font-size:1.25rem;margin:4px 0 2px}
+.eyebrow{font-size:.75rem;letter-spacing:.12em;color:var(--gold);font-weight:700;margin:0}
+.muted{color:var(--sub);font-size:.85rem}
+a{color:inherit}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 10px;border-bottom:1px solid var(--line);margin-bottom:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.bar label{font-size:.8rem;color:var(--sub);display:flex;align-items:center;gap:4px}
+select,button{font:inherit}
+select{max-width:46vw;padding:4px 6px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font-size:.85rem}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:0;background:var(--card);color:var(--ink);padding:4px 10px;font-size:.85rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--gold);color:#fff}
+.warn{background:var(--hi);border-radius:10px;padding:10px 12px;font-size:.88rem;margin:0 0 12px}
+.focus{background:var(--card);border:2px solid var(--gold);border-radius:14px;padding:14px;margin:0 0 16px}
+.focus .kind{font-size:.78rem;color:var(--sub)}
+.big{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin:12px 0 0;padding:14px;border:0;border-radius:12px;background:var(--btn);color:#fff;font-size:1.1rem;font-weight:700;cursor:pointer}
+.row2{display:flex;gap:8px}.row2 .big{font-size:.95rem;padding:12px}
+.ghost{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+section.grp{margin:18px 0 6px}
+.gh{display:flex;align-items:center;justify-content:space-between;gap:8px;border-radius:10px;padding:6px 10px;color:#fff;font-weight:700;font-size:.95rem}
+.gh.en{background:var(--en)}.gh.ja{background:var(--ja)}
+.gh button{border:0;border-radius:8px;background:rgba(255,255,255,.2);color:#fff;padding:4px 10px;font-size:.8rem;cursor:pointer}
+.it{display:flex;gap:10px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0;scroll-margin-top:120px}
+.it.on{background:var(--hi)}
+.it.target{border:2px solid var(--gold)}
+.play{flex:none;width:40px;height:40px;border-radius:50%;border:0;background:var(--btn);color:#fff;font-size:1rem;cursor:pointer}
+.t{font-size:1.12rem;line-height:1.7}
+.t.ja{font-family:"Hiragino Sans","Yu Gothic","Meiryo","Noto Sans JP",sans-serif;line-height:2.1}
+.t.en{font-family:Georgia,"Times New Roman",serif}
+rt{font-size:.55em;color:var(--gold)}
+.snd{color:var(--snd);font-size:.92rem}
+.ko{color:var(--sub);font-size:.88rem}
+.tag{font-size:.72rem;color:var(--sub)}
+.lessons a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:8px 0;text-decoration:none}
+.nav{display:flex;justify-content:space-between;gap:8px;margin-top:20px}
+.nav a{flex:1;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;text-decoration:none;font-size:.9rem}
+footer{margin-top:28px;font-size:.75rem;color:var(--sub)}
+</style>
+</head>
+<body>
+<main id="app"><p class="muted">불러오는 중…</p></main>
+<script>
+(function () {
+  "use strict";
+  var app = document.getElementById("app");
+  var q = new URLSearchParams(location.search);
+  var book = (q.get("b") || "genesis").replace(/[^\w-]/g, ""), unit = (q.get("u") || "").replace(/\D/g, ""), key = (q.get("k") || "").replace(/[^\w-]/g, "");
+  var synth = window.speechSynthesis, voices = [], data = null, queue = [], playingEl = null;
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+  var rate = parseFloat(store("listen.rate") || "0.85") || 0.85;
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function ruby(s) { return esc(s).replace(/([㐀-鿿豈-﫿々〆]+)\[([ぁ-ゖー]+)\]/g, "<ruby>$1<rt>$2</rt></ruby>"); }
+  function langVoices(l) { return voices.filter(function (v) { return v.lang && v.lang.replace("_", "-").toLowerCase().indexOf(l) === 0; }); }
+  function score(v) { var n = v.name; return (/natural|neural|online|premium|enhanced|siri|google/i.test(n) ? 10 : 0) + (/kyoko|nanami|samantha|aria|jenny|ava/i.test(n) ? 5 : 0) + (v.localService ? 0 : 1) + (/en-us/i.test(v.lang) ? 2 : 0); }
+  function pick(l) { var vs = langVoices(l); if (!vs.length) return null; var saved = store("listen.voice." + l); for (var i = 0; i < vs.length; i++) if (vs[i].name === saved) return vs[i]; return vs.slice().sort(function (a, b) { return score(b) - score(a); })[0]; }
+  function stop() { queue = []; if (synth) synth.cancel(); mark(null); }
+  function mark(el) { if (playingEl) playingEl.classList.remove("on"); playingEl = el; if (el) el.classList.add("on"); }
+  function speakList(list) {
+    if (!synth) { alert("이 브라우저는 음성 읽기를 지원하지 않습니다. 크롬·사파리·엣지에서 열어 주세요."); return; }
+    stop(); queue = list.slice(); next();
+  }
+  function next() {
+    var it = queue.shift(); if (!it) { mark(null); return; }
+    var u = new SpeechSynthesisUtterance(it.say), v = pick(it.lang);
+    u.lang = it.lang === "ja" ? "ja-JP" : "en-US"; if (v) u.voice = v; u.rate = rate;
+    var el = document.getElementById("i-" + it.id); mark(el);
+    u.onend = function () { setTimeout(next, 350); };
+    u.onerror = function (e) { if (e.error === "not-allowed") showTapHint(); mark(null); };
+    synth.speak(u);
+  }
+  function showTapHint() { var h = document.getElementById("taphint"); if (h) h.hidden = false; }
+  function itemHtml(it, target) {
+    return '<div class="it' + (target ? " target" : "") + '" id="i-' + it.id + '"><button class="play" data-id="' + it.id + '" aria-label="듣기">▶</button><div><div class="tag">' + esc(it.kind) + '</div><div class="t ' + it.lang + '">' + (it.lang === "ja" ? ruby(it.show) : esc(it.show)) + '</div><div class="snd">' + esc(it.snd) + '</div><div class="ko">' + esc(it.ko) + "</div></div></div>";
+  }
+  function byId(id) { for (var i = 0; i < data.lessons.length; i++) for (var j = 0; j < data.lessons[i].items.length; j++) if (data.lessons[i].items[j].id === id) return data.lessons[i].items[j]; return null; }
+  var GROUPS = [["er", "en", "① 영어 독해"], ["et", "en", "② 영어 회화 · 연습용 대화"], ["ek", "en", "영어 핵심 표현"], ["jr", "ja", "③ 일본어 독해"], ["jw", "ja", "일본어 단어"], ["jt", "ja", "④ 일본어 회화 · 연습용 대화"], ["jk", "ja", "일본어 핵심 표현"]];
+  function voiceBar() {
+    function sel(l, label) {
+      var vs = langVoices(l), cur = pick(l);
+      if (!vs.length) return '<label>' + label + ' <select disabled><option>음성 없음</option></select></label>';
+      return '<label>' + label + ' <select data-l="' + l + '">' + vs.map(function (v) { return '<option' + (cur && v.name === cur.name ? " selected" : "") + ">" + esc(v.name) + "</option>"; }).join("") + "</select></label>";
+    }
+    var r = [["0.7", "느리게"], ["0.85", "보통"], ["1", "빠르게"]];
+    return '<div class="bar"><span class="seg" role="group" aria-label="속도">' + r.map(function (x) { return '<button data-rate="' + x[0] + '" aria-pressed="' + (Math.abs(rate - x[0]) < .01) + '">' + x[1] + "</button>"; }).join("") + "</span>" + sel("en", "영어") + sel("ja", "일본어") + "</div>" +
+      (langVoices("ja").length ? "" : '<div class="warn"><b>이 기기에서 일본어 음성을 찾지 못했습니다.</b> 아이폰·아이패드는 기본으로 들어 있습니다. 안드로이드: 설정 → 일반 관리 → 텍스트 음성 변환 → 「Google 음성 서비스」 → 음성 데이터 설치 → 일본어. 윈도: 설정 → 시간 및 언어 → 음성 → 음성 추가 → 일본어. 설치 후 이 페이지를 다시 여세요.</div>');
+  }
+  function render() {
+    var html = "", L = null, target = null;
+    if (key) { var no = parseInt(key, 10); L = data.lessons[no - 1] || null; if (key.indexOf("-") > 0) target = byId(key); }
+    html += '<p class="eyebrow">LISTEN · ' + esc(data.title) + "</p>";
+    if (!L) {
+      html += "<h1>" + esc(data.title) + " — 어학 듣기</h1><p class=\"muted\">" + esc(data.range) + " · 레슨을 고르세요.</p>" + voiceBar() + '<div class="lessons">' +
+        data.lessons.map(function (x) { return '<a href="?b=' + book + "&u=" + unit + "&k=" + x.no + '"><b>레슨 ' + x.no + "</b> · " + esc(x.ref) + " " + esc(x.title) + "</a>"; }).join("") + "</div>";
+    } else {
+      html += "<h1>레슨 " + L.no + " · " + esc(L.title) + '</h1><p class="muted">' + esc(L.ref) + ' · <a href="?b=' + book + "&u=" + unit + '">레슨 목록</a></p>' + voiceBar();
+      if (target) html += '<div class="focus"><div class="kind">' + esc(target.kind) + '</div><div class="t ' + target.lang + '">' + (target.lang === "ja" ? ruby(target.show) : esc(target.show)) + '</div><div class="snd">' + esc(target.snd) + '</div><div class="ko">' + esc(target.ko) + '</div><button class="big" data-id="' + target.id + '">▶ 듣기</button><div class="row2"><button class="big ghost" data-again="1">↺ 한 번 더(느리게)</button><button class="big ghost" data-stop="1">■ 멈춤</button></div><p class="muted" id="taphint" hidden>소리가 안 나면 「▶ 듣기」를 눌러 주세요(브라우저가 자동 재생을 막습니다).</p></div>';
+      GROUPS.forEach(function (g) {
+        var its = L.items.filter(function (it) { return it.id.split("-")[1] === g[0]; }); if (!its.length) return;
+        html += '<section class="grp"><div class="gh ' + g[1] + '"><span>' + g[2] + (g[0] === "er" ? " · " + esc(L.enRef) : g[0] === "jr" ? " · " + esc(L.jaRef) : "") + '</span><button data-all="' + g[0] + '">전체 듣기</button></div>' + its.map(function (it) { return itemHtml(it, target && it.id === target.id); }).join("") + "</section>";
+      });
+      html += '<div class="nav">' + (L.no > 1 ? '<a href="?b=' + book + "&u=" + unit + "&k=" + (L.no - 1) + '">← 레슨 ' + (L.no - 1) + "</a>" : "<span></span>") + (L.no < data.lessons.length ? '<a href="?b=' + book + "&u=" + unit + "&k=" + (L.no + 1) + '">레슨 ' + (L.no + 1) + " →</a>" : "<span></span>") + "</div>";
+    }
+    html += "<footer>영어 본문: " + esc(data.sources.en) + " · 일본어 본문: " + esc(data.sources.ja) + ". 회화는 연습용으로 지은 대화입니다. 소리는 이 기기의 음성 합성으로 읽으며 사람이 녹음한 소리가 아닙니다.</footer>";
+    app.innerHTML = html;
+    if (target) { var el = document.getElementById("i-" + target.id); if (el) el.scrollIntoView({ block: "center" }); window.scrollTo(0, 0); }
+    app.onclick = function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      if (b.dataset.rate) { rate = parseFloat(b.dataset.rate); store("listen.rate", String(rate)); render(); return; }
+      if (b.dataset.stop) { stop(); return; }
+      if (b.dataset.again && target) { var keep = rate; rate = 0.6; speakList([target]); rate = keep; return; }
+      if (b.dataset.all) { speakList(L.items.filter(function (it) { return it.id.split("-")[1] === b.dataset.all; })); return; }
+      if (b.dataset.id) speakList([byId(b.dataset.id)]);
+    };
+    app.onchange = function (e) { var s = e.target; if (s.dataset && s.dataset.l) store("listen.voice." + s.dataset.l, s.value); };
+    return target;
+  }
+  function start() {
+    var target = render();
+    // 링크로 들어왔으면 바로 한 번 읽어 본다 — 막히면 「▶ 듣기」 안내
+    if (target && synth) setTimeout(function () { speakList([target]); }, 300);
+  }
+  if (!unit) { app.innerHTML = "<h1>성경 어학 듣기</h1><p class=\"muted\">교재 PDF의 ▶ 버튼이나 QR로 들어오세요.</p>"; return; }
+  fetch("data/" + book + "-" + unit + ".json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (d) {
+    data = d;
+    if (!synth) { start(); return; }
+    voices = synth.getVoices();
+    if (voices.length) start();
+    else { var done = false; synth.onvoiceschanged = function () { voices = synth.getVoices(); if (!done) { done = true; start(); } else render(); }; setTimeout(function () { if (!done) { done = true; voices = synth.getVoices(); start(); } }, 1500); }
+  }).catch(function (e) { app.innerHTML = "<h1>불러오지 못했습니다</h1><p class=\"muted\">" + esc(book) + " 단원 " + esc(unit) + " 데이터가 없습니다 (" + esc(e.message) + ").</p>"; });
+})();
+</script>
+</body>
+</html>

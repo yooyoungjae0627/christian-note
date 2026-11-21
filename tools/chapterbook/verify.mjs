@@ -21,7 +21,7 @@ let bad = 0;
 const results = [];
 function checkPdf(file, urls) {
   const doc = mupdf.Document.openDocument(fs.readFileSync(file), "application/pdf");
-  const errors = []; let internal = 0, toToc = 0, qr = 0, yt = 0; const found = new Set();
+  const errors = []; let internal = 0, toToc = 0, qr = 0, yt = 0, listen = 0; const found = new Set();
   const tocPage = (() => { for (let i = 0; i < Math.min(8, doc.countPages()); i++) if (/CONTENTS/.test(doc.loadPage(i).toStructuredText().asText())) return i; return -1; })();
   for (let i = 0; i < doc.countPages(); i++) {
     const page = doc.loadPage(i), links = page.getLinks();
@@ -32,7 +32,9 @@ function checkPdf(file, urls) {
     }
     const video = links.filter((l) => l.isExternal() && /youtu/.test(l.getURI()));
     yt += video.length; video.forEach((l) => found.add(l.getURI()));
-    const qrs = video.filter((l) => { const b = l.getBounds(); const w = b[2] - b[0], h = b[3] - b[1]; return w > 30 && w < 50 && h > 30 && Math.abs(w - h) < 4; });
+    // 어학 부록 듣기 링크(▶ 버튼·레슨 QR, 2026-11-21)도 QR이면 판독한다
+    const lis = links.filter((l) => l.isExternal() && l.getURI().includes("/listen/")); listen += lis.length;
+    const qrs = [...video, ...lis].filter((l) => { const b = l.getBounds(); const w = b[2] - b[0], h = b[3] - b[1]; return w > 30 && w < 50 && h > 30 && Math.abs(w - h) < 4; });
     if (qrs.length) {
       const s = 300 / 72, pm = page.toPixmap(mupdf.Matrix.scale(s, s), mupdf.ColorSpace.DeviceRGB, false, true);
       const px = pm.getPixels(), W = pm.getWidth(), H = pm.getHeight(), n = pm.getNumberOfComponents();
@@ -51,7 +53,7 @@ function checkPdf(file, urls) {
   const outline = doc.loadOutline() || [];
   if (!outline.length) errors.push("책갈피 없음");
   if (tocPage < 0) errors.push("차례 쪽 없음");
-  return { pages: doc.countPages(), internal, toToc, youtube: yt, qr, outline: outline.length, errors };
+  return { pages: doc.countPages(), internal, toToc, youtube: yt, listen, qr, outline: outline.length, errors };
 }
 const targets = units ? rest.slice(1).map(Number).map((n) => { const u = units.loadUnit(n); return { name: units.unitOut(u), urls: u.parts.flatMap((x) => urlsOf(x.d)) }; }) : allBook ? [{ name: B.all, urls: chs.flatMap((c) => urlsOf(loadChapter(book, c))) }] : chs.map((c) => ({ name: B.out(c), urls: urlsOf(loadChapter(book, c)) }));
 function urlsOf(d) { return [...new Set(d.sections.flatMap((s) => s.comments.flatMap((c) => c.evidence.filter((e) => e.url && e.type === "transcript").map((e) => e.url))))]; }
@@ -63,7 +65,7 @@ for (const t of targets) {
   if (process.env.ALLOW_EPUB !== "1") ep = "만들지 않음(2026-11-21 정책)"; else try { execFileSync(process.execPath, [checker, epub], { stdio: "pipe" }); } catch (e) { ep = "실패 " + String(e.stdout || e.message).slice(0, 300); r.errors.push("EPUB " + ep); }
   if (r.errors.length) bad++;
   results.push({ file: t.name, ...r, epub: ep });
-  console.log(`${t.name}: ${r.errors.length ? "실패" : "통과"} · ${r.pages}쪽 · 내부 링크 ${r.internal}(차례로 ${r.toToc}) · 유튜브 링크 ${r.youtube} · QR 판독 ${r.qr} · 책갈피 ${r.outline} · EPUB ${ep}`);
+  console.log(`${t.name}: ${r.errors.length ? "실패" : "통과"} · ${r.pages}쪽 · 내부 링크 ${r.internal}(차례로 ${r.toToc}) · 유튜브 링크 ${r.youtube} · 듣기 링크 ${r.listen} · QR 판독 ${r.qr} · 책갈피 ${r.outline} · EPUB ${ep}`);
   for (const e of r.errors.slice(0, 10)) console.log("   - " + e);
 }
 fs.writeFileSync(path.join(R, BOOKS[book].src, allBook ? "verify-all.json" : `verify-${rest.join("_") || "x"}.json`.slice(0, 80)), JSON.stringify(results, null, 1));

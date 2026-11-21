@@ -125,6 +125,7 @@ if (rest[0] === "unit") {
     const lang = await import("./lang.mjs");
     const hasLang = lang.hasLang(book, n);
     if (hasLang) { const le = lang.checkLang(book, n); if (le.length) throw new Error("어학 부록 원고 검사 실패: " + le.join("; ")); }
+    if (hasLang) { await ensureQr(lang.langQrUrls(book, n)); const ex = lang.exportLang(book, n); console.log(`듣기 데이터 ${ex.changed ? "갱신" : "그대로"}: ${ex.file}`); }
     await ensureQr(u.parts.flatMap((x) => urlsOf(x.d)));
     const all = { sections: u.parts.flatMap((x) => x.d.sections), learning: u.learning };
     const render = (pages, withMk) => {

@@ -14,6 +14,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { R, BOOKS, esc, webOf } from "./lib.mjs";
 import { useBook, loadUnit, unitDir } from "./units.mjs";
+import { qrFile } from "./html.mjs";
+const pathUrl = (p) => "file:///" + p.replace(/\\/g, "/");
 
 const JA_VERSES = { genesis: "창세기/원본/2판/verses-genesis-ja.json" };
 export const langFile = (book, n) => { useBook(book); return path.join(unitDir(), `${book}-lang${String(n).padStart(2, "0")}.json`); };
@@ -77,8 +79,54 @@ export function checkLang(book, n) {
   return E;
 }
 
+// ---------- 듣기(원어민 음성 버튼, 사용자 지시 2026-11-21 「원어민 읽어주는 버튼」 → 방법 1: 듣기 웹페이지) ----------
+// 버튼·QR은 GitHub Pages의 listen/ 페이지를 연다. 그 페이지가 기기에 내장된 영어·일본어 음성(Web Speech API)으로 읽는다.
+// 데이터: listen/data/<책>-<단원>.json — 빌드가 원고에서 만든다(exportLang). 일본어는 후리가나 읽기(가나)로 읽혀 한자 오독을 막는다.
+export const LISTEN_BASE = "https://yooyoungjae0627.github.io/christian-note/listen/";
+export const listenUrl = (book, n, k) => `${LISTEN_BASE}?b=${book}&u=${n}&k=${k}`;
+// 음성은 한자 섞인 원래 글을 읽혀야 조사(は=와)를 바르게 읽는다. 읽기가 갈리는 한자만 후리가나로 바꿔 읽힌다(主=しゅ, 長=ちょう).
+const SAY_KANA = new Set(["主", "長"]);
+const kanaJa = (s) => s.replace(RUBY, (m, k, r) => SAY_KANA.has(k) ? r : k);
+export function langItems(book, n) {
+  const d = loadLang(book, n), ja = jaVerses(book), B = BOOKS[book];
+  const it = (id, lang, show, say, snd, ko, kind) => ({ id, lang, show, say, snd, ko, kind });
+  return {
+    book, unit: n, title: `${B.ko} ${loadUnit(n).title}`, range: d.range,
+    lessons: d.lessons.map((L, j) => {
+      const i = j + 1, er = L.en_read, jr = L.ja_read, et = L.en_talk, jt = L.ja_talk;
+      const enV = er.chunks.map((c) => c.en).join(" "), jaV = jr.chunks.map((c) => c.ja).join("");
+      return {
+        no: i, ref: L.ref, title: L.title, enRef: er.ref, jaRef: jr.ref, enScene: et.scene, jaScene: jt.scene,
+        items: [
+          it(`${i}-er`, "en", enV, enV, er.chunks.map((c) => c.snd).join(" "), er.chunks.map((c) => c.ko).join(" / "), "영어 독해 · 본문"),
+          ...er.chunks.map((c, k) => it(`${i}-er-${k + 1}`, "en", c.en, c.en, c.snd, c.ko, "영어 독해 · 끊어 읽기")),
+          ...et.lines.map((l, k) => it(`${i}-et-${k + 1}`, "en", l.en, l.en, l.snd, l.ko, `영어 회화 · ${l.who}`)),
+          ...et.keys.map((x, k) => it(`${i}-ek-${k + 1}`, "en", x.t, x.t.replace(/~/g, ""), x.snd, x.ko, "영어 회화 · 핵심 표현")),
+          it(`${i}-jr`, "ja", jaV, kanaJa(jaV), jr.chunks.map((c) => c.snd).join(" "), jr.chunks.map((c) => c.ko).join(" / "), "일본어 독해 · 본문"),
+          ...jr.chunks.map((c, k) => it(`${i}-jr-${k + 1}`, "ja", c.ja, kanaJa(c.ja), c.snd, c.ko, "일본어 독해 · 끊어 읽기")),
+          ...(jr.words || []).map((w, k) => it(`${i}-jw-${k + 1}`, "ja", w.ja, kanaJa(w.ja), w.snd, w.ko, "일본어 독해 · 단어")),
+          ...jt.lines.map((l, k) => it(`${i}-jt-${k + 1}`, "ja", l.ja, kanaJa(l.ja), l.snd, l.ko, `일본어 회화 · ${l.who}`)),
+          ...jt.keys.map((x, k) => it(`${i}-jk-${k + 1}`, "ja", x.t, kanaJa(x.t).replace(/～/g, ""), x.snd, x.ko, "일본어 회화 · 핵심 표현")),
+        ],
+      };
+    }),
+    sources: { en: "World English Bible (British Edition), Public Domain", ja: ja.source.split(" — ")[0] },
+  };
+}
+// 원고 → listen/data/<책>-<단원>.json (바뀌었을 때만 씀). 빌드가 부른다.
+export function exportLang(book, n) {
+  const f = path.join(R, "listen/data", `${book}-${n}.json`);
+  const s = JSON.stringify(langItems(book, n), null, 1) + "\n";
+  fs.mkdirSync(path.dirname(f), { recursive: true });
+  if (!fs.existsSync(f) || fs.readFileSync(f, "utf8") !== s) { fs.writeFileSync(f, s); return { file: f, changed: true }; }
+  return { file: f, changed: false };
+}
+// 레슨 QR 주소(빌드가 QR 그림을 미리 만든다)
+export const langQrUrls = (book, n) => loadLang(book, n).lessons.map((_, j) => listenUrl(book, n, `${j + 1}`));
+
 // ---------- 조판 ----------
 const ruby = (s) => esc(s).replace(RUBY, "<ruby>$1<rt>$2</rt></ruby>");
+let SAY = () => "";   // langHtml 안에서 (id) → ▶ 버튼 HTML
 const head = (label, en, key, mk) => `<section class="front lang" id="${key}">${mk(key)}<p class="eyebrow">${en}</p><h1>${esc(label)}</h1><div class="gold"></div>`;
 const TOTOC = `<div class="totoc-row"><a class="totoc" href="#toc">▲ 차례로</a></div>`;
 const KANA = [
@@ -102,19 +150,21 @@ const DAKU = [
   ["ぱパ", "파"], ["ぴピ", "피"], ["ぷプ", "푸"], ["ぺペ", "페"], ["ぽポ", "포"],
 ];
 const kanaGrid = (rows) => `<table class="kana">` + [...Array(rows.length / 5)].map((_, r) => `<tr>` + rows.slice(r * 5, r * 5 + 5).map((c) => c ? `<td><span class="kh">${c[0][0]}</span><span class="kk">${c[0][1]}</span><span class="ks">${esc(c[1])}</span></td>` : `<td></td>`).join("") + `</tr>`).join("") + `</table>`;
-const chunkTable = (chunks, lang) => `<table class="chunks"><thead><tr><th>${lang === "ja" ? "일본어" : "영어"}</th><th>한글 소리</th><th>뜻</th></tr></thead><tbody>` + chunks.map((c) => `<tr><td class="${lang}">${lang === "ja" ? ruby(c.ja) : esc(c.en)}</td><td class="snd">${esc(c.snd)}</td><td>${esc(c.ko)}</td></tr>`).join("") + `</tbody></table>`;
-const talk = (t, lang) => `<div class="scene">장면 · ${esc(t.scene)}<span class="made">연습용 대화 — 성경 본문이 아님</span></div><div class="talk">` + t.lines.map((l) => `<div class="line"><span class="who">${esc(l.who)}</span><div><div class="${lang}">${lang === "ja" ? ruby(l.ja) : esc(l.en)}</div><div class="snd">${esc(l.snd)}</div><div class="ko">${esc(l.ko)}</div></div></div>`).join("") + `</div>` +
-  `<div class="keys"><div class="kl">핵심 표현</div>` + t.keys.map((k) => `<div class="key"><span class="${lang}">${lang === "ja" ? ruby(k.t) : esc(k.t)}</span> <span class="snd">${esc(k.snd)}</span> — ${esc(k.ko)}</div>`).join("") + `</div>`;
+const chunkTable = (chunks, lang, p) => `<table class="chunks"><thead><tr><th>${lang === "ja" ? "일본어" : "영어"}</th><th>한글 소리</th><th>뜻</th></tr></thead><tbody>` + chunks.map((c, k) => `<tr><td class="${lang}">${SAY(`${p}-${k + 1}`)}${lang === "ja" ? ruby(c.ja) : esc(c.en)}</td><td class="snd">${esc(c.snd)}</td><td>${esc(c.ko)}</td></tr>`).join("") + `</tbody></table>`;
+const talk = (t, lang, p, q) => `<div class="scene">장면 · ${esc(t.scene)}<span class="made">연습용 대화 — 성경 본문이 아님</span></div><div class="talk">` + t.lines.map((l, k) => `<div class="line"><span class="who">${esc(l.who)}</span><div><div class="${lang}">${SAY(`${p}-${k + 1}`)}${lang === "ja" ? ruby(l.ja) : esc(l.en)}</div><div class="snd">${esc(l.snd)}</div><div class="ko">${esc(l.ko)}</div></div></div>`).join("") + `</div>` +
+  `<div class="keys"><div class="kl">핵심 표현</div>` + t.keys.map((x, k) => `<div class="key">${SAY(`${q}-${k + 1}`)}<span class="${lang}">${lang === "ja" ? ruby(x.t) : esc(x.t)}</span> <span class="snd">${esc(x.snd)}</span> — ${esc(x.ko)}</div>`).join("") + `</div>`;
 const notes = (list) => (list || []).map((g) => `<div class="gnote"><span class="gn">${esc(g.name)}</span>${esc(g.text)}</div>`).join("");
 
 export function langHtml(book, n, mk = () => "") {
   const B = BOOKS[book], d = loadLang(book, n), ja = jaVerses(book);
-  const nav = [["lang-chapter", "어학 학습 부록 — 영어·일본어 독해·회화", 0], ["lang-kana", "일본어 첫걸음 · 소리표", 1]];
+  SAY = (id, cls = "") => `<a class="say ${cls}" href="${esc(listenUrl(book, n, id))}">▶</a>`;
+  const nav =[["lang-chapter", "어학 학습 부록 — 영어·일본어 독해·회화", 0], ["lang-kana", "일본어 첫걸음 · 소리표", 1]];
   let o = head("어학 학습 부록", "ENGLISH · 日本語", "lang-chapter", mk) +
     `<p class="lead">이 책의 본문(${esc(B.ko)} ${esc(d.range)})을 영어와 일본어로 다시 읽고, 같은 장면을 오늘의 말로 바꾸어 말해 봅니다. 레슨은 앞의 단락과 하나씩 짝을 이룹니다.</p>` +
     `<div class="lab">한 레슨의 순서</div><ol class="steps"><li><b>영어 독해</b> — 현대 영어 성경 한 절을 끊어 읽고 문법 하나를 익힙니다.</li><li><b>영어 회화</b> — 그 장면을 오늘의 상황으로 옮긴 대화를 소리 내어 읽습니다.</li><li><b>일본어 독해</b> — 일본어 성경 한 절을 한글 소리로 따라 읽고 뜻을 맞춰 봅니다.</li><li><b>일본어 회화</b> — 짧은 대화와 표현을 외워 봅니다.</li></ol>` +
     `<div class="lab">공부하는 법</div><p>① 한글 소리를 보며 세 번 소리 내어 읽습니다. ② 한글 소리를 가리고 원문만 보고 읽습니다. ③ 뜻을 가리고 원문만 보고 뜻을 말해 봅니다. ④ 대화는 A·B 역할을 바꾸어 두 번 말합니다.</p>` +
     `<div class="lab">한글 소리에 대하여</div><p>한글 소리는 처음 배우는 사람을 위한 <b>대략의 소리</b>입니다. 「-」는 소리를 길게 끄는 자리입니다(예: 슈- = しゅう). 일본어 조사 は는 「와」, へ는 「에」, を는 「오」로 읽습니다. 정확한 발음은 원어민 소리로 꼭 확인하세요.</p>` +
+    `<div class="lab">소리 듣기 <span class="say">▶</span></div><p>문장 앞의 빨간 <b>▶</b>를 누르면 듣기 페이지가 열리고, 휴대폰·컴퓨터에 들어 있는 영어·일본어 음성이 그 문장을 읽어 줍니다. 종이 책은 레슨 첫머리의 QR을 휴대폰 카메라로 찍으세요. 사람이 녹음한 소리가 아니라 기기의 음성이며, 처음에는 페이지의 「듣기」를 한 번 더 눌러야 할 수 있습니다. 듣기 페이지는 인터넷에 연결되어 있어야 열립니다.</p>` +
     `<div class="lab">본문과 대화</div><p>영어 본문은 World English Bible(British Edition, 퍼블릭 도메인), 일본어 본문은 フリーダム・バイブル(Japanese Freedom Bible, 퍼블릭 도메인)을 글자 그대로 옮겼습니다. 한자 위의 작은 글자(후리가나)는 읽는 소리입니다. 회화의 대화는 연습을 위해 지은 것이며 성경 본문이 아닙니다.</p>${TOTOC}</section>`;
   // 일본어 첫걸음
   o += head("일본어 첫걸음 · 소리표", "KANA", "lang-kana", mk) +
@@ -130,14 +180,16 @@ export function langHtml(book, n, mk = () => "") {
     const er = L.en_read, jr = L.ja_read;
     const enFull = webOf(book, er.ref), jaFull = ja.map[jr.ref];
     const enPart = er.chunks.map((c) => c.en).join(" "), jaPart = jr.chunks.map((c) => plainJa(c.ja)).join("");
+    const p = i + 1, qu = listenUrl(book, n, `${p}`);
     o += head(`레슨 ${i + 1} · ${L.title}`, `LESSON ${i + 1} · ${B.en} ${L.ref}`, key, mk) +
+      `<div class="lqr"><a href="${esc(qu)}"><img src="${pathUrl(qrFile(qu))}"/></a><span><b>이 레슨 소리로 듣기</b><br/>휴대폰 카메라로 QR을 찍거나, 문장 앞의 <span class="say">▶</span>를 누르세요.</span></div>` +
       `<h2 class="track en-t">① 영어 독해 <small>${esc(B.ko)} ${esc(er.ref)}${enPart !== enFull ? " (절의 일부)" : ""} · WEB</small></h2>` +
-      `<div class="verse en">${esc(enPart)}</div>` + chunkTable(er.chunks, "en") + notes(er.grammar) +
-      `<h2 class="track en-t">② 영어 회화</h2>` + talk(L.en_talk, "en") +
+      `<div class="verse en">${SAY(`${p}-er`, "big")}${esc(enPart)}</div>` + chunkTable(er.chunks, "en", `${p}-er`) + notes(er.grammar) +
+      `<h2 class="track en-t">② 영어 회화</h2>` + talk(L.en_talk, "en", `${p}-et`, `${p}-ek`) +
       `<h2 class="track ja-t">③ 일본어 독해 <small>${esc(B.ko)} ${esc(jr.ref)}${jaPart !== jaFull ? " (절의 일부)" : ""} · フリーダム・バイブル</small></h2>` +
-      `<div class="verse ja">${jr.chunks.map((c) => ruby(c.ja)).join("")}</div>` + chunkTable(jr.chunks, "ja") +
-      (jr.words?.length ? `<div class="words"><span class="kl">단어</span>` + jr.words.map((w) => `<span class="w"><span class="ja">${ruby(w.ja)}</span> <span class="snd">${esc(w.snd)}</span> ${esc(w.ko)}</span>`).join("") + `</div>` : "") + notes(jr.point) +
-      `<h2 class="track ja-t">④ 일본어 회화</h2>` + talk(L.ja_talk, "ja") + TOTOC + `</section>`;
+      `<div class="verse ja">${SAY(`${p}-jr`, "big")}${jr.chunks.map((c) => ruby(c.ja)).join("")}</div>` + chunkTable(jr.chunks, "ja", `${p}-jr`) +
+      (jr.words?.length ? `<div class="words"><span class="kl">단어</span>` + jr.words.map((w, k) => `<span class="w">${SAY(`${p}-jw-${k + 1}`)}<span class="ja">${ruby(w.ja)}</span> <span class="snd">${esc(w.snd)}</span> ${esc(w.ko)}</span>`).join("") + `</div>` : "") + notes(jr.point) +
+      `<h2 class="track ja-t">④ 일본어 회화</h2>` + talk(L.ja_talk, "ja", `${p}-jt`, `${p}-jk`) + TOTOC + `</section>`;
   });
   return { html: `<style>${LANG_CSS}</style>` + o, nav };
 }
@@ -178,6 +230,14 @@ const LANG_CSS = `
 .lang .kl{font:700 7.4pt "Noto Sans KR";color:#c9973b;margin-right:2mm;}
 .lang .key .en,.lang .key .ja{font-weight:700;}
 .lang .words .w{display:inline-block;margin-right:4mm;}
+.lang .say{display:inline-block;width:4.2mm;height:4.2mm;border-radius:50%;background:#d0362b;color:#fff;font:700 6pt/4.2mm "Noto Sans KR",sans-serif;text-align:center;margin-right:1.4mm;vertical-align:1px;text-indent:.3mm;}
+.lang .say.big{width:5.4mm;height:5.4mm;font-size:7.6pt;line-height:5.4mm;margin-right:2mm;}
+.lang .verse .say{float:left;margin-top:1.2mm;}
+.lang .verse.ja .say{margin-top:2.6mm;}
+.lang .lqr{display:flex;align-items:center;gap:3mm;margin:0 0 2mm;font:400 8pt/1.5 "Noto Sans KR";color:#555;break-inside:avoid;}
+.lang .lqr b{color:#18233f;}
+.lang .lqr a{display:block;width:14mm;height:14mm;flex:none;}
+.lang .lqr img{display:block;width:14mm;height:14mm;}
 .lang table.kana{width:100%;border-collapse:collapse;margin:0 0 3mm;break-inside:avoid;}
 .lang .lab{break-after:avoid;}
 .lang table.kana td{border:.2mm solid #e3dccb;text-align:center;padding:.6mm 0;width:20%;line-height:1.25;}
