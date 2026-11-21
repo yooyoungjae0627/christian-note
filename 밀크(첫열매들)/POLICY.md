@@ -7,4 +7,4 @@
 - **책 단위:** 강의 1개 = 책 1권. 파일 `<제목>_밀크N강.pdf` + `.epub` (이 폴더)
 - **EPUB:** 완성 PDF에서 `node tools/pdf2epub.mjs Milk/<파일>.pdf`, 검사 `node tools/check_epub.mjs Milk/<파일>.epub` (exit 0)
 - PDF를 고치면 EPUB도 다시 만든다.
-- **원고(2026-11-21~):** 8강은 원고를 새로 써서 `원본/7년환란_밀크8강/`(story.txt·transcript_raw.txt·slides·cover.svg, 공통 `원본/book.json`)에 두고, 주제별 교재 빌드 도구(`첫열매들 성경해석/원본/tools`)로 조판한다: `node fit.mjs <원본> out 1` → `build_pdf.mjs` → `verify_pdf.mjs` → `audit.mjs`. 다른 강은 아직 완성 PDF만 있다.
+- **원고(2026-11-21~):** 1~10강(9강은 9-1·9-2 두 권) 모두 원고를 새로 써서 `원본/<책폴더>/`(story.txt·transcript_raw.txt(영상 둘이면 _2)·slides·cover.svg·book.json)에 두고, 주제별 교재 빌드 도구(`첫열매들 성경해석/원본/tools`)로 조판한다. 책 번호 = 강 번호(1~7, 8, 9-1=9, 9-2=10, 10=11), 공통 `원본/book.json`(allowGaps)과 책 폴더 book.json(표지 「제N강」 줄): `node fit.mjs <원본> out N` → `build_pdf.mjs <원본> out N` → `verify_pdf.mjs <원본> <pdf> N` → `audit.mjs <pdf> <toc_pages.json>`. 녹취는 YouTube 한국어 자막(메모리 뱅크 95~107번).
