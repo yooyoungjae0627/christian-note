@@ -65,7 +65,21 @@ export function checkLang(book, n) {
       else if (!joined || !v.includes(joined)) E.push(`${at} 일본어 조각을 이은 글이 본문 ${jr.ref}과 다름: ${joined}`);
       (jr.chunks || []).forEach((c, k) => { rubyOk(c.ja, `${at} 일본어 독해 ${k + 1}`); sndOk(c.snd, `${at} 일본어 독해 ${k + 1}`); if (!c.ko) E.push(`${at} 일본어 독해 ${k + 1} 뜻 없음`); });
     }
-    (jr.words || []).forEach((w, k) => { rubyOk(w.ja, `${at} 일본어 단어 ${k + 1}`); sndOk(w.snd, `${at} 일본어 단어 ${k + 1}`); });
+    if (jr.words) E.push(`${at} ja_read.words는 review.ja_words로 옮김(2026-11-21)`);
+    // ⑤ 정리 — 구문(새 예문)·단어(그 레슨 글에 실제로 나온 말)
+    const rv = L.review || {};
+    const enText = [er.chunks, L.en_talk?.lines, L.en_talk?.keys].flat().filter(Boolean).map((x) => x.en || x.t || "").join(" ").toLowerCase();
+    const jaText = [jr.chunks, L.ja_talk?.lines, L.ja_talk?.keys].flat().filter(Boolean).map((x) => plainJa(x.ja || x.t || "")).join("");
+    for (const [k, lang] of [["en_pat", "en"], ["ja_pat", "ja"]]) {
+      const ps = rv[k] || []; const nm = lang === "en" ? "영어 구문" : "일본어 구문";
+      if (ps.length < 1 || ps.length > 3) E.push(`${at} ${nm} 1–3개`);
+      ps.forEach((p, j) => { const a = `${at} ${nm} ${j + 1}`; if (!p.pat) E.push(a + " 구문 없음"); if (lang === "ja") { rubyOk(p.pat, a); rubyOk(p.ex, a + " 예문"); } else if (!p.ex || /[가-힣]/.test(p.ex)) E.push(a + " 영어 예문 없음"); sndOk(p.snd, a); if (!p.ko) E.push(a + " 뜻 없음"); });
+    }
+    const POS = new Set(["명", "동", "형", "부", "전", "접", "대"]);
+    const ews = rv.en_words || []; if (ews.length < 4 || ews.length > 8) E.push(`${at} 영어 단어 4–8개`);
+    ews.forEach((w, j) => { const a = `${at} 영어 단어 ${j + 1}(${w.w})`; const f = (w.from || w.w || "").toLowerCase(); if (!f || !new RegExp(`(^|[^a-z])${f.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}([^a-z]|$)`).test(enText)) E.push(`${a} 이 레슨 영어 글에 없음(from)`); if (!POS.has(w.pos)) E.push(`${a} 품사(${[...POS].join("·")})`); sndOk(w.snd, a); if (!w.ko) E.push(a + " 뜻 없음"); });
+    const jws = rv.ja_words || []; if (jws.length < 4 || jws.length > 8) E.push(`${at} 일본어 단어 4–8개`);
+    jws.forEach((w, j) => { const a = `${at} 일본어 단어 ${j + 1}(${w.ja})`; rubyOk(w.ja, a); const f = w.from || plainJa(w.ja || ""); if (!f || !jaText.includes(f)) E.push(`${a} 이 레슨 일본어 글에 없음(from)`); sndOk(w.snd, a); if (!w.ko) E.push(a + " 뜻 없음"); });
     // 회화
     for (const [key, lang] of [["en_talk", "en"], ["ja_talk", "ja"]]) {
       const t = L[key] || {}; const nm = lang === "en" ? "영어 회화" : "일본어 회화";
@@ -104,9 +118,12 @@ export function langItems(book, n) {
           ...et.keys.map((x, k) => it(`${i}-ek-${k + 1}`, "en", x.t, x.t.replace(/~/g, ""), x.snd, x.ko, "영어 회화 · 핵심 표현")),
           it(`${i}-jr`, "ja", jaV, kanaJa(jaV), jr.chunks.map((c) => c.snd).join(" "), jr.chunks.map((c) => c.ko).join(" / "), "일본어 독해 · 본문"),
           ...jr.chunks.map((c, k) => it(`${i}-jr-${k + 1}`, "ja", c.ja, kanaJa(c.ja), c.snd, c.ko, "일본어 독해 · 끊어 읽기")),
-          ...(jr.words || []).map((w, k) => it(`${i}-jw-${k + 1}`, "ja", w.ja, kanaJa(w.ja), w.snd, w.ko, "일본어 독해 · 단어")),
           ...jt.lines.map((l, k) => it(`${i}-jt-${k + 1}`, "ja", l.ja, kanaJa(l.ja), l.snd, l.ko, `일본어 회화 · ${l.who}`)),
           ...jt.keys.map((x, k) => it(`${i}-jk-${k + 1}`, "ja", x.t, kanaJa(x.t).replace(/～/g, ""), x.snd, x.ko, "일본어 회화 · 핵심 표현")),
+          ...L.review.en_pat.map((p, k) => it(`${i}-ep-${k + 1}`, "en", p.ex, p.ex, p.snd, p.ko, `영어 구문 · ${p.pat}`)),
+          ...L.review.en_words.map((w, k) => it(`${i}-ev-${k + 1}`, "en", w.w, w.w, w.snd, `(${w.pos}) ${w.ko}`, "영어 단어")),
+          ...L.review.ja_pat.map((p, k) => it(`${i}-jp-${k + 1}`, "ja", p.ex, kanaJa(p.ex), p.snd, p.ko, `일본어 구문 · ${plainJa(p.pat)}`)),
+          ...L.review.ja_words.map((w, k) => it(`${i}-jv-${k + 1}`, "ja", w.ja, kanaJa(w.ja), w.snd, w.ko, "일본어 단어")),
         ],
       };
     }),
@@ -187,11 +204,51 @@ export function langHtml(book, n, mk = () => "") {
       `<div class="verse en">${SAY(`${p}-er`, "big")}${esc(enPart)}</div>` + chunkTable(er.chunks, "en", `${p}-er`) + notes(er.grammar) +
       `<h2 class="track en-t">② 영어 회화</h2>` + talk(L.en_talk, "en", `${p}-et`, `${p}-ek`) +
       `<h2 class="track ja-t">③ 일본어 독해 <small>${esc(B.ko)} ${esc(jr.ref)}${jaPart !== jaFull ? " (절의 일부)" : ""} · フリーダム・バイブル</small></h2>` +
-      `<div class="verse ja">${SAY(`${p}-jr`, "big")}${jr.chunks.map((c) => ruby(c.ja)).join("")}</div>` + chunkTable(jr.chunks, "ja", `${p}-jr`) +
-      (jr.words?.length ? `<div class="words"><span class="kl">단어</span>` + jr.words.map((w, k) => `<span class="w">${SAY(`${p}-jw-${k + 1}`)}<span class="ja">${ruby(w.ja)}</span> <span class="snd">${esc(w.snd)}</span> ${esc(w.ko)}</span>`).join("") + `</div>` : "") + notes(jr.point) +
-      `<h2 class="track ja-t">④ 일본어 회화</h2>` + talk(L.ja_talk, "ja", `${p}-jt`, `${p}-jk`) + TOTOC + `</section>`;
+      `<div class="verse ja">${SAY(`${p}-jr`, "big")}${jr.chunks.map((c) => ruby(c.ja)).join("")}</div>` + chunkTable(jr.chunks, "ja", `${p}-jr`) + notes(jr.point) +
+      `<h2 class="track ja-t">④ 일본어 회화</h2>` + talk(L.ja_talk, "ja", `${p}-jt`, `${p}-jk`) +
+      reviewHtml(L, p) + TOTOC + `</section>`;
   });
+  // 총정리 — 레슨의 정리를 모아 자동으로 만든다(새 내용 없음)
+  nav.push(["lang-index", "총정리 · 단어장 · 문법 · 구문", 1]);
+  const ew = [], jw = [], gram = [], pats = { en: [], ja: [] };
+  d.lessons.forEach((L, i) => {
+    L.review.en_words.forEach((w, k) => ew.push({ ...w, no: i + 1, id: `${i + 1}-ev-${k + 1}` }));
+    L.review.ja_words.forEach((w, k) => jw.push({ ...w, no: i + 1, id: `${i + 1}-jv-${k + 1}`, kana: w.ja.replace(RUBY, "$2") }));
+    gram.push({ no: i + 1, en: L.en_read.grammar.map((g) => g.name), ja: (L.ja_read.point || []).map((g) => g.name) });
+    L.review.en_pat.forEach((x) => pats.en.push({ ...x, no: i + 1 })); L.review.ja_pat.forEach((x) => pats.ja.push({ ...x, no: i + 1 }));
+  });
+  // 같은 단어(영어는 단어+품사, 일본어는 표기)가 여러 레슨에 나오면 한 줄로 합치고 레슨 번호를 모은다
+  const merge = (list, keyOf) => { const m = new Map(); for (const w of list) { const k = keyOf(w); if (m.has(k)) m.get(k).nos.push(w.no); else m.set(k, { ...w, nos: [w.no] }); } return [...m.values()]; };
+  const ewM = merge(ew, (w) => w.w.toLowerCase() + "|" + w.pos).sort((a, b) => a.w.toLowerCase().localeCompare(b.w.toLowerCase()));
+  const jwM = merge(jw, (w) => w.ja).sort((a, b) => a.kana.localeCompare(b.kana, "ja"));
+  ew.length = 0; ew.push(...ewM); jw.length = 0; jw.push(...jwM);
+  o += head("총정리 · 단어장 · 문법 · 구문", "INDEX", "lang-index", mk) +
+    `<p class="small">레슨마다의 ⑤ 정리를 한데 모았습니다. 오른쪽 숫자는 레슨 번호입니다.</p>` +
+    `<h2 class="track en-t">영어 단어장 <small>알파벳순 · ${ew.length}개</small></h2><table class="chunks vocab-t"><thead><tr><th>단어</th><th>품사</th><th>한글 소리</th><th>뜻</th><th>레슨</th></tr></thead><tbody>` +
+    ew.map((w) => `<tr><td class="en">${SAY(w.id)}${esc(w.w)}</td><td>${esc(w.pos)}</td><td class="snd">${esc(w.snd)}</td><td>${esc(w.ko)}</td><td class="no">${w.nos.join(", ")}</td></tr>`).join("") + `</tbody></table>` +
+    `<h2 class="track ja-t">일본어 단어장 <small>あいうえお순 · ${jw.length}개</small></h2><table class="chunks vocab-t"><thead><tr><th>단어</th><th>한글 소리</th><th>뜻</th><th>레슨</th></tr></thead><tbody>` +
+    jw.map((w) => `<tr><td class="ja">${SAY(w.id)}${ruby(w.ja)}</td><td class="snd">${esc(w.snd)}</td><td>${esc(w.ko)}</td><td class="no">${w.nos.join(", ")}</td></tr>`).join("") + `</tbody></table>` +
+    `<h2 class="track rv-t">문법 색인</h2><table class="chunks"><thead><tr><th>레슨</th><th>영어 문법</th><th>일본어 문법</th></tr></thead><tbody>` +
+    gram.map((g) => `<tr><td class="no">${g.no}</td><td>${g.en.map(esc).join("<br/>")}</td><td class="ja">${g.ja.map((x) => ruby(x)).join("<br/>")}</td></tr>`).join("") + `</tbody></table>` +
+    `<h2 class="track rv-t">구문 모음</h2><table class="chunks"><thead><tr><th>영어 구문</th><th>레슨</th></tr></thead><tbody>` +
+    pats.en.map((x) => `<tr><td>${esc(x.pat)}</td><td class="no">${x.no}</td></tr>`).join("") + `</tbody></table><table class="chunks"><thead><tr><th>일본어 구문</th><th>레슨</th></tr></thead><tbody>` +
+    pats.ja.map((x) => `<tr><td class="ja">${ruby(x.pat)}</td><td class="no">${x.no}</td></tr>`).join("") + `</tbody></table>${TOTOC}</section>`;
   return { html: `<style>${LANG_CSS}</style>` + o, nav };
+}
+// ⑤ 정리 — 구문(새 예문)·문법(①③의 문법)·단어
+function reviewHtml(L, p) {
+  const rv = L.review;
+  const patBox = (ps, lang, tag) => ps.map((x, k) => `<div class="pat"><div class="pp ${lang}">${lang === "ja" ? ruby(x.pat) : esc(x.pat)}</div><div class="${lang}">${SAY(`${p}-${tag}-${k + 1}`)}${lang === "ja" ? ruby(x.ex) : esc(x.ex)}</div><div class="snd">${esc(x.snd)}</div><div class="ko">${esc(x.ko)}</div></div>`).join("");
+  const gramList = (gs) => `<ul class="gl2">` + (gs || []).map((g) => `<li><span class="gn">${esc(g.name)}</span>${esc(g.text)}</li>`).join("") + `</ul>`;
+  const enW = `<table class="chunks vocab-t"><thead><tr><th>단어</th><th>품사</th><th>한글 소리</th><th>뜻</th></tr></thead><tbody>` + rv.en_words.map((w, k) => `<tr><td class="en">${SAY(`${p}-ev-${k + 1}`)}${esc(w.w)}${w.from ? `<span class="from">← ${esc(w.from)}</span>` : ""}</td><td>${esc(w.pos)}</td><td class="snd">${esc(w.snd)}</td><td>${esc(w.ko)}</td></tr>`).join("") + `</tbody></table>`;
+  const jaW = `<table class="chunks vocab-t"><thead><tr><th>단어</th><th>한글 소리</th><th>뜻</th></tr></thead><tbody>` + rv.ja_words.map((w, k) => `<tr><td class="ja">${SAY(`${p}-jv-${k + 1}`)}${ruby(w.ja)}${w.from && w.from !== plainJa(w.ja) ? `<span class="from">← ${esc(w.from)}</span>` : ""}</td><td class="snd">${esc(w.snd)}</td><td>${esc(w.ko)}</td></tr>`).join("") + `</tbody></table>`;
+  return `<h2 class="track rv-t">⑤ 정리 — 구문 · 문법 · 단어</h2>` +
+    `<div class="rvh en-c">영어 구문 <small>새 예문으로 연습</small></div>` + patBox(rv.en_pat, "en", "ep") +
+    `<div class="rvh en-c">영어 문법</div>` + gramList(L.en_read.grammar) +
+    `<div class="rvh en-c">영어 단어</div>` + enW +
+    `<div class="rvh ja-c">일본어 구문 <small>새 예문으로 연습</small></div>` + patBox(rv.ja_pat, "ja", "jp") +
+    `<div class="rvh ja-c">일본어 문법</div>` + gramList(L.ja_read.point) +
+    `<div class="rvh ja-c">일본어 단어</div>` + jaW;
 }
 
 const LANG_CSS = `
@@ -230,6 +287,24 @@ const LANG_CSS = `
 .lang .kl{font:700 7.4pt "Noto Sans KR";color:#c9973b;margin-right:2mm;}
 .lang .key .en,.lang .key .ja{font-weight:700;}
 .lang .words .w{display:inline-block;margin-right:4mm;}
+.lang h2.rv-t{background:#5b4a1e;}
+.lang .rvh{font:700 8.6pt/1.4 "Noto Sans KR";margin:3mm 0 1.4mm;padding-bottom:.6mm;border-bottom:.3mm solid currentColor;break-after:avoid;}
+.lang .rvh small{font-weight:400;font-size:7pt;color:#777;margin-left:1.6mm;}
+.lang .en-c{color:#24447a;}.lang .ja-c{color:#a8322d;}
+.lang .pat{background:#faf7ef;border:.2mm solid #e3dccb;border-radius:1.4mm;padding:1.6mm 3mm;margin:0 0 1.8mm;break-inside:avoid;font-size:8.8pt;line-height:1.5;}
+.lang .pat .pp{font:700 8.4pt/1.6 "Noto Sans KR",sans-serif;color:#5b4a1e;}
+.lang .pat .pp.ja{font-family:"Meiryo","Yu Gothic",sans-serif;}
+.lang .pat .en{font-size:10.4pt;}
+.lang .pat .ja{font-size:10pt;line-height:1.9;}
+.lang .pat .ko{color:#555;}
+.lang ul.gl2{margin:0 0 2mm;padding:0;list-style:none;font-size:8.6pt;line-height:1.6;}
+.lang ul.gl2 li{margin:0 0 1mm;break-inside:avoid;}
+.lang table.vocab-t td{padding:.7mm 1.4mm;}
+.lang table.vocab-t td.en{font-size:10pt;width:30%;}
+.lang table.vocab-t td.ja{width:30%;line-height:1.9;}
+.lang table.vocab-t td.snd{width:24%;}
+.lang .from{display:block;font:7pt "Noto Sans KR";color:#888;margin-left:5.6mm;}
+.lang td.no{width:11mm;white-space:nowrap;text-align:center;color:#888;font-family:"Noto Sans KR";}
 .lang .say{display:inline-block;width:4.2mm;height:4.2mm;border-radius:50%;background:#d0362b;color:#fff;font:700 6pt/4.2mm "Noto Sans KR",sans-serif;text-align:center;margin-right:1.4mm;vertical-align:1px;text-indent:.3mm;}
 .lang .say.big{width:5.4mm;height:5.4mm;font-size:7.6pt;line-height:5.4mm;margin-right:2mm;}
 .lang .verse .say{float:left;margin-top:1.2mm;}

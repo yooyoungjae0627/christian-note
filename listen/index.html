@@ -101,7 +101,7 @@ footer{margin-top:28px;font-size:.75rem;color:var(--sub)}
     return '<div class="it' + (target ? " target" : "") + '" id="i-' + it.id + '"><button class="play" data-id="' + it.id + '" aria-label="듣기">▶</button><div><div class="tag">' + esc(it.kind) + '</div><div class="t ' + it.lang + '">' + (it.lang === "ja" ? ruby(it.show) : esc(it.show)) + '</div><div class="snd">' + esc(it.snd) + '</div><div class="ko">' + esc(it.ko) + "</div></div></div>";
   }
   function byId(id) { for (var i = 0; i < data.lessons.length; i++) for (var j = 0; j < data.lessons[i].items.length; j++) if (data.lessons[i].items[j].id === id) return data.lessons[i].items[j]; return null; }
-  var GROUPS = [["er", "en", "① 영어 독해"], ["et", "en", "② 영어 회화 · 연습용 대화"], ["ek", "en", "영어 핵심 표현"], ["jr", "ja", "③ 일본어 독해"], ["jw", "ja", "일본어 단어"], ["jt", "ja", "④ 일본어 회화 · 연습용 대화"], ["jk", "ja", "일본어 핵심 표현"]];
+  var GROUPS = [["er", "en", "① 영어 독해"], ["et", "en", "② 영어 회화 · 연습용 대화"], ["ek", "en", "영어 핵심 표현"], ["jr", "ja", "③ 일본어 독해"], ["jt", "ja", "④ 일본어 회화 · 연습용 대화"], ["jk", "ja", "일본어 핵심 표현"], ["ep", "en", "⑤ 영어 구문 · 예문"], ["ev", "en", "⑤ 영어 단어"], ["jp", "ja", "⑤ 일본어 구문 · 예문"], ["jv", "ja", "⑤ 일본어 단어"]];
   function voiceBar() {
     return '<div id="vbar">' + voiceBarInner() + "</div>";
   }
