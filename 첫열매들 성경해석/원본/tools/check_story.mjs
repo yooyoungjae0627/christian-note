@@ -27,6 +27,18 @@ try {
       }
     }
   }
+  // 예상 질문 중복 금지(사용자 지시 2026-11-21 「중복 검사도 정책으로 넣어」): 같은 책 안에서 두 질문이 거의 같거나
+  // (글자 두 개씩 묶음 겹침 85% 이상) 두 답이 같은 내용을 되풀이하면(50% 이상) 실패. 비슷한 질문은 합치거나 강의의 다른 요점으로 답한다.
+  {
+    const big = (s) => { const t = String(s).replace(/[^가-힣A-Za-z0-9]/g, ""), o = new Set(); for (let i = 0; i < t.length - 1; i++) o.add(t.slice(i, i + 2)); return o; };
+    const sim = (a, b) => { const A = big(a), B = big(b); let k = 0; for (const x of A) if (B.has(x)) k++; return k / Math.max(1, Math.min(A.size, B.size)); };
+    const dup = [];
+    for (let i = 0; i < S.faq.length; i++) for (let j = i + 1; j < S.faq.length; j++) {
+      const q = sim(S.faq[i].q, S.faq[j].q), a = sim(S.faq[i].a, S.faq[j].a);
+      if (q >= 0.85 || a >= 0.5) dup.push(`  ${i + 1}번 「${S.faq[i].q}」 ↔ ${j + 1}번 「${S.faq[j].q}」 (질문 ${Math.round(q * 100)}% · 답 ${Math.round(a * 100)}%)`);
+    }
+    if (dup.length) throw new Error("예상 질문 중복 — 합치거나 강의의 다른 요점으로 답을 바꾼다:\n" + dup.join("\n"));
+  }
   // 강의 스크립트·타임스탬프는 메모리 뱅크에도 있어야 한다(사용자 지시 2026-11-21 「책 집필 … 하면 해당 강의 스크립트와 타임스탬프
   // 전부 메모리뱅크 업데이트」, 규칙 원본 README §3). 영상ID를 가진 책은 그 영상ID가 적힌 스크립트 파일이 있어야 통과.
   const vids = [...new Set([S.vid, ...S.lecVids].filter(Boolean))];
